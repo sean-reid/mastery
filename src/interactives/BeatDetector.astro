@@ -8,10 +8,6 @@
   <div class="beat-body">
     <div class="beat-round-label" id="beat-round-label">Round 1: Unison</div>
     <canvas class="beat-canvas" id="beat-canvas" width="600" height="140"></canvas>
-    <div class="beat-freq-row">
-      <span class="beat-freq-val" id="beat-freq-val">440.0</span>
-      <span class="beat-freq-hz">Hz</span>
-    </div>
     <div class="beat-slider-sec">
       <div class="beat-slider-wrap">
         <input type="range" class="beat-slider" id="beat-slider" min="420" max="460" value="440" step="0.1" aria-label="Frequency" disabled />
@@ -52,9 +48,6 @@
   .beat-body { display: flex; flex-direction: column; align-items: center; gap: var(--space-6); }
   .beat-round-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
   .beat-canvas { width: 100%; max-width: 560px; height: 140px; border-radius: var(--radius-lg); background: #0f1117; border: 1px solid var(--color-border); }
-  .beat-freq-row { display: flex; align-items: baseline; gap: var(--space-2); }
-  .beat-freq-val { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--color-text); line-height: 1; }
-  .beat-freq-hz { font-size: var(--text-sm); color: var(--color-text-muted); }
   .beat-slider-sec { width: 100%; max-width: 540px; }
   .beat-slider-wrap { position: relative; width: 100%; height: 8px; }
   .beat-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; border-radius: var(--radius-full); background: var(--color-border); outline: none; position: relative; z-index: 2; cursor: pointer; }
@@ -105,7 +98,6 @@
   @media (max-width: 600px) {
     #beat-detector { padding: var(--space-6) var(--space-4); }
     .beat-canvas { height: 100px; }
-    .beat-freq-val { font-size: var(--text-xl); }
     .beat-comp { gap: var(--space-3); padding: var(--space-3) var(--space-4); }
     .beat-btns { flex-direction: column; width: 100%; }
     .beat-next-btn, .beat-retry-btn { width: 100%; text-align: center; }
@@ -127,7 +119,6 @@
   const canvas = bq('#beat-canvas') as HTMLCanvasElement;
   const slider = bq('#beat-slider') as HTMLInputElement;
   const sliderFill = bq('#beat-slider-fill');
-  const freqVal = bq('#beat-freq-val');
   const playBtn = bq('#beat-play');
   const playLabel = bq('#beat-play-label');
   const eqBars = bq('#beat-eq');
@@ -200,14 +191,12 @@
     slider.max = String(targetFreq + cfg.range);
     slider.step = String(cfg.step);
     slider.value = String(startFreq);
-    freqVal.textContent = parseFloat(slider.value).toFixed(1);
     updateFill();
     drawIdle();
   }
 
   slider.addEventListener('input', () => {
     const v = +slider.value;
-    freqVal.textContent = v.toFixed(1);
     updateFill();
     if (osc2) osc2.frequency.value = v;
     pOsc2.forEach((p, i) => { p.frequency.value = v * (i + 2); });
