@@ -199,7 +199,7 @@ const categories = Object.entries(CATEGORY_LABELS) as [Category, string][];
       let firstVisible: HTMLElement | null = null;
 
       cards.forEach((card) => {
-        const match = isAll || card.dataset.category === cat;
+        const match = isAll ? !card.dataset.deferred : card.dataset.category === cat;
         card.style.display = match ? '' : 'none';
         if (match) {
           visibleCount++;
@@ -210,13 +210,12 @@ const categories = Object.entries(CATEGORY_LABELS) as [Category, string][];
         }
       });
 
-      // Update subtitle count
+      // Update subtitle count (always show total for "All", filtered count for categories)
       if (subtitle) {
         if (isAll) {
           subtitle.textContent = `${totalCount} skills, ascending by composite difficulty`;
         } else {
-          const label = pill.textContent?.trim() || cat;
-          subtitle.textContent = `${visibleCount} skills in ${label}`;
+          subtitle.textContent = `${visibleCount} skills in ${pill.textContent?.trim() || cat}`;
         }
       }
 
