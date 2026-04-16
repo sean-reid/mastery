@@ -695,7 +695,6 @@
   }
 
   function playTone(freq: number, duration: number, analyser: AnalyserNode): OscillatorNode {
-    await ensureAudio();
     const ctx = audioCtx!;
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
@@ -816,7 +815,7 @@
   let guessOsc: OscillatorNode | null = null;
   let guessGain: GainNode | null = null;
 
-  function startGuessTone() {
+  async function startGuessTone() {
     await ensureAudio();
     if (guessOsc) return;
     const ctx = audioCtx!;
@@ -869,7 +868,7 @@
   slider.addEventListener('pointerleave', stopGuessTone);
 
   // ---- Play reference tone ----
-  playBtn.addEventListener('click', () => {
+  playBtn.addEventListener('click', async () => {
     if (!targetFreq) targetFreq = getRandomFreq();
 
     await ensureAudio();
@@ -953,7 +952,7 @@
   });
 
   // ---- Listen to both ----
-  listenBtn.addEventListener('click', () => {
+  listenBtn.addEventListener('click', async () => {
     await ensureAudio();
     const guess = +slider.value;
 

@@ -203,7 +203,7 @@
     pOsc2.forEach((p, i) => { p.frequency.value = v * (i + 2); });
   });
 
-  function startTones() {
+  async function startTones() {
     await ensureAudio();
     const ctx = audioCtx!;
     osc1 = ctx.createOscillator(); osc2 = ctx.createOscillator();
