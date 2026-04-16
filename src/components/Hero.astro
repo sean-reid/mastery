@@ -118,6 +118,20 @@ const { skillCount } = Astro.props;
     50% { transform: translateY(6px); }
   }
 
+  @media (max-width: 640px) {
+    .hero-inner {
+      gap: var(--space-6);
+      padding-top: var(--space-16);
+      padding-inline: var(--space-4);
+    }
+    .hero-title {
+      font-size: var(--text-3xl);
+    }
+    .hero-body p {
+      font-size: var(--text-base);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .hero-scroll-cue {
       animation: none;
