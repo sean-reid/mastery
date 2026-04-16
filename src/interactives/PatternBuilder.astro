@@ -21,7 +21,6 @@
       <canvas class="zpat-choice" id="zpat-c2" width="140" height="140"></canvas>
       <canvas class="zpat-choice" id="zpat-c3" width="140" height="140"></canvas>
     </div>
-
     <p id="zpat-feedback"></p>
   </div>
 
@@ -34,68 +33,27 @@
 </div>
 
 <style>
-  #pattern-builder {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-xl);
-    padding: var(--space-8);
-    margin: var(--space-8) 0;
-  }
-  #zpat-game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-5);
-  }
-  #zpat-progress {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 560px;
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
-  }
+  #pattern-builder { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); margin: var(--space-8) 0; }
+  #zpat-game { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+  #zpat-progress { display: flex; justify-content: space-between; width: 100%; max-width: 560px; font-size: var(--text-sm); color: var(--color-text-muted); }
   #zpat-score-display { font-weight: 600; color: var(--color-text-secondary); }
-  #zpat-canvas {
-    display: block;
-    width: 100%;
-    max-width: 560px;
-    height: auto;
-    aspect-ratio: 8 / 5;
-    border-radius: var(--radius-lg);
-  }
+  #zpat-canvas { display: block; width: 100%; max-width: 560px; height: auto; aspect-ratio: 8/5; border-radius: var(--radius-lg); }
   #zpat-choices { display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; }
-  .zpat-choice {
-    width: 88px; height: 88px;
-    border-radius: var(--radius-lg);
-    border: 2px solid var(--color-border);
-    cursor: pointer;
-    transition: all 0.15s var(--ease-out);
-  }
+  .zpat-choice { width: 88px; height: 88px; border-radius: var(--radius-lg); border: 2px solid var(--color-border); cursor: pointer; transition: all 0.15s var(--ease-out); }
   .zpat-choice:hover { border-color: var(--color-text-muted); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
   .zpat-choice.correct { border-color: #2a7a6d; box-shadow: 0 0 0 3px rgba(42,122,109,0.25); }
   .zpat-choice.wrong { border-color: #c85a3a; opacity: 0.5; }
   .zpat-choice.disabled { pointer-events: none; }
   #zpat-feedback { font-size: var(--text-sm); color: var(--color-text-muted); min-height: 1.5em; text-align: center; }
-  #zpat-result {
-    text-align: center; display: flex; flex-direction: column; align-items: center;
-    gap: var(--space-3); padding: var(--space-8) 0; animation: zpat-in 0.5s var(--ease-out);
-  }
+  #zpat-result { text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); padding: var(--space-8) 0; animation: zpat-in 0.5s var(--ease-out); }
   #zpat-result[hidden] { display: none; }
-  @keyframes zpat-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes zpat-in { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
   .zpat-final-score { font-family: var(--font-heading); font-size: 4rem; font-weight: 700; line-height: 1; color: var(--color-text); }
   .zpat-final-label { font-size: var(--text-sm); color: var(--color-text-muted); }
   .zpat-final-text { font-size: var(--text-sm); color: var(--color-text-secondary); max-width: 50ch; line-height: 1.7; }
-  .zpat-retry {
-    padding: var(--space-2) var(--space-6); border-radius: var(--radius-full);
-    border: 1px solid var(--color-border); font-size: var(--text-sm); color: var(--color-text-secondary);
-    cursor: pointer; background: transparent; transition: all var(--duration-fast) var(--ease-out); margin-top: var(--space-2);
-  }
+  .zpat-retry { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-border); font-size: var(--text-sm); color: var(--color-text-secondary); cursor: pointer; background: transparent; transition: all var(--duration-fast) var(--ease-out); margin-top: var(--space-2); }
   .zpat-retry:hover { background: var(--color-surface-raised); }
-  @media (max-width: 640px) {
-    #pattern-builder { padding: var(--space-6); }
-    .zpat-choice { width: 72px; height: 72px; }
-  }
+  @media (max-width:640px) { #pattern-builder { padding: var(--space-6); } .zpat-choice { width: 72px; height: 72px; } }
 </style>
 
 <script>
@@ -110,190 +68,217 @@
   const finalScoreEl = document.getElementById('zpat-final-score')!;
   const finalTextEl = document.getElementById('zpat-final-text')!;
 
-  /* ── Zellige palette: traditional Moroccan glaze colors ── */
-  const COLORS = [
-    '#1a4b8c', // cobalt blue
-    '#1b6b4a', // emerald green
-    '#f4edd3', // bone white
-    '#c8943c', // honey amber
-    '#1a1a1a', // noir
-    '#a83232', // oxblood red
-    '#2d7a9c', // turquoise
-    '#5c4a1e', // dark olive
+  /* ── Traditional zellige glaze colors ── */
+  const PALETTE = [
+    '#1a4a8a', // cobalt blue
+    '#1a7a52', // emerald
+    '#f0e8d0', // bone white
+    '#cc9933', // honey amber
+    '#181818', // noir
+    '#b53030', // oxblood
+    '#2a8a8a', // turquoise
   ];
-  const GROUT = '#d4cbb8';
-  const GROUT_W = 2.5;
+  const GROUT = '#c8bea8';
+  const INSET = 1.5; // grout line half-width
 
   const ROUNDS = 10;
   let round = 0, score = 0, locked = false;
 
-  /* ── Seeded RNG ── */
   let seed = 1;
   function srand(s: number) { seed = s; }
   function rand() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
   function randInt(n: number) { return Math.floor(rand() * n); }
   function pick<T>(a: T[]): T { return a[randInt(a.length)]; }
+  function shuffle<T>(a: T[]) { for (let i = a.length - 1; i > 0; i--) { const j = randInt(i + 1); [a[i], a[j]] = [a[j], a[i]]; } }
 
-  /* ── Islamic geometric pattern: 8-pointed star tessellation ── */
-  // The classic pattern is built on a square grid where each cell contains
-  // a piece type. The full pattern emerges from the repetition.
+  /* ══════════════════════════════════════════════════════════════
+     Zellige 8-pointed star tessellation geometry.
 
-  // Piece types in the tessellation:
-  // 0 = 8-pointed star (the focal piece)
-  // 1 = cross/bowtie (fills between stars horizontally/vertically)
-  // 2 = small square (fills the diagonal gaps)
+     Unit cell is 1x1. Stars sit at integer coordinates.
+     Each cell contains portions of stars, bowties, and corner pieces
+     that tile seamlessly.
 
-  // A 2x2 super-cell repeats: star at (0,0), cross at (1,0) and (0,1), square at (1,1)
-  function pieceType(col: number, row: number): number {
-    const c = ((col % 2) + 2) % 2, r = ((row % 2) + 2) % 2;
-    if (c === 0 && r === 0) return 0; // star
-    if (c === 1 && r === 1) return 2; // small square
-    return 1; // cross
-  }
+     Key parameter: `a` = how far star points extend toward cell edge.
+     Classic proportion: a ≈ 0.28
+  ══════════════════════════════════════════════════════════════ */
 
-  // Assign colors per piece based on position (deterministic, varied)
-  function pieceColor(col: number, row: number, roundSeed: number): string {
-    srand(roundSeed * 1000 + col * 31 + row * 17);
-    const type = pieceType(col, row);
-    if (type === 0) return pick([COLORS[0], COLORS[1], COLORS[6]]); // stars: blue/green/turquoise
-    if (type === 1) return pick([COLORS[2], COLORS[3], COLORS[7]]); // crosses: white/amber/olive
-    return pick([COLORS[4], COLORS[5], COLORS[3]]); // squares: black/red/amber
-  }
+  const A = 0.28; // star extension ratio
+  const B = 0.5 - A; // inner offset
 
-  /* ── Draw individual zellige pieces ── */
-  function drawStar(c: CanvasRenderingContext2D, cx: number, cy: number, r: number, color: string) {
-    c.beginPath();
+  // Piece types within a unit cell (star center at 0.5, 0.5):
+  // 0 = 8-pointed star
+  // 1 = bowtie (4 per cell: top, right, bottom, left - shared with neighbors)
+  // 2 = corner square (4 per cell: TL, TR, BR, BL - shared with neighbors)
+
+  // 8-pointed star polygon vertices (clockwise from top)
+  function starPoly(cx: number, cy: number, s: number): number[][] {
+    const r = s * 0.5;
+    const pts: number[][] = [];
     for (let i = 0; i < 8; i++) {
-      const a = (Math.PI / 4) * i - Math.PI / 8;
-      const outer = r * 0.95;
-      const inner = r * 0.42;
-      const rad = i % 2 === 0 ? outer : inner;
-      i === 0 ? c.moveTo(cx + rad * Math.cos(a), cy + rad * Math.sin(a))
-              : c.lineTo(cx + rad * Math.cos(a), cy + rad * Math.sin(a));
+      const angle = (Math.PI / 4) * i - Math.PI / 2;
+      const outerR = r * 0.92;
+      const innerR = r * 0.38;
+      // Outer point
+      pts.push([cx + outerR * Math.cos(angle), cy + outerR * Math.sin(angle)]);
+      // Inner point (between this and next outer)
+      const midAngle = angle + Math.PI / 8;
+      pts.push([cx + innerR * Math.cos(midAngle), cy + innerR * Math.sin(midAngle)]);
     }
-    c.closePath();
-    // Glaze effect: subtle gradient
-    const g = c.createRadialGradient(cx - r * 0.15, cy - r * 0.15, 0, cx, cy, r);
-    g.addColorStop(0, lighten(color, 20));
-    g.addColorStop(0.6, color);
-    g.addColorStop(1, darken(color, 15));
-    c.fillStyle = g;
-    c.fill();
-    c.strokeStyle = darken(color, 30);
-    c.lineWidth = 0.5;
-    c.stroke();
+    return pts;
   }
 
-  function drawCross(c: CanvasRenderingContext2D, cx: number, cy: number, r: number, color: string, rot: number) {
-    // Elongated bowtie/cross shape
-    c.save();
-    c.translate(cx, cy);
-    c.rotate(rot);
-    const w = r * 0.42, h = r * 0.88;
+  // Bowtie polygon between two stars
+  function bowtiePoly(cx: number, cy: number, s: number, vertical: boolean): number[][] {
+    const h = s * 0.5;
+    const w1 = s * 0.22; // wide end
+    const w2 = s * 0.08; // narrow waist
+    if (vertical) {
+      return [
+        [cx - w1, cy - h * 0.46], [cx + w1, cy - h * 0.46],
+        [cx + w2, cy],
+        [cx + w1, cy + h * 0.46], [cx - w1, cy + h * 0.46],
+        [cx - w2, cy],
+      ];
+    }
+    return [
+      [cx - h * 0.46, cy - w1], [cx - h * 0.46, cy + w1],
+      [cx, cy + w2],
+      [cx + h * 0.46, cy + w1], [cx + h * 0.46, cy - w1],
+      [cx, cy - w2],
+    ];
+  }
+
+  // Small rotated square in the corners between stars
+  function cornerPoly(cx: number, cy: number, s: number): number[][] {
+    const d = s * 0.145;
+    return [
+      [cx, cy - d], [cx + d, cy], [cx, cy + d], [cx - d, cy],
+    ];
+  }
+
+  /* ── Drawing helpers ── */
+  function fillPoly(c: CanvasRenderingContext2D, pts: number[][], color: string, inset: number) {
+    if (pts.length < 3) return;
+    // Compute centroid for inset
+    let centX = 0, centY = 0;
+    for (const p of pts) { centX += p[0]; centY += p[1]; }
+    centX /= pts.length; centY /= pts.length;
+
     c.beginPath();
-    c.moveTo(-w, -h); c.lineTo(w, -h);
-    c.lineTo(w * 0.6, -h * 0.15);
-    c.lineTo(w, h); c.lineTo(-w, h);
-    c.lineTo(-w * 0.6, h * 0.15);
+    for (let i = 0; i < pts.length; i++) {
+      const px = pts[i][0], py = pts[i][1];
+      // Inset toward centroid for grout lines
+      const dx = centX - px, dy = centY - py;
+      const len = Math.sqrt(dx * dx + dy * dy);
+      const ix = px + (dx / len) * inset;
+      const iy = py + (dy / len) * inset;
+      i === 0 ? c.moveTo(ix, iy) : c.lineTo(ix, iy);
+    }
     c.closePath();
-    const g = c.createLinearGradient(-r * 0.3, -r * 0.3, r * 0.3, r * 0.3);
-    g.addColorStop(0, lighten(color, 12));
-    g.addColorStop(1, darken(color, 8));
+
+    // Glazed ceramic effect: subtle gradient
+    c.fillStyle = color;
+    c.fill();
+
+    // Slight highlight on top-left edges
+    c.save();
+    c.globalCompositeOperation = 'source-atop';
+    const g = c.createLinearGradient(
+      pts[0][0], pts[0][1],
+      pts[Math.floor(pts.length / 2)][0], pts[Math.floor(pts.length / 2)][1]
+    );
+    g.addColorStop(0, 'rgba(255,255,255,0.12)');
+    g.addColorStop(0.5, 'rgba(255,255,255,0)');
+    g.addColorStop(1, 'rgba(0,0,0,0.06)');
     c.fillStyle = g;
     c.fill();
-    c.strokeStyle = darken(color, 25);
-    c.lineWidth = 0.5;
-    c.stroke();
     c.restore();
   }
 
-  function drawSmallSquare(c: CanvasRenderingContext2D, cx: number, cy: number, r: number, color: string) {
-    const s = r * 0.55;
-    c.save();
-    c.translate(cx, cy);
-    c.rotate(Math.PI / 4);
-    c.beginPath();
-    c.rect(-s, -s, s * 2, s * 2);
-    const g = c.createLinearGradient(-s, -s, s, s);
-    g.addColorStop(0, lighten(color, 15));
-    g.addColorStop(1, darken(color, 10));
-    c.fillStyle = g;
-    c.fill();
-    c.strokeStyle = darken(color, 25);
-    c.lineWidth = 0.5;
-    c.stroke();
-    c.restore();
+  /* ── Assign colors to pieces ── */
+  interface PieceInfo { type: number; col: number; row: number; subIdx: number; }
+
+  function pieceColor(p: PieceInfo, rs: number): string {
+    srand(rs * 100 + p.col * 31 + p.row * 17 + p.subIdx * 7);
+    if (p.type === 0) return pick([PALETTE[0], PALETTE[1], PALETTE[6]]); // stars
+    if (p.type === 1) return pick([PALETTE[2], PALETTE[3]]); // bowties
+    return pick([PALETTE[4], PALETTE[5], PALETTE[3]]); // corners
   }
 
-  function lighten(hex: string, pct: number): string {
-    const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
-    const f = pct / 100;
-    return `rgb(${Math.min(255, r + (255 - r) * f)|0},${Math.min(255, g + (255 - g) * f)|0},${Math.min(255, b + (255 - b) * f)|0})`;
-  }
-  function darken(hex: string, pct: number): string {
-    const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
-    const f = 1 - pct / 100;
-    return `rgb(${(r * f)|0},${(g * f)|0},${(b * f)|0})`;
-  }
+  /* ── Grid: 4 star columns x 3 star rows ── */
+  const SCOLS = 4, SROWS = 3;
 
-  /* ── Draw a piece at grid position ── */
-  function drawPiece(c: CanvasRenderingContext2D, col: number, row: number, cellSize: number, ox: number, oy: number, color: string) {
-    const cx = ox + (col + 0.5) * cellSize;
-    const cy = oy + (row + 0.5) * cellSize;
-    const r = cellSize / 2 - GROUT_W;
-    const type = pieceType(col, row);
-
-    if (type === 0) drawStar(c, cx, cy, r, color);
-    else if (type === 1) {
-      const isVert = col % 2 === 1 && row % 2 === 0;
-      drawCross(c, cx, cy, r, color, isVert ? 0 : Math.PI / 2);
+  function allPieces(): PieceInfo[] {
+    const pieces: PieceInfo[] = [];
+    for (let r = 0; r < SROWS; r++) {
+      for (let c = 0; c < SCOLS; c++) {
+        pieces.push({ type: 0, col: c, row: r, subIdx: 0 }); // star
+        // bowties between stars
+        if (c < SCOLS - 1) pieces.push({ type: 1, col: c, row: r, subIdx: 1 }); // horiz
+        if (r < SROWS - 1) pieces.push({ type: 1, col: c, row: r, subIdx: 2 }); // vert
+        // corner squares
+        if (c < SCOLS - 1 && r < SROWS - 1) pieces.push({ type: 2, col: c, row: r, subIdx: 3 });
+      }
     }
-    else drawSmallSquare(c, cx, cy, r, color);
+    return pieces;
   }
 
-  /* ── Grid dimensions ── */
-  const GCOLS = 8, GROWS = 5;
+  function drawPieceAt(c: CanvasRenderingContext2D, p: PieceInfo, cellSize: number, ox: number, oy: number, color: string, inset: number) {
+    const cx = ox + (p.col + 0.5) * cellSize;
+    const cy = oy + (p.row + 0.5) * cellSize;
+
+    if (p.type === 0) {
+      fillPoly(c, starPoly(cx, cy, cellSize), color, inset);
+    } else if (p.type === 1) {
+      if (p.subIdx === 1) {
+        // Horizontal bowtie: between (col, row) and (col+1, row)
+        fillPoly(c, bowtiePoly(cx + cellSize * 0.5, cy, cellSize, false), color, inset);
+      } else {
+        // Vertical bowtie: between (col, row) and (col, row+1)
+        fillPoly(c, bowtiePoly(cx, cy + cellSize * 0.5, cellSize, true), color, inset);
+      }
+    } else {
+      // Corner square: between (col,row), (col+1,row), (col,row+1), (col+1,row+1)
+      fillPoly(c, cornerPoly(cx + cellSize * 0.5, cy + cellSize * 0.5, cellSize), color, inset);
+    }
+  }
 
   /* ── Draw full mosaic ── */
-  function drawMosaic(c: CanvasRenderingContext2D, w: number, h: number, rs: number, gapCol: number, gapRow: number) {
-    // Grout background
+  function drawMosaic(c: CanvasRenderingContext2D, w: number, h: number, rs: number, gapPiece: PieceInfo | null) {
     c.fillStyle = GROUT;
     c.fillRect(0, 0, w, h);
 
-    const cellW = w / GCOLS, cellH = h / GROWS;
-    const cellSize = Math.min(cellW, cellH);
-    const ox = (w - cellSize * GCOLS) / 2;
-    const oy = (h - cellSize * GROWS) / 2;
+    const cellSize = Math.min(w / SCOLS, h / SROWS);
+    const ox = (w - cellSize * SCOLS) / 2;
+    const oy = (h - cellSize * SROWS) / 2;
 
-    for (let row = 0; row < GROWS; row++) {
-      for (let col = 0; col < GCOLS; col++) {
-        if (col === gapCol && row === gapRow) {
-          // Draw gap
-          const gx = ox + col * cellSize + GROUT_W;
-          const gy = oy + row * cellSize + GROUT_W;
-          const gs = cellSize - GROUT_W * 2;
-          c.fillStyle = 'rgba(180,160,130,0.3)';
-          c.fillRect(gx, gy, gs, gs);
-          c.strokeStyle = '#c85a3a';
-          c.lineWidth = 2;
-          c.setLineDash([5, 4]);
-          c.strokeRect(gx, gy, gs, gs);
-          c.setLineDash([]);
-          c.fillStyle = 'rgba(200,90,58,0.25)';
-          c.font = `600 ${cellSize * 0.35}px system-ui, sans-serif`;
-          c.textAlign = 'center'; c.textBaseline = 'middle';
-          c.fillText('?', ox + (col + 0.5) * cellSize, oy + (row + 0.5) * cellSize);
-          c.textAlign = 'left'; c.textBaseline = 'alphabetic';
-          continue;
+    const pieces = allPieces();
+    for (const p of pieces) {
+      if (gapPiece && p.type === gapPiece.type && p.col === gapPiece.col && p.row === gapPiece.row && p.subIdx === gapPiece.subIdx) {
+        // Draw gap indicator
+        const gcx = ox + (p.col + 0.5) * cellSize + (p.subIdx === 1 ? cellSize * 0.5 : 0);
+        const gcy = oy + (p.row + 0.5) * cellSize + (p.subIdx === 2 ? cellSize * 0.5 : 0);
+        if (p.type === 2) { // corner offset
+          const gcx2 = ox + (p.col + 1) * cellSize;
+          const gcy2 = oy + (p.row + 1) * cellSize;
+          c.fillStyle = 'rgba(200,90,58,0.15)';
+          c.beginPath(); c.arc(gcx2, gcy2, cellSize * 0.12, 0, Math.PI * 2); c.fill();
         }
-        const color = pieceColor(col, row, rs);
-        drawPiece(c, col, row, cellSize, ox, oy, color);
+        c.fillStyle = 'rgba(200,90,58,0.2)';
+        c.font = `600 ${cellSize * 0.18}px system-ui,sans-serif`;
+        c.textAlign = 'center'; c.textBaseline = 'middle';
+        const tx = p.subIdx === 1 ? gcx : p.subIdx === 3 ? ox + (p.col + 1) * cellSize : ox + (p.col + 0.5) * cellSize;
+        const ty = p.subIdx === 2 ? gcy : p.subIdx === 3 ? oy + (p.row + 1) * cellSize : oy + (p.row + 0.5) * cellSize;
+        c.fillText('?', tx, ty);
+        c.textAlign = 'left'; c.textBaseline = 'alphabetic';
+        continue;
       }
+      drawPieceAt(c, p, cellSize, ox, oy, pieceColor(p, rs), INSET);
     }
   }
 
   /* ── Draw a single piece in a choice canvas ── */
-  function drawChoicePiece(cv: HTMLCanvasElement, col: number, row: number, color: string) {
+  function drawChoicePiece(cv: HTMLCanvasElement, p: PieceInfo, color: string) {
     const dpr = Math.min(devicePixelRatio || 1, 2);
     const s = cv.getBoundingClientRect().width;
     cv.width = s * dpr; cv.height = s * dpr;
@@ -301,32 +286,29 @@
     c.setTransform(dpr, 0, 0, dpr, 0, 0);
     c.fillStyle = GROUT;
     c.fillRect(0, 0, s, s);
-    drawPiece(c, col, row, s, 0, 0, color);
+    // Draw the piece centered in the choice canvas
+    const fakeP = { ...p, col: 0, row: 0 };
+    const cellSize = s * 1.2; // slightly larger than canvas so the piece fills it
+    const ox = (s - cellSize) / 2;
+    const oy = (s - cellSize) / 2;
+    // Adjust offsets based on subIdx
+    let adjOx = ox, adjOy = oy;
+    if (p.subIdx === 1) adjOx -= cellSize * 0.5;
+    if (p.subIdx === 2) adjOy -= cellSize * 0.5;
+    if (p.subIdx === 3) { adjOx -= cellSize * 0.5; adjOy -= cellSize * 0.5; }
+    drawPieceAt(c, fakeP, cellSize, adjOx, adjOy, color, INSET);
   }
 
-  /* ── Shuffle ── */
-  function shuffle<T>(a: T[]) { for (let i = a.length - 1; i > 0; i--) { const j = randInt(i + 1); [a[i], a[j]] = [a[j], a[i]]; } }
-
-  /* ── Generate a distractor color ── */
-  function makeDistractor(correctColor: string, col: number, row: number, difficulty: number): string {
-    const type = pieceType(col, row);
-    // Pick from same-type colors but different from correct
+  /* ── Distractor: same shape, different color ── */
+  function makeDistractor(correctColor: string, p: PieceInfo): string {
     let pool: string[];
-    if (type === 0) pool = [COLORS[0], COLORS[1], COLORS[6], COLORS[5]];
-    else if (type === 1) pool = [COLORS[2], COLORS[3], COLORS[7], COLORS[0]];
-    else pool = [COLORS[4], COLORS[5], COLORS[3], COLORS[1]];
-
-    // Higher difficulty = more similar distractors
-    if (difficulty > 5) {
-      // Add near-variants of the correct color
-      pool = [correctColor, ...pool]; // doubles chance of very similar
-    }
-
+    if (p.type === 0) pool = [PALETTE[0], PALETTE[1], PALETTE[6], PALETTE[5]];
+    else if (p.type === 1) pool = [PALETTE[2], PALETTE[3], PALETTE[6], PALETTE[0]];
+    else pool = [PALETTE[4], PALETTE[5], PALETTE[3], PALETTE[1]];
     let c = correctColor;
-    let attempts = 0;
-    while (c === correctColor && attempts < 20) { c = pick(pool); attempts++; }
-    if (c === correctColor) c = pick(COLORS); // fallback
-    return c;
+    let att = 0;
+    while (c === correctColor && att < 20) { c = pick(pool); att++; }
+    return c === correctColor ? pick(PALETTE) : c;
   }
 
   /* ── Play a round ── */
@@ -339,50 +321,40 @@
 
     const rs = round * 137 + 42;
     srand(rs + 999);
-    const gapCol = randInt(GCOLS), gapRow = randInt(GROWS);
-    const correctColor = pieceColor(gapCol, gapRow, rs);
+    const pieces = allPieces();
+    const gapPiece = pieces[randInt(pieces.length)];
+    const correctColor = pieceColor(gapPiece, rs);
 
     // Draw main mosaic
     const rect = mainCv.getBoundingClientRect();
     const dpr = Math.min(devicePixelRatio || 1, 2);
     mainCv.width = rect.width * dpr; mainCv.height = rect.height * dpr;
     mainCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    drawMosaic(mainCtx, rect.width, rect.height, rs, gapCol, gapRow);
+    drawMosaic(mainCtx, rect.width, rect.height, rs, gapPiece);
 
     // Generate options
     srand(rs + 7777);
-    const options: { color: string; correct: boolean }[] = [
-      { color: correctColor, correct: true },
-    ];
+    const options: { color: string; correct: boolean }[] = [{ color: correctColor, correct: true }];
     const used = new Set([correctColor]);
     while (options.length < 4) {
-      const dc = makeDistractor(correctColor, gapCol, gapRow, round);
+      const dc = makeDistractor(correctColor, gapPiece);
       if (!used.has(dc)) { used.add(dc); options.push({ color: dc, correct: false }); }
     }
     shuffle(options);
 
-    // Draw choices and wire handlers
     choiceCvs.forEach((cv, i) => {
       const fresh = cv.cloneNode(true) as HTMLCanvasElement;
       cv.parentNode!.replaceChild(fresh, cv);
       choiceCvs[i] = fresh;
-      drawChoicePiece(fresh, gapCol, gapRow, options[i].color);
-
+      drawChoicePiece(fresh, gapPiece, options[i].color);
       fresh.addEventListener('click', () => {
         if (locked) return;
         locked = true;
-
         if (options[i].correct) {
           fresh.classList.add('correct');
           score++;
           feedbackEl.textContent = 'Correct';
           feedbackEl.style.color = '#2a7a6d';
-          // Fill the gap
-          const cellW = rect.width / GCOLS, cellH = rect.height / GROWS;
-          const cellSize = Math.min(cellW, cellH);
-          const ox = (rect.width - cellSize * GCOLS) / 2;
-          const oy = (rect.height - cellSize * GROWS) / 2;
-          drawPiece(mainCtx, gapCol, gapRow, cellSize, ox, oy, correctColor);
         } else {
           fresh.classList.add('wrong');
           feedbackEl.textContent = 'Incorrect';
@@ -391,7 +363,6 @@
         }
         choiceCvs.forEach(c => c.classList.add('disabled'));
         scoreEl.textContent = `${score} correct`;
-
         setTimeout(() => { round++; round >= ROUNDS ? showFinal() : playRound(); }, 1200);
       });
     });
@@ -400,17 +371,15 @@
   function showFinal() {
     gameEl.style.display = 'none';
     finalScoreEl.textContent = String(score);
-    if (score >= 9) finalTextEl.textContent = 'Exceptional. A zellige maalem in Fez makes thousands of these judgments per panel, cutting each tile freehand from glazed terracotta and fitting it by eye. The colors and geometry must align across the entire surface.';
-    else if (score >= 7) finalTextEl.textContent = 'Strong spatial reasoning. Zellige artisans train for eight or more years before they are trusted with commissioned panels. Distinguishing the correct piece from near-matches at speed is what separates a master from an apprentice.';
-    else if (score >= 5) finalTextEl.textContent = 'The subtlety is real. Each piece must match its neighbors in both shape and color. Maalems develop this awareness through years of daily repetition until correct placement becomes instinctive.';
-    else finalTextEl.textContent = 'These distinctions are genuinely hard to see. Zellige craftsmen assemble their patterns face-down, making placement decisions they cannot verify until the panel is flipped and grouted.';
+    if (score >= 9) finalTextEl.textContent = 'Exceptional. A zellige maalem in Fez makes thousands of these color judgments per panel, cutting each tile freehand from glazed terracotta and fitting it by eye.';
+    else if (score >= 7) finalTextEl.textContent = 'Strong pattern recognition. Zellige artisans train for eight or more years before they are trusted with commissioned panels. The subtle color differences between correct and incorrect tiles are what separates masters from apprentices.';
+    else if (score >= 5) finalTextEl.textContent = 'The subtlety is real. Each piece must match its neighbors in color and finish. Maalems develop this awareness through years of daily repetition.';
+    else finalTextEl.textContent = 'These distinctions are genuinely hard. Zellige craftsmen assemble their patterns face-down, making color and placement decisions they cannot verify until the panel is flipped.';
     resultEl.hidden = false;
   }
 
   document.getElementById('zpat-retry')!.addEventListener('click', () => {
-    round = 0; score = 0;
-    gameEl.style.display = ''; resultEl.hidden = true;
-    playRound();
+    round = 0; score = 0; gameEl.style.display = ''; resultEl.hidden = true; playRound();
   });
 
   playRound();
