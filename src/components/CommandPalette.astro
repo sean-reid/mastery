@@ -257,16 +257,29 @@ const searchData = skills.map((s) => ({
     items[activeIndex]?.scrollIntoView({ block: 'nearest' });
   }
 
+  function jumpToSkill(skillId: string) {
+    close();
+    const el = document.getElementById(`skill-${skillId}`);
+    if (!el) return;
+    // Ensure the card is visible (may be deferred by infinite scroll)
+    if (el.style.display === 'none' || el.dataset.deferred) {
+      el.style.display = '';
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      delete el.dataset.deferred;
+    }
+    // Scroll so the title sits just below the sticky nav
+    const navHeight = document.querySelector('.sticky-nav')?.getBoundingClientRect().height || 60;
+    const top = el.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
   function selectActive() {
     const items = results.querySelectorAll('.result-item');
     const item = items[activeIndex] as HTMLElement | undefined;
     if (!item) return;
     const skillId = item.dataset.skillId;
-    if (skillId) {
-      close();
-      const el = document.getElementById(`skill-${skillId}`);
-      el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    if (skillId) jumpToSkill(skillId);
   }
 
   // Event listeners
@@ -308,16 +321,7 @@ const searchData = skills.map((s) => ({
 
   results.addEventListener('click', (e) => {
     const item = (e.target as HTMLElement).closest('.result-item') as HTMLElement;
-    if (item) {
-      const skillId = item.dataset.skillId;
-      if (skillId) {
-        close();
-        document.getElementById(`skill-${skillId}`)?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    }
+    if (item?.dataset.skillId) jumpToSkill(item.dataset.skillId);
   });
 </script>
 
