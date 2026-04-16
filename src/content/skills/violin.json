@@ -8,7 +8,13 @@
     "alt": "Close-up of a violinist's left hand on the fingerboard during a concert performance",
     "attribution": "Photo by Unsplash"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "ngjEVKxQCWs",
+      "title": "Johann Sebastian Bach - Chaconne, Partita No. 2 BWV 1004 | Hilary Hahn"
+    }
+  ],
   "sources": [
     {
       "title": "The role of deliberate practice in the acquisition of expert performance",

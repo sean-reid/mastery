@@ -8,7 +8,13 @@
     "alt": "Intricate gear mechanism of an astronomical clock with moon phase display",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "atfKCwxyprU",
+      "title": "Prague's famous Astronomical clock returns after major repair works"
+    }
+  ],
   "sources": [
     {
       "title": "Astronomical clock - Wikipedia",

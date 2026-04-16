@@ -8,7 +8,13 @@
     "alt": "Boatbuilder drawing full-size hull lines on a loft floor using long flexible splines and battens",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "a6s3vhFO01A",
+      "title": "Lofting 101: Introduction to Lofting"
+    }
+  ],
   "sources": [
     {
       "title": "Lofting - Wikipedia",

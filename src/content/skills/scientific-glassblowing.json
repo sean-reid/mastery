@@ -8,7 +8,13 @@
     "alt": "Scientific glassblower shaping borosilicate tubing on a lathe with an oxygen torch",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "ECF5qy_GsMM",
+      "title": "Portrait of a Scientific Glassblower"
+    }
+  ],
   "sources": [
     {
       "title": "Scientific glassblowing - Wikipedia",

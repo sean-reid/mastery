@@ -8,7 +8,13 @@
     "alt": "Kazakh berkutchi on horseback with a golden eagle perched on his arm against snowy mountain backdrop",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "oUhN1Thewn8",
+      "title": "Eagles hunting in Kyrgyzstan"
+    }
+  ],
   "sources": [
     {
       "title": "Hunting with eagles - Wikipedia",

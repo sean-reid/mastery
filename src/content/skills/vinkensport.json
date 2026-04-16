@@ -8,7 +8,13 @@
     "alt": "Row of small wooden finch boxes along a Belgian street during a vinkensport competition",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "ikqpBlwLSa0",
+      "title": "Vinkenzetting Dendermonde"
+    }
+  ],
   "sources": [
     {
       "title": "Vinkensport",

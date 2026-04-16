@@ -8,7 +8,13 @@
     "alt": "Kuchipudi dancer performing tarangam on a brass plate in traditional costume and jewelry",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "iK3arQB9eEI",
+      "title": "Kuchipudi Tarangam: Nandabala"
+    }
+  ],
   "sources": [
     {
       "title": "Kuchipudi",

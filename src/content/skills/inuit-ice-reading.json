@@ -8,7 +8,13 @@
     "alt": "Inuit hunter testing sea ice with a harpoon while reading the frozen Arctic landscape",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "nXZLk7t9tDg",
+      "title": "How Inuit Walk on Sea Ice That Would Kill Anyone Else"
+    }
+  ],
   "sources": [
     {
       "title": "Inuit Qaujimajatuqangit - Wikipedia",

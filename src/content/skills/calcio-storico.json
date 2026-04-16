@@ -8,7 +8,13 @@
     "alt": "Two teams of players brawling on a sand-covered pitch during a Calcio Storico match in Florence",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "utzwIsH2s28",
+      "title": "Highlights Finale Calcio Storico 2024: Azzurri vs Rossi"
+    }
+  ],
   "sources": [
     {
       "title": "Calcio storico fiorentino",

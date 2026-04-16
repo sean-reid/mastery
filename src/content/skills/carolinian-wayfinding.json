@@ -8,7 +8,13 @@
     "alt": "Traditional Micronesian sailing canoe navigating open Pacific Ocean under a star-filled sky",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "m8bDCaPhOek",
+      "title": "How did Polynesian wayfinders navigate the Pacific Ocean?"
+    }
+  ],
   "sources": [
     {
       "title": "Micronesian navigation - Wikipedia",

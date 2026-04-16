@@ -8,7 +8,13 @@
     "alt": "Surgical team performing open-heart bypass surgery under operating room lights",
     "attribution": "Photo by Unsplash"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "eDmlWAaDxVg",
+      "title": "Open Heart Surgery | Inside the OR"
+    }
+  ],
   "sources": [
     {
       "title": "Global cardiac surgery: Access to cardiac surgical care around the world",

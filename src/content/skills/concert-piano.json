@@ -8,7 +8,13 @@
     "alt": "Concert grand piano on stage under spotlight at a recital hall",
     "attribution": "Photo by Unsplash"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "DPJL488cfRw",
+      "title": "Yunchan Lim - Rachmaninov Piano Concerto No. 3 in D Minor, op. 30"
+    }
+  ],
   "sources": [
     {
       "title": "The role of deliberate practice in the acquisition of expert performance",

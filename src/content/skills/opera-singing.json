@@ -8,7 +8,13 @@
     "alt": "Opera singer performing on stage in full costume at a grand opera house",
     "attribution": "Photo by Unsplash"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "cWc7vYjgnTs",
+      "title": "Luciano Pavarotti sings Nessun dorma from Turandot (The Three Tenors in Concert 1994)"
+    }
+  ],
   "sources": [
     {
       "title": "Bel canto",

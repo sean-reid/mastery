@@ -8,7 +8,13 @@
     "alt": "Close-up of an erhu showing the hexagonal resonator, python skin membrane, and two strings",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "q78m-Xj_ln4",
+      "title": "Erhu solo: The Moon Over a Fountain"
+    }
+  ],
   "sources": [
     {
       "title": "Erhu - Wikipedia",

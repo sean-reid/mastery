@@ -8,7 +8,13 @@
     "alt": "Colorized scanning electron microscope image of diverse pollen grains",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [],
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "GFy6in1u5dY",
+      "title": "How Pollen Solves Crimes: Forensic Palynology Explained"
+    }
+  ],
   "sources": [
     {
       "title": "Palynology - Wikipedia",
