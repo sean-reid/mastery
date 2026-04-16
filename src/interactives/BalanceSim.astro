@@ -222,10 +222,11 @@
     if (typeof DeviceOrientationEvent !== 'undefined' &&
         typeof (DeviceOrientationEvent as any).requestPermission === 'function') {
       (DeviceOrientationEvent as any).requestPermission()
-        .then((s: string) => { if (s === 'granted') { window.addEventListener('deviceorientation', onTilt); hasTilt = true; } })
+        .then((s: string) => { if (s === 'granted') window.addEventListener('deviceorientation', onTilt); })
         .catch(() => {});
     } else if ('DeviceOrientationEvent' in window) {
-      window.addEventListener('deviceorientation', onTilt); hasTilt = true;
+      window.addEventListener('deviceorientation', onTilt);
+      // hasTilt stays false until onTilt actually fires with real data
     }
   }
 
