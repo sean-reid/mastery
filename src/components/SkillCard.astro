@@ -14,6 +14,8 @@ import BeatDetector from '../interactives/BeatDetector.astro';
 import BalanceSim from '../interactives/BalanceSim.astro';
 import StarNavigation from '../interactives/StarNavigation.astro';
 import PatternBuilder from '../interactives/PatternBuilder.astro';
+import PhonemeChallenge from '../interactives/PhonemeChallenge.astro';
+import FoleyMatch from '../interactives/FoleyMatch.astro';
 import type { RankedSkill } from '../types/skill';
 
 interface Props {
@@ -36,6 +38,8 @@ const interactiveMap: Record<string, any> = {
   'balance-sim': BalanceSim,
   'star-navigation': StarNavigation,
   'pattern-builder': PatternBuilder,
+  'phoneme-challenge': PhonemeChallenge,
+  'foley-match': FoleyMatch,
 };
 
 const InteractiveComponent = interactiveId ? interactiveMap[interactiveId] : null;

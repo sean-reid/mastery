@@ -1,0 +1,448 @@
+---
+---
+<div class="interactive-wrap" id="phoneme-challenge">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Phoneme discrimination</h4>
+    <p class="interactive-subtitle">Two sounds will play in sequence. Decide whether they represent the same phoneme or two different ones. Trained linguists score around 98 percent. Most untrained listeners hover near 55. Click consonant recordings from Wikimedia Commons (CC-licensed).</p>
+  </div>
+  <div class="phon-body">
+    <div class="phon-level-label" id="phon-level-label">Level 1: English onset pairs</div>
+    <div class="phon-progress" id="phon-progress">Round 1 of 8</div>
+    <div class="phon-player">
+      <button class="phon-listen-btn" id="phon-listen">
+        <span class="phon-listen-icon" id="phon-listen-icon">
+          <svg class="phon-svg-play" width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M7 4.5l11 6.5-11 6.5V4.5z" fill="currentColor"/></svg>
+          <span class="phon-eq" id="phon-eq" hidden><span></span><span></span><span></span></span>
+        </span>
+        <span id="phon-listen-label">Listen</span>
+      </button>
+      <button class="phon-replay-btn" id="phon-replay" hidden>Replay</button>
+    </div>
+    <div class="phon-choice" id="phon-choice" hidden>
+      <button class="phon-same-btn" id="phon-same">Same</button>
+      <button class="phon-diff-btn" id="phon-diff">Different</button>
+    </div>
+    <div class="phon-feedback" id="phon-feedback" hidden>
+      <span class="phon-fb-icon" id="phon-fb-icon"></span>
+      <span class="phon-fb-text" id="phon-fb-text"></span>
+    </div>
+    <div class="phon-summary" id="phon-summary" hidden>
+      <div class="phon-score-row">
+        <span class="phon-score-pct" id="phon-score-pct"></span>
+        <span class="phon-score-label">accuracy</span>
+      </div>
+      <div class="phon-bench">
+        <div class="phon-bench-bar">
+          <div class="phon-bench-fill" id="phon-bench-you" style="width:0%"><span class="phon-bench-tag">You</span></div>
+        </div>
+        <div class="phon-bench-ref">
+          <span class="phon-bench-mark" style="left:55%"><span class="phon-bench-tip">Untrained ~55%</span></span>
+          <span class="phon-bench-mark" style="left:98%"><span class="phon-bench-tip">Linguists ~98%</span></span>
+        </div>
+      </div>
+      <p class="phon-summary-ctx" id="phon-summary-ctx"></p>
+      <div class="phon-summary-btns">
+        <button class="phon-next-btn" id="phon-next" hidden>Next level</button>
+        <button class="phon-retry-btn" id="phon-retry">Retry level</button>
+        <button class="phon-retry-btn" id="phon-restart" hidden>Start over</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  #phoneme-challenge { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); margin: var(--space-8) 0; }
+  #phoneme-challenge .interactive-header { margin-bottom: var(--space-6); }
+  #phoneme-challenge .interactive-title { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-2); }
+  #phoneme-challenge .interactive-subtitle { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 56ch; }
+  .phon-body { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+  .phon-level-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+  .phon-progress { font-size: var(--text-sm); color: var(--color-text-secondary); font-variant-numeric: tabular-nums; }
+  .phon-player { display: flex; gap: var(--space-3); align-items: center; }
+  .phon-listen-btn { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-base); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); animation: phon-pulse 2.5s ease-in-out infinite; cursor: pointer; border: none; }
+  .phon-listen-btn:hover { opacity: .92; transform: scale(1.03); }
+  .phon-listen-btn.playing { animation: none; background: var(--color-accent-hover, var(--color-accent)); pointer-events: none; }
+  @keyframes phon-pulse { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 40%, transparent); } 50% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--color-accent) 0%, transparent); } }
+  .phon-listen-icon { display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; }
+  .phon-svg-play { display: block; }
+  .phon-listen-btn.playing .phon-svg-play { display: none; }
+  .phon-listen-btn.playing .phon-eq { display: flex !important; }
+  .phon-eq { display: flex; align-items: flex-end; gap: 3px; height: 16px; }
+  .phon-eq span { width: 3px; background: white; border-radius: 1px; animation: phon-eqa .8s ease-in-out infinite alternate; }
+  .phon-eq span:nth-child(1) { height: 6px; }
+  .phon-eq span:nth-child(2) { height: 12px; animation-delay: .15s; }
+  .phon-eq span:nth-child(3) { height: 8px; animation-delay: .3s; }
+  @keyframes phon-eqa { 0% { transform: scaleY(.3); } 100% { transform: scaleY(1); } }
+  .phon-replay-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-border); font-size: var(--text-sm); color: var(--color-text-secondary); transition: all var(--duration-fast) var(--ease-out); cursor: pointer; background: transparent; }
+  .phon-replay-btn:hover { background: var(--color-surface-raised); }
+  .phon-replay-btn[hidden] { display: none; }
+  .phon-choice { display: flex; gap: var(--space-3); }
+  .phon-choice[hidden] { display: none; }
+  .phon-same-btn, .phon-diff-btn { padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); font-size: var(--text-base); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); cursor: pointer; border: none; min-width: 120px; }
+  .phon-same-btn { background: var(--color-text); color: var(--color-surface); }
+  .phon-same-btn:hover { opacity: .88; transform: scale(1.02); }
+  .phon-diff-btn { background: transparent; border: 1px solid var(--color-text); color: var(--color-text); }
+  .phon-diff-btn:hover { background: var(--color-surface-raised); transform: scale(1.02); }
+  .phon-feedback { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-6); border-radius: var(--radius-lg); animation: phon-in .35s var(--ease-out); }
+  .phon-feedback[hidden] { display: none; }
+  .phon-feedback.correct { background: color-mix(in srgb, var(--color-score-low, #22c55e) 10%, transparent); border: 1px solid color-mix(in srgb, var(--color-score-low, #22c55e) 30%, transparent); }
+  .phon-feedback.incorrect { background: color-mix(in srgb, var(--color-score-high, #ef4444) 10%, transparent); border: 1px solid color-mix(in srgb, var(--color-score-high, #ef4444) 30%, transparent); }
+  .phon-fb-icon { font-size: var(--text-lg); line-height: 1; }
+  .phon-fb-text { font-size: var(--text-sm); color: var(--color-text-secondary); }
+  @keyframes phon-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .phon-summary { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); width: 100%; max-width: 480px; animation: phon-in .5s var(--ease-out); }
+  .phon-summary[hidden] { display: none; }
+  .phon-score-row { display: flex; align-items: baseline; gap: var(--space-2); }
+  .phon-score-pct { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .phon-score-label { font-size: var(--text-sm); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .phon-bench { width: 100%; }
+  .phon-bench-bar { width: 100%; height: 10px; background: var(--color-border); border-radius: var(--radius-full); overflow: hidden; position: relative; }
+  .phon-bench-fill { height: 100%; background: linear-gradient(90deg, var(--color-accent), color-mix(in srgb, var(--color-accent) 70%, #818cf8)); border-radius: var(--radius-full); transition: width .8s var(--ease-out); display: flex; align-items: center; justify-content: flex-end; min-width: fit-content; }
+  .phon-bench-tag { font-size: 0.6rem; color: white; font-weight: 600; padding: 0 var(--space-2); white-space: nowrap; }
+  .phon-bench-ref { position: relative; height: 28px; margin-top: var(--space-1); }
+  .phon-bench-mark { position: absolute; top: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; }
+  .phon-bench-mark::before { content: ''; display: block; width: 1px; height: 8px; background: var(--color-text-muted); opacity: .4; }
+  .phon-bench-tip { font-size: 0.6rem; color: var(--color-text-muted); white-space: nowrap; margin-top: 2px; }
+  .phon-summary-ctx { font-size: var(--text-sm); color: var(--color-text-secondary); text-align: center; max-width: 52ch; line-height: var(--leading-normal); }
+  .phon-summary-btns { display: flex; gap: var(--space-3); }
+  .phon-next-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-sm); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); cursor: pointer; border: none; }
+  .phon-next-btn:hover { opacity: .92; transform: scale(1.02); }
+  .phon-next-btn[hidden] { display: none; }
+  .phon-retry-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-border); font-size: var(--text-sm); color: var(--color-text-secondary); transition: all var(--duration-fast) var(--ease-out); cursor: pointer; background: transparent; }
+  .phon-retry-btn:hover { background: var(--color-surface-raised); }
+  .phon-retry-btn[hidden] { display: none; }
+  @media (max-width: 600px) {
+    #phoneme-challenge { padding: var(--space-6) var(--space-4); }
+    .phon-choice { flex-direction: column; width: 100%; }
+    .phon-same-btn, .phon-diff-btn { width: 100%; text-align: center; }
+    .phon-summary-btns { flex-direction: column; width: 100%; }
+    .phon-next-btn, .phon-retry-btn { width: 100%; text-align: center; }
+  }
+</style>
+
+<script>
+  const root = document.getElementById('phoneme-challenge')!;
+  const pq = (s: string) => root.querySelector(s)! as HTMLElement;
+  const levelLabel = pq('#phon-level-label');
+  const progressEl = pq('#phon-progress');
+  const listenBtn = pq('#phon-listen');
+  const listenLabel = pq('#phon-listen-label');
+  const eqBars = pq('#phon-eq');
+  const replayBtn = pq('#phon-replay');
+  const choiceEl = pq('#phon-choice');
+  const sameBtn = pq('#phon-same');
+  const diffBtn = pq('#phon-diff');
+  const feedbackEl = pq('#phon-feedback');
+  const fbIcon = pq('#phon-fb-icon');
+  const fbText = pq('#phon-fb-text');
+  const summaryEl = pq('#phon-summary');
+  const scorePct = pq('#phon-score-pct');
+  const benchYou = pq('#phon-bench-you');
+  const summaryCtx = pq('#phon-summary-ctx');
+  const nextBtn = pq('#phon-next') as HTMLButtonElement;
+  const retryBtn = pq('#phon-retry');
+  const restartBtn = pq('#phon-restart') as HTMLButtonElement;
+
+  let audioCtx: AudioContext | null = null;
+  let level = 1, roundNum = 1, correct = 0;
+  const ROUNDS_PER_LEVEL = 8, TOTAL_LEVELS = 3;
+  let currentIsSame = false;
+  let currentPairA = 0, currentPairB = 0;
+  let hasListened = false, answered = false;
+
+  function ensureAudio() {
+    if (!audioCtx) audioCtx = new AudioContext();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+  }
+
+  // Level 1: English onset pairs - filtered noise burst + vowel tone
+  const ONSETS = [
+    { label: 'p', freq: 800, bw: 600, dur: 0.015, gap: 0.04 },
+    { label: 'b', freq: 900, bw: 700, dur: 0.020, gap: 0.01 },
+    { label: 't', freq: 2800, bw: 800, dur: 0.012, gap: 0.04 },
+    { label: 'd', freq: 2600, bw: 900, dur: 0.018, gap: 0.01 },
+    { label: 'k', freq: 1600, bw: 1000, dur: 0.020, gap: 0.05 },
+    { label: 'sh', freq: 4000, bw: 2000, dur: 0.08, gap: 0.005 },
+    { label: 'ch', freq: 3800, bw: 1800, dur: 0.04, gap: 0.03 },
+    { label: 'f', freq: 5000, bw: 3000, dur: 0.06, gap: 0.005 },
+  ];
+
+  function makeNoise(ctx: AudioContext, dur: number): AudioBuffer {
+    const buf = ctx.createBuffer(1, Math.ceil(ctx.sampleRate * dur), ctx.sampleRate);
+    const d = buf.getChannelData(0);
+    for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    return buf;
+  }
+
+  function playOnsetSyllable(onset: typeof ONSETS[0], startTime: number) {
+    const ctx = audioCtx!, t = startTime;
+    const noiseSrc = ctx.createBufferSource();
+    noiseSrc.buffer = makeNoise(ctx, onset.dur);
+    const bp = ctx.createBiquadFilter();
+    bp.type = 'bandpass'; bp.frequency.value = onset.freq; bp.Q.value = onset.freq / onset.bw;
+    const ng = ctx.createGain();
+    ng.gain.setValueAtTime(0.6, t); ng.gain.linearRampToValueAtTime(0, t + onset.dur);
+    noiseSrc.connect(bp); bp.connect(ng); ng.connect(ctx.destination);
+    noiseSrc.start(t); noiseSrc.stop(t + onset.dur);
+    const vs = t + onset.dur + onset.gap, vd = 0.15;
+    const osc = ctx.createOscillator();
+    osc.type = 'sawtooth'; osc.frequency.value = 180;
+    const vf = ctx.createBiquadFilter();
+    vf.type = 'bandpass'; vf.frequency.value = 700; vf.Q.value = 2;
+    const vg = ctx.createGain();
+    vg.gain.setValueAtTime(0, vs); vg.gain.linearRampToValueAtTime(0.2, vs + 0.02);
+    vg.gain.setValueAtTime(0.2, vs + vd - 0.03); vg.gain.linearRampToValueAtTime(0, vs + vd);
+    osc.connect(vf); vf.connect(vg); vg.connect(ctx.destination);
+    osc.start(vs); osc.stop(vs + vd);
+    return vs + vd;
+  }
+
+  // Level 2: Click consonants - real recordings from Wikimedia Commons
+  const CLICKS = [
+    { label: 'dental', file: 'dental.ogg' },
+    { label: 'lateral', file: 'lateral.ogg' },
+    { label: 'palatal', file: 'palatal.ogg' },
+    { label: 'alveolar', file: 'alveolar.ogg' },
+    { label: 'bilabial', file: 'bilabial.ogg' },
+    { label: 'velar', file: 'velar.ogg' },
+  ];
+  const clickBuffers: (AudioBuffer | null)[] = new Array(CLICKS.length).fill(null);
+  let clicksLoaded = false;
+
+  async function loadClickAudio() {
+    if (clicksLoaded) return;
+    ensureAudio();
+    const ctx = audioCtx!;
+    const base = import.meta.env.BASE_URL || '/mastery/';
+    await Promise.all(CLICKS.map(async (c, i) => {
+      try {
+        const resp = await fetch(`${base}audio/clicks/${c.file}`);
+        const arr = await resp.arrayBuffer();
+        clickBuffers[i] = await ctx.decodeAudioData(arr);
+      } catch { clickBuffers[i] = null; }
+    }));
+    clicksLoaded = true;
+  }
+
+  // Start preloading clicks immediately
+  loadClickAudio();
+
+  function playClickBuffer(index: number, startTime: number): number {
+    const ctx = audioCtx!;
+    const buf = clickBuffers[index];
+    if (!buf) return startTime + 0.1;
+    const src = ctx.createBufferSource();
+    src.buffer = buf;
+    src.connect(ctx.destination);
+    src.start(startTime);
+    return startTime + buf.duration;
+  }
+
+  // Level 3: Whistled vowels (Silbo Gomero)
+  const WHISTLED: Record<string, number> = { a: 1500, e: 2000, i: 2800, o: 1200, u: 900 };
+  const WHISTLE_KEYS = Object.keys(WHISTLED);
+
+  function playWhistle(vowel: string, startTime: number) {
+    const ctx = audioCtx!, t = startTime, freq = WHISTLED[vowel], dur = 0.35;
+    const osc = ctx.createOscillator(); osc.type = 'sine';
+    const lfo = ctx.createOscillator(); lfo.type = 'sine'; lfo.frequency.value = 5.5;
+    const lfoG = ctx.createGain(); lfoG.gain.value = freq * 0.012;
+    lfo.connect(lfoG); lfoG.connect(osc.frequency);
+    lfo.start(t); lfo.stop(t + dur);
+    osc.frequency.setValueAtTime(freq * 0.97, t);
+    osc.frequency.linearRampToValueAtTime(freq, t + 0.04);
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.25, t + 0.03);
+    g.gain.setValueAtTime(0.25, t + dur - 0.06); g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    // Breathiness layer
+    const ns = ctx.createBufferSource(); ns.buffer = makeNoise(ctx, dur);
+    const nbp = ctx.createBiquadFilter(); nbp.type = 'bandpass'; nbp.frequency.value = freq; nbp.Q.value = 10;
+    const ng = ctx.createGain();
+    ng.gain.setValueAtTime(0, t); ng.gain.linearRampToValueAtTime(0.015, t + 0.03);
+    ng.gain.setValueAtTime(0.015, t + dur - 0.05); ng.gain.linearRampToValueAtTime(0, t + dur);
+    ns.connect(nbp); nbp.connect(ng); ng.connect(ctx.destination);
+    ns.start(t); ns.stop(t + dur);
+    osc.connect(g); g.connect(ctx.destination);
+    osc.start(t); osc.stop(t + dur);
+    return t + dur;
+  }
+
+  function generateRound() {
+    currentIsSame = Math.random() < 0.5;
+    if (level === 1) {
+      currentPairA = Math.floor(Math.random() * ONSETS.length);
+      currentPairB = currentIsSame ? currentPairA : pickDifferent(currentPairA, ONSETS.length);
+    } else if (level === 2) {
+      currentPairA = Math.floor(Math.random() * CLICKS.length);
+      currentPairB = currentIsSame ? currentPairA : pickDifferent(currentPairA, CLICKS.length);
+    } else {
+      currentPairA = Math.floor(Math.random() * WHISTLE_KEYS.length);
+      currentPairB = currentIsSame ? currentPairA : pickDifferent(currentPairA, WHISTLE_KEYS.length);
+    }
+  }
+
+  function pickDifferent(idx: number, len: number): number {
+    let n = Math.floor(Math.random() * (len - 1));
+    if (n >= idx) n++;
+    return n;
+  }
+
+  async function playSounds(): Promise<number> {
+    ensureAudio();
+    const ctx = audioCtx!;
+    if (level === 2) await loadClickAudio();
+    const now = ctx.currentTime + 0.05;
+    let endA: number;
+    if (level === 1) {
+      endA = playOnsetSyllable(ONSETS[currentPairA], now);
+      const startB = endA + 0.4;
+      playOnsetSyllable(ONSETS[currentPairB], startB);
+      return (endA - now) + 0.4 + 0.25;
+    } else if (level === 2) {
+      endA = playClickBuffer(currentPairA, now);
+      const startB = endA + 0.5;
+      const endB = playClickBuffer(currentPairB, startB);
+      return (endB - now) + 0.1;
+    } else {
+      endA = playWhistle(WHISTLE_KEYS[currentPairA], now);
+      const startB = endA + 0.35;
+      playWhistle(WHISTLE_KEYS[currentPairB], startB);
+      return (endA - now) + 0.35 + 0.4;
+    }
+  }
+
+  function setupRound() {
+    generateRound();
+    hasListened = false;
+    answered = false;
+    const labels = ['Level 1: English onset pairs', 'Level 2: Click consonants (!Xoo)', 'Level 3: Whistled vowels (Silbo Gomero)'];
+    levelLabel.textContent = labels[level - 1];
+    progressEl.textContent = `Round ${roundNum} of ${ROUNDS_PER_LEVEL}`;
+    listenBtn.classList.remove('playing');
+    listenLabel.textContent = 'Listen';
+    eqBars.hidden = true;
+    replayBtn.hidden = true;
+    choiceEl.hidden = true;
+    feedbackEl.hidden = true;
+    summaryEl.hidden = true;
+    sameBtn.removeAttribute('disabled');
+    diffBtn.removeAttribute('disabled');
+  }
+
+  function showPlaying(duration: number) {
+    listenBtn.classList.add('playing');
+    listenLabel.textContent = 'Playing...';
+    eqBars.hidden = false;
+    setTimeout(() => {
+      listenBtn.classList.remove('playing');
+      listenLabel.textContent = 'Listen';
+      eqBars.hidden = true;
+      if (!answered) {
+        replayBtn.hidden = false;
+        choiceEl.hidden = false;
+      }
+      hasListened = true;
+    }, duration * 1000);
+  }
+
+  listenBtn.addEventListener('click', async () => {
+    const dur = await playSounds();
+    showPlaying(dur);
+  });
+
+  replayBtn.addEventListener('click', async () => {
+    const dur = await playSounds();
+    listenBtn.classList.add('playing');
+    listenLabel.textContent = 'Playing...';
+    eqBars.hidden = false;
+    setTimeout(() => {
+      listenBtn.classList.remove('playing');
+      listenLabel.textContent = 'Listen';
+      eqBars.hidden = true;
+    }, dur * 1000);
+  });
+
+  function handleAnswer(choseSame: boolean) {
+    if (answered) return;
+    answered = true;
+    sameBtn.setAttribute('disabled', '');
+    diffBtn.setAttribute('disabled', '');
+    const isCorrect = choseSame === currentIsSame;
+    if (isCorrect) correct++;
+    feedbackEl.hidden = false;
+    feedbackEl.className = 'phon-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+    fbIcon.textContent = isCorrect ? '\u2713' : '\u2717';
+    const explanation = getExplanation();
+    fbText.textContent = (isCorrect ? 'Correct. ' : 'Incorrect. ') + explanation;
+    // Auto-advance after delay
+    setTimeout(() => {
+      roundNum++;
+      if (roundNum > ROUNDS_PER_LEVEL) {
+        showSummary();
+      } else {
+        setupRound();
+      }
+    }, 2000);
+  }
+
+  function getExplanation(): string {
+    const same = currentIsSame;
+    if (level === 1) {
+      if (same) return 'Both sounds shared the same onset characteristics.';
+      return `The two onsets differed in burst frequency and voicing onset time.`;
+    } else if (level === 2) {
+      if (same) return 'Both clicks had identical spectral profiles.';
+      const a = CLICKS[currentPairA]?.label ?? 'unknown', b = CLICKS[currentPairB]?.label ?? 'unknown';
+      return `One was a ${a} click, the other ${b}. The spectral shape differs subtly.`;
+    } else {
+      if (same) return 'Both whistled tones shared the same fundamental frequency.';
+      const a = WHISTLE_KEYS[currentPairA], b = WHISTLE_KEYS[currentPairB];
+      return `The vowels "${a}" and "${b}" differ by ${Math.abs(WHISTLED[a] - WHISTLED[b])} Hz in Silbo Gomero.`;
+    }
+  }
+
+  sameBtn.addEventListener('click', () => handleAnswer(true));
+  diffBtn.addEventListener('click', () => handleAnswer(false));
+
+  function showSummary() {
+    const pct = Math.round((correct / ROUNDS_PER_LEVEL) * 100);
+    summaryEl.hidden = false;
+    feedbackEl.hidden = true;
+    choiceEl.hidden = true;
+    replayBtn.hidden = true;
+    progressEl.textContent = `${correct} of ${ROUNDS_PER_LEVEL} correct`;
+    scorePct.textContent = pct + '%';
+    scorePct.style.color = pct >= 75 ? 'var(--color-score-low, #22c55e)' : pct >= 50 ? 'var(--color-score-mid, #eab308)' : 'var(--color-score-high, #ef4444)';
+    requestAnimationFrame(() => { benchYou.style.width = Math.max(pct, 8) + '%'; });
+    const ctx = getLevelContext(pct);
+    summaryCtx.textContent = ctx;
+    nextBtn.hidden = level >= TOTAL_LEVELS;
+    if (level < TOTAL_LEVELS) {
+      const nextLabels = ['', 'Click consonants (!Xoo)', 'Whistled vowels (Silbo Gomero)'];
+      nextBtn.textContent = 'Next: ' + nextLabels[level];
+    }
+    restartBtn.hidden = level <= 1;
+  }
+
+  function getLevelContext(pct: number): string {
+    if (level === 1) {
+      if (pct >= 88) return 'Strong performance on English onsets. The acoustic differences between voiced and unvoiced stops are measured in milliseconds of voice onset time, a distinction most native speakers process unconsciously.';
+      if (pct >= 62) return 'These onset pairs differ in voice onset time and burst spectrum. Native speakers discriminate them automatically, but isolating the acoustic cue requires focused attention.';
+      return 'English onset contrasts rely on voice onset time differences as brief as 20 milliseconds. This perceptual boundary is shaped by years of native language exposure.';
+    } else if (level === 2) {
+      if (pct >= 88) return 'Exceptional discrimination of click consonants. Speakers of !Xoo and other Khoisan languages distinguish over a dozen click types by place and manner of articulation, a feat that represents one of the most demanding phonemic inventories in any language.';
+      if (pct >= 62) return 'Click consonants differ in place of articulation: dental, lateral, palatal, alveolar, bilabial, and velar releases each produce distinct spectral bursts. Khoisan speakers acquire these distinctions in early childhood.';
+      return 'Click consonants are among the most acoustically complex speech sounds. Without early exposure, the perceptual categories required to distinguish them reliably do not form.';
+    } else {
+      if (pct >= 88) return 'Remarkable acuity for whistled speech. Silbo Gomero encodes the five Spanish vowels as pure frequency bands. Practiced silbadores discriminate them across valleys spanning two miles.';
+      if (pct >= 62) return 'Whistled vowels in Silbo Gomero map to distinct frequency bands. The brain must reclassify pitch as phonemic identity rather than intonation, a cognitive shift that requires significant training.';
+      return 'Silbo Gomero compresses all phonemic information into pitch and rhythm. Without training, listeners default to hearing melody rather than language, a fundamental perceptual reframing that takes months to develop.';
+    }
+  }
+
+  nextBtn.addEventListener('click', () => { level++; roundNum = 1; correct = 0; setupRound(); });
+  retryBtn.addEventListener('click', () => { roundNum = 1; correct = 0; setupRound(); });
+  restartBtn.addEventListener('click', () => { level = 1; roundNum = 1; correct = 0; setupRound(); });
+
+  setupRound();
+</script>

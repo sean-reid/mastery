@@ -58,5 +58,6 @@
     "luck_variance": { "value": 2, "confidence": 0.7, "notes": "Language acquisition is effort-driven, but access to speakers involves geographic luck. Being born into a Taa-speaking community is essentially the only reliable path to fluency." },
     "social_coordination": { "value": 7, "confidence": 0.75, "notes": "Learning requires sustained interaction with native speakers in their community. No remote learning infrastructure exists. The social context of a small, geographically isolated community is integral to language use." }
   },
-  "methodology_notes": "Scores derived from Guinness World Records phoneme data, Wikipedia's linguistic analysis citing Ladefoged & Maddieson (1996) and Traill's fieldwork, DoBeS documentation project data, and Ethnologue speaker estimates (~2,500). Confidence is lower than for major world languages because Taa has received far less pedagogical and acquisition research -- most data comes from descriptive linguistics rather than SLA studies."
+  "methodology_notes": "Scores derived from Guinness World Records phoneme data, Wikipedia's linguistic analysis citing Ladefoged & Maddieson (1996) and Traill's fieldwork, DoBeS documentation project data, and Ethnologue speaker estimates (~2,500). Confidence is lower than for major world languages because Taa has received far less pedagogical and acquisition research -- most data comes from descriptive linguistics rather than SLA studies.",
+  "interactive": "phoneme-challenge"
 }

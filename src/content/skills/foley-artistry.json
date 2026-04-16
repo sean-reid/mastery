@@ -58,5 +58,6 @@
     "luck_variance": { "value": 3, "confidence": 0.75, "notes": "Career advancement depends on studio relationships and being available when projects arise. But quality of work is directly audible and reputation spreads reliably in the small foley community." },
     "social_coordination": { "value": 5, "confidence": 0.8, "notes": "Always works closely with a foley mixer and under direction from the supervising sound editor. Team coordination is essential during recording sessions." }
   },
-  "methodology_notes": "Scores based on industry career guides from Berklee and CareersInFilm, Wikipedia documentation of Jack Foley's pioneering techniques, and the widely noted scarcity of working foley artists even in Hollywood. The career path is informal, with most practitioners entering through apprenticeship rather than formal education."
+  "methodology_notes": "Scores based on industry career guides from Berklee and CareersInFilm, Wikipedia documentation of Jack Foley's pioneering techniques, and the widely noted scarcity of working foley artists even in Hollywood. The career path is informal, with most practitioners entering through apprenticeship rather than formal education.",
+  "interactive": "foley-match"
 }

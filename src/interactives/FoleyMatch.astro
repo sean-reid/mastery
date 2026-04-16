@@ -1,0 +1,240 @@
+---
+---
+<div class="interactive-wrap" id="foley-match">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Foley Match</h4>
+    <p class="interactive-subtitle">Hear a movie sound effect. Identify which everyday object actually produces that sound in film production.</p>
+  </div>
+  <div class="foley-body" id="foley-body">
+    <div class="foley-round-label" id="foley-round-label">Round 1 of 6</div>
+    <button class="foley-play-btn" id="foley-play">
+      <span class="foley-play-icon">
+        <svg class="foley-svg-play" id="foley-svg-play" width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M7 4.5l11 6.5-11 6.5V4.5z" fill="currentColor"/></svg>
+        <span class="foley-eq" id="foley-eq" hidden><span></span><span></span><span></span></span>
+      </span>
+      <span id="foley-play-label">Play sound effect</span>
+    </button>
+    <p class="foley-prompt" id="foley-prompt">What common object makes this sound in movies?</p>
+    <div class="foley-options" id="foley-options"></div>
+    <div class="foley-feedback" id="foley-feedback" hidden>
+      <p class="foley-answer-line" id="foley-answer-line"></p>
+      <p class="foley-explanation" id="foley-explanation"></p>
+      <button class="foley-next-btn" id="foley-next">Next round</button>
+    </div>
+    <div class="foley-final" id="foley-final" hidden>
+      <div class="foley-score-wrap">
+        <span class="foley-score-num" id="foley-score-num"></span>
+        <span class="foley-score-of">of 6 correct</span>
+      </div>
+      <p class="foley-score-ctx" id="foley-score-ctx"></p>
+      <button class="foley-restart-btn" id="foley-restart">Try again</button>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  #foley-match { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); margin: var(--space-8) 0; }
+  #foley-match .interactive-header { margin-bottom: var(--space-6); }
+  #foley-match .interactive-title { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-2); }
+  #foley-match .interactive-subtitle { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 56ch; }
+  .foley-body { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+  .foley-round-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+  .foley-play-btn { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-base); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); animation: foley-pulse 2.5s ease-in-out infinite; cursor: pointer; border: none; }
+  .foley-play-btn:hover { opacity: .92; transform: scale(1.03); }
+  .foley-play-btn:disabled { opacity: .5; cursor: not-allowed; animation: none; transform: none; }
+  .foley-play-btn.playing { animation: none; background: var(--color-accent-hover, var(--color-accent)); }
+  @keyframes foley-pulse { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 40%, transparent); } 50% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--color-accent) 0%, transparent); } }
+  .foley-play-icon { display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; }
+  .foley-play-btn.playing .foley-svg-play { display: none; }
+  .foley-play-btn.playing .foley-eq { display: flex !important; }
+  .foley-eq { display: flex; align-items: flex-end; gap: 3px; height: 16px; }
+  .foley-eq span { width: 3px; background: white; border-radius: 1px; animation: foley-eqa .8s ease-in-out infinite alternate; }
+  .foley-eq span:nth-child(1) { height: 6px; }
+  .foley-eq span:nth-child(2) { height: 12px; animation-delay: .15s; }
+  .foley-eq span:nth-child(3) { height: 8px; animation-delay: .3s; }
+  @keyframes foley-eqa { 0% { transform: scaleY(.3); } 100% { transform: scaleY(1); } }
+  .foley-prompt { font-family: var(--font-heading); font-size: var(--text-base); font-weight: 500; color: var(--color-text-secondary); text-align: center; }
+  .foley-options { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); width: 100%; max-width: 480px; }
+  .foley-opt-btn { padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--color-border); background: var(--color-surface-raised); color: var(--color-text); font-size: var(--text-sm); font-weight: 500; cursor: pointer; transition: all 200ms var(--ease-out); text-align: center; line-height: 1.4; }
+  .foley-opt-btn:hover { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 6%, transparent); transform: translateY(-1px); }
+  .foley-opt-btn:disabled { cursor: default; transform: none; }
+  .foley-opt-btn.foley-correct { border-color: var(--color-score-low, #22c55e); background: color-mix(in srgb, var(--color-score-low, #22c55e) 10%, transparent); color: var(--color-score-low, #22c55e); }
+  .foley-opt-btn.foley-wrong { border-color: var(--color-score-high, #ef4444); background: color-mix(in srgb, var(--color-score-high, #ef4444) 10%, transparent); color: var(--color-score-high, #ef4444); }
+  .foley-opt-btn.foley-dimmed { opacity: 0.45; }
+  .foley-feedback { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); animation: foley-in .4s var(--ease-out); width: 100%; max-width: 480px; }
+  .foley-feedback[hidden] { display: none; }
+  .foley-answer-line { font-family: var(--font-heading); font-size: var(--text-base); font-weight: 600; text-align: center; }
+  .foley-answer-line.foley-verdict-correct { color: var(--color-score-low, #22c55e); }
+  .foley-answer-line.foley-verdict-wrong { color: var(--color-score-high, #ef4444); }
+  .foley-explanation { font-size: var(--text-sm); color: var(--color-text-secondary); text-align: center; line-height: 1.7; max-width: 50ch; }
+  .foley-next-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-sm); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); cursor: pointer; border: none; }
+  .foley-next-btn:hover { opacity: .92; transform: scale(1.02); }
+  @keyframes foley-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .foley-final { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); animation: foley-in .5s var(--ease-out); width: 100%; max-width: 480px; }
+  .foley-final[hidden] { display: none; }
+  .foley-score-wrap { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); }
+  .foley-score-num { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; color: var(--color-accent); }
+  .foley-score-of { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .foley-score-ctx { font-size: var(--text-sm); color: var(--color-text-secondary); text-align: center; line-height: 1.7; max-width: 52ch; }
+  .foley-restart-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-accent); background: transparent; color: var(--color-accent); font-size: var(--text-sm); font-weight: 500; cursor: pointer; transition: all var(--duration-fast) var(--ease-out); }
+  .foley-restart-btn:hover { background: color-mix(in srgb, var(--color-accent) 6%, transparent); }
+  @media (max-width: 600px) {
+    #foley-match { padding: var(--space-6) var(--space-4); }
+    .foley-options { grid-template-columns: 1fr; max-width: 320px; }
+  }
+</style>
+
+<script>
+  let audioCtx: AudioContext | null = null;
+  let currentRound = 0, score = 0, isPlaying = false;
+  const audioBuffers: (AudioBuffer | null)[] = [null, null, null, null, null, null];
+
+  const AUDIO_FILES = [
+    '/mastery/audio/foley/snow-footsteps.mp3',
+    '/mastery/audio/foley/rain.mp3',
+    '/mastery/audio/foley/sword-draw.mp3',
+    '/mastery/audio/foley/fire.mp3',
+    '/mastery/audio/foley/thunder.mp3',
+    '/mastery/audio/foley/horse-gallop.mp3',
+  ];
+
+  const root = document.getElementById('foley-match')!;
+  const fq = (s: string) => root.querySelector(s)! as HTMLElement;
+  const roundLabel = fq('#foley-round-label');
+  const playBtn = fq('#foley-play') as HTMLButtonElement;
+  const playLabel = fq('#foley-play-label');
+  const eqBars = fq('#foley-eq');
+  const promptEl = fq('#foley-prompt');
+  const optionsEl = fq('#foley-options');
+  const feedbackEl = fq('#foley-feedback');
+  const answerLine = fq('#foley-answer-line');
+  const explanationEl = fq('#foley-explanation');
+  const nextBtn = fq('#foley-next');
+  const finalEl = fq('#foley-final');
+  const scoreNum = fq('#foley-score-num');
+  const scoreCtx = fq('#foley-score-ctx');
+  const restartBtn = fq('#foley-restart');
+
+  function ensureAudio() {
+    if (!audioCtx) audioCtx = new AudioContext();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+  }
+
+  async function preloadAudio() {
+    ensureAudio();
+    const ctx = audioCtx!;
+    await Promise.all(AUDIO_FILES.map(async (url, i) => {
+      try {
+        const resp = await fetch(url);
+        const arr = await resp.arrayBuffer();
+        audioBuffers[i] = await ctx.decodeAudioData(arr);
+      } catch (_) { /* graceful fallback: buffer stays null */ }
+    }));
+  }
+
+  function playRoundAudio(roundIndex: number): number {
+    const ctx = audioCtx!;
+    const buf = audioBuffers[roundIndex];
+    if (!buf) return 1.5;
+    const src = ctx.createBufferSource();
+    src.buffer = buf;
+    src.connect(ctx.destination);
+    src.start();
+    return buf.duration;
+  }
+
+  // Preload on first user interaction
+  let preloaded = false;
+  function ensurePreloaded() {
+    if (preloaded) return;
+    preloaded = true;
+    preloadAudio();
+  }
+
+  const ROUNDS = [
+    { correct: 'Cornstarch in a leather pouch',
+      options: ['Cornstarch in a leather pouch', 'Crumpled tissue paper', 'Salt poured on cardboard', 'Styrofoam blocks rubbed together'],
+      explanation: 'Squeezing cornstarch in a bag perfectly replicates the compression of dry snow underfoot.' },
+    { correct: 'Frying bacon',
+      options: ['Frying bacon', 'Rice falling on a tin sheet', 'TV static through a speaker', 'Running water over gravel'],
+      explanation: 'The irregular sizzle of bacon in a pan is indistinguishable from rain hitting a window when recorded at the right distance.' },
+    { correct: 'Scraping a car antenna on sheet metal',
+      options: ['Scraping a car antenna on sheet metal', 'Dragging a knife across a whetstone', 'A metal ruler twanged on a desk', 'Bowing a steel string with rosin'],
+      explanation: 'Foley artists run a thin metal rod along another surface. No real sword sounds like a movie sword.' },
+    { correct: 'Crumpling cellophane',
+      options: ['Crumpling cellophane', 'Snapping dry twigs', 'Popping bubble wrap slowly', 'Crushing dried leaves'],
+      explanation: 'Cellophane wrapper twisted slowly near a microphone creates a convincing fire crackle.' },
+    { correct: 'Shaking a large sheet of thin metal',
+      options: ['Shaking a large sheet of thin metal', 'Dropping bowling balls on a ramp', 'A bass drum with heavy reverb', 'Slamming a dumpster lid'],
+      explanation: 'Thunder sheets have been used in theater for centuries. The flexing metal produces low-frequency rumbles with sharp attacks.' },
+    { correct: 'Coconut shell halves on gravel',
+      options: ['Coconut shell halves on gravel', 'Wooden blocks struck on a table', 'Plastic cups tapped on stone', 'Rubber mallets on a cutting board'],
+      explanation: 'The most famous foley trick in existence. Monty Python made it a joke, but foley artists still use it because nothing else works as well.' },
+  ];
+
+  function shuffle<T>(arr: T[]): T[] {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  }
+
+  function setupRound() {
+    roundLabel.textContent = `Round ${currentRound + 1} of 6`;
+    promptEl.hidden = false; feedbackEl.hidden = true; finalEl.hidden = true;
+    playBtn.disabled = false; playBtn.classList.remove('playing');
+    playLabel.textContent = 'Play sound effect'; eqBars.hidden = true;
+    optionsEl.innerHTML = ''; optionsEl.style.display = '';
+    shuffle(ROUNDS[currentRound].options).forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'foley-opt-btn'; btn.textContent = opt;
+      btn.addEventListener('click', () => handleAnswer(opt));
+      optionsEl.appendChild(btn);
+    });
+  }
+
+  function handleAnswer(selected: string) {
+    const r = ROUNDS[currentRound], correct = selected === r.correct;
+    if (correct) score++;
+    (optionsEl.querySelectorAll('.foley-opt-btn') as NodeListOf<HTMLButtonElement>).forEach(btn => {
+      btn.disabled = true;
+      if (btn.textContent === r.correct) btn.classList.add('foley-correct');
+      else if (btn.textContent === selected && !correct) btn.classList.add('foley-wrong');
+      else btn.classList.add('foley-dimmed');
+    });
+    answerLine.textContent = correct ? 'Correct.' : `The answer: ${r.correct}`;
+    answerLine.className = 'foley-answer-line ' + (correct ? 'foley-verdict-correct' : 'foley-verdict-wrong');
+    explanationEl.textContent = r.explanation; feedbackEl.hidden = false;
+    nextBtn.textContent = currentRound >= ROUNDS.length - 1 ? 'See results' : 'Next round';
+  }
+
+  function showFinal() {
+    optionsEl.style.display = 'none'; promptEl.hidden = true;
+    feedbackEl.hidden = true; playBtn.style.display = 'none'; roundLabel.style.display = 'none';
+    scoreNum.textContent = String(score);
+    const msgs = [
+      'Foley artistry thrives on misdirection. The sounds that feel most natural on screen are nearly always produced by objects bearing no resemblance to the thing depicted.',
+      'A respectable showing. Most people find foley answers counterintuitive because the discipline exploits the gap between what sounds right and what actually produces the sound.',
+      'Strong intuition for foley technique. These mismatches between everyday objects and cinematic sounds are what foley artists spend entire careers perfecting.',
+      'Exceptional. You either work in post-production or have an unusually sharp sense for the creative misdirection at the heart of foley artistry.',
+    ];
+    scoreCtx.textContent = msgs[score <= 1 ? 0 : score <= 3 ? 1 : score <= 5 ? 2 : 3];
+    finalEl.hidden = false;
+  }
+
+  playBtn.addEventListener('click', () => {
+    if (isPlaying) return;
+    ensureAudio();
+    ensurePreloaded();
+    const duration = playRoundAudio(currentRound);
+    isPlaying = true; playBtn.classList.add('playing');
+    playLabel.textContent = 'Playing...'; eqBars.hidden = false; playBtn.disabled = true;
+    setTimeout(() => {
+      isPlaying = false; playBtn.classList.remove('playing');
+      playLabel.textContent = 'Replay sound'; eqBars.hidden = true; playBtn.disabled = false;
+    }, duration * 1000 + 200);
+  });
+
+  nextBtn.addEventListener('click', () => { currentRound++; currentRound >= ROUNDS.length ? showFinal() : setupRound(); });
+  restartBtn.addEventListener('click', () => { currentRound = 0; score = 0; playBtn.style.display = ''; roundLabel.style.display = ''; setupRound(); });
+  setupRound();
+</script>
