@@ -200,15 +200,18 @@
     cancelAnimationFrame(animId); draw();
   }
 
-  // Input
-  canvas.addEventListener('mousemove', (e) => {
+  // Input: track mouse across the whole document, mapped relative to canvas center
+  document.addEventListener('mousemove', (e) => {
     const r = canvas.getBoundingClientRect();
-    mouseX = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+    const cx = r.left + r.width / 2;
+    // Map mouse distance from canvas center: full range is +/- canvas width
+    mouseX = Math.max(0, Math.min(1, 0.5 + (e.clientX - cx) / r.width));
   });
-  canvas.addEventListener('touchmove', (e) => {
-    if (!hasTilt) {
+  document.addEventListener('touchmove', (e) => {
+    if (!hasTilt && e.touches.length) {
       const r = canvas.getBoundingClientRect();
-      mouseX = Math.max(0, Math.min(1, (e.touches[0].clientX - r.left) / r.width));
+      const cx = r.left + r.width / 2;
+      mouseX = Math.max(0, Math.min(1, 0.5 + (e.touches[0].clientX - cx) / r.width));
     }
   }, { passive: true });
 
