@@ -4,7 +4,7 @@
 <div class="interactive-wrap" id="balance-sim">
   <div class="interactive-header">
     <h4 class="interactive-title">Try it: Balance a stone on a point</h4>
-    <p class="interactive-subtitle">Use your mouse or tilt your device to keep the stone balanced. Gravity and micro-perturbations work against you.</p>
+    <p class="interactive-subtitle">Move your mouse left and right to keep the stone balanced. On mobile, tilt your device. Perturbations increase over time.</p>
   </div>
   <div class="bal-stage">
     <div class="bal-timer-row">
@@ -33,7 +33,8 @@
   .bal-time { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--color-accent); line-height: 1; }
   .bal-unit { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
   .bal-canvas-wrap { width: 100%; max-width: 600px; border-radius: var(--radius-lg); background: rgba(0,0,0,0.03); padding: var(--space-2); box-shadow: inset 0 1px 3px rgba(0,0,0,0.06); }
-  #bal-canvas { display: block; width: 100%; height: auto; aspect-ratio: 3/2; border-radius: calc(var(--radius-lg) - 4px); border: 1px solid rgba(0,0,0,0.06); }
+  #bal-canvas { display: block; width: 100%; height: auto; aspect-ratio: 3/2; border-radius: calc(var(--radius-lg) - 4px); border: 1px solid rgba(0,0,0,0.06); cursor: default; }
+  #bal-canvas.active { cursor: crosshair; }
   .bal-btn { padding: var(--space-3) var(--space-10); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-lg); font-weight: 600; font-family: var(--font-heading); border: none; cursor: pointer; transition: all var(--duration-fast) var(--ease-out); box-shadow: 0 4px 14px rgba(37,99,235,0.25); }
   .bal-btn:hover { transform: scale(1.03); box-shadow: 0 6px 20px rgba(37,99,235,0.35); }
   .bal-btn:active { transform: scale(0.98); }
@@ -132,9 +133,43 @@
     return [cx, cy];
   }
 
+  function drawInputIndicator() {
+    if (phase !== 'balancing') return;
+    const w = cw(), baseY = ch() * 0.72 + 8;
+    const inputX = mouseX * w;
+
+    // Subtle vertical line showing mouse position
+    ctx.save();
+    ctx.strokeStyle = 'rgba(59, 130, 246, 0.3)';
+    ctx.lineWidth = 2;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    ctx.moveTo(inputX, baseY);
+    ctx.lineTo(inputX, baseY + 30);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Small triangle marker at the base
+    ctx.fillStyle = 'rgba(59, 130, 246, 0.5)';
+    ctx.beginPath();
+    ctx.moveTo(inputX - 6, baseY + 30);
+    ctx.lineTo(inputX + 6, baseY + 30);
+    ctx.lineTo(inputX, baseY + 22);
+    ctx.closePath();
+    ctx.fill();
+
+    // "You" label
+    ctx.fillStyle = 'rgba(59, 130, 246, 0.5)';
+    ctx.font = '500 10px Inter, system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('you', inputX, baseY + 42);
+    ctx.textAlign = 'left';
+    ctx.restore();
+  }
+
   function draw() {
     ctx.clearRect(0, 0, cw(), ch());
-    drawBg(); drawPivot();
+    drawBg(); drawPivot(); drawInputIndicator();
     const [sx, sy] = stonePos();
     if (phase === 'fallen') {
       const d = angle > 0 ? 1 : -1, off = Math.min(80, Math.abs(angle) * 60);
@@ -150,6 +185,7 @@
       const target = peakY() - PIVOT_OFF - ch() * 0.25;
       if (stoneY >= target) {
         stoneY = target; phase = 'balancing';
+        canvas.classList.add('active');
         startTime = performance.now(); angle = angVel = smoothInput = 0;
       }
       return;
@@ -166,7 +202,7 @@
     angle += angVel * dt;
     elapsed = (performance.now() - startTime) / 1000;
 
-    if (Math.abs(angle) > FALL_ANG) { phase = 'fallen'; showResult(); }
+    if (Math.abs(angle) > FALL_ANG) { phase = 'fallen'; canvas.classList.remove('active'); showResult(); }
   }
 
   function loop(now: number) {
