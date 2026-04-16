@@ -1,0 +1,305 @@
+---
+---
+<div class="interactive-wrap" id="star-navigation">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Star Navigation</h4>
+    <p class="interactive-subtitle">Polynesian wayfinders crossed thousands of miles of open ocean by reading the stars. Choose your guide stars wisely.</p>
+  </div>
+  <div class="star-area" id="star-area">
+    <div class="star-phase star-phase--active" id="star-intro">
+      <div class="star-intro-text">
+        <p>For over three thousand years, Polynesian and Micronesian navigators voyaged across the Pacific without instruments. They memorized star paths -- sequences of rising and setting stars that traced reliable bearings across the sky.</p>
+        <p>A master navigator, or <em>palu</em>, knew which star to follow for each leg of a voyage, switching to the next as each star climbed too high to hold a bearing.</p>
+      </div>
+      <button class="star-btn" id="star-start">Begin the voyage</button>
+    </div>
+    <div class="star-phase" id="star-scene">
+      <p class="star-mission" id="star-mission"></p>
+      <div class="star-sky-wrap">
+        <svg class="star-sky" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="star-sky-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0a0e27"/><stop offset="60%" stop-color="#111b3c"/><stop offset="100%" stop-color="#1a2550"/>
+            </linearGradient>
+            <linearGradient id="star-ocean-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0d1f3c"/><stop offset="100%" stop-color="#091428"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="340" fill="url(#star-sky-grad)"/>
+          <rect y="340" width="800" height="160" fill="url(#star-ocean-grad)"/>
+          <line x1="0" y1="340" x2="800" y2="340" stroke="#1e3a5f" stroke-width="1" opacity="0.5"/>
+          <g id="star-stars"></g>
+          <path id="star-path" d="" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="6 4" opacity="0.6"/>
+          <g id="star-canoe" transform="translate(100,400)">
+            <path d="M-18,0 Q-14,-8 0,-10 Q14,-8 18,0 Q14,4 0,5 Q-14,4 -18,0Z" fill="#8B6914" stroke="#a67c00" stroke-width="1"/>
+            <line x1="0" y1="-10" x2="0" y2="-28" stroke="#a67c00" stroke-width="1.5"/>
+            <path d="M1,-28 Q8,-20 2,-10" fill="#d4a056" opacity="0.8"/>
+          </g>
+          <g id="star-dest" transform="translate(700,380)" opacity="0">
+            <ellipse cy="8" rx="22" ry="6" fill="#1a4a2e" opacity="0.6"/>
+            <path d="M-16,8 Q-12,-4 0,-6 Q12,-4 16,8Z" fill="#1a5c32"/>
+            <path d="M4,-6 L6,-18 L10,-6" fill="#2a7a42"/>
+          </g>
+        </svg>
+      </div>
+      <div class="star-prompt" id="star-prompt"></div>
+      <div class="star-choices" id="star-choices"></div>
+      <div class="star-feedback" id="star-feedback"></div>
+    </div>
+    <div class="star-phase" id="star-result">
+      <div class="star-result-card">
+        <span class="star-result-icon" id="star-result-icon"></span>
+        <p class="star-result-title" id="star-result-title"></p>
+        <p class="star-result-body" id="star-result-body"></p>
+      </div>
+      <blockquote class="star-insight">
+        <p>Master navigators memorized star paths for hundreds of routes. Mau Piailug of Satawal, one of the last traditional <em>palu</em>, navigated from Hawaii to Tahiti in 1976 using only the stars, swells, and wind -- proving the ancient methods still work.</p>
+      </blockquote>
+      <button class="star-btn star-btn--secondary" id="star-restart">Try another voyage</button>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .star-area { display: flex; flex-direction: column; align-items: center; position: relative; min-height: 200px; }
+  .star-phase { display: none; flex-direction: column; align-items: center; gap: var(--space-6); width: 100%; opacity: 0; transition: opacity 400ms var(--ease-out); }
+  .star-phase--active { display: flex; opacity: 1; }
+  .star-phase--fading { opacity: 0; }
+  .star-intro-text { max-width: 58ch; text-align: center; display: flex; flex-direction: column; gap: var(--space-5); font-size: var(--text-sm); line-height: 1.8; color: var(--color-text-secondary); }
+  .star-intro-text em { font-style: italic; color: var(--color-text); font-weight: 500; }
+  .star-btn { padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-family: var(--font-body); font-size: var(--text-base); font-weight: 500; border: none; cursor: pointer; transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out); }
+  .star-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .star-btn:active { transform: translateY(0); }
+  .star-btn--secondary { background: transparent; color: var(--color-accent); border: 1px solid var(--color-accent); }
+  .star-btn--secondary:hover { background: color-mix(in srgb, var(--color-accent) 6%, transparent); }
+  .star-sky-wrap { width: 100%; max-width: 800px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+  .star-sky { width: 100%; height: auto; display: block; }
+  .star-mission { font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 600; color: var(--color-text); text-align: center; }
+  .star-label { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; fill: #8899bb; pointer-events: none; }
+  .star-label--bright { fill: #aabbdd; font-weight: 500; }
+  .star-dot { transition: r 300ms var(--ease-out), opacity 300ms var(--ease-out); }
+  .star-dot--highlight { filter: drop-shadow(0 0 6px #ffffffaa); }
+  .star-prompt { font-family: var(--font-heading); font-size: var(--text-base); font-weight: 500; color: var(--color-text-secondary); text-align: center; min-height: 1.5em; }
+  .star-choices { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; min-height: 48px; }
+  .star-choice { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-border); background: var(--color-surface-raised); font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-text); cursor: pointer; transition: all 200ms var(--ease-out); }
+  .star-choice:hover { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 8%, var(--color-surface-raised)); transform: translateY(-1px); }
+  .star-choice--correct { border-color: var(--color-score-low); background: color-mix(in srgb, var(--color-score-low) 12%, var(--color-surface-raised)); color: var(--color-score-low); pointer-events: none; }
+  .star-choice--wrong { border-color: var(--color-score-high); background: color-mix(in srgb, var(--color-score-high) 12%, var(--color-surface-raised)); color: var(--color-score-high); pointer-events: none; }
+  .star-choice--disabled { opacity: 0.4; pointer-events: none; }
+  .star-feedback { font-size: var(--text-sm); color: var(--color-text-secondary); text-align: center; max-width: 50ch; line-height: 1.6; min-height: 1.5em; }
+  .star-result-card { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); padding: var(--space-8); background: var(--color-surface-raised); border: 1px solid var(--color-border); border-radius: var(--radius-lg); max-width: 480px; width: 100%; animation: star-pop 500ms var(--ease-out); }
+  .star-result-icon { font-size: 2.5rem; line-height: 1; }
+  .star-result-title { font-family: var(--font-heading); font-size: var(--text-xl); font-weight: 700; text-align: center; }
+  .star-result-body { font-size: var(--text-sm); line-height: 1.6; color: var(--color-text-secondary); text-align: center; }
+  @keyframes star-pop { 0% { opacity: 0; transform: scale(0.9) translateY(8px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+  .star-insight { max-width: 50ch; text-align: center; margin: 0; padding: var(--space-5) var(--space-6); border-left: 3px solid var(--color-accent); background: color-mix(in srgb, var(--color-accent) 4%, transparent); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+  .star-insight p { font-size: var(--text-sm); line-height: 1.7; color: var(--color-text-secondary); margin: 0; }
+  .star-insight em { font-style: italic; color: var(--color-text); font-weight: 500; }
+  @media (max-width: 640px) {
+    #star-navigation { padding: var(--space-6); }
+    .star-choices { flex-direction: column; align-items: center; }
+    .star-choice { width: 100%; max-width: 280px; text-align: center; }
+    .star-intro-text { font-size: var(--text-xs); }
+  }
+</style>
+
+<script>
+  const $ = (id: string) => document.getElementById(id)!;
+  const NS = 'http://www.w3.org/2000/svg';
+  const allPhases = ['star-intro', 'star-scene', 'star-result'];
+
+  function showPhase(id: string): Promise<void> {
+    return new Promise(resolve => {
+      const active = document.querySelector('#star-area .star-phase--active') as HTMLElement | null;
+      if (active) {
+        active.classList.add('star-phase--fading');
+        setTimeout(() => {
+          active.classList.remove('star-phase--active', 'star-phase--fading');
+          active.style.display = 'none';
+          go();
+        }, 300);
+      } else go();
+      function go() {
+        const t = $(id); t.style.display = 'flex'; void t.offsetHeight;
+        t.classList.add('star-phase--active'); setTimeout(resolve, 400);
+      }
+    });
+  }
+
+  /* Stars: [name, x, y, radius, color, bright] */
+  type S = [string, number, number, number, string, boolean];
+  const STARS: S[] = [
+    ['Acrux',420,120,3.5,'#c8d8ff',true], ['Mimosa',440,100,3,'#c8d8ff',true],
+    ['Gacrux',418,80,2.8,'#ffd8a8',true], ['Delta Crucis',400,105,2,'#c8d8ff',false],
+    ['Alpha Centauri',470,130,3.5,'#fff5d0',true], ['Beta Centauri',455,145,3,'#c8d8ff',true],
+    ['Canopus',200,90,4,'#fff8e0',true], ['Sirius',160,140,4.5,'#ffffff',true],
+    ['Antares',600,130,3.5,'#ff9966',true], ['Achernar',300,60,3.5,'#c8d8ff',true],
+    ['Polaris',400,310,2,'#fff8d0',false], ['Arcturus',520,260,3.5,'#ffd4a0',true],
+    ['',80,50,1,'#aabbcc',false], ['',150,200,1.2,'#aabbcc',false],
+    ['',250,170,0.8,'#99aacc',false], ['',340,220,1,'#aabbcc',false],
+    ['',500,50,1.1,'#99aacc',false], ['',560,200,0.9,'#aabbcc',false],
+    ['',650,80,1,'#99aacc',false], ['',700,180,1.2,'#aabbcc',false],
+    ['',740,50,0.8,'#99aacc',false], ['',120,280,0.9,'#8899bb',false],
+    ['',350,30,1,'#8899bb',false], ['',680,270,1.1,'#8899bb',false],
+    ['',50,160,0.7,'#8899bb',false], ['',770,140,0.8,'#8899bb',false],
+  ];
+
+  const CRUX_LINES = [[420,120,418,80],[400,105,440,100]];
+
+  interface Step { prompt: string; options: string[]; correct: number; feedback: [string,string]; target: [number,number]; miss: [number,number]; }
+  interface Puzzle { title: string; dest: [number,number]; start: [number,number]; steps: Step[]; win: string; lose: string; }
+
+  const puzzles: Puzzle[] = [
+    { title: 'Navigate from Tahiti to Hawaii',
+      dest: [700,380], start: [100,410],
+      steps: [
+        { prompt: 'You depart Tahiti heading north. Which star guides your first bearing?',
+          options: ['Sirius','Antares','Arcturus','Southern Cross'], correct: 2,
+          feedback: ['Correct. Arcturus (Hokule\'a in Hawaiian) passes directly overhead at Hawaii\'s latitude. It is the key bearing star for this route.',
+            'Not quite. For a northward voyage to Hawaii, navigators follow Arcturus (Hokule\'a), which culminates directly over the Hawaiian Islands.'],
+          target: [350,395], miss: [200,420] },
+        { prompt: 'As Arcturus climbs high, you need a new bearing. What do you follow next?',
+          options: ['Polaris','Canopus','Antares','Achernar'], correct: 0,
+          feedback: ['Correct. As you move north, Polaris becomes visible low on the horizon, confirming your northward bearing toward Hawaii.',
+            'At this stage, Polaris -- barely visible from Tahiti -- grows brighter as you sail north, confirming your heading.'],
+          target: [530,385], miss: [400,430] },
+        { prompt: 'Land is close. Which sign confirms you are near Hawaii?',
+          options: ['Antares is setting','Arcturus is directly overhead','Southern Cross is rising','Sirius is at the zenith'], correct: 1,
+          feedback: ['Correct. When Arcturus passes directly overhead, you have reached Hawaii\'s latitude. This is the traditional confirmation of arrival.',
+            'The definitive sign is Arcturus passing directly overhead -- it culminates at Hawaii\'s latitude of 20 degrees North.'],
+          target: [670,385], miss: [550,420] },
+      ],
+      win: 'You navigated from Tahiti to Hawaii using the star path of Arcturus. The Polynesian Voyaging Society\'s canoe Hokule\'a -- named for this star -- completed this same voyage in 1976.',
+      lose: 'The voyage went off course. Arcturus (Hokule\'a) overhead marks Hawaii\'s latitude -- the key to this route that navigators trained years to master.' },
+    { title: 'Navigate from Samoa to New Zealand',
+      dest: [680,390], start: [120,390],
+      steps: [
+        { prompt: 'You depart Samoa heading south-southwest. Which constellation sets your bearing?',
+          options: ['Sirius','Southern Cross','Polaris','Antares'], correct: 1,
+          feedback: ['Correct. The Southern Cross points toward the celestial south pole. Extending its long axis 4.5 times gives true south.',
+            'For a southward voyage, the Southern Cross is the primary reference. Its long axis extended points to the south celestial pole.'],
+          target: [320,400], miss: [250,360] },
+        { prompt: 'The Cross rotates as you sail. How do you maintain bearing as it wheels overhead?',
+          options: ['Follow Canopus instead','Track where the Cross\'s axis meets the horizon','Switch to Antares','Use Achernar as primary guide'], correct: 1,
+          feedback: ['Correct. The south celestial pole stays fixed while the Cross rotates around it. Skilled navigators project the axis to the horizon regardless of angle.',
+            'The key technique is projecting the Southern Cross\'s axis to the horizon, finding the south pole regardless of the constellation\'s rotation.'],
+          target: [490,395], miss: [420,360] },
+        { prompt: 'What change in the sky confirms you are approaching New Zealand\'s latitude?',
+          options: ['Polaris disappears entirely','Canopus reaches the zenith','The Southern Cross climbs much higher','Antares dominates the sky'], correct: 2,
+          feedback: ['Correct. As you move south, the Southern Cross rises higher in the sky. At New Zealand\'s latitude, it passes nearly overhead.',
+            'The Southern Cross climbs much higher as you sail south. At New Zealand\'s latitude (~40 degrees S), it passes near the zenith.'],
+          target: [650,390], miss: [560,360] },
+      ],
+      win: 'You navigated from Samoa to New Zealand using the Southern Cross. This route was among the last great Polynesian voyages, settling Aotearoa around 1250-1300 CE.',
+      lose: 'The voyage drifted off course. The Southern Cross is the navigator\'s anchor for southward voyages -- its axis always points to the celestial south pole.' },
+  ];
+
+  /* Render stars */
+  const starsG = $('star-stars');
+  function renderStars() {
+    starsG.innerHTML = '';
+    for (const [name, x, y, r, color, bright] of STARS) {
+      if (bright && name) {
+        const g = document.createElementNS(NS, 'circle');
+        g.setAttribute('cx', String(x)); g.setAttribute('cy', String(y));
+        g.setAttribute('r', String(r * 3)); g.setAttribute('fill', color);
+        g.setAttribute('opacity', '0.1'); starsG.appendChild(g);
+      }
+      const d = document.createElementNS(NS, 'circle');
+      d.setAttribute('cx', String(x)); d.setAttribute('cy', String(y));
+      d.setAttribute('r', String(r)); d.setAttribute('fill', color);
+      d.classList.add('star-dot');
+      if (bright) d.classList.add('star-dot--highlight');
+      starsG.appendChild(d);
+      if (name) {
+        const l = document.createElementNS(NS, 'text');
+        l.setAttribute('x', String(x + r + 6)); l.setAttribute('y', String(y + 3));
+        l.classList.add('star-label'); if (bright) l.classList.add('star-label--bright');
+        l.textContent = name; starsG.appendChild(l);
+      }
+    }
+    for (const [x1, y1, x2, y2] of CRUX_LINES) {
+      const ln = document.createElementNS(NS, 'line');
+      ln.setAttribute('x1', String(x1)); ln.setAttribute('y1', String(y1));
+      ln.setAttribute('x2', String(x2)); ln.setAttribute('y2', String(y2));
+      ln.setAttribute('stroke', '#4466aa'); ln.setAttribute('stroke-width', '0.8');
+      ln.setAttribute('opacity', '0.4'); starsG.appendChild(ln);
+    }
+  }
+
+  /* Animate canoe */
+  const canoeEl = $('star-canoe'), pathEl = $('star-path'), destEl = $('star-dest');
+
+  function animateCanoe(fx: number, fy: number, tx: number, ty: number): Promise<void> {
+    return new Promise(resolve => {
+      const dur = 1200, t0 = performance.now(), dx = tx - fx, dy = ty - fy;
+      const cur = pathEl.getAttribute('d') || '';
+      pathEl.setAttribute('d', (cur || `M${fx},${fy}`) + ` L${tx},${ty}`);
+      (function frame(now: number) {
+        const p = Math.min((now - t0) / dur, 1), e = 1 - (1 - p) ** 3;
+        canoeEl.setAttribute('transform', `translate(${fx + dx * e},${fy + dy * e})`);
+        p < 1 ? requestAnimationFrame(frame) : resolve();
+      })(t0);
+    });
+  }
+
+  /* Game state */
+  let pIdx = 0, score = 0, cx = 0, cy = 0;
+
+  async function runPuzzle(pz: Puzzle) {
+    score = 0; cx = pz.start[0]; cy = pz.start[1];
+    renderStars();
+    canoeEl.setAttribute('transform', `translate(${cx},${cy})`);
+    pathEl.setAttribute('d', '');
+    destEl.setAttribute('transform', `translate(${pz.dest[0]},${pz.dest[1]})`);
+    destEl.setAttribute('opacity', '1');
+    $('star-mission').textContent = pz.title;
+    $('star-prompt').textContent = ''; $('star-choices').innerHTML = ''; $('star-feedback').textContent = '';
+    await showPhase('star-scene');
+    for (const step of pz.steps) await runStep(step);
+    await new Promise(r => setTimeout(r, 800));
+    const ok = score === pz.steps.length;
+    $('star-result-icon').textContent = ok ? '\u2713' : '\u2192';
+    $('star-result-icon').style.color = ok ? 'var(--color-score-low)' : 'var(--color-accent)';
+    $('star-result-title').textContent = ok ? 'Voyage complete' : 'Voyage ended';
+    $('star-result-title').style.color = ok ? 'var(--color-score-low)' : 'var(--color-text)';
+    $('star-result-body').textContent = ok ? pz.win : pz.lose;
+    await showPhase('star-result');
+  }
+
+  function runStep(step: Step): Promise<void> {
+    return new Promise(resolve => {
+      $('star-prompt').textContent = step.prompt;
+      const ch = $('star-choices'); ch.innerHTML = ''; $('star-feedback').textContent = '';
+      step.options.forEach((opt, i) => {
+        const b = document.createElement('button');
+        b.className = 'star-choice'; b.textContent = opt;
+        b.addEventListener('click', async () => {
+          ch.querySelectorAll('.star-choice').forEach((el, j) => {
+            if (j === i) el.classList.add(i === step.correct ? 'star-choice--correct' : 'star-choice--wrong');
+            else if (j === step.correct) el.classList.add('star-choice--correct');
+            else el.classList.add('star-choice--disabled');
+          });
+          const ok = i === step.correct;
+          if (ok) score++;
+          $('star-feedback').textContent = step.feedback[ok ? 0 : 1];
+          const t = ok ? step.target : step.miss;
+          await animateCanoe(cx, cy, t[0], t[1]);
+          cx = t[0]; cy = t[1];
+          await new Promise(r => setTimeout(r, 2200));
+          resolve();
+        });
+        ch.appendChild(b);
+      });
+    });
+  }
+
+  $('star-start').addEventListener('click', () => { pIdx = 0; runPuzzle(puzzles[pIdx]); });
+  $('star-restart').addEventListener('click', () => { pIdx = (pIdx + 1) % puzzles.length; runPuzzle(puzzles[pIdx]); });
+
+  allPhases.forEach(id => {
+    const el = $(id);
+    if (id === 'star-intro') { el.style.display = 'flex'; el.classList.add('star-phase--active'); }
+    else el.style.display = 'none';
+  });
+</script>

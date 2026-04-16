@@ -1,0 +1,240 @@
+---
+---
+
+<div class="interactive-wrap" id="balance-sim">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Balance a stone on a point</h4>
+    <p class="interactive-subtitle">Use your mouse or tilt your device to keep the stone balanced. Gravity and micro-perturbations work against you.</p>
+  </div>
+  <div class="bal-stage">
+    <div class="bal-timer-row">
+      <span class="bal-time" id="bal-time">0.00</span>
+      <span class="bal-unit">seconds</span>
+    </div>
+    <div class="bal-canvas-wrap">
+      <canvas id="bal-canvas" width="600" height="400"></canvas>
+    </div>
+    <button class="bal-btn" id="bal-btn">Start</button>
+    <div class="bal-result" id="bal-result" hidden>
+      <div class="bal-result-badge">
+        <span class="bal-result-value" id="bal-result-time">0.00s</span>
+        <span class="bal-result-label">held</span>
+      </div>
+      <p class="bal-result-text" id="bal-result-text"></p>
+      <button class="bal-retry" id="bal-retry">Try again</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  #balance-sim { background: linear-gradient(175deg, var(--color-surface) 0%, var(--color-surface-raised) 100%); }
+  .bal-stage { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); }
+  .bal-timer-row { display: flex; align-items: baseline; gap: var(--space-2); }
+  .bal-time { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--color-accent); line-height: 1; }
+  .bal-unit { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .bal-canvas-wrap { width: 100%; max-width: 600px; border-radius: var(--radius-lg); background: rgba(0,0,0,0.03); padding: var(--space-2); box-shadow: inset 0 1px 3px rgba(0,0,0,0.06); }
+  #bal-canvas { display: block; width: 100%; height: auto; aspect-ratio: 3/2; border-radius: calc(var(--radius-lg) - 4px); border: 1px solid rgba(0,0,0,0.06); }
+  .bal-btn { padding: var(--space-3) var(--space-10); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-lg); font-weight: 600; font-family: var(--font-heading); border: none; cursor: pointer; transition: all var(--duration-fast) var(--ease-out); box-shadow: 0 4px 14px rgba(37,99,235,0.25); }
+  .bal-btn:hover { transform: scale(1.03); box-shadow: 0 6px 20px rgba(37,99,235,0.35); }
+  .bal-btn:active { transform: scale(0.98); }
+  .bal-btn[hidden] { display: none; }
+  .bal-result { text-align: center; animation: bal-enter 0.5s var(--ease-out) both; }
+  @keyframes bal-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .bal-result-badge { display: inline-flex; flex-direction: column; align-items: center; padding: var(--space-4) var(--space-8); border-radius: var(--radius-lg); background: var(--color-surface-raised); border: 1px solid var(--color-border); margin-bottom: var(--space-4); }
+  .bal-result-value { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; color: var(--color-text); line-height: 1; font-variant-numeric: tabular-nums; }
+  .bal-result-label { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1); text-transform: uppercase; letter-spacing: 0.05em; }
+  .bal-result-text { font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: var(--space-6); max-width: 480px; margin-inline: auto; line-height: 1.6; }
+  .bal-retry { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-border); font-size: var(--text-sm); color: var(--color-text-secondary); cursor: pointer; background: transparent; transition: all var(--duration-fast) var(--ease-out); }
+  .bal-retry:hover { background: var(--color-surface-raised); }
+  @media (max-width: 640px) {
+    #balance-sim { padding: var(--space-6); }
+    .bal-time { font-size: var(--text-xl); }
+    .bal-btn { padding: var(--space-3) var(--space-8); font-size: var(--text-base); }
+  }
+</style>
+
+<script>
+  const canvas = document.getElementById('bal-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+  const timeEl = document.getElementById('bal-time')!;
+  const btnEl = document.getElementById('bal-btn') as HTMLButtonElement;
+  const resultEl = document.getElementById('bal-result')!;
+  const resultTimeEl = document.getElementById('bal-result-time')!;
+  const resultTextEl = document.getElementById('bal-result-text')!;
+  const retryEl = document.getElementById('bal-retry')!;
+
+  type Phase = 'idle' | 'dropping' | 'balancing' | 'fallen';
+  let phase: Phase = 'idle', angle = 0, angVel = 0, stoneY = 0, dropVel = 0;
+  let startTime = 0, elapsed = 0, mouseX = 0.5, tiltX = 0, hasTilt = false;
+  let animId = 0, smoothInput = 0, lastFrame = 0;
+
+  // Irregular stone polygon (relative to center)
+  const SP = [
+    [-38,-18],[-30,-28],[-12,-34],[8,-32],[24,-28],
+    [36,-20],[40,-8],[38,4],[30,16],[18,24],
+    [4,28],[-14,26],[-28,20],[-36,10],[-40,-4]
+  ];
+  const PIVOT_OFF = 28, FALL_ANG = Math.PI / 6;
+  const GRAV = 2.8, DAMP = 0.97, IN_STR = 3.5, PERTURB = 0.15, IN_LAG = 0.12;
+
+  function resize() {
+    const r = canvas.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = r.width * d; canvas.height = r.height * d;
+    ctx.setTransform(d, 0, 0, d, 0, 0);
+  }
+  function cw() { return canvas.getBoundingClientRect().width; }
+  function ch() { return canvas.getBoundingClientRect().height; }
+  function peakY() { return ch() * 0.72 - 18; }
+
+  function tracePath() {
+    ctx.beginPath(); ctx.moveTo(SP[0][0], SP[0][1]);
+    for (let i = 1; i < SP.length; i++) ctx.lineTo(SP[i][0], SP[i][1]);
+    ctx.closePath();
+  }
+
+  function drawBg() {
+    const g = ctx.createLinearGradient(0, 0, 0, ch());
+    g.addColorStop(0, '#f0eeec'); g.addColorStop(1, '#e7e5e4');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, cw(), ch());
+  }
+
+  function drawPivot() {
+    const px = cw() / 2, by = ch() * 0.72, py = by - 18;
+    ctx.beginPath(); ctx.moveTo(px - 14, by); ctx.lineTo(px, py); ctx.lineTo(px + 14, by); ctx.closePath();
+    ctx.fillStyle = '#78716c'; ctx.fill();
+    ctx.strokeStyle = '#57534e'; ctx.lineWidth = 1; ctx.stroke();
+  }
+
+  function drawStone(cx: number, cy: number, a: number) {
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(a);
+    // Shadow
+    ctx.save(); ctx.translate(3, 5); ctx.globalAlpha = 0.15;
+    tracePath(); ctx.fillStyle = '#000'; ctx.fill(); ctx.restore();
+    // Body
+    tracePath();
+    const g = ctx.createLinearGradient(-20, -34, 20, 28);
+    g.addColorStop(0, '#a8a29e'); g.addColorStop(0.3, '#8a8580');
+    g.addColorStop(0.7, '#78716c'); g.addColorStop(1, '#6b6560');
+    ctx.fillStyle = g; ctx.fill();
+    ctx.strokeStyle = '#57534e'; ctx.lineWidth = 1.5; ctx.stroke();
+    // Highlight
+    ctx.beginPath(); ctx.moveTo(SP[2][0], SP[2][1]);
+    ctx.lineTo(SP[3][0], SP[3][1]); ctx.lineTo(SP[4][0], SP[4][1]);
+    ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+    ctx.restore();
+  }
+
+  function stonePos() {
+    const cx = cw() / 2;
+    let cy = peakY() - PIVOT_OFF;
+    if (phase === 'idle') cy = ch() * 0.25;
+    else if (phase === 'dropping') cy = ch() * 0.25 + stoneY;
+    return [cx, cy];
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, cw(), ch());
+    drawBg(); drawPivot();
+    const [sx, sy] = stonePos();
+    if (phase === 'fallen') {
+      const d = angle > 0 ? 1 : -1, off = Math.min(80, Math.abs(angle) * 60);
+      drawStone(sx + d * off, sy + off * 0.5, angle);
+    } else {
+      drawStone(sx, sy, angle);
+    }
+  }
+
+  function updatePhysics(dt: number) {
+    if (phase === 'dropping') {
+      dropVel += 600 * dt; stoneY += dropVel * dt;
+      const target = peakY() - PIVOT_OFF - ch() * 0.25;
+      if (stoneY >= target) {
+        stoneY = target; phase = 'balancing';
+        startTime = performance.now(); angle = angVel = smoothInput = 0;
+      }
+      return;
+    }
+    if (phase !== 'balancing') return;
+
+    let inp = (mouseX - 0.5) * 2;
+    if (hasTilt) inp = Math.max(-1, Math.min(1, tiltX / 30));
+    smoothInput += (inp - smoothInput) * IN_LAG;
+
+    const tf = 1 + elapsed * 0.08;
+    angVel += (GRAV * Math.sin(angle) - IN_STR * smoothInput + (Math.random() - 0.5) * PERTURB * tf) * dt;
+    angVel *= DAMP;
+    angle += angVel * dt;
+    elapsed = (performance.now() - startTime) / 1000;
+
+    if (Math.abs(angle) > FALL_ANG) { phase = 'fallen'; showResult(); }
+  }
+
+  function loop(now: number) {
+    const dt = Math.min((now - lastFrame) / 1000, 0.05);
+    lastFrame = now;
+    updatePhysics(dt);
+    if (phase === 'balancing') timeEl.textContent = elapsed.toFixed(2);
+    draw();
+    if (phase !== 'fallen') animId = requestAnimationFrame(loop);
+  }
+
+  function showResult() {
+    timeEl.textContent = elapsed.toFixed(2);
+    resultTimeEl.textContent = elapsed.toFixed(2) + 's';
+    resultTextEl.textContent = elapsed < 2
+      ? 'Most people cannot hold it at all. The physics of a single contact point are unforgiving.'
+      : elapsed < 5
+        ? 'Better than average. You found the feedback loop between input and gravity, even briefly.'
+        : elapsed < 15
+          ? 'Good control. You are reading the stone and responding to its drift in real time.'
+          : 'Remarkable. Professionals hold balances for minutes on contact points smaller than a coin.';
+    resultEl.hidden = false;
+    resultEl.style.animation = 'none'; resultEl.offsetHeight; resultEl.style.animation = '';
+    btnEl.hidden = true;
+  }
+
+  function reset() {
+    phase = 'idle'; angle = angVel = stoneY = dropVel = elapsed = smoothInput = 0;
+    timeEl.textContent = '0.00'; resultEl.hidden = true;
+    btnEl.hidden = false; btnEl.textContent = 'Start'; btnEl.style.pointerEvents = '';
+    cancelAnimationFrame(animId); draw();
+  }
+
+  // Input
+  canvas.addEventListener('mousemove', (e) => {
+    const r = canvas.getBoundingClientRect();
+    mouseX = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+  });
+  canvas.addEventListener('touchmove', (e) => {
+    if (!hasTilt) {
+      const r = canvas.getBoundingClientRect();
+      mouseX = Math.max(0, Math.min(1, (e.touches[0].clientX - r.left) / r.width));
+    }
+  }, { passive: true });
+
+  function onTilt(e: DeviceOrientationEvent) {
+    if (e.gamma !== null) { tiltX = e.gamma; hasTilt = true; }
+  }
+  function initTilt() {
+    if (typeof DeviceOrientationEvent !== 'undefined' &&
+        typeof (DeviceOrientationEvent as any).requestPermission === 'function') {
+      (DeviceOrientationEvent as any).requestPermission()
+        .then((s: string) => { if (s === 'granted') { window.addEventListener('deviceorientation', onTilt); hasTilt = true; } })
+        .catch(() => {});
+    } else if ('DeviceOrientationEvent' in window) {
+      window.addEventListener('deviceorientation', onTilt); hasTilt = true;
+    }
+  }
+
+  btnEl.addEventListener('click', () => {
+    if (phase === 'idle') {
+      initTilt(); phase = 'dropping'; stoneY = dropVel = 0;
+      btnEl.textContent = 'Balancing...'; btnEl.style.pointerEvents = 'none';
+      lastFrame = performance.now(); animId = requestAnimationFrame(loop);
+    }
+  });
+  retryEl.addEventListener('click', reset);
+
+  resize(); draw();
+  window.addEventListener('resize', () => { resize(); draw(); });
+</script>

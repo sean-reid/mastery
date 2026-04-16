@@ -1,0 +1,339 @@
+---
+---
+<div class="interactive-wrap" id="beat-detector">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Eliminate the beats</h4>
+    <p class="interactive-subtitle">Two tones play simultaneously, slightly detuned. Drag the slider until the wavering disappears. Accuracy is measured in cents.</p>
+  </div>
+  <div class="beat-body">
+    <div class="beat-round-label" id="beat-round-label">Round 1: Unison</div>
+    <canvas class="beat-canvas" id="beat-canvas" width="600" height="140"></canvas>
+    <div class="beat-freq-row">
+      <span class="beat-freq-val" id="beat-freq-val">440.0</span>
+      <span class="beat-freq-hz">Hz</span>
+    </div>
+    <div class="beat-slider-sec">
+      <div class="beat-slider-wrap">
+        <input type="range" class="beat-slider" id="beat-slider" min="420" max="460" value="440" step="0.1" aria-label="Frequency" disabled />
+        <div class="beat-slider-fill" id="beat-slider-fill"></div>
+      </div>
+    </div>
+    <div class="beat-actions">
+      <button class="beat-play-btn" id="beat-play">
+        <span class="beat-play-icon" id="beat-play-icon">
+          <svg class="beat-svg-play" width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M7 4.5l11 6.5-11 6.5V4.5z" fill="currentColor"/></svg>
+          <span class="beat-eq" id="beat-eq" hidden><span></span><span></span><span></span></span>
+        </span>
+        <span id="beat-play-label">Play tones</span>
+      </button>
+      <button class="beat-check-btn" id="beat-check" hidden>Check</button>
+    </div>
+    <div class="beat-result" id="beat-result" hidden>
+      <div class="beat-score"><span class="beat-cents" id="beat-cents"></span><span class="beat-verdict" id="beat-verdict"></span></div>
+      <div class="beat-comp">
+        <div class="beat-comp-col"><span class="beat-comp-lbl">Target</span><span class="beat-comp-val" id="beat-comp-t"></span></div>
+        <div class="beat-comp-div"></div>
+        <div class="beat-comp-col"><span class="beat-comp-lbl">Your tuning</span><span class="beat-comp-val" id="beat-comp-g"></span></div>
+      </div>
+      <p class="beat-ctx" id="beat-ctx"></p>
+      <div class="beat-btns">
+        <button class="beat-next-btn" id="beat-next" hidden>Next: Organ partials</button>
+        <button class="beat-retry-btn" id="beat-retry">Try again</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  #beat-detector { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); margin: var(--space-8) 0; }
+  #beat-detector .interactive-header { margin-bottom: var(--space-6); }
+  #beat-detector .interactive-title { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-2); }
+  #beat-detector .interactive-subtitle { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 56ch; }
+  .beat-body { display: flex; flex-direction: column; align-items: center; gap: var(--space-6); }
+  .beat-round-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+  .beat-canvas { width: 100%; max-width: 560px; height: 140px; border-radius: var(--radius-lg); background: #0f1117; border: 1px solid var(--color-border); }
+  .beat-freq-row { display: flex; align-items: baseline; gap: var(--space-2); }
+  .beat-freq-val { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--color-text); line-height: 1; }
+  .beat-freq-hz { font-size: var(--text-sm); color: var(--color-text-muted); }
+  .beat-slider-sec { width: 100%; max-width: 540px; }
+  .beat-slider-wrap { position: relative; width: 100%; height: 8px; }
+  .beat-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; border-radius: var(--radius-full); background: var(--color-border); outline: none; position: relative; z-index: 2; cursor: pointer; }
+  .beat-slider:disabled { opacity: 0.4; cursor: not-allowed; }
+  .beat-slider-fill { position: absolute; top: 0; left: 0; height: 8px; border-radius: var(--radius-full); background: linear-gradient(90deg, var(--color-accent), color-mix(in srgb, var(--color-accent) 70%, #818cf8)); pointer-events: none; z-index: 1; transition: width 0.05s linear; }
+  .beat-slider::-webkit-slider-runnable-track { height: 8px; border-radius: var(--radius-full); background: transparent; }
+  .beat-slider::-moz-range-track { height: 8px; border-radius: var(--radius-full); background: transparent; border: none; }
+  .beat-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; border-radius: 50%; background: var(--color-accent); border: 3px solid var(--color-surface); box-shadow: 0 1px 4px rgba(0,0,0,.15); margin-top: -8px; cursor: grab; transition: box-shadow var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out); position: relative; z-index: 3; }
+  .beat-slider::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--color-accent); border: 3px solid var(--color-surface); box-shadow: 0 1px 4px rgba(0,0,0,.15); cursor: grab; }
+  .beat-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
+  .beat-slider:disabled::-webkit-slider-thumb, .beat-slider:disabled::-moz-range-thumb { cursor: not-allowed; }
+  .beat-actions { display: flex; gap: var(--space-3); align-items: center; }
+  .beat-play-btn { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-base); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); animation: beat-pulse 2.5s ease-in-out infinite; cursor: pointer; border: none; }
+  .beat-play-btn:hover { opacity: .92; transform: scale(1.03); }
+  .beat-play-btn.playing { animation: none; background: var(--color-accent-hover, var(--color-accent)); }
+  @keyframes beat-pulse { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 40%, transparent); } 50% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--color-accent) 0%, transparent); } }
+  .beat-play-icon { display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; }
+  .beat-svg-play { display: block; }
+  .beat-play-btn.playing .beat-svg-play { display: none; }
+  .beat-play-btn.playing .beat-eq { display: flex !important; }
+  .beat-eq { display: flex; align-items: flex-end; gap: 3px; height: 16px; }
+  .beat-eq span { width: 3px; background: white; border-radius: 1px; animation: beat-eqa .8s ease-in-out infinite alternate; }
+  .beat-eq span:nth-child(1) { height: 6px; }
+  .beat-eq span:nth-child(2) { height: 12px; animation-delay: .15s; }
+  .beat-eq span:nth-child(3) { height: 8px; animation-delay: .3s; }
+  @keyframes beat-eqa { 0% { transform: scaleY(.3); } 100% { transform: scaleY(1); } }
+  .beat-check-btn { padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); background: var(--color-text); color: var(--color-surface); font-size: var(--text-base); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); cursor: pointer; border: none; }
+  .beat-check-btn:hover { opacity: .88; transform: scale(1.02); }
+  .beat-check-btn[hidden] { display: none; }
+  .beat-result { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); width: 100%; max-width: 540px; animation: beat-in .5s var(--ease-out); }
+  .beat-result[hidden] { display: none; }
+  @keyframes beat-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .beat-score { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); }
+  .beat-cents { font-family: var(--font-heading); font-size: var(--text-xl); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .beat-verdict { font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+  .beat-comp { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4) var(--space-6); background: var(--color-surface-raised); border-radius: var(--radius-lg); border: 1px solid var(--color-border); width: 100%; max-width: 360px; }
+  .beat-comp-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-1); }
+  .beat-comp-lbl { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: .08em; }
+  .beat-comp-val { font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .beat-comp-div { width: 1px; height: 36px; background: var(--color-border); flex-shrink: 0; }
+  .beat-ctx { font-size: var(--text-sm); color: var(--color-text-secondary); text-align: center; max-width: 52ch; line-height: var(--leading-normal); }
+  .beat-btns { display: flex; gap: var(--space-3); }
+  .beat-next-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-sm); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); cursor: pointer; border: none; }
+  .beat-next-btn:hover { opacity: .92; transform: scale(1.02); }
+  .beat-next-btn[hidden] { display: none; }
+  .beat-retry-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-border); font-size: var(--text-sm); color: var(--color-text-secondary); transition: all var(--duration-fast) var(--ease-out); cursor: pointer; background: transparent; }
+  .beat-retry-btn:hover { background: var(--color-surface-raised); }
+  @media (max-width: 600px) {
+    #beat-detector { padding: var(--space-6) var(--space-4); }
+    .beat-canvas { height: 100px; }
+    .beat-freq-val { font-size: var(--text-xl); }
+    .beat-comp { gap: var(--space-3); padding: var(--space-3) var(--space-4); }
+    .beat-btns { flex-direction: column; width: 100%; }
+    .beat-next-btn, .beat-retry-btn { width: 100%; text-align: center; }
+  }
+</style>
+
+<script>
+  let audioCtx: AudioContext | null = null;
+  let osc1: OscillatorNode | null = null, osc2: OscillatorNode | null = null;
+  let gain1: GainNode | null = null, gain2: GainNode | null = null;
+  let analyser: AnalyserNode | null = null;
+  let playing = false, animId = 0, round = 1;
+  let referenceFreq = 440, targetFreq = 440, startFreq = 440;
+  let pOsc1: OscillatorNode[] = [], pOsc2: OscillatorNode[] = [];
+  let pGain1: GainNode[] = [], pGain2: GainNode[] = [];
+
+  const root = document.getElementById('beat-detector')!;
+  const bq = (s: string) => root.querySelector(s)! as HTMLElement;
+  const canvas = bq('#beat-canvas') as HTMLCanvasElement;
+  const slider = bq('#beat-slider') as HTMLInputElement;
+  const sliderFill = bq('#beat-slider-fill');
+  const freqVal = bq('#beat-freq-val');
+  const playBtn = bq('#beat-play');
+  const playLabel = bq('#beat-play-label');
+  const eqBars = bq('#beat-eq');
+  const checkBtn = bq('#beat-check') as HTMLButtonElement;
+  const resultEl = bq('#beat-result');
+  const centsEl = bq('#beat-cents');
+  const verdictEl = bq('#beat-verdict');
+  const compT = bq('#beat-comp-t');
+  const compG = bq('#beat-comp-g');
+  const ctxEl = bq('#beat-ctx');
+  const nextBtn = bq('#beat-next') as HTMLButtonElement;
+  const retryBtn = bq('#beat-retry');
+  const roundLabel = bq('#beat-round-label');
+
+  function centsOff(a: number, b: number) { return Math.abs(1200 * Math.log2(a / b)); }
+  function centsToRatio(c: number) { return 2 ** (c / 1200); }
+  function randomDetune() { return (8 + Math.random() * 17) * (Math.random() < .5 ? -1 : 1); }
+
+  function ensureAudio() {
+    if (!audioCtx) {
+      audioCtx = new AudioContext();
+      analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 2048;
+      analyser.smoothingTimeConstant = 0.75;
+    }
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+  }
+
+  function updateFill() {
+    const pct = ((+slider.value - +slider.min) / (+slider.max - +slider.min)) * 100;
+    sliderFill.style.width = pct + '%';
+  }
+
+  function setupRound() {
+    stopTones();
+    resultEl.hidden = true;
+    (checkBtn as any).hidden = true;
+    slider.disabled = true;
+    playBtn.classList.remove('playing');
+    playLabel.textContent = 'Play tones';
+    eqBars.hidden = true;
+
+    if (round === 1) {
+      roundLabel.textContent = 'Round 1: Unison';
+      referenceFreq = 440;
+      targetFreq = referenceFreq;
+      startFreq = referenceFreq * centsToRatio(randomDetune());
+      slider.min = String(referenceFreq - 20);
+      slider.max = String(referenceFreq + 20);
+    } else {
+      roundLabel.textContent = 'Round 2: Organ partials (perfect fifth)';
+      referenceFreq = 330;
+      targetFreq = referenceFreq * 1.5;
+      startFreq = targetFreq * centsToRatio(randomDetune());
+      slider.min = String(targetFreq - 25);
+      slider.max = String(targetFreq + 25);
+    }
+    slider.step = '0.1';
+    slider.value = String(startFreq);
+    freqVal.textContent = parseFloat(slider.value).toFixed(1);
+    updateFill();
+    drawIdle();
+  }
+
+  slider.addEventListener('input', () => {
+    const v = +slider.value;
+    freqVal.textContent = v.toFixed(1);
+    updateFill();
+    if (osc2) osc2.frequency.value = v;
+    pOsc2.forEach((p, i) => { p.frequency.value = v * (i + 2); });
+  });
+
+  function startTones() {
+    ensureAudio();
+    const ctx = audioCtx!;
+    osc1 = ctx.createOscillator(); osc2 = ctx.createOscillator();
+    gain1 = ctx.createGain(); gain2 = ctx.createGain();
+    osc1.type = 'sine'; osc2.type = 'sine';
+    osc1.frequency.value = referenceFreq;
+    osc2.frequency.value = +slider.value;
+    const t = ctx.currentTime;
+    gain1.gain.setValueAtTime(0, t); gain1.gain.linearRampToValueAtTime(0.2, t + .03);
+    gain2.gain.setValueAtTime(0, t); gain2.gain.linearRampToValueAtTime(0.2, t + .03);
+    osc1.connect(gain1); osc2.connect(gain2);
+    gain1.connect(analyser!); gain2.connect(analyser!);
+    analyser!.connect(ctx.destination);
+    osc1.start(); osc2.start();
+
+    if (round === 2) {
+      const amps = [0.08, 0.04, 0.02];
+      for (let i = 0; i < amps.length; i++) {
+        const h = i + 2;
+        for (const [freq, oArr, gArr] of [[referenceFreq, pOsc1, pGain1], [+slider.value, pOsc2, pGain2]] as [number, OscillatorNode[], GainNode[]][]) {
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.type = 'sine'; o.frequency.value = freq * h;
+          g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(amps[i], t + .03);
+          o.connect(g); g.connect(analyser!); o.start();
+          oArr.push(o); gArr.push(g);
+        }
+      }
+    }
+    playing = true;
+    animateCanvas();
+  }
+
+  function stopTones() {
+    if (!audioCtx) return;
+    const now = audioCtx.currentTime;
+    [gain1, gain2, ...pGain1, ...pGain2].forEach(g => {
+      if (g) { try { g.gain.cancelScheduledValues(now); } catch {} g.gain.setValueAtTime(g.gain.value, now); g.gain.linearRampToValueAtTime(.001, now + .05); }
+    });
+    const all = [osc1, osc2, ...pOsc1, ...pOsc2];
+    setTimeout(() => all.forEach(o => { try { o?.stop(); } catch {} }), 70);
+    osc1 = osc2 = gain1 = gain2 = null;
+    pOsc1 = []; pOsc2 = []; pGain1 = []; pGain2 = [];
+    playing = false;
+    cancelAnimationFrame(animId);
+  }
+
+  function sizeCanvas() {
+    const dpr = devicePixelRatio || 1, w = canvas.clientWidth, h = canvas.clientHeight;
+    if (canvas.width !== w * dpr || canvas.height !== h * dpr) { canvas.width = w * dpr; canvas.height = h * dpr; }
+    const ctx = canvas.getContext('2d')!;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { ctx, w, h };
+  }
+
+  function drawIdle() {
+    const { ctx, w, h } = sizeCanvas();
+    ctx.clearRect(0, 0, w, h);
+    ctx.beginPath();
+    const mid = h / 2;
+    for (let x = 0; x < w; x++) { const n = (Math.random() - .5) * 1.2; x === 0 ? ctx.moveTo(x, mid + n) : ctx.lineTo(x, mid + n); }
+    ctx.strokeStyle = 'rgba(100,110,140,.2)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+
+  function drawLive() {
+    if (!analyser) return;
+    const { ctx, w, h } = sizeCanvas();
+    ctx.clearRect(0, 0, w, h);
+    const buf = new Uint8Array(analyser.frequencyBinCount);
+    analyser.getByteTimeDomainData(buf);
+    const grad = ctx.createLinearGradient(0, 0, w, 0);
+    grad.addColorStop(0, 'rgba(56,189,248,.1)'); grad.addColorStop(.3, 'rgba(56,189,248,.9)');
+    grad.addColorStop(.7, 'rgba(56,189,248,.9)'); grad.addColorStop(1, 'rgba(56,189,248,.1)');
+    ctx.beginPath();
+    const sl = w / buf.length;
+    for (let i = 0, x = 0; i < buf.length; i++, x += sl) { const y = (buf[i] / 128) * h / 2; i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); }
+    ctx.strokeStyle = grad; ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.stroke();
+    ctx.strokeStyle = 'rgba(56,189,248,.12)'; ctx.lineWidth = 7; ctx.stroke();
+  }
+
+  function animateCanvas() { if (!playing) return; drawLive(); animId = requestAnimationFrame(animateCanvas); }
+
+  playBtn.addEventListener('click', () => {
+    if (playing) {
+      stopTones(); playBtn.classList.remove('playing'); playLabel.textContent = 'Play tones';
+      eqBars.hidden = true; slider.disabled = true; (checkBtn as any).hidden = true; drawIdle();
+    } else {
+      startTones(); playBtn.classList.add('playing'); playLabel.textContent = 'Stop';
+      eqBars.hidden = false; slider.disabled = false; (checkBtn as any).hidden = false;
+    }
+  });
+
+  checkBtn.addEventListener('click', () => {
+    const guess = +slider.value;
+    const cents = Math.round(centsOff(guess, targetFreq));
+    let verdict: string, color: string;
+    if (cents < 2) { verdict = 'Beatless'; color = 'var(--color-score-low,#22c55e)'; }
+    else if (cents < 5) { verdict = 'Excellent'; color = 'var(--color-score-low,#22c55e)'; }
+    else if (cents < 15) { verdict = 'Close'; color = 'var(--color-score-mid,#eab308)'; }
+    else { verdict = 'Audible beats remain'; color = 'var(--color-score-high,#ef4444)'; }
+
+    centsEl.textContent = cents + ' cents off'; centsEl.style.color = color;
+    verdictEl.textContent = verdict; verdictEl.style.color = color;
+    compT.textContent = targetFreq.toFixed(1) + ' Hz';
+    compG.textContent = guess.toFixed(1) + ' Hz';
+
+    const r1Msgs = [
+      'Virtually perfect unison. At this precision, beat frequencies fall below one cycle per second, inaudible even to experienced tuners.',
+      'Within the threshold of professional piano tuners, who typically set unisons within 1 to 3 cents. The remaining beats cycle slowly enough to be nearly imperceptible.',
+      'The beats are slow but still present. Organ tuners listen for this wavering and adjust until it vanishes entirely. With practice, finer discrimination develops rapidly.',
+      'The beat frequency remains clearly audible. Two tones 15 cents apart produce roughly one beat per second at this register. Trained tuners eliminate this by ear alone.'
+    ];
+    const r2Msgs = [
+      'A pure perfect fifth with organ-like timbres. When upper partials align at this precision, the combined sound acquires the clear, ringing quality that organ builders pursue.',
+      'Nearly pure. In equal temperament, the fifth is narrowed by about 2 cents from the pure 3:2 ratio. You are working within that margin.',
+      'The beating is most audible in the upper partials, where the third harmonic of the lower tone meets the second harmonic of the upper. Organ tuners isolate these partials by ear.',
+      'With rich timbres, beats appear not only at the fundamental but in every overlapping partial. This makes mistuning more conspicuous than with pure sine tones.'
+    ];
+    const msgs = round === 1 ? r1Msgs : r2Msgs;
+    const idx = cents < 2 ? 0 : cents < 5 ? 1 : cents < 15 ? 2 : 3;
+    ctxEl.textContent = msgs[idx];
+    nextBtn.hidden = round !== 1;
+
+    stopTones(); playBtn.classList.remove('playing'); playLabel.textContent = 'Play tones';
+    eqBars.hidden = true; slider.disabled = true; (checkBtn as any).hidden = true;
+    resultEl.hidden = false; drawIdle();
+  });
+
+  nextBtn.addEventListener('click', () => { round = 2; setupRound(); });
+  retryBtn.addEventListener('click', () => setupRound());
+
+  drawIdle();
+  setupRound();
+  window.addEventListener('resize', () => { if (!playing) drawIdle(); });
+</script>

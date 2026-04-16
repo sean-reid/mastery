@@ -53,5 +53,6 @@
     "luck_variance": { "value": 5, "confidence": 0.7, "notes": "Available stone shapes vary unpredictably. Wind gusts can destroy hours of work. Finding the right stone for a particular balance involves searching." },
     "social_coordination": { "value": 1, "confidence": 0.9, "notes": "Entirely solitary. The meditative nature of the practice is inherently individual. Festivals exist but the act is solo." }
   },
-  "methodology_notes": "Practitioner timelines from Michael Grab's documented career at Gravity Glue. Competition data from Balanced Art World International and European Stone Stacking Championships. Environmental concerns documented by US National Park Service."
+  "methodology_notes": "Practitioner timelines from Michael Grab's documented career at Gravity Glue. Competition data from Balanced Art World International and European Stone Stacking Championships. Environmental concerns documented by US National Park Service.",
+  "interactive": "balance-sim"
 }

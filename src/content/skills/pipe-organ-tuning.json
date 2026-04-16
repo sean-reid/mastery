@@ -58,5 +58,6 @@
     "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Tuning outcomes are deterministic. If the organ goes out of tune after a session, it is due to temperature changes, not chance. The tuner's skill directly determines the result." },
     "social_coordination": { "value": 3, "confidence": 0.75, "notes": "Primarily solo work inside the organ chamber, sometimes with an assistant operating the blower or playing notes. Communication with organists and clergy about scheduling and priorities adds a coordination layer." }
   },
-  "methodology_notes": "Scores draw on Wikipedia's pipe organ tuning article, the UK Institute for Apprenticeships organ builder standard, Duke University Chapel's organ tuning FAQ, and published accounts from organ builders including Harrison & Harrison. The 36-month apprenticeship and temperature sensitivity figures come from official UK standards. The 10-12 hour tuning duration for large instruments is widely reported across multiple organ maintenance firms."
+  "methodology_notes": "Scores draw on Wikipedia's pipe organ tuning article, the UK Institute for Apprenticeships organ builder standard, Duke University Chapel's organ tuning FAQ, and published accounts from organ builders including Harrison & Harrison. The 36-month apprenticeship and temperature sensitivity figures come from official UK standards. The 10-12 hour tuning duration for large instruments is widely reported across multiple organ maintenance firms.",
+  "interactive": "beat-detector"
 }

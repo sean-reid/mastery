@@ -130,5 +130,6 @@
       "notes": "Tile cutting is individual. Assembly of large panels involves small teams of 2-4 working in coordination. The master directs placement while assistants supply pre-cut pieces. But the core skill is solo."
     }
   },
-  "methodology_notes": "Scores draw on Wikipedia's zellij article, AramcoWorld's 2024 photographic documentation of Fez workshops, Encyclopedia MDPI's technical overview, and published accounts of maalem training traditions. Confidence is moderate due to limited quantitative research on zellige artisan training — most knowledge is transmitted orally within Moroccan craft families."
+  "methodology_notes": "Scores draw on Wikipedia's zellij article, AramcoWorld's 2024 photographic documentation of Fez workshops, Encyclopedia MDPI's technical overview, and published accounts of maalem training traditions. Confidence is moderate due to limited quantitative research on zellige artisan training — most knowledge is transmitted orally within Moroccan craft families.",
+  "interactive": "pattern-builder"
 }

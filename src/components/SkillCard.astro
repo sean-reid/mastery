@@ -10,6 +10,10 @@ import PitchMatcher from '../interactives/PitchMatcher.astro';
 import LayerVisualizer from '../interactives/LayerVisualizer.astro';
 import PolyrhythmTapper from '../interactives/PolyrhythmTapper.astro';
 import PatternMemory from '../interactives/PatternMemory.astro';
+import BeatDetector from '../interactives/BeatDetector.astro';
+import BalanceSim from '../interactives/BalanceSim.astro';
+import StarNavigation from '../interactives/StarNavigation.astro';
+import PatternBuilder from '../interactives/PatternBuilder.astro';
 import type { RankedSkill } from '../types/skill';
 
 interface Props {
@@ -28,6 +32,10 @@ const interactiveMap: Record<string, any> = {
   'layer-visualizer': LayerVisualizer,
   'polyrhythm-tapper': PolyrhythmTapper,
   'pattern-memory': PatternMemory,
+  'beat-detector': BeatDetector,
+  'balance-sim': BalanceSim,
+  'star-navigation': StarNavigation,
+  'pattern-builder': PatternBuilder,
 };
 
 const InteractiveComponent = interactiveId ? interactiveMap[interactiveId] : null;
