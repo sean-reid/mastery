@@ -164,6 +164,10 @@ const categories = Object.entries(CATEGORY_LABELS) as [Category, string][];
     color: var(--color-text-muted);
   }
 
+  @media (max-width: 640px) {
+    .search-shortcut { display: none; }
+  }
+
   .icon-moon { display: none; }
 
   [data-theme="dark"] .icon-sun { display: none; }
