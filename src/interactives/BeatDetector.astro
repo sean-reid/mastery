@@ -37,7 +37,7 @@
       </div>
       <p class="beat-ctx" id="beat-ctx"></p>
       <div class="beat-btns">
-        <button class="beat-next-btn" id="beat-next" hidden>Next: Organ partials</button>
+        <button class="beat-next-btn" id="beat-next" hidden>Next level</button>
         <button class="beat-retry-btn" id="beat-retry">Try again</button>
       </div>
     </div>
@@ -161,6 +161,27 @@
     sliderFill.style.width = pct + '%';
   }
 
+  /*
+    Round definitions - progressively harder:
+    1. Unison, sine tones, wide slider, large detune
+    2. Unison, sine tones, narrower slider, smaller detune
+    3. Perfect fifth (3:2), sine tones
+    4. Perfect fifth, organ partials (harmonics make beats more complex)
+    5. Major third (5:4), organ partials, tight slider - the hardest interval to tune by ear
+  */
+  const ROUNDS = [
+    { label: 'Level 1: Unison (sine)', ref: 440, ratio: 1, partials: false, detune: [12, 25], range: 22, step: 0.5 },
+    { label: 'Level 2: Unison (tight)', ref: 330, ratio: 1, partials: false, detune: [6, 14], range: 12, step: 0.2 },
+    { label: 'Level 3: Perfect fifth (sine)', ref: 330, ratio: 1.5, partials: false, detune: [8, 20], range: 18, step: 0.2 },
+    { label: 'Level 4: Perfect fifth (organ)', ref: 262, ratio: 1.5, partials: true, detune: [6, 16], range: 15, step: 0.1 },
+    { label: 'Level 5: Major third (organ)', ref: 330, ratio: 5/4, partials: true, detune: [5, 12], range: 10, step: 0.1 },
+  ];
+  const TOTAL_ROUNDS = ROUNDS.length;
+
+  function randomDetuneBetween(lo: number, hi: number) {
+    return (lo + Math.random() * (hi - lo)) * (Math.random() < 0.5 ? -1 : 1);
+  }
+
   function setupRound() {
     stopTones();
     resultEl.hidden = true;
@@ -170,22 +191,14 @@
     playLabel.textContent = 'Play tones';
     eqBars.hidden = true;
 
-    if (round === 1) {
-      roundLabel.textContent = 'Round 1: Unison';
-      referenceFreq = 440;
-      targetFreq = referenceFreq;
-      startFreq = referenceFreq * centsToRatio(randomDetune());
-      slider.min = String(referenceFreq - 20);
-      slider.max = String(referenceFreq + 20);
-    } else {
-      roundLabel.textContent = 'Round 2: Organ partials (perfect fifth)';
-      referenceFreq = 330;
-      targetFreq = referenceFreq * 1.5;
-      startFreq = targetFreq * centsToRatio(randomDetune());
-      slider.min = String(targetFreq - 25);
-      slider.max = String(targetFreq + 25);
-    }
-    slider.step = '0.1';
+    const cfg = ROUNDS[round - 1];
+    roundLabel.textContent = `${cfg.label} (${round}/${TOTAL_ROUNDS})`;
+    referenceFreq = cfg.ref;
+    targetFreq = referenceFreq * cfg.ratio;
+    startFreq = targetFreq * centsToRatio(randomDetuneBetween(cfg.detune[0], cfg.detune[1]));
+    slider.min = String(targetFreq - cfg.range);
+    slider.max = String(targetFreq + cfg.range);
+    slider.step = String(cfg.step);
     slider.value = String(startFreq);
     freqVal.textContent = parseFloat(slider.value).toFixed(1);
     updateFill();
@@ -216,7 +229,7 @@
     analyser!.connect(ctx.destination);
     osc1.start(); osc2.start();
 
-    if (round === 2) {
+    if (ROUNDS[round - 1].partials) {
       const amps = [0.08, 0.04, 0.02];
       for (let i = 0; i < amps.length; i++) {
         const h = i + 2;
@@ -308,29 +321,50 @@
     compT.textContent = targetFreq.toFixed(1) + ' Hz';
     compG.textContent = guess.toFixed(1) + ' Hz';
 
-    const r1Msgs = [
-      'Virtually perfect unison. At this precision, beat frequencies fall below one cycle per second, inaudible even to experienced tuners.',
-      'Within the threshold of professional piano tuners, who typically set unisons within 1 to 3 cents. The remaining beats cycle slowly enough to be nearly imperceptible.',
-      'The beats are slow but still present. Organ tuners listen for this wavering and adjust until it vanishes entirely. With practice, finer discrimination develops rapidly.',
-      'The beat frequency remains clearly audible. Two tones 15 cents apart produce roughly one beat per second at this register. Trained tuners eliminate this by ear alone.'
+    const roundMsgs: string[][] = [
+      [ // Round 1: Unison sine
+        'Virtually perfect unison. Beat frequencies below one cycle per second are inaudible even to experienced tuners.',
+        'Within the threshold of professional piano tuners, who set unisons within 1 to 3 cents.',
+        'The beats are slow but present. Organ tuners adjust until the wavering vanishes entirely.',
+        'The beat frequency is clearly audible. Two tones 15 cents apart produce roughly one beat per second.',
+      ],
+      [ // Round 2: Tight unison
+        'Excellent ear. With a narrower range, finding the null point requires finer discrimination.',
+        'Very close. Professional tuners develop this sensitivity over years of daily practice.',
+        'The detune was subtler this time. Tuners learn to hear beats that last several seconds per cycle.',
+        'Harder to hear with a smaller starting offset. The skill is distinguishing slow beats from silence.',
+      ],
+      [ // Round 3: Fifth sine
+        'A pure perfect fifth. The 3:2 ratio is the most consonant interval after the octave.',
+        'Nearly pure. In equal temperament, fifths are narrowed by about 2 cents from the pure ratio.',
+        'A mistuned fifth produces a wavering quality that experienced string players correct instinctively.',
+        'The fifth is wide or narrow enough that the dissonance is immediately apparent.',
+      ],
+      [ // Round 4: Fifth organ
+        'A pure fifth with rich organ timbres. When upper partials align, the sound acquires the ringing clarity organ builders pursue.',
+        'Nearly pure. The beating is most audible where the third harmonic of the lower tone meets the second harmonic of the upper.',
+        'With harmonics present, beats appear in multiple partials simultaneously, making mistuning more conspicuous.',
+        'Organ pipes make mistuning harder to ignore. Every overlapping partial produces its own beat frequency.',
+      ],
+      [ // Round 5: Major third organ
+        'A pure major third with organ timbres. This is the most difficult common interval to tune by ear. The 5:4 ratio sits 14 cents flat of the equal-tempered third.',
+        'Very close. Tuning thirds is where organ tuners earn their reputation. The beating of the fifth partial against the fourth is subtle and easy to misjudge.',
+        'The major third is notoriously difficult. The pure 5:4 ratio sounds unfamiliar to ears trained on equal temperament, so tuners must override their instincts.',
+        'Thirds are where even experienced tuners struggle. The beat patterns are complex and the pure interval sounds "wrong" to modern ears accustomed to equal temperament.',
+      ],
     ];
-    const r2Msgs = [
-      'A pure perfect fifth with organ-like timbres. When upper partials align at this precision, the combined sound acquires the clear, ringing quality that organ builders pursue.',
-      'Nearly pure. In equal temperament, the fifth is narrowed by about 2 cents from the pure 3:2 ratio. You are working within that margin.',
-      'The beating is most audible in the upper partials, where the third harmonic of the lower tone meets the second harmonic of the upper. Organ tuners isolate these partials by ear.',
-      'With rich timbres, beats appear not only at the fundamental but in every overlapping partial. This makes mistuning more conspicuous than with pure sine tones.'
-    ];
-    const msgs = round === 1 ? r1Msgs : r2Msgs;
+    const msgs = roundMsgs[round - 1] || roundMsgs[0];
     const idx = cents < 2 ? 0 : cents < 5 ? 1 : cents < 15 ? 2 : 3;
     ctxEl.textContent = msgs[idx];
-    nextBtn.hidden = round !== 1;
+    nextBtn.hidden = round >= TOTAL_ROUNDS;
+    nextBtn.textContent = `Next: ${round < TOTAL_ROUNDS ? ROUNDS[round].label.replace(/Level \d: /, '') : ''}`;
 
     stopTones(); playBtn.classList.remove('playing'); playLabel.textContent = 'Play tones';
     eqBars.hidden = true; slider.disabled = true; (checkBtn as any).hidden = true;
     resultEl.hidden = false; drawIdle();
   });
 
-  nextBtn.addEventListener('click', () => { round = 2; setupRound(); });
+  nextBtn.addEventListener('click', () => { round++; setupRound(); });
   retryBtn.addEventListener('click', () => setupRound());
 
   drawIdle();
