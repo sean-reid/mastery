@@ -1,0 +1,62 @@
+{
+  "name": "Benshi",
+  "slug": "benshi",
+  "category": "performance",
+  "description": "Benshi (literally 'orator') are Japanese live narrators who accompany silent films, voicing every character, providing dramatic commentary, and interpreting the story for the audience -- all in real time beside the screen. At their peak in the 1920s, over 7,000 benshi performed across Japan; today, approximately 15 practitioners keep the tradition alive. Training follows the traditional master-student (shitei) system adapted from kabuki and bunraku; the most prominent modern benshi, Ichiro Kataoka, apprenticed under master Midori Sawato beginning in 2002 and has since narrated over 350 silent films internationally.",
+  "thumbnail": {
+    "src": "/images/skills/benshi.webp",
+    "alt": "Benshi narrator performing beside a silent film projection screen in traditional Japanese garb",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "jl5bMGClmxI",
+      "title": "The Art of the Benshi — Japan Society performance with Ichiro Kataoka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Benshi",
+      "url": "https://en.wikipedia.org/wiki/Benshi",
+      "type": "reference"
+    },
+    {
+      "title": "A Brief History of Benshi (Silent Film Narrators) — Japan Society",
+      "url": "https://japansociety.org/news/a-brief-history-of-benshi-silent-film-narrators/",
+      "type": "institutional"
+    },
+    {
+      "title": "Ichiro Kataoka: Benshi — Harvard Film Archive",
+      "url": "https://harvardfilmarchive.org/programs/ichiro-kataoka-benshi",
+      "type": "institutional"
+    },
+    {
+      "title": "Benshi Performers Pass Along a Way of Thinking — Hyperallergic",
+      "url": "https://hyperallergic.com/benshi-performers-pass-along-a-way-of-thinking/",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 5, "confidence": 0.7, "notes": "Learning to narrate a single film competently requires mastering the script, character voices, and synchronization with screen action. The apprenticeship system demands years of study before independent performance." },
+    "time_to_expert": { "value": 8, "confidence": 0.7, "notes": "Ichiro Kataoka began training in 2002 and spent years developing a repertoire of 350+ films. Mastering the wide range of vocal styles, improvisation, and deep knowledge of film history takes at least a decade." },
+    "feedback_delay": { "value": 2, "confidence": 0.75, "notes": "Audience reactions -- laughter, gasps, attentiveness -- are visible in real time. However, the rarity of benshi performance means opportunities for audience feedback are infrequent." },
+    "failure_cost": { "value": 3, "confidence": 0.7, "notes": "A poor narration at a screening is uncomfortable but recoverable. Given the extreme rarity of practitioners, audiences are generally appreciative. Loss of sync with the film is the primary visible failure mode." },
+    "cognitive_demand": { "value": 9, "confidence": 0.85, "notes": "Simultaneously tracking film action, voicing multiple characters with distinct registers, providing narrative commentary, reading audience energy, and synchronizing with live musical accompaniment. Must maintain period-appropriate language and improvisational flexibility." },
+    "physical_demand": { "value": 3, "confidence": 0.8, "notes": "Primarily vocal performance while standing beside the screen. Extended performances (feature-length films of 60-90+ minutes) demand significant vocal stamina." },
+    "prerequisite_knowledge": { "value": 7, "confidence": 0.8, "notes": "Requires deep knowledge of Japanese film history, silent cinema conventions, kabuki and bunraku theatrical traditions, classical Japanese language registers, and the specific films in one's repertoire." },
+    "measurability": { "value": 3, "confidence": 0.65, "notes": "No competitions, rankings, or standardized assessments exist. Quality is evaluated subjectively by audiences and peers. The tradition is too small for formal measurement systems." },
+    "perishability": { "value": 6, "confidence": 0.7, "notes": "Film-specific narration scripts and character voices must be maintained through rehearsal. Vocal flexibility and the ability to improvise degrade without regular performance." },
+    "precision_required": { "value": 7, "confidence": 0.8, "notes": "Synchronization with on-screen action must be frame-accurate for dramatic impact. Character voice switches must be instantaneous and clearly differentiated. Timing with live musicians adds another precision layer." },
+    "ambiguity": { "value": 6, "confidence": 0.7, "notes": "Each benshi brings a personal interpretation to a film; historically, star benshi drew audiences regardless of the film being shown. There is no single 'correct' narration for any given film." },
+    "instruction_dependency": { "value": 9, "confidence": 0.85, "notes": "The master-student (shitei) system is the only path into the profession. The 1917 Tokyo Metropolitan Police licensing requirement formalized training standards. Today's practitioners trace direct lineage through master-apprentice chains." },
+    "environmental_variability": { "value": 5, "confidence": 0.7, "notes": "Performances occur in theaters, cinemas, museums, and festival venues worldwide. Screen size, projection quality, acoustics, and audience composition vary. Live musician availability changes the accompaniment format." },
+    "concurrent_skills": { "value": 8, "confidence": 0.8, "notes": "Voice acting for multiple characters, real-time script delivery, film synchronization, audience engagement, coordination with musicians, and cultural interpretation must all occur simultaneously." },
+    "plateau_density": { "value": 5, "confidence": 0.65, "notes": "Key transitions include moving from single-voice narration to multi-character kowairo (voice coloring), developing a personal interpretive style, and building an extensive film repertoire." },
+    "domain_evolution": { "value": 1, "confidence": 0.8, "notes": "The form is essentially frozen in time. The silent film canon is fixed. While modern benshi adapt to international audiences and new venue types, the core art is deliberately preserved unchanged." },
+    "observability": { "value": 7, "confidence": 0.8, "notes": "The performance is fully visible and audible, occurring live beside the screen. The dramatic vocal range and character-switching skill are immediately impressive even to uninitiated audiences." },
+    "luck_variance": { "value": 2, "confidence": 0.7, "notes": "With only ~15 active practitioners worldwide, career advancement is not competitive in the traditional sense. Opportunities depend on cultural programming decisions and institutional partnerships." },
+    "social_coordination": { "value": 4, "confidence": 0.75, "notes": "The benshi typically coordinates with a live musician or small ensemble. Modern touring performances involve collaboration with academic institutions and film archives. But the core narration is a solo performance." }
+  },
+  "methodology_notes": "Scores informed by Wikipedia's documentation of the benshi tradition, Japan Society's historical account, Harvard Film Archive's programming with Ichiro Kataoka, and the estimated ~15 active practitioners worldwide. The extremely small practitioner population makes confidence levels lower than for more widely practiced skills."
+}

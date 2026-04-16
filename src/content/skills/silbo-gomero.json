@@ -1,0 +1,65 @@
+{
+  "name": "Silbo Gomero",
+  "slug": "silbo-gomero",
+  "category": "language",
+  "description": "Silbo Gomero compresses all of Spanish into just six whistled phonemes -- two for vowels, four for consonants -- varied by pitch and continuity, allowing messages to travel up to five kilometers across the volcanic ravines of La Gomera. Neuroscience research published in Nature found that trained whistlers process Silbo in the brain's left-hemisphere language centers, proving it is genuine language, not mere signaling.",
+  "thumbnail": {
+    "src": "/images/skills/silbo-gomero.webp",
+    "alt": "A silbador whistling across a deep ravine on the island of La Gomera in the Canary Islands",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "C0CIRCjoICA",
+      "title": "Sylbo, The Last Speakers of the Lost Whistling Language | TIME"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Whistled language of the island of La Gomera (Canary Islands), the Silbo Gomero - UNESCO Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/en/RL/whistled-language-of-the-island-of-la-gomera-canary-islands-the-silbo-gomero-00172",
+      "type": "institutional"
+    },
+    {
+      "title": "Silbo Gomero - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Silbo_Gomero",
+      "type": "reference"
+    },
+    {
+      "title": "Linguistic perception: neural processing of a whistled language",
+      "author": "Manuel Carreiras et al.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15635400/",
+      "year": 2005,
+      "type": "research"
+    },
+    {
+      "title": "Lateralization of Auditory Processing of Silbo Gomero",
+      "url": "https://www.mdpi.com/2073-8994/12/7/1183",
+      "year": 2020,
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 5, "confidence": 0.75, "notes": "Children on La Gomera learn Silbo as a mandatory school subject from primary school onward. Adults with fluent Spanish can acquire basic whistled communication in months. The reduced phoneme set (6 whistled sounds) simplifies initial learning, but distinguishing messages across distance requires extensive practice." },
+    "time_to_expert": { "value": 6, "confidence": 0.7, "notes": "Becoming a certified silbador (whistler-instructor) requires years of practice and examination through La Gomera's Island School of Silbo Gomero. Expert-level distance communication across ravines demands lung capacity, pitch control, and contextual disambiguation that takes 3-5+ years to develop." },
+    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "Whistled messages either arrive intelligibly or they do not. Over short distances, a listener can immediately confirm or request repetition. At long distances, the feedback loop lengthens to minutes." },
+    "failure_cost": { "value": 1, "confidence": 0.9, "notes": "A garbled whistle is harmless. Historically, miscommunicated messages between shepherds could lead to practical inconveniences but no danger." },
+    "cognitive_demand": { "value": 6, "confidence": 0.75, "notes": "The core challenge is mapping Spanish phonology onto 6 whistled distinctions, then disambiguating the massive information loss through context. Brain imaging shows this engages left-hemisphere language areas plus right-hemisphere pitch processing -- a dual-system cognitive load." },
+    "physical_demand": { "value": 5, "confidence": 0.8, "notes": "Producing whistles audible at 2-5 km requires significant breath control, diaphragm strength, and precise finger-to-mouth positioning. Sustained whistling sessions are physically tiring. The skill has more in common with wind-instrument playing than ordinary speech." },
+    "prerequisite_knowledge": { "value": 4, "confidence": 0.85, "notes": "Fluent Spanish is effectively required. Silbo Gomero transposes Spanish phonology; without knowing what words are being compressed, the whistles are meaningless. Historical Guanche speakers used a pre-Spanish substrate, but modern Silbo encodes Castilian Spanish." },
+    "measurability": { "value": 5, "confidence": 0.7, "notes": "The Island School of Silbo Gomero has a certification process. UNESCO documentation provides qualitative benchmarks. However, no standardized test exists beyond local institutional assessment." },
+    "perishability": { "value": 5, "confidence": 0.75, "notes": "Whistling technique degrades without practice -- breath control and pitch precision both decline. However, the underlying Spanish knowledge is durable. The skill nearly died out in the mid-20th century before school mandates revived it." },
+    "precision_required": { "value": 6, "confidence": 0.75, "notes": "Pitch must be controlled precisely enough to distinguish the 6 phonemic categories. At long distances, slight pitch drift renders messages unintelligible. Finger placement in the mouth affects timbre and must be consistent." },
+    "ambiguity": { "value": 7, "confidence": 0.8, "notes": "With only 6 phonemic distinctions encoding all of Spanish, massive ambiguity is inherent. Context, shared knowledge, and conventional phrases do the heavy lifting. Novel or complex messages are significantly harder to transmit than routine ones." },
+    "instruction_dependency": { "value": 6, "confidence": 0.75, "notes": "Taught formally in La Gomera schools since 1999. Self-teaching is possible in theory but rare in practice. The physical technique (finger placement, breath control) and the phonemic mapping both benefit from direct instruction by an experienced silbador." },
+    "environmental_variability": { "value": 6, "confidence": 0.8, "notes": "Wind, humidity, ravine acoustics, and ambient noise dramatically affect transmission. Silbadores must adapt volume, pitch, and phrasing to conditions. The skill evolved specifically for La Gomera's rugged terrain." },
+    "concurrent_skills": { "value": 5, "confidence": 0.75, "notes": "Simultaneous management of breath control, pitch targeting, Spanish-to-whistle phonemic mapping, and environmental acoustic adaptation. Listening requires real-time disambiguation of the reduced phoneme set." },
+    "plateau_density": { "value": 4, "confidence": 0.7, "notes": "Initial plateau at producing consistent, audible whistles. Second plateau at achieving distance transmission. Third at disambiguating complex messages. But the phonemic system is simple enough that steady progress is typical with regular practice." },
+    "domain_evolution": { "value": 1, "confidence": 0.85, "notes": "Silbo Gomero has been essentially stable since its adaptation to Spanish in the 15th century. UNESCO inscription in 2009 formalized its preservation. No structural changes are occurring." },
+    "observability": { "value": 9, "confidence": 0.9, "notes": "A whistled conversation across a mountain valley is one of the most immediately impressive language demonstrations on Earth. The skill is visually and audibly spectacular to observers. Restaurants on La Gomera offer tourist demonstrations." },
+    "luck_variance": { "value": 1, "confidence": 0.9, "notes": "Pure skill and practice. Weather conditions add minor variance to transmission success but not to learning." },
+    "social_coordination": { "value": 5, "confidence": 0.8, "notes": "Requires at least two people to practice meaningfully. The skill exists within a community context on La Gomera. Solo practice of whistle production is possible, but communication practice is inherently social." }
+  },
+  "methodology_notes": "Scores grounded in UNESCO ICH documentation, Carreiras et al. 2005 Nature neuroscience study (PubMed ID 15635400), Wikipedia linguistic description, and La Gomera school curriculum data. The 22,000-speaker figure and school mandate since 1999 come from UNESCO records. Brain lateralization data from MDPI Symmetry 2020 study."
+}

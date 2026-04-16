@@ -1,0 +1,648 @@
+---
+---
+
+<div class="interactive-wrap" id="breath-hold">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: How long can you hold your breath?</h4>
+    <p class="interactive-subtitle">Take a deep breath when you are ready. Click to begin the hold.</p>
+  </div>
+
+  <div class="breath-stage">
+    <!-- Breathing guide circle - visible before hold -->
+    <div class="breath-guide" id="breath-guide">
+      <div class="breath-guide-ring"></div>
+      <div class="breath-guide-label">Breathe in... breathe out...</div>
+    </div>
+
+    <!-- Circular timer with progress ring -->
+    <div class="breath-ring-wrap" id="breath-ring-wrap">
+      <svg class="breath-ring-svg" viewBox="0 0 200 200" id="breath-ring-svg">
+        <circle class="ring-track" cx="100" cy="100" r="90" />
+        <circle class="ring-fill" cx="100" cy="100" r="90" id="ring-fill" />
+      </svg>
+      <div class="breath-timer">
+        <span class="breath-time" id="breath-time">0:00</span>
+        <span class="breath-unit" id="breath-unit">elapsed</span>
+      </div>
+    </div>
+
+    <!-- Progress track with piecewise scale -->
+    <div class="breath-track-wrap">
+      <div class="breath-track" id="breath-track">
+        <div class="breath-fill" id="breath-fill"></div>
+        <div class="breath-cursor" id="breath-cursor" hidden></div>
+        <div class="breath-markers" id="breath-markers">
+          <!-- Markers positioned via piecewise scale in JS -->
+        </div>
+      </div>
+      <div class="breath-ticks" id="breath-ticks"></div>
+    </div>
+
+    <button class="breath-btn" id="breath-btn">
+      <span class="btn-label">Hold your breath</span>
+    </button>
+  </div>
+
+  <div class="breath-result" id="breath-result" hidden>
+    <div class="result-badge" id="result-badge">
+      <span class="result-value" id="result-duration">0:00</span>
+      <span class="result-label">your hold</span>
+    </div>
+    <p class="result-comparison" id="result-comparison"></p>
+    <button class="breath-retry" id="breath-retry">Try again</button>
+  </div>
+</div>
+
+<style is:global>
+  /* ---- Shared interactive base styles ---- */
+  .interactive-wrap {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin: var(--space-8) 0;
+  }
+  .interactive-header { margin-bottom: var(--space-6); }
+  .interactive-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+  .interactive-subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  .breath-retry {
+    padding: var(--space-2) var(--space-6);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    transition: all var(--duration-fast) var(--ease-out);
+    cursor: pointer;
+    background: transparent;
+  }
+  .breath-retry:hover {
+    background: var(--color-surface-raised);
+  }
+
+  /* ---- Breath Hold specific ---- */
+
+  #breath-hold {
+    background: linear-gradient(
+      175deg,
+      var(--color-surface) 0%,
+      var(--color-surface-raised) 100%
+    );
+  }
+
+  .breath-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  /* Breathing guide (pre-hold) */
+  .breath-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  .breath-guide-ring {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+    opacity: 0.5;
+    animation: breathe 4s ease-in-out infinite;
+  }
+  .breath-guide-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    animation: breathe-text 4s ease-in-out infinite;
+  }
+  .breath-guide.hidden {
+    display: none;
+  }
+  @keyframes breathe {
+    0%, 100% { transform: scale(0.7); opacity: 0.3; }
+    50% { transform: scale(1.15); opacity: 0.6; }
+  }
+  @keyframes breathe-text {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  /* Circular progress ring */
+  .breath-ring-wrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: none;
+  }
+  .breath-ring-wrap.active {
+    display: block;
+  }
+  .breath-ring-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  .ring-track {
+    fill: none;
+    stroke: var(--color-border);
+    stroke-width: 6;
+  }
+  .ring-fill {
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-dasharray: 565.48;
+    stroke-dashoffset: 565.48;
+    transition: stroke 0.5s ease;
+    filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.3));
+  }
+
+  .breath-timer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .breath-time {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-accent);
+    line-height: 1;
+    transition: color 0.5s ease;
+  }
+  .breath-time.glow {
+    text-shadow: 0 0 20px rgba(37, 99, 235, 0.35);
+    animation: timer-pulse 2s ease-in-out infinite;
+  }
+  .breath-unit {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+  }
+  @keyframes timer-pulse {
+    0%, 100% { text-shadow: 0 0 20px rgba(37, 99, 235, 0.2); }
+    50% { text-shadow: 0 0 32px rgba(37, 99, 235, 0.5); }
+  }
+
+  /* Progress track */
+  .breath-track-wrap {
+    width: 100%;
+    max-width: 640px;
+    padding: var(--space-10) var(--space-2) var(--space-12);
+  }
+  .breath-track {
+    width: 100%;
+    height: 14px;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    position: relative;
+    overflow: visible;
+  }
+  .breath-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: var(--radius-full);
+    background: linear-gradient(
+      90deg,
+      #2563eb 0%,
+      #3b82f6 30%,
+      #eab308 60%,
+      #ef4444 100%
+    );
+    transition: width 0.1s linear;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* "You are here" cursor */
+  .breath-cursor {
+    position: absolute;
+    top: -5px;
+    width: 4px;
+    height: 24px;
+    background: var(--color-text);
+    border-radius: 2px;
+    z-index: 3;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+  .breath-cursor::after {
+    content: 'You';
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.625rem;
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+  }
+
+  /* Markers */
+  .breath-markers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .marker {
+    position: absolute;
+    transform: translateX(-50%);
+  }
+  .marker.above {
+    bottom: 100%;
+    padding-bottom: 4px;
+  }
+  .marker.below {
+    top: 100%;
+    padding-top: 4px;
+  }
+  .marker-line {
+    display: block;
+    width: 2px;
+    background: var(--color-text-muted);
+    opacity: 0.5;
+    margin: 0 auto;
+  }
+  .marker.above .marker-line {
+    height: 20px;
+    margin-bottom: 2px;
+  }
+  .marker.below .marker-line {
+    height: 20px;
+    margin-top: 2px;
+  }
+  .marker-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.3;
+  }
+  .marker.above .marker-label {
+    order: -1;
+  }
+  .marker.above {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .marker.below {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .marker.passed .marker-label {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+  .marker.passed .marker-line {
+    opacity: 0.8;
+    background: var(--color-accent);
+  }
+
+  /* Subtle tick marks */
+  .breath-ticks {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    margin-top: 1px;
+  }
+  .tick {
+    position: absolute;
+    width: 1px;
+    height: 4px;
+    background: var(--color-text-muted);
+    opacity: 0.2;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  /* CTA button */
+  .breath-btn {
+    padding: var(--space-4) var(--space-12);
+    border-radius: var(--radius-full);
+    background: var(--color-accent);
+    color: white;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+    border: none;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-out);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  }
+  .breath-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  }
+  .breath-btn:active {
+    transform: scale(0.98);
+  }
+  .breath-btn.holding {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.35);
+    animation: btn-pulse 2s ease-in-out infinite;
+  }
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(239, 68, 68, 0.25); }
+    50% { box-shadow: 0 4px 32px rgba(239, 68, 68, 0.5); }
+  }
+
+  /* Result display */
+  .breath-result {
+    text-align: center;
+    margin-top: var(--space-8);
+    animation: result-enter 0.5s var(--ease-out) both;
+  }
+  @keyframes result-enter {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .result-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--space-4);
+  }
+  .result-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .result-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .result-comparison {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-6);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    #breath-hold { padding: var(--space-6); }
+    .breath-ring-wrap { width: 160px; height: 160px; }
+    .breath-time { font-size: var(--text-2xl); }
+    .breath-btn { padding: var(--space-3) var(--space-8); font-size: var(--text-base); }
+    .marker-label { font-size: 0.575rem; }
+  }
+</style>
+
+<script>
+  const timeEl = document.getElementById('breath-time')!;
+  const unitEl = document.getElementById('breath-unit')!;
+  const fillEl = document.getElementById('breath-fill')! as HTMLElement;
+  const ringFill = document.getElementById('ring-fill')! as SVGCircleElement;
+  const ringWrap = document.getElementById('breath-ring-wrap')!;
+  const guideEl = document.getElementById('breath-guide')!;
+  const btn = document.getElementById('breath-btn')!;
+  const resultEl = document.getElementById('breath-result')!;
+  const resultDuration = document.getElementById('result-duration')!;
+  const resultComparison = document.getElementById('result-comparison')!;
+  const retryBtn = document.getElementById('breath-retry')!;
+  const trackEl = document.getElementById('breath-track')!;
+  const cursorEl = document.getElementById('breath-cursor')! as HTMLElement;
+  const markersEl = document.getElementById('breath-markers')!;
+  const ticksEl = document.getElementById('breath-ticks')!;
+
+  const TOTAL_SECONDS = 24 * 60 + 33; // world record 24:33
+  const RING_CIRCUMFERENCE = 2 * Math.PI * 90; // ~565.48
+
+  // Piecewise scale: maps real seconds to percentage of bar width.
+  // 0-30s = 0-15%, 30s-1:30 = 15-30%, 1:30-4:00 = 30-50%, 4:00-7:00 = 50-70%, 7:00-24:33 = 70-100%
+  interface Segment { startSec: number; endSec: number; startPct: number; endPct: number; }
+  const segments: Segment[] = [
+    { startSec: 0,   endSec: 30,  startPct: 0,  endPct: 15 },
+    { startSec: 30,  endSec: 90,  startPct: 15, endPct: 30 },
+    { startSec: 90,  endSec: 240, startPct: 30, endPct: 50 },
+    { startSec: 240, endSec: 420, startPct: 50, endPct: 70 },
+    { startSec: 420, endSec: TOTAL_SECONDS, startPct: 70, endPct: 100 },
+  ];
+
+  function secondsToPct(sec: number): number {
+    if (sec <= 0) return 0;
+    if (sec >= TOTAL_SECONDS) return 100;
+    for (const s of segments) {
+      if (sec <= s.endSec) {
+        const ratio = (sec - s.startSec) / (s.endSec - s.startSec);
+        return s.startPct + ratio * (s.endPct - s.startPct);
+      }
+    }
+    return 100;
+  }
+
+  // Marker definitions
+  const markers = [
+    { seconds: 30,  label: 'Average', time: '0:30', position: 'above' as const },
+    { seconds: 90,  label: 'Trained', time: '1:30', position: 'below' as const },
+    { seconds: 240, label: 'Freediver', time: '4:00', position: 'above' as const },
+    { seconds: 420, label: 'Competitive', time: '7:00', position: 'below' as const },
+    { seconds: TOTAL_SECONDS, label: 'World record', time: '24:33', position: 'above' as const },
+  ];
+
+  // Build markers
+  markers.forEach(m => {
+    const pct = secondsToPct(m.seconds);
+    const div = document.createElement('div');
+    div.className = `marker ${m.position}`;
+    div.style.left = `${pct}%`;
+    div.dataset.seconds = String(m.seconds);
+
+    if (m.position === 'above') {
+      div.innerHTML = `<span class="marker-label">${m.label}<br/>${m.time}</span><span class="marker-line"></span>`;
+    } else {
+      div.innerHTML = `<span class="marker-line"></span><span class="marker-label">${m.label}<br/>${m.time}</span>`;
+    }
+    markersEl.appendChild(div);
+  });
+
+  // Build subtle tick marks between the major markers
+  // Add ticks at 15s, 45s, 1:00, 2:00, 3:00, 5:00, 6:00, 10:00, 15:00, 20:00
+  const tickSeconds = [15, 45, 60, 120, 180, 300, 360, 600, 900, 1200];
+  tickSeconds.forEach(sec => {
+    const pct = secondsToPct(sec);
+    const tick = document.createElement('div');
+    tick.className = 'tick';
+    tick.style.left = `${pct}%`;
+    ticksEl.appendChild(tick);
+  });
+
+  let startTime = 0;
+  let animFrame = 0;
+  let holding = false;
+
+  function formatTime(seconds: number): string {
+    const m = Math.floor(seconds / 60);
+    const s = Math.floor(seconds % 60);
+    return `${m}:${s.toString().padStart(2, '0')}`;
+  }
+
+  // Color interpolation for timer: blue -> amber -> red
+  function getTimerColor(seconds: number): string {
+    if (seconds < 30) return '#2563eb';       // blue
+    if (seconds < 90) {
+      const t = (seconds - 30) / 60;
+      return lerpColor('#2563eb', '#eab308', t);
+    }
+    if (seconds < 240) {
+      const t = (seconds - 90) / 150;
+      return lerpColor('#eab308', '#ef4444', t);
+    }
+    return '#ef4444'; // red
+  }
+
+  function lerpColor(a: string, b: string, t: number): string {
+    const ar = parseInt(a.slice(1, 3), 16), ag = parseInt(a.slice(3, 5), 16), ab = parseInt(a.slice(5, 7), 16);
+    const br = parseInt(b.slice(1, 3), 16), bg = parseInt(b.slice(3, 5), 16), bb = parseInt(b.slice(5, 7), 16);
+    const r = Math.round(ar + (br - ar) * t);
+    const g = Math.round(ag + (bg - ag) * t);
+    const bl = Math.round(ab + (bb - ab) * t);
+    return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${bl.toString(16).padStart(2, '0')}`;
+  }
+
+  function getComparison(seconds: number): string {
+    if (seconds < 15) return 'Most people start here. The urge to breathe is CO\u2082 buildup, not lack of oxygen.';
+    if (seconds < 30) return 'Below the untrained average of 30 seconds. You stopped before the first marker. Trained freedivers suppress the urge to breathe through CO\u2082 tolerance training.';
+    if (seconds < 60) return 'You passed the average marker. Most untrained adults land in this range. The remaining markers on this scale represent years of dedicated training.';
+    if (seconds < 90) return 'Above average. With structured breathing exercises, most people can reach the trained marker at 1:30 within a few weeks.';
+    if (seconds < 120) return 'You reached trained territory. This puts you beyond the second marker, where deliberate practice begins to separate from natural ability.';
+    if (seconds < 240) return 'Impressive. You are past the trained marker and approaching freediver territory at 4:00. The gap from here to competitive level is enormous.';
+    if (seconds < 420) return 'Exceptional. You passed the freediver marker. This is trained athlete territory. The world record is still more than 3x beyond this point.';
+    return 'Extraordinary. You have entered competitive freediver range, well past the 7:00 marker.';
+  }
+
+  // Ring progress uses a separate scale: first 4 minutes fill 70% of ring, remaining fills 30%
+  function getRingOffset(seconds: number): number {
+    const pct = secondsToPct(seconds);
+    return RING_CIRCUMFERENCE * (1 - pct / 100);
+  }
+
+  function tick() {
+    if (!holding) return;
+    const elapsed = (Date.now() - startTime) / 1000;
+    timeEl.textContent = formatTime(elapsed);
+
+    const pct = secondsToPct(elapsed);
+    fillEl.style.width = `${pct}%`;
+
+    // Ring progress
+    ringFill.style.strokeDashoffset = String(getRingOffset(elapsed));
+
+    // Color shift
+    const color = getTimerColor(elapsed);
+    timeEl.style.color = color;
+    ringFill.style.stroke = color;
+    const alpha = '40';
+    ringFill.style.filter = `drop-shadow(0 0 8px ${color}${alpha})`;
+
+    // Mark passed markers
+    document.querySelectorAll('#breath-markers .marker').forEach(el => {
+      const s = Number((el as HTMLElement).dataset.seconds);
+      if (elapsed >= s) {
+        el.classList.add('passed');
+      }
+    });
+
+    animFrame = requestAnimationFrame(tick);
+  }
+
+  btn.addEventListener('click', () => {
+    if (!holding) {
+      // Start hold
+      holding = true;
+      startTime = Date.now();
+      btn.querySelector('.btn-label')!.textContent = 'Release';
+      btn.classList.add('holding');
+      resultEl.hidden = true;
+      cursorEl.hidden = true;
+      guideEl.classList.add('hidden');
+      ringWrap.classList.add('active');
+      timeEl.classList.add('glow');
+      timeEl.style.color = '#2563eb';
+      ringFill.style.stroke = '#2563eb';
+      ringFill.style.strokeDashoffset = String(RING_CIRCUMFERENCE);
+      fillEl.style.width = '0%';
+
+      // Reset passed markers
+      document.querySelectorAll('#breath-markers .marker').forEach(el => {
+        el.classList.remove('passed');
+      });
+
+      tick();
+    } else {
+      // Stop hold
+      holding = false;
+      cancelAnimationFrame(animFrame);
+      const elapsed = (Date.now() - startTime) / 1000;
+      btn.querySelector('.btn-label')!.textContent = 'Hold your breath';
+      btn.classList.remove('holding');
+      timeEl.classList.remove('glow');
+
+      // Show "you are here" cursor
+      const pct = secondsToPct(elapsed);
+      cursorEl.style.left = `${pct}%`;
+      cursorEl.hidden = false;
+
+      // Populate result
+      resultDuration.textContent = formatTime(elapsed);
+      resultComparison.textContent = getComparison(elapsed);
+      resultEl.hidden = false;
+
+      // Re-trigger entry animation
+      resultEl.style.animation = 'none';
+      resultEl.offsetHeight; // force reflow
+      resultEl.style.animation = '';
+    }
+  });
+
+  retryBtn.addEventListener('click', () => {
+    timeEl.textContent = '0:00';
+    timeEl.style.color = 'var(--color-accent)';
+    fillEl.style.width = '0%';
+    ringFill.style.strokeDashoffset = String(RING_CIRCUMFERENCE);
+    ringFill.style.stroke = 'var(--color-accent)';
+    ringFill.style.filter = '';
+    cursorEl.hidden = true;
+    resultEl.hidden = true;
+    ringWrap.classList.remove('active');
+    guideEl.classList.remove('hidden');
+
+    // Reset passed markers
+    document.querySelectorAll('#breath-markers .marker').forEach(el => {
+      el.classList.remove('passed');
+    });
+  });
+</script>

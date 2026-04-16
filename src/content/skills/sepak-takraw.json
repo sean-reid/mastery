@@ -1,0 +1,133 @@
+{
+  "name": "Sepak Takraw",
+  "slug": "sepak-takraw",
+  "category": "sport",
+  "description": "A Southeast Asian court sport played on a badminton-sized court (13.4 x 6.1m) where three-player teams volley a rattan ball over a 1.5m net using only feet, knees, chest, and head -- never hands. The signature move is the bicycle-kick spike, where the striker launches airborne, arches backward, and strikes the ball overhead at roughly 130 km/h. Governed by ISTAF since 1988 and dominated by Thailand and Malaysia, the sport demands gymnastic flexibility, martial-arts agility, and volleyball-level court sense simultaneously.",
+  "thumbnail": {
+    "src": "/images/skills/sepak-takraw.webp",
+    "alt": "Sepak takraw player executing a mid-air bicycle kick spike over the net",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "dHvnfm2HZgm",
+      "title": "The Rules of Sepak Takraw - EXPLAINED!"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sepak takraw",
+      "url": "https://en.wikipedia.org/wiki/Sepak_takraw",
+      "type": "reference"
+    },
+    {
+      "title": "International Sepaktakraw Federation",
+      "url": "https://en.wikipedia.org/wiki/International_Sepaktakraw_Federation",
+      "type": "reference"
+    },
+    {
+      "title": "Techniques and skills in sepak takraw - ActiveSG",
+      "url": "https://www.activesgcircle.gov.sg/learn/sepak-takraw/techniques-and-skills-in-sepak-takraw",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Basic ball control with feet takes weeks, but the sport's defining techniques -- the bicycle-kick spike, the header set, the inside-foot receive at height -- require months to years. Most players in Southeast Asia begin as children. A newcomer without football or martial arts background will struggle for months to rally consistently."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Top players in Thailand and Malaysia train from childhood through national sports academies. Competitive-level play at ISTAF SuperSeries or King's Cup level requires 5-10+ years of dedicated training. The acrobatic spike alone takes years to execute reliably in match conditions."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "Points are won or lost instantly. A spike either lands or is blocked. Mistimed bicycle kicks result in an obvious whiff or out-of-bounds hit. The ball's trajectory immediately reveals the quality of contact."
+    },
+    "failure_cost": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Bicycle-kick landings carry risk of back, neck, and knee injuries. The extreme flexibility required creates overuse strain on hamstrings and hips. Falls from aerial moves onto a hard court surface are common. Less catastrophic than gymnastics but more dangerous than most ball sports."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Rapid read-react decisions: reading the set, timing the jump, choosing spike angle, tracking defenders. Three-touch limit forces fast decision-making. Court positioning for the three-player regu requires role-specific awareness. Less strategically deep than volleyball due to smaller team and court."
+    },
+    "physical_demand": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Exceptional flexibility (near-gymnastic hip and hamstring range), explosive vertical leap, core strength for aerial rotation, and rapid recovery between rallies. Many top players cross-train in gymnastics or martial arts. The bicycle-kick spike requires the body to arch fully backward while airborne."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "No academic prerequisites. Football (soccer) ball-control skills and martial arts or gymnastics flexibility transfer strongly. Understanding volleyball-style rotations helps. Cultural familiarity in Southeast Asia lowers the barrier significantly."
+    },
+    "measurability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Win/loss records and set scores are clear. ISTAF rankings and King's Cup results provide international benchmarks. Individual performance statistics (spike success rate, service aces) are tracked at major competitions but less comprehensively than in volleyball."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "The extreme flexibility required for bicycle kicks degrades quickly without daily stretching. Aerial timing and proprioception are highly perishable. Ball-control touch with feet is more durable but still fades. Players who take extended breaks report significant skill regression."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Striking a small rattan ball (13-14cm diameter) with the top of the foot while upside down in a bicycle kick demands extraordinary spatial precision. Serves must clear a 1.5m net and land in a confined court. Setting with the head or foot for a spiker requires centimeter-level placement."
+    },
+    "ambiguity": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Points are binary -- the ball lands in or out, the net is touched or not. Rules are clear and codified by ISTAF. Referee decisions on faults (hand contact, net violations) are straightforward. No subjective scoring."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "The bicycle-kick technique is essentially unteachable through self-study alone -- it requires coaching, spotting, and progressive drills. Outside Southeast Asia, finding qualified instruction is extremely difficult. Equipment is simple (a ball and a net) but coaching access is the limiting factor."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Played on a standardized indoor or outdoor hard court with a fixed net height. Outdoor play introduces wind as a variable. Court surface (concrete vs. sprung floor) varies and affects landing safety. Overall conditions are more controlled than most outdoor sports."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "A bicycle-kick spike simultaneously requires: jump timing, spatial orientation while inverted, ball tracking, precise foot-to-ball contact, spin control, target selection, and landing preparation -- all within approximately one second. Even receiving demands simultaneous balance, cushioning, and directional control."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.65,
+      "notes": "Major plateaus between basic ball control and match-level rallying, between rallying and executing aerial spikes, and between recreational spikes and competition-speed attacks. The bicycle kick represents a discrete skill gate that many players never fully cross."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Rules have been stable since ISTAF standardization in 1988. The switch from rattan to synthetic balls was a notable change. Tactics evolve gradually. The core techniques (bicycle kick, header set) have been established for decades."
+    },
+    "observability": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Immediately jaw-dropping to any observer. The sight of a player executing a full bicycle kick 2 meters in the air to spike a ball with the sole of their foot over a net is one of the most visually spectacular acts in any sport. Viral videos regularly attract millions of views."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Net cords and imperfect rattan ball bounces introduce minor variance. But outcomes are overwhelmingly skill-determined. No external randomness (wind indoors), no scoring judges, no equipment variability."
+    },
+    "social_coordination": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Three-player regu requires tight coordination. The tekong (server), feeder, and striker must develop shared timing and spatial awareness. Set-spike sequences depend on trust and practiced chemistry. Less coordination than 6-player volleyball but more than individual sports."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia's sepak takraw article, ISTAF governance documentation, and ActiveSG's technical skills guide. Physical demand rated 9 due to the extraordinary flexibility and aerial athleticism required for the bicycle-kick spike, which combines elements of gymnastics, martial arts, and ball sports. Observability rated maximum because the sport's signature move is universally spectacular. Limited English-language empirical research on injury rates and training timelines reduces confidence on some axes."
+}

@@ -1,0 +1,138 @@
+{
+  "name": "Golf",
+  "slug": "golf",
+  "category": "sport",
+  "description": "A precision club-and-ball sport played over 18 holes on courses measuring 5,000-7,400 yards, where players attempt to sink a 42.7mm ball into a 108mm cup in as few strokes as possible. Originating in 15th-century Scotland, the game's deceptive depth is reflected in its statistics: fewer than 2% of golfers ever reach scratch (handicap 0), the average male handicap is roughly 14, and PGA Tour professionals -- who play at an estimated +5.4 handicap -- separate from scratch players by just 3 strokes per round across 30+ distinct shot types.",
+  "thumbnail": {
+    "src": "/images/skills/golf.webp",
+    "alt": "Golfer mid-swing on a fairway with a long iron",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "eaegIDK4Mhk",
+      "title": "How to Swing a Golf Club (Simple way) - Rick Shiels"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Golf",
+      "url": "https://en.wikipedia.org/wiki/Golf",
+      "type": "reference"
+    },
+    {
+      "title": "U.S. Handicapping Statistics",
+      "url": "https://www.usga.org/content/usga/home-page/handicapping/world-handicap-system/whs-stats.html",
+      "type": "institutional"
+    },
+    {
+      "title": "PGA Tour Pro vs Scratch Handicap - How The Stats Compare",
+      "url": "https://www.golfmonthly.com/features/pga-tour-pro-vs-scratch-handicap-how-the-stats-compare",
+      "type": "journalism"
+    },
+    {
+      "title": "Scratch vs 10 vs 20 Handicap - How The Stats Compare",
+      "url": "https://www.golfmonthly.com/features/scratch-vs-10-vs-20-handicap-how-the-stats-compare",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.85,
+      "notes": "A beginner can learn to make contact and complete 18 holes within weeks. Reaching a ~20 handicap (breaking 90 consistently) typically requires 6-12 months of regular play. The basics are accessible but consistency is elusive from day one."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Fewer than 2% of golfers ever reach scratch. PGA Tour players typically have 10-15+ years of intensive training. The gap from scratch to Tour professional (+5.4 estimated handicap) represents thousands of additional hours. Only 0.92% of golfers consistently break 70."
+    },
+    "feedback_delay": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Ball flight gives immediate visual feedback on each shot. However, root causes of errors (swing path, face angle, weight transfer) are invisible without technology (launch monitors, video). A round takes 4+ hours, delaying pattern recognition across sessions."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Physical injury risk is low -- mainly overuse injuries to the back, wrist, and elbow. Financial cost of equipment and green fees can be significant. A bad round has no lasting consequence beyond the scorecard. The sport is playable into old age."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Course management requires constant strategic decisions: club selection, risk-reward calculations, wind and lie assessment, mental game under pressure. The sport is often compared to chess for its strategic depth. Managing psychology (avoiding tilt after bad shots) is a major cognitive challenge."
+    },
+    "physical_demand": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "The golf swing generates significant rotational force (PGA clubhead speeds reach 120+ mph), and elite players train athletically. However, the sport is playable at a high level across a wide age range, involves no running or sustained exertion, and accommodates diverse body types."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Rules are complex (the R&A/USGA rulebook is extensive) but basics can be learned quickly. Etiquette is important. Understanding course design, club specifications, and ball physics helps at higher levels but is not required to begin."
+    },
+    "measurability": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "The handicap system is one of the most sophisticated skill-measurement frameworks in any sport. Strokes gained analytics decompose performance into driving, approach, short game, and putting. Scores are precise integers. The USGA tracks handicap distributions across millions of players."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "The golf swing is a perishable motor skill -- feel and timing degrade within weeks of inactivity. However, the underlying knowledge (course management, club selection) persists. Many golfers maintain competitive ability well into their 50s-60s, suggesting slower decay than most sports."
+    },
+    "precision_required": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "Tiny margins define elite performance. A 1-degree change in clubface angle at impact moves the ball 15+ yards offline at 300 yards. The cup is only 108mm in diameter. Scratch golfers hit only ~52-59% of greens in regulation. PGA Tour events are won by single strokes over 72 holes."
+    },
+    "ambiguity": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Stroke count is unambiguous. Rules are codified in extraordinary detail by the R&A/USGA. There are no judges or subjective scoring. Penalty situations are well-defined. The sport has one of the clearest success metrics in athletics."
+    },
+    "instruction_dependency": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Self-teaching is possible -- many golfers improve through practice alone. However, without professional instruction, most players plateau around 15-20 handicap due to ingrained swing faults. Modern technology (launch monitors, video analysis) has reduced but not eliminated the need for coaching."
+    },
+    "environmental_variability": {
+      "value": 8,
+      "confidence": 0.9,
+      "notes": "Every course is unique. Wind, rain, temperature, altitude, grass type, soil moisture, and elevation changes all affect play. Links courses play entirely differently from parkland courses. The same hole plays differently morning vs. afternoon as conditions shift."
+    },
+    "concurrent_skills": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "The swing integrates 30+ muscles in a coordinated sequence lasting ~1.5 seconds. But unlike continuous sports, each shot is discrete -- players have time to set up and prepare. Course management, wind reading, lie assessment, and club selection run in sequence, not truly concurrently."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Notorious plateau sport. Most golfers stall around 15-20 handicap indefinitely. Breaking 80 is a major barrier. The journey from 5 handicap to scratch is exponentially harder than 15 to 5. Each stroke improvement at lower handicaps requires disproportionate effort."
+    },
+    "domain_evolution": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Equipment technology evolves (driver forgiveness, ball design, shaft materials) but the USGA/R&A actively constrain innovation. The average handicap has barely changed in 40 years despite equipment advances. Course design evolves slowly. Rules are updated periodically but fundamentals are centuries old."
+    },
+    "observability": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "A powerful drive is visually impressive, but much of golf's difficulty is invisible to casual observers. The difference between a 5-handicap and a scratch player is nearly imperceptible to the untrained eye. Short game finesse and course management are particularly opaque."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Bounces, wind gusts, and lie quality introduce meaningful randomness. A well-struck shot can hit a sprinkler head and bound out of bounds. Over 72 holes, luck largely averages out, but in match play or single rounds, variance is real. Tee time assignments affect wind and pin conditions."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Fundamentally individual (except Ryder Cup-style team formats). Playing partners do not affect your score. Caddies provide advisory support but do not execute. The social dimension is cultural (etiquette, pace of play) rather than performance-related."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia's golf article, USGA handicapping statistics showing fewer than 2% of golfers reach scratch, and Golf Monthly's statistical comparisons across handicap levels and between scratch golfers and PGA Tour professionals. Precision scoring reflects the documented 1-degree/15-yard relationship between clubface angle and ball flight. Plateau density reflects USGA data showing average handicaps have barely improved in 40 years despite equipment advances. Environmental variability is high because every course is unique and weather directly impacts play."
+}

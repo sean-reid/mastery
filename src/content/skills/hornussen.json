@@ -1,0 +1,138 @@
+{
+  "name": "Hornussen",
+  "slug": "hornussen",
+  "category": "sport",
+  "description": "A Swiss national team sport, first recorded in 1625, in which a batter launches a 78-gram puck (Nouss) from an inclined ramp using a 3-meter carbon-fiber whip (Stecken), sending it up to 330 meters at speeds reaching 306 km/h as measured by ETH Zurich. The opposing team of 16-20 players attempts to intercept the buzzing puck mid-flight by hurling large rectangular placards (Schindel) skyward in its path. Governed by the Eidgenossischer Hornusserverband since 1902, the sport is concentrated in the canton of Bern with roughly 270 clubs and 8,300 members.",
+  "thumbnail": {
+    "src": "/images/skills/hornussen.webp",
+    "alt": "Hornussen player swinging the Stecken whip to launch the Nouss from a ramp",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "0HqLfNJRNBk",
+      "title": "Hornussen: Switzerland's Unique National Sport Explained"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hornussen",
+      "url": "https://en.wikipedia.org/wiki/Hornussen",
+      "type": "reference"
+    },
+    {
+      "title": "Severity and pattern of injuries caused by the traditional Swiss team sport Hornussen: first retrospective study at a level I trauma centre in Switzerland",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27900183/",
+      "type": "research"
+    },
+    {
+      "title": "Hornussen - Switzerland Tourism",
+      "url": "https://www.myswitzerland.com/en-us/planning/about-switzerland/custom-and-tradition/hornussen-where-the-nouss-flies-from-the-ramp-and-into-the-playing-field/",
+      "type": "institutional"
+    },
+    {
+      "title": "Hornussen, the Swiss national sport with a sting - SWI swissinfo.ch",
+      "url": "https://www.swissinfo.ch/eng/swiss-oddities/hornussen-the-swiss-national-sport-with-a-sting/88211213",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "The whip-swing mechanics on the ramp are unlike any mainstream sport and take months to develop. Intercepting requires learning to track and time a fast-moving, small puck at altitude, then hurl a placard into its path. Basic participation is possible within weeks, but competent hitting and fielding take 6-12 months in a club setting."
+    },
+    "time_to_expert": {
+      "value": 7,
+      "confidence": 0.6,
+      "notes": "Top players compete in the Eidgenossisches Hornusserfest (held every 3 years). Achieving consistent 300+ meter drives requires years of whip technique refinement. The sport's concentrated geography (canton Bern) means experts typically have 10+ years of club-level experience. Limited empirical data on training timelines."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "A hit immediately shows distance and trajectory. A miss on the ramp is instantly obvious. Interception success is binary and immediate. Since 2024, a smartphone app records each shot live, providing data-rich post-hit feedback. However, refining whip mechanics requires coaching input over time."
+    },
+    "failure_cost": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "A PubMed study (2000-2014) documented 28 injuries at Bern University Hospital, predominantly severe midfacial fractures and ocular trauma, most requiring hospitalization and surgery. Eye injuries can be permanently disabling. Helmet and face protection are now mandatory for players born after 1984. The Nouss at 306 km/h is a lethal projectile."
+    },
+    "cognitive_demand": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Batting requires calibrating swing power and launch angle. Fielding demands tracking a small, fast-moving puck at 50-70m altitude and predicting its landing zone, then timing a placard throw. Team coordination of defensive coverage adds tactical layers. Less complex than ball-and-court sports due to the turn-based structure."
+    },
+    "physical_demand": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "The 3-meter whip swing generates extreme rotational force requiring core strength, hip rotation, and explosive arm speed. Games last 3-4 hours. Fielders must sprint to position and hurl heavy placards (Schindel) overhead repeatedly. The physical profile is more power-oriented than endurance-oriented."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "No academic or specialized physical prerequisites. General athletic ability helps. The whip mechanics are unique to the sport with no direct transfer from golf, baseball, or other striking sports. Cultural access in the Bernese Mittelland is the primary gateway."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Individual hitting distances are precisely measured. Team scores (number of unintercepted Nouss) are clear. The EHV tracks competition results. The new smartphone tracking app (as of 2024) provides speed, distance, and trajectory data for each shot. More quantifiable than many niche sports."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "The whip-swing timing is a specialized motor skill that likely degrades without practice, but less rapidly than aerial skills. Fielding judgment and tracking ability may be more durable. The sport is seasonal (spring through fall), with players maintaining fitness during winter months."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "The Nouss sits on a small ramp and must be struck cleanly with the wooden block at the end of a 3-meter flexible whip. The timing window is narrow -- the whip's flexibility means the block arrives at slightly different positions depending on swing speed and arc. Fielders must place placards in the Nouss's flight path with meter-level accuracy."
+    },
+    "ambiguity": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "A Nouss is either intercepted or it lands -- binary and unambiguous. Hit distance is precisely measured. Foul hits (missing the ramp) are clear. The scoring system (fewest penalty points for unintercepted Nouss) is straightforward. No subjective judging."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Requires club membership for access to a ramp, Stecken, and Ries (playing field 300m+ long). Self-teaching the whip swing without guidance risks injury and bad habits. Outside Switzerland, instruction is essentially unavailable. Within Switzerland, the ~270 clubs are concentrated in a few cantons."
+    },
+    "environmental_variability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Played outdoors on grass fields. Wind significantly affects Nouss flight at 50-70m altitude and 300+ meter distances. Rain and temperature affect grip and whip flexibility. Field surfaces vary. More environmentally variable than indoor sports but fields are standardized in dimensions."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Batting integrates stance, hip rotation, whip timing, and launch-angle control in a single explosive motion. Fielding requires simultaneous puck tracking, sprint positioning, and timed placard throw. However, the sport is turn-based -- batting and fielding are separate phases, reducing moment-to-moment concurrent demands."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.55,
+      "notes": "Likely plateaus between basic contact and consistent 200m+ drives, and between 200m and 300m+ elite-level drives. Fielding skill plateaus around reading trajectory at speed. Limited empirical data on progression curves due to the sport's niche nature."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "The carbon-fiber Stecken (adopted ~1990, replacing wood/fiberglass) was the last major equipment change. Smartphone shot tracking (2024) is a recent technological addition. Rules have been stable since the early 20th century. The sport embraces tradition and evolves slowly."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "The sight of a player whipping a puck at 300 km/h off a ramp while defenders hurl placards skyward is visually bizarre and compelling. The buzzing sound of the Nouss in flight is distinctive. One TikTok clip from a Hornussen club was viewed over 14 million times. The unfamiliarity of the sport amplifies its visual impact."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Wind affects Nouss trajectory at long range, introducing meaningful variance. Slight variations in Nouss composition and ramp conditions can affect flight. The large team sizes (16-20) and multiple innings help average out individual variance. Skill clearly dominates over luck."
+    },
+    "social_coordination": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Teams of 16-20 must coordinate defensive coverage across a 300m+ trapezoidal field (Ries). Each fielder must anticipate where to position and when to throw their placard based on the Nouss's trajectory and their teammates' positions. Batting order strategy adds a coordination layer. The large team size makes it one of the more socially coordinated niche sports."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia's Hornussen article, a PubMed retrospective injury study from Bern University Hospital (PMID 27900183, documenting severe facial and ocular injuries), Switzerland Tourism's official guide, and SWI swissinfo.ch's feature. Speed and distance data from ETH Zurich biomechanical measurements (up to 306 km/h, 330m range). Failure cost reflects documented severe injuries including permanently disabling eye trauma. Club and membership data from the Eidgenossischer Hornusserverband. Confidence is lower than for mainstream sports due to the extremely niche nature of the sport and limited English-language research."
+}

@@ -1,0 +1,139 @@
+{
+  "name": "Parkour",
+  "slug": "parkour",
+  "category": "physical",
+  "description": "Parkour is the discipline of moving through any environment using only the body's abilities, treating urban architecture as a continuous obstacle course. The injury rate of 1.7 per 1000 training hours is lower than soccer or basketball, but the consequences of failure at height are severe and irreversible. Mastery requires reading terrain instantly and chaining vaults, precisions, and wall runs into fluid sequences.",
+  "thumbnail": {
+    "src": "/images/skills/parkour.webp",
+    "alt": "Traceur mid-vault over a concrete wall in an urban environment",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "NX7QNWEGcNI",
+      "title": "Storror - POV Parkour across rooftops"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Parkour",
+      "url": "https://en.wikipedia.org/wiki/Parkour",
+      "type": "reference"
+    },
+    {
+      "title": "Parkour -- art of movement and its injury risk",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23860830/",
+      "year": 2013,
+      "type": "research"
+    },
+    {
+      "title": "Parkour World Championships",
+      "url": "https://en.wikipedia.org/wiki/Parkour_World_Championships",
+      "type": "competition"
+    },
+    {
+      "title": "World Freerunning and Parkour Federation - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/World_Freerunning_and_Parkour_Federation",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Basic vaults, rolls, and precisions can be learned in weeks. Safe movement in a gym environment comes quickly with coaching."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Fluid rooftop-level movement with complex flips and wall runs takes 5-10 years. FIG World Championship athletes have trained since childhood."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "You know immediately if you cleared the gap or stuck the landing. Failure is instantly apparent."
+    },
+    "failure_cost": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "At height, a single missed precision or slip means catastrophic injury or death. Even training-level falls cause fractures. Emergency department presentations are increasing."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Requires rapid spatial assessment, route planning, risk evaluation, and real-time adaptation to unfamiliar terrain. Not academic but demands high processing speed."
+    },
+    "physical_demand": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Demands explosive power, upper body strength, grip endurance, flexibility, and landing conditioning. Full-body athletic development is essential."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "No formal prerequisites. Basic body awareness and fitness help but the discipline itself teaches movement literacy."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Speed runs are timed. Freestyle is judged on flow, creativity, difficulty, and execution -- subjective components reduce measurability."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Explosive power and landing conditioning degrade without training. Movement memory persists but the body's ability to execute at the edge fades quickly."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Precision jumps demand landing on exact spots, sometimes only inches wide. Wall runs require exact angles. At height, centimeters determine outcomes."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Speed discipline is objective. Freestyle judging introduces subjectivity in flow and creativity scoring. Route choice in open environments is inherently ambiguous."
+    },
+    "instruction_dependency": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Parkour has a strong autodidact tradition -- David Belle learned from his father informally. Gyms and coaching accelerate progress and reduce injury."
+    },
+    "environmental_variability": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Every environment is different: wet surfaces, crumbling walls, irregular gaps, wind. This variability is the defining feature of the discipline."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Simultaneous route reading, balance, timing, power output, and fear management. Multiple movement patterns chain without pause."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Plateaus emerge at fear barriers -- the gap between physical ability and psychological willingness to commit at height."
+    },
+    "domain_evolution": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Rapidly evolving since David Belle's codification in the 1990s. FIG adopted it in 2017. Competition formats are still being refined."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Expert parkour is visually spectacular and immediately distinguishable from beginner movement. Storror's YouTube channel has over 11 million subscribers."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Environmental conditions (wet surfaces, loose material) introduce some variance, but skilled traceurs mitigate through assessment."
+    },
+    "social_coordination": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Primarily individual. Jams and group training are social but performance is solo. Competition is individual."
+    }
+  },
+  "methodology_notes": "Injury data from PubMed epidemiological studies. Competition format from FIG Parkour World Championships. Training progression timelines from WFPF and coaching community consensus."
+}

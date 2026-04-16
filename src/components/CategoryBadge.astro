@@ -1,0 +1,32 @@
+---
+import { CATEGORY_LABELS, CATEGORY_COLORS } from '../types/skill';
+import type { Category } from '../types/skill';
+
+interface Props {
+  category: Category;
+}
+
+const { category } = Astro.props;
+const label = CATEGORY_LABELS[category];
+const color = CATEGORY_COLORS[category];
+---
+
+<span class="badge" style={`--badge-color: ${color}`}>
+  {label}
+</span>
+
+<style>
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    background-color: color-mix(in srgb, var(--badge-color) 12%, transparent);
+    color: var(--badge-color);
+    white-space: nowrap;
+    line-height: 1.4;
+  }
+</style>

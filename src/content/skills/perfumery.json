@@ -1,0 +1,62 @@
+{
+  "name": "Perfumery",
+  "slug": "perfumery",
+  "category": "academic",
+  "description": "Professional perfumers -- called 'noses' -- train for five to seven years at institutions like ISIPCA in Versailles or Givaudan's internal school to memorize and mentally recombine 1,500 to 3,000 raw materials, building an olfactory vocabulary that enables them to compose fragrance formulas from memory; fewer than 600 working perfumers exist worldwide, fewer than the number of people who have traveled to space.",
+  "thumbnail": {
+    "src": "/images/skills/perfumery.webp",
+    "alt": "Perfumer at an organ of hundreds of labeled fragrance vials evaluating a test strip",
+    "attribution": "Photo by Unsplash"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "annRzLYrRwM",
+      "title": "How a Master Perfumer Creates a Fragrance"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Perfumer - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Perfumer",
+      "type": "reference"
+    },
+    {
+      "title": "Master Perfumer: The Real Job Explained - Premiere Peau",
+      "url": "https://premierepeau.com/blogs/news/what-does-master-perfumer-do",
+      "type": "community"
+    },
+    {
+      "title": "Where to train as a perfumer - Nez, the olfactory cultural movement",
+      "url": "https://mag.bynez.com/en/reports/olfactory-education-how-to-cultivate-your-nose/where-to-train-as-a-perfumer/",
+      "type": "journalism"
+    },
+    {
+      "title": "Givaudan Perfumery School",
+      "url": "https://www.givaudan.com/fragrance-beauty/perfumery-school",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 6, "confidence": 0.8, "notes": "ISIPCA's Scent Design & Creation master's programme runs 3 years. The first year is devoted almost entirely to memorizing raw materials. A student can compose simple accords after 1-2 years but cannot work independently." },
+    "time_to_expert": { "value": 9, "confidence": 0.85, "notes": "The title 'Master Perfumer' is an internal rank at major fragrance houses awarded after 15-25 years of practice. Only 30-40 people worldwide hold this rank. Even a qualified 'junior perfumer' has typically trained for 7-10 years." },
+    "feedback_delay": { "value": 5, "confidence": 0.7, "notes": "A perfumer can smell their own composition immediately, but commercial success -- whether a fragrance brief is accepted by the client -- can take months. Roughly 95% of submissions to briefs are rejected. Market success takes years to assess." },
+    "failure_cost": { "value": 3, "confidence": 0.7, "notes": "A failed formula wastes raw materials (some precious) and time, but the cost is primarily opportunity cost. A major fragrance house may invest heavily in a launch that fails commercially, but the perfumer's career usually survives." },
+    "cognitive_demand": { "value": 8, "confidence": 0.8, "notes": "Requires memorizing the olfactory profile, volatility, tenacity, and blending behavior of 1,500-3,000 raw materials and mentally composing formulas -- imagining how dozens of ingredients will interact across top, heart, and base notes over time." },
+    "physical_demand": { "value": 2, "confidence": 0.85, "notes": "Primarily sedentary desk work at the perfumer's 'organ.' However, the nose itself is a biological instrument subject to fatigue -- perfumers can only evaluate a limited number of materials per day before olfactory saturation." },
+    "prerequisite_knowledge": { "value": 6, "confidence": 0.8, "notes": "Requires a strong foundation in organic chemistry to understand molecular structure and volatility. ISIPCA requires a bachelor's in chemistry or equivalent. Knowledge of botanical sources and extraction methods is also needed." },
+    "measurability": { "value": 4, "confidence": 0.7, "notes": "Raw material identification can be tested objectively. But fragrance quality is inherently subjective. Commercial success is measurable (sales) but conflated with marketing, brand, and packaging. No standardized skill rating exists." },
+    "perishability": { "value": 5, "confidence": 0.7, "notes": "The olfactory memory for well-learned materials is remarkably durable. However, the nose's acuity can decline with age, illness, or chemical exposure. Trends in fragrance shift, requiring ongoing awareness of consumer preferences and new synthetics." },
+    "precision_required": { "value": 8, "confidence": 0.8, "notes": "Formulas are specified to hundredths of a percent by weight. A slight overdose of a powerful synthetic like Iso E Super or an indolic material can ruin a composition. Batch-to-batch variation in natural materials requires constant adjustment." },
+    "ambiguity": { "value": 8, "confidence": 0.8, "notes": "Fragrance evaluation is profoundly subjective. The same composition may be perceived differently by different evaluators. Briefs are often vague ('something fresh and modern'). Cultural associations with scent vary dramatically." },
+    "instruction_dependency": { "value": 8, "confidence": 0.8, "notes": "Extremely difficult to self-teach at a professional level. Access to the full palette of raw materials is expensive and restricted. The master-apprentice model at Givaudan, IFF, Firmenich, and Symrise is the dominant path. Grasse Institute of Perfumery and ISIPCA are the main institutional alternatives." },
+    "environmental_variability": { "value": 5, "confidence": 0.7, "notes": "The evaluation environment (temperature, humidity, ventilation) affects perception. Raw material quality varies by harvest and region. Client briefs span every conceivable style, culture, and price point." },
+    "concurrent_skills": { "value": 7, "confidence": 0.75, "notes": "Simultaneously requires olfactory analysis, chemical knowledge, creative composition, understanding of consumer psychology, awareness of regulatory restrictions (IFRA standards), and business/client communication." },
+    "plateau_density": { "value": 7, "confidence": 0.7, "notes": "Major plateaus in transitioning from identifying individual materials to understanding how they behave in combination, from academic formulation to creative composition, and from junior perfumer to winning competitive briefs." },
+    "domain_evolution": { "value": 6, "confidence": 0.75, "notes": "New synthetic molecules are continuously developed (e.g., Firmenich's Clearwood, Givaudan's Akigalawood). IFRA regulations regularly restrict or ban materials for safety reasons, requiring reformulation of classics. Consumer preferences shift by decade." },
+    "observability": { "value": 3, "confidence": 0.75, "notes": "The act of composing a fragrance is invisible -- it happens in the perfumer's mind. The final product is experienced by consumers but the craft behind it is opaque. The secrecy of the industry further reduces observability." },
+    "luck_variance": { "value": 4, "confidence": 0.7, "notes": "Commercial success depends partly on alignment with market trends and client selection. A brilliant formula may lose a brief for reasons unrelated to quality. However, consistently successful perfumers demonstrate clear skill over time." },
+    "social_coordination": { "value": 5, "confidence": 0.75, "notes": "The creative act is solitary, but modern perfumery involves extensive collaboration with evaluators, marketing teams, clients, and regulatory specialists. Perfumers at major houses also mentor junior colleagues." }
+  },
+  "methodology_notes": "Scores are informed by institutional data from ISIPCA, Givaudan, and the Grasse Institute of Perfumery; the widely cited estimate of fewer than 600 working perfumers worldwide (compared to ~600 people who have been to space); the 5-7 year formal training timeline; and industry reporting on the 95% brief rejection rate. The 30-40 Master Perfumer count comes from major fragrance house internal title awards."
+}

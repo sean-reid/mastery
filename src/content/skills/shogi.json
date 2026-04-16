@@ -1,0 +1,138 @@
+{
+  "name": "Shogi",
+  "slug": "shogi",
+  "category": "game",
+  "description": "Japanese chess played on a 9x9 board where captured pieces switch allegiance and re-enter play as 'drops,' a mechanic inspired by the mercenary samurai tradition that eliminates material attrition and produces a game-tree complexity of 10^226 -- roughly a googol times greater than Western chess. Only four apprentices per year survive the Japan Shogi Association's Shoreikai system to earn professional 4-dan status, from a pool of approximately 200 trainees who must qualify before age 26 or be permanently expelled.",
+  "thumbnail": {
+    "src": "/images/skills/shogi.webp",
+    "alt": "A shogi board with traditional wooden pieces arranged in starting position",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "gDnKCzREA1g",
+      "title": "How to Play Shogi - Lesson 1 - Introduction (Hidetchi)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Shogi",
+      "url": "https://en.wikipedia.org/wiki/Shogi",
+      "type": "reference"
+    },
+    {
+      "title": "Professional shogi player",
+      "url": "https://en.wikipedia.org/wiki/Professional_shogi_player",
+      "type": "reference"
+    },
+    {
+      "title": "Game complexity",
+      "url": "https://en.wikipedia.org/wiki/Game_complexity",
+      "type": "reference"
+    },
+    {
+      "title": "AI, Ageing and Brain-Work Productivity: Technological Change in Professional Japanese Chess",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11065245/",
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Rules are learnable in a day including promotions and drop restrictions. Playing a coherent game with basic castle formations takes weeks to months."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Professional 4-dan requires 5-10 years in the Shoreikai system with 8-12 hours daily study. Prodigy Sota Fujii became the youngest professional at 14 after years of intensive training."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Each game ends with a clear result. Post-game analysis with computer engines provides precise feedback. Professional games are recorded and reviewed."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Losses in the Shoreikai carry real stakes: failing to advance by age 26 means permanent expulsion from the professional track. Casual play has no cost."
+    },
+    "cognitive_demand": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Branching factor of 80 (vs. chess's 35) due to drop possibilities. Must track pieces in hand, promotion zones, and drop restrictions simultaneously. Average game is 115 moves."
+    },
+    "physical_demand": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Seated activity. Professional title matches can last two days with overnight adjournment, requiring physical stamina but not athletic ability."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Rules are self-contained. Strategic depth requires learning joseki (set piece exchanges), castle patterns, and endgame technique, but no external prerequisites."
+    },
+    "measurability": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Professional dan ranks (4-dan to 9-dan), amateur dan/kyu system, and online Elo ratings provide precise measurement. Win-loss records are public."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Pattern recognition and strategic sense are durable, but tactical sharpness and opening preparation degrade with inactivity. Opening theory evolves with AI analysis."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "A single inaccurate drop or mistimed attack can be fatal. The lack of material attrition means the opponent always has resources to counterattack."
+    },
+    "ambiguity": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Win, lose, or draw (draws are very rare at 2-3% in professional play). Engine evaluation provides objective position assessment."
+    },
+    "instruction_dependency": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "English-language resources are limited compared to chess. The Shoreikai apprentice system is the primary path to professional level. Self-study is possible but disadvantaged."
+    },
+    "environmental_variability": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Identical starting position every game. No randomness. Professional games are played in traditional Japanese settings but conditions are controlled."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Managing board position, pieces in hand (for both players), promotion calculations, castle integrity, attack/defense balance, and time pressure simultaneously."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Dan-level advancement slows dramatically. The Shoreikai system has a fixed promotion structure where many trainees stall at 2-dan or 3-dan for years."
+    },
+    "domain_evolution": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "AI analysis (since computer shogi surpassed humans around 2017) has accelerated opening theory evolution. Traditional joseki are being revised. Core rules unchanged since the 16th century."
+    },
+    "observability": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Two players sitting at a board are indistinguishable to non-players. The depth is invisible without commentary. Professional broadcasts on NHK include expert analysis."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "No random elements. Sente (first move) advantage exists but is small and accounted for in professional play."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Primarily individual competition. Team events exist but are secondary. The master-apprentice relationship in the Shoreikai is important for development."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia's comprehensive shogi articles, Game Complexity Wikipedia data on branching factors and game-tree size, Professional Shogi Player Wikipedia article on Shoreikai requirements and statistics, PMC research on AI's impact on professional shogi productivity, and accounts of Sota Fujii's career trajectory. Complexity figures (10^226 game tree, branching factor 80) from peer-reviewed game research literature."
+}

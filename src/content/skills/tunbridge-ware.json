@@ -1,0 +1,133 @@
+{
+  "name": "Tunbridge Ware",
+  "slug": "tunbridge-ware",
+  "category": "trade",
+  "description": "Tunbridge ware is a micro-mosaic woodworking technique perfected in Kent, England, between 1830 and 1900: the maker assembles hundreds of thin rods of naturally colored woods—oak, holly, cherry, yew, sycamore—into a tight bundle whose cross-section forms a pictorial image, then slices the bundle with a fine saw to produce many identical veneer sheets. Each rod may be less than one millimeter square. The final firm, Boyce, Brown and Kemp, closed in 1927, and the technique is now practiced by only a handful of marquetarians worldwide.",
+  "thumbnail": {
+    "src": "/images/skills/tunbridge-ware.webp",
+    "alt": "Victorian Tunbridge ware box lid showing a tessellated mosaic of a castle scene formed from tiny colored wood pieces",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "U6jHOmuxbHE",
+      "title": "Tunbridge Ware: The Lost Art of Wooden Mosaics"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tunbridge ware - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tunbridge_ware",
+      "type": "reference"
+    },
+    {
+      "title": "Terms of the Trade: Tunbridge Ware - BADA (British Antique Dealers' Association)",
+      "url": "https://www.bada.org/features/terms-trade-tunbridge-ware",
+      "type": "institutional"
+    },
+    {
+      "title": "Tunbridge Ware Tutorial - Redbridge Marquetry Group",
+      "url": "https://www.redbridgemarquetrygroup.org/tunbridge%20ware%20tutorial.html",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "Producing a basic geometric stickware pattern is achievable in weeks, but creating the tight rod bundles that form recognizable pictorial images requires months of learning wood selection, rod preparation, and precise assembly."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.55,
+      "notes": "The finest Victorian examples—photographic-quality castle or floral scenes in sub-millimeter tesserae—represent a level of mastery that took the Burrows and Nye families decades of continuous practice. No modern practitioner has matched the best 19th-century work."
+    },
+    "feedback_delay": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "The full image is not visible until the bundle is sliced. If rod alignment is off, you only discover it after hours or days of assembly work. Test slices can provide interim feedback but waste material."
+    },
+    "failure_cost": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Specialty woods are moderately expensive and difficult to source in thin rod form. A misaligned bundle wastes all the assembly time. The woods themselves are not individually costly, but the labor investment is significant."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.65,
+      "notes": "The maker must mentally translate a 2D image into a 3D rod assembly, selecting from dozens of wood species by natural color and grain. Each rod placement affects all surrounding rods. Essentially pixel-art thinking applied to physical materials."
+    },
+    "physical_demand": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Fine motor work rather than heavy labor. Cutting, shaping, and gluing tiny wood rods requires steady hands and good eyesight but minimal strength. Extended periods of close bench work."
+    },
+    "prerequisite_knowledge": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Requires familiarity with wood species (color, grain, hardness), marquetry fundamentals, adhesive behavior, and fine saw technique. Understanding how wood changes color with age and finish is essential for lasting work."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Rod alignment precision can be measured. Image fidelity is somewhat objective but aesthetic quality—color harmony, compositional choice—is subjective. No competitions or grading systems exist."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.55,
+      "notes": "Wood identification knowledge is durable. The fine motor coordination and spatial reasoning for rod placement likely degrade without practice. Given how few people practice, skill atrophy data is unavailable."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.7,
+      "notes": "Rods must be cut to identical cross-section dimensions, sometimes under 1mm. Misalignment by a fraction of a millimeter compounds across hundreds of rods, distorting the final image. The finest Victorian work rivals pixel-level accuracy."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "The target image provides a clear goal, but choosing which wood species to represent each color zone, and deciding rod dimensions, involves significant aesthetic judgment. No standardized methodology exists."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.65,
+      "notes": "The technique died commercially in 1927 and was never formally documented in comprehensive instructional form. Modern practitioners work from museum examples and sparse references. The Redbridge Marquetry Group tutorial is one of the few written guides."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Indoor bench craft with low environmental sensitivity. Humidity affects wood dimensional stability and adhesive cure times, but a controlled workshop minimizes this."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Simultaneously managing rod cutting precision, spatial reasoning for the bundle cross-section, adhesive timing, and wood species selection. Less physically demanding concurrent load than many trades."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.55,
+      "notes": "Geometric patterns are achievable relatively quickly. The jump to pictorial work is a major plateau. Refining from recognizable images to photographic-quality mosaic scenes represents another extended plateau."
+    },
+    "domain_evolution": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "The technique has been essentially frozen since the late 19th century. No new tools, methods, or materials have been introduced. Modern practitioners deliberately replicate Victorian methods."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "The difference between crude geometric patterns and fine pictorial mosaics is immediately visible. Museum-quality Victorian pieces demonstrate a level of precision that is visually striking."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.7,
+      "notes": "Very little randomness. Wood grain variation introduces minor unpredictability, but failures are overwhelmingly attributable to assembly errors rather than chance."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Solo craft. The Victorian workshops employed multiple people in production roles, but the core design and assembly skill is individual. The modern community is too small for meaningful collaboration."
+    }
+  },
+  "methodology_notes": "Tunbridge ware is an extinct commercial craft with no living tradition of formal training. Scores rely on Wikipedia documentation, BADA reference material, the Redbridge Marquetry Group tutorial, and descriptions of Victorian-era production methods. Confidence is generally low because no modern training programs, competitions, or skill assessments exist. The 'time to expert' score of 9 reflects that the finest historical work has not been replicated by any modern practitioner."
+}

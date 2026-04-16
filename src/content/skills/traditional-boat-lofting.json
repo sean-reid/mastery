@@ -1,0 +1,138 @@
+{
+  "name": "Traditional Boat Lofting",
+  "slug": "traditional-boat-lofting",
+  "category": "technology",
+  "description": "A loftsman translates a naval architect's small-scale drawing into a full-size plan on a loft floor, plotting hundreds of offset measurements and connecting them with long flexible splines to produce three orthogonal views that together define the hull's three-dimensional shape. Each curve must be 'faired' so it flows smoothly without bumps or flat spots, a judgment relying on the loftsman's trained eye rather than formulae. CAD replaced lofting in commercial shipbuilding from the 1970s, but hand lofting survives in wooden boatbuilding schools like the WoodenBoat School in Maine.",
+  "thumbnail": {
+    "src": "/images/skills/traditional-boat-lofting.webp",
+    "alt": "Boatbuilder drawing full-size hull lines on a loft floor using long flexible splines and battens",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "rNKoE2JsLhU",
+      "title": "Lofting the Lines — Rebuilding Tally Ho EP24 (Sampson Boat Co)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lofting - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lofting",
+      "type": "reference"
+    },
+    {
+      "title": "Lofting: How to Loft a Simple Boat Plan - WoodenBoat School",
+      "url": "https://skills.woodenboat.com/guides/lofting-how-to-loft-a-simple-boat-plan/",
+      "type": "institutional"
+    },
+    {
+      "title": "Lofting and Lines-Taking - Douglas Brooks Boatbuilding",
+      "url": "https://www.douglasbrooksboatbuilding.com/lofting-and-lines-taking",
+      "type": "community"
+    },
+    {
+      "title": "Lofting: How to Loft a Simple Boat Plan - WoodenBoat School",
+      "url": "https://skills.woodenboat.com/guides/lofting-how-to-loft-a-simple-boat-plan/",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "A student can loft a simple flat-bottomed skiff in a weekend workshop at the WoodenBoat School. Lofting a complex round-bottomed hull with compound curves, properly faired across all three views, takes months of study and practice."
+    },
+    "time_to_expert": {
+      "value": 7,
+      "confidence": 0.6,
+      "notes": "Professional loftsmen in the age of wooden shipbuilding trained for years. Today, few people loft regularly enough to reach true expertise. Mastery involves lofting complex multi-chine hulls, deriving bevels and rabbet lines, and producing templates for every structural member."
+    },
+    "feedback_delay": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Errors in the lofting are not apparent until the boat is being built — when molds do not align or planks refuse to lie fair. A subtle unfairness in a line that looks acceptable on the floor may produce an obvious bump in the finished hull."
+    },
+    "failure_cost": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Lofting errors propagate into every subsequent construction step. An unfair line produces molds that distort the hull. Correcting after construction begins may require re-cutting expensive timber. Paper and materials for lofting itself are cheap."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Must mentally translate between three orthogonal 2D views and the 3D hull they represent. Understanding geometric projection, interpreting a table of offsets, and visualizing how changes in one view affect the others demands strong spatial reasoning."
+    },
+    "physical_demand": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Working on hands and knees on a loft floor for hours. Handling long splines and battens, driving nails for weights. The physical demands are moderate but the posture is uncomfortable over extended sessions."
+    },
+    "prerequisite_knowledge": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Requires understanding of descriptive geometry, the table of offsets convention, and boat hull anatomy (sheer, buttock lines, waterlines, diagonals). Some knowledge of boatbuilding is essential to understand what the lofting must produce."
+    },
+    "measurability": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Offset accuracy is objectively measurable. Fairness of curves can be checked with straight edges and by eye. The ultimate test — whether the boat builds correctly from the lofting — is definitive but delayed."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "The ability to 'see' unfair lines and mentally cross-reference three views degrades without practice. Conceptual understanding of geometric projection is more durable. Few practitioners loft frequently enough to maintain peak skill."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Offsets are measured to 1/8 inch (traditional) or millimeters. Lines must be faired to visual smoothness. Small errors compound across the hull — a 3mm deviation in a waterline may produce a visible unfairness in a 30-foot boat."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "The table of offsets provides explicit measurements, but 'fairness' is a judgment call. The loftsman must decide when a designer's numbers produce an unfair curve and how to adjust. Two skilled loftsmen may fair the same hull slightly differently."
+    },
+    "instruction_dependency": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Books like Roger Kopanycia's 'Lofting a Boat' and WoodenBoat School workshops provide structured learning. The spatial reasoning can be taught from texts more readily than most manual crafts, but hands-on practice with splines on a loft floor is essential."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Requires a large, flat, clean floor — the 'loft.' Temperature and humidity affect paper and plywood dimensionally. Otherwise, the environment is controlled and stable."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Simultaneously managing measurement plotting, spline fairing, cross-referencing between views, and mentally modeling the 3D hull. Sequential rather than truly concurrent, but requires sustained divided attention."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Early progress is rapid for simple hulls. A significant plateau when attempting complex round-bottomed designs with twist in the planking. Another plateau at deriving construction details (bevels, rabbet lines) from the lofting."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Hand lofting technique is essentially unchanged since the 18th century. CAD has replaced it commercially, but the traditional technique taught at boatbuilding schools uses the same methods and tools as 200 years ago."
+    },
+    "observability": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "A fair line versus an unfair one is visible to a trained eye but may not be obvious to casual observers. The full-size drawing on a loft floor is impressive in scale but the skill differences are subtle."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Outcomes are entirely determined by the loftsman's accuracy and judgment. There is no random element. Errors are always attributable to measurement or fairing mistakes."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Fundamentally solo work on the loft floor. Coordination with the naval architect (interpreting the design) and boatbuilders (delivering templates) is necessary but intermittent."
+    }
+  },
+  "methodology_notes": "Scores draw on Wikipedia's lofting article, WoodenBoat School's published curriculum, Sandy Point Boat Works' documentation, and Douglas Brooks' lofting and lines-taking descriptions. The skill survives almost exclusively in the wooden boatbuilding community, making practitioner data sparse. The transition from hand lofting to CAD in the 1970s means that expert-level hand loftsmen are increasingly rare."
+}

@@ -1,0 +1,138 @@
+{
+  "name": "Neon Bending",
+  "slug": "neon-bending",
+  "category": "trade",
+  "description": "A neon bender heats four-foot glass tubes over a ribbon burner at roughly 650 degrees Celsius until the glass becomes pliable, then freehand-shapes it to match a full-scale paper pattern while blowing steady puffs of air through the tube to prevent collapse. After bending, the tube is evacuated by vacuum pump and back-filled with neon gas (producing red-orange) or argon with a mercury droplet (producing blue, which phosphor coatings convert to other colors). Fewer than a hundred full-time traditional tube benders remain active in the United States, down from nearly 2,000 shops in 1940.",
+  "thumbnail": {
+    "src": "/images/skills/neon-bending.webp",
+    "alt": "Craftsman bending a glowing glass tube over a ribbon burner flame to shape a neon sign letter",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "DfMCGSA9bfA",
+      "title": "How Neon Signs Are Made by Hand - Insider"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Neon sign - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Neon_sign",
+      "type": "reference"
+    },
+    {
+      "title": "Neon making - Heritage Crafts",
+      "url": "https://heritagecrafts.org.uk/craft/neon-making/",
+      "type": "institutional"
+    },
+    {
+      "title": "Tube Benders - 99% Invisible (Episode 193)",
+      "url": "https://99percentinvisible.org/episode/tube-benders/",
+      "type": "journalism"
+    },
+    {
+      "title": "The Lost Craft of Neon: Inside the Decline of Traditional Neon Sign Making",
+      "url": "https://www.smithersofstamford.com/blog/the-lost-craft-of-neon-inside-the-decline-of-traditional-neon-sign-making/",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "A beginner can produce a simple bend in a day workshop, but making a clean multi-bend letter with consistent tube diameter takes months of daily practice. Just Neon offers a six-week intensive for $7,500."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.65,
+      "notes": "Full proficiency—complex script fonts, double-back bends, splice welds, and consistent production speed—requires 5-10 years. Heritage Crafts notes the craft requires years of apprenticeship. Many veterans have 25+ years experience."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "A bad bend is immediately visible: the tube collapses, kinks, or deviates from the pattern. Final color and brightness are confirmed only after gas filling and electrification, adding a short delay."
+    },
+    "failure_cost": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Glass tubes are relatively inexpensive, but a failed bend wastes the tube section (molecular structure changes prevent re-bending). Complex signs with many bends accumulate material and time costs. Electrodes and transformers add expense."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "The bender must read a mirrored pattern, judge glass temperature by color and sag, time the puff of air precisely, and mentally model how the 3D tube will lay flat. Gas chemistry and phosphor coating selection add another knowledge layer."
+    },
+    "physical_demand": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Extended work in radiant heat from the ribbon burner. Benders deliberately work without gloves to feel heat transfer through the glass. Requires steady hands, controlled breathing for the blow tube, and endurance for repetitive motions."
+    },
+    "prerequisite_knowledge": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "No formal prerequisites, but understanding of basic glassworking, gas physics, and electrical wiring helps. Many benders enter through sign-industry apprenticeships rather than academic training."
+    },
+    "measurability": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Bend accuracy can be checked against the pattern; tube diameter consistency is measurable. Production speed is a clear metric. Aesthetic qualities of lettering and smooth curves involve some subjectivity."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "The tactile sensitivity for judging glass temperature and the timing of air puffs degrade without regular practice. Core knowledge of gas filling and wiring is more durable."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Each bend must match the pattern within millimeters. Tube diameter must remain consistent—a slight over-blow creates a bulge, under-blow causes collapse. Splice welds must be airtight for vacuum integrity."
+    },
+    "ambiguity": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "The pattern is explicit and the physics are well understood. What constitutes a 'good' bend is fairly objective: smooth radius, consistent diameter, pattern match. Aesthetic judgment enters only in original design work."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Traditionally learned through apprenticeship. The tactile judgment of glass temperature and timing cannot be learned from books alone. Some veterans are reluctant to teach for fear of creating competition."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Workshop conditions are largely controlled. Ambient temperature affects glass cooling rate slightly. Ribbon burner fuel pressure must be consistent. The craft is fundamentally an indoor, controlled-environment practice."
+    },
+    "concurrent_skills": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Simultaneously managing heat application, pattern reading, physical manipulation, air pressure via blow tube, and mental modeling of the cooling curve. Each bend requires coordinating multiple sensory channels in real time."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Initial progress is rapid (first successful bends). Plateaus at consistent letter forms, complex curves, and production speed. The transition from competent to fast and flawless takes years."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Core technique unchanged since Georges Claude's 1910 demonstrations. Modern changes: lead-free glass, some LED-hybrid installations. The fundamental hand-bending process over a ribbon burner remains identical."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "The difference between a novice's kinked, uneven tube and a master's smooth, flowing script is immediately obvious. The final illuminated sign is a highly visible artifact of skill quality."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Very little randomness. Failures are almost always attributable to technique errors—wrong temperature, bad timing, inconsistent air pressure. Occasional glass defects exist but are rare."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Primarily a solo craft. The bender works alone at the bench. Installation may involve a team, but the core bending skill is individual. Teacher-apprentice relationship is the main social component."
+    }
+  },
+  "methodology_notes": "Scores draw on Heritage Crafts documentation, 99% Invisible reporting (Episode 193), industry accounts from Signs of the Times magazine, and training program descriptions from MONA and Just Neon. The declining practitioner population means few standardized training benchmarks exist. Confidence is moderate across the board due to limited formal studies of the craft."
+}

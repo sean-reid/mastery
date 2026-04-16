@@ -1,0 +1,62 @@
+{
+  "name": "Carolinian Wayfinding",
+  "slug": "carolinian-wayfinding",
+  "category": "survival",
+  "description": "Carolinian wayfinding navigates open ocean without instruments by using a mental star compass (paafu) of 32 horizon houses where named stars rise and set, combined with reading long-period ocean swells whose refraction around unseen atolls allows detection of land up to 100 kilometers away -- a technique that requires memorizing the positions of roughly 220 stars, the swell signatures of dozens of island chains, and the seasonal behavior of migratory birds, all encoded in chants (rong) transmitted through an apprenticeship lasting 15 or more years, as exemplified by master navigator Mau Piailug of Satawal, who achieved the rank of pelu at age 19.",
+  "thumbnail": {
+    "src": "/images/skills/carolinian-wayfinding.webp",
+    "alt": "Traditional Micronesian sailing canoe navigating open Pacific Ocean under a star-filled sky",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "YbcGGJmETbE",
+      "title": "How Ancient Polynesian Wayfinders Read the Ocean"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Micronesian navigation - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Micronesian_navigation",
+      "type": "reference"
+    },
+    {
+      "title": "Mau Piailug - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mau_Piailug",
+      "type": "reference"
+    },
+    {
+      "title": "Carolinian wayfinding and canoe making - UNESCO Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/en/USL/carolinian-wayfinding-and-canoe-making-01735",
+      "type": "institutional"
+    },
+    {
+      "title": "Pius 'Mau' Piailug: Master Navigator of Micronesia - JSTOR Daily",
+      "url": "https://daily.jstor.org/pius-mau-piailug-master-navigator-of-micronesia/",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 9, "confidence": 0.85, "notes": "Mau Piailug trained for 15 years before achieving master navigator rank at age 19, beginning as a small child memorizing coral-chunk star maps. UNESCO notes that only a limited number of navigators remain, with few opportunities to pass on knowledge. Even basic competence in open-ocean wayfinding requires years of memorizing star positions, swell patterns, and island-specific chants." },
+    "time_to_expert": { "value": 10, "confidence": 0.8, "notes": "Mastery of the Weriyeng school's full curriculum -- including paafu (star numbering), bugoloa (wave-pattern direction-finding), etak (moving reference island system), and weather reading -- represents a lifetime of accumulated knowledge. Only a handful of living practitioners hold the pelu rank. The knowledge base encompasses roughly 220 stars, dozens of island swell signatures, and complex mental models of ocean geography." },
+    "feedback_delay": { "value": 8, "confidence": 0.7, "notes": "On a multi-day open-ocean voyage, navigational errors may not become apparent until landfall is missed or until wave patterns fail to match expectations days later. There is no GPS to check against. The wayfinder only knows they succeeded when the destination island appears -- or doesn't. Training voyages under a master provide faster feedback, but the ultimate test remains the ocean itself." },
+    "failure_cost": { "value": 10, "confidence": 0.9, "notes": "Navigational failure on the open Pacific means death. Missing a target atoll by even a few degrees over hundreds of miles of open water can result in being lost at sea with no hope of rescue. Historical accounts document canoes lost between islands. This is one of the highest-stakes skills in the project -- errors are potentially fatal for the entire crew." },
+    "cognitive_demand": { "value": 10, "confidence": 0.85, "notes": "The navigator must simultaneously maintain a mental model of current position using the etak reference system, track star positions across the night sky, read subtle swell refractions through the motion of the canoe hull, monitor wind shifts, observe bird flight patterns, interpret cloud formations, and integrate all of these into continuous course corrections -- all without any written or physical aids, for days or weeks at a time." },
+    "physical_demand": { "value": 7, "confidence": 0.7, "notes": "Open-ocean voyaging demands sustained physical endurance: the navigator must remain alert through multi-day passages, often with minimal sleep, while exposed to sun, wind, salt spray, and rough seas. Canoe handling in heavy weather requires significant physical strength. However, the primary challenge is cognitive and perceptual rather than purely athletic." },
+    "prerequisite_knowledge": { "value": 8, "confidence": 0.75, "notes": "Apprenticeship requires extensive prior knowledge of local marine ecology, seasonal weather patterns, star astronomy, and canoe construction and handling. The knowledge is encoded in a specific cultural and linguistic framework -- Carolinian chants, place names, and oral traditions -- that cannot be easily separated from the broader cultural context." },
+    "measurability": { "value": 6, "confidence": 0.65, "notes": "Success is binary and dramatic: the navigator either finds the target island or does not. However, the intermediate skills -- accuracy of mental position tracking, quality of swell reading, correctness of star identification -- are difficult to measure independently. The Weriyeng school has internal assessment through graduated ranks, but no standardized external metrics exist." },
+    "perishability": { "value": 8, "confidence": 0.75, "notes": "UNESCO inscribed this practice on the Urgent Safeguarding list in 2021 because the knowledge is actively being lost. Reduced family sizes, migration to urban centers, and climate change (which alters ocean swells, currents, and bird migrations) are degrading the environmental cues navigators depend upon. Skills not practiced on actual voyages deteriorate, and the oral transmission chain is fragile." },
+    "precision_required": { "value": 9, "confidence": 0.8, "notes": "Finding a low-lying atoll after hundreds of miles of open-ocean sailing requires extraordinary precision. A degree of error in star reading or swell interpretation can mean missing the target by tens of miles. The navigator must detect subtle wave refractions indicating land up to 100 km away and distinguish them from wind-generated waves -- precision measured in fractions of degrees on a mental compass." },
+    "ambiguity": { "value": 8, "confidence": 0.7, "notes": "Ocean conditions are inherently ambiguous: swells from multiple sources overlap, clouds obscure stars, weather changes alter bird behavior, and currents shift unpredictably. The navigator must constantly disambiguate signals in a noisy environment. Climate change is introducing novel conditions that fall outside traditional knowledge, adding unprecedented ambiguity." },
+    "instruction_dependency": { "value": 10, "confidence": 0.9, "notes": "This skill cannot be self-taught. Knowledge is transmitted exclusively through oral tradition within specific lineage systems like the Weriyeng school of Satawal. The apprentice must learn from a recognized master through years of direct instruction, accompanied voyages, and memorization of chants. When master navigators die without transmitting their knowledge, it is permanently lost." },
+    "environmental_variability": { "value": 9, "confidence": 0.8, "notes": "Conditions vary enormously between voyages: different star visibility by season, changing swell patterns with weather systems, variable currents, varying cloud cover, and different target islands requiring completely different navigational strategies. Climate change is now altering baseline conditions that have been stable for generations, forcing adaptation of traditional knowledge." },
+    "concurrent_skills": { "value": 9, "confidence": 0.8, "notes": "The navigator simultaneously manages celestial observation, wave reading, weather interpretation, crew management, canoe handling, mental dead reckoning, and integration of multiple natural signs into a coherent positional model. During night sailing, star tracking, swell reading, and wind monitoring must be performed concurrently and continuously." },
+    "plateau_density": { "value": 7, "confidence": 0.6, "notes": "Traditional accounts suggest extended plateaus during training: memorizing star positions is one phase, learning to read swells another, and integrating all systems into real-time navigation on actual voyages represents a final, extended plateau. The 15-year apprenticeship suggests the learning curve is punctuated by long periods of consolidation rather than steady progress." },
+    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "The fundamental techniques have been stable for centuries or millennia. The star compass, swell reading, and etak system are ancient innovations that have not changed in their core principles. However, climate change is now forcing adaptation as traditional environmental cues shift, and the SIKU-style integration of modern technology represents a new and uncertain direction." },
+    "observability": { "value": 2, "confidence": 0.8, "notes": "Almost all of the navigator's work is invisible: it takes place entirely within the mind. An observer on the canoe sees someone staring at the sky and ocean but cannot perceive the complex mental calculations occurring. The skill is famously difficult to teach precisely because it cannot be demonstrated visually -- it must be described and experienced." },
+    "luck_variance": { "value": 5, "confidence": 0.65, "notes": "Weather is the primary source of luck variance: extended cloud cover can obscure stars for days, unexpected storms can push a canoe off course, and unusual current patterns can invalidate dead reckoning. However, skilled navigators have backup systems for each contingency, and the redundancy built into the knowledge system (stars, swells, birds, clouds) reduces dependence on any single signal." },
+    "social_coordination": { "value": 6, "confidence": 0.7, "notes": "The navigator leads a crew that must work together to sail the canoe, but the navigational decisions are made by a single person. The social coordination involves crew management during multi-day voyages, but the core skill is individual. The broader social context -- the lineage-based transmission system and community support for voyaging -- is essential but occurs outside the act of navigation itself." }
+  },
+  "methodology_notes": "Scores are based on UNESCO's 2021 Urgent Safeguarding inscription documentation, Wikipedia's articles on Micronesian navigation and Mau Piailug, JSTOR Daily's biographical account of Piailug's 15-year apprenticeship, and the Hokule'a project's documentation of Nainoa Thompson's training under Piailug. The extremely high scores for cognitive demand, instruction dependency, and failure cost reflect the unique combination of purely mental navigation across life-threatening distances with no fallback instruments and an exclusively oral transmission system. Climate change's impact on traditional environmental cues is noted as a significant contemporary factor affecting perishability and environmental variability."
+}

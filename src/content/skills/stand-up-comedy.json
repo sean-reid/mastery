@@ -1,0 +1,57 @@
+{
+  "name": "Stand-up Comedy",
+  "slug": "stand-up-comedy",
+  "category": "performance",
+  "description": "Developing a tight hour of headline-level stand-up comedy material typically requires 5-10 years of nightly open-mic sets, with professional benchmarks demanding an average of 4-6 audience laughs per minute (roughly 18+ seconds of laughter per performing minute). The comedian must write, memorize, and perform original material while reading and adjusting to each unique crowd in real time, making every show simultaneously a rehearsal and a live performance.",
+  "thumbnail": {
+    "src": "/images/skills/stand-up-comedy.webp",
+    "alt": "Comedian performing stand-up on stage under a spotlight with microphone in hand",
+    "attribution": "Photo by Unsplash"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "R4SYIfhzMmU",
+      "title": "George Carlin — It's Bad for Ya (Full HBO Special, 2008)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Stand-up comedy",
+      "url": "https://en.wikipedia.org/wiki/Stand-up_comedy",
+      "type": "reference"
+    },
+    {
+      "title": "History of stand-up comedy",
+      "url": "https://en.wikipedia.org/wiki/History_of_stand-up_comedy",
+      "type": "reference"
+    },
+    {
+      "title": "Stand-up comedy — history, artists, and facts",
+      "url": "https://www.britannica.com/art/stand-up-comedy",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 3, "confidence": 0.8, "notes": "A beginner can deliver a passable 5-minute open-mic set within a few months of regular performance. Getting consistent laughs at that level takes roughly 6-12 months." },
+    "time_to_expert": { "value": 8, "confidence": 0.85, "notes": "Most working headliners cite 7-15 years from first open mic to reliably filling a headline slot with 45-60 minutes of tested material. Rare prodigies break through in 4-5 years." },
+    "feedback_delay": { "value": 1, "confidence": 0.9, "notes": "Audience laughter or silence is instantaneous. A comedian knows within seconds whether a joke lands. This near-zero feedback loop is one of comedy's defining features." },
+    "failure_cost": { "value": 4, "confidence": 0.75, "notes": "A single bombing rarely ends a career, but repeated poor sets erode club bookings. A viral clip of an offensive joke or meltdown can cause lasting reputational damage in the social media era." },
+    "cognitive_demand": { "value": 7, "confidence": 0.8, "notes": "Simultaneously managing written material, crowd reading, timing, callbacks, crowd-work improvisation, and emotional modulation. Writing demands divergent thinking and pattern recognition across culture, language, and experience." },
+    "physical_demand": { "value": 2, "confidence": 0.9, "notes": "Minimal physical exertion beyond standing, pacing, and vocal projection. Grueling tour schedules and late-night lifestyle impose indirect physical strain." },
+    "prerequisite_knowledge": { "value": 1, "confidence": 0.85, "notes": "No formal prerequisites. Comedians come from every background. Cultural literacy, observational skill, and life experience matter but are not formal knowledge domains." },
+    "measurability": { "value": 4, "confidence": 0.75, "notes": "Laughs per minute can be quantified, and ticket sales provide a market signal. But artistic quality, originality, and cultural impact are deeply subjective with no standardized grading." },
+    "perishability": { "value": 6, "confidence": 0.8, "notes": "Core comedic instincts are durable, but specific material becomes stale as cultural references age. Timing and crowd-reading skills degrade without regular stage time." },
+    "precision_required": { "value": 7, "confidence": 0.8, "notes": "Word choice, pause length, and delivery cadence matter enormously. Moving a single word in a punchline can kill the laugh. Timing precision is measured in fractions of a second." },
+    "ambiguity": { "value": 7, "confidence": 0.8, "notes": "There is no formula for what is funny. A joke that kills in one room may die in another. Subjectivity of humor means there is no objective 'correct' performance." },
+    "instruction_dependency": { "value": 3, "confidence": 0.8, "notes": "Most successful comedians are primarily self-taught through stage repetition. Comedy classes exist but are supplementary; the open mic is the real classroom." },
+    "environmental_variability": { "value": 8, "confidence": 0.85, "notes": "Every room is different: audience size, demographics, mood, venue acoustics, time slot, preceding acts. Comedians must adapt material and energy to each unique show." },
+    "concurrent_skills": { "value": 6, "confidence": 0.8, "notes": "Writing, performing, crowd reading, improvisation, physicality, vocal control, and business management (booking, marketing) must all operate together." },
+    "plateau_density": { "value": 7, "confidence": 0.75, "notes": "Common plateaus at the 5-minute to 15-minute transition, the leap from opener to feature act, and the feature-to-headliner jump. Many comedians stall at each level for years." },
+    "domain_evolution": { "value": 6, "confidence": 0.8, "notes": "Comedy evolves with culture; topics, sensibilities, and delivery styles shift significantly across decades. The rise of podcasts, specials, and social media has transformed the path to success." },
+    "observability": { "value": 9, "confidence": 0.9, "notes": "Performance is fully public and immediately observable. Audience reaction is visible and audible to everyone in the room. Recorded specials make quality transparent." },
+    "luck_variance": { "value": 5, "confidence": 0.75, "notes": "Viral moments, festival selections, late-night bookings, and being seen by the right booker involve significant luck. But consistent quality eventually surfaces in a meritocratic club circuit." },
+    "social_coordination": { "value": 3, "confidence": 0.85, "notes": "Primarily a solo art. Networking with bookers and other comedians matters for career advancement, but the core skill is developed and performed alone on stage." }
+  },
+  "methodology_notes": "Scores based on industry consensus that headline-level material requires 7-15 years of nightly performance, Britannica and Wikipedia historical documentation, and the widely cited benchmark of 4-6 laughs per minute for professional-grade stand-up."
+}

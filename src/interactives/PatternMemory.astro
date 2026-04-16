@@ -1,0 +1,855 @@
+---
+---
+<div class="interactive-wrap" id="pattern-memory">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Chess Pattern Memory</h4>
+    <p class="interactive-subtitle">Recreating de Groot's 1946 experiment. A position flashes for 5 seconds, then you pick which board you saw.</p>
+  </div>
+
+  <div class="pm-area" id="pm-area">
+
+    <!-- Initial state: intro + start -->
+    <div class="pm-phase pm-phase--active" id="pm-intro">
+      <div class="pm-intro-text">
+        <p>In 1946, Dutch psychologist Adriaan de Groot showed chess players a position for five seconds, then asked them to identify it from memory. Grandmasters scored near-perfectly on real game positions but were no better than beginners on random arrangements.</p>
+        <p>This simple test revealed something profound about expertise: masters don't have better memories. They have better <em>patterns</em>.</p>
+      </div>
+      <button class="pm-btn" id="pm-start">Begin the experiment</button>
+    </div>
+
+    <!-- Study phase: board + countdown ring -->
+    <div class="pm-phase" id="pm-study">
+      <p class="pm-study-label" id="pm-study-label">Memorize this position</p>
+      <div class="pm-countdown-ring" id="pm-countdown-wrap">
+        <svg class="pm-ring-svg" viewBox="0 0 120 120">
+          <circle class="pm-ring-track" cx="60" cy="60" r="52" />
+          <circle class="pm-ring-fill" id="pm-ring-fill" cx="60" cy="60" r="52" />
+        </svg>
+        <span class="pm-countdown-num" id="pm-countdown">5</span>
+      </div>
+      <div class="pm-board-container">
+        <div class="pm-board pm-board--study" id="pm-main-board"></div>
+      </div>
+    </div>
+
+    <!-- Choose phase: 4 options in 2x2 grid -->
+    <div class="pm-phase" id="pm-choose">
+      <p class="pm-prompt" id="pm-prompt">Which position did you just see?</p>
+      <div class="pm-grid" id="pm-grid"></div>
+    </div>
+
+    <!-- Result phase: verdict + explanation -->
+    <div class="pm-phase" id="pm-result">
+      <div class="pm-verdict-wrap">
+        <span class="pm-verdict-icon" id="pm-verdict-icon"></span>
+        <p class="pm-verdict" id="pm-verdict"></p>
+      </div>
+      <p class="pm-explain" id="pm-explain"></p>
+    </div>
+
+    <!-- Final comparison: the payoff -->
+    <div class="pm-phase" id="pm-comparison">
+      <h5 class="pm-comp-title">Your results</h5>
+
+      <div class="pm-score-cards">
+        <div class="pm-score-card" id="pm-card-real">
+          <span class="pm-score-label">Real game position</span>
+          <div class="pm-score-ring-wrap">
+            <svg class="pm-score-ring" viewBox="0 0 100 100">
+              <circle class="pm-score-ring-track" cx="50" cy="50" r="42" />
+              <circle class="pm-score-ring-fill" id="pm-ring-real" cx="50" cy="50" r="42" />
+            </svg>
+            <span class="pm-score-value" id="pm-score-real"></span>
+          </div>
+          <span class="pm-score-sub" id="pm-sub-real"></span>
+        </div>
+        <div class="pm-score-divider"></div>
+        <div class="pm-score-card" id="pm-card-random">
+          <span class="pm-score-label">Random arrangement</span>
+          <div class="pm-score-ring-wrap">
+            <svg class="pm-score-ring" viewBox="0 0 100 100">
+              <circle class="pm-score-ring-track" cx="50" cy="50" r="42" />
+              <circle class="pm-score-ring-fill" id="pm-ring-rand" cx="50" cy="50" r="42" />
+            </svg>
+            <span class="pm-score-value" id="pm-score-rand"></span>
+          </div>
+          <span class="pm-score-sub" id="pm-sub-rand"></span>
+        </div>
+      </div>
+
+      <blockquote class="pm-insight">
+        <p>Grandmasters score ~95% on real game positions but drop to beginner level on random boards. Chess expertise is not raw memory — it is pattern recognition built from thousands of studied games.</p>
+        <cite>de Groot, <em>Thought and Choice in Chess</em>, 1946</cite>
+      </blockquote>
+
+      <button class="pm-btn pm-btn--secondary" id="pm-restart">Run the experiment again</button>
+    </div>
+
+  </div>
+</div>
+
+<style is:global>
+  /* ── Base interactive chrome ─────────────────────────────── */
+  .interactive-wrap {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin: var(--space-8) 0;
+  }
+
+  .interactive-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .interactive-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+
+  .interactive-subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  .pm-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 200px;
+  }
+
+  .pm-phase {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+    width: 100%;
+    opacity: 0;
+    transition: opacity 400ms var(--ease-out);
+  }
+
+  .pm-phase--active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .pm-phase--fading {
+    opacity: 0;
+  }
+
+  /* ── Intro ───────────────────────────────────────────────── */
+  .pm-intro-text {
+    max-width: 58ch;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    font-size: var(--text-sm);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+  }
+
+  .pm-intro-text em {
+    font-style: italic;
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  /* ── Buttons ─────────────────────────────────────────────── */
+  .pm-btn {
+    padding: var(--space-3) var(--space-8);
+    border-radius: var(--radius-full);
+    background: var(--color-accent);
+    color: white;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: opacity 200ms var(--ease-out), transform 200ms var(--ease-out);
+  }
+
+  .pm-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  .pm-btn:active {
+    transform: translateY(0);
+  }
+
+  .pm-btn--secondary {
+    background: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+  }
+
+  .pm-btn--secondary:hover {
+    background: color-mix(in srgb, var(--color-accent) 6%, transparent);
+  }
+
+  /* ── Study phase ─────────────────────────────────────────── */
+  .pm-study-label {
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.02em;
+  }
+
+  /* Countdown ring */
+  .pm-countdown-ring {
+    position: relative;
+    width: 72px;
+    height: 72px;
+  }
+
+  .pm-ring-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .pm-ring-track {
+    fill: none;
+    stroke: var(--color-border);
+    stroke-width: 5;
+  }
+
+  .pm-ring-fill {
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 326.73;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+  }
+
+  .pm-countdown-num {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Chessboard ──────────────────────────────────────────── */
+  .pm-board-container {
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-md);
+    padding: 4px;
+    background: var(--color-surface-raised);
+  }
+
+  .pm-board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .pm-board--study {
+    width: min(420px, 85vw);
+    height: min(420px, 85vw);
+  }
+
+  .pm-board--choice {
+    width: min(200px, 42vw);
+    height: min(200px, 42vw);
+    cursor: pointer;
+    transition:
+      transform 250ms var(--ease-out),
+      box-shadow 250ms var(--ease-out),
+      border-color 250ms var(--ease-out);
+    border-color: transparent;
+  }
+
+  .pm-board--choice:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: var(--color-accent);
+  }
+
+  .pm-board--choice.pm-sel-correct {
+    border-color: var(--color-score-low);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-score-low) 25%, transparent);
+    transform: scale(1.02);
+  }
+
+  .pm-board--choice.pm-sel-wrong {
+    border-color: var(--color-score-high);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-score-high) 25%, transparent);
+    transform: scale(0.98);
+  }
+
+  .pm-board--choice.pm-reveal-correct {
+    border-color: var(--color-score-low);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-score-low) 25%, transparent);
+  }
+
+  .pm-board--choice.pm-disabled {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  .pm-board--choice.pm-sel-correct,
+  .pm-board--choice.pm-sel-wrong,
+  .pm-board--choice.pm-reveal-correct {
+    opacity: 1;
+  }
+
+  .pm-sq {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .pm-sq--l { background: #f0d9b5; }
+  .pm-sq--d { background: #b58863; }
+
+  .pm-board--study .pm-sq { font-size: min(4.2vw, 2.4rem); }
+  .pm-board--choice .pm-sq { font-size: min(2vw, 1.1rem); }
+
+  /* ── Choice grid ─────────────────────────────────────────── */
+  .pm-prompt {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-text);
+    text-align: center;
+  }
+
+  .pm-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
+  .pm-choice-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .pm-choice-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    background: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+    font-family: var(--font-heading);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    transition: all 250ms var(--ease-out);
+  }
+
+  .pm-choice-wrap:hover .pm-choice-badge {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+  }
+
+  /* ── Result verdict ──────────────────────────────────────── */
+  .pm-verdict-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    animation: pm-pop-in 500ms var(--ease-out);
+  }
+
+  .pm-verdict-icon {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .pm-verdict {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+  }
+
+  .pm-verdict--correct { color: var(--color-score-low); }
+  .pm-verdict--wrong { color: var(--color-score-high); }
+
+  .pm-explain {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 44ch;
+  }
+
+  @keyframes pm-pop-in {
+    0% { opacity: 0; transform: scale(0.85) translateY(8px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  /* ── Comparison / payoff ─────────────────────────────────── */
+  .pm-comp-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+  }
+
+  .pm-score-cards {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    padding: var(--space-8) var(--space-10);
+    background: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 540px;
+    justify-content: center;
+  }
+
+  .pm-score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    flex: 1;
+  }
+
+  .pm-score-label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-align: center;
+  }
+
+  .pm-score-ring-wrap {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .pm-score-ring {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .pm-score-ring-track {
+    fill: none;
+    stroke: var(--color-border);
+    stroke-width: 6;
+  }
+
+  .pm-score-ring-fill {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-dasharray: 263.89;
+    stroke-dashoffset: 263.89;
+    transition: stroke-dashoffset 800ms var(--ease-out), stroke 400ms;
+  }
+
+  .pm-score-value {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 700;
+  }
+
+  .pm-score-sub {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+  }
+
+  .pm-score-divider {
+    width: 1px;
+    height: 100px;
+    background: var(--color-border);
+    flex-shrink: 0;
+  }
+
+  /* Insight blockquote */
+  .pm-insight {
+    max-width: 50ch;
+    text-align: center;
+    margin: var(--space-4) 0 0 0;
+    padding: var(--space-5) var(--space-6);
+    border-left: 3px solid var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 4%, transparent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+
+  .pm-insight p {
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--space-2) 0;
+  }
+
+  .pm-insight cite {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-style: normal;
+  }
+
+  /* ── Responsive tweaks ───────────────────────────────────── */
+  @media (max-width: 480px) {
+    .pm-score-cards {
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .pm-score-divider {
+      width: 80px;
+      height: 1px;
+    }
+
+    .pm-grid {
+      gap: var(--space-3);
+    }
+
+    .pm-intro-text {
+      font-size: var(--text-xs);
+    }
+  }
+</style>
+
+<script>
+  /* ── Data: mid-game position (16 pieces) ──────────────── */
+  const REAL: [number, number, string][] = [
+    [0,4,'\u265A'],[0,5,'\u265D'],[0,7,'\u265C'],[1,0,'\u265F'],[1,2,'\u265F'],[1,5,'\u265F'],[1,6,'\u265F'],
+    [2,3,'\u265E'],[3,4,'\u265F'],[5,3,'\u2658'],[6,0,'\u2659'],[6,1,'\u2659'],[6,5,'\u2659'],[6,6,'\u2659'],
+    [7,0,'\u2656'],[7,4,'\u2654'],
+  ];
+
+  /* ── Utility functions ────────────────────────────────── */
+  const empty = (): string[] => Array(64).fill('');
+
+  function toBoard(pos: [number, number, string][]): string[] {
+    const b = empty();
+    pos.forEach(([r, c, p]) => b[r * 8 + c] = p);
+    return b;
+  }
+
+  function randBoard(n: number): string[] {
+    const pcs = '\u2654\u2655\u2656\u2657\u2658\u2659\u265A\u265B\u265C\u265D\u265E\u265F';
+    const b = empty();
+    const idx = Array.from({ length: 64 }, (_, i) => i);
+    for (let i = 63; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [idx[i], idx[j]] = [idx[j], idx[i]];
+    }
+    for (let i = 0; i < n; i++) {
+      b[idx[i]] = pcs[Math.floor(Math.random() * pcs.length)];
+    }
+    return b;
+  }
+
+  function perturb(board: string[], swaps: number): string[] {
+    const b = [...board];
+    const occ = b.map((v, i) => [v, i] as [string, number]).filter(([v]) => v !== '');
+    const emp = b.map((_, i) => i).filter(i => b[i] === '');
+    for (let s = 0; s < swaps && occ.length && emp.length; s++) {
+      const oi = Math.floor(Math.random() * occ.length);
+      const ei = Math.floor(Math.random() * emp.length);
+      const [piece, from] = occ[oi];
+      const to = emp[ei];
+      b[from] = ''; b[to] = piece;
+      occ[oi] = [piece, to]; emp[ei] = from;
+    }
+    return b;
+  }
+
+  function shuffle<T>(a: T[]) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+  }
+
+  /* ── DOM builder: chessboard ──────────────────────────── */
+  function mkBoard(board: string[], cls: string): HTMLElement {
+    const el = document.createElement('div');
+    el.className = `pm-board ${cls}`;
+    for (let i = 0; i < 64; i++) {
+      const sq = document.createElement('div');
+      const isLight = (Math.floor(i / 8) + i % 8) % 2 === 0;
+      sq.className = `pm-sq ${isLight ? 'pm-sq--l' : 'pm-sq--d'}`;
+      sq.textContent = board[i];
+      el.appendChild(sq);
+    }
+    return el;
+  }
+
+  /* ── Phase transition helper ──────────────────────────── */
+  const $ = (id: string) => document.getElementById(id)!;
+
+  const allPhases = ['pm-intro', 'pm-study', 'pm-choose', 'pm-result', 'pm-comparison'];
+
+  function showPhase(id: string): Promise<void> {
+    return new Promise(resolve => {
+      // Fade out current active phase
+      const active = document.querySelector('.pm-phase--active') as HTMLElement | null;
+      if (active) {
+        active.classList.add('pm-phase--fading');
+        setTimeout(() => {
+          active.classList.remove('pm-phase--active', 'pm-phase--fading');
+          active.style.display = 'none';
+          activateTarget();
+        }, 300);
+      } else {
+        activateTarget();
+      }
+
+      function activateTarget() {
+        const target = $(id);
+        target.style.display = 'flex';
+        // Force reflow so the opacity transition fires
+        void target.offsetHeight;
+        target.classList.add('pm-phase--active');
+        setTimeout(resolve, 400);
+      }
+    });
+  }
+
+  /* ── Element references ───────────────────────────────── */
+  const studyLabel = $('pm-study-label');
+  const countdownNum = $('pm-countdown');
+  const ringFill = $('pm-ring-fill') as unknown as SVGCircleElement;
+  const mainBoard = $('pm-main-board');
+  const promptEl = $('pm-prompt');
+  const gridEl = $('pm-grid');
+  const verdictIcon = $('pm-verdict-icon');
+  const verdictEl = $('pm-verdict');
+  const explainEl = $('pm-explain');
+  const scoreReal = $('pm-score-real');
+  const scoreRand = $('pm-score-rand');
+  const subReal = $('pm-sub-real');
+  const subRand = $('pm-sub-rand');
+  const ringReal = $('pm-ring-real') as unknown as SVGCircleElement;
+  const ringRandEl = $('pm-ring-rand') as unknown as SVGCircleElement;
+  const startBtn = $('pm-start');
+  const restartBtn = $('pm-restart');
+
+  /* ── Countdown ring constant ──────────────────────────── */
+  const CIRCUMFERENCE = 2 * Math.PI * 52; // ~326.73
+
+  /* ── State ────────────────────────────────────────────── */
+  let realOk = false;
+  let randOk = false;
+
+  /* ── Study phase ──────────────────────────────────────── */
+  function study(board: string[], label: string): Promise<void> {
+    return new Promise(resolve => {
+      studyLabel.textContent = label;
+      mainBoard.innerHTML = '';
+      mainBoard.appendChild(mkBoard(board, 'pm-board--study'));
+
+      // Reset ring
+      ringFill.style.transition = 'none';
+      ringFill.style.strokeDashoffset = '0';
+      void ringFill.offsetHeight;
+
+      showPhase('pm-study').then(() => {
+        let s = 5;
+        countdownNum.textContent = '5';
+
+        // Start ring animation after phase is visible
+        ringFill.style.transition = 'stroke-dashoffset 1s linear';
+
+        const tick = () => {
+          s--;
+          countdownNum.textContent = String(s);
+          ringFill.style.strokeDashoffset = String(CIRCUMFERENCE * (1 - s / 5));
+          if (s <= 0) {
+            clearInterval(iv);
+            resolve();
+          }
+        };
+
+        // First tick after 1s
+        const iv = setInterval(tick, 1000);
+      });
+    });
+  }
+
+  /* ── Choose phase ─────────────────────────────────────── */
+  function choose(correct: string[], isRand: boolean): Promise<boolean> {
+    return new Promise(resolve => {
+      promptEl.textContent = isRand
+        ? 'Now with a random arrangement. Which did you see?'
+        : 'Which position did you just see?';
+      gridEl.innerHTML = '';
+
+      const opts = [
+        { board: correct, ok: true },
+        { board: perturb(correct, 3), ok: false },
+        { board: perturb(correct, 5), ok: false },
+        { board: perturb(correct, 4), ok: false },
+      ];
+      shuffle(opts);
+
+      const labels = ['A', 'B', 'C', 'D'];
+      const boards: HTMLElement[] = [];
+
+      opts.forEach((o, idx) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'pm-choice-wrap';
+
+        const badge = document.createElement('span');
+        badge.className = 'pm-choice-badge';
+        badge.textContent = labels[idx];
+
+        const b = mkBoard(o.board, 'pm-board--choice');
+        boards.push(b);
+
+        b.addEventListener('click', () => {
+          // Disable all boards
+          boards.forEach((board, i) => {
+            board.classList.add('pm-disabled');
+            if (opts[i].ok && !o.ok) {
+              board.classList.add('pm-reveal-correct');
+            }
+          });
+
+          if (o.ok) {
+            b.classList.add('pm-sel-correct');
+            b.classList.remove('pm-disabled');
+          } else {
+            b.classList.add('pm-sel-wrong');
+          }
+
+          setTimeout(() => resolve(o.ok), 1100);
+        });
+
+        wrap.appendChild(badge);
+        wrap.appendChild(b);
+        gridEl.appendChild(wrap);
+      });
+
+      showPhase('pm-choose');
+    });
+  }
+
+  /* ── Result phase ─────────────────────────────────────── */
+  async function result(ok: boolean, isRand: boolean) {
+    if (ok) {
+      verdictIcon.textContent = '\u2713';
+      verdictIcon.style.color = 'var(--color-score-low)';
+      verdictEl.textContent = 'Correct';
+      verdictEl.className = 'pm-verdict pm-verdict--correct';
+    } else {
+      verdictIcon.textContent = '\u2717';
+      verdictIcon.style.color = 'var(--color-score-high)';
+      verdictEl.textContent = 'Wrong';
+      verdictEl.className = 'pm-verdict pm-verdict--wrong';
+    }
+
+    explainEl.textContent = isRand
+      ? (ok
+          ? 'You recalled a random arrangement. That is genuinely impressive.'
+          : 'Random positions are much harder to remember, even for experts. Without meaningful patterns, raw memory is all you have.')
+      : (ok
+          ? 'Well done. Real game positions contain patterns that aid recall. Now let us see what happens with a random arrangement.'
+          : 'A difficult test. Now let us see what happens with a random arrangement of pieces.');
+
+    await showPhase('pm-result');
+  }
+
+  /* ── Comparison phase ─────────────────────────────────── */
+  const SCORE_CIRC = 2 * Math.PI * 42; // ~263.89
+
+  async function comparison() {
+    // Set score text
+    scoreReal.textContent = realOk ? 'Correct' : 'Wrong';
+    scoreReal.style.color = realOk ? 'var(--color-score-low)' : 'var(--color-score-high)';
+    subReal.textContent = realOk ? 'Pattern recognized' : 'Missed it';
+
+    scoreRand.textContent = randOk ? 'Correct' : 'Wrong';
+    scoreRand.style.color = randOk ? 'var(--color-score-low)' : 'var(--color-score-high)';
+    subRand.textContent = randOk ? 'Strong raw memory' : 'No patterns to lean on';
+
+    // Reset rings
+    ringReal.style.transition = 'none';
+    ringReal.style.strokeDashoffset = String(SCORE_CIRC);
+    ringRandEl.style.transition = 'none';
+    ringRandEl.style.strokeDashoffset = String(SCORE_CIRC);
+
+    await showPhase('pm-comparison');
+
+    // Animate rings after phase is visible
+    requestAnimationFrame(() => {
+      ringReal.style.transition = `stroke-dashoffset 800ms var(--ease-out), stroke 400ms`;
+      ringReal.style.stroke = realOk ? 'var(--color-score-low)' : 'var(--color-score-high)';
+      ringReal.style.strokeDashoffset = realOk ? '0' : String(SCORE_CIRC * 0.75);
+
+      ringRandEl.style.transition = `stroke-dashoffset 800ms var(--ease-out) 300ms, stroke 400ms 300ms`;
+      ringRandEl.style.stroke = randOk ? 'var(--color-score-low)' : 'var(--color-score-high)';
+      ringRandEl.style.strokeDashoffset = randOk ? '0' : String(SCORE_CIRC * 0.75);
+    });
+  }
+
+  /* ── Main experiment flow ─────────────────────────────── */
+  async function run() {
+    // Round 1: real position
+    const realB = toBoard(REAL);
+    await study(realB, 'Memorize this position');
+    realOk = await choose(realB, false);
+    await result(realOk, false);
+    await new Promise(r => setTimeout(r, 2400));
+
+    // Round 2: random position
+    const randB = randBoard(REAL.length);
+    await study(randB, 'Now memorize this random arrangement');
+    randOk = await choose(randB, true);
+    await result(randOk, true);
+    await new Promise(r => setTimeout(r, 2400));
+
+    // Payoff
+    await comparison();
+  }
+
+  /* ── Event listeners ──────────────────────────────────── */
+  startBtn.addEventListener('click', () => run());
+
+  restartBtn.addEventListener('click', () => {
+    realOk = false;
+    randOk = false;
+    run();
+  });
+
+  /* ── Initialization: hide all phases except intro ─────── */
+  allPhases.forEach(id => {
+    const el = $(id);
+    if (id === 'pm-intro') {
+      el.style.display = 'flex';
+      el.classList.add('pm-phase--active');
+    } else {
+      el.style.display = 'none';
+    }
+  });
+</script>

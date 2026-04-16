@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import StickyNav from '../components/StickyNav.astro';
+import CommandPalette from '../components/CommandPalette.astro';
+import SkillCard from '../components/SkillCard.astro';
+import Footer from '../components/Footer.astro';
+import { computeComposite } from '../data/axes';
+import type { RankedSkill } from '../types/skill';
+
+const skills = await getCollection('skills');
+
+const ranked: RankedSkill[] = skills
+  .map((entry) => ({
+    ...entry.data,
+    compositeScore: computeComposite(entry.data.scores),
+    rank: 0,
+  }))
+  .sort((a, b) => b.compositeScore - a.compositeScore)
+  .map((skill, i) => ({ ...skill, rank: i + 1 }))
+  .reverse();
+---
+
+<BaseLayout
+  title="Mastery - How Hard Is It to Get Good?"
+  description="An interactive visualization ranking 100 human skills by difficulty to master. No single number captures what makes something hard to learn, so each skill is scored across 19 dimensions with cited sources and transparent methodology."
+>
+  <Hero skillCount={ranked.length} />
+  <StickyNav />
+  <CommandPalette skills={ranked} />
+
+  <section class="ranking container">
+    <header class="ranking-header">
+      <h2>The Ranking</h2>
+      <p class="ranking-subtitle">
+        {ranked.length} skills, ascending by composite difficulty
+      </p>
+    </header>
+
+    <div class="skill-list">
+      {ranked.map((skill) => (
+        <SkillCard skill={skill} />
+      ))}
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .ranking {
+    padding-block: var(--space-16);
+  }
+
+  .ranking-header {
+    margin-bottom: var(--space-12);
+  }
+
+  .ranking-header h2 {
+    margin-bottom: var(--space-2);
+  }
+
+  .ranking-subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

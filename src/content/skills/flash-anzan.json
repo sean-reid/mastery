@@ -1,0 +1,140 @@
+{
+  "name": "Flash Anzan",
+  "slug": "flash-anzan",
+  "category": "academic",
+  "description": "Flash Anzan practitioners visualize a soroban (Japanese abacus) in their mind and manipulate its beads at speeds that defy conscious processing: the current Guinness World Record, set by Rikako Miyamoto in 2024, is the correct summation of 15 three-digit numbers flashed at intervals of roughly 0.1 seconds, completed in 1.61 seconds -- a feat requiring the practitioner to absorb, encode, and accumulate each number before the next one appears.",
+  "thumbnail": {
+    "src": "/images/skills/flash-anzan.webp",
+    "alt": "Child concentrating during a flash anzan competition with numbers displayed on a large screen",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "Px_hvzYS3_Y",
+      "title": "Flash Anzan - Incredible Mental Calculation"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mental abacus - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mental_abacus",
+      "type": "reference"
+    },
+    {
+      "title": "Fastest mental arithmetic (15 sets of three-digit numbers) - Flash Anzan - Guinness World Records",
+      "url": "https://www.guinnessworldrecords.com/world-records/fastest-flash-mental-arithmetic",
+      "type": "competition"
+    },
+    {
+      "title": "Soroban - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Soroban",
+      "type": "reference"
+    },
+    {
+      "title": "Rikako Miyamoto sets Guinness World Record for Flash Anzan (1.61 seconds)",
+      "url": "https://en.atpress.com/news/390704",
+      "year": 2024,
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Children in Japan typically begin soroban training between ages 5 and 8 and transition to mental abacus (anzan) after 1-2 years of physical practice. A beginner can perform basic mental additions within a few months of soroban use, but flash anzan at any meaningful speed requires 2-3 years of foundation."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "World-class flash anzan performers typically begin training in early childhood and reach competition level in their teens after 8-12 years of daily practice. Flash Anzan was developed by Yuji Miyamoto in 1978 and the competitive record has been pushed from 1.83 seconds (2010) to 1.61 seconds (2024), representing decades of incremental gains."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "The answer is known immediately after the numbers stop flashing. The competitor either got it right or wrong. There is zero ambiguity in the feedback."
+    },
+    "failure_cost": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "A wrong answer in competition scores zero for that attempt but carries no material consequence. Practice failures are costless."
+    },
+    "cognitive_demand": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "At world-record pace, the brain must absorb a three-digit number every ~0.1 seconds, convert it to bead positions on a mental soroban, and accumulate a running total -- a process that saturates visual processing, working memory, and motor imagery simultaneously."
+    },
+    "physical_demand": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "Entirely mental. Competitors sit motionless except for pressing an answer button. Some young competitors make subtle finger movements mimicking soroban bead manipulation."
+    },
+    "prerequisite_knowledge": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Requires thorough mastery of the physical soroban before the mental image can be internalized. Basic arithmetic understanding is needed, but no advanced mathematics. The key prerequisite is years of physical abacus practice, not academic knowledge."
+    },
+    "measurability": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "Perfectly measurable: speed in seconds and correctness (right or wrong). Guinness World Records certifies results. Competition rankings are unambiguous."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "The mental soroban image degrades without regular practice. Practitioners who stop training report the visualization becoming slower and less vivid. However, the foundational skill can be partially recovered more quickly than it was first acquired."
+    },
+    "precision_required": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "A single bead position error in the mental soroban means a wrong answer. At 15 numbers of three digits each, there are 45 digit-level operations that must each be executed flawlessly in under 2 seconds."
+    },
+    "ambiguity": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "Perfectly unambiguous. The sum of 15 specific numbers has exactly one correct answer. Right or wrong, with no subjective interpretation."
+    },
+    "instruction_dependency": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Soroban schools are widespread in Japan (part of the historical compulsory curriculum) and common across East Asia. The physical technique must be formally taught; self-study is possible with books and apps but less common. The transition to anzan benefits strongly from coached progression."
+    },
+    "environmental_variability": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Competition conditions are standardized: numbers displayed on a screen at a fixed rate. The only variable is the specific numbers shown, and at expert level this matters little."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Simultaneously requires rapid visual number recognition, maintenance of a mental soroban image, execution of bead movements in mental imagery, running total accumulation, and speed management -- but all within a single narrow cognitive channel."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Progress is rapid initially as the mental image forms, then slows dramatically. Breaking through speed barriers (e.g., sub-3 seconds, sub-2 seconds) requires months or years of daily practice at each plateau. The world record has improved by only 0.22 seconds over 14 years."
+    },
+    "domain_evolution": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "The soroban has been unchanged since the 1930s modernization. Flash anzan rules have been stable since the format was established in 1978. Competition formats are fixed. There is essentially nothing new to learn about the domain itself."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Highly dramatic to observe: numbers flash faster than observers can read them, and the competitor produces a correct answer almost instantly. The visible gap between what the audience can perceive and what the competitor achieves makes the skill immediately impressive."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "No randomness in skill execution. Some number sequences may be marginally easier to process (e.g., round numbers with carrying), but this effect is negligible at expert level."
+    },
+    "social_coordination": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Purely individual performance. Competition is head-to-head in scoring only. No teamwork or communication during performance."
+    }
+  },
+  "methodology_notes": "Scores are informed by Guinness World Records data (1.61-second current record set by Rikako Miyamoto in February 2024), Wikipedia documentation on mental abacus and soroban, the historical record of Flash Anzan's invention by Yuji Miyamoto in 1978, and reports on Japanese soroban education culture. The cognitive_demand score of 10 reflects the superhuman speed at which visual processing, mental imagery, and arithmetic must operate simultaneously.",
+  "interactive": "number-flash"
+}

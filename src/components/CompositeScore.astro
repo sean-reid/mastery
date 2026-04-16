@@ -1,0 +1,79 @@
+---
+interface Props {
+  score: number;
+  size?: number;
+}
+
+const { score, size = 64 } = Astro.props;
+const radius = (size - 6) / 2;
+const circumference = 2 * Math.PI * radius;
+const progress = (score / 10) * circumference;
+const offset = circumference - progress;
+
+function getScoreColor(s: number): string {
+  if (s < 4) return 'var(--color-score-low)';
+  if (s < 6.5) return 'var(--color-score-mid)';
+  return 'var(--color-score-high)';
+}
+
+const color = getScoreColor(score);
+---
+
+<div class="composite-score" style={`width: ${size}px; height: ${size}px`}>
+  <svg
+    viewBox={`0 0 ${size} ${size}`}
+    class="score-ring"
+    aria-hidden="true"
+  >
+    <circle
+      cx={size / 2}
+      cy={size / 2}
+      r={radius}
+      fill="none"
+      stroke="var(--color-border)"
+      stroke-width="3"
+    />
+    <circle
+      cx={size / 2}
+      cy={size / 2}
+      r={radius}
+      fill="none"
+      stroke={color}
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-dasharray={circumference}
+      stroke-dashoffset={offset}
+      transform={`rotate(-90 ${size / 2} ${size / 2})`}
+      class="score-ring-progress"
+    />
+  </svg>
+  <span class="score-number" style={`color: ${color}`}>
+    {score}
+  </span>
+</div>
+
+<style>
+  .composite-score {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .score-ring {
+    position: absolute;
+    inset: 0;
+  }
+
+  .score-ring-progress {
+    transition: stroke-dashoffset 0.8s var(--ease-out);
+  }
+
+  .score-number {
+    font-family: var(--font-heading);
+    font-size: calc(var(--text-lg) * 0.9);
+    font-weight: 700;
+    line-height: 1;
+  }
+</style>

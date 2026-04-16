@@ -1,0 +1,62 @@
+{
+  "name": "Highlining",
+  "slug": "highlining",
+  "category": "physical",
+  "description": "Highlining is walking a one-inch-wide piece of nylon webbing tensioned between anchor points at extreme heights, often hundreds of meters above the ground. Unlike tightropes, slacklines stretch and sway, requiring continuous micro-corrections. The longest highline walked is 2,710 meters in France (2022), and the ISA has recorded 11 fatalities since 1983, nearly all from rigging errors or forgetting to clip a safety leash.",
+  "thumbnail": {
+    "src": "/images/skills/highlining.webp",
+    "alt": "Highliner walking a slackline stretched between mountain cliffs above a deep valley",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "FlPWMlmMMEk",
+      "title": "Friedi Kuhne walks the world's longest free solo highline"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Slacklining",
+      "url": "https://en.wikipedia.org/wiki/Slacklining",
+      "type": "reference"
+    },
+    {
+      "title": "International Slackline Association - World Records",
+      "url": "https://www.slacklineinternational.org/world-records/",
+      "type": "institutional"
+    },
+    {
+      "title": "ISA Risk Assessments",
+      "url": "https://www.slacklineinternational.org/risk-assessements/",
+      "type": "institutional"
+    },
+    {
+      "title": "Friedi Kuhne",
+      "url": "https://en.wikipedia.org/wiki/Friedi_K%C3%BChne",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 5, "confidence": 0.75, "notes": "Walking a short slackline near the ground takes days to weeks. Transitioning to height introduces crippling fear that resets perceived ability." },
+    "time_to_expert": { "value": 8, "confidence": 0.75, "notes": "Walking long highlines (500m+) in exposed conditions requires years of progressive exposure. Free solo highlining without a leash is the pinnacle, achieved by very few." },
+    "feedback_delay": { "value": 1, "confidence": 0.9, "notes": "You either stay on the line or you fall off. Balance corrections are instantaneous and continuous." },
+    "failure_cost": { "value": 9, "confidence": 0.9, "notes": "With a leash, falls are dramatic but survivable. Without a leash (free solo), a fall is fatal. Rigging failures can be catastrophic. 11 deaths since 1983." },
+    "cognitive_demand": { "value": 6, "confidence": 0.75, "notes": "Requires intense focus and fear management. The cognitive challenge is suppressing the survival instinct while maintaining calm micro-corrections." },
+    "physical_demand": { "value": 7, "confidence": 0.8, "notes": "Demands extraordinary core strength, proprioception, and leg endurance. Wind resistance and line sway add constant physical load." },
+    "prerequisite_knowledge": { "value": 5, "confidence": 0.8, "notes": "Must understand rigging systems, redundancy principles, anchor integrity, and webbing physics before attempting height. Errors in setup are lethal." },
+    "measurability": { "value": 8, "confidence": 0.85, "notes": "Distance walked, height, and whether the line was completed without falls are all precisely measurable. ISA verifies records." },
+    "perishability": { "value": 6, "confidence": 0.7, "notes": "Balance and fear management degrade without practice. The psychological component is especially perishable -- extended breaks amplify exposure anxiety." },
+    "precision_required": { "value": 8, "confidence": 0.85, "notes": "Foot placement on a 1-inch line requires extreme precision. Weight distribution and center of gravity must be continuously managed." },
+    "ambiguity": { "value": 2, "confidence": 0.85, "notes": "Did you walk the line or not? Distance records are precisely measured. Some subjectivity in style for non-record contexts." },
+    "instruction_dependency": { "value": 7, "confidence": 0.8, "notes": "Rigging knowledge is safety-critical and must be learned from experienced practitioners. Balance technique can be self-taught but progression is much safer with mentorship." },
+    "environmental_variability": { "value": 9, "confidence": 0.85, "notes": "Wind, temperature, humidity, line tension, altitude, and terrain all affect difficulty dramatically. No two highlines are alike." },
+    "concurrent_skills": { "value": 6, "confidence": 0.75, "notes": "Simultaneously managing balance, fear response, breathing, line reading, and wind compensation. At height, cognitive load multiplies." },
+    "plateau_density": { "value": 7, "confidence": 0.7, "notes": "Fear barriers create distinct plateaus. Moving from 50m to 100m height, or from leashed to free solo, each represent psychological walls." },
+    "domain_evolution": { "value": 5, "confidence": 0.7, "notes": "Rapidly evolving since the 1980s. Webbing technology, rigging standards, and record distances continue advancing. ISA formed in 2015." },
+    "observability": { "value": 10, "confidence": 0.95, "notes": "Among the most visually dramatic human activities. A person on a thin line between cliffs is instantly comprehensible and awe-inspiring." },
+    "luck_variance": { "value": 3, "confidence": 0.8, "notes": "Sudden wind gusts introduce unpredictability. Equipment quality and anchor conditions vary. But skilled highliners manage controllable risk." },
+    "social_coordination": { "value": 4, "confidence": 0.75, "notes": "Walking is individual, but rigging requires a team. Safety partners and belayers are essential for responsible practice." }
+  },
+  "methodology_notes": "Death and safety statistics from the International Slackline Association. World records from ISA-verified records database. Equipment and rigging standards from ISA risk assessments."
+}

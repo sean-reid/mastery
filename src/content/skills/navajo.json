@@ -1,0 +1,63 @@
+{
+  "name": "Navajo",
+  "slug": "navajo",
+  "category": "language",
+  "description": "Navajo's verbal morphology packs up to 17 prefix positions before a monosyllabic stem, encoding aspect, mood, subject, object, direction, and evidentiality into a single word -- a system so impenetrable to outsiders that the U.S. Marines used it as an unbreakable battlefield cipher in World War II, with 400 Navajo Code Talkers transmitting and decoding messages in 20 seconds that machines of the era required 30 minutes to process.",
+  "thumbnail": {
+    "src": "/images/skills/navajo.webp",
+    "alt": "Navajo sandstone landscape in Monument Valley with traditional hogan dwelling",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "QmiqnAQTTCI",
+      "title": "An Unbreakable Code - Navajo Code Talkers"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Navajo Code Talkers and the Unbreakable Code - CIA",
+      "url": "https://www.cia.gov/stories/story/navajo-code-talkers-and-the-unbreakable-code/",
+      "type": "institutional"
+    },
+    {
+      "title": "Navajo language - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Navajo_language",
+      "type": "reference"
+    },
+    {
+      "title": "Navajo grammar - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Navajo_grammar",
+      "type": "reference"
+    },
+    {
+      "title": "Learning to construct verbs in Navajo and Quechua",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12109366/",
+      "year": 2002,
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 9, "confidence": 0.85, "notes": "No FSI category exists for Navajo, but experts rate it harder than Category IV languages (2,200 hours). Polysynthetic verb morphology, tonal system (4 tones), 33 consonants, and minimal learning resources for non-heritage speakers mean basic conversational ability requires years." },
+    "time_to_expert": { "value": 10, "confidence": 0.8, "notes": "Fewer than 30 non-Navajo could understand the language during WWII. Full mastery of the verb template system with its ~550 stems, 7 modes, 12 aspects, and 10 sub-aspects demands decades of immersive study. No non-native has achieved near-native fluency without childhood exposure." },
+    "feedback_delay": { "value": 3, "confidence": 0.75, "notes": "Tonal errors and verb-form mistakes produce immediate incomprehension from native speakers. However, with only ~170,000 speakers remaining and most living in specific geographic areas, finding a conversation partner for regular feedback is itself a challenge." },
+    "failure_cost": { "value": 1, "confidence": 0.9, "notes": "Mispronunciation and grammatical errors carry no physical risk. Cultural sensitivity around the language's sacred and ceremonial uses is important but errors are social, not dangerous." },
+    "cognitive_demand": { "value": 10, "confidence": 0.9, "notes": "Among the most cognitively demanding languages for an English speaker. The verb template has up to 17 prefix positions encoding subject, object, aspect, mood, evidentiality, and direction simultaneously. Tonal distinctions (high, low, rising, falling) overlay the entire system. Verbs change form based on the physical properties of objects being handled." },
+    "physical_demand": { "value": 2, "confidence": 0.85, "notes": "Requires production of the voiceless lateral fricative (the barred-L sound), glottalized consonants, and precise tonal pitch control. These are unfamiliar articulatory gestures for English speakers but not physically strenuous." },
+    "prerequisite_knowledge": { "value": 1, "confidence": 0.9, "notes": "No formal prerequisites beyond basic literacy. However, knowledge of general linguistics or another Athabaskan language provides modest advantage. The language shares no cognates with any Indo-European language." },
+    "measurability": { "value": 4, "confidence": 0.7, "notes": "No standardized proficiency exam comparable to HSK or JLPT exists for Navajo. Some university programs offer placement tests, and the Navajo Language Academy provides informal assessment, but there is no widely recognized certification framework." },
+    "perishability": { "value": 7, "confidence": 0.75, "notes": "Tonal accuracy and verb-form recall decay rapidly without practice. The animacy hierarchy governing word order and the classifier system for handling verbs require constant reinforcement. Immersion opportunities are geographically limited to the Navajo Nation." },
+    "precision_required": { "value": 9, "confidence": 0.85, "notes": "Wrong tone changes meaning entirely. The verb classifier system requires selecting the correct stem based on whether the object is round, long-rigid, long-flexible, flat, granular, etc. A single prefix error can render a verb form unrecognizable." },
+    "ambiguity": { "value": 3, "confidence": 0.7, "notes": "Navajo grammar is highly systematic despite its complexity. Verb morphology is rule-governed with relatively clear right/wrong distinctions. Pragmatic ambiguity exists in cultural-ceremonial contexts but everyday grammar is precise." },
+    "instruction_dependency": { "value": 8, "confidence": 0.8, "notes": "Extremely few textbooks, no comprehensive Duolingo-quality app (the Duolingo Navajo course is minimal), and the unwritten oral tradition means learning without a native-speaking instructor is nearly impossible. Young & Morgan's 1987 grammar is the benchmark reference but is not self-study-friendly." },
+    "environmental_variability": { "value": 4, "confidence": 0.7, "notes": "Regional dialectal variation exists across the Navajo Nation but is less extreme than Chinese dialects. The standard written form based on Young & Morgan provides some consistency. Ceremonial language varies from conversational registers." },
+    "concurrent_skills": { "value": 8, "confidence": 0.8, "notes": "Speakers must simultaneously manage tonal pitch, the animacy hierarchy for word order, classifier selection for verb stems, the prefix template (conjunct and disjunct sets), and aspect/mood distinctions -- all encoded within a single polysynthetic word." },
+    "plateau_density": { "value": 8, "confidence": 0.75, "notes": "Major plateaus at initial phonology (lateral fricatives, tones), verb template internalization, and the transition from formulaic phrases to productive verb construction. The gap between memorized phrases and generative fluency is enormous." },
+    "domain_evolution": { "value": 2, "confidence": 0.85, "notes": "Core grammar has been stable for centuries. New vocabulary for modern concepts is coined through descriptive compounds (e.g., 'iron fish' for submarine). The language revitalization movement has introduced some standardization but the underlying system is ancient." },
+    "observability": { "value": 5, "confidence": 0.75, "notes": "Fluent speech is immediately recognizable to other speakers. Non-speakers can perceive tonal and rhythmic patterns but cannot assess quality. The polysynthetic structure is invisible to outsiders -- a single Navajo word may encode an entire English sentence." },
+    "luck_variance": { "value": 1, "confidence": 0.9, "notes": "Language acquisition is effort-driven. Heritage speakers with childhood exposure have a decisive advantage, but this is systematic, not luck-based." },
+    "social_coordination": { "value": 5, "confidence": 0.75, "notes": "Conversation practice requires native speakers, who are geographically concentrated on the Navajo Nation. Language learning is embedded in community and cultural practice. Immersion programs exist but access is limited." }
+  },
+  "methodology_notes": "Scores are based on linguistic typological data from Young & Morgan (1987), the CIA's documentation of the Code Talker program, Wikipedia's linguistic analysis of Navajo grammar, and PubMed research on Navajo verb acquisition. No FSI classification exists for Navajo; difficulty estimates extrapolate from Category IV+ given its polysynthetic morphology, tonal system, and lack of cognates with English. Speaker count (~170,000) from the U.S. Census and Ethnologue."
+}

@@ -1,0 +1,133 @@
+{
+  "name": "Erhu",
+  "slug": "erhu",
+  "category": "instrument",
+  "description": "The erhu is a Chinese two-string bowed fiddle with no fingerboard: the player's left-hand fingers press the strings in midair between the neck and the bow hair, relying entirely on muscle memory and ear training for intonation. Descended from proto-Mongolic instruments that entered China during the Tang dynasty, it was elevated to concert status by Liu Tianhua in the 1920s and is now the most prominent huqin in Chinese orchestral and solo repertoire, with conservatory programs across China producing thousands of trained players annually.",
+  "thumbnail": {
+    "src": "/images/skills/erhu.webp",
+    "alt": "Close-up of an erhu showing the hexagonal resonator, python skin membrane, and two strings",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "KfWuzOkRW0c",
+      "title": "The Erhu - A Closer Look (Shen Yun Performing Arts)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Erhu - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Erhu",
+      "type": "reference"
+    },
+    {
+      "title": "Erhu | Chinese, 2-string, bowed - Britannica",
+      "url": "https://www.britannica.com/art/erhu",
+      "type": "reference"
+    },
+    {
+      "title": "Learn the Erhu - Your Complete Guide to the Chinese Violin",
+      "url": "https://www.easonmusicschool.com/erhuhub/",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Simple melodies are achievable within 2-3 months of regular practice. However, the absence of a fingerboard means intonation must be learned entirely by ear and muscle memory, making the initial learning curve steeper than fretted instruments. Basic folk songs within 3-6 months."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Chinese conservatory programs require 4-year undergraduate degrees following years of youth training. Concert soloists like Min Huifen and Song Fei trained from childhood. Advanced position shifts, vibrato styles, and interpretive nuance require 10+ years of dedicated study."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Sound is produced immediately upon bowing. Intonation errors are instantly audible. The erhu's voice-like timbre makes pitch deviations particularly conspicuous to both player and audience."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "The instrument is relatively affordable (decent student instruments from $100-500). Python skin heads can crack in extreme humidity changes but are replaceable. Strings are inexpensive. Physical injury risk is minimal."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Without frets or a fingerboard, the player must maintain a precise mental map of pitch positions across all registers. Simultaneous management of bowing pressure, speed, contact point, and left-hand finger placement in free space. Chinese jianpu notation adds a secondary literacy requirement."
+    },
+    "physical_demand": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Left-hand fingers press strings in midair against bow hair tension, requiring sustained isometric grip. Bowing demands coordinated right-arm movement. Extended practice can cause finger callus issues and forearm fatigue, but overall physical demands are moderate compared to large instruments."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Basic musicality and pitch sensitivity are helpful. Knowledge of Chinese musical scales (pentatonic modes) and jianpu numbered notation accelerates learning but can be acquired concurrently. Piano or violin background provides marginal advantage in ear training."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Chinese conservatories have graded examination systems (typically 1-10 levels). Competition circuits exist within China. However, artistic expression and tonal beauty are heavily subjective. Intonation accuracy is objectively measurable."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "The fretless intonation skill degrades noticeably without regular practice. Muscle memory for pitch positions is highly specific and perishable. Bowing technique is somewhat more durable. Regular players report significant regression after even weeks away from the instrument."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "With no fingerboard and only two strings tuned a fifth apart, every pitch requires precise finger placement in free air to sub-millimeter accuracy. Bowing pressure and speed must be continuously controlled. The instrument's voice-like quality makes even slight intonation errors conspicuous."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Conservatory curriculum and graded exam systems provide clear technical benchmarks. However, interpretive style varies significantly between regional schools (e.g., northern vs. southern Chinese traditions), and the most valued quality -- emotional expressiveness -- resists objective definition."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Teacher guidance for the first 6-12 months is strongly recommended to establish correct posture, bow hold, and intonation habits. The fretless design makes self-correction of pitch errors very difficult for beginners. Online resources are growing but cannot fully substitute for in-person correction."
+    },
+    "environmental_variability": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "The python skin resonator head is sensitive to humidity changes, affecting tone and tuning stability. Temperature affects string tension. Indoor performance conditions are generally controllable, but the instrument requires acclimatization when moved between environments."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Simultaneous management of: left-hand pitch placement in free space, vibrato type and speed, bowing pressure and speed, bow-string contact point, right-arm angle, and musical interpretation. Comparable to violin in concurrent skill demands, with the added challenge of no fingerboard reference."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Initial progress to simple melodies is relatively fast. Significant plateaus occur at position shifting, vibrato development, and advanced bowing techniques. The transition from technically correct playing to musically expressive performance represents a major plateau."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "The modern erhu design has been stable since Liu Tianhua's reforms in the 1920s. Repertoire continues to expand with new compositions blending Chinese and Western styles. Synthetic skin alternatives to python skin are a recent material innovation but do not change playing technique."
+    },
+    "observability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "The haunting, voice-like tone is immediately captivating to listeners unfamiliar with the instrument. The visual simplicity of two strings and no fingerboard makes the difficulty non-obvious to casual observers, but the emotional impact of the sound is universally accessible."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "Performance quality is almost entirely determined by player skill. Minor environmental factors (humidity effects on skin head) introduce negligible variance. No random elements in technique or performance."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Solo performance is the highest-status tradition (Abing, Liu Tianhua repertoire). However, the erhu is also a core member of Chinese orchestras and ensemble traditions, requiring section coordination. Chamber music and duo formats are common."
+    }
+  },
+  "methodology_notes": "Scores informed by the Wikipedia article on erhu, Britannica's reference entry, and pedagogical resources from Eason Music School. Training timelines derived from Chinese conservatory program structures and community discussions among erhu learners. The erhu benefits from a relatively large body of pedagogical literature compared to the other instruments in this set, yielding higher confidence scores. Precision and cognitive demand scores reflect the unique challenge of fretless, fingerboard-less intonation."
+}

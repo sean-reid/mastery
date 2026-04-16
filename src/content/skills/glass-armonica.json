@@ -1,0 +1,138 @@
+{
+  "name": "Glass Armonica",
+  "slug": "glass-armonica",
+  "category": "instrument",
+  "description": "Invented by Benjamin Franklin in 1761, the glass armonica nests 37 glass bowls of graduated size on a horizontal iron spindle rotated by a foot pedal. The player touches water-moistened fingertips to the spinning rims to produce up to ten simultaneous tones. Fewer than a dozen professional players exist today; Dean Shostak is one of only eight worldwide and the sole performer who uses Franklin's original foot-pedal mechanism.",
+  "thumbnail": {
+    "src": "/images/skills/glass-armonica.webp",
+    "alt": "Glass armonica instrument showing nested glass bowls on a spindle with a player's moistened fingers",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "eQemvyyJ7v4",
+      "title": "William Zeitler performs Dance of the Sugar Plum Fairy on the Glass Armonica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Glass harmonica - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Glass_harmonica",
+      "type": "reference"
+    },
+    {
+      "title": "Benjamin Franklin's Glass Armonica - The Franklin Institute",
+      "url": "https://fi.edu/en/science-and-education/collection/benjamin-franklins-glass-armonica",
+      "type": "institutional"
+    },
+    {
+      "title": "Keeping the Ethereal Sounds of the Glass Armonica Alive - Atlas Obscura",
+      "url": "https://www.atlasobscura.com/articles/ben-franklin-singing-bowl-glass-armonica",
+      "type": "journalism"
+    },
+    {
+      "title": "Dean Shostak - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dean_Shostak",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.55,
+      "notes": "Basic tone production requires learning the precise finger moisture, pressure, and angle for each bowl. Unlike a keyboard, there is no mechanical action—sound depends entirely on the friction interface between wet skin and spinning glass. Months to produce reliable clean tones."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.5,
+      "notes": "Extremely limited data: with fewer than a dozen active professionals, training timelines are largely undocumented. William Zeitler and Dean Shostak have each performed for decades. Mozart and Beethoven composed for the instrument, suggesting 18th-century performers achieved concert proficiency."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.8,
+      "notes": "Sound production is immediate upon finger contact with the spinning bowl. Pitch and tone quality are instantly audible. Failed contact (dry fingers, wrong pressure) produces silence or squealing."
+    },
+    "failure_cost": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "The instrument itself is extraordinarily fragile and expensive. Each bowl is hand-blown glass tuned to a specific pitch. A cracked bowl can cost hundreds to replace and requires a specialist glassblower (historically G. Finkenbeiner Inc., now closed). Only a handful of instrument makers exist worldwide."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "Chromatic layout on the spindle mirrors keyboard white/black key logic. Polyphonic playing of up to 10 notes requires spatial awareness across the spinning bowls. Simpler than piano in harmonic complexity but unique in its tactile demands."
+    },
+    "physical_demand": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Foot pedal maintains spindle rotation. Fingers must maintain precise moisture levels—too wet produces no sound, too dry produces squealing. Historical reports of numbness and nerve sensitivity in players' fingers were once attributed to lead glass (now debunked for modern instruments)."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.6,
+      "notes": "Keyboard familiarity helps with the chromatic bowl layout. Music reading is useful. But the physical technique of producing sound from spinning glass is entirely unique and cannot transfer from any other instrument."
+    },
+    "measurability": {
+      "value": 2,
+      "confidence": 0.55,
+      "notes": "No competitions, no grading systems, no formal examinations. The player community is too small for any standardized assessment. William Zeitler defines professional-level as being able to perform Mozart's two glass armonica compositions."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.5,
+      "notes": "Limited data. The tactile sensitivity for correct finger pressure and moisture likely degrades without regular practice. The small repertoire means less material to forget."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.65,
+      "notes": "Each bowl's pitch is fixed (unlike violin), but producing clean tone requires precise finger pressure, moisture level, and contact angle. Playing multiple bowls simultaneously demands exact spatial placement. A slight error produces overtone distortion or silence."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.55,
+      "notes": "Pitch is fixed by the bowls (low ambiguity for intonation). But tone quality, dynamics, and phrasing involve subjective aesthetic judgment. The limited repertoire means few reference recordings exist for comparison."
+    },
+    "instruction_dependency": {
+      "value": 9,
+      "confidence": 0.7,
+      "notes": "No method books, no online courses, no standard pedagogy. Learning requires direct contact with one of the handful of existing players or extensive self-experimentation. Dean Shostak and William Zeitler are among the only teachers available."
+    },
+    "environmental_variability": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "Humidity significantly affects tone production: dry environments make the bowls harder to excite, while excessive humidity can cause unwanted resonances. Temperature changes can stress the glass. The instrument is extremely fragile to transport."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Foot pedal coordination for spindle speed, finger moisture management, spatial navigation across the bowls, and musical expression. Less complex than piano or organ but with unique tactile demands."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.45,
+      "notes": "Insufficient data for strong claims. Likely plateaus at initial tone production, polyphonic playing, and the transition to concert-level dynamic control. The small repertoire may limit progression pathways."
+    },
+    "domain_evolution": {
+      "value": 1,
+      "confidence": 0.8,
+      "notes": "The instrument is essentially unchanged since Franklin's 1761 design. Modern makers use lead-free glass (quartz crystal) but the mechanism is identical. The tiny repertoire grows by perhaps one or two new pieces per decade."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "The visual spectacle of spinning glass bowls touched by wet fingers producing ethereal tones is immediately captivating. The instrument's rarity alone makes any performance remarkable. The sound is unmistakable and unlike any other instrument."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.55,
+      "notes": "Environmental conditions (humidity, temperature) introduce some variance. Glass quality and tuning precision vary between instruments. A cracked bowl mid-performance is rare but devastating."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.7,
+      "notes": "Almost exclusively a solo instrument. A few orchestral works exist (e.g., Strauss's Die Frau ohne Schatten), but the vast majority of the repertoire is solo or with minimal accompaniment."
+    }
+  },
+  "methodology_notes": "Confidence scores are the lowest in the instrument set due to the extremely small player population (~8 professional players worldwide). Failure_cost is high (8) because the instrument itself is irreplaceably fragile. Instruction_dependency scores 9 because no formal pedagogy exists. Data draws on the Franklin Institute's documentation, Atlas Obscura reporting, and the biographies of Zeitler and Shostak."
+}

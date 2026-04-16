@@ -1,0 +1,138 @@
+{
+  "name": "Kintsugi",
+  "slug": "kintsugi",
+  "category": "trade",
+  "description": "Kintsugi ('golden joinery') repairs broken ceramics using urushi lacquer—refined sap from the Toxicodendron vernicifluum tree—as both adhesive and decorative medium. The process takes a minimum of three weeks per vessel: pieces are bonded with mugi-urushi (lacquer mixed with wheat flour), gaps filled with sabi-urushi (lacquer mixed with clay), then successive coats are applied, with each layer requiring days to cure in a controlled-humidity cabinet called a furo. The final coat is dusted with powdered gold while still tacky. Developed during the Muromachi period (1336-1573), the technique transforms damage into a visible history of the object.",
+  "thumbnail": {
+    "src": "/images/skills/kintsugi.webp",
+    "alt": "Japanese tea bowl repaired with gold-filled lacquer seams following the crack lines across a dark glaze",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "EBUTQkaSSTY",
+      "title": "The Art of Kintsugi: Japanese Golden Repair"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kintsugi - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kintsugi",
+      "type": "reference"
+    },
+    {
+      "title": "Kintsugi - Art of Repair | Traditional Kyoto",
+      "url": "https://traditionalkyoto.com/culture/kintsugi/",
+      "type": "institutional"
+    },
+    {
+      "title": "The Centuries-Old Japanese Tradition of Mending Broken Ceramics with Gold - Artsy",
+      "url": "https://www.artsy.net/article/artsy-editorial-centuries-old-japanese-tradition-mending-broken-ceramics-gold",
+      "type": "journalism"
+    },
+    {
+      "title": "Kintsugi Workshop - Japan National Tourism Organization",
+      "url": "https://www.japan.travel/en/experiences-in-japan/5871/",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "A simple two-piece repair using a kit can be completed in a few weeks. Understanding urushi behavior—its cure requirements, allergy risks, and application nuances—takes months of guided practice. Workshop programs range from 1-day introductions to 150-hour Kyoto apprenticeships."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.65,
+      "notes": "Traditional lacquer arts apprenticeships in Japan span 5 to 10 years. Mastering related maki-e techniques (fine gold painting on lacquer) and complex multi-fragment reconstructions requires decades. One prominent instructor has 35+ years of experience."
+    },
+    "feedback_delay": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Each urushi layer must cure for days in the humidity cabinet before the next can be applied. Errors in lacquer mixing, application thickness, or humidity control may not manifest until the curing stage is complete. The full repair takes a minimum of three weeks."
+    },
+    "failure_cost": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Powdered gold is expensive (kits with genuine gold cost $100-300+). Urushi is costly and has a limited shelf life. A failed repair may damage the original ceramic further. The vessel being repaired may itself be irreplaceable."
+    },
+    "cognitive_demand": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Understanding urushi chemistry (cure-by-humidity, laccase enzyme activation), fragment reassembly logic, and aesthetic judgment for where gold lines should flow. Less spatially complex than many trades but requires patience and material science knowledge."
+    },
+    "physical_demand": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Fine brush and palette knife work requiring steady hands but minimal physical exertion. The primary physical risk is urushi allergy—raw lacquer causes severe contact dermatitis in most people until tolerance develops."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Understanding of urushi behavior, ceramic properties, and adhesion chemistry is essential. Familiarity with the Japanese tea ceremony tradition informs aesthetic decisions. No formal academic prerequisites, but material knowledge cannot be skipped."
+    },
+    "measurability": {
+      "value": 4,
+      "confidence": 0.65,
+      "notes": "Structural integrity of the repair is objectively testable (food-safe, waterproof, durable). Aesthetic quality—the beauty and balance of gold lines—is deeply subjective and tied to wabi-sabi philosophy. No formal grading systems exist."
+    },
+    "perishability": {
+      "value": 4,
+      "confidence": 0.6,
+      "notes": "Urushi handling intuition and brush technique degrade without practice. Theoretical knowledge of materials and processes is more durable. The long cure times mean even active practitioners complete relatively few pieces per year."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Fragment alignment must be exact for structural integrity. Lacquer layer thickness affects both strength and aesthetics. Gold dusting requires precise timing—too early and the gold sinks, too late and it won't adhere. The final gold line width must be even."
+    },
+    "ambiguity": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Fragment reassembly is objective, but the aesthetic philosophy of kintsugi—celebrating rather than hiding damage—introduces significant subjective judgment. How prominently to feature the gold, whether to add decorative fills, and line width choices are artistic decisions."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Urushi handling cannot be safely or effectively self-taught. Allergy management, cure cabinet construction, and lacquer mixing ratios benefit enormously from direct instruction. Traditional master-apprentice transmission in Japan. Growing availability of kit-based instruction helps beginners."
+    },
+    "environmental_variability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Urushi cures by absorbing moisture from the air, requiring 70-85% humidity and 20-25 degrees Celsius. Too dry and it won't cure; too humid and it cures too fast, causing surface defects. The furo (humidity cabinet) is essential equipment."
+    },
+    "concurrent_skills": {
+      "value": 4,
+      "confidence": 0.65,
+      "notes": "Sequential rather than simultaneous skill demands. Each stage (bonding, filling, coating, gilding) is distinct. The main concurrent challenge is managing multiple vessels at different cure stages."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Initial plateau at achieving clean, structurally sound repairs. Second plateau at producing aesthetically refined gold lines. The transition to maki-e-level decorative work represents an advanced plateau that few reach."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Core technique unchanged since the Muromachi period. Modern additions include synthetic urushi alternatives and kit-based approaches for beginners, but traditional practitioners deliberately use historical methods and materials."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "The gold-highlighted repair lines are the entire point of the craft—they are designed to be seen and admired. The quality difference between crude and refined repairs is immediately visible to any viewer."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.65,
+      "notes": "Environmental fluctuations during curing can cause unexpected results. The pattern of breakage in the original vessel is random and affects difficulty. But most outcomes are determined by technique and material knowledge."
+    },
+    "social_coordination": {
+      "value": 1,
+      "confidence": 0.8,
+      "notes": "Entirely solitary craft. Each repair is done by a single person. The teacher-student relationship is the only significant social component."
+    }
+  },
+  "methodology_notes": "Scores draw on Wikipedia's documented history, Traditional Kyoto's practitioner accounts, Artsy's reporting on the craft, and training program descriptions from Kintsugi Labo Japan and Chimahaga. The growing popularity of kintsugi kits creates a bifurcation between casual practitioners and traditional urushi masters; scores here target the traditional practice. Confidence is moderate due to the craft's recent popularization making it harder to separate traditional from simplified approaches."
+}

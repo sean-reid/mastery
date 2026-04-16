@@ -1,0 +1,141 @@
+{
+  "name": "Tournament Poker",
+  "slug": "tournament-poker",
+  "category": "game",
+  "description": "No-limit hold'em tournaments are the canonical incomplete-information game, where irrevocable all-in decisions are made on two private cards and probabilistic inference. A Levitt/Miles study found skilled players achieved +30% ROI at the WSOP vs. -15% for the field, yet skill explains only ~17% of hand-level variance -- a world champion can lose to an amateur on any given day.",
+  "thumbnail": {
+    "src": "/images/skills/tournament-poker.webp",
+    "alt": "Poker chips and hole cards on a green felt tournament table",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "daXLEEe1eeM",
+      "title": "2023 WSOP Main Event - Daniel Weinman Wins $12.1 Million"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Role of Skill Versus Luck in Poker: Evidence from the World Series of Poker",
+      "author": "Steven D. Levitt, Thomas J. Miles",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/1527002512449471",
+      "year": 2014,
+      "type": "research"
+    },
+    {
+      "title": "Is poker a game of skill or chance? A quasi-experimental study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22892961/",
+      "year": 2012,
+      "type": "research"
+    },
+    {
+      "title": "Texas hold 'em",
+      "url": "https://en.wikipedia.org/wiki/Texas_hold_%27em",
+      "type": "reference"
+    },
+    {
+      "title": "The dominance of skill in online poker",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0144818822000758",
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 3,
+      "confidence": 0.85,
+      "notes": "Basic rules and hand rankings learnable in an hour. Playing a coherent tournament strategy (position, pot odds, stack-depth awareness) takes weeks to months."
+    },
+    "time_to_expert": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Estimates range from 1-7 years to become a consistent winning professional. Multiple sources cite a minimum of 1 million hands of deliberate practice. The field has become dramatically more skilled since the 2003 poker boom."
+    },
+    "feedback_delay": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Individual hand results are immediate but deeply misleading -- correct decisions lose money due to variance. Reliable assessment of skill requires 500+ hours of play to separate signal from noise."
+    },
+    "failure_cost": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Tournament buy-ins range from $1 to $250,000. Professional players routinely experience months-long losing streaks that can deplete bankrolls. Financial ruin is a real risk without bankroll management."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Simultaneous computation of pot odds, implied odds, opponent range estimation, ICM (tournament equity), and GTO (game-theory-optimal) frequencies. Modern professionals use solver software to study optimal frequencies."
+    },
+    "physical_demand": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Seated activity. Major tournaments involve 12-14 hour sessions over multiple days, requiring stamina but no athletic ability."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Basic probability and combinatorics help but aren't formally required. Game-theory-optimal concepts have become essential at higher levels but are learned within the domain."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "No universally accepted rating system. ROI and hourly win rate are standard metrics but require enormous sample sizes due to variance. The Hendon Mob and GPI rank tournament results."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Core strategic thinking is durable, but the optimal strategy evolves as the player pool improves. Exploitative adjustments to current population tendencies require ongoing study."
+    },
+    "precision_required": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Bet sizing must be precise to manipulate pot odds. GTO strategies require specific frequencies (e.g., bluffing exactly 33% on river bets). Small deviations are exploitable by skilled opponents."
+    },
+    "ambiguity": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "The correct play can lose and the incorrect play can win. Outcomes are noisy. Even experts disagree on optimal lines in complex spots. Solver solutions often produce mixed strategies."
+    },
+    "instruction_dependency": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Self-study is highly viable through solver software (PioSolver, GTO+), training sites, and hand history review. Coaching accelerates but is not required."
+    },
+    "environmental_variability": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Card distribution is random. Table composition changes constantly in tournaments. Stack sizes, blind levels, bubble dynamics, and opponent tendencies create unique situations every hand."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Simultaneously managing mathematical computation, opponent reads, emotional regulation, table image management, bankroll awareness, and ICM considerations in tournament play."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Variance obscures skill improvements for extended periods. Players can improve significantly without seeing results for months, making it difficult to confirm progress."
+    },
+    "domain_evolution": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "The game has evolved dramatically since the early 2000s. GTO solvers have transformed strategy. Strategies from even 5 years ago are exploitable today. Continuous adaptation is required."
+    },
+    "observability": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Televised poker with hole-card cameras makes skill visible. Live play is harder to assess -- a great fold looks the same as a bad one to spectators."
+    },
+    "luck_variance": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Levitt/Miles found skill is real but variance is enormous. A world-class player entering a single tournament has roughly a 15-20% chance of cashing. Short-term results are dominated by card distribution."
+    },
+    "social_coordination": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Fundamentally an individual game played against other individuals. Table dynamics involve social reading and manipulation. Study groups and coaching stables exist but competition is solo."
+    }
+  },
+  "methodology_notes": "Scores informed by the Levitt/Miles 2014 WSOP study (Journal of Sports Economics), the 2012 PubMed quasi-experimental study on poker skill vs. chance, and the ScienceDirect study on skill dominance in online poker. Training timelines from established poker coaching resources (BlackRain79, Upswing Poker). The high luck_variance score reflects the well-documented tension between poker's long-term skill component and short-term randomness."
+}

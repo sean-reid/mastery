@@ -1,0 +1,64 @@
+{
+  "name": "Air Traffic Control",
+  "slug": "air-traffic-control",
+  "category": "academic",
+  "description": "Air traffic controllers maintain a continuously updating three-dimensional mental model -- called 'the picture' -- of dozens of aircraft moving at different speeds, altitudes, and headings, issuing separation instructions with zero tolerance for error; the FAA Academy's historical washout rate of roughly 50% before trainees even reach a facility reflects the cognitive demands of a profession where a single missed conflict can endanger hundreds of lives.",
+  "thumbnail": {
+    "src": "/images/skills/air-traffic-control.webp",
+    "alt": "Air traffic controller monitoring multiple radar screens in a darkened control room",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "04bwGslChag",
+      "title": "How Air Traffic Control Works"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Air traffic control - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Air_traffic_control",
+      "type": "reference"
+    },
+    {
+      "title": "Attrition in U.S. Air Traffic Control Specialist (ATCS) Training",
+      "url": "https://corescholar.libraries.wright.edu/cgi/viewcontent.cgi?article=1007&context=isap_2017",
+      "year": 2017,
+      "type": "research"
+    },
+    {
+      "title": "Air Traffic Controller Qualifications - Federal Aviation Administration",
+      "url": "https://www.faa.gov/air-traffic-controller-qualifications",
+      "type": "institutional"
+    },
+    {
+      "title": "Flight to the Future: Human Factors in Air Traffic Control - National Academies Press",
+      "url": "https://www.nationalacademies.org/read/5493/chapter/7",
+      "year": 1997,
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 6, "confidence": 0.85, "notes": "The FAA Academy runs 8-16 weeks, but a trainee then requires 2-3 years of on-the-job training at their assigned facility before achieving full certification. Total path from hire to certified professional controller: roughly 3-4 years." },
+    "time_to_expert": { "value": 7, "confidence": 0.8, "notes": "Mastery of complex TRACON or en-route center operations takes 5-10 years of active duty. Controllers must be hired before age 31 and face mandatory retirement at 56, reflecting the cognitive intensity." },
+    "feedback_delay": { "value": 1, "confidence": 0.9, "notes": "Feedback is immediate and continuous: aircraft positions update on radar every few seconds, and any separation violation triggers instant alerts. Post-incident review follows within hours." },
+    "failure_cost": { "value": 10, "confidence": 0.95, "notes": "Errors can directly cause midair collisions or runway incursions involving hundreds of lives. The Tenerife disaster (583 deaths) and Ueberlingen midair collision illustrate the catastrophic consequences of ATC-related failures." },
+    "cognitive_demand": { "value": 9, "confidence": 0.9, "notes": "Requires simultaneously maintaining spatial models of dozens of aircraft in 3D, predicting trajectories, detecting conflicts, issuing instructions, and communicating with pilots -- all under time pressure. The National Academies report identifies predictive spatial reasoning as the critical bottleneck." },
+    "physical_demand": { "value": 1, "confidence": 0.9, "notes": "Sedentary work at radar consoles, but the sustained stress and concentration produce measurable physiological effects. Controllers work regulated shift patterns due to fatigue concerns." },
+    "prerequisite_knowledge": { "value": 5, "confidence": 0.8, "notes": "Requires understanding of aviation terminology, meteorology, aircraft performance characteristics, and airspace regulations, but these are taught during training rather than requiring prior academic degrees. FAA-approved collegiate programs provide a head start." },
+    "measurability": { "value": 7, "confidence": 0.8, "notes": "Performance is tracked through separation violations, operational errors, and efficiency metrics. Certification exams are pass/fail. However, the quality of 'the picture' and situational awareness are harder to quantify." },
+    "perishability": { "value": 7, "confidence": 0.8, "notes": "Controllers who leave active duty for extended periods must recertify. Facility-specific knowledge (local procedures, airspace geometry) is highly perishable. The mandatory retirement age of 56 reflects acknowledged cognitive decline." },
+    "precision_required": { "value": 9, "confidence": 0.9, "notes": "Separation minimums are precisely defined (e.g., 3 nautical miles lateral, 1,000 feet vertical in terminal airspace). A callsign error or altitude misassignment can be fatal. Phraseology is standardized to the word." },
+    "ambiguity": { "value": 4, "confidence": 0.8, "notes": "Rules and procedures are highly standardized, but weather, pilot deviations, equipment failures, and unusual traffic patterns introduce real-time ambiguity requiring rapid judgment." },
+    "instruction_dependency": { "value": 8, "confidence": 0.85, "notes": "Cannot be self-taught. Requires formal FAA Academy training, facility-specific certification, and extensive supervised on-the-job training with experienced controllers. The mentorship chain is mandatory." },
+    "environmental_variability": { "value": 7, "confidence": 0.8, "notes": "Weather, traffic volume, runway configurations, equipment outages, and emergency situations create high variability. A controller at JFK faces fundamentally different challenges than one at a regional tower, and conditions change hour to hour." },
+    "concurrent_skills": { "value": 9, "confidence": 0.85, "notes": "Simultaneously managing spatial reasoning, verbal communication with multiple pilots, coordination with adjacent sectors, strip management or electronic flight data, and conflict detection -- all under time pressure with no pause button." },
+    "plateau_density": { "value": 6, "confidence": 0.7, "notes": "Major plateaus during transition from simulated to live traffic and when progressing from low-density to high-density positions. The roughly 50% Academy attrition and 20% facility-level washout rate suggest many trainees hit insurmountable plateaus." },
+    "domain_evolution": { "value": 5, "confidence": 0.75, "notes": "Core separation principles are stable, but technology is evolving with NextGen/SESAR modernization programs introducing satellite-based surveillance, datalink communications, and automated conflict detection tools." },
+    "observability": { "value": 4, "confidence": 0.75, "notes": "The radar screen and voice communications are dramatic when witnessed, and YouTube channels like VASAviation have made ATC recordings popular. But the internal cognitive process -- 'the picture' -- remains invisible." },
+    "luck_variance": { "value": 2, "confidence": 0.85, "notes": "Outcomes are overwhelmingly determined by controller skill and adherence to procedures. Random factors (sudden weather changes, simultaneous emergencies) exist but are managed through system redundancy." },
+    "social_coordination": { "value": 7, "confidence": 0.85, "notes": "Continuous coordination with pilots, adjacent sectors, approach/departure control, and supervisors. Effective communication is not ancillary to the skill -- it is the skill. Controllers work in teams with clearly defined handoff procedures." }
+  },
+  "methodology_notes": "Scores are informed by the National Academies' 'Flight to the Future' report on cognitive demands, FAA qualification requirements and Academy attrition data (~50% washout rate), Wright State University's research on ATCS training attrition, and Washington Post reporting on the ongoing controller shortage. The failure_cost score of 10 reflects the Tenerife and Ueberlingen disasters and the FAA's zero-tolerance safety framework."
+}

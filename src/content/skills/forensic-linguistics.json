@@ -1,0 +1,138 @@
+{
+  "name": "Forensic Linguistics",
+  "slug": "forensic-linguistics",
+  "category": "language",
+  "description": "Forensic linguistics applies quantitative stylometric analysis -- measuring word-length distributions, function-word frequencies, punctuation patterns, and syntactic preferences -- to determine authorship, detect deception, and resolve legal disputes from text alone, a discipline whose most famous success was identifying the Unabomber through his idiosyncratic use of the phrase 'eat your cake and have it too' and consistent double-spacing after periods.",
+  "thumbnail": {
+    "src": "/images/skills/forensic-linguistics.webp",
+    "alt": "Magnifying glass over typed document with highlighted text patterns",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "RS5O4n0TqlU",
+      "title": "Forensic Linguistic Profiling & What Your Language Reveals About You | Harry Bradford | TEDxStoke"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Forensic linguistics - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Forensic_linguistics",
+      "type": "reference"
+    },
+    {
+      "title": "Who Wrote This? Modern Forensic Authorship Analysis as a Model for Valid Forensic Science - Washington University Law Review",
+      "url": "https://openscholarship.wustl.edu/cgi/viewcontent.cgi?article=6449&context=law_lawreview",
+      "type": "research"
+    },
+    {
+      "title": "About - IAFLL (International Association for Forensic and Legal Linguistics)",
+      "url": "https://iafll.org/about-2/",
+      "type": "institutional"
+    },
+    {
+      "title": "Forensic Authorship Analysis - CREST Research",
+      "url": "https://crestresearch.ac.uk/comment/forensic-authorship-analysis/",
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "A graduate certificate in forensic linguistics (e.g., Alliant International University, Hofstra) requires 6-12 months of study. Basic understanding of stylometric methods and authorship analysis can be acquired in a semester. However, applying these methods credibly in legal proceedings requires deeper training."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Expert witness credibility requires a PhD or equivalent in linguistics with specialization in forensic applications, plus years of casework experience. James Fitzgerald, the FBI's key forensic linguist in the Unabomber case, developed his expertise over decades of criminal investigation. The field demands both linguistic training and legal procedural knowledge."
+    },
+    "feedback_delay": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Authorship attribution in casework may not be validated for months or years (until a suspect confesses, is convicted, or a case is resolved). Academic research provides faster feedback through peer review, but real-world application feedback is inherently slow. Ground truth is often unavailable."
+    },
+    "failure_cost": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Incorrect authorship attribution in criminal cases can lead to wrongful conviction or allow a guilty party to go free. Expert testimony carries legal and ethical weight. The Daubert standard for admissibility of forensic evidence raises the stakes for methodological rigor."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Requires simultaneous mastery of statistical methods (Bayesian analysis, discriminant function analysis), linguistic theory (syntax, pragmatics, sociolinguistics), and legal procedure. Practitioners must hold competing hypotheses in mind while analyzing subtle stylistic patterns across large text corpora."
+    },
+    "physical_demand": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "Entirely intellectual and desk-based work. Analysis involves reading, statistical computation, and report writing."
+    },
+    "prerequisite_knowledge": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Effective practice requires graduate-level linguistics (phonology, syntax, semantics, sociolinguistics), statistical literacy (multivariate analysis, probability), and understanding of legal evidentiary standards. Many practitioners also need training in computational tools for stylometry."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Authorship attribution can be tested against known-author corpora with quantifiable accuracy rates. However, real forensic cases rarely have clean ground truth. The field lacks a single standardized certification, though IAFLL provides professional standards. Inter-analyst reliability varies."
+    },
+    "perishability": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Core analytical skills (linguistic pattern recognition, statistical reasoning) are durable. However, computational tools and methods evolve, and familiarity with current NLP techniques requires ongoing education. Legal standards for admissibility also change."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Stylometric analysis requires precise measurement of features: function-word frequencies to decimal places, sentence-length distributions, punctuation patterns. Small errors in data collection or statistical analysis can invalidate conclusions. Legal testimony demands reproducible precision."
+    },
+    "ambiguity": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Authorship attribution is inherently probabilistic, not deterministic. Analysts produce likelihood ratios, not certainties. Style can be deliberately disguised, texts may be collaboratively authored, and idiolect is not as unique as a fingerprint. The field has ongoing debates about what constitutes sufficient evidence."
+    },
+    "instruction_dependency": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Graduate programs and mentorship from experienced practitioners are strongly recommended but not strictly required. Published methodologies, open-source stylometry tools (Stylo, JGAAP), and academic literature allow motivated self-study. However, courtroom credibility depends on formal credentials."
+    },
+    "environmental_variability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Every case presents unique challenges: different text lengths, genres, registers, and potential for deliberate style manipulation. Methods that work well for long literary texts may fail for short social media posts. Multilingual cases add another dimension of variability."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Practitioners simultaneously apply linguistic analysis, statistical methods, legal reasoning, and communication skills (for expert reports and testimony). Cross-examination requires the ability to defend methodology under adversarial questioning."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Steady progression through academic training, with plateaus at the transition from theoretical knowledge to casework application and from analysis to courtroom testimony. The interdisciplinary nature means learners from linguistics backgrounds plateau on statistics and vice versa."
+    },
+    "domain_evolution": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "The field is evolving rapidly with NLP, machine learning, and large language models transforming computational stylometry. AI-generated text poses new challenges for authorship analysis. Legal standards for admissibility of linguistic evidence are still being established in many jurisdictions."
+    },
+    "observability": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "The work is largely invisible -- reading documents, running statistical analyses, writing reports. High-profile cases (Unabomber, JonBenet Ramsey ransom note) occasionally bring public attention, but day-to-day forensic linguistics work is not observable to outsiders."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Analysis quality is skill-dependent, but case outcomes involve factors beyond the analyst's control: text quality, availability of comparison samples, legal proceedings. Some cases present ideal conditions (long texts, known candidate pool) while others are intractable regardless of analyst skill."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Core analysis is individual work, but forensic linguists operate within teams of investigators, attorneys, and other forensic specialists. Expert testimony requires coordination with legal counsel. Peer review and the IAFLL community provide professional support."
+    }
+  },
+  "methodology_notes": "Scores are based on descriptions from the IAFLL, Washington University Law Review's analysis of forensic authorship methodology, CREST Research's summary of forensic authorship analysis, and Wikipedia's comprehensive article on forensic linguistics. The Unabomber case (James Fitzgerald's work) and the field's Daubert standard challenges informed the failure_cost and measurability scores. Domain evolution scores reflect the rapid impact of NLP and LLMs on the field since 2020."
+}

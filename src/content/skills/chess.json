@@ -1,0 +1,138 @@
+{
+  "name": "Chess",
+  "slug": "chess",
+  "category": "game",
+  "description": "The canonical strategy game. 1,500 years of accumulated theory, a rating system that quantifies skill with surgical precision, and a gap between amateur and grandmaster so vast that a top player can win blindfolded against a strong club player.",
+  "thumbnail": {
+    "src": "/images/skills/chess.webp",
+    "alt": "Chess pieces on a wooden board during a tournament game",
+    "attribution": "Photo by Unsplash"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "Hpqmq-SNEhk",
+      "title": "Magnus Carlsen's most brilliant moves"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The role of deliberate practice in the acquisition of expert performance",
+      "author": "K. Anders Ericsson, Ralf Th. Krampe, Clemens Tesch-Romer",
+      "url": "https://psycnet.apa.org/record/1993-40718-001",
+      "year": 1993,
+      "type": "research"
+    },
+    {
+      "title": "Elo rating system - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Elo_rating_system",
+      "type": "competition"
+    },
+    {
+      "title": "Deliberate Practice and Performance in Music, Games, Sports, Education, and Professions: A Meta-Analysis",
+      "author": "Brooke N. Macnamara, David Z. Hambrick, Frederick L. Oswald",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24986855/",
+      "year": 2014,
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 3,
+      "confidence": 0.9,
+      "notes": "Basic rules and casual play within days; club-level play within months of study."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.95,
+      "notes": "Average grandmaster reaches title around 10 years of serious study. Median GM age at title: ~23."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.9,
+      "notes": "Each game ends with a clear result. Engine analysis provides instant post-game feedback."
+    },
+    "failure_cost": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "A lost game costs nothing but ego. Tournament losses affect rating."
+    },
+    "cognitive_demand": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Pattern recognition across 64 squares, calculation of branching variations 10+ moves deep, time pressure."
+    },
+    "physical_demand": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "Seated activity. Top players train physically for endurance during 6+ hour games."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.9,
+      "notes": "Rules are simple. Opening theory and endgame technique build over time but aren't prerequisites."
+    },
+    "measurability": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "Elo rating system is one of the most precise skill measurements in any domain."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Pattern recognition is durable, but opening preparation and tactical sharpness decay within weeks of inactivity."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "At the top level, a single inaccuracy in 40 moves can be decisive."
+    },
+    "ambiguity": {
+      "value": 2,
+      "confidence": 0.9,
+      "notes": "Win, lose, or draw. Engine evaluation provides objective position assessment."
+    },
+    "instruction_dependency": {
+      "value": 4,
+      "confidence": 0.85,
+      "notes": "Self-study via books, engines, and online resources is viable. Coaching accelerates but isn't required."
+    },
+    "environmental_variability": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "Identical starting position every game. No randomness in the game itself."
+    },
+    "concurrent_skills": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Simultaneously managing calculation, pattern recognition, time management, positional evaluation, and psychological pressure."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Notorious rating plateaus, especially around 1200, 1600, and 2000 Elo."
+    },
+    "domain_evolution": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Opening theory evolves constantly, accelerated by engine analysis. Fundamentals are stable."
+    },
+    "observability": {
+      "value": 3,
+      "confidence": 0.85,
+      "notes": "Two players sitting at a board look identical to a non-player. The depth is invisible without commentary."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "No random elements. Variance comes only from inconsistent human performance."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.9,
+      "notes": "Primarily a solo intellectual contest. Team chess exists but is marginal."
+    }
+  },
+  "methodology_notes": "Chess scores are among the most data-rich in the set. Elo distributions from FIDE provide precise percentile data. Ericsson's deliberate practice research used chess as a primary domain. Training timelines are well-documented across thousands of titled players.",
+  "interactive": "pattern-memory"
+}

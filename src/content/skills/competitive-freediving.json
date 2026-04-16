@@ -1,0 +1,138 @@
+{
+  "name": "Competitive Freediving (Depth)",
+  "slug": "competitive-freediving",
+  "category": "sport",
+  "description": "Descending to extreme ocean depths on a single breath, then returning to the surface alive. In Constant Weight (CWT), the marquee discipline, divers use a monofin to reach 100+ meters where pressure crushes the lungs to a fraction of their volume, demanding flawless equalization and absolute physiological control. Alexey Molchanov holds the CWT record at 136 meters. PubMed data shows a 3.4% incident rate across 38,789 competitive starts, with hypoxic blackout and pulmonary barotrauma (lung squeeze) as primary risks.",
+  "thumbnail": {
+    "src": "/images/skills/competitive-freediving.webp",
+    "alt": "A freediver descending along a line into deep blue water wearing a monofin",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "jL1dnfF6-Qo",
+      "title": "Alexey Molchanov World Record CWT Freedive to 136m"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Freediving",
+      "url": "https://en.wikipedia.org/wiki/Freediving",
+      "type": "reference"
+    },
+    {
+      "title": "AIDA International - Competitive Freediving",
+      "url": "https://www.aidainternational.org/competitive",
+      "type": "institutional"
+    },
+    {
+      "title": "Unlocking the depths: multiple factors contribute to risk for hypoxic blackout during deep freediving",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37300699/",
+      "type": "research"
+    },
+    {
+      "title": "Constant weight apnea",
+      "url": "https://en.wikipedia.org/wiki/Constant_weight_apnea",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "AIDA 2 certification (12m depth) requires weeks of training. Reaching 20-30m takes several months for most beginners. The skills involved -- equalization, relaxation, breath-hold technique, and monofin use -- each require dedicated practice. Unlike static apnea, depth adds pressure management complexity."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "Competitive depth beyond 100m requires years of progressive training. Molchanov began freediving as a teenager and reached world-record territory over a 21-year career spanning 40+ world records. AIDA 4 (32m+ CWT) is the highest recreational certification; competition-level depth demands years beyond that."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Depth achieved is precisely measurable per dive. Dive computers record exact depth, time, and descent/ascent profiles. However, physiological adaptation (CO2 tolerance, equalization at depth, lung flexibility) develops over weeks and months, creating some delayed feedback on training effectiveness."
+    },
+    "failure_cost": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Death is a real and documented outcome. Hypoxic blackout occurs in ~3.3% of competitive starts. Lung squeeze (pulmonary barotrauma) occurs in ~0.4% of starts and can cause hemoptysis and hospitalization. Nitrogen narcosis impairs judgment at depth. Even with safety divers, the margin between a successful dive and a fatal one narrows with every meter."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Mental control is paramount: managing the mammalian dive reflex, suppressing panic during diaphragm contractions, maintaining relaxation as oxygen depletes, and executing equalization techniques at extreme pressure. Not intellectually complex but demands profound psychological discipline and body awareness."
+    },
+    "physical_demand": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Requires trained cardiovascular adaptation, diaphragm flexibility for equalization at depth, monofin propulsion efficiency, and CO2/hypoxia tolerance. The body must withstand 14+ atmospheres of pressure at 130m. Lung volume compresses to ~1/14th of surface volume. Core strength and flexibility are essential for efficient monofin technique."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Understanding dive physiology (Boyle's law, mammalian dive reflex, oxygen/CO2 dynamics) is essential for safety. Knowledge of equalization techniques (Frenzel, mouthfill) is mandatory at depth. AIDA courses include theory exams. Swimming competence is assumed."
+    },
+    "measurability": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "Measured in meters of depth achieved. AIDA and CMAS maintain precise world record databases. Dive computers record depth to centimeter precision. Competition results are objective. One of the most quantifiable athletic disciplines."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "CO2 tolerance, equalization flexibility, and depth-specific adaptations decay within weeks of inactivity. The trained mammalian dive reflex requires maintenance. Maximum depth capability drops significantly without regular deep training dives. Returning to previous depths after breaks requires progressive re-adaptation."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Equalization at extreme depth demands precise Frenzel or mouthfill technique with diminishing air reserves. Monofin technique must be hydrodynamically efficient to conserve oxygen. Turn at depth and ascent timing must be precisely managed. A single failed equalization attempt can end a dive or cause barotrauma."
+    },
+    "ambiguity": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Depth achieved is objective. AIDA surface protocol (removing facial equipment, giving OK signal, maintaining consciousness for 15 seconds) provides clear pass/fail criteria. Disqualification criteria are well-defined. Minimal subjective judging."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Self-taught deep freediving is extremely dangerous and strongly discouraged. AIDA and CMAS certification programs provide structured progression. Equalization techniques, safety protocols, and depth-specific adaptations require expert instruction. Training without qualified supervision risks death."
+    },
+    "environmental_variability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Water temperature, currents, thermoclines, visibility, and salinity all affect performance. Open-water conditions vary significantly between competition venues. Altitude of the competition site affects oxygen saturation. Deep-water conditions (darkness, cold) change character dramatically with depth."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Simultaneously managing breath-hold, equalization (continuous at depth), monofin propulsion, buoyancy awareness, depth tracking, mental relaxation, and dive reflex optimization. Each skill must operate in parallel under increasing physiological stress as depth increases."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Notable plateaus at equalization limits (~30-40m where Frenzel technique fails and mouthfill is needed), at narcosis onset depths (~60-70m), and approaching personal maximum depth. Each barrier requires different adaptation strategies. Progress stalls notoriously at these physiological thresholds."
+    },
+    "domain_evolution": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Monofin technology has improved. Training methodologies continue to evolve (Molchanov's mother Natalia developed novel instructional methods). New disciplines like CWTB have been added. However, human physiology remains the limiting factor, and the fundamental challenge is unchanged."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Underwater camera footage of deep dives is visually stunning and viscerally tense. The surface protocol (watching a diver return from 130m and attempt to signal consciousness) is gripping drama. The depth numbers alone communicate the achievement to any audience."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Day-to-day physiological variation (sleep, stress, digestion, minor illness) can affect maximum depth by several meters. Thermocline positioning and current conditions vary. However, outcomes are overwhelmingly determined by training, technique, and adaptation. The best divers consistently perform."
+    },
+    "social_coordination": {
+      "value": 3,
+      "confidence": 0.85,
+      "notes": "An individual discipline. Safety divers and coaches are essential support but do not affect the dive itself. Team events exist but individual depth performance dominates the competitive landscape. The diver is alone at maximum depth."
+    }
+  },
+  "methodology_notes": "Scores informed by AIDA International competition rules and certification standards, the Wikipedia articles on freediving and constant weight apnea, and PubMed research on hypoxic blackout risk factors (PMID 37300699) and freediving-induced pulmonary syndrome (PMID 39675735). The 3.43% incident rate across 38,789 competitive starts (2019-2023) provides empirical grounding for the failure cost score. Training timelines derived from AIDA certification progression (AIDA 2 at 12m through AIDA 4 at 32m+) and Molchanov's documented 21-year competitive career."
+}

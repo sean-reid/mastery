@@ -1,0 +1,63 @@
+{
+  "name": "Arabic (Modern Standard)",
+  "slug": "arabic",
+  "category": "language",
+  "description": "Arabic's root-and-pattern morphology means most words derive from three-consonant roots (k-t-b yields 'book,' 'writer,' 'library,' 'correspondence') -- an elegant system that also means learners must internalize a second, spoken dialect for daily life, since no Arab community uses Modern Standard Arabic in ordinary conversation.",
+  "thumbnail": {
+    "src": "/images/skills/arabic.webp",
+    "alt": "Arabic calligraphy in Thuluth script on aged parchment",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "EIFBaqpmJJg",
+      "title": "Arabic - Why is it so hard? An introduction to Modern Standard Arabic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Foreign Language Training - United States Department of State",
+      "url": "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training",
+      "type": "institutional"
+    },
+    {
+      "title": "Diglossia - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Diglossia",
+      "type": "reference"
+    },
+    {
+      "title": "Arabic diglossia: advocating for a non-deficit model in comparative analysis of reading and language acquisition",
+      "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1518728/full",
+      "year": 2025,
+      "type": "research"
+    },
+    {
+      "title": "Arabic, Standard Language (ARB) - Ethnologue",
+      "url": "https://www.ethnologue.com/language/arb/",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 8, "confidence": 0.9, "notes": "FSI Category V: 2,200 class hours (88 weeks intensive). Right-to-left script, new alphabet of 28 letters with positional variants, and diglossia compound the challenge." },
+    "time_to_expert": { "value": 9, "confidence": 0.85, "notes": "True mastery requires command of MSA for formal contexts plus at least one colloquial dialect for daily life. Classical Arabic for religious or literary texts adds another dimension. 10-15+ years for near-native command." },
+    "feedback_delay": { "value": 3, "confidence": 0.8, "notes": "Pronunciation errors are quickly noticed by native speakers. Grammar mistakes in MSA are caught in formal settings. But diglossia means learners may not realize they are mixing registers for months." },
+    "failure_cost": { "value": 1, "confidence": 0.9, "notes": "No physical risk. Social embarrassment from register errors. In diplomatic contexts, incorrect formality level can cause offense but not danger." },
+    "cognitive_demand": { "value": 8, "confidence": 0.85, "notes": "Root-pattern morphology requires abstract pattern recognition. Pharyngeal and emphatic consonants are articulatorily novel for most learners. Short vowels often unwritten, requiring morphological inference while reading." },
+    "physical_demand": { "value": 1, "confidence": 0.95, "notes": "Pharyngeal consonants require unfamiliar throat articulations but are not physically demanding. Right-to-left handwriting is a minor motor adjustment." },
+    "prerequisite_knowledge": { "value": 1, "confidence": 0.9, "notes": "No formal prerequisites. Basic literacy in any language is sufficient starting point." },
+    "measurability": { "value": 7, "confidence": 0.8, "notes": "ACTFL and ILR proficiency scales apply. Various standardized tests exist (ALPT, DLPT). However, diglossia complicates assessment -- MSA proficiency does not predict colloquial fluency." },
+    "perishability": { "value": 6, "confidence": 0.8, "notes": "Arabic script reading speed degrades within weeks of disuse. Pharyngeal consonant production deteriorates without practice. Root-pattern intuition is more durable once internalized." },
+    "precision_required": { "value": 7, "confidence": 0.8, "notes": "Short vowel patterns distinguish grammatical case and verb form. Emphatic vs. plain consonants change word meaning. Formal MSA demands precise case endings that even many native speakers struggle with." },
+    "ambiguity": { "value": 5, "confidence": 0.75, "notes": "Unvoweled text is highly ambiguous and requires contextual disambiguation. Root system creates semantic transparency but also overloaded homographs. Poetry and Quranic Arabic are especially multi-layered." },
+    "instruction_dependency": { "value": 6, "confidence": 0.8, "notes": "Script and pronunciation strongly benefit from instructor guidance. Diglossia makes self-study especially challenging since textbooks teach MSA but media and conversation use dialect. Immersion without instruction leads to dialect-only acquisition." },
+    "environmental_variability": { "value": 7, "confidence": 0.85, "notes": "Massive dialectal variation: Egyptian, Levantine, Gulf, and Maghrebi Arabic are often mutually unintelligible. MSA is consistent across regions but rarely spoken naturally anywhere." },
+    "concurrent_skills": { "value": 7, "confidence": 0.8, "notes": "Reading requires simultaneous root extraction, pattern matching, contextual vowel inference, and right-to-left tracking. Speaking adds register monitoring (MSA vs. dialect) and pharyngeal articulation." },
+    "plateau_density": { "value": 7, "confidence": 0.8, "notes": "Major plateaus at script acquisition, first dialect encounter (after learning only MSA), and the advanced literary/classical boundary. Many learners stall at 'textbook Arabic' that no one actually speaks." },
+    "domain_evolution": { "value": 2, "confidence": 0.85, "notes": "MSA grammar has been stable for over a century. The Quran anchors classical norms. Modern vocabulary expands for technology and politics, but structural change is minimal." },
+    "observability": { "value": 6, "confidence": 0.8, "notes": "Script is visually distinctive and immediately recognizable. Spoken fluency is apparent to listeners. Register errors are noticed by educated native speakers." },
+    "luck_variance": { "value": 1, "confidence": 0.9, "notes": "Language acquisition is effort-driven. Minor variance from which dialect environment a learner encounters first." },
+    "social_coordination": { "value": 4, "confidence": 0.8, "notes": "Conversation partners are essential for dialect acquisition. MSA can be studied solo but sounds artificial without social practice. Community immersion dramatically accelerates dialect learning." }
+  },
+  "methodology_notes": "Scores based on FSI Category V classification (2,200 hours to professional proficiency), Ferguson's 1959 diglossia framework, Ethnologue speaker data (~313 million native speakers across all Arabic varieties), and Frontiers in Education research on Arabic diglossia effects on acquisition. Dialectal variation data from comparative linguistics research."
+}

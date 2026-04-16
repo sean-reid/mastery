@@ -1,0 +1,140 @@
+{
+  "name": "Go",
+  "slug": "go",
+  "category": "game",
+  "description": "The oldest continuously played board game, originating in China over 2,500 years ago, with a game-tree complexity of 10^360 that dwarfs chess's 10^123 by more than the number of atoms in the observable universe. South Korea admits only four new professionals per year from a pool of 80 candidates, most of whom began full-time training before age 12.",
+  "thumbnail": {
+    "src": "/images/skills/go.webp",
+    "alt": "Black and white stones on a wooden Go board during a professional match",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "WXuK6gekU1Y",
+      "title": "AlphaGo - The Movie | Full award-winning documentary (DeepMind)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Go (game)",
+      "url": "https://en.wikipedia.org/wiki/Go_(game)",
+      "type": "reference"
+    },
+    {
+      "title": "Go professional",
+      "url": "https://en.wikipedia.org/wiki/Go_professional",
+      "type": "reference"
+    },
+    {
+      "title": "Mastering the game of Go with deep neural networks and tree search",
+      "author": "David Silver, Aja Huang, Chris J. Maddison et al.",
+      "url": "https://www.nature.com/articles/nature16961",
+      "year": 2016,
+      "type": "research"
+    },
+    {
+      "title": "AlphaGo versus Lee Sedol",
+      "url": "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 4,
+      "confidence": 0.85,
+      "notes": "Rules are minimal (can be learned in minutes), but playing a coherent game requires understanding of life/death, territory, and basic joseki -- typically weeks to months."
+    },
+    "time_to_expert": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Professional players typically begin training as children and study 8-12 hours daily for 5-10+ years. The median age for achieving professional 1-dan is mid-to-late teens after a decade of focused training."
+    },
+    "feedback_delay": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Each game ends with a clear score, but the consequences of strategic decisions made in the opening (fuseki) may not be apparent for 50-100 moves. AI review now provides instant post-game analysis."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "A lost game costs only rating points. However, failing professional examinations in Korea or Japan can end a career path entirely -- aspiring pros in Japan's insei system face age-based expulsion."
+    },
+    "cognitive_demand": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Branching factor of ~250 per move (vs chess's ~35). Players must simultaneously evaluate territory, influence, life/death status of groups, and ko threats across a 361-point board."
+    },
+    "physical_demand": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "Seated activity. Professional title matches can span multiple days, but the exertion is purely mental."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Rules are self-contained and simpler than chess. No mathematical or domain-specific prerequisites. Strategic concepts emerge from play."
+    },
+    "measurability": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Kyu/dan ranking system plus Elo-based online ratings (KGS, OGS, Fox) provide precise measurement. Professional ranks (1p-9p) are formally certified by national organizations."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Positional intuition and reading ability are durable, but tactical sharpness and familiarity with current AI-influenced joseki decay with inactivity. Opening theory now evolves rapidly post-AlphaGo."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "At the professional level, a single suboptimal move can shift territorial balance irreversibly. The margin between winning and losing is often 0.5-2 points in a ~300-point game."
+    },
+    "ambiguity": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Games end with a precise numerical score, but positional evaluation during play involves assessing nebulous concepts like 'thickness' and 'influence' that resist quantification even for AI."
+    },
+    "instruction_dependency": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Self-study is viable via books and AI tools, but the East Asian professional path relies heavily on mentorship. In Japan, each professional belongs to a master's study group."
+    },
+    "environmental_variability": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "Identical starting position (empty board) every game. No randomness whatsoever. Black plays first with komi compensation for White."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Simultaneously managing whole-board strategy, local tactical reading, time management, group status evaluation, and endgame counting. Ko fights add a meta-strategic layer unique to Go."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Notorious for long plateaus, especially at the dan boundary (1-dan is called 'the wall'). Progress from mid-dan to professional level can take years of apparently static improvement."
+    },
+    "domain_evolution": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "AlphaGo's 2016 victory triggered the most significant upheaval in Go theory in centuries. Many traditional joseki were overturned. Professional opening theory now evolves rapidly."
+    },
+    "observability": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "To an uninitiated observer, a Go board looks like random stones. The strategic depth is completely invisible without expert commentary."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "No random elements. The only variance comes from nigiri (random selection of who plays Black), compensated by komi."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.9,
+      "notes": "Purely a two-player contest. Study groups and teacher-student relationships exist but the competition itself is solo."
+    }
+  },
+  "methodology_notes": "Scores grounded in Wikipedia's comprehensive Go articles, the Silver et al. Nature paper on AlphaGo's game-tree complexity analysis, and documented professional training systems in Japan (insei), Korea, and China. The game-tree complexity figure (10^360) and branching factor (~250) come from peer-reviewed computational research. Training timelines derived from documented career histories of professional players."
+}

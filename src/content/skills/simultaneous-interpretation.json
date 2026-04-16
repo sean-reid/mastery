@@ -1,0 +1,63 @@
+{
+  "name": "Simultaneous Interpretation",
+  "slug": "simultaneous-interpretation",
+  "category": "language",
+  "description": "Simultaneous interpreters listen to speech in one language, hold meaning in working memory, and produce fluent output in another language with a delay of just two to three seconds -- a cognitive load so extreme that Daniel Gile's Effort Model decomposes it into four competing resource demands (listening, memory, production, and coordination), and professional standards mandate rotation every 20-30 minutes because quality degrades measurably beyond that threshold.",
+  "thumbnail": {
+    "src": "/images/skills/simultaneous-interpretation.webp",
+    "alt": "Conference interpreter wearing headphones working in a soundproof booth",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "twCpijr_GeQ",
+      "title": "Interpreter Breaks Down How Real-Time Translation Works | WIRED"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Simultaneous interpreting - European Commission Knowledge Centre on Translation and Interpretation",
+      "url": "https://knowledge-centre-translation-interpretation.ec.europa.eu/en/conference-interpreting/simultaneous-interpreting",
+      "type": "institutional"
+    },
+    {
+      "title": "Get a load of this: What makes simultaneous interpreting cognitively demanding? - AIIC",
+      "url": "https://aiic.org/site/blog/the-bilingual-brain",
+      "type": "institutional"
+    },
+    {
+      "title": "A Synthetic Review of Cognitive Load in Distance Interpreting - Frontiers in Psychology",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.899718/full",
+      "year": 2022,
+      "type": "research"
+    },
+    {
+      "title": "Simultaneous interpretation - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Simultaneous_interpretation",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 7, "confidence": 0.85, "notes": "Entry requires near-native fluency in at least two languages (itself a multi-year prerequisite). Master's programs in conference interpreting are typically 2 years of intensive training. The EU's EMCI consortium programs combine classroom instruction with dummy booth practice at real European Parliament sessions." },
+    "time_to_expert": { "value": 9, "confidence": 0.85, "notes": "AIIC (International Association of Conference Interpreters) membership requires demonstration of professional competence built over years of practice. Top-tier UN and EU interpreters typically have 10+ years of post-qualification experience. Mastering specialized domains (legal, medical, technical) adds further years." },
+    "feedback_delay": { "value": 2, "confidence": 0.85, "notes": "Feedback is nearly instantaneous: audience comprehension (or confusion) is immediately visible. Booth partners provide real-time corrections. Recording and review of sessions enables precise post-hoc analysis. Training programs use dummy booth exercises with immediate instructor feedback." },
+    "failure_cost": { "value": 6, "confidence": 0.8, "notes": "Mistranslation at high-stakes diplomatic conferences can cause international incidents. Medical and legal interpreting errors can have severe consequences for patients or defendants. In training, failure cost is low, but professional errors carry reputational and potentially legal liability." },
+    "cognitive_demand": { "value": 10, "confidence": 0.95, "notes": "Widely regarded as one of the most cognitively demanding professional tasks. Brain imaging shows selective activation of lexical retrieval, working memory, and semantic processing areas. Gile's Effort Model identifies four simultaneous demands that compete for finite processing capacity. Heart rate and cortisol remain elevated throughout performance. Pupillometry research confirms near-maximum cognitive load." },
+    "physical_demand": { "value": 3, "confidence": 0.8, "notes": "Vocally demanding: continuous speech production for 20-30 minute stretches. Elevated heart rate and stress hormones during performance. Hearing strain from prolonged headphone use. Not physically strenuous in the conventional sense, but the somatic stress response is well-documented." },
+    "prerequisite_knowledge": { "value": 9, "confidence": 0.9, "notes": "Near-native fluency in at least two languages is a non-negotiable prerequisite (typically 10+ years of language study or bilingual upbringing). Broad general knowledge is required to handle diverse subject matter. Many programs also require a bachelor's degree and demonstrated cultural competence." },
+    "measurability": { "value": 7, "confidence": 0.8, "notes": "Output can be recorded, transcribed, and compared to source material for accuracy. Accreditation exams (UN, EU, AIIC) provide standardized assessment. Audience comprehension is measurable. However, quality assessment involves subjective judgments about register, fluency, and cultural adaptation." },
+    "perishability": { "value": 6, "confidence": 0.8, "notes": "The multitasking neural pathways and working memory adaptations degrade without regular practice. Interpreters who stop working for months report significant skill loss, particularly in speed and automaticity. Language proficiency itself is more durable than the simultaneous processing ability." },
+    "precision_required": { "value": 8, "confidence": 0.85, "notes": "Diplomatic and legal contexts demand precise semantic fidelity. Numbers, proper nouns, and technical terms must be rendered exactly. Register and tone must match the speaker. A 2-3 second lag is the maximum acceptable delay; longer pauses signal loss of control." },
+    "ambiguity": { "value": 4, "confidence": 0.75, "notes": "Source text meaning can be ambiguous, requiring real-time disambiguation decisions. However, the output is immediately assessable against the source. Quality criteria (accuracy, completeness, fluency) are well-established even if subjective elements exist in style and register choices." },
+    "instruction_dependency": { "value": 7, "confidence": 0.8, "notes": "Master's programs with booth practice are the standard pathway. Self-teaching simultaneous interpretation is theoretically possible but practically very rare. Booth partner feedback and instructor correction of ingrained habits are considered essential. The EU Knowledge Centre provides structured training modules." },
+    "environmental_variability": { "value": 8, "confidence": 0.85, "notes": "Every assignment is different: subject matter ranges from agricultural policy to nuclear physics, speakers vary in speed, accent, clarity, and cooperativeness. Live events introduce unpredictable elements (technical failures, emotional speakers, departures from prepared texts). No two interpreting sessions are alike." },
+    "concurrent_skills": { "value": 10, "confidence": 0.9, "notes": "The defining characteristic of the skill. Interpreters simultaneously listen in one language, comprehend meaning, hold information in working memory, produce output in another language, monitor their own output for errors, manage lag time, and coordinate with booth partners -- all in real time without pausing." },
+    "plateau_density": { "value": 7, "confidence": 0.75, "notes": "Major plateaus at the transition from consecutive to simultaneous mode, when tackling increasingly fast speakers, when adding specialized domains, and when moving from training to live professional settings. The 'cognitive ceiling' where processing capacity is maxed out creates a persistent plateau." },
+    "domain_evolution": { "value": 4, "confidence": 0.75, "notes": "Core interpreting techniques are stable over decades. Remote Simultaneous Interpretation (RSI) platforms have changed delivery methods since 2020. AI-assisted tools are emerging but have not replaced human interpreters for complex content. New specialized terminology requires continuous learning." },
+    "observability": { "value": 7, "confidence": 0.8, "notes": "The skill is immediately observable: listeners hear the interpreted output in real time. The WIRED video featuring Barry Slaughter Olsen has millions of views, demonstrating public fascination with the visible virtuosity. Booth work is less visible but the output is always audible." },
+    "luck_variance": { "value": 2, "confidence": 0.85, "notes": "Performance is almost entirely skill-dependent. Minor variance from speaker cooperativeness (fast vs. slow, clear vs. mumbling) and subject matter familiarity, but top interpreters handle all conditions. No random elements in the task itself." },
+    "social_coordination": { "value": 6, "confidence": 0.8, "notes": "Booth partners must coordinate seamlessly: one interprets while the other supports (looking up terms, monitoring, preparing). Team rotation every 20-30 minutes requires synchronized handoffs. EU meetings with 24 languages use relay interpreting chains involving 72+ interpreters working in coordination." }
+  },
+  "methodology_notes": "Scores are grounded in AIIC professional standards, the European Commission's Knowledge Centre documentation, Gile's Effort Model (formalized in the 1980s, extensively validated), Frontiers in Psychology's 2022 review of cognitive load in interpreting, and the WIRED video featuring Barry Slaughter Olsen. Training durations reflect EMCI consortium master's programs and EU interpreter accreditation requirements. The cognitive_demand score of 10 reflects near-universal consensus in the cognitive science literature that simultaneous interpretation is among the most demanding real-time cognitive tasks."
+}

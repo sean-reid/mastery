@@ -1,0 +1,126 @@
+---
+interface Props {
+  src: string;
+  poster: string;
+  alt: string;
+  attribution?: string;
+  class?: string;
+}
+
+const { src, poster, alt, attribution, class: className } = Astro.props;
+---
+
+<figure class:list={['auto-video', className]}>
+  <video
+    class="auto-video-el"
+    muted
+    loop
+    playsinline
+    preload="none"
+    poster={poster}
+    data-src={src}
+    aria-label={alt}
+  >
+  </video>
+  <button class="auto-video-unmute" aria-label="Unmute video">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M8 2L4 5.5H1.5v5H4L8 14V2z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M11 5.5s1.5 1 1.5 2.5-1.5 2.5-1.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  {attribution && (
+    <figcaption class="auto-video-attribution">{attribution}</figcaption>
+  )}
+</figure>
+
+<style>
+  .auto-video {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-raised);
+  }
+
+  .auto-video-el {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .auto-video-unmute {
+    position: absolute;
+    bottom: var(--space-3);
+    right: var(--space-3);
+    padding: var(--space-2);
+    border-radius: var(--radius-full);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity var(--duration-fast) var(--ease-out);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .auto-video:hover .auto-video-unmute {
+    opacity: 0.7;
+  }
+
+  .auto-video-unmute:hover {
+    opacity: 1 !important;
+  }
+
+  .auto-video-attribution {
+    position: absolute;
+    bottom: var(--space-2);
+    left: var(--space-3);
+    font-size: 0.625rem;
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  // Intersection Observer: play when visible, pause when not
+  const videos = document.querySelectorAll<HTMLVideoElement>('.auto-video-el');
+
+  // Check for reduced data preference
+  const prefersReducedData = (navigator as any).connection?.saveData === true;
+
+  if (!prefersReducedData) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            // Lazy load the source
+            if (!video.src && video.dataset.src) {
+              video.src = video.dataset.src;
+            }
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { rootMargin: '100px' }
+    );
+
+    videos.forEach((v) => observer.observe(v));
+  }
+
+  // Unmute toggle
+  document.querySelectorAll('.auto-video-unmute').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const video = btn.parentElement?.querySelector('video');
+      if (video) {
+        video.muted = !video.muted;
+        btn.setAttribute(
+          'aria-label',
+          video.muted ? 'Unmute video' : 'Mute video'
+        );
+      }
+    });
+  });
+</script>

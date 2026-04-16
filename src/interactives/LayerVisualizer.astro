@@ -1,0 +1,861 @@
+---
+---
+
+<div class="interactive-wrap" id="layer-viz">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Mokume-gane layer folding</h4>
+    <p class="interactive-subtitle">Start with alternating metal layers. Each fold doubles the count. Carve into the surface to reveal the wood-grain pattern beneath.</p>
+  </div>
+
+  <div class="layer-area">
+    <div class="layer-controls">
+      <div class="layer-stat">
+        <span class="layer-stat-number" id="layer-count">2</span>
+        <span class="layer-stat-label">layers</span>
+      </div>
+      <div class="layer-stat">
+        <span class="layer-stat-number" id="fold-count">0</span>
+        <span class="layer-stat-label">folds</span>
+      </div>
+    </div>
+
+    <div class="palette-selector">
+      <button class="palette-btn active" data-palette="copper-silver">
+        <span class="palette-swatch copper-silver-swatch"></span>
+        Copper + Silver
+      </button>
+      <button class="palette-btn" data-palette="gold-shakudo">
+        <span class="palette-swatch gold-shakudo-swatch"></span>
+        Gold + Shakudo
+      </button>
+      <button class="palette-btn" data-palette="copper-shibuichi">
+        <span class="palette-swatch copper-shibuichi-swatch"></span>
+        Copper + Shibuichi
+      </button>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="layer-canvas" width="600" height="300"></canvas>
+    </div>
+
+    <div class="layer-buttons">
+      <button class="layer-btn primary" id="fold-btn">
+        <span class="btn-label">Fold</span>
+        <span class="btn-hint">doubles layers</span>
+      </button>
+      <button class="layer-btn secondary" id="carve-btn">
+        <span class="btn-label">Carve surface</span>
+        <span class="btn-hint">reveal pattern</span>
+      </button>
+      <button class="layer-btn tertiary" id="reset-btn">
+        <span class="btn-label">Reset</span>
+      </button>
+    </div>
+
+    <p class="layer-explanation" id="layer-explanation">
+      Two metals sit in alternating layers: copper (warm) and silver (cool). Click Fold to begin.
+    </p>
+  </div>
+</div>
+
+<style>
+  .interactive-wrap {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin: var(--space-8) 0;
+  }
+
+  .interactive-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .interactive-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+
+  .interactive-subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .layer-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  /* --- Stats display --- */
+  .layer-controls {
+    display: flex;
+    gap: var(--space-10);
+  }
+
+  .layer-stat {
+    text-align: center;
+    position: relative;
+  }
+
+  .layer-stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+    transition: color var(--duration-normal) var(--ease-out);
+  }
+
+  .layer-stat-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  /* --- Palette selector --- */
+  .palette-selector {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .palette-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-subtle);
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .palette-btn:hover {
+    border-color: var(--color-border);
+    background: var(--color-surface-raised);
+  }
+
+  .palette-btn.active {
+    border-color: var(--color-text-muted);
+    background: var(--color-surface-raised);
+    color: var(--color-text);
+  }
+
+  .palette-swatch {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    border-radius: 3px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .copper-silver-swatch {
+    background: linear-gradient(90deg, #b87333 50%, #c0c0c0 50%);
+  }
+
+  .gold-shakudo-swatch {
+    background: linear-gradient(90deg, #d4a847 50%, #2a2a3a 50%);
+  }
+
+  .copper-shibuichi-swatch {
+    background: linear-gradient(90deg, #b87333 50%, #8a9a7a 50%);
+  }
+
+  /* --- Canvas container --- */
+  .canvas-container {
+    width: 100%;
+    max-width: 640px;
+    position: relative;
+    border-radius: var(--radius-lg);
+    background: rgba(0, 0, 0, 0.03);
+    padding: var(--space-3);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: box-shadow var(--duration-normal) var(--ease-out);
+  }
+
+  .canvas-container:hover {
+    box-shadow:
+      inset 0 1px 3px rgba(0, 0, 0, 0.06),
+      0 0 20px rgba(184, 115, 51, 0.08),
+      0 0 40px rgba(192, 192, 192, 0.05);
+  }
+
+  #layer-canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    border-radius: calc(var(--radius-lg) - 4px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.5),
+      0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+
+  /* --- Buttons --- */
+  .layer-buttons {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .layer-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-out);
+    border: none;
+    line-height: 1.4;
+  }
+
+  .layer-btn.primary {
+    background: linear-gradient(180deg, #3b7dff 0%, #2563eb 100%);
+    color: white;
+    box-shadow:
+      0 1px 2px rgba(37, 99, 235, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  .layer-btn.primary:hover {
+    background: linear-gradient(180deg, #4a8aff 0%, #3070f5 100%);
+    box-shadow:
+      0 2px 6px rgba(37, 99, 235, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+  }
+
+  .layer-btn.primary:active {
+    transform: translateY(0);
+    box-shadow:
+      0 1px 2px rgba(37, 99, 235, 0.2),
+      inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .layer-btn.secondary {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .layer-btn.secondary:hover {
+    background: var(--color-surface-raised);
+    border-color: var(--color-text-muted);
+    color: var(--color-text);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .layer-btn.secondary:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  .layer-btn.tertiary {
+    background: transparent;
+    color: var(--color-text-muted);
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .layer-btn.tertiary:hover {
+    color: var(--color-text-secondary);
+    background: var(--color-surface-raised);
+  }
+
+  .btn-label {
+    font-weight: 600;
+  }
+
+  .btn-hint {
+    font-size: 0.6rem;
+    opacity: 0.6;
+    font-weight: 400;
+  }
+
+  .layer-btn.primary .btn-hint {
+    opacity: 0.75;
+  }
+
+  /* --- Explanation text --- */
+  .layer-explanation {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 55ch;
+    line-height: 1.65;
+    transition: opacity var(--duration-normal) var(--ease-out);
+  }
+
+  .layer-explanation.fading {
+    opacity: 0;
+  }
+
+  /* --- Disabled state for fold at max --- */
+  .layer-btn.primary[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 640px) {
+    .palette-selector {
+      gap: var(--space-1);
+    }
+
+    .palette-btn {
+      font-size: 0.65rem;
+      padding: var(--space-1) var(--space-2);
+    }
+
+    .palette-swatch {
+      width: 16px;
+      height: 10px;
+    }
+
+    .layer-controls {
+      gap: var(--space-6);
+    }
+
+    .layer-stat-number {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>
+
+<script>
+  const canvas = document.getElementById('layer-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+  const countEl = document.getElementById('layer-count')!;
+  const foldCountEl = document.getElementById('fold-count')!;
+  const foldBtn = document.getElementById('fold-btn') as HTMLButtonElement;
+  const carveBtn = document.getElementById('carve-btn')!;
+  const resetBtn = document.getElementById('reset-btn')!;
+  const explanation = document.getElementById('layer-explanation')!;
+  const paletteBtns = document.querySelectorAll('.palette-btn');
+
+  // ========================================
+  // Metal palettes with gradient stops
+  // ========================================
+
+  interface MetalDef {
+    base: string;
+    light: string;
+    highlight: string;
+    dark: string;
+  }
+
+  interface Palette {
+    name: string;
+    metals: [MetalDef, MetalDef];
+    explanationStart: string;
+  }
+
+  const PALETTES: Record<string, Palette> = {
+    'copper-silver': {
+      name: 'Copper + Silver',
+      metals: [
+        { base: '#b87333', light: '#d4956a', highlight: '#e8b68e', dark: '#8f5a28' },
+        { base: '#a8a8a8', light: '#d0d0d0', highlight: '#e8e8e8', dark: '#808080' },
+      ],
+      explanationStart: 'Two metals sit in alternating layers: copper (warm) and silver (cool). Click Fold to begin.',
+    },
+    'gold-shakudo': {
+      name: 'Gold + Shakudo',
+      metals: [
+        { base: '#d4a847', light: '#e8c86e', highlight: '#f0da90', dark: '#a8842e' },
+        { base: '#2a2a3a', light: '#3e3e52', highlight: '#52526a', dark: '#1a1a28' },
+      ],
+      explanationStart: 'Gold and shakudo (a copper-gold alloy patinated to deep blue-black). A combination prized in Edo-period Japan. Click Fold to begin.',
+    },
+    'copper-shibuichi': {
+      name: 'Copper + Shibuichi',
+      metals: [
+        { base: '#b87333', light: '#d4956a', highlight: '#e8b68e', dark: '#8f5a28' },
+        { base: '#8a9a7a', light: '#a4b494', highlight: '#bcc8b0', dark: '#6a7a5e' },
+      ],
+      explanationStart: 'Copper and shibuichi (a silver-copper alloy with a distinctive grey-green patina). Click Fold to begin.',
+    },
+  };
+
+  let currentPalette = 'copper-silver';
+  let layers: number[] = [0, 1]; // indices into the palette metals array
+  let folds = 0;
+  let carved = false;
+  let animating = false;
+
+  // ========================================
+  // Value noise for organic carved patterns
+  // ========================================
+
+  // Hash function for noise
+  function hash(x: number, y: number): number {
+    let h = x * 374761393 + y * 668265263;
+    h = (h ^ (h >> 13)) * 1274126177;
+    h = h ^ (h >> 16);
+    return (h & 0x7fffffff) / 0x7fffffff;
+  }
+
+  // Smooth interpolation
+  function smoothstep(t: number): number {
+    return t * t * (3 - 2 * t);
+  }
+
+  // 2D value noise
+  function valueNoise(x: number, y: number): number {
+    const ix = Math.floor(x);
+    const iy = Math.floor(y);
+    const fx = smoothstep(x - ix);
+    const fy = smoothstep(y - iy);
+
+    const v00 = hash(ix, iy);
+    const v10 = hash(ix + 1, iy);
+    const v01 = hash(ix, iy + 1);
+    const v11 = hash(ix + 1, iy + 1);
+
+    const top = v00 + fx * (v10 - v00);
+    const bot = v01 + fx * (v11 - v01);
+
+    return top + fy * (bot - top);
+  }
+
+  // Fractal Brownian motion (multiple octaves)
+  function fbm(x: number, y: number, octaves: number): number {
+    let value = 0;
+    let amplitude = 0.5;
+    let frequency = 1;
+    let maxVal = 0;
+
+    for (let i = 0; i < octaves; i++) {
+      value += amplitude * valueNoise(x * frequency, y * frequency);
+      maxVal += amplitude;
+      amplitude *= 0.5;
+      frequency *= 2.1;
+    }
+
+    return value / maxVal;
+  }
+
+  // ========================================
+  // Rendering
+  // ========================================
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function getMetals(): [MetalDef, MetalDef] {
+    return PALETTES[currentPalette].metals;
+  }
+
+  // Draw a single metallic layer with gradient sheen
+  function drawMetallicLayer(
+    x: number, y: number, w: number, h: number,
+    metal: MetalDef, lightPos: number
+  ) {
+    // Main vertical gradient simulating light on polished metal
+    const grad = ctx.createLinearGradient(x, y, x, y + h);
+    grad.addColorStop(0, metal.light);
+    grad.addColorStop(0.3, metal.highlight);
+    grad.addColorStop(0.5, metal.light);
+    grad.addColorStop(0.7, metal.base);
+    grad.addColorStop(1, metal.dark);
+    ctx.fillStyle = grad;
+    ctx.fillRect(x, y, w, h);
+
+    // Horizontal light reflection band (simulates curved surface catching light)
+    const bandGrad = ctx.createLinearGradient(x, y, x + w, y);
+    bandGrad.addColorStop(0, 'rgba(255,255,255,0)');
+    bandGrad.addColorStop(Math.max(0.05, lightPos - 0.15), 'rgba(255,255,255,0)');
+    bandGrad.addColorStop(lightPos, 'rgba(255,255,255,0.12)');
+    bandGrad.addColorStop(Math.min(0.95, lightPos + 0.15), 'rgba(255,255,255,0)');
+    bandGrad.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = bandGrad;
+    ctx.fillRect(x, y, w, h);
+
+    // Subtle noise texture (horizontal grain lines)
+    ctx.save();
+    ctx.globalAlpha = 0.03;
+    for (let row = 0; row < h; row += 2) {
+      const brightness = hash(Math.floor(x + row * 17), Math.floor(y + row * 31));
+      ctx.fillStyle = brightness > 0.5 ? 'rgba(255,255,255,1)' : 'rgba(0,0,0,1)';
+      ctx.fillRect(x, y + row, w, 1);
+    }
+    ctx.restore();
+  }
+
+  // Draw edge shadow between layers
+  function drawLayerEdge(x: number, y: number, w: number) {
+    ctx.save();
+    ctx.globalAlpha = 0.15;
+    ctx.fillStyle = '#000';
+    ctx.fillRect(x, y - 0.5, w, 1);
+    ctx.globalAlpha = 0.06;
+    ctx.fillRect(x, y - 1, w, 2.5);
+    ctx.restore();
+  }
+
+  function draw() {
+    const w = canvas.getBoundingClientRect().width;
+    const h = canvas.getBoundingClientRect().height;
+    ctx.clearRect(0, 0, w, h);
+
+    if (!carved) {
+      drawCrossSection(w, h);
+    } else {
+      drawCarvedSurface(w, h);
+    }
+  }
+
+  function drawCrossSection(w: number, h: number) {
+    const metals = getMetals();
+    const layerHeight = h / layers.length;
+    const lightPos = 0.45;
+
+    layers.forEach((metalIdx, i) => {
+      const metal = metals[metalIdx];
+      const ly = i * layerHeight;
+      drawMetallicLayer(0, ly, w, layerHeight + 0.5, metal, lightPos);
+
+      // Edge shadow between layers
+      if (i > 0) {
+        drawLayerEdge(0, ly, w);
+      }
+    });
+
+    // Top and bottom edge effects
+    ctx.save();
+    // Top highlight
+    const topGrad = ctx.createLinearGradient(0, 0, 0, 4);
+    topGrad.addColorStop(0, 'rgba(255,255,255,0.2)');
+    topGrad.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = topGrad;
+    ctx.fillRect(0, 0, w, 4);
+
+    // Bottom shadow
+    const botGrad = ctx.createLinearGradient(0, h - 4, 0, h);
+    botGrad.addColorStop(0, 'rgba(0,0,0,0)');
+    botGrad.addColorStop(1, 'rgba(0,0,0,0.08)');
+    ctx.fillStyle = botGrad;
+    ctx.fillRect(0, h - 4, w, 4);
+    ctx.restore();
+  }
+
+  function drawCarvedSurface(w: number, h: number) {
+    const metals = getMetals();
+    const numLayers = layers.length;
+
+    // Use ImageData for pixel-level control
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const pw = canvas.width;
+    const ph = canvas.height;
+    const imageData = ctx.createImageData(pw, ph);
+    const data = imageData.data;
+
+    // Precompute metal RGB values for blending
+    function hexToRgb(hex: string): [number, number, number] {
+      const n = parseInt(hex.slice(1), 16);
+      return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+
+    const metalColors = metals.map(m => ({
+      base: hexToRgb(m.base),
+      light: hexToRgb(m.light),
+      highlight: hexToRgb(m.highlight),
+      dark: hexToRgb(m.dark),
+    }));
+
+    // Scale for noise sampling -- more layers = finer grain
+    const scaleX = 4 + Math.log2(numLayers) * 0.8;
+    const scaleY = 3 + Math.log2(numLayers) * 0.6;
+    const octaves = Math.min(5, 3 + Math.floor(Math.log2(numLayers) * 0.5));
+
+    for (let py2 = 0; py2 < ph; py2++) {
+      for (let px = 0; px < pw; px++) {
+        const nx = (px / pw) * scaleX;
+        const ny = (py2 / ph) * scaleY;
+
+        // Main grain pattern: fbm gives organic flowing shapes
+        let depth = fbm(nx, ny, octaves);
+
+        // Add a subtle directional warp for more organic feel
+        const warp = fbm(nx + 5.2, ny + 1.3, 3) * 0.3;
+        depth = fbm(nx + warp, ny + warp * 0.7, octaves);
+
+        // Map depth to a layer index
+        const layerF = depth * numLayers;
+        const layerIdx = Math.floor(layerF) % numLayers;
+        const metalIdx = layers[layerIdx];
+        const mc = metalColors[metalIdx];
+
+        // Vary brightness within each grain area for metallic look
+        const localVar = fbm(nx * 3 + 10, ny * 3 + 10, 2);
+        const brightness = 0.7 + localVar * 0.6;
+
+        let r: number, g: number, b: number;
+        if (brightness < 0.85) {
+          const t = brightness / 0.85;
+          r = mc.dark[0] + (mc.base[0] - mc.dark[0]) * t;
+          g = mc.dark[1] + (mc.base[1] - mc.dark[1]) * t;
+          b = mc.dark[2] + (mc.base[2] - mc.dark[2]) * t;
+        } else if (brightness < 1.1) {
+          const t = (brightness - 0.85) / 0.25;
+          r = mc.base[0] + (mc.light[0] - mc.base[0]) * t;
+          g = mc.base[1] + (mc.light[1] - mc.base[1]) * t;
+          b = mc.base[2] + (mc.light[2] - mc.base[2]) * t;
+        } else {
+          const t = Math.min(1, (brightness - 1.1) / 0.2);
+          r = mc.light[0] + (mc.highlight[0] - mc.light[0]) * t;
+          g = mc.light[1] + (mc.highlight[1] - mc.light[1]) * t;
+          b = mc.light[2] + (mc.highlight[2] - mc.light[2]) * t;
+        }
+
+        // Shadow at grain boundaries for depth
+        const frac = layerF - Math.floor(layerF);
+        const edgeDist = Math.min(frac, 1 - frac);
+        if (edgeDist < 0.06) {
+          const shadow = 1 - (edgeDist / 0.06) * 0.35;
+          r *= shadow;
+          g *= shadow;
+          b *= shadow;
+        }
+
+        const idx = (py2 * pw + px) * 4;
+        data[idx] = Math.min(255, Math.max(0, Math.round(r)));
+        data[idx + 1] = Math.min(255, Math.max(0, Math.round(g)));
+        data[idx + 2] = Math.min(255, Math.max(0, Math.round(b)));
+        data[idx + 3] = 255;
+      }
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+
+    // Overlay: top highlight and bottom shadow for 3D feel (in logical coords)
+    const logW = w;
+    const logH = h;
+    ctx.save();
+    const topGrad = ctx.createLinearGradient(0, 0, 0, 8);
+    topGrad.addColorStop(0, 'rgba(255,255,255,0.15)');
+    topGrad.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = topGrad;
+    ctx.fillRect(0, 0, logW, 8);
+
+    const botGrad = ctx.createLinearGradient(0, logH - 6, 0, logH);
+    botGrad.addColorStop(0, 'rgba(0,0,0,0)');
+    botGrad.addColorStop(1, 'rgba(0,0,0,0.06)');
+    ctx.fillStyle = botGrad;
+    ctx.fillRect(0, logH - 6, logW, 6);
+    ctx.restore();
+  }
+
+  // ========================================
+  // Fold animation
+  // ========================================
+
+  function animateFold(newLayers: number[], callback: () => void) {
+    animating = true;
+    const metals = getMetals();
+    const w = canvas.getBoundingClientRect().width;
+    const h = canvas.getBoundingClientRect().height;
+    const duration = 400;
+    const start = performance.now();
+    const oldLayerCount = layers.length;
+    const newLayerCount = newLayers.length;
+
+    function frame(now: number) {
+      const elapsed = now - start;
+      const t = Math.min(1, elapsed / duration);
+      // Ease out cubic
+      const ease = 1 - Math.pow(1 - t, 3);
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Animate: old layers compress into top half, mirrored copy fades in bottom half
+      const compressH = h * (1 - ease * 0.5);
+      const newHalfH = h * ease * 0.5;
+
+      // Draw original layers compressing upward
+      const topLayerH = compressH / oldLayerCount;
+      for (let i = 0; i < oldLayerCount; i++) {
+        const metal = metals[layers[i]];
+        drawMetallicLayer(0, i * topLayerH, w, topLayerH + 0.5, metal, 0.45);
+        if (i > 0) drawLayerEdge(0, i * topLayerH, w);
+      }
+
+      // Draw mirrored layers fading in from bottom
+      if (ease > 0.05) {
+        ctx.save();
+        ctx.globalAlpha = ease;
+        const mirrorLayers = layers.slice().reverse();
+        const botLayerH = newHalfH / oldLayerCount;
+        for (let i = 0; i < oldLayerCount; i++) {
+          const metal = metals[mirrorLayers[i]];
+          const ly = compressH + i * botLayerH;
+          drawMetallicLayer(0, ly, w, botLayerH + 0.5, metal, 0.45);
+          if (i > 0) drawLayerEdge(0, ly, w);
+        }
+        // Dividing line between halves
+        ctx.globalAlpha = ease * 0.3;
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, compressH - 0.5, w, 1.5);
+        ctx.restore();
+      }
+
+      if (t < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        layers = newLayers;
+        animating = false;
+        draw();
+        callback();
+      }
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  // ========================================
+  // Animated layer count
+  // ========================================
+
+  function animateCount(el: HTMLElement, from: number, to: number) {
+    const duration = 350;
+    const start = performance.now();
+
+    function tick(now: number) {
+      const t = Math.min(1, (now - start) / duration);
+      const ease = 1 - Math.pow(1 - t, 3);
+      const current = Math.round(from + (to - from) * ease);
+      el.textContent = String(current);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  // ========================================
+  // Explanation text fade transition
+  // ========================================
+
+  function setExplanation(text: string) {
+    explanation.classList.add('fading');
+    setTimeout(() => {
+      explanation.textContent = text;
+      explanation.classList.remove('fading');
+    }, 180);
+  }
+
+  // ========================================
+  // Event handlers
+  // ========================================
+
+  foldBtn.addEventListener('click', () => {
+    if (folds >= 8 || animating) return;
+    carved = false;
+
+    const oldCount = layers.length;
+    const newLayers = [...layers, ...layers.slice().reverse()];
+    folds++;
+
+    foldCountEl.textContent = String(folds);
+    animateCount(countEl, oldCount, newLayers.length);
+
+    if (folds >= 8) {
+      foldBtn.setAttribute('disabled', '');
+    }
+
+    const descriptions: Record<number, string> = {
+      1: 'First fold: 4 layers. The billet is halved, stacked, and forge-welded. Each fold doubles the count.',
+      2: '8 layers. The alternating pattern is tightening. A smith would heat the billet to bonding temperature between each fold.',
+      3: '16 layers. The pattern is becoming fine enough to see as a grain. Real mokume-gane typically uses 20\u201340 layers.',
+      4: '32 layers. This is approaching traditional quality. The grain pattern will be visible to the naked eye.',
+      5: '64 layers. Excellent quality. The wood-grain effect will be pronounced when carved.',
+      6: '128 layers. Museum quality. Individual layers are now thinner than a human hair.',
+      7: '256 layers. Extraordinary. Only master smiths work at this density without delamination.',
+      8: '512 layers. The practical maximum. Further folding risks weld failures and loses pattern contrast.',
+    };
+
+    setExplanation(descriptions[folds] || '');
+    animateFold(newLayers, () => {});
+  });
+
+  carveBtn.addEventListener('click', () => {
+    if (animating) return;
+    carved = true;
+    setExplanation(
+      `Carving reveals a ${layers.length}-layer wood-grain pattern. In real mokume-gane, the smith carves, files, or hammers the surface to expose layers at different depths, creating the organic grain effect.`
+    );
+    draw();
+  });
+
+  resetBtn.addEventListener('click', () => {
+    if (animating) return;
+    layers = [0, 1];
+    folds = 0;
+    carved = false;
+    foldBtn.removeAttribute('disabled');
+    countEl.textContent = '2';
+    foldCountEl.textContent = '0';
+    setExplanation(PALETTES[currentPalette].explanationStart);
+    draw();
+  });
+
+  // Palette switching
+  paletteBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (animating) return;
+      const palette = (btn as HTMLElement).dataset.palette;
+      if (!palette || palette === currentPalette) return;
+
+      currentPalette = palette;
+      paletteBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Reset state when changing palette
+      layers = [0, 1];
+      folds = 0;
+      carved = false;
+      foldBtn.removeAttribute('disabled');
+      countEl.textContent = '2';
+      foldCountEl.textContent = '0';
+      setExplanation(PALETTES[currentPalette].explanationStart);
+      draw();
+    });
+  });
+
+  // ========================================
+  // Initialize
+  // ========================================
+
+  resize();
+  draw();
+  window.addEventListener('resize', () => {
+    resize();
+    draw();
+  });
+</script>

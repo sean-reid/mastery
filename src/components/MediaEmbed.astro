@@ -1,0 +1,107 @@
+---
+interface Props {
+  videoId: string;
+  title: string;
+}
+
+const { videoId, title } = Astro.props;
+const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+---
+
+<div class="media-embed" data-video-id={videoId}>
+  <button class="embed-facade" aria-label={`Play: ${title}`}>
+    <img
+      class="embed-thumb"
+      src={thumbnailUrl}
+      alt={title}
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="embed-play">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="23" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2"/>
+        <path d="M19 15l14 9-14 9V15z" fill="white"/>
+      </svg>
+    </div>
+    <span class="embed-title">{title}</span>
+  </button>
+</div>
+
+<style>
+  .media-embed {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--color-surface-raised);
+  }
+
+  .embed-facade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .embed-thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .embed-play {
+    position: relative;
+    z-index: 1;
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .embed-facade:hover .embed-play {
+    transform: scale(1.1);
+  }
+
+  .embed-title {
+    position: absolute;
+    bottom: var(--space-3);
+    left: var(--space-4);
+    right: var(--space-4);
+    font-size: var(--text-xs);
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    text-align: left;
+  }
+
+  .media-embed :global(iframe) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.media-embed').forEach((el) => {
+    const facade = el.querySelector('.embed-facade');
+    if (!facade) return;
+
+    facade.addEventListener('click', () => {
+      const videoId = (el as HTMLElement).dataset.videoId;
+      if (!videoId) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+      iframe.allow = 'autoplay; encrypted-media';
+      iframe.allowFullscreen = true;
+      iframe.title = facade.getAttribute('aria-label') || '';
+
+      facade.replaceWith(iframe);
+    });
+  });
+</script>

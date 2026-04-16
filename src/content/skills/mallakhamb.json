@@ -1,0 +1,138 @@
+{
+  "name": "Mallakhamb",
+  "slug": "mallakhamb",
+  "category": "sport",
+  "description": "An Indian pole gymnastics discipline in which athletes perform aerial yoga poses, acrobatic flips, and wrestling grips on a 2.6-meter vertical teak pole slicked with castor oil to reduce friction and act as an antiseptic. First documented in the 1135 CE Sanskrit text Manasollasa, it was demonstrated at the 1936 Berlin Olympics and held its first World Championship in Mumbai in 2019. Competitors are judged across five categories -- mounting, acrobatics, catches, balances, and dismounts -- on pole, hanging pole, or rope apparatus.",
+  "thumbnail": {
+    "src": "/images/skills/mallakhamb.webp",
+    "alt": "An athlete performing an inverted balance pose on a vertical wooden mallakhamb pole",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "jGAun2JRaa0",
+      "title": "Mallakhamb: India's Ancient Pole Gymnastics"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Mallakhamba",
+      "url": "https://en.wikipedia.org/wiki/Mallakhamba",
+      "type": "reference"
+    },
+    {
+      "title": "What is mallakhamb: Rules and history",
+      "url": "https://www.olympics.com/en/news/what-is-mallakhamb-rules-history-origin-india",
+      "type": "institutional"
+    },
+    {
+      "title": "Wrestling the Pole: The Art of Mallakhamb Training",
+      "url": "http://www.sahapedia.org/wrestling-pole-art-mallakhamb-training",
+      "type": "research"
+    },
+    {
+      "title": "Mallakhamb Federation of USA",
+      "url": "https://www.mallakhambinusa.org/",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Basic mounting and simple holds on the castor-oil-slicked pole take weeks to months. Beginners face significant skin irritation and friction injuries during acclimatization. The combination of grip strength, flexibility, and pole-specific technique means the initial learning curve is steep. Many beginners drop out due to leg injuries."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.65,
+      "notes": "Competition categories span from Under-12 (Mini) to Senior (18+), with Indian athletes typically beginning training in childhood. World Championship-level performance requires years of progressive skill development across all five judging categories. The first global championship in 2019 featured athletes with 10+ years of training."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Falls and failed holds provide instant feedback. Competition scores across the five judging categories are returned promptly. However, gradual improvements in grip strength, skin conditioning to castor oil friction, and flexibility develop over weeks and months."
+    },
+    "failure_cost": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Falls from a 2.6-meter oiled pole risk fractures, sprains, and head injuries. The castor oil that reduces friction also makes grip unpredictable. Skin abrasions are universal among beginners. Hanging mallakhamb adds the danger of falls from a suspended apparatus. Rope mallakhamb involves rope burns and entanglement risks."
+    },
+    "cognitive_demand": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Requires memorization of routine sequences across the five scoring categories. Spatial awareness while inverted or in complex poses is cognitively demanding. However, individual moves are practiced to automaticity, and the primary challenge is physical rather than intellectual."
+    },
+    "physical_demand": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Demands exceptional grip strength on a castor-oil-slicked surface, full-body flexibility for yoga-derived poses, gymnastic-level upper body and core strength for inversions and aerials, and explosive power for catches and dismounts. Originally developed as a wrestler's training tool, it builds holistic athletic capacity across strength, flexibility, and coordination."
+    },
+    "prerequisite_knowledge": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Background in gymnastics, yoga, or wrestling provides significant advantage. Understanding of the pole's three sections (head, neck, body) and the taper geometry helps. No formal academic prerequisites, but body awareness and basic flexibility are assumed starting points."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Competition scoring across five defined categories (mounting, acrobatics, catches, balances, dismounts) provides structured evaluation. National and world championship results offer ranking data. The Mallakhamb Federation of India governs standardized rules. However, judging involves subjective assessment of execution quality."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Grip strength specific to the oiled pole, skin conditioning, and the precise balance adjustments for pole-specific poses decay without regular practice. Flexibility and general strength are more durable. The castor-oil grip adaptation in particular requires continuous maintenance."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Precise body positioning for yoga-derived poses on a tapering, oiled pole demands millimeter-level adjustments. Catches after aerial releases require exact hand placement. The pole tapers from 55cm circumference at the base to 35cm at the top, requiring adapted grip technique at each height. Balances must be held with visible stability for scoring."
+    },
+    "ambiguity": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "The five judging categories provide clear evaluation structure. Standard moves are defined in competition rulebooks. However, execution quality and artistic merit involve subjective judging, similar to artistic gymnastics. The sport is still standardizing internationally."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Requires access to the specialized teak pole apparatus and experienced instruction. Traditional training is guru-led in Indian akharas (wrestling schools). Self-teaching risks serious injury due to the oiled surface and aerial elements. Outside India, access to qualified instructors is extremely limited despite growing global federation presence."
+    },
+    "environmental_variability": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Standardized indoor apparatus with defined pole dimensions. Castor oil application is controlled. Temperature and humidity affect grip and oil viscosity but within limited range. Competition venues are indoor gymnasiums with consistent conditions."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Simultaneously managing grip on an oiled surface, body position for complex poses, balance on a tapered pole, routine choreography, and transitions between the five scoring categories. Aerial catches require coordinated release, rotation, and re-grip in a single explosive sequence."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.65,
+      "notes": "Clear progression barriers between basic holds, inversions, aerial elements, and competition-level routines. The skin conditioning process creates an early plateau. Transition from static holds to dynamic acrobatics represents a major skill jump. Each of the five scoring categories presents its own progression challenges."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "The sport traces to 1135 CE and traditional techniques are preserved. Modern competitive standardization (first world championship 2019) is recent, with evolving international rules. Madhya Pradesh declared it an official state sport in 2013. Inclusion in Khelo India Youth Games from 2022 is driving some modernization."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Athletes performing acrobatic poses and flips on an oiled wooden pole is visually striking and immediately impressive. Viral videos have driven international awareness. The combination of yoga aesthetics with gymnastic dynamism is unique. India's Got Talent appearances have demonstrated mass audience appeal."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Minimal randomness. Performance is determined by training, skill, and execution. Slight variations in oil application or hand moisture introduce minor grip variability, but outcomes overwhelmingly reflect preparation. No opponents, no ball, no environmental randomness."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Primarily an individual discipline. Team events exist at world championships but individual pole performance is the core of the sport. Training in traditional akharas involves a social context with a guru, but the competitive performance itself is solo."
+    }
+  },
+  "methodology_notes": "Scores informed by the Wikipedia article on mallakhamba, the Olympics.com rules and history overview, the Sahapedia ethnographic study of training practices, and the Mallakhamb Federation of USA website. Physical demand is scored at maximum due to the combination of grip strength on an oiled surface, gymnastic flexibility, and aerial power. Training timelines inferred from competition age categories (Under-12 through Senior) and the documented histories of world championship competitors. Confidence is moderate for several axes due to limited quantitative research on this traditional sport."
+}

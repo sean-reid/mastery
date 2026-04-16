@@ -1,0 +1,62 @@
+{
+  "name": "Letterpress Typesetting",
+  "slug": "letterpress-typesetting",
+  "category": "technology",
+  "description": "A hand compositor selects individual metal type sorts from a divided type case and places them upside-down and backwards into a composing stick held in the non-dominant hand, building lines of text letter by letter while inserting lead spacing material between words and lines. The compositor must read the reversed type fluently, since a misplaced letter is only discovered after inking and pulling a proof. Heritage Crafts lists letterpress as endangered on its Red List, noting that few foundries still cast new metal type and that the heavy equipment, slow production speed, and large workspace requirements make the craft commercially uncompetitive against digital printing.",
+  "thumbnail": {
+    "src": "/images/skills/letterpress-typesetting.webp",
+    "alt": "Compositor placing metal type sorts into a composing stick from a divided type case",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "cSFQVvPsjOc",
+      "title": "Letterpress Printing — How It Works"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Letterpress printing - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Letterpress_printing",
+      "type": "reference"
+    },
+    {
+      "title": "Letterpress - Heritage Crafts",
+      "url": "https://heritagecrafts.org.uk/craft/letterpress/",
+      "type": "institutional"
+    },
+    {
+      "title": "Setting Type By Hand - Letterpress Commons",
+      "url": "https://letterpresscommons.com/setting-type-by-hand/",
+      "type": "community"
+    },
+    {
+      "title": "Composing stick - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Composing_stick",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 4, "confidence": 0.75, "notes": "A beginner can set a line of type and pull a proof within a day workshop. Setting a full page cleanly with correct leading, word spacing, and no reversed letters takes weeks to months of regular practice." },
+    "time_to_expert": { "value": 7, "confidence": 0.65, "notes": "Historic compositors apprenticed for 5-7 years before working independently. Expertise includes fluent backwards reading, rapid case navigation, aesthetic spacing judgments, lock-up for multi-page forms, and mixing typefaces harmoniously." },
+    "feedback_delay": { "value": 3, "confidence": 0.8, "notes": "Errors in reversed type are invisible until a proof is pulled — a delay of minutes to hours depending on the complexity of the form. Once proofed, mistakes are immediately visible. Final print quality is assessed on the press." },
+    "failure_cost": { "value": 3, "confidence": 0.75, "notes": "Metal type is reusable; a bad setting is simply redistributed and re-composed. The primary cost of failure is time. Dropping a composed form ('pieing' the type) is disastrous — hours of sorting to restore type to the correct case compartments." },
+    "cognitive_demand": { "value": 6, "confidence": 0.75, "notes": "Must read text backwards and upside-down fluently, maintain spatial awareness of the type case layout (upper case, lower case), make aesthetic judgments about word spacing and line breaks, and understand the printer's point system for sizing." },
+    "physical_demand": { "value": 4, "confidence": 0.8, "notes": "Fine motor work picking up tiny metal sorts and placing them precisely. Standing at the type case for extended periods. Locking up heavy forms and operating the press add moderate physical demands. Lead type exposure is a historical health concern." },
+    "prerequisite_knowledge": { "value": 4, "confidence": 0.75, "notes": "Understanding of typography, the point system (72 points per inch), and basic printing mechanics is needed. Literacy and strong spelling are essential. No formal academic prerequisites, but typographic knowledge deepens with study." },
+    "measurability": { "value": 7, "confidence": 0.8, "notes": "Speed (sorts per hour) is precisely measurable — Victorian compositors were paid by the piece. Print quality is objectively assessed: even inking, consistent impression depth, alignment. Spelling errors are binary." },
+    "perishability": { "value": 4, "confidence": 0.65, "notes": "Case layout memory (the 'lay of the case') fades without regular practice, slowing composition significantly. The conceptual knowledge of typography and print mechanics is durable." },
+    "precision_required": { "value": 7, "confidence": 0.8, "notes": "Each sort must be placed in the correct orientation (nick up, face outward). Spacing must be calculated in points to justify lines evenly. Lock-up pressure must be even to prevent type shifting during printing." },
+    "ambiguity": { "value": 3, "confidence": 0.75, "notes": "The text to be set is explicit. Case layout follows standardized conventions. Aesthetic judgments about spacing and typeface selection introduce some subjectivity, but the mechanics are well-defined." },
+    "instruction_dependency": { "value": 5, "confidence": 0.7, "notes": "Basic technique can be learned from reference materials and short workshops. The standardized case layout and explicit rules of composition make self-teaching more feasible than in many crafts. But speed and fluency require mentored practice." },
+    "environmental_variability": { "value": 2, "confidence": 0.8, "notes": "Workshop-based craft with minimal environmental variation. Temperature affects ink viscosity slightly. Humidity can cause paper to stretch. But the composition process itself is environment-independent." },
+    "concurrent_skills": { "value": 5, "confidence": 0.7, "notes": "Simultaneously reading text forwards, composing backwards, maintaining case layout memory, judging spacing by eye, and tracking position within the line and page. A rhythmic, multi-channel task." },
+    "plateau_density": { "value": 5, "confidence": 0.65, "notes": "Early progress is rapid as case layout is memorized. Plateau when transitioning from careful to fluent reversed reading. Speed improvement slows significantly after the first year of regular practice." },
+    "domain_evolution": { "value": 1, "confidence": 0.85, "notes": "Hand composition technique is virtually unchanged since Gutenberg. The type case layout, composing stick, and galley system date to the 15th century. Photopolymer plates are a modern addition but distinct from hand typesetting." },
+    "observability": { "value": 7, "confidence": 0.75, "notes": "The quality of a printed page — even inking, consistent impression, harmonious spacing — is immediately visible. Speed differences between novice and expert compositors are dramatic and measurable." },
+    "luck_variance": { "value": 1, "confidence": 0.85, "notes": "Outcomes are entirely determined by skill and attention. There is no random element. Errors are always attributable to the compositor." },
+    "social_coordination": { "value": 2, "confidence": 0.8, "notes": "Historically, compositors worked in parallel at individual cases in a composing room. The work itself is solitary. Coordination with the pressman occurs only at the printing stage." }
+  },
+  "methodology_notes": "Scores draw on Wikipedia's letterpress printing and composing stick articles, Heritage Crafts' Red List assessment, and the Letterpress Commons community documentation. Victorian-era piece-rate data provides unusually good measurability benchmarks. Heritage Crafts' endangered classification reflects the declining number of practitioners who can set metal type by hand, as opposed to those using photopolymer plates."
+}

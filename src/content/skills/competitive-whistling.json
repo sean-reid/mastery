@@ -1,0 +1,139 @@
+{
+  "name": "Competitive Whistling",
+  "slug": "competitive-whistling",
+  "category": "performance",
+  "description": "Competitive musical whistling is judged on tone purity, pitch accuracy, range, vibrato control, and artistic expression, with performances limited to four minutes and produced using only the human body (mouth, lips, and optionally hands). The International Whistlers Convention ran from 1980 to 2013 in Louisburg, North Carolina; its successors include the World Whistlers Convention (biennial since 2016, organized by the Japanese Whistling Confederation) and the Masters of Musical Whistling in Pasadena. Three-time world champion Geert Chatrou of the Netherlands has performed with full symphony orchestras using only pucker technique.",
+  "thumbnail": {
+    "src": "/images/skills/competitive-whistling.webp",
+    "alt": "Competitive whistler performing on stage at a whistling championship",
+    "attribution": "Photo by Unsplash"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "Fpi7ksasdNk",
+      "title": "Geert Chatrou — A whistleblower you haven't heard (TED Talk)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "International Whistlers Convention",
+      "url": "https://en.wikipedia.org/wiki/International_Whistlers_Convention",
+      "type": "reference"
+    },
+    {
+      "title": "Geert Chatrou",
+      "url": "https://en.wikipedia.org/wiki/Geert_Chatrou",
+      "type": "reference"
+    },
+    {
+      "title": "World Whistlers Convention — Official Site",
+      "url": "https://whistling.jp/en/",
+      "type": "competition"
+    },
+    {
+      "title": "International Whistlers Guild — Global Whistling Championship",
+      "url": "https://whistlersguild.org/",
+      "type": "competition"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Most people can whistle a simple tune. Developing controlled pitch, tone quality, and basic vibrato sufficient for an amateur competition entry takes weeks to months of focused practice."
+    },
+    "time_to_expert": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Reaching world championship level requires years of developing precise embouchure control, extended range (typically 2-3 octaves), reliable vibrato, and the musicianship to interpret complex classical or jazz repertoire."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "Sound is produced and heard instantly. A tuner or recording provides immediate pitch accuracy feedback. Tone quality is audible to the performer in real time."
+    },
+    "failure_cost": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "A poor performance at a competition has no lasting consequence. There is no physical injury risk. The niche and supportive competitive community is encouraging rather than punitive."
+    },
+    "cognitive_demand": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Musical interpretation, pitch control, breath management, and performance presence must operate simultaneously. Sight-reading ability is helpful. The cognitive load is comparable to any solo musical instrument at the competitive level."
+    },
+    "physical_demand": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Whistling requires fine muscle control of the lips, tongue, and diaphragm, but no large-muscle exertion. Extended practice can cause lip fatigue. Overall physical demand is modest."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Musical literacy helps but is not required. Some competitors come from musical backgrounds; others are self-taught. Basic understanding of musical phrasing and dynamics is beneficial."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Competitions provide clear rankings. Pitch accuracy is objectively measurable. Tone, vibrato, and artistic expression are judged subjectively but against defined criteria."
+    },
+    "perishability": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Basic whistling ability is very durable. But the fine embouchure control, vibrato precision, and extended range required for competition-level performance degrade without regular practice."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Pitch must be exact, as the human whistle has no keys or frets to guarantee intonation. Vibrato rate and depth must be controlled precisely. Tone purity demands consistent lip aperture."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Competition criteria are defined (tone, range, vibrato, musicality). Correct pitch is unambiguous. But artistic interpretation and overall impression involve subjective judgment."
+    },
+    "instruction_dependency": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Most competitive whistlers are self-taught. No formal pedagogy or conservatory programs exist. Online communities and occasional workshops provide guidance, but the field lacks structured instruction."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Whistling is highly portable and requires no equipment. Room acoustics affect tone perception. Dry air or illness can significantly impact lip moisture and embouchure control."
+    },
+    "concurrent_skills": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Pitch control, breath management, musical interpretation, vibrato modulation, and stage presence operate simultaneously, but the instrument's simplicity limits the total concurrent load compared to multi-limb instruments."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Common plateaus in extending range beyond two octaves, developing reliable vibrato, and transitioning from technically competent to musically expressive performance."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "The competitive circuit has grown since the 1980s with new organizations and online competitions. But the fundamental technique -- pucker or palatal whistling -- is unchanging."
+    },
+    "observability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Championship-level whistling is immediately impressive and surprising to general audiences. The skill is obviously observable, and the gap between casual and competitive whistling is dramatic."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Competition outcomes depend primarily on performance quality. Lip condition on competition day introduces minor variance. Judge composition can affect subjective scores."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Purely a solo performance art. The international whistling community is small and collegial, but the skill is developed and performed individually."
+    }
+  },
+  "methodology_notes": "Scores based on International Whistlers Convention Wikipedia article, International Whistlers Guild and World Whistlers Convention competition rules, and the career of three-time world champion Geert Chatrou. The relatively low time_to_expert reflects that competitive whistling, while demanding, builds on a skill most people already possess in rudimentary form.",
+  "interactive": "pitch-matcher"
+}

@@ -1,0 +1,270 @@
+---
+import { AXES } from '../data/axes';
+import type { SkillScores, SkillSource, SkillMedia } from '../types/skill';
+
+interface Props {
+  scores: SkillScores;
+  sources: SkillSource[];
+  media?: SkillMedia[];
+  methodologyNotes?: string;
+}
+
+const { scores, sources, media = [], methodologyNotes } = Astro.props;
+const scoresRecord = scores as Record<string, { value: number; confidence: number; notes?: string }>;
+const scoreEntries = AXES.map((axis) => {
+  const score = scoresRecord[axis.key];
+  return {
+    axis,
+    value: score?.value ?? 0,
+    confidence: score?.confidence ?? 0,
+    notes: score?.notes,
+  };
+}).sort((a, b) => b.value - a.value);
+---
+
+<details class="methodology">
+  <summary class="methodology-toggle">
+    <span class="methodology-toggle-text">Methodology and sources</span>
+    <svg class="methodology-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </summary>
+
+  <div class="methodology-content">
+    {methodologyNotes && (
+      <p class="methodology-notes">{methodologyNotes}</p>
+    )}
+
+    <div class="axis-scores">
+      <h4 class="axis-scores-heading">Score breakdown</h4>
+      <div class="axis-grid">
+        {scoreEntries.map(({ axis, value, confidence, notes }) => (
+          <div class="axis-row">
+            <div class="axis-meta">
+              <span class="axis-name">{axis.name}</span>
+              <span class="axis-value">{value}/10</span>
+            </div>
+            <div class="axis-bar-track">
+              <div class="axis-bar-fill" style={`width: ${value * 10}%`} />
+            </div>
+            <div class="axis-details">
+              {notes && <p class="axis-notes">{notes}</p>}
+              <span class="axis-confidence">
+                Confidence: {Math.round(confidence * 100)}%
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {sources.length > 0 && (
+      <div class="sources-section">
+        <h4 class="sources-heading">Sources</h4>
+        <ol class="sources-list">
+          {sources.map((source) => (
+            <li class="source-item">
+              {source.url ? (
+                <a href={source.url} target="_blank" rel="noopener noreferrer" class="source-link">
+                  {source.title}
+                </a>
+              ) : (
+                <span class="source-title">{source.title}</span>
+              )}
+              {source.author && <span class="source-author"> - {source.author}</span>}
+              {source.year && <span class="source-year"> ({source.year})</span>}
+            </li>
+          ))}
+        </ol>
+      </div>
+    )}
+
+    {media.length > 0 && (
+      <div class="media-section">
+        <h4 class="sources-heading">Watch</h4>
+        <ul class="media-list">
+          {media.map((m) => (
+            <li class="media-item">
+              <a
+                href={`https://www.youtube.com/watch?v=${m.videoId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="media-link"
+              >
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="media-icon">
+                  <path d="M5 3l6 4-6 4V3z" fill="currentColor"/>
+                </svg>
+                {m.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</details>
+
+<style>
+  .methodology {
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .methodology-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-4);
+    cursor: pointer;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: background-color var(--duration-fast) var(--ease-out);
+  }
+
+  .methodology-toggle:hover {
+    background-color: var(--color-surface-raised);
+  }
+
+  .methodology-chevron {
+    transition: transform var(--duration-fast) var(--ease-out);
+    flex-shrink: 0;
+  }
+
+  .methodology[open] .methodology-chevron {
+    transform: rotate(180deg);
+  }
+
+  .methodology-content {
+    padding: 0 var(--space-4) var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .methodology-notes {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-normal);
+    font-style: italic;
+  }
+
+  .axis-scores-heading,
+  .sources-heading {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+  }
+
+  .axis-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .axis-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .axis-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .axis-name {
+    font-size: var(--text-xs);
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  .axis-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+  }
+
+  .axis-bar-track {
+    height: 3px;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  .axis-bar-fill {
+    height: 100%;
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+  }
+
+  .axis-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .axis-notes {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .axis-confidence {
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+  }
+
+  .sources-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    list-style: decimal;
+    padding-left: var(--space-6);
+  }
+
+  .source-item {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-normal);
+  }
+
+  .source-link {
+    color: var(--color-accent);
+  }
+
+  .source-author,
+  .source-year {
+    color: var(--color-text-muted);
+  }
+
+  .media-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .media-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--color-accent);
+    transition: opacity var(--duration-fast);
+  }
+
+  .media-link:hover {
+    text-decoration: underline;
+  }
+
+  .media-icon {
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+</style>

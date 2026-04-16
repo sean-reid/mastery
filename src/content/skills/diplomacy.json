@@ -1,0 +1,141 @@
+{
+  "name": "Diplomacy",
+  "slug": "diplomacy",
+  "category": "game",
+  "description": "A seven-player board game of pure negotiation set in pre-WWI Europe with no dice, no cards, and no hidden information -- the only variable is each player's ability to persuade, deceive, and betray. Meta's CICERO AI achieved top-10% human performance only by combining a 2.7B-parameter language model with strategic planning, making it the first game where competitive AI required natural language deception.",
+  "thumbnail": {
+    "src": "/images/skills/diplomacy.webp",
+    "alt": "Diplomacy board showing the map of Europe with army and fleet pieces",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "4vyWdr2JrRM",
+      "title": "Strategy and Overview for Diplomacy Board Game"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Diplomacy (game)",
+      "url": "https://en.wikipedia.org/wiki/Diplomacy_(game)",
+      "type": "reference"
+    },
+    {
+      "title": "Human-level play in the game of Diplomacy by combining language models with strategic reasoning",
+      "author": "Meta Fundamental AI Research Diplomacy Team (FAIR)",
+      "url": "https://www.science.org/doi/10.1126/science.ade9097",
+      "year": 2022,
+      "type": "research"
+    },
+    {
+      "title": "International prize list of Diplomacy",
+      "url": "https://en.wikipedia.org/wiki/International_prize_list_of_Diplomacy",
+      "type": "reference"
+    },
+    {
+      "title": "The Board Game of the Alpha Nerds (Grantland)",
+      "url": "https://grantland.com/features/diplomacy-the-board-game-of-the-alpha-nerds/",
+      "year": 2014,
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Rules are simple: units support, hold, or move; supply centers determine army counts. A competent game requires understanding basic openings and alliance dynamics, achievable in a few sessions."
+    },
+    "time_to_expert": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "No formal rating system makes this hard to quantify. World Championship winners tend to have 5-15 years of tournament experience. The skill is primarily social rather than computational, resisting structured practice."
+    },
+    "feedback_delay": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Each game takes 4-8 hours face-to-face. A diplomatic strategy's quality may not be apparent until several turns later. Betrayal timing feedback is especially delayed -- you learn if you stabbed too early only when the game concludes."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "No financial stakes in standard play. Social cost can be real -- broken alliances with regular opponents affect future games. The game famously strains friendships."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Tactical computation is modest (limited unit counts), but simultaneously modeling seven players' intentions, maintaining multiple deceptive narratives, and tracking alliance networks is deeply demanding."
+    },
+    "physical_demand": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "Seated board game. Face-to-face tournaments involve hours of intense social interaction, which is mentally but not physically taxing."
+    },
+    "prerequisite_knowledge": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "No prerequisites beyond basic social skills. The map loosely represents 1901 Europe but no historical knowledge is required."
+    },
+    "measurability": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "No standardized rating system. Tournament scoring systems vary (sum-of-squares, center-count, draw-based). The World Diplomacy Championship exists but results are noisy due to small sample sizes and player-pool variation."
+    },
+    "perishability": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Social manipulation and strategic thinking skills are relatively durable. Map knowledge and opening theory are stable (the game is unchanged since 1959). Negotiation instincts may dull without practice."
+    },
+    "precision_required": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Tactical orders are simple and discrete. The precision is in timing: when to betray an ally, when to signal commitment, when to lie. These are judgment calls, not calculations."
+    },
+    "ambiguity": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Outcomes depend heavily on other players' psychology. The 'correct' move is undefined -- it depends on what six other humans decide to do. Even winning strategies require opponents to cooperate with you."
+    },
+    "instruction_dependency": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Largely self-taught through play. Written strategy guides exist but the core skill -- social manipulation -- is developed experientially rather than through formal instruction."
+    },
+    "environmental_variability": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Same map every game, but the human element makes each game radically different. Player personalities, alliances, grudges from previous games, and table dynamics create enormous variability."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Simultaneously managing tactical planning, alliance negotiation, deception maintenance, information warfare, emotional regulation, and reading body language/tone across six bilateral conversations per turn."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Difficult to assess due to lack of rating systems. Players report improvement being tied to social maturity and experience with specific opponents rather than studyable techniques."
+    },
+    "domain_evolution": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Rules unchanged since 1959. No significant metagame evolution. CICERO AI has not meaningfully affected human play strategies. The game is fundamentally static."
+    },
+    "observability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Negotiation phases are visible and dramatic -- observers can watch alliances form and shatter. The tactical board state is clear. However, the most skilled play (deception, long-term manipulation) is invisible."
+    },
+    "luck_variance": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "No randomness in mechanics, but outcome variance is high because it depends on other players' decisions. Being assigned a weaker starting power (e.g., Italy) significantly affects win probability."
+    },
+    "social_coordination": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "The entire game IS social coordination. Every action depends on persuading others. No player can win without allies. Success requires managing six simultaneous bilateral relationships across multiple turns."
+    }
+  },
+  "methodology_notes": "Scores informed by the Wikipedia article on Diplomacy, the Meta FAIR CICERO paper published in Science (2022), the Grantland long-form feature on competitive Diplomacy culture, and the International prize list of Diplomacy for tournament history. The high social_coordination and ambiguity scores reflect the game's unique position as a pure negotiation game with no random elements. Confidence is lower than for chess/Go due to the absence of formal rating systems."
+}

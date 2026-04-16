@@ -1,0 +1,138 @@
+{
+  "name": "Xiangqi",
+  "slug": "xiangqi",
+  "category": "game",
+  "description": "Chinese chess, the most-played board game on Earth with an estimated several hundred million active players, deploys a unique topology: a central river that enhances soldiers and blocks elephants, a 3x3 palace that confines each general and its two advisors, and a cannon that must jump over an intervening piece to capture. The 'flying general' rule -- forbidding the two generals from facing each other on an open file -- creates an invisible line of force with no parallel in any other chess variant.",
+  "thumbnail": {
+    "src": "/images/skills/xiangqi.webp",
+    "alt": "A xiangqi board with traditional Chinese character pieces arranged on intersections",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "iiMEGkafvMo",
+      "title": "How to Play Chinese Chess (Xiangqi)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Xiangqi",
+      "url": "https://en.wikipedia.org/wiki/Xiangqi",
+      "type": "reference"
+    },
+    {
+      "title": "Game complexity",
+      "url": "https://en.wikipedia.org/wiki/Game_complexity",
+      "type": "reference"
+    },
+    {
+      "title": "How many people play Xiangqi?",
+      "url": "https://www.xqinenglish.com/index.php?option=com_content&view=article&id=938:how-many-people-play-xiangqi&catid=119&Itemid=569&lang=en",
+      "type": "reference"
+    },
+    {
+      "title": "Introducing the Titles in Xiangqi (Chinese Chess)",
+      "url": "https://www.xqinenglish.com/index.php?option=com_content&view=article&id=933:introducing-the-titles-in-xiangqi-chinese-chess&catid=119&lang=en",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Rules including the cannon's jump-capture, river effects, and palace confinement can be learned in a sitting. Playable casual games within days, faster for those with chess experience."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "China's professional ranking system (introduced 1998 by the CXA) produces only ~43 male Grandmasters out of approximately 503 professionals. Reaching Grandmaster requires years of full-time study from childhood."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Each game ends decisively (stalemate is a loss in xiangqi, unlike chess). Online engines provide post-game analysis. Rating systems track progress."
+    },
+    "failure_cost": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Losses affect rating but carry no material cost. Professional losses can affect tournament standing and income but are a normal part of competition."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Game-tree complexity of ~10^150 exceeds chess. The cannon's conditional capture, horse blocking, and flying general rule add unique tactical layers. Open board structure rewards aggressive calculation."
+    },
+    "physical_demand": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "Entirely sedentary. Pieces are placed on intersections of lines. No physical exertion."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Rules are self-contained and well-documented. Understanding Chinese characters on the pieces helps but is not strictly necessary with practice. Chess knowledge provides partial transfer."
+    },
+    "measurability": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Elo-based ratings (Asian Xiangqi Federation), Chinese professional ranking system (from Master to Grandmaster), and online rating platforms provide precise measurement."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Tactical pattern recognition is durable. Opening theory knowledge and sharp tactical vision decay with inactivity. Less theory-heavy than chess, so slightly more durable."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "The open board structure and powerful long-range pieces (chariots, cannons) mean a single tactical oversight can be immediately fatal. Stalemate being a loss raises the stakes further."
+    },
+    "ambiguity": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Win or lose (stalemate is a loss). Draws exist through repetition rules but are less common than in chess. Evaluation is increasingly engine-assisted."
+    },
+    "instruction_dependency": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Extensive Chinese-language resources exist. English resources are growing (xqinenglish.com has 3000+ YouTube videos). Self-study is viable but most professionals train through institutional systems."
+    },
+    "environmental_variability": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Identical starting position every game. The river, palaces, and all rules are fixed. No randomness."
+    },
+    "concurrent_skills": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Managing cannon platforms, horse blocking paths, palace defense, river crossings, and the flying general constraint simultaneously. Slightly fewer concurrent systems than shogi due to no drops."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Like all abstract strategy games, progress slows dramatically at higher levels. The jump from strong amateur to professional is enormous given only ~500 professionals in China."
+    },
+    "domain_evolution": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Opening theory evolves with AI analysis. The Central Cannon opening has been dominant for centuries but AI has introduced new variations. Core rules unchanged for over a thousand years."
+    },
+    "observability": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Widely played in parks and public spaces across China and Vietnam, making casual play highly visible. But the depth of expert play is invisible without commentary."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "No random elements. Red moves first, providing a slight advantage, but this is well-understood and accounted for."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Primarily individual competition. Team tournaments exist in China's professional league system but are secondary to individual ranking."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia's xiangqi article, Game Complexity Wikipedia data (game-tree complexity ~10^150), xqinenglish.com's documentation of professional titles and player statistics (503 professionals, 43 male Grandmasters from the 2019 Xiangqi White Paper), and comparative analysis with chess and shogi complexity metrics. Player population estimates are inherently uncertain but sourced from xqinenglish.com's analysis of available data."
+}

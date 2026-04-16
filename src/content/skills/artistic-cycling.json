@@ -1,0 +1,133 @@
+{
+  "name": "Artistic Cycling",
+  "slug": "artistic-cycling",
+  "category": "sport",
+  "description": "Gymnastics performed on a brakeless fixed-gear bicycle within a 14x11-meter gymnasium floor, scored by judges who evaluate up to 30 figures drawn from a catalogue of approximately 120 possible exercises. Competitors execute handstands on handlebars, saddle-to-handlebar leaps, and spinning figures on a moving bicycle during five-minute routines. Learning a handstand on the bike alone takes an estimated seven years of practice. Germany dominates with 160+ UCI World Championship titles since 1956.",
+  "thumbnail": {
+    "src": "/images/skills/artistic-cycling.webp",
+    "alt": "An artistic cyclist performing a handstand on the handlebars of a specialized fixed-gear bicycle",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "dg3z5tsF1PM",
+      "title": "Artistic Cycling: UCI Indoor Cycling World Championships Highlights"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Artistic cycling",
+      "url": "https://en.wikipedia.org/wiki/Artistic_cycling",
+      "type": "reference"
+    },
+    {
+      "title": "What is artistic cycling?",
+      "url": "https://www.uci.org/article/what-is-artistic-cycling/1tFbM5IBYXLLYen7BbIVor",
+      "type": "institutional"
+    },
+    {
+      "title": "What Is Bicycle Acrobatics (Artistic Cycling)?",
+      "url": "https://www.acroschool.com/bicycle-acrobatics",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Basic figures on the specialized fixed-gear bike take months to learn. Simply riding the bike backwards with control requires extensive practice. The bike has a 1:1 fixed gear ratio and reversed handlebar geometry unlike anything in recreational cycling. Gymnastic prerequisites (handstands, flexibility) must be developed in parallel."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.7,
+      "notes": "Professional artistic cyclists train ~20 hours per week. Viola Brand, a world-class competitor, notes that learning the handstand on the bike takes approximately seven years. UCI World Championship competitors typically begin training as children and develop over a decade or more. The figure catalogue of ~120 exercises demands years of progressive mastery."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Falls and failed figures provide immediate feedback. Competition scores are returned promptly. However, fine execution improvements (small deductions in judging) can be subtle and slow to diagnose without video review and coaching."
+    },
+    "failure_cost": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Falls from handstands or jumps on a moving bicycle risk fractures and concussions. The fixed-gear mechanism means the pedals are always spinning. However, the indoor gymnasium surface is flat and speeds are moderate. Less dangerous than outdoor cycling or aerial gymnastics due to the controlled environment."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Memorizing and sequencing up to 30 figures within a five-minute routine requires choreographic planning. Each figure has specific execution requirements and point values. Strategic selection of figures to maximize difficulty while maintaining execution quality adds a cognitive optimization layer."
+    },
+    "physical_demand": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Requires exceptional balance, core strength, upper body strength for handstands on moving handlebars, flexibility for gymnastic poses, and leg strength for fixed-gear propulsion. Five-minute routines demand sustained athletic output. The combination of gymnastics-level strength with cycling-specific balance is uniquely demanding."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Basic cycling ability and gymnastic fundamentals (handstands, body tension) are prerequisites. Understanding the fixed-gear bicycle's unique mechanics is essential. The specialized saddle and handlebar designs require familiarity before any figures can be attempted."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "UCI competition scoring provides detailed point tallies. Each figure has a defined difficulty value. Three pairs of commissaires at international events provide structured evaluation. Deductions are categorized (execution errors, falls, circle deviations). World Cup standings provide longitudinal ranking."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "The highly specialized balance skills -- particularly handstands and figures on a moving bicycle -- likely decay quickly without regular practice. The motor-vestibular integration is extremely specific and not maintained by general fitness. Gymnastic flexibility and strength are more durable but insufficient alone."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Figures must be executed within marked circles on the gymnasium floor (0.5m, 4m, and 8m diameter). Handstands require sub-centimeter balance adjustments on moving handlebars. Pairs routines demand synchronized movements. Commissaires evaluate execution precision against defined standards for each figure."
+    },
+    "ambiguity": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "The UCI figure catalogue provides specific definitions and point values. Execution standards are well-defined. However, like all judge-scored sports, subjective elements exist in the assessment of execution quality, artistic impression, and deduction severity."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Virtually impossible to learn without access to a club with specialized equipment and experienced coaches. The fixed-gear artistic bike is a niche product. Technique for figures like travelling handstands cannot be safely self-taught. The sport is concentrated in Germany, Austria, Switzerland, and Czechia with limited global access."
+    },
+    "environmental_variability": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Standardized indoor gymnasium floor (14x11m) with precisely marked circles. Controlled temperature and lighting. No wind, rain, or terrain variation. Equipment specifications are regulated by the UCI. One of the most environmentally controlled sports."
+    },
+    "concurrent_skills": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Simultaneously managing bicycle balance, fixed-gear pedaling or coasting, body position for gymnastic figures, spatial awareness of floor markings, routine choreography, and artistic expression. Pairs and Act-4 routines add synchronized coordination with teammates. The integration of cycling mechanics with gymnastics is exceptionally demanding."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Clear progression barriers at each figure difficulty level. The transition from ground-level figures to handstands represents a multi-year plateau. Each new figure in the catalogue requires mastery of prerequisite figures. The seven-year handstand timeline suggests extended plateaus."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "UCI World Championships have been held since 1956 with gradual expansion of categories (Pairs in 1986, Act-4 in 2005). The figure catalogue evolves slowly. Equipment specifications are standardized. The sport's evolution is incremental rather than revolutionary."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Handstands, spins, and acrobatic figures on a moving bicycle are immediately spectacular to any audience. The combination of gymnastics and cycling is visually unique and requires no domain knowledge to appreciate. Viral social media clips have driven significant audience growth."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "No randomness. Performance is entirely determined by the athlete's preparation, skill, and execution on the day. No opponents, no ball bounces, no environmental variables. Judge variance introduces minimal randomness in a well-structured scoring system."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Single events are purely individual. Pairs and Act-4 (four-rider) categories require synchronized choreography and close physical coordination. The weighted average across all categories places this at moderate social coordination. Pairs routines involve lifts and catches requiring deep trust."
+    }
+  },
+  "methodology_notes": "Scores informed by the Wikipedia article on artistic cycling, the UCI's official 'What is artistic cycling?' guide, and AcroSchool's detailed breakdown of the sport. Training timelines sourced from Viola Brand's reported seven-year handstand development and ~20 hours/week training schedule (Cycling Weekly interview). The figure catalogue of ~120 exercises and five-minute routine format provide clear scoring structure. Confidence is higher for physical demand and precision axes where the sport's requirements are self-evident from the figure descriptions."
+}

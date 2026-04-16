@@ -1,0 +1,138 @@
+{
+  "name": "Straw Marquetry",
+  "slug": "straw-marquetry",
+  "category": "trade",
+  "description": "Straw marquetry transforms rye or wheat straw into a lustrous veneer: each stem is split lengthwise with a knife, soaked, then ironed flat to reveal a natural silica coating that gives the material its distinctive sheen without any applied finish. The flattened strips—ranging from pale gold to deep brown depending on heat treatment—are cut with a scalpel and glued matte-side-down onto wood, metal, or glass substrates in geometric or figurative patterns. First documented in England in 1677, the craft nearly vanished in the 20th century before Lison de Caunes revived it from her grandfather's Parisian workshop.",
+  "thumbnail": {
+    "src": "/images/skills/straw-marquetry.webp",
+    "alt": "Detail of straw marquetry panel showing geometric sunburst pattern in gold and brown straw strips on a wooden surface",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "cJbOKIhJDNQ",
+      "title": "Lison de Caunes: The Art of Straw Marquetry"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Straw marquetry - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Straw_marquetry",
+      "type": "reference"
+    },
+    {
+      "title": "Straw working - Heritage Crafts",
+      "url": "https://heritagecrafts.org.uk/craft/straw-working/",
+      "type": "institutional"
+    },
+    {
+      "title": "Straw Marquetry - Fondation Remy Cointreau",
+      "url": "https://www.fondationremycointreau.com/en/domain/straw-marquetry/",
+      "type": "institutional"
+    },
+    {
+      "title": "A Guide to Straw Marquetry - Fine Woodworking",
+      "url": "https://www.finewoodworking.com/2022/02/21/a-guide-to-straw-marquetry",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Basic geometric patterns using pre-dyed straw strips can be produced within weeks. Learning to split, soak, iron, and apply straw consistently takes a few months. Lison de Caunes' Paris atelier offers multi-day workshops for beginners."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.6,
+      "notes": "Creating the large-scale architectural panels and complex figurative designs that define mastery takes years. Lison de Caunes has devoted her entire career to the craft. Gerard Williams and a handful of others represent expert-level practice after decades of work."
+    },
+    "feedback_delay": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Straw strips are applied one at a time and the result is visible immediately after each placement. Adhesive drying reveals final bond quality within hours. Color accuracy is confirmed as strips are laid."
+    },
+    "failure_cost": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Rye straw is inexpensive and widely available (though specialty marquetry-grade straw comes from only a few French farms). A misplaced strip can often be lifted and repositioned before the adhesive sets. The main cost of failure is labor time."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Planning complex geometric patterns requires spatial reasoning. Understanding how straw grain direction affects light reflection—the same strip appears different colors at different angles—demands careful orientation planning. Color grading through heat treatment adds material science knowledge."
+    },
+    "physical_demand": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Fine hand work with a scalpel and brush. Splitting straw requires dexterity but minimal force. Extended periods of close bench work. No heavy lifting or heat exposure."
+    },
+    "prerequisite_knowledge": {
+      "value": 4,
+      "confidence": 0.65,
+      "notes": "Basic understanding of adhesives and substrates helps. Familiarity with marquetry or inlay principles is beneficial but not required. The primary tool—a folding knife or scalpel—requires no special training beyond basic craft safety."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Gap-free alignment of strips is objectively assessable. Pattern symmetry can be measured. But the optical effect of straw orientation—how light plays across grain directions—is a largely aesthetic judgment. No competitions or formal grading systems."
+    },
+    "perishability": {
+      "value": 4,
+      "confidence": 0.55,
+      "notes": "The fine motor skills for splitting and placing tiny straw strips likely degrade without practice, but the core knowledge of materials and processes is durable. The craft's rarity means few data points on skill atrophy exist."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Strips must be cut to exact dimensions and aligned without visible gaps. Grain direction must be consistent within each design zone for uniform light reflection. Complex geometric patterns require angular precision at every joint."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Geometric patterns have clear target specifications. Figurative and decorative designs involve significant aesthetic judgment—color selection, grain orientation for optical effects, composition. The interplay of light and straw angle is central to the art."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.65,
+      "notes": "The craft nearly died out entirely; Lison de Caunes learned from examining her grandfather's pieces rather than from living practitioners. Few published instructional resources exist beyond the Fine Woodworking guide and Lison de Caunes' workshops. Self-teaching is possible but slow."
+    },
+    "environmental_variability": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Indoor bench craft with minimal environmental sensitivity. Humidity affects straw pliability slightly and adhesive cure time, but the craft is practiced in controlled workshop conditions. Temperature during heat-treatment dyeing must be monitored."
+    },
+    "concurrent_skills": {
+      "value": 4,
+      "confidence": 0.65,
+      "notes": "Strip cutting, placement, adhesive application, and grain orientation planning happen somewhat sequentially rather than simultaneously. The main concurrent challenge is maintaining pattern awareness while executing individual strip placements."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.55,
+      "notes": "Initial progress is rapid with simple patterns. The transition to complex geometric designs with optical effects represents a significant plateau. Figurative work and architectural-scale panels present further challenges."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Core technique unchanged since the 17th century. Lison de Caunes has expanded applications to contemporary furniture and architecture but uses the same fundamental materials and methods. The scalpel, brush, and glue remain the only tools."
+    },
+    "observability": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "The luminous, shifting quality of well-oriented straw is visually striking. The difference between amateur gap-filled work and expert seamless panels is evident. The optical effect of grain direction is a distinctive marker of skill."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.7,
+      "notes": "Very little randomness. Natural variation in straw color and width introduces minor unpredictability, but outcomes are overwhelmingly determined by technique and planning."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Solo craft. Large architectural commissions may involve a small atelier team, but the core design and execution skill is individual. The global community of practitioners is extremely small."
+    }
+  },
+  "methodology_notes": "Scores draw on the Wikipedia entry, Heritage Crafts' straw working documentation, Fondation Remy Cointreau's profile of the craft, and Fine Woodworking's instructional guide by Gerard Williams. The craft's extreme rarity—with Lison de Caunes as the dominant modern figure—means most scoring is extrapolated from her work and a handful of other practitioners. Confidence is moderate due to the very small population of serious practitioners."
+}

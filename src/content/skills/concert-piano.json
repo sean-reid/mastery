@@ -1,0 +1,144 @@
+{
+  "name": "Concert Piano",
+  "slug": "concert-piano",
+  "category": "instrument",
+  "description": "Professional concert pianists typically begin training by age 5-7 and accumulate 15,000-25,000 hours of deliberate practice over 15-20 years before debuting. The 2025 Van Cliburn Competition accepted only 30 of 340 applicants (8.8%), each of whom had already trained for over a decade. Ericsson's landmark 1993 study at the Berlin Academy found elite violinists and pianists averaged 7,410 practice hours by age 18.",
+  "thumbnail": {
+    "src": "/images/skills/concert-piano.webp",
+    "alt": "Concert grand piano on stage under spotlight at a recital hall",
+    "attribution": "Photo by Unsplash"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "ShTNalggJKs",
+      "title": "Yunchan Lim performs Rachmaninoff Piano Concerto No. 3 — 2022 Cliburn Competition Final"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The role of deliberate practice in the acquisition of expert performance",
+      "author": "K. Anders Ericsson, Ralf Th. Krampe, Clemens Tesch-Romer",
+      "url": "https://psycnet.apa.org/record/1993-40718-001",
+      "year": 1993,
+      "type": "research"
+    },
+    {
+      "title": "Van Cliburn International Piano Competition",
+      "url": "https://en.wikipedia.org/wiki/Van_Cliburn_International_Piano_Competition",
+      "type": "reference"
+    },
+    {
+      "title": "340 Applications from 45 Countries Received for 2025 Cliburn Competition",
+      "url": "https://cliburn.org/news/340-applications-45-countries-and-regions-received-2025-cliburn-competition",
+      "year": 2024,
+      "type": "competition"
+    },
+    {
+      "title": "Deliberate Practice and Performance in Music, Games, Sports, Education, and Professions: A Meta-Analysis",
+      "author": "Brooke N. Macnamara, David Z. Hambrick, Frederick L. Oswald",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24986855/",
+      "year": 2014,
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 4,
+      "confidence": 0.9,
+      "notes": "Playing simple pieces recognizably within weeks. Reading notation and playing both hands together at a basic level takes 6-12 months."
+    },
+    "time_to_expert": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "Concert-level mastery requires 15-20 years of daily practice starting in childhood. Ericsson's elite performers averaged 10,000+ hours by age 20, and were 'nowhere near masters' at that point."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Sound is immediate. Wrong notes are instantly audible. Recordings enable precise self-assessment. Subtle tonal and interpretive quality takes longer to evaluate."
+    },
+    "failure_cost": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "A wrong note in practice costs nothing. A memory slip in a major competition or recital can end a career trajectory. Repetitive strain injuries (focal dystonia) affect ~1% of professional pianists."
+    },
+    "cognitive_demand": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Simultaneously reading two staves, coordinating 10 independent fingers, managing dynamics, pedaling, phrasing, and long-term musical architecture. Concert repertoire like Rachmaninoff 3 involves 40+ minutes of continuous memorized performance."
+    },
+    "physical_demand": {
+      "value": 6,
+      "confidence": 0.85,
+      "notes": "Liszt and Rachmaninoff demand athletic finger strength, forearm endurance, and full-body engagement. Professional pianists practice 3-5 hours daily. Overuse injuries are common."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.85,
+      "notes": "No prior musical knowledge required to begin. Music theory, ear training, and harmonic analysis become essential at advanced levels."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Competition rankings and exam grades (ABRSM, RCM) provide structured benchmarks. But artistic interpretation is inherently subjective; two pianists can play the same piece flawlessly and be judged very differently."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Repertoire decays rapidly without maintenance. A concert pianist who stops practicing for 2-3 weeks will notice significant degradation in runs, trills, and memorization. Core musicianship is more durable."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "At concert level, millimeter differences in key attack affect tone color. Dynamic range spans from ppp to fff. Rhythmic precision is measured in milliseconds."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Correct notes are unambiguous. But 'correct' interpretation of Chopin or Debussy is endlessly debatable. Competition judging involves significant subjective disagreement."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Nearly all concert pianists studied with master teachers from childhood. Bad habits formed without guidance (tension, poor posture) can become career-ending. Self-taught concert pianists are essentially nonexistent."
+    },
+    "environmental_variability": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Every piano is different: action weight, key depth, tonal character. Concert pianists must adapt instantly to unfamiliar Steinways in new halls. Acoustics vary dramatically between venues."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Sight-reading, bimanual independence, pedal technique, memorization, dynamic control, rhythmic precision, and interpretive expression must operate simultaneously."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Notorious plateaus at intermediate (ABRSM Grade 5-6), advanced (diploma level), and professional thresholds. Many pianists stall for years at each transition."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Core repertoire (Bach, Beethoven, Chopin, Liszt, Rachmaninoff) is centuries old. Performance practice evolves slowly. New commissions add to repertoire but don't change fundamental technique."
+    },
+    "observability": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "A concert performance is visually and sonically dramatic. The difference between amateur and professional is obvious to any listener. Subtle mastery (voicing, rubato) is harder to perceive."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "No randomness in the instrument. Career luck (competition draw order, jury composition, opportunities) matters, but performance quality is deterministic."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.9,
+      "notes": "Primarily a solo discipline. Chamber music and concerto performance require ensemble coordination, but the core skill is developed alone."
+    }
+  },
+  "methodology_notes": "Scores draw on Ericsson's deliberate practice research (1993), Macnamara's meta-analysis (2014), Van Cliburn Competition statistics, and ABRSM/RCM grading frameworks. Concert piano is the anchor skill for the instrument category: time_to_expert=10 reflects that virtually no one reaches concert level in under 15 years of dedicated training.",
+  "interactive": "polyrhythm-tapper"
+}

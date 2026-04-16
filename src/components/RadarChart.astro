@@ -1,0 +1,187 @@
+---
+import { AXES } from '../data/axes';
+import type { SkillScores } from '../types/skill';
+
+interface Props {
+  scores: SkillScores;
+  size?: number;
+}
+
+const { scores, size = 280 } = Astro.props;
+
+const pad = 50;
+const full = size + pad * 2;
+const cx = full / 2;
+const cy = full / 2;
+const radius = (size / 2) * 0.62;
+const labelRadius = (size / 2) * 0.82;
+const angleStep = (2 * Math.PI) / AXES.length;
+
+function polarToCartesian(value: number, index: number) {
+  const angle = angleStep * index - Math.PI / 2;
+  const r = (value / 10) * radius;
+  return { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) };
+}
+
+function labelPosition(index: number) {
+  const angle = angleStep * index - Math.PI / 2;
+  return {
+    x: cx + labelRadius * Math.cos(angle),
+    y: cy + labelRadius * Math.sin(angle),
+  };
+}
+
+const gridLevels = [2, 4, 6, 8, 10];
+
+function gridPolygon(level: number): string {
+  return AXES.map((_, i) => {
+    const p = polarToCartesian(level, i);
+    return `${p.x},${p.y}`;
+  }).join(' ');
+}
+
+const scoresRecord = scores as Record<string, { value: number; confidence: number; notes?: string }>;
+
+const scorePoints = AXES.map((axis, i) => {
+  const score = scoresRecord[axis.key];
+  return polarToCartesian(score?.value ?? 0, i);
+});
+
+const polygonPoints = scorePoints.map((p) => `${p.x},${p.y}`).join(' ');
+
+const dotData = AXES.map((axis, i) => {
+  const score = scoresRecord[axis.key];
+  return {
+    point: scorePoints[i],
+    key: axis.key,
+    name: axis.name,
+    value: score?.value ?? 0,
+    confidence: score?.confidence ?? 0,
+  };
+});
+
+const axisLines = AXES.map((_, i) => {
+  const end = polarToCartesian(10, i);
+  return { x1: cx, y1: cy, x2: end.x, y2: end.y };
+});
+
+const labels = AXES.map((axis, i) => {
+  const pos = labelPosition(i);
+  const angle = angleStep * i - Math.PI / 2;
+  const angleDeg = (angle * 180) / Math.PI;
+  let anchor = 'middle';
+  if (angleDeg > -80 && angleDeg < 80) anchor = 'start';
+  if (angleDeg > 100 || angleDeg < -100) anchor = 'end';
+  return { ...pos, anchor, name: axis.shortName };
+});
+---
+
+<div class="radar-wrap">
+  <svg
+    viewBox={`0 0 ${full} ${full}`}
+    class="radar-svg"
+    role="img"
+    aria-label="Radar chart showing difficulty scores across 19 axes"
+  >
+    {/* Grid rings */}
+    {gridLevels.map((level) => (
+      <polygon
+        points={gridPolygon(level)}
+        fill="none"
+        stroke="var(--color-border)"
+        stroke-width={level === 10 ? '1' : '0.5'}
+        opacity={level === 10 ? '0.6' : '0.3'}
+      />
+    ))}
+
+    {/* Axis lines */}
+    {axisLines.map((line) => (
+      <line
+        x1={line.x1}
+        y1={line.y1}
+        x2={line.x2}
+        y2={line.y2}
+        stroke="var(--color-border)"
+        stroke-width="0.5"
+        opacity="0.3"
+      />
+    ))}
+
+    {/* Score polygon */}
+    <polygon
+      points={polygonPoints}
+      fill="var(--color-accent)"
+      fill-opacity="0.12"
+      stroke="var(--color-accent)"
+      stroke-width="1.5"
+      stroke-linejoin="round"
+      class="radar-polygon"
+    />
+
+    {/* Score dots */}
+    {dotData.map((d) => (
+      <circle
+        cx={d.point.x}
+        cy={d.point.y}
+        r="3"
+        fill="var(--color-accent)"
+        class="radar-dot"
+        data-axis={d.key}
+        data-name={d.name}
+        data-value={d.value}
+        data-confidence={d.confidence}
+      />
+    ))}
+
+    {/* Labels */}
+    {labels.map((label) => (
+      <text
+        x={label.x}
+        y={label.y}
+        text-anchor={label.anchor}
+        dominant-baseline="central"
+        class="radar-label"
+      >
+        {label.name}
+      </text>
+    ))}
+  </svg>
+</div>
+
+<style>
+  .radar-wrap {
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .radar-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .radar-label {
+    font-family: var(--font-body);
+    font-size: 8.5px;
+    fill: var(--color-text-muted);
+    user-select: none;
+  }
+
+  .radar-dot {
+    transition: r 0.15s var(--ease-out);
+    cursor: default;
+  }
+
+  .radar-dot:hover {
+    r: 5;
+  }
+
+  .radar-polygon {
+    transition: fill-opacity 0.2s var(--ease-out);
+  }
+
+  .radar-wrap:hover .radar-polygon {
+    fill-opacity: 0.2;
+  }
+</style>

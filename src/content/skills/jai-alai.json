@@ -1,0 +1,138 @@
+{
+  "name": "Jai Alai / Pelota Vasca",
+  "slug": "jai-alai",
+  "category": "sport",
+  "description": "A Basque wall-court sport in which players hurl a goatskin-covered rubber ball (pelota) against a granite front wall using a curved wicker basket (cesta) strapped to one hand, catching and releasing in a single fluid motion. The pelota reaches speeds up to 302 km/h -- a Guinness-recognized record set by Jose Ramon Areitio in 1979 -- making it the fastest-moving ball in any sport. Played on a 54-meter fronton with three walls, the sport demands split-second reactions, extreme wrist and shoulder strength, and the ability to read carom angles off multiple surfaces.",
+  "thumbnail": {
+    "src": "/images/skills/jai-alai.webp",
+    "alt": "Jai alai player mid-throw with cesta on a fronton court",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "jl1gR1gGhu4",
+      "title": "Jai Alai: The World's Fastest Sport Explained"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Jai alai",
+      "url": "https://en.wikipedia.org/wiki/Jai_alai",
+      "type": "reference"
+    },
+    {
+      "title": "Basque pelota",
+      "url": "https://en.wikipedia.org/wiki/Basque_pelota",
+      "type": "reference"
+    },
+    {
+      "title": "Fastest moving ball sport - Guinness World Records",
+      "url": "https://www.guinnessworldrecords.com/world-records/fastest-moving-ball-sport",
+      "type": "competition"
+    },
+    {
+      "title": "Jai alai - Britannica",
+      "url": "https://www.britannica.com/sports/jai-alai",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "The cesta is unlike any equipment in mainstream sport -- the curved basket extension of the arm requires completely novel throwing and catching mechanics. Simply learning to catch and release the pelota in one fluid motion takes months. Most pelotaris in the Basque Country begin training as children."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.65,
+      "notes": "Professional pelotaris train for 5-10+ years. The sport's decline (especially in the US) means fewer training pipelines exist. Career spans are relatively short due to physical toll. Mastery requires developing ambidextrous-like court coverage and reading complex carom angles at extreme speeds."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Points are won or lost within seconds. A missed catch or bad throw is immediately visible and scored. The ball moves so fast that rallies are short. Each point provides instant, unambiguous feedback."
+    },
+    "failure_cost": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "The pelota is 3/4 the size of a baseball and harder than a golf ball, traveling at 150-300 km/h. At least four players have died from pelota strikes since 1920. Severe facial fractures, eye injuries, and concussions are documented. Helmets became mandatory after Fernando Orbea's 1968 head injury. Chronic wrist and shoulder damage is common."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Anticipating carom angles off three walls at extreme ball speeds requires rapid spatial computation. Court positioning, shot selection (kill shots, chula serves, rebote plays), and opponent reading all demand high-speed decision-making. The catch-and-throw must be a single fluid motion with no hesitation."
+    },
+    "physical_demand": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Extreme wrist and shoulder strength to generate 300 km/h throws with a 500g cesta and 125-140g pelota. Explosive lateral movement across a 54-meter court. High cardio demand from continuous sprinting. The throwing motion generates enormous rotational stress on the arm and torso."
+    },
+    "prerequisite_knowledge": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Understanding wall-court geometry (similar to squash or racquetball) helps. No academic prerequisites. Physical prerequisites include strong arm and shoulder base. Basque cultural context provides access to training; outside the Basque Country and southern Florida, entry points are extremely scarce."
+    },
+    "measurability": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Win/loss records and tournament results are tracked. Point-by-point scoring is clear. Historical statistics from US frontons exist. However, the sport's decline has reduced the depth of modern analytics. No sophisticated strokes-gained-style metrics exist."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "The cesta-specific catching and throwing mechanics are highly specialized motor skills that degrade without practice. Court-reading ability is more durable. The physical demands mean career peaks are in the mid-20s to early 30s, with rapid decline thereafter."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Kill shots must be placed in precise court zones at extreme speed. The catch-and-throw must be executed in one fluid motion -- any hesitation is a fault. Reading and executing carom angles off multiple walls at 200+ km/h demands extraordinary spatial precision."
+    },
+    "ambiguity": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Points are binary -- the ball is returned legally or it is not. Faults (holding the ball, out-of-bounds) are clear. Scoring systems vary by format (spectacular, round-robin) but are codified. No subjective judging."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "The cesta is handmade, custom-fit equipment unavailable in most of the world. Without access to a fronton, a cesta, and an experienced pelotari to learn from, self-teaching is effectively impossible. Training is concentrated in the Basque Country, parts of France, and a handful of US locations (mostly Florida)."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Frontons are standardized (54m long, ~15m wide, ~12m high). Indoor play eliminates weather factors. Wall surface and ball liveliness vary slightly between venues. Outdoor trinquete courts used in some Basque variants add more variability."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Simultaneously tracking the pelota's trajectory off multiple walls, positioning for the catch, executing a fluid catch-throw motion, selecting target placement, and reading the opponent's court position. The speed of play compresses all these into fractions of a second."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "Initial plateau learning the catch-throw motion. Subsequent plateaus integrating speed, angle reading, and shot variety. The transition from training to live competition introduces a major step-up due to the ball's lethal speed. Limited data on training progression curves."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Rules and equipment have been essentially stable for decades. The cesta is still hand-woven from Pyrenees reeds over Spanish chestnut frames. The sport has contracted rather than evolved, with US frontons closing since the 1980s. No significant tactical revolution in the modern era."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "The sheer speed of the pelota is immediately impressive. The cracking sound of impact, the blur of the ball off the wall, and the athletic catches are viscerally exciting. However, the carom geometry that separates good from great players is less visible to untrained eyes."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Ball bounces off wall joints or imperfections introduce minor randomness. The pari-mutuel betting format (common in US frontons) involves post-position draws that add variance to tournament outcomes. In pure head-to-head play, skill dominates."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Doubles (parejas) is a major format requiring partner coordination -- one player covers the front court, the other the back. Singles is also played. In doubles, understanding your partner's tendencies and covering gaps is essential. Team chemistry matters but pairs are smaller than most team sports."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia articles on jai alai and Basque pelota, the Guinness World Record for fastest moving ball sport (302 km/h, Jose Ramon Areitio, 1979), and Britannica's entry on the sport. Failure cost rated 8 due to documented deaths and severe injuries from pelota strikes. Instruction dependency rated 8 because the custom cesta and fronton access are extremely limited outside the Basque Country. Domain evolution rated low because the sport has contracted globally since the 1980s with no significant rule or equipment changes. Confidence is moderate on several axes due to the sport's niche status and limited English-language training research."
+}

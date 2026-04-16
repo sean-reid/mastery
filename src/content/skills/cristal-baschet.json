@@ -1,0 +1,138 @@
+{
+  "name": "Cristal Baschet",
+  "slug": "cristal-baschet",
+  "category": "instrument",
+  "description": "Invented in 1952 by Bernard and Francois Baschet, the Cristal Baschet produces sound when a player rubs chromatically tuned glass rods with wet fingers; vibrations travel through threaded metal stems to fiberglass cones that amplify the sound acoustically without any electronics. With roughly 50 instruments ever built and fewer than a dozen active professional performers worldwide, learning requires locating one of the rare instruments and developing the precise wet-finger technique that controls dynamics entirely through pressure and speed of contact.",
+  "thumbnail": {
+    "src": "/images/skills/cristal-baschet.webp",
+    "alt": "Close-up of a Cristal Baschet showing rows of glass rods and fiberglass amplification cones",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "6umeJJtxGCg",
+      "title": "Cristal Baschet Demonstration - Bergtagna Instruments"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cristal Baschet - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cristal_Baschet",
+      "type": "reference"
+    },
+    {
+      "title": "Thomas Bloch - Cristal Baschet: the instrument",
+      "url": "https://www.thomasbloch.net/en_cristal-baschet.html",
+      "type": "community"
+    },
+    {
+      "title": "Baschet Brothers - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Baschet_Brothers",
+      "type": "reference"
+    },
+    {
+      "title": "The Enchanting Echoes of the Cristal Baschet - Colossal",
+      "url": "https://www.thisiscolossal.com/2020/03/cristal-baschet-instrument/",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 7,
+      "confidence": 0.5,
+      "notes": "Producing a clean, sustained tone by rubbing glass rods with wet fingers requires weeks of tactile calibration. No frets, no keys -- dynamics and pitch stability depend entirely on finger moisture, pressure, and speed. Accessing an instrument at all is the primary barrier."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.45,
+      "notes": "Fewer than a dozen professional cristallists exist worldwide. Thomas Bloch, the foremost performer, has played 2500+ concerts over decades. The instrument's rarity means almost no pedagogical tradition exists; mastery is largely self-directed."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.8,
+      "notes": "Sound responds instantly to finger contact. The player hears the tone immediately and can adjust pressure, moisture, and speed in real time."
+    },
+    "failure_cost": {
+      "value": 3,
+      "confidence": 0.6,
+      "notes": "Glass rods can chip or crack if mishandled, but normal playing poses minimal breakage risk. The instrument itself is extremely expensive and rare -- roughly 50 ever built -- so damage to the instrument is the primary concern."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "The player must map 56 chromatically tuned rods across 3.5 to 6 octaves, manage finger moisture levels, and control the nonlinear relationship between pressure and volume. Reading music while navigating the rod layout adds cognitive load."
+    },
+    "physical_demand": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Sustained rubbing of glass rods with wet fingers causes friction fatigue in the fingertips. The instrument spans up to 2 meters wide, requiring lateral arm movement. Not aerobically demanding but tactilely exhausting over long performances."
+    },
+    "prerequisite_knowledge": {
+      "value": 4,
+      "confidence": 0.6,
+      "notes": "Basic music theory and keyboard familiarity help since rods are laid out chromatically. No prior instrument-specific training exists. Understanding acoustics and the friction-based sound generation mechanism accelerates learning."
+    },
+    "measurability": {
+      "value": 3,
+      "confidence": 0.55,
+      "notes": "No competitions, grading systems, or standardized repertoire. Quality is judged subjectively by tone purity, dynamic control, and musicality. The tiny performer community offers no comparative benchmarks."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.55,
+      "notes": "The wet-finger tactile sensitivity is highly specific and likely decays quickly without regular practice. Finger calluses or moisture imbalances from disuse would degrade tone quality rapidly."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Slight variations in finger moisture, pressure angle, or contact speed produce dramatically different timbres or squeaks. Unlike keyboard instruments, there is no binary on/off -- every parameter is continuous."
+    },
+    "ambiguity": {
+      "value": 7,
+      "confidence": 0.55,
+      "notes": "No standardized technique, no method books, almost no pedagogy. What constitutes correct technique is largely undefined beyond the handful of active performers. Repertoire choices are entirely open."
+    },
+    "instruction_dependency": {
+      "value": 9,
+      "confidence": 0.6,
+      "notes": "With roughly 50 instruments ever made and fewer than a dozen professionals, finding a teacher is nearly impossible. Most learning must happen through direct contact with one of the rare instruments and its even rarer players."
+    },
+    "environmental_variability": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Humidity and temperature significantly affect glass rod friction and the water on the player's fingers. Dry air makes sustained tones harder; excessive humidity reduces control. Performance venues introduce acoustic variability amplified by the fiberglass cones."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Simultaneously managing finger moisture, pressure modulation across multiple rods, lateral body positioning, and musical interpretation. Less complex than bowed string instruments but the moisture management adds a unique dimension."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.45,
+      "notes": "Initial progress from producing any tone to producing clean tones is relatively fast. Achieving dynamic control, sustain, and polyphonic playing likely involves extended plateaus, though the tiny community provides almost no empirical data."
+    },
+    "domain_evolution": {
+      "value": 1,
+      "confidence": 0.75,
+      "notes": "The instrument design has been essentially unchanged since 1952. Bergtagna began producing Cristal-style instruments recently, but the fundamental technique and construction remain as the Baschet brothers conceived them."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "The visual spectacle of rubbing glass rods with wet hands while ethereal tones emanate from fiberglass cones is immediately captivating and requires no musical knowledge to appreciate. Film composers like Cliff Martinez use it specifically for its visual drama."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.7,
+      "notes": "Performance quality is almost entirely determined by the player's technique. Minor environmental factors like humidity introduce slight variance, but outcomes are overwhelmingly skill-dependent."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.7,
+      "notes": "Primarily a solo instrument. Ensemble work exists but is rare given the scarcity of instruments. Thomas Bloch has performed with orchestras and bands, but the cristallist typically works alone."
+    }
+  },
+  "methodology_notes": "Data on the Cristal Baschet is extremely sparse due to the instrument's rarity (~50 ever built) and tiny performer community. Scores rely primarily on Thomas Bloch's career documentation, the Baschet Brothers Wikipedia article, and descriptive accounts from journalism sources. Confidence is low across most axes because almost no empirical training data or comparative studies exist. The instrument_dependency score is notably high because the primary barrier to learning is physical access to an instrument."
+}

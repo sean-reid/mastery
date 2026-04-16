@@ -1,0 +1,182 @@
+---
+import CategoryBadge from './CategoryBadge.astro';
+import CompositeScore from './CompositeScore.astro';
+import RadarChart from './RadarChart.astro';
+import MethodologyPanel from './MethodologyPanel.astro';
+import AutoVideo from './AutoVideo.astro';
+import BreathHold from '../interactives/BreathHold.astro';
+import NumberFlash from '../interactives/NumberFlash.astro';
+import PitchMatcher from '../interactives/PitchMatcher.astro';
+import LayerVisualizer from '../interactives/LayerVisualizer.astro';
+import PolyrhythmTapper from '../interactives/PolyrhythmTapper.astro';
+import PatternMemory from '../interactives/PatternMemory.astro';
+import type { RankedSkill } from '../types/skill';
+
+interface Props {
+  skill: RankedSkill;
+}
+
+const { skill } = Astro.props;
+const hasClip = !!skill.clip;
+const hasMedia = skill.media && skill.media.length > 0;
+const interactiveId = skill.interactive;
+
+const interactiveMap: Record<string, any> = {
+  'breath-hold': BreathHold,
+  'number-flash': NumberFlash,
+  'pitch-matcher': PitchMatcher,
+  'layer-visualizer': LayerVisualizer,
+  'polyrhythm-tapper': PolyrhythmTapper,
+  'pattern-memory': PatternMemory,
+};
+
+const InteractiveComponent = interactiveId ? interactiveMap[interactiveId] : null;
+---
+
+<article
+  class="skill-card"
+  id={`skill-${skill.slug}`}
+  data-skill-id={skill.slug}
+  data-category={skill.category}
+>
+  <div class="card-header">
+    <div class="card-rank-wrap">
+      <span class="card-rank">#{skill.rank}</span>
+    </div>
+    <div class="card-title-block">
+      <h3 class="card-name">{skill.name}</h3>
+      <CategoryBadge category={skill.category} />
+    </div>
+    <CompositeScore score={skill.compositeScore} />
+  </div>
+
+  <p class="card-description">{skill.description}</p>
+
+  {hasClip && skill.clip && (
+    <div class="card-media">
+      <AutoVideo
+        src={skill.clip.src}
+        poster={skill.clip.poster}
+        alt={`${skill.name} in practice`}
+        attribution={skill.clip.attribution}
+      />
+    </div>
+  )}
+
+  <div class="card-body">
+    <div class="card-chart">
+      <RadarChart scores={skill.scores} />
+    </div>
+    <div class="card-details">
+      <MethodologyPanel
+        scores={skill.scores}
+        sources={skill.sources}
+        media={skill.media}
+        methodologyNotes={skill.methodology_notes}
+      />
+    </div>
+  </div>
+
+  {InteractiveComponent && (
+    <div class="card-interactive">
+      <InteractiveComponent />
+    </div>
+  )}
+</article>
+
+<style>
+  .skill-card {
+    padding: var(--space-8) 0;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .skill-card:last-child {
+    border-bottom: none;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+
+  .card-rank-wrap {
+    flex-shrink: 0;
+  }
+
+  .card-rank {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-text-muted);
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  .card-title-block {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-name {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+  }
+
+  .card-description {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-loose);
+    max-width: 70ch;
+    margin-bottom: var(--space-6);
+  }
+
+  .card-media {
+    aspect-ratio: 16 / 9;
+    max-width: 640px;
+    margin-bottom: var(--space-6);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .card-body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .card-chart {
+    width: 340px;
+  }
+
+  .card-details {
+    min-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    .card-header {
+      flex-wrap: wrap;
+    }
+
+    .card-body {
+      grid-template-columns: 1fr;
+    }
+
+    .card-chart {
+      width: 100%;
+      max-width: 340px;
+      margin-inline: auto;
+    }
+
+    .card-rank {
+      font-size: var(--text-xl);
+    }
+  }
+</style>

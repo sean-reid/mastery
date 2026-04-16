@@ -1,0 +1,62 @@
+{
+  "name": "Kuchipudi",
+  "slug": "kuchipudi",
+  "category": "performance",
+  "description": "Kuchipudi is one of the eight major Indian classical dance forms, originating in the village of Kuchipudi in Andhra Pradesh's Krishna district. Its most distinctive feat is tarangam, in which the dancer balances on the rim of a brass plate while executing intricate rhythmic footwork, often simultaneously balancing a pot of water on the head. Training traditionally begins in childhood under a guru in the gurukula system; the legendary Vedantam Satyanarayana Sarma began training at age five and debuted at fourteen, performing over 10,000 shows across a five-decade career.",
+  "thumbnail": {
+    "src": "/images/skills/kuchipudi.webp",
+    "alt": "Kuchipudi dancer performing tarangam on a brass plate in traditional costume and jewelry",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "Kq1BQtOpdas",
+      "title": "Kuchipudi Tarangam — Dancer performs on brass plate with water pot"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kuchipudi",
+      "url": "https://en.wikipedia.org/wiki/Kuchipudi",
+      "type": "reference"
+    },
+    {
+      "title": "Kuchipudi — Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/kuchipudi",
+      "type": "reference"
+    },
+    {
+      "title": "V. Satyanarayana Sarma",
+      "url": "https://en.wikipedia.org/wiki/V._Satyanarayana_Sarma",
+      "type": "reference"
+    },
+    {
+      "title": "Largest Tarangam dance — Guinness World Records",
+      "url": "https://www.guinnessworldrecords.com/world-records/108392-largest-tarangam-dance",
+      "type": "competition"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 5, "confidence": 0.8, "notes": "Basic adavus (fundamental steps) and simple compositions take 2-3 years of regular training. Performing a complete solo margam (recital program) typically requires 4-5 years." },
+    "time_to_expert": { "value": 9, "confidence": 0.8, "notes": "Mastering the complete repertoire -- including tarangam on brass plate, abhinaya (expressive storytelling), and the demanding Yakshagana dance-drama tradition -- requires 10-15+ years of intensive training under a guru." },
+    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "The guru provides immediate correction during practice. Audience response at performances is visible. Loss of balance on the brass plate provides instant physical feedback." },
+    "failure_cost": { "value": 5, "confidence": 0.75, "notes": "Falling from a brass plate during tarangam before an audience is dramatic and humiliating. Joint injuries from intensive footwork are common. But most training failures are correctable." },
+    "cognitive_demand": { "value": 8, "confidence": 0.85, "notes": "Simultaneously managing complex rhythmic patterns (tala), melodic structure (raga), narrative expression (abhinaya), Sanskrit and Telugu lyrics, hand gestures (mudras), eye movements, and balance. The dance-drama format requires acting while dancing." },
+    "physical_demand": { "value": 8, "confidence": 0.85, "notes": "Intensive percussive footwork in deep knee bends (ardhamandali), leaps, spins, and the extraordinary balance required for tarangam. Performances of 2+ hours demand exceptional endurance. Training traditionally begins in childhood to develop flexibility." },
+    "prerequisite_knowledge": { "value": 5, "confidence": 0.75, "notes": "Understanding of Carnatic music (raga and tala systems), Telugu and Sanskrit languages, Hindu mythology (especially Krishna legends), and the aesthetic theory of rasa is essential for advanced practice." },
+    "measurability": { "value": 5, "confidence": 0.75, "notes": "Structured examinations exist in some institutions. Competition results provide benchmarks. Tarangam balance is objectively pass/fail. But the quality of abhinaya (expression) is deeply subjective." },
+    "perishability": { "value": 7, "confidence": 0.8, "notes": "The percussive footwork, deep knee-bend stamina, and balance skills required for tarangam degrade rapidly without daily practice. Flexibility and joint health require constant maintenance." },
+    "precision_required": { "value": 9, "confidence": 0.85, "notes": "Footwork must align exactly with complex rhythmic cycles. Balance on the brass plate rim demands millimeter-level foot placement. Hand gestures (mudras) must be precisely formed. Eye movements follow codified patterns." },
+    "ambiguity": { "value": 4, "confidence": 0.75, "notes": "The repertoire has well-defined compositions with specified rhythmic patterns, melodies, and narrative content. Technical execution has clear standards. Interpretive abhinaya introduces some subjectivity." },
+    "instruction_dependency": { "value": 9, "confidence": 0.85, "notes": "The gurukula system of direct guru-to-student transmission is central. The oral tradition, complex rhythmic patterns, and subtle body mechanics make self-teaching essentially impossible at advanced levels." },
+    "environmental_variability": { "value": 4, "confidence": 0.75, "notes": "Performances occur on various stages, but the dance adapts well to different spaces. The brass plate introduces a standardized challenge regardless of venue. Floor surface quality matters for footwork." },
+    "concurrent_skills": { "value": 9, "confidence": 0.85, "notes": "Rhythmic footwork, narrative expression, hand gestures, eye movements, facial expressions, singing or lip-syncing, balance (especially in tarangam), and coordination with live musicians must all operate simultaneously." },
+    "plateau_density": { "value": 7, "confidence": 0.75, "notes": "Major plateaus at mastering the basic adavus, transitioning from pure dance to expressive storytelling (abhinaya), and achieving the balance and nerve required for public tarangam performance." },
+    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "Rooted in centuries-old tradition. The repertoire, technique, and aesthetic framework evolve slowly. Modern innovations are incremental and occur within established tradition." },
+    "observability": { "value": 9, "confidence": 0.9, "notes": "Kuchipudi is visually spectacular, especially tarangam on the brass plate. The combination of rapid footwork, expressive storytelling, and acrobatic balance makes skill differences immediately obvious." },
+    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Performance quality is primarily determined by training and preparation. No randomness in the dance itself, though competition judging involves some subjectivity." },
+    "social_coordination": { "value": 4, "confidence": 0.75, "notes": "Solo performances dominate the concert stage. The Yakshagana dance-drama format involves ensemble coordination. All performances require synchronization with live Carnatic musicians." }
+  },
+  "methodology_notes": "Scores informed by Wikipedia and Britannica entries on Kuchipudi, the career of Vedantam Satyanarayana Sarma (training from age 5, debut at 14, 10,000+ performances), and the Guinness World Records documentation of tarangam. The high concurrent_skills score (9) reflects that Kuchipudi is among the most technically multifaceted dance forms in existence."
+}

@@ -1,0 +1,133 @@
+{
+  "name": "Tabla",
+  "slug": "tabla",
+  "category": "instrument",
+  "description": "The tabla is a pair of Indian hand drums -- the higher-pitched dayan and bass bayan -- whose 20+ named stroke types (bols) form a spoken rhythmic language: each syllable like Na, Dhin, Dha, or Ge maps to a specific finger-and-palm technique, and players must recite compositions vocally before performing them. Mastery is traditionally transmitted through the guru-shishya parampara, with students training under a single master for 10-20 years to internalize the repertoire of kaydas, gats, tukras, and chakradars that constitute the Hindustani rhythmic tradition.",
+  "thumbnail": {
+    "src": "/images/skills/tabla.webp",
+    "alt": "Pair of tabla drums showing the dayan with black syahi center patch and the larger copper bayan",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "5M60hNJgJSw",
+      "title": "The Speaking Hand: Zakir Hussain and the Art of the Indian Drum"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tabla - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tabla",
+      "type": "reference"
+    },
+    {
+      "title": "Tabla | Indian Percussion, Hindustani Classical Music - Britannica",
+      "url": "https://www.britannica.com/art/tabla",
+      "type": "reference"
+    },
+    {
+      "title": "Tabla: Basic Strokes / Bols - Chandrakantha.com",
+      "url": "https://chandrakantha.com/music-and-dance/instrumental-music/indian-instruments/tabla/tabla-basic-strokes-bols/",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Basic bols (Na, Tin, Dha, Ge) and simple taals like Keharwa can be learned in 3-6 months with regular practice. A 10-week foundational course provides entry-level technique. However, producing clean, distinct tones from each stroke type requires significant finger strength and coordination development."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.75,
+      "notes": "The guru-shishya tradition typically involves 15-20 years of intensive study. Zakir Hussain began training under his father Alla Rakha at age 3 and was performing professionally by 12, continuing to develop for decades. Mastering the full repertoire of kaydas, gats, tukras, and improvisation within complex talas is a lifelong pursuit."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Each stroke produces immediate sound. Tonal quality differences between correct and incorrect technique are instantly audible. The bol recitation practice provides an additional feedback mechanism -- if you cannot say it, you cannot play it."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Tabla drums are moderately priced ($200-800 for a quality pair). Skin heads require periodic replacement. Physical injury risk is low but repetitive strain from intensive practice can affect fingers and wrists over time."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Players must simultaneously: maintain taal cycle position (e.g., 16-beat Teentaal), execute complex bol sequences with independent hand coordination, calculate rhythmic subdivisions for improvisation, and anticipate the sam (first beat) arrival. The mathematical complexity of tihai calculations (three repetitions landing on sam) adds significant cognitive load."
+    },
+    "physical_demand": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Requires exceptional finger independence, wrist flexibility, and hand stamina. The bayan demands heel-of-palm pressure modulation for pitch bending. Extended solo performances (30-60 minutes) demand sustained hand endurance. Finger calluses develop over months of practice."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Understanding taal (rhythmic cycle) theory, the bol syllabary, and basic Hindustani music concepts is essential. Familiarity with the guru-shishya pedagogical tradition helps. Mathematical aptitude for rhythmic subdivision is advantageous. No prior instrumental skill required."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "No standardized grading system like Western music exams. Reputation is built through live performance and lineage credibility within gharana traditions. Tonal clarity and rhythmic accuracy are partially objective, but improvisational quality and aesthetic judgment are subjective. Research has attempted acoustic classification of stroke quality."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Finger dexterity and muscle memory for specific bol combinations degrade with disuse. However, the cognitive framework of taal theory and compositional structure is more durable. Bol recitation can be practiced away from the instrument, partially mitigating physical skill decay."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Each named stroke must produce a distinctly recognizable tone -- Na must sound different from Tin, Dha from Dhin. Finger placement on the syahi (tuning paste) must be exact. Rhythmic precision within complex taals demands microsecond-level timing. Zakir Hussain was described as producing 'microscopically precise beats.'"
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "The bol system provides an unusually explicit vocabulary for what sounds correct. Gharana traditions offer defined stylistic frameworks. However, improvisational quality and emotional expression remain subjectively evaluated, and different gharanas may disagree on stylistic ideals."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "The guru-shishya parampara is not merely traditional -- it is functionally necessary. Compositions are transmitted orally, many are not notated, and correct stroke technique requires hands-on correction. Online tabla courses exist but are widely considered insufficient for serious study."
+    },
+    "environmental_variability": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Tabla heads are sensitive to humidity and temperature, requiring frequent retuning. The syahi tuning paste can shift. Performance is typically indoors in controlled conditions. Sitting posture on the floor is standard and consistent across venues."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Independent coordination of both hands (dayan and bayan produce fundamentally different sounds), simultaneous tracking of taal cycle position, real-time improvisational calculation, vocal bol recitation during practice, and -- in accompaniment settings -- tracking a melodic soloist's phrasing."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Basic strokes are achievable relatively quickly, then significant plateaus occur at: developing speed while maintaining tonal clarity, mastering complex compositions (kaydas, tukras), learning improvisation within taal constraints, and transitioning from technically correct playing to musically expressive performance."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Core technique and taal theory have been stable for centuries. Zakir Hussain expanded the tabla's reach into jazz, world music, and film scoring. Fusion contexts have added new performance demands, but fundamental technique remains rooted in classical tradition."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "The visual spectacle of rapid hand movements producing complex rhythmic patterns is immediately impressive to any observer. The verbal recitation of bols adds a unique performative dimension. Audiences can appreciate rhythmic complexity even without understanding taal theory."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Performance quality is entirely determined by preparation and skill. No random elements. Minor environmental factors (drum head condition, humidity) are controllable through preparation."
+    },
+    "social_coordination": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Most traditional performance is as an accompanist to a vocalist or melodic instrumentalist, requiring real-time responsiveness to the soloist's improvisation. Tabla solo (ekla) is a distinct format. Jugalbandi (duet) performances require deep musical communication between players."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia and Britannica articles on tabla, Darbar's 'Twelve Days of Tabla' primer, and Chandrakantha.com's comprehensive bol reference. Training timelines derived from documented guru-shishya tradition durations and biographical data of notable players including Zakir Hussain (training from age 3, professional debut at 12, 50+ year career). Cognitive demand and precision scores reflect the unique challenge of the bol system's mapping between spoken syllables and physical strokes. Confidence is generally higher than for rarer instruments due to the tabla's relatively well-documented pedagogical tradition."
+}

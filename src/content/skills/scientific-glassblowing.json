@@ -1,0 +1,62 @@
+{
+  "name": "Scientific Glassblowing",
+  "slug": "scientific-glassblowing",
+  "category": "technology",
+  "description": "A scientific glassblower fabricates custom laboratory apparatus from borosilicate glass (melting point ~1,650 C), working on a glassblowing lathe with oxygen-fuel torches to join, bend, and seal tubing to tolerances of fractions of a millimeter — a cracked seal on a vacuum line can ruin months of physics research. After completing a two-year associate degree at Salem Community College (the only US program), graduates face a 7,000-8,000 hour apprenticeship to reach journeyman status. The American Scientific Glassblowers Society has roughly 650 members; the broader US practitioner population is estimated at around 2,000, supporting university labs, pharmaceutical firms, and particle accelerator facilities.",
+  "thumbnail": {
+    "src": "/images/skills/scientific-glassblowing.webp",
+    "alt": "Scientific glassblower shaping borosilicate tubing on a lathe with an oxygen torch",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "PwG8JMMBohs",
+      "title": "Scientific Glassblowing at a University Chemistry Lab"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Scientific glassblowing - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Scientific_glassblowing",
+      "type": "reference"
+    },
+    {
+      "title": "American Scientific Glassblowers Society",
+      "url": "https://asgs-glass.org/",
+      "type": "institutional"
+    },
+    {
+      "title": "Scientific Glass Technology, AAS - Salem Community College",
+      "url": "https://www.salemcc.edu/programs/scientific-glass-technology",
+      "type": "institutional"
+    },
+    {
+      "title": "Borosilicate glass - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Borosilicate_glass",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 6, "confidence": 0.8, "notes": "Salem Community College's two-year AAS is the only US degree program. Graduates can perform basic joins and repairs but are not yet trusted with complex custom apparatus for research." },
+    "time_to_expert": { "value": 8, "confidence": 0.75, "notes": "After the two-year degree, a 7,000-8,000 hour apprenticeship (4-6 years) is required for journeyman status. Full mastery of quartz work, complex vacuum systems, and one-off research apparatus takes a decade or more." },
+    "feedback_delay": { "value": 3, "confidence": 0.8, "notes": "A bad seal or uneven wall thickness is usually visible immediately. Vacuum integrity testing provides objective feedback within minutes. Thermal stress failures occasionally appear hours later during annealing." },
+    "failure_cost": { "value": 6, "confidence": 0.7, "notes": "Borosilicate tubing is inexpensive, but the apparatus being repaired may be irreplaceable or extremely costly. A failed vacuum seal on a particle physics experiment can waste weeks of beam time. Burns from 1,650 C glass are a constant occupational hazard." },
+    "cognitive_demand": { "value": 7, "confidence": 0.75, "notes": "Must read technical drawings and translate them into 3D glass forms, understand thermal expansion coefficients, manage glass-to-metal seals, and work with quartz at temperatures where borosilicate cannot survive. Chemistry and physics knowledge are prerequisites." },
+    "physical_demand": { "value": 5, "confidence": 0.75, "notes": "Lathe work requires steady hands and sustained concentration rather than brute strength. Radiant heat exposure is significant but less extreme than furnace glassblowing. Repetitive wrist and hand motions can cause strain." },
+    "prerequisite_knowledge": { "value": 6, "confidence": 0.8, "notes": "Salem's AAS curriculum includes physics, chemistry, technical drawing, and materials science alongside bench skills. Understanding vacuum systems, thermal expansion, and glass chemistry is essential before attempting custom research apparatus." },
+    "measurability": { "value": 7, "confidence": 0.8, "notes": "Vacuum leak testing, dimensional accuracy, and wall thickness are objectively measurable. Production speed and consistency are tracked. Fewer subjective aesthetic judgments than artistic glassblowing." },
+    "perishability": { "value": 5, "confidence": 0.65, "notes": "Flame-reading ability and the tactile sense for glass temperature degrade within weeks of inactivity. Technical knowledge of glass chemistry and apparatus design is more durable." },
+    "precision_required": { "value": 9, "confidence": 0.8, "notes": "Vacuum-tight seals must hold to 10^-9 torr. Glass-to-metal seals require matching thermal expansion coefficients to within narrow tolerances. Wall thickness uniformity in reaction vessels affects experimental reproducibility." },
+    "ambiguity": { "value": 4, "confidence": 0.7, "notes": "Technical drawings and specifications are explicit. The physics of glass behavior is well understood. Ambiguity arises mainly in interpreting researcher requests and translating novel experimental designs into feasible glass constructions." },
+    "instruction_dependency": { "value": 7, "confidence": 0.75, "notes": "The ASGS Mentor Program pairs junior glassblowers with experienced practitioners. Lathe technique, flame chemistry, and vacuum sealing are difficult to learn from text alone. Salem's program is the primary formal training pipeline." },
+    "environmental_variability": { "value": 3, "confidence": 0.75, "notes": "Work is conducted in controlled laboratory or workshop settings. Torch gas purity and pressure must be consistent. Ambient temperature has minor effects on annealing rates." },
+    "concurrent_skills": { "value": 6, "confidence": 0.7, "notes": "Simultaneously managing lathe speed, torch position, glass rotation, wall thickness by sight, and internal pressure while reading technical drawings. Less time-critical than furnace glassblowing but more technically layered." },
+    "plateau_density": { "value": 6, "confidence": 0.65, "notes": "Rapid early gains in basic joining and bending. Significant plateaus when transitioning to quartz work, complex vacuum manifolds, and glass-to-metal seals. Production speed improvements slow dramatically after year five." },
+    "domain_evolution": { "value": 3, "confidence": 0.7, "notes": "Core lampworking techniques are decades old. Modern additions include laser welding, CNC-assisted cutting, and computer-aided design. But hand skills on the lathe remain the foundation." },
+    "observability": { "value": 7, "confidence": 0.75, "notes": "The quality difference between novice and expert work is clearly visible — uneven walls, cloudy seals, asymmetric joints are obvious. Vacuum test results provide unambiguous numeric feedback." },
+    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Glass behavior is highly deterministic. Failures are almost always attributable to technique — wrong flame chemistry, incorrect annealing, poor rotation speed. Occasional glass defects from the manufacturer are the primary random factor." },
+    "social_coordination": { "value": 2, "confidence": 0.8, "notes": "Fundamentally solo bench work. The glassblower consults with researchers to understand requirements but executes alone. ASGS meetings provide community but not collaborative production." }
+  },
+  "methodology_notes": "Scores draw on the ASGS membership data, Salem Community College curriculum documentation, Wikipedia's scientific glassblowing article, and published accounts from university glass shops at UC Berkeley, Purdue, and UMass. The 7,000-8,000 hour apprenticeship figure comes from ILPI's Scientific Glassblowing Learning Center. Practitioner estimates (~2,000 US) are from industry reporting."
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Mandarin Chinese",
+  "slug": "mandarin-chinese",
+  "category": "language",
+  "description": "The world's most spoken native language demands that learners master four lexical tones -- where a single syllable like 'ma' means mother, hemp, horse, or scold depending on pitch contour -- plus roughly 3,000 logographic characters for functional literacy, each memorized stroke by stroke with no phonetic shortcut.",
+  "thumbnail": {
+    "src": "/images/skills/mandarin-chinese.webp",
+    "alt": "Chinese calligraphy brush writing characters on rice paper",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "3xKeJCgYVuE",
+      "title": "The four tones of Mandarin Chinese explained"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Foreign Language Training - United States Department of State",
+      "url": "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training",
+      "type": "institutional"
+    },
+    {
+      "title": "Mandarin Chinese - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mandarin_Chinese",
+      "type": "reference"
+    },
+    {
+      "title": "Hanyu Shuiping Kaoshi - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi",
+      "type": "reference"
+    },
+    {
+      "title": "Exploring Relationships Between L2 Chinese Character Writing and Reading Acquisition From Embodied Cognitive Perspectives: Evidence From HSK Big Data",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8900728/",
+      "year": 2022,
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 8, "confidence": 0.9, "notes": "FSI Category V: 2,200 class hours (88 weeks intensive) to professional proficiency. Basic conversational ability alone takes ~600 hours due to tones and lack of cognates." },
+    "time_to_expert": { "value": 9, "confidence": 0.85, "notes": "Native-level fluency including reading classical texts, writing at educated-adult level, and full tonal mastery typically requires 8-15+ years of immersive study for adult learners." },
+    "feedback_delay": { "value": 3, "confidence": 0.8, "notes": "Tonal errors produce immediate misunderstanding in conversation. Character writing errors are caught during reading. But subtle register and usage errors may go unnoticed for years." },
+    "failure_cost": { "value": 1, "confidence": 0.9, "notes": "Mispronouncing tones is embarrassing but harmless. No physical risk." },
+    "cognitive_demand": { "value": 9, "confidence": 0.9, "notes": "Simultaneous processing of tonal pitch, character recognition (3,000+ distinct symbols), grammatical particles, and measure words. Tonal processing competes with intonation for English speakers." },
+    "physical_demand": { "value": 1, "confidence": 0.95, "notes": "Vocal cord control for tones requires minor physical training. Character writing demands fine motor skill but is not physically taxing." },
+    "prerequisite_knowledge": { "value": 1, "confidence": 0.9, "notes": "No prerequisite beyond basic literacy in one's own language. Unlike some fields, no foundation courses are required." },
+    "measurability": { "value": 8, "confidence": 0.85, "notes": "HSK (Hanyu Shuiping Kaoshi) provides standardized 1-6 level assessment. CEFR alignment exists. Character counts and vocabulary sizes are precisely measurable." },
+    "perishability": { "value": 6, "confidence": 0.8, "notes": "Tonal accuracy degrades noticeably within weeks without practice. Character recall decays faster than alphabetic-language vocabulary. Spoken fluency is more durable than reading/writing." },
+    "precision_required": { "value": 8, "confidence": 0.85, "notes": "Wrong tone = wrong word. Character strokes must be written in correct order and proportion. Measure-word misuse marks a speaker as non-native immediately." },
+    "ambiguity": { "value": 4, "confidence": 0.75, "notes": "Grammar has clear rules, but Chinese relies heavily on context and pragmatic inference. Poetry and literary Chinese are highly ambiguous. Everyday conversation is fairly direct." },
+    "instruction_dependency": { "value": 5, "confidence": 0.8, "notes": "Self-study resources are abundant (apps, textbooks, media). However, tonal correction and character stroke order benefit greatly from instructor feedback. Many learners fossilize tonal errors without guidance." },
+    "environmental_variability": { "value": 5, "confidence": 0.75, "notes": "Standard Putonghua is consistent, but regional accents vary enormously. Taiwanese Mandarin, Beijing dialect, and Singapore Mandarin differ in pronunciation and vocabulary." },
+    "concurrent_skills": { "value": 7, "confidence": 0.8, "notes": "Simultaneous management of tones, characters, grammar, pragmatic register, and listening comprehension. Reading adds radical recognition. Writing adds stroke order recall." },
+    "plateau_density": { "value": 7, "confidence": 0.8, "notes": "Major plateaus at post-beginner (tonal fossilization), intermediate (character overload around 1,500), and advanced (literary/formal register). The 'intermediate plateau' is especially notorious." },
+    "domain_evolution": { "value": 3, "confidence": 0.8, "notes": "Core grammar and characters are stable over decades. Internet slang and neologisms evolve rapidly. Simplified characters (1950s reform) was the last major structural change." },
+    "observability": { "value": 6, "confidence": 0.8, "notes": "Spoken fluency is immediately apparent. Tonal accuracy is audible to native speakers. Character literacy is visible when reading menus, signs, or writing." },
+    "luck_variance": { "value": 1, "confidence": 0.9, "notes": "Language acquisition is almost entirely effort-driven. Minor variance from exposure to helpful vs. unhelpful native speakers." },
+    "social_coordination": { "value": 3, "confidence": 0.8, "notes": "Primarily individual study, but conversation practice requires partners. Immersion environments accelerate learning dramatically." }
+  },
+  "methodology_notes": "Scores grounded in FSI Category V classification (2,200 hours), HSK proficiency framework, and extensive research on tonal language acquisition. The 3,000-character literacy threshold comes from HSK 3.0 advanced level standards and PRC education data. Speaker count (~920 million native) from Ethnologue."
+}

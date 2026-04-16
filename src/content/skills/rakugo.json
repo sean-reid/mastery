@@ -1,0 +1,57 @@
+{
+  "name": "Rakugo",
+  "slug": "rakugo",
+  "category": "performance",
+  "description": "Rakugo is a 400-year-old Japanese sit-down storytelling art in which a single performer, kneeling in seiza on a raised platform, voices every character in a comic narrative using only a paper fan (sensu) and a small cloth (tenugui) as props -- the fan becoming chopsticks, a pipe, or a pen; the cloth transforming into a book or wallet. Aspiring performers must complete a minimum three-year live-in apprenticeship (deshi) under a master, during which all training is verbal with no written texts, and the pupil handles all domestic duties while gradually learning the repertoire.",
+  "thumbnail": {
+    "src": "/images/skills/rakugo.webp",
+    "alt": "Rakugo performer kneeling on stage with a fan and cloth, performing a comic story",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "0jm8MsVSJDo",
+      "title": "Katsura Sunshine — English Rakugo Performance (TEDxKyoto)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Rakugo",
+      "url": "https://en.wikipedia.org/wiki/Rakugo",
+      "type": "reference"
+    },
+    {
+      "title": "Katsura Sunshine",
+      "url": "https://en.wikipedia.org/wiki/Katsura_Sunshine",
+      "type": "reference"
+    },
+    {
+      "title": "Rakugo: Traditional Japanese Comedy Performance — Embassy of Japan, Mumbai",
+      "url": "https://www.mumbai.in.emb-japan.go.jp/en/culture_education/event/2011/20111113/20111113.html",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 5, "confidence": 0.8, "notes": "The mandatory three-year apprenticeship must be completed before any public performance as a professional. Even basic competence requires years of oral memorization and seiza endurance training." },
+    "time_to_expert": { "value": 8, "confidence": 0.75, "notes": "After the three-year apprenticeship, performers progress through ranks (zenza, futatsume, shin'uchi). Reaching the highest rank typically requires 15-20 years of continuous performance." },
+    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "Audience laughter is immediate and unambiguous. The intimate yose theater setting means the performer can read every facial expression in the room." },
+    "failure_cost": { "value": 3, "confidence": 0.75, "notes": "A poor performance in a yose is embarrassing but not career-ending. The structured rank system provides a safety net. However, failing to complete the apprenticeship means permanent exclusion from the profession." },
+    "cognitive_demand": { "value": 8, "confidence": 0.85, "notes": "The performer must memorize dozens of lengthy stories entirely through oral transmission, voice multiple distinct characters through pitch and head-position shifts, maintain comedic timing, and deliver the crucial final punchline (ochi)." },
+    "physical_demand": { "value": 5, "confidence": 0.8, "notes": "Sitting in seiza (kneeling position) for extended periods demands significant leg endurance and pain tolerance. Vocal projection and character physicality through subtle upper-body movements add further demands." },
+    "prerequisite_knowledge": { "value": 4, "confidence": 0.75, "notes": "Deep familiarity with Japanese language, culture, historical customs, and social hierarchies is essential, as many stories reference Edo-period life. Foreign performers like Katsura Sunshine must achieve near-native fluency." },
+    "measurability": { "value": 4, "confidence": 0.7, "notes": "The rank promotion system (zenza to shin'uchi) provides structured milestones. Audience laughter is measurable. But artistic quality of character differentiation and storytelling nuance resists quantification." },
+    "perishability": { "value": 6, "confidence": 0.75, "notes": "The purely oral repertoire must be constantly rehearsed to maintain. Character voices and timing details fade without regular performance. Seiza endurance also degrades with inactivity." },
+    "precision_required": { "value": 7, "confidence": 0.8, "notes": "Character switches must be instantaneous and unambiguous -- a slight turn of the head and shift in vocal register must clearly signal a new speaker. The ochi (punchline) requires exact wording and timing." },
+    "ambiguity": { "value": 5, "confidence": 0.7, "notes": "Classic stories have established structures, but personal interpretation, tempo, and embellishment vary between performers. What makes a 'great' rakugo performance is debated among connoisseurs." },
+    "instruction_dependency": { "value": 9, "confidence": 0.9, "notes": "The apprenticeship system is mandatory and non-negotiable. Stories are transmitted exclusively through master-to-pupil oral teaching. Self-teaching is structurally impossible within the professional system." },
+    "environmental_variability": { "value": 3, "confidence": 0.75, "notes": "Most performances occur in dedicated yose theaters with consistent intimate settings. Touring and festival appearances introduce some variability, but the minimalist format adapts easily to any space." },
+    "concurrent_skills": { "value": 7, "confidence": 0.8, "notes": "Vocal acting for multiple characters, prop manipulation (fan and cloth), comedic timing, audience reading, seiza posture maintenance, and narrative pacing must all operate simultaneously." },
+    "plateau_density": { "value": 6, "confidence": 0.7, "notes": "Key plateaus at the end of apprenticeship (mastering basic repertoire), the transition to original material, and the leap from competent performer to audience-filling headliner." },
+    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "The format has remained essentially unchanged for 400 years. New stories are created, but the one-person, two-prop, seiza format is sacrosanct. Innovation occurs within rigid formal constraints." },
+    "observability": { "value": 7, "confidence": 0.8, "notes": "The performance is fully visible and audience reaction is immediate. The skill of character switching and comedic timing is apparent even to first-time viewers, though full appreciation requires Japanese language comprehension." },
+    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Career progression follows a structured rank system. Audience taste varies, but the meritocratic promotion path limits the role of luck." },
+    "social_coordination": { "value": 3, "confidence": 0.85, "notes": "Rakugo is a purely solo performance art. The master-apprentice relationship is critical during training, but the performance itself involves no coordination with other performers." }
+  },
+  "methodology_notes": "Scores informed by the documented three-year mandatory apprenticeship system, the rank progression structure (zenza/futatsume/shin'uchi) documented on Wikipedia, and first-hand accounts from international performers like Katsura Sunshine. The oral-only transmission method and apprenticeship requirement anchor the instruction_dependency score at 9."
+}

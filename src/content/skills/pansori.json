@@ -1,0 +1,62 @@
+{
+  "name": "Pansori",
+  "slug": "pansori",
+  "category": "performance",
+  "description": "Pansori is a Korean genre of epic musical storytelling in which a single vocalist (sorikkun), accompanied by one barrel drummer (gosu), performs a complete narrative lasting up to eight hours from memory, using chang (song), sasol (narration), and ballim (dramatic gesture). Inscribed on UNESCO's Representative List of Intangible Cultural Heritage in 2003, pansori preserves five surviving madang (song cycles) from an original twelve. Training is legendarily severe: masters historically sang beneath waterfalls to strengthen their voices, deliberately developing vocal nodules that produce the prized husky timbre, a process requiring 15-30 years of rigorous study.",
+  "thumbnail": {
+    "src": "/images/skills/pansori.webp",
+    "alt": "Pansori singer performing with a fan beside a drummer with a barrel drum (buk)",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "3P1CnWI62Ik",
+      "title": "Pansori Epic Chant — UNESCO Intangible Cultural Heritage"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pansori",
+      "url": "https://en.wikipedia.org/wiki/Pansori",
+      "type": "reference"
+    },
+    {
+      "title": "Pansori epic chant — UNESCO Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/en/RL/pansori-epic-chant-00070",
+      "type": "institutional"
+    },
+    {
+      "title": "Pansori — Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/art/pansori",
+      "type": "reference"
+    },
+    {
+      "title": "Pansori epic chant — UNESCO Silk Roads Programme",
+      "url": "https://en.unesco.org/silkroad/silk-road-themes/intangible-cultural-heritage/pansori-epic-chant",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 6, "confidence": 0.8, "notes": "Learning to sing even a short excerpt with proper vocal technique, timbral variety, and rhythmic complexity takes years. The demanding vocal production style (developing the husky 'cracked' voice) requires extended physical conditioning." },
+    "time_to_expert": { "value": 10, "confidence": 0.85, "notes": "UNESCO documentation states singers undergo 15-30 years of rigorous training. Memorizing all five surviving madang (each lasting hours) and developing the full range of vocal timbres and improvisational skills required for master-level performance takes decades." },
+    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "The gosu (drummer) provides real-time rhythmic feedback and chuimsae (vocal encouragement). Audience reactions -- chuimsae shouts of 'eolssigu!' -- are immediate and integral to the performance tradition." },
+    "failure_cost": { "value": 6, "confidence": 0.75, "notes": "The deliberate vocal cord damage required for the prized husky timbre carries irreversible health consequences. Vocal hemorrhage or permanent hoarseness from incorrect training technique is a real risk." },
+    "cognitive_demand": { "value": 9, "confidence": 0.9, "notes": "Memorizing 8-hour narratives with their complete musical, dramatic, and improvisational components. Simultaneously managing vocal technique across dozens of distinct timbres, rhythmic patterns (jangdan), dramatic gesture, and interaction with the drummer." },
+    "physical_demand": { "value": 8, "confidence": 0.85, "notes": "Singing at full projection for up to 8 hours demands extraordinary vocal and respiratory stamina. The traditional training method of singing beneath waterfalls reflects the extreme physical conditioning required." },
+    "prerequisite_knowledge": { "value": 6, "confidence": 0.8, "notes": "Deep knowledge of Korean literary traditions, the five surviving epic narratives, Confucian and shamanistic cultural contexts, the rhythmic framework (jangdan system), and classical Korean language registers." },
+    "measurability": { "value": 4, "confidence": 0.7, "notes": "National Intangible Cultural Property designation in Korea provides institutional recognition. But artistic quality is evaluated subjectively by masters and audiences. Each performer develops a personal interpretive style." },
+    "perishability": { "value": 8, "confidence": 0.85, "notes": "The massive memorized repertoire degrades rapidly without constant rehearsal. Vocal conditioning requires daily maintenance. The improvisational flexibility developed over years fades without regular performance." },
+    "precision_required": { "value": 8, "confidence": 0.85, "notes": "Rhythmic patterns (jangdan) must be executed precisely against the drum. Vocal timbres must shift cleanly between dozens of distinct characters and emotional registers. Text accuracy across hours of memorized narrative is critical." },
+    "ambiguity": { "value": 5, "confidence": 0.75, "notes": "The narrative texts and melodic frameworks are established, but improvisation within those frameworks is expected and valued. Different schools (je) maintain distinct interpretive traditions." },
+    "instruction_dependency": { "value": 9, "confidence": 0.9, "notes": "Training under a master is essential and non-negotiable. The vocal techniques, repertoire, and improvisational conventions are transmitted orally through years of direct study. Self-teaching is not a viable path." },
+    "environmental_variability": { "value": 4, "confidence": 0.7, "notes": "Pansori's minimal staging (singer, drummer, fan) adapts easily to any performance space. But acoustics, audience size, and the specific gosu partner significantly affect the performance dynamic." },
+    "concurrent_skills": { "value": 8, "confidence": 0.85, "notes": "Singing, narrating, acting, gesture, rhythmic coordination with the drummer, audience interaction (responding to chuimsae), memory management across hours of text, and emotional modulation across an epic narrative arc." },
+    "plateau_density": { "value": 7, "confidence": 0.75, "notes": "Major plateaus in developing the characteristic vocal timbre, memorizing the first complete madang, achieving the stamina for full-length performance, and developing a personal interpretive voice within the tradition." },
+    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "The five surviving madang are fixed. Performance practice evolves slowly within established schools. Modern fusions like Leenalchi's pansori-pop exist but are distinct from traditional practice." },
+    "observability": { "value": 8, "confidence": 0.85, "notes": "The raw vocal power, dramatic range, and sheer endurance of a pansori master are immediately and viscerally impressive. The interactive audience tradition (chuimsae) makes engagement visible." },
+    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Performance quality is overwhelmingly determined by training, preparation, and natural vocal gifts. No randomness in the art form itself." },
+    "social_coordination": { "value": 4, "confidence": 0.8, "notes": "Always performed with a gosu (drummer), requiring deep rhythmic partnership. Audience chuimsae participation is integral. But the singer carries the narrative burden entirely alone." }
+  },
+  "methodology_notes": "Scores based on UNESCO's Intangible Cultural Heritage inscription documentation (2003), Britannica and Wikipedia articles on pansori, and the documented 15-30 year training period for master-level performers. The time_to_expert score of 10 reflects the extreme demands of memorizing multiple 8-hour epics and developing the characteristic vocal timbre through deliberate vocal cord conditioning."
+}

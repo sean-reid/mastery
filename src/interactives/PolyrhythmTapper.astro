@@ -1,0 +1,923 @@
+---
+---
+<div class="interactive-wrap" id="polyrhythm-tapper">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Polyrhythm Tapper</h4>
+    <p class="interactive-subtitle">Tap the left zone in one rhythm and the right in another. Most people cannot maintain two independent rhythms.</p>
+  </div>
+
+  <!-- Level selector -->
+  <div class="poly-controls" id="poly-controls">
+    <div class="poly-levels" id="poly-levels">
+      <button class="plvl active" data-left="2" data-right="3">
+        <span class="plvl-ratio">2 : 3</span>
+        <span class="plvl-desc">Beginner</span>
+      </button>
+      <button class="plvl" data-left="3" data-right="4">
+        <span class="plvl-ratio">3 : 4</span>
+        <span class="plvl-desc">Intermediate</span>
+      </button>
+      <button class="plvl" data-left="4" data-right="5">
+        <span class="plvl-ratio">4 : 5</span>
+        <span class="plvl-desc">Advanced</span>
+      </button>
+    </div>
+
+    <p class="poly-hint" id="poly-hint">Left hand taps 2 beats per cycle. Right hand taps 3. Set your own tempo.</p>
+
+    <button class="poly-btn" id="poly-start">Start round</button>
+  </div>
+
+  <!-- Metronome dots -->
+  <div class="poly-metro" id="poly-metro" hidden>
+    <div class="metro-side metro-left">
+      <span class="metro-label">Left hand</span>
+      <div class="metro-dots" id="ml"></div>
+    </div>
+    <div class="metro-side metro-right">
+      <span class="metro-label">Right hand</span>
+      <div class="metro-dots" id="mr"></div>
+    </div>
+  </div>
+
+  <!-- Live timeline -->
+  <div class="live-timeline-wrap" id="live-timeline-wrap" hidden>
+    <div class="live-timeline" id="live-timeline">
+      <div class="live-playhead" id="live-playhead"></div>
+      <div class="live-targets live-targets-l" id="live-targets-l"></div>
+      <div class="live-targets live-targets-r" id="live-targets-r"></div>
+      <div class="live-taps" id="live-taps"></div>
+    </div>
+    <div class="live-legend">
+      <span class="live-legend-item legend-left"><span class="legend-dot dot-left"></span> Left</span>
+      <span class="live-legend-item legend-right"><span class="legend-dot dot-right"></span> Right</span>
+    </div>
+  </div>
+
+  <!-- Tap zones -->
+  <div class="poly-stage" id="poly-stage" hidden>
+    <div class="tap-zone tap-zone-left" id="tap-l">
+      <span class="tap-key" id="tap-key-l">F</span>
+      <div class="tap-ripple" id="ripple-l"></div>
+    </div>
+    <div class="tap-zone tap-zone-right" id="tap-r">
+      <span class="tap-key" id="tap-key-r">J</span>
+      <div class="tap-ripple" id="ripple-r"></div>
+    </div>
+    <div class="beat-ctr" id="beat-ctr">Beat 1 / 8</div>
+  </div>
+
+  <!-- Results -->
+  <div class="poly-result" id="poly-result" hidden>
+    <div class="res-scores">
+      <div class="res-score-main" id="res-score-pct">0%</div>
+      <p class="res-score-label">Overall accuracy</p>
+    </div>
+    <div class="res-breakdown">
+      <div class="res-hand res-hand-left">
+        <span class="res-hand-label">Left hand</span>
+        <span class="res-hand-pct" id="res-pct-l">0%</span>
+        <div class="res-bar"><div class="res-bar-fill res-bar-left" id="res-bar-l"></div></div>
+      </div>
+      <div class="res-hand res-hand-right">
+        <span class="res-hand-label">Right hand</span>
+        <span class="res-hand-pct" id="res-pct-r">0%</span>
+        <div class="res-bar"><div class="res-bar-fill res-bar-right" id="res-bar-r"></div></div>
+      </div>
+    </div>
+    <p class="res-detail" id="res-detail"></p>
+    <button class="breath-retry" id="poly-retry">Try again</button>
+  </div>
+</div>
+
+<style is:global>
+  /* ── Base interactive styles ── */
+  .interactive-wrap {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin: var(--space-8) 0;
+  }
+
+  .interactive-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .interactive-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+
+  .interactive-subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  /* ── Controls & level selector ── */
+  .poly-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+    padding: var(--space-6) 0;
+  }
+
+  .poly-levels {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .plvl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1.5px solid var(--color-border);
+    background: var(--color-surface);
+    transition: all 0.2s var(--ease-out);
+    cursor: pointer;
+  }
+
+  .plvl-ratio {
+    font-family: var(--font-mono);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.05em;
+  }
+
+  .plvl-desc {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+  }
+
+  .plvl:hover {
+    border-color: var(--color-accent);
+    background: var(--color-surface-raised);
+  }
+
+  .plvl.active {
+    border-color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 10%, transparent);
+  }
+
+  .plvl.active .plvl-ratio {
+    color: var(--color-accent);
+  }
+
+  .plvl.active .plvl-desc {
+    color: var(--color-accent);
+    opacity: 0.8;
+  }
+
+  /* ── Hint text ── */
+  .poly-hint {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-align: center;
+    max-width: 36ch;
+    line-height: 1.6;
+  }
+
+  /* ── Start button ── */
+  .poly-btn {
+    padding: var(--space-3) var(--space-8);
+    border-radius: var(--radius-full);
+    background: var(--color-accent);
+    color: white;
+    font-size: var(--text-base);
+    font-weight: 500;
+    transition: all 0.2s var(--ease-out);
+    cursor: pointer;
+    border: none;
+  }
+
+  .poly-btn:hover {
+    opacity: 0.92;
+    transform: scale(1.02);
+  }
+
+  /* ── Metronome dots ── */
+  .poly-metro {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-10);
+    margin-bottom: var(--space-3);
+  }
+  .poly-metro[hidden] { display: none; }
+
+  .metro-side {
+    text-align: center;
+  }
+
+  .metro-label {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .metro-left .metro-label { color: #b45309; }
+  .metro-right .metro-label { color: #4338ca; }
+
+  .metro-dots {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+  }
+
+  .metro-dots .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-border);
+    transition: all 0.06s ease-out;
+  }
+
+  .metro-left .dot.on {
+    background: #d97706;
+    border-color: #d97706;
+    box-shadow: 0 0 8px rgba(217, 119, 6, 0.4);
+    transform: scale(1.15);
+  }
+
+  .metro-right .dot.on {
+    background: #4f46e5;
+    border-color: #4f46e5;
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.4);
+    transform: scale(1.15);
+  }
+
+  /* ── Live timeline ── */
+  .live-timeline-wrap {
+    margin-bottom: var(--space-3);
+  }
+
+  .live-timeline {
+    width: 100%;
+    height: 56px;
+    background: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .live-playhead {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background: var(--color-accent);
+    z-index: 3;
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.5);
+    transition: left 50ms linear;
+  }
+
+  .live-targets {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .live-target-mark {
+    position: absolute;
+    width: 1px;
+    opacity: 0.25;
+  }
+
+  .live-targets-l .live-target-mark {
+    top: 4px;
+    height: 20px;
+    background: #d97706;
+  }
+
+  .live-targets-r .live-target-mark {
+    bottom: 4px;
+    height: 20px;
+    background: #4f46e5;
+  }
+
+  .live-tap-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: tapPop 0.3s var(--ease-out);
+  }
+
+  .live-tap-dot.tap-left {
+    top: 14px;
+    background: #d97706;
+    box-shadow: 0 0 6px rgba(217, 119, 6, 0.5);
+  }
+
+  .live-tap-dot.tap-right {
+    bottom: 6px;
+    top: auto;
+    background: #4f46e5;
+    box-shadow: 0 0 6px rgba(79, 70, 229, 0.5);
+  }
+
+  @keyframes tapPop {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  }
+
+  .live-legend {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-2);
+  }
+
+  .live-legend-item {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .legend-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+  }
+
+  .dot-left { background: #d97706; }
+  .dot-right { background: #4f46e5; }
+
+  /* ── Tap zones ── */
+  .poly-stage {
+    display: flex;
+    gap: var(--space-3);
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  .poly-stage[hidden] { display: none; }
+
+  .tap-zone {
+    flex: 1;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.08s ease-out, box-shadow 0.08s ease-out;
+  }
+
+  .tap-zone:active {
+    transform: scale(0.97);
+  }
+
+  .tap-zone-left {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fde68a 100%);
+    border: 2px solid #f59e0b;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 8px rgba(245, 158, 11, 0.08);
+  }
+
+  .tap-zone-right {
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 50%, #c7d2fe 100%);
+    border: 2px solid #6366f1;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 8px rgba(99, 102, 241, 0.08);
+  }
+
+  .tap-key {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--text-2xl);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .tap-zone-left .tap-key { color: #92400e; }
+  .tap-zone-right .tap-key { color: #3730a3; }
+
+  .tap-ripple {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .tap-zone-left.flash {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fbbf24 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 16px rgba(245, 158, 11, 0.3);
+  }
+
+  .tap-zone-right.flash {
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 50%, #a5b4fc 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 16px rgba(99, 102, 241, 0.3);
+  }
+
+  .beat-ctr {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  /* ── Result section ── */
+  .poly-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    text-align: center;
+    padding: var(--space-6) 0;
+  }
+
+  .poly-result[hidden] {
+    display: none;
+  }
+
+  .res-scores {
+  }
+
+  .res-score-main {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .res-score-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+  }
+
+  .res-breakdown {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+  }
+
+  .res-hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    min-width: 120px;
+  }
+
+  .res-hand-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .res-hand-pct {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 600;
+  }
+
+  .res-hand-left .res-hand-pct { color: #b45309; }
+  .res-hand-right .res-hand-pct { color: #4338ca; }
+
+  .res-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  .res-bar-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 0.6s var(--ease-out);
+    width: 0%;
+  }
+
+  .res-bar-left { background: #d97706; }
+  .res-bar-right { background: #4f46e5; }
+
+  .res-detail {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    max-width: 520px;
+    line-height: 1.6;
+  }
+
+
+  .breath-retry {
+    padding: var(--space-2) var(--space-6);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    transition: all 0.2s var(--ease-out);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .breath-retry:hover {
+    background: var(--color-surface-raised);
+  }
+
+  /* ── Mobile adjustments ── */
+  @media (max-width: 640px) {
+    .interactive-wrap {
+      padding: var(--space-5);
+    }
+
+    .poly-levels {
+      flex-direction: row;
+      gap: var(--space-2);
+    }
+
+    .plvl {
+      padding: var(--space-2) var(--space-4);
+    }
+
+    .plvl-ratio {
+      font-size: var(--text-base);
+    }
+
+    .tap-zone {
+      height: 120px;
+    }
+
+    .tap-key {
+      font-size: var(--text-xl);
+    }
+
+    .res-breakdown {
+      gap: var(--space-4);
+    }
+
+    .res-score-main {
+      font-size: 2.5rem;
+    }
+
+    .live-timeline {
+      height: 44px;
+    }
+  }
+</style>
+
+<script>
+  const $ = (id: string) => document.getElementById(id)!;
+
+  /* ── DOM refs ── */
+  const lvls = document.querySelectorAll<HTMLButtonElement>('#polyrhythm-tapper .plvl');
+  const startBtn = $('poly-start') as HTMLButtonElement;
+  const metro = $('poly-metro');
+  const mL = $('ml'), mR = $('mr');
+  const stage = $('poly-stage');
+  const tapL = $('tap-l'), tapR = $('tap-r'), beatCtr = $('beat-ctr');
+  const resEl = $('poly-result');
+  const resPct = $('res-score-pct');
+  const resPctL = $('res-pct-l'), resPctR = $('res-pct-r');
+  const resBarL = $('res-bar-l') as HTMLElement, resBarR = $('res-bar-r') as HTMLElement;
+  const detailEl = $('res-detail');
+  const hintEl = $('poly-hint');
+  const controlsEl = $('poly-controls');
+  const liveWrap = $('live-timeline-wrap');
+  const liveTimeline = $('live-timeline');
+  const livePlayhead = $('live-playhead');
+  const liveTargetsL = $('live-targets-l'), liveTargetsR = $('live-targets-r');
+  const liveTaps = $('live-taps');
+  const keyL = $('tap-key-l'), keyR = $('tap-key-r');
+
+  let L = 2, R = 3, running = false;
+  const CYCLES = 4; // number of full polyrhythm cycles to record
+
+  /* ── Detect mobile ── */
+  const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  if (isMobile) {
+    keyL.textContent = 'TAP';
+    keyR.textContent = 'TAP';
+    keyL.style.fontSize = 'var(--text-base)';
+    keyR.style.fontSize = 'var(--text-base)';
+  }
+
+  /* ── Audio engine ── */
+  let audioCtx: AudioContext | null = null;
+
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  function playTap(freq: number, vol: number = 0.15) {
+    if (!audioCtx) return;
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.08);
+  }
+
+
+  /* ── Update hint text ── */
+  function updateHint() {
+    hintEl.textContent = `Left hand taps ${L} beats per cycle. Right hand taps ${R}. Set your own tempo.`;
+  }
+
+  /* ── Level selection ── */
+  lvls.forEach(b => b.addEventListener('click', () => {
+    if (running) return;
+    lvls.forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    L = +b.dataset.left!;
+    R = +b.dataset.right!;
+    updateHint();
+  }));
+
+  /* ── Dot builder for metronome ── */
+  function dots(el: HTMLElement, n: number) {
+    el.innerHTML = '';
+    for (let i = 0; i < n; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot';
+      el.appendChild(d);
+    }
+  }
+
+  /* ── Core logic: tempo detection + scoring ── */
+
+  /** Infer BPM (ms per beat) from tap intervals */
+  function inferBPM(taps: number[]): number {
+    if (taps.length < 2) return 600; // fallback
+    const intervals: number[] = [];
+    for (let i = 1; i < taps.length; i++) {
+      intervals.push(taps[i] - taps[i - 1]);
+    }
+    // Use median interval to resist outliers
+    intervals.sort((a, b) => a - b);
+    const median = intervals[Math.floor(intervals.length / 2)];
+    return median;
+  }
+
+  /** Generate ideal target times for a subdivision, given a beat interval and cycle count */
+  function targets(sub: number, beatMs: number, cycles: number): number[] {
+    const t: number[] = [];
+    for (let c = 0; c < cycles; c++) {
+      for (let s = 0; s < sub; s++) {
+        t.push((c + s / sub) * beatMs);
+      }
+    }
+    return t;
+  }
+
+  function score(tgt: number[], taps: number[], w: number): number {
+    if (!taps.length || !tgt.length) return 0;
+    // Count hits: each target matched by a nearby tap
+    let hits = 0;
+    const used = new Set<number>();
+    for (const t of tgt) {
+      let bi = -1, bd = Infinity;
+      for (let i = 0; i < taps.length; i++) {
+        if (used.has(i)) continue;
+        const d = Math.abs(taps[i] - t);
+        if (d < bd) { bd = d; bi = i; }
+      }
+      if (bi >= 0 && bd < w) { hits++; used.add(bi); }
+    }
+    // Precision: what fraction of your taps were on target (penalizes spam)
+    const precision = taps.length > 0 ? used.size / taps.length : 0;
+    // Recall: what fraction of targets you hit
+    const recall = hits / tgt.length;
+    // F1 score: harmonic mean of precision and recall
+    if (precision + recall === 0) return 0;
+    return 2 * (precision * recall) / (precision + recall);
+  }
+
+  /* ── Build live timeline markers ── */
+  function buildLiveTimeline(tgL: number[], tgR: number[], total: number) {
+    liveTargetsL.innerHTML = '';
+    liveTargetsR.innerHTML = '';
+    liveTaps.innerHTML = '';
+    livePlayhead.style.left = '0%';
+
+    for (const t of tgL) {
+      const mark = document.createElement('div');
+      mark.className = 'live-target-mark';
+      mark.style.left = (t / total * 100) + '%';
+      liveTargetsL.appendChild(mark);
+    }
+    for (const t of tgR) {
+      const mark = document.createElement('div');
+      mark.className = 'live-target-mark';
+      mark.style.left = (t / total * 100) + '%';
+      liveTargetsR.appendChild(mark);
+    }
+  }
+
+  function addLiveTap(time: number, total: number, side: 'left' | 'right') {
+    const dot = document.createElement('div');
+    dot.className = 'live-tap-dot tap-' + side;
+    dot.style.left = (time / total * 100) + '%';
+    liveTaps.appendChild(dot);
+  }
+
+  /* ── Result display ── */
+  function showResult(uL: number[], uR: number[], total: number) {
+    if (uL.length < 2 && uR.length < 2) {
+      detailEl.textContent = 'Not enough taps to score. Try again and tap both zones.';
+      resPct.textContent = '0%';
+      resPct.style.color = '#ef4444';
+      resPctL.textContent = '0%';
+      resPctR.textContent = '0%';
+      controlsEl.style.display = 'none';
+      resEl.hidden = false;
+      return;
+    }
+
+    // Infer tempo: use left-hand intervals divided by L (each left tap = 1/L of a cycle)
+    // so the cycle duration = median left interval * L
+    const leftInterval = uL.length >= 2 ? inferBPM(uL) : 600;
+    const cycleMs = leftInterval * L; // one full polyrhythm cycle in ms
+    const w = cycleMs * 0.12; // tolerance: 12% of a full cycle
+
+    // Generate ideal targets: L taps per cycle, R taps per cycle
+    const tL = targets(L, cycleMs, CYCLES);
+    const tR = targets(R, cycleMs, CYCLES);
+
+    // Offset targets to align with the user's first left tap
+    const offset = uL.length > 0 ? uL[0] : 0;
+    const tLaligned = tL.map(t => t + offset);
+    const tRaligned = tR.map(t => t + offset);
+
+    const sL = score(tLaligned, uL, w), sR = score(tRaligned, uR, w);
+    const pct = Math.round((sL + sR) / 2 * 100);
+    const pctL = Math.round(sL * 100), pctR = Math.round(sR * 100);
+
+    /* Score color */
+    const scoreColor = pct >= 85 ? '#22c55e' : pct >= 50 ? '#eab308' : '#ef4444';
+    resPct.textContent = pct + '%';
+    resPct.style.color = scoreColor;
+
+    /* Per-hand breakdown */
+    resPctL.textContent = pctL + '%';
+    resPctR.textContent = pctR + '%';
+    requestAnimationFrame(() => {
+      resBarL.style.width = pctL + '%';
+      resBarR.style.width = pctR + '%';
+    });
+
+    /* Detail message */
+    const msg = pct >= 85
+      ? 'Excellent independence. Concert pianists maintain this across entire pieces.'
+      : pct >= 60
+        ? 'Decent effort. Your hands are partially independent. Most untrained people score below 40%.'
+        : pct >= 30
+          ? 'Typical result. True hand independence requires months of deliberate practice.'
+          : 'This is hard. Most people cannot split attention across two rhythms without training.';
+    detailEl.textContent = msg;
+
+    /* Hide controls, show result */
+    controlsEl.style.display = 'none';
+    resEl.hidden = false;
+  }
+
+  /* ── Flash effect ── */
+  function flash(el: HTMLElement) {
+    el.classList.add('flash');
+    setTimeout(() => el.classList.remove('flash'), 100);
+  }
+
+  /* ── Keyboard handling ── */
+  let kbLeft: ((e: KeyboardEvent) => void) | null = null;
+  let kbRight: ((e: KeyboardEvent) => void) | null = null;
+
+  /* ── Main round ── */
+  const ROUND_MS = 10000; // 10 seconds of tapping
+
+  function runRound() {
+    initAudio();
+    running = true;
+    startBtn.hidden = true;
+    resEl.hidden = true;
+    controlsEl.style.display = 'none';
+    metro.hidden = true; // no metronome
+    stage.hidden = false;
+    liveWrap.hidden = false;
+
+    /* Reset bar fills for result display */
+    resBarL.style.width = '0%';
+    resBarR.style.width = '0%';
+
+    const uL: number[] = [], uR: number[] = [];
+    const total = ROUND_MS;
+
+    // Clear live timeline (no pre-placed targets since tempo is unknown)
+    liveTargetsL.innerHTML = '';
+    liveTargetsR.innerHTML = '';
+    liveTaps.innerHTML = '';
+    livePlayhead.style.left = '0%';
+
+    /* Tap handlers */
+    const hL = (e: Event) => {
+      e.preventDefault();
+      if (!running) return;
+      const t = Date.now() - t0;
+      uL.push(t);
+      flash(tapL);
+      playTap(440, 0.15);
+      addLiveTap(t, total, 'left');
+    };
+    const hR = (e: Event) => {
+      e.preventDefault();
+      if (!running) return;
+      const t = Date.now() - t0;
+      uR.push(t);
+      flash(tapR);
+      playTap(587, 0.15);
+      addLiveTap(t, total, 'right');
+    };
+
+    tapL.addEventListener('pointerdown', hL);
+    tapR.addEventListener('pointerdown', hR);
+
+    /* Keyboard support */
+    kbLeft = (e: KeyboardEvent) => {
+      if (e.key === 'f' || e.key === 'F') { hL(e); }
+    };
+    kbRight = (e: KeyboardEvent) => {
+      if (e.key === 'j' || e.key === 'J') { hR(e); }
+    };
+    document.addEventListener('keydown', kbLeft);
+    document.addEventListener('keydown', kbRight);
+
+    const t0 = Date.now();
+
+    const tick = () => {
+      if (!running) return;
+      const el = Date.now() - t0;
+
+      if (el >= total) {
+        running = false;
+        tapL.removeEventListener('pointerdown', hL);
+        tapR.removeEventListener('pointerdown', hR);
+        if (kbLeft) document.removeEventListener('keydown', kbLeft);
+        if (kbRight) document.removeEventListener('keydown', kbRight);
+        kbLeft = null;
+        kbRight = null;
+        stage.hidden = true;
+        liveWrap.hidden = true;
+        controlsEl.style.display = '';
+        showResult(uL, uR, total);
+        return;
+      }
+
+      /* Timer countdown */
+      const remaining = Math.ceil((total - el) / 1000);
+      beatCtr.textContent = `${remaining}s remaining`;
+
+      /* Playhead */
+      livePlayhead.style.left = (el / total * 100) + '%';
+
+      requestAnimationFrame(tick);
+    };
+
+    tick();
+  }
+
+  /* ── Event listeners ── */
+  startBtn.addEventListener('click', runRound);
+
+  $('poly-retry').addEventListener('click', () => {
+    resEl.hidden = true;
+    controlsEl.style.display = '';
+    startBtn.hidden = false;
+  });
+</script>

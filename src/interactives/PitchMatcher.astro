@@ -1,0 +1,1015 @@
+---
+---
+
+<div class="interactive-wrap" id="pitch-matcher">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Match the pitch</h4>
+    <p class="interactive-subtitle">A reference tone will play. Use the slider to match its frequency. Accuracy is measured in cents -- hundredths of a semitone.</p>
+  </div>
+
+  <div class="pm-body">
+    <!-- Reference section -->
+    <div class="pm-panel pm-ref-panel">
+      <span class="pm-panel-label">Reference tone</span>
+      <canvas class="pm-waveform" id="pitch-ref-canvas" width="500" height="120"></canvas>
+      <button class="pm-play-btn" id="pitch-play" aria-label="Play reference tone">
+        <span class="pm-play-icon" id="pitch-play-icon">
+          <svg class="pm-icon-play" width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M7 4.5l11 6.5-11 6.5V4.5z" fill="currentColor"/>
+          </svg>
+          <span class="pm-eq-bars" id="pitch-eq-bars" hidden>
+            <span class="pm-eq-bar"></span>
+            <span class="pm-eq-bar"></span>
+            <span class="pm-eq-bar"></span>
+            <span class="pm-eq-bar"></span>
+          </span>
+        </span>
+        <span class="pm-play-label" id="pitch-play-label">Play tone</span>
+        <span class="pm-play-progress" id="pitch-play-progress"></span>
+      </button>
+    </div>
+
+    <!-- Your guess section -->
+    <div class="pm-panel pm-guess-panel">
+      <span class="pm-panel-label">Your guess</span>
+      <canvas class="pm-waveform" id="pitch-guess-canvas" width="500" height="120"></canvas>
+      <div class="pm-freq-display">
+        <span class="pm-freq-value" id="pitch-freq-value">440</span>
+        <span class="pm-freq-unit">Hz</span>
+        <span class="pm-note-name" id="pitch-note-name">A4</span>
+      </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="pm-slider-section">
+      <div class="pm-slider-wrap">
+        <input
+          type="range"
+          class="pm-slider"
+          id="pitch-slider"
+          min="200"
+          max="880"
+          value="440"
+          step="1"
+          aria-label="Frequency selector"
+        />
+        <div class="pm-slider-fill" id="pitch-slider-fill"></div>
+      </div>
+      <div class="pm-tick-marks">
+        <span class="pm-tick" data-freq="220" style="left: 2.94%"><span class="pm-tick-line"></span><span class="pm-tick-label">A3<br/>220</span></span>
+        <span class="pm-tick" data-freq="262" style="left: 9.12%"><span class="pm-tick-line"></span><span class="pm-tick-label">C4<br/>262</span></span>
+        <span class="pm-tick" data-freq="330" style="left: 19.12%"><span class="pm-tick-line"></span><span class="pm-tick-label">E4<br/>330</span></span>
+        <span class="pm-tick" data-freq="440" style="left: 35.29%"><span class="pm-tick-line"></span><span class="pm-tick-label">A4<br/>440</span></span>
+        <span class="pm-tick" data-freq="523" style="left: 47.5%"><span class="pm-tick-line"></span><span class="pm-tick-label">C5<br/>523</span></span>
+        <span class="pm-tick" data-freq="660" style="left: 67.65%"><span class="pm-tick-line"></span><span class="pm-tick-label">E5<br/>660</span></span>
+        <span class="pm-tick" data-freq="880" style="left: 100%"><span class="pm-tick-line"></span><span class="pm-tick-label">A5<br/>880</span></span>
+      </div>
+    </div>
+
+    <!-- Check button -->
+    <button class="pm-check-btn" id="pitch-check">
+      <span class="pm-check-text">Check my answer</span>
+      <svg class="pm-check-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <!-- Result -->
+    <div class="pm-result" id="pitch-result" hidden>
+      <div class="pm-result-gauge">
+        <svg class="pm-gauge" viewBox="0 0 200 110" width="200" height="110">
+          <defs>
+            <linearGradient id="pitch-gauge-grad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="var(--color-score-low)"/>
+              <stop offset="40%" stop-color="var(--color-score-mid)"/>
+              <stop offset="100%" stop-color="var(--color-score-high)"/>
+            </linearGradient>
+          </defs>
+          <path class="pm-gauge-bg" d="M20 95 A80 80 0 0 1 180 95" fill="none" stroke-width="10" stroke-linecap="round"/>
+          <path class="pm-gauge-fill" id="pitch-gauge-fill" d="M20 95 A80 80 0 0 1 180 95" fill="none" stroke-width="10" stroke-linecap="round"/>
+          <line class="pm-gauge-needle" id="pitch-gauge-needle" x1="100" y1="95" x2="100" y2="25" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="100" cy="95" r="5" fill="var(--color-text)"/>
+        </svg>
+        <div class="pm-result-cents" id="pitch-result-cents"></div>
+        <div class="pm-result-verdict" id="pitch-result-verdict"></div>
+      </div>
+
+      <div class="pm-result-comparison">
+        <div class="pm-comp-row">
+          <span class="pm-comp-label">Reference</span>
+          <span class="pm-comp-freq" id="pitch-comp-ref"></span>
+        </div>
+        <div class="pm-comp-divider"></div>
+        <div class="pm-comp-row">
+          <span class="pm-comp-label">Your guess</span>
+          <span class="pm-comp-freq" id="pitch-comp-guess"></span>
+        </div>
+      </div>
+
+      <p class="pm-result-context" id="pitch-result-context"></p>
+
+      <div class="pm-result-actions">
+        <button class="pm-listen-btn" id="pitch-listen">Listen to both</button>
+        <button class="pm-retry-btn" id="pitch-retry">New tone</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ---- Base interactive styles (scoped) ---- */
+  #pitch-matcher {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin: var(--space-8) 0;
+  }
+
+  #pitch-matcher .interactive-header {
+    margin-bottom: var(--space-8);
+  }
+
+  #pitch-matcher .interactive-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+
+  #pitch-matcher .interactive-subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    max-width: 52ch;
+  }
+
+  /* ---- Body layout ---- */
+  .pm-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+  }
+
+  /* ---- Panels (ref + guess) ---- */
+  .pm-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .pm-panel-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+
+  /* ---- Waveform canvases ---- */
+  .pm-waveform {
+    width: 100%;
+    max-width: 500px;
+    height: 120px;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+  }
+
+  /* ---- Play button ---- */
+  .pm-play-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-8);
+    border-radius: var(--radius-full);
+    background: var(--color-accent);
+    color: white;
+    font-size: var(--text-base);
+    font-weight: 500;
+    overflow: hidden;
+    transition: all var(--duration-fast) var(--ease-out);
+    animation: pm-pulse-idle 2.5s ease-in-out infinite;
+  }
+
+  .pm-play-btn:hover {
+    opacity: 0.92;
+    transform: scale(1.03);
+  }
+
+  .pm-play-btn.playing {
+    animation: none;
+    background: var(--color-accent-hover);
+    pointer-events: none;
+  }
+
+  @keyframes pm-pulse-idle {
+    0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 40%, transparent); }
+    50% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--color-accent) 0%, transparent); }
+  }
+
+  .pm-play-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+  }
+
+  .pm-icon-play { display: block; }
+  .pm-play-btn.playing .pm-icon-play { display: none; }
+  .pm-play-btn.playing .pm-eq-bars { display: flex !important; }
+
+  /* Equalizer bars */
+  .pm-eq-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 18px;
+  }
+
+  .pm-eq-bar {
+    width: 3px;
+    background: white;
+    border-radius: 1px;
+    animation: pm-eq 0.8s ease-in-out infinite alternate;
+  }
+
+  .pm-eq-bar:nth-child(1) { height: 6px; animation-delay: 0s; }
+  .pm-eq-bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+  .pm-eq-bar:nth-child(3) { height: 10px; animation-delay: 0.3s; }
+  .pm-eq-bar:nth-child(4) { height: 16px; animation-delay: 0.45s; }
+
+  @keyframes pm-eq {
+    0% { transform: scaleY(0.3); }
+    100% { transform: scaleY(1); }
+  }
+
+  /* Play progress bar */
+  .pm-play-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: none;
+  }
+
+  .pm-play-btn.playing .pm-play-progress {
+    width: 100%;
+    transition: width 1.5s linear;
+  }
+
+  /* ---- Frequency display ---- */
+  .pm-freq-display {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+  }
+
+  .pm-freq-value {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text);
+    line-height: 1;
+  }
+
+  .pm-freq-unit {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-weight: 400;
+  }
+
+  .pm-note-name {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+  }
+
+  /* ---- Slider ---- */
+  .pm-slider-section {
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .pm-slider-wrap {
+    position: relative;
+    width: 100%;
+    height: 8px;
+  }
+
+  .pm-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background: var(--color-border);
+    outline: none;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .pm-slider-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(90deg, var(--color-accent), color-mix(in srgb, var(--color-accent) 70%, #818cf8));
+    pointer-events: none;
+    z-index: 1;
+    transition: width 0.05s linear;
+  }
+
+  /* Track */
+  .pm-slider::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: var(--radius-full);
+    background: transparent;
+  }
+
+  .pm-slider::-moz-range-track {
+    height: 8px;
+    border-radius: var(--radius-full);
+    background: transparent;
+    border: none;
+  }
+
+  /* Thumb */
+  .pm-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    border: 3px solid var(--color-surface);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 0 0 1px color-mix(in srgb, var(--color-accent) 20%, transparent);
+    margin-top: -8px;
+    cursor: grab;
+    transition: box-shadow var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+    position: relative;
+    z-index: 3;
+  }
+
+  .pm-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    border: 3px solid var(--color-surface);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 0 0 1px color-mix(in srgb, var(--color-accent) 20%, transparent);
+    cursor: grab;
+    transition: box-shadow var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+  }
+
+  .pm-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), 0 0 0 3px color-mix(in srgb, var(--color-accent) 15%, transparent);
+  }
+
+  .pm-slider::-moz-range-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), 0 0 0 3px color-mix(in srgb, var(--color-accent) 15%, transparent);
+  }
+
+  .pm-slider:active::-webkit-slider-thumb { cursor: grabbing; }
+  .pm-slider:active::-moz-range-thumb { cursor: grabbing; }
+
+  /* ---- Tick marks ---- */
+  .pm-tick-marks {
+    position: relative;
+    width: 100%;
+    height: 36px;
+    margin-top: var(--space-3);
+  }
+
+  .pm-tick {
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pm-tick-line {
+    display: block;
+    width: 1px;
+    height: 8px;
+    background: var(--color-text-muted);
+    opacity: 0.35;
+  }
+
+  .pm-tick-label {
+    font-size: 0.6rem;
+    line-height: 1.25;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-top: 2px;
+    white-space: nowrap;
+  }
+
+  /* ---- Check button ---- */
+  .pm-check-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-8);
+    border-radius: var(--radius-full);
+    background: var(--color-text);
+    color: var(--color-surface);
+    font-size: var(--text-base);
+    font-weight: 500;
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .pm-check-btn:hover {
+    opacity: 0.88;
+    transform: scale(1.02);
+  }
+
+  .pm-check-btn[hidden] { display: none; }
+
+  .pm-check-arrow {
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .pm-check-btn:hover .pm-check-arrow {
+    transform: translateX(2px);
+  }
+
+  /* ---- Result ---- */
+  .pm-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    width: 100%;
+    max-width: 540px;
+    animation: pm-result-in 0.5s var(--ease-out);
+  }
+
+  .pm-result[hidden] { display: none; }
+
+  @keyframes pm-result-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Gauge */
+  .pm-result-gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .pm-gauge-bg {
+    stroke: var(--color-border);
+  }
+
+  .pm-gauge-fill {
+    stroke: url(#pitch-gauge-grad);
+    stroke-dasharray: 252;
+    stroke-dashoffset: 252;
+    transition: stroke-dashoffset 0.8s var(--ease-out);
+  }
+
+  .pm-gauge-needle {
+    stroke: var(--color-text);
+    transform-origin: 100px 95px;
+    transition: transform 0.8s var(--ease-out);
+  }
+
+  .pm-result-cents {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pm-result-verdict {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* Comparison */
+  .pm-result-comparison {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-6);
+    background: var(--color-surface-raised);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .pm-comp-row {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .pm-comp-label {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .pm-comp-freq {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pm-comp-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--color-border);
+    flex-shrink: 0;
+  }
+
+  .pm-result-context {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 50ch;
+    line-height: var(--leading-normal);
+  }
+
+  /* Result actions */
+  .pm-result-actions {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .pm-listen-btn {
+    padding: var(--space-2) var(--space-6);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .pm-listen-btn:hover {
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  }
+
+  .pm-retry-btn {
+    padding: var(--space-2) var(--space-6);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .pm-retry-btn:hover {
+    background: var(--color-surface-raised);
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 600px) {
+    #pitch-matcher {
+      padding: var(--space-6) var(--space-4);
+    }
+
+    .pm-waveform {
+      height: 80px;
+    }
+
+    .pm-freq-value {
+      font-size: var(--text-xl);
+    }
+
+    .pm-result-comparison {
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .pm-result-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .pm-listen-btn, .pm-retry-btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .pm-tick-label {
+      font-size: 0.55rem;
+    }
+  }
+</style>
+
+<script>
+  // ---- Helpers ----
+  function freqToNote(freq: number): string {
+    const notes = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+    const semitone = 12 * Math.log2(freq / 440);
+    const noteIndex = Math.round(semitone) + 9;
+    const octave = Math.floor((noteIndex + 3) / 12) + 4;
+    return notes[((noteIndex % 12) + 12) % 12] + octave;
+  }
+
+  function freqToCents(f1: number, f2: number): number {
+    return Math.abs(1200 * Math.log2(f1 / f2));
+  }
+
+  function getRandomFreq(): number {
+    const notes = [220, 247, 262, 294, 330, 349, 392, 440, 494, 523, 587, 659, 698, 784];
+    return notes[Math.floor(Math.random() * notes.length)];
+  }
+
+  // ---- DOM refs (scoped to #pitch-matcher to avoid ID collisions) ----
+  const root = document.getElementById('pitch-matcher')!;
+  const $ = (sel: string) => root.querySelector(sel)!;
+  const slider = $('[id="pitch-slider"]') as HTMLInputElement;
+  const sliderFill = $('[id="pitch-slider-fill"]') as HTMLElement;
+  const freqValue = $('[id="pitch-freq-value"]') as HTMLElement;
+  const noteName = $('[id="pitch-note-name"]') as HTMLElement;
+  const playBtn = $('[id="pitch-play"]') as HTMLElement;
+  const playLabel = $('[id="pitch-play-label"]') as HTMLElement;
+  const playIcon = $('[id="pitch-play-icon"]') as HTMLElement;
+  const eqBars = $('[id="pitch-eq-bars"]') as HTMLElement;
+  const playProgress = $('[id="pitch-play-progress"]') as HTMLElement;
+  const checkBtn = $('[id="pitch-check"]') as HTMLElement;
+  const resultEl = $('[id="pitch-result"]') as HTMLElement;
+  const retryBtn = $('[id="pitch-retry"]') as HTMLElement;
+  const listenBtn = $('[id="pitch-listen"]') as HTMLElement;
+  const refCanvas = $('[id="pitch-ref-canvas"]') as HTMLCanvasElement;
+  const guessCanvas = $('[id="pitch-guess-canvas"]') as HTMLCanvasElement;
+
+  // Result elements
+  const gaugeFill = $('[id="pitch-gauge-fill"]') as HTMLElement;
+  const gaugeNeedle = $('[id="pitch-gauge-needle"]') as HTMLElement;
+  const resultCents = $('[id="pitch-result-cents"]') as HTMLElement;
+  const resultVerdict = $('[id="pitch-result-verdict"]') as HTMLElement;
+  const compRef = $('[id="pitch-comp-ref"]') as HTMLElement;
+  const compGuess = $('[id="pitch-comp-guess"]') as HTMLElement;
+  const resultContext = $('[id="pitch-result-context"]') as HTMLElement;
+
+  // ---- Audio engine ----
+  let audioCtx: AudioContext | null = null;
+  let analyserRef: AnalyserNode | null = null;
+  let analyserGuess: AnalyserNode | null = null;
+  let targetFreq = 0;
+  let hasPlayedOnce = false;
+  let refAnimId = 0;
+  let guessAnimId = 0;
+
+  function ensureAudio() {
+    if (!audioCtx) {
+      audioCtx = new AudioContext();
+      analyserRef = audioCtx.createAnalyser();
+      analyserRef.fftSize = 2048;
+      analyserRef.smoothingTimeConstant = 0.85;
+      analyserGuess = audioCtx.createAnalyser();
+      analyserGuess.fftSize = 2048;
+      analyserGuess.smoothingTimeConstant = 0.85;
+    }
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+  }
+
+  function playTone(freq: number, duration: number, analyser: AnalyserNode): OscillatorNode {
+    ensureAudio();
+    const ctx = audioCtx!;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+
+    // Smooth envelope to avoid clicks
+    gain.gain.setValueAtTime(0, ctx.currentTime);
+    gain.gain.linearRampToValueAtTime(0.3, ctx.currentTime + 0.02);
+    gain.gain.setValueAtTime(0.3, ctx.currentTime + duration - 0.08);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+
+    osc.connect(gain);
+    gain.connect(analyser);
+    analyser.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + duration);
+    return osc;
+  }
+
+  // ---- Waveform rendering ----
+  function drawWaveform(canvas: HTMLCanvasElement, analyser: AnalyserNode | null, color: string, active: boolean) {
+    const ctx = canvas.getContext('2d')!;
+    const dpr = window.devicePixelRatio || 1;
+    const w = canvas.clientWidth;
+    const h = canvas.clientHeight;
+
+    if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.scale(dpr, dpr);
+    }
+
+    ctx.clearRect(0, 0, w, h);
+
+    if (!active || !analyser) {
+      // Draw flat line with subtle noise
+      ctx.beginPath();
+      const mid = h / 2;
+      for (let x = 0; x < w; x++) {
+        const noise = (Math.random() - 0.5) * 1.5;
+        if (x === 0) ctx.moveTo(x, mid + noise);
+        else ctx.lineTo(x, mid + noise);
+      }
+      ctx.strokeStyle = 'color-mix(in srgb, ' + color + ' 20%, transparent)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      return;
+    }
+
+    const bufLen = analyser.frequencyBinCount;
+    const data = new Uint8Array(bufLen);
+    analyser.getByteTimeDomainData(data);
+
+    // Create gradient stroke
+    const grad = ctx.createLinearGradient(0, 0, w, 0);
+    grad.addColorStop(0, color + '33');
+    grad.addColorStop(0.3, color);
+    grad.addColorStop(0.7, color);
+    grad.addColorStop(1, color + '33');
+
+    ctx.beginPath();
+    const sliceW = w / bufLen;
+    let x = 0;
+    for (let i = 0; i < bufLen; i++) {
+      const v = data[i] / 128.0;
+      const y = (v * h) / 2;
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+      x += sliceW;
+    }
+
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = 2.5;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.stroke();
+
+    // Soft glow
+    ctx.strokeStyle = color + '18';
+    ctx.lineWidth = 8;
+    ctx.stroke();
+  }
+
+  let refPlaying = false;
+  let guessPlaying = false;
+
+  function animateRefCanvas() {
+    drawWaveform(refCanvas, analyserRef, getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#2563eb', refPlaying);
+    refAnimId = requestAnimationFrame(animateRefCanvas);
+  }
+
+  function animateGuessCanvas() {
+    drawWaveform(guessCanvas, analyserGuess, getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#2563eb', guessPlaying);
+    guessAnimId = requestAnimationFrame(animateGuessCanvas);
+  }
+
+  // Start idle canvas drawing
+  function drawIdleCanvases() {
+    drawWaveform(refCanvas, null, '#a8a29e', false);
+    drawWaveform(guessCanvas, null, '#a8a29e', false);
+  }
+  drawIdleCanvases();
+
+  // Shadow the global $ from PatternMemory (we use our own scoped one above)
+
+  // ---- Slider fill update ----
+  function updateSliderFill() {
+    const min = +slider.min;
+    const max = +slider.max;
+    const val = +slider.value;
+    const pct = ((val - min) / (max - min)) * 100;
+    sliderFill.style.width = pct + '%';
+  }
+  updateSliderFill();
+
+  // ---- Live guess tone while sliding ----
+  let guessOsc: OscillatorNode | null = null;
+  let guessGain: GainNode | null = null;
+
+  function startGuessTone() {
+    ensureAudio();
+    if (guessOsc) return;
+    const ctx = audioCtx!;
+    guessOsc = ctx.createOscillator();
+    guessGain = ctx.createGain();
+    guessOsc.type = 'sine';
+    guessOsc.frequency.value = +slider.value;
+    guessGain.gain.setValueAtTime(0, ctx.currentTime);
+    guessGain.gain.linearRampToValueAtTime(0.25, ctx.currentTime + 0.03);
+    guessOsc.connect(guessGain);
+    guessGain.connect(analyserGuess!);
+    analyserGuess!.connect(ctx.destination);
+    guessOsc.start();
+
+    guessPlaying = true;
+    cancelAnimationFrame(guessAnimId);
+    animateGuessCanvas();
+  }
+
+  function stopGuessTone() {
+    if (!guessOsc || !guessGain || !audioCtx) return;
+    guessGain.gain.linearRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+    const osc = guessOsc;
+    setTimeout(() => { try { osc.stop(); } catch {} }, 60);
+    guessOsc = null;
+    guessGain = null;
+
+    guessPlaying = false;
+    cancelAnimationFrame(guessAnimId);
+    drawWaveform(guessCanvas, null, '#a8a29e', false);
+  }
+
+  // ---- Slider events ----
+  slider.addEventListener('input', () => {
+    const val = +slider.value;
+    freqValue.textContent = val.toString();
+    noteName.textContent = freqToNote(val);
+    updateSliderFill();
+    // Update live tone frequency
+    if (guessOsc) {
+      guessOsc.frequency.value = val;
+    }
+  });
+
+  // Start tone on pointer down, stop on release
+  slider.addEventListener('pointerdown', startGuessTone);
+  slider.addEventListener('pointerup', stopGuessTone);
+  slider.addEventListener('pointercancel', stopGuessTone);
+  // Also handle mouse leaving the slider while pressed
+  slider.addEventListener('pointerleave', stopGuessTone);
+
+  // ---- Play reference tone ----
+  playBtn.addEventListener('click', () => {
+    if (!targetFreq) targetFreq = getRandomFreq();
+
+    ensureAudio();
+    playBtn.classList.add('playing');
+    playLabel.textContent = 'Playing...';
+    eqBars.hidden = false;
+
+    refPlaying = true;
+    cancelAnimationFrame(refAnimId);
+    animateRefCanvas();
+
+    const osc = playTone(targetFreq, 1.5, analyserRef!);
+
+    osc.addEventListener('ended', () => {
+      playBtn.classList.remove('playing');
+      playLabel.textContent = 'Play again';
+      eqBars.hidden = true;
+      refPlaying = false;
+      cancelAnimationFrame(refAnimId);
+      drawWaveform(refCanvas, null, '#a8a29e', false);
+    });
+
+    hasPlayedOnce = true;
+  });
+
+  // ---- Check answer ----
+  checkBtn.addEventListener('click', () => {
+    const guess = +slider.value;
+    const cents = Math.round(freqToCents(guess, targetFreq));
+
+    // Determine verdict
+    let verdict: string;
+    let verdictColor: string;
+    if (cents < 5) {
+      verdict = 'Perfect';
+      verdictColor = 'var(--color-score-low)';
+    } else if (cents < 25) {
+      verdict = 'Very good';
+      verdictColor = 'var(--color-score-low)';
+    } else if (cents < 50) {
+      verdict = 'Close';
+      verdictColor = 'var(--color-score-mid)';
+    } else {
+      verdict = 'Off target';
+      verdictColor = 'var(--color-score-high)';
+    }
+
+    resultCents.textContent = cents + ' cents off';
+    resultCents.style.color = verdictColor;
+    resultVerdict.textContent = verdict;
+    resultVerdict.style.color = verdictColor;
+
+    // Gauge: map cents 0-200 to needle angle -90 to 90 degrees
+    const maxCents = 200;
+    const ratio = Math.min(cents / maxCents, 1);
+    const needleAngle = -90 + ratio * 180;
+    gaugeNeedle.style.transform = `rotate(${needleAngle}deg)`;
+
+    // Gauge fill
+    const fillLen = 252;
+    gaugeFill.style.strokeDashoffset = (fillLen * (1 - ratio)).toString();
+
+    // Comparison
+    compRef.textContent = targetFreq + ' Hz (' + freqToNote(targetFreq) + ')';
+    compGuess.textContent = guess + ' Hz (' + freqToNote(guess) + ')';
+
+    // Context text
+    if (cents < 5) {
+      resultContext.textContent = 'Extraordinary precision. You matched within the threshold of trained concert musicians.';
+    } else if (cents < 15) {
+      resultContext.textContent = 'The target was ' + targetFreq + ' Hz. This level of accuracy is comparable to trained professional musicians, who typically match within 5 to 10 cents.';
+    } else if (cents < 50) {
+      resultContext.textContent = 'The target was ' + targetFreq + ' Hz. Competition whistlers reproduce melodies with less than 15 cents deviation across an entire performance. You are approaching that territory.';
+    } else {
+      resultContext.textContent = 'The target was ' + targetFreq + ' Hz. A trained musician can match within 5 to 10 cents. This skill improves rapidly with deliberate practice.';
+    }
+
+    // Show result, hide check
+    resultEl.hidden = false;
+    checkBtn.hidden = true;
+  });
+
+  // ---- Listen to both ----
+  listenBtn.addEventListener('click', () => {
+    ensureAudio();
+    const guess = +slider.value;
+
+    // Play reference
+    refPlaying = true;
+    cancelAnimationFrame(refAnimId);
+    animateRefCanvas();
+    const oscRef = playTone(targetFreq, 0.8, analyserRef!);
+    oscRef.addEventListener('ended', () => {
+      refPlaying = false;
+      cancelAnimationFrame(refAnimId);
+      drawWaveform(refCanvas, null, '#a8a29e', false);
+    });
+
+    // Play guess after delay
+    setTimeout(() => {
+      guessPlaying = true;
+      cancelAnimationFrame(guessAnimId);
+      animateGuessCanvas();
+      const oscGuess = playTone(guess, 0.8, analyserGuess!);
+      oscGuess.addEventListener('ended', () => {
+        guessPlaying = false;
+        cancelAnimationFrame(guessAnimId);
+        drawWaveform(guessCanvas, null, '#a8a29e', false);
+      });
+    }, 900);
+  });
+
+  // ---- New round ----
+  function newRound() {
+    targetFreq = getRandomFreq();
+    slider.value = '440';
+    freqValue.textContent = '440';
+    noteName.textContent = 'A4';
+    updateSliderFill();
+    resultEl.hidden = true;
+    checkBtn.hidden = false;
+    hasPlayedOnce = false;
+    playLabel.textContent = 'Play tone';
+
+    // Reset gauge
+    gaugeNeedle.style.transform = 'rotate(-90deg)';
+    gaugeFill.style.strokeDashoffset = '252';
+
+    // Redraw idle canvases
+    drawIdleCanvases();
+  }
+
+  retryBtn.addEventListener('click', newRound);
+
+  // Initialize
+  newRound();
+
+  // Handle canvas resize
+  window.addEventListener('resize', () => {
+    if (!refPlaying) drawWaveform(refCanvas, null, '#a8a29e', false);
+    if (!guessPlaying) drawWaveform(guessCanvas, null, '#a8a29e', false);
+  });
+</script>

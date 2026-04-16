@@ -1,0 +1,63 @@
+{
+  "name": "Forensic Entomology",
+  "slug": "forensic-entomology",
+  "category": "academic",
+  "description": "Forensic entomologists estimate the minimum postmortem interval by identifying the species and developmental stage of insects colonizing human remains -- for instance, knowing that Calliphora vicina (blue bottle blowfly) larvae reach third instar in approximately 150 accumulated degree-hours above a base threshold of 6 degrees Celsius allows back-calculation from maggot size and local temperature records to estimate when a body was first colonized, often to within a 12-24 hour window.",
+  "thumbnail": {
+    "src": "/images/skills/forensic-entomology.webp",
+    "alt": "Entomologist examining insect specimens collected from a forensic scene under a stereo microscope",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "7-oPbrqmTq4",
+      "title": "How Insects Solve Crimes - Forensic Entomology Explained"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Forensic entomology - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Forensic_entomology",
+      "type": "reference"
+    },
+    {
+      "title": "Post-Mortem Interval Estimation Based on Insect Evidence: Current Challenges",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8066566/",
+      "year": 2021,
+      "type": "research"
+    },
+    {
+      "title": "So You Want To Be a Forensic Entomologist - University of Florida",
+      "url": "https://onlineentomology.ifas.ufl.edu/so-you-want-to-be-a-forensic-entomologist/",
+      "type": "institutional"
+    },
+    {
+      "title": "Murder, Maggots and Forensic Entomology - Natural History Museum",
+      "url": "https://www.nhm.ac.uk/discover/murder-maggots-forensic-entomology.html",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 7, "confidence": 0.8, "notes": "Requires a bachelor's degree in biology or entomology (4 years), followed by graduate training. A master's degree allows supporting roles but independent casework and expert testimony typically require a PhD. The educational path spans 8-12 years beyond high school." },
+    "time_to_expert": { "value": 8, "confidence": 0.8, "notes": "Diplomate certification from the American Board of Forensic Entomology requires a PhD plus years of supervised casework and submission of five case exemplars. From undergraduate entry to independent expert witness status: approximately 10-15 years." },
+    "feedback_delay": { "value": 7, "confidence": 0.75, "notes": "PMI estimates are often not validated until a case is resolved through confession, additional evidence, or trial -- which can take months or years. Ground truth (actual time of death) is frequently never confirmed. Research using pig carcasses provides faster feedback." },
+    "failure_cost": { "value": 7, "confidence": 0.8, "notes": "An incorrect PMI estimate in a homicide case can misdirect investigations, provide false alibis, or contribute to wrongful convictions. Expert testimony carries legal weight, and errors undermine both the case and the field's credibility in court." },
+    "cognitive_demand": { "value": 7, "confidence": 0.8, "notes": "Requires integrating insect taxonomy (identifying species from larval morphology), developmental biology (growth rates at varying temperatures), ecological succession patterns, local climate data, and scene-specific variables (indoor/outdoor, buried, submerged) into a coherent PMI estimate." },
+    "physical_demand": { "value": 3, "confidence": 0.8, "notes": "Fieldwork involves collecting specimens at decomposition scenes in all weather conditions, which can be physically demanding and extremely unpleasant. Laboratory work (rearing insects, microscopy) is less taxing. Exposure to decomposing remains is a significant occupational challenge." },
+    "prerequisite_knowledge": { "value": 8, "confidence": 0.85, "notes": "Requires deep grounding in entomology (insect taxonomy, morphology, ecology), developmental biology, statistics, and forensic science protocols. Understanding of legal evidentiary standards (Daubert/Frye) is also necessary for expert testimony." },
+    "measurability": { "value": 5, "confidence": 0.7, "notes": "PMI estimates can be compared to known ground truth in controlled studies (pig decomposition experiments). ABFE certification provides a professional benchmark. But real-case accuracy is difficult to verify, and inter-expert agreement on complex cases can vary." },
+    "perishability": { "value": 4, "confidence": 0.7, "notes": "Taxonomic identification skills and knowledge of succession patterns are durable once learned. However, regional insect fauna varies, so a practitioner moving to a new geographic area must learn local species and development rates. New research on species-specific development continuously refines the field." },
+    "precision_required": { "value": 7, "confidence": 0.75, "notes": "Species identification from larval morphology requires microscopic precision. Temperature accumulation calculations (accumulated degree-hours/days) must use accurate local weather data. Small errors in species identification or temperature modeling propagate into large PMI errors." },
+    "ambiguity": { "value": 7, "confidence": 0.8, "notes": "PMI estimates are inherently ranges, not point estimates. Multiple variables (access delays, toxicology, clothing, microhabitat temperature) introduce uncertainty. Cases where a body was moved, wrapped, or in an unusual environment can be highly ambiguous." },
+    "instruction_dependency": { "value": 7, "confidence": 0.8, "notes": "Formal graduate education is essentially mandatory. Self-study of entomology is possible in theory, but courtroom credibility, access to reference collections, and field experience all depend on institutional affiliation and mentorship from established practitioners." },
+    "environmental_variability": { "value": 8, "confidence": 0.85, "notes": "Every case presents unique environmental conditions: indoor vs. outdoor, urban vs. rural, climate zone, season, burial depth, wrapping, water submersion, toxicological factors. The same species develops at different rates depending on microclimate conditions at the scene." },
+    "concurrent_skills": { "value": 7, "confidence": 0.75, "notes": "Simultaneously requires entomological expertise, statistical analysis, crime scene investigation protocols, evidence preservation, report writing to legal standards, and courtroom testimony skills including withstanding cross-examination." },
+    "plateau_density": { "value": 5, "confidence": 0.65, "notes": "Steady academic progression with notable plateaus at the transition from classroom taxonomy to field identification under decomposition conditions, and from research to courtroom testimony where legal and scientific standards intersect." },
+    "domain_evolution": { "value": 5, "confidence": 0.75, "notes": "Active research continues to refine species-specific development data, address the impact of drugs on insect development (entomotoxicology), and apply molecular methods (DNA barcoding) for species identification. AI-based image classification is an emerging tool." },
+    "observability": { "value": 3, "confidence": 0.75, "notes": "The actual analytical process -- examining larvae under a microscope, cross-referencing growth data -- is not dramatic. Public awareness comes primarily through crime television shows, which often sensationalize the field. The PBS 'Crime Scene Creatures' documentary is a notable accurate portrayal." },
+    "luck_variance": { "value": 4, "confidence": 0.7, "notes": "Case quality varies: some scenes have textbook insect colonization with clear succession patterns, while others are confounded by environmental factors, delayed discovery, or deliberate concealment. The practitioner cannot control what evidence is available." },
+    "social_coordination": { "value": 5, "confidence": 0.75, "notes": "Forensic entomologists work within multidisciplinary investigative teams alongside pathologists, law enforcement, and prosecutors. Casework requires coordination, but the core analytical work is performed independently." }
+  },
+  "methodology_notes": "Scores are informed by the University of Florida's career guidance for forensic entomologists, the PMC systematic review on PMI estimation challenges, the American Board of Forensic Entomology certification requirements, the Natural History Museum's public education materials, and Wikipedia's comprehensive article on forensic entomology. The BLS projects 13% growth for the broader forensic science technician category through 2034."
+}

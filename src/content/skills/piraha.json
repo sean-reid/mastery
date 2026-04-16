@@ -1,0 +1,65 @@
+{
+  "name": "Piraha",
+  "slug": "piraha",
+  "category": "language",
+  "description": "Spoken by fewer than 800 people along the Maici River in the Brazilian Amazon, Piraha possesses one of the smallest phoneme inventories of any known language -- just 8 consonants, 3 vowels, and 2 tones -- yet its grammar allegedly lacks recursion, number words, color terms, and fixed kinship vocabulary beyond immediate family, making it the single most consequential challenge to Noam Chomsky's theory of universal grammar.",
+  "thumbnail": {
+    "src": "/images/skills/piraha.webp",
+    "alt": "Dense Amazon rainforest canopy along a river tributary in Brazil",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "DQnyh_1kqy8",
+      "title": "Piraha: The Amazonian Tribe That Challenges Everything We Know About Language"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Piraha language - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pirah%C3%A3_language",
+      "type": "reference"
+    },
+    {
+      "title": "Cultural Constraints on Grammar and Cognition in Piraha - Current Anthropology",
+      "author": "Daniel L. Everett",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/431525",
+      "year": 2005,
+      "type": "research"
+    },
+    {
+      "title": "Bringing more data to the Piraha language debate - MIT News",
+      "url": "https://news.mit.edu/2016/data-amazonian-piraha-language-debate-0309",
+      "year": 2016,
+      "type": "research"
+    },
+    {
+      "title": "Phonetic rarities in Piraha - Journal of the International Phonetic Association",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/abs/phonetic-rarities-in-piraha1/81A93CD565B9A107188641E5E9894934",
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 10, "confidence": 0.75, "notes": "Daniel Everett, the world's leading Piraha researcher, spent over 30 years achieving fluency. The language can be whistled, hummed, or sung, with meaning conveyed through prosodic channels that are invisible to standard linguistic training. Only a handful of non-native speakers have ever achieved any conversational ability. Access requires physical travel to the Maici River region." },
+    "time_to_expert": { "value": 10, "confidence": 0.8, "notes": "Everett is arguably the only non-native to reach expert-level proficiency, and even his understanding is contested by other linguists. The language's cultural embedding -- where the 'immediacy of experience' principle constrains all communication -- means mastery requires deep cultural integration, not just linguistic study." },
+    "feedback_delay": { "value": 4, "confidence": 0.65, "notes": "In an immersion context, feedback is immediate (the Piraha respond to speech attempts directly). However, getting to an immersion context requires traveling to one of the most remote inhabited areas on Earth. Outside the village, feedback is nonexistent -- there are no textbooks, no online courses, and no diaspora community." },
+    "failure_cost": { "value": 2, "confidence": 0.7, "notes": "Linguistic errors carry no physical danger. However, the Piraha's cultural insularity means serious miscommunication could damage the trust required for continued interaction. Everett reports that the Piraha found outsiders' language attempts amusing rather than threatening." },
+    "cognitive_demand": { "value": 8, "confidence": 0.75, "notes": "Despite the small phoneme inventory, the cognitive demands are extreme. Meaning is heavily loaded onto prosody, tone, and conversational context. The absence of recursion (if confirmed) means complex ideas are expressed through discourse strategies alien to speakers of recursive languages. The language can be communicated entirely through whistling or humming." },
+    "physical_demand": { "value": 2, "confidence": 0.7, "notes": "The phoneme inventory is simple, but producing the whistled and hummed registers requires unusual vocal control. The tonal system (2 tones) is less physically demanding than Mandarin or Navajo. Living in the Amazon environment to learn the language is physically demanding, but that is environmental, not linguistic." },
+    "prerequisite_knowledge": { "value": 3, "confidence": 0.7, "notes": "No formal prerequisites, but field linguistics training and survival skills for remote Amazonian living are practically necessary. Knowledge of Portuguese (the national language of Brazil) is essential for logistics. The language has no written tradition, so literacy is irrelevant." },
+    "measurability": { "value": 2, "confidence": 0.6, "notes": "No proficiency framework, no standardized tests, no certification. Competence can only be assessed by communication success with native speakers. Even the grammatical description of the language is actively disputed among professional linguists." },
+    "perishability": { "value": 8, "confidence": 0.7, "notes": "With no written materials, no media, and no speakers outside the Amazon, any learned Piraha would decay extremely rapidly without continued immersion. The prosodic and tonal elements are particularly fragile without regular practice. Everett maintained his skills through repeated multi-month field visits." },
+    "precision_required": { "value": 7, "confidence": 0.65, "notes": "The 2-tone system and small phoneme inventory mean that tonal and prosodic precision carry heavy informational load. Extensive allophonic variation (e.g., /b/ varies between [b], [m], and a bilabial trill) means that surface forms are context-dependent, requiring precise situational awareness." },
+    "ambiguity": { "value": 7, "confidence": 0.65, "notes": "Heavy reliance on context and the 'immediacy of experience' principle creates significant interpretive ambiguity for outsiders. The lack of quantifiers (no words for 'all,' 'many,' 'few') means precision must be inferred. Even basic descriptions of the grammar are contested among linguists." },
+    "instruction_dependency": { "value": 10, "confidence": 0.85, "notes": "There are no textbooks, no courses, no apps, and no recorded teaching materials. The only path to learning is direct immersion with the Piraha people in their village, guided by the handful of researchers who have established relationships with the community. This is the most instruction-dependent language learning scenario imaginable." },
+    "environmental_variability": { "value": 3, "confidence": 0.6, "notes": "The language is spoken in a small, relatively homogeneous community (~800 people in a few villages). Dialectal variation is minimal. However, the register system (spoken, whistled, hummed, sung) introduces modality variation that is unique among documented languages." },
+    "concurrent_skills": { "value": 6, "confidence": 0.65, "notes": "Speakers must manage tonal production, prosodic meaning-carrying, contextual inference (compensating for absent grammatical categories), and multiple communicative registers (speech, whistle, hum). The cognitive coordination is unusual but the raw count of simultaneous operations is lower than polysynthetic languages." },
+    "plateau_density": { "value": 9, "confidence": 0.7, "notes": "The initial plateau is extreme: without recursion or standard grammatical categories, a learner's existing linguistic intuitions are counterproductive. Everett reports that his early analyses of the language were systematically wrong due to theoretical assumptions. Each conceptual breakthrough required abandoning previous frameworks." },
+    "domain_evolution": { "value": 1, "confidence": 0.8, "notes": "The language is changing slowly under pressure from Portuguese contact, but core grammar and the immediacy-of-experience principle have been stable for the entire documented period. No written tradition means no historical record of change." },
+    "observability": { "value": 3, "confidence": 0.7, "notes": "Fluency is observable only within the community. Outsiders cannot distinguish levels of Piraha proficiency. The whistled register is audibly distinctive but its meaning is opaque to non-speakers." },
+    "luck_variance": { "value": 2, "confidence": 0.7, "notes": "Acquisition is almost entirely effort-driven, but access to the community depends on factors outside the learner's control: research permissions from Brazilian authorities (FUNAI), acceptance by the Piraha community, and logistical access to the Maici River region." },
+    "social_coordination": { "value": 8, "confidence": 0.8, "notes": "Learning is entirely dependent on the Piraha community's willingness to interact. There are no independent study materials. The language is deeply embedded in communal life, and cultural participation (fishing, storytelling, daily activities) is inseparable from language acquisition." }
+  },
+  "methodology_notes": "Scores draw primarily on Daniel Everett's published research (Current Anthropology 2005), the MIT 2016 follow-up study, Wikipedia's linguistic summary, and Cambridge University Press phonetic analysis. Data quality is limited by the fact that Piraha has been studied in depth by only a small number of researchers, and fundamental claims about its grammar remain disputed. Confidence values are correspondingly lower than for well-documented languages. The description uses the simplified spelling 'Piraha' for the slug while noting the language is properly spelled with a tilde (Piraha)."
+}

@@ -1,0 +1,138 @@
+{
+  "name": "Ondes Martenot",
+  "slug": "ondes-martenot",
+  "category": "instrument",
+  "description": "Invented by Maurice Martenot in 1928, this electronic instrument is played via a sliding ring on a wire (tiroir) for continuous pitch, a laterally shifting keyboard for vibrato, and a velvet-covered button (touche d'intensite) controlling volume through finger pressure alone. Fewer than an estimated 100 active ondistes exist worldwide; the Paris Conservatoire has offered formal instruction since 1947, making it one of only two degree programs globally.",
+  "thumbnail": {
+    "src": "/images/skills/ondes-martenot.webp",
+    "alt": "Ondes Martenot instrument showing keyboard, tiroir ribbon, and diffuseur speaker",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "v0aflcF0-ys",
+      "title": "Thomas Bloch demonstrates the Ondes Martenot — technique and sound capabilities"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ondes Martenot - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ondes_Martenot",
+      "type": "reference"
+    },
+    {
+      "title": "Martenot Waves - Conservatoire national superieur de musique et de danse de Paris",
+      "url": "https://www.conservatoiredeparis.fr/en/curriculum/martenot-waves",
+      "type": "institutional"
+    },
+    {
+      "title": "Thomas Bloch - Ondes Martenot: the instrument",
+      "url": "https://www.thomasbloch.net/en_ondes-martenot.html",
+      "type": "community"
+    },
+    {
+      "title": "The history and legacy of the ondes Martenot - Royal Philharmonic Orchestra",
+      "url": "https://www.rpo.co.uk/news-and-press/79-blog/1058-the-history-and-legacy-of-orchestral-musics-most-unique-instrument-the-ondes-martenot",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 7,
+      "confidence": 0.65,
+      "notes": "Basic sound production is achievable quickly, but controlling the tiroir (ring-on-wire) for accurate pitch and the touche d'intensite for dynamics requires months of specialized training. No frets or keys to guide pitch on the ribbon controller."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.6,
+      "notes": "The Paris Conservatoire program spans years. Jeanne Loriod, the instrument's greatest interpreter, studied under Martenot himself and performed for decades. Thomas Bloch has performed over 3,000 times in 40 countries. The pool of expert players has never exceeded a few dozen at any time."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.8,
+      "notes": "Electronic sound production is instantaneous. Pitch and dynamic errors are immediately audible. The instrument provides the most direct feedback possible."
+    },
+    "failure_cost": {
+      "value": 4,
+      "confidence": 0.6,
+      "notes": "Practice costs nothing, but original instruments are irreplaceable: Maurice Martenot's workshop closed, and surviving instruments are museum pieces worth tens of thousands of euros. Damaging one during transport is catastrophic. The ondomo digital reproduction is a recent alternative."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Simultaneously controlling pitch via tiroir or keyboard, dynamics via the touche d'intensite (a pressure-sensitive button), timbre via diffuser selection, and vibrato via lateral keyboard movement. Everything—vibrato, attack, intensity—is manufactured by the player in real time with no automation."
+    },
+    "physical_demand": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "No significant strength required. Fine motor control of the ring finger and left-hand pressure sensitivity are essential. The touche d'intensite demands exceptionally delicate finger pressure control."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Keyboard familiarity helps but the primary controls (tiroir, touche d'intensite) are unique to this instrument. Music reading and ear training are essential. Knowledge of the Messiaen/Martenot repertoire is expected."
+    },
+    "measurability": {
+      "value": 3,
+      "confidence": 0.6,
+      "notes": "No competitions, no grading system, no rating framework. The community is too small for standardized assessment. Quality is judged by the handful of existing experts."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "Tiroir pitch accuracy and touche d'intensite sensitivity degrade without regular practice. The physical intuitions for this unique interface are fragile."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.75,
+      "notes": "The tiroir provides continuous pitch with no quantization—every frequency between notes is accessible, meaning the player must place pitch as precisely as a vocalist or unfretted string player. The touche d'intensite responds to finger pressure measured in grams."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Pitch accuracy is objectively measurable. But timbral choices among the four diffusers (principal, resonance, metallic, palm speaker) and expressive interpretation are subjective."
+    },
+    "instruction_dependency": {
+      "value": 10,
+      "confidence": 0.8,
+      "notes": "Effectively impossible to learn without direct instruction from an existing ondiste. Only two formal programs exist worldwide (Paris Conservatoire and Montreal). The instrument's interface is so unique that no transferable pedagogy exists from other instruments."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.65,
+      "notes": "Electronic instrument with consistent output. Hall acoustics affect perceived sound. The four specialized diffusers (loudspeakers) must be transported and set up for each performance."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Right hand controls pitch via tiroir or keyboard, left hand controls dynamics via touche d'intensite, timbre selection via drawer switches, and vibrato via lateral keyboard movement—all simultaneously."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.55,
+      "notes": "Limited data due to tiny player population. Known plateaus include tiroir pitch accuracy and mastering the touche d'intensite's extreme sensitivity. The transition from student to concert-ready performer is a major bottleneck."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Core instrument unchanged since Martenot's final model (7th generation). The ondomo digital reproduction (2012) is the only significant modern development. Repertoire is small but slowly growing."
+    },
+    "observability": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "The instrument's unusual appearance and ethereal sound are immediately striking. The tiroir technique is visually dramatic. But the subtlety of the touche d'intensite is invisible to audiences."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.7,
+      "notes": "Electronic instrument with deterministic output. Career opportunities depend heavily on the very small number of performance slots requiring an ondiste."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Most major works (Messiaen's Turangalila-Symphonie, Fete des belles eaux) are orchestral or ensemble pieces. The ondiste must integrate with conductors and orchestras, but the core skill is developed solo."
+    }
+  },
+  "methodology_notes": "Confidence scores are generally lower than for mainstream instruments due to the extremely small player population (~100 worldwide). Instruction_dependency receives the maximum score (10) because this is one of the most access-constrained instruments in the project: only two formal programs exist globally. Scoring draws on Paris Conservatoire curriculum data, Thomas Bloch's published descriptions, and the Royal Philharmonic Orchestra's documentation."
+}

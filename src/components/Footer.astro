@@ -1,0 +1,65 @@
+---
+---
+
+<footer class="footer">
+  <div class="footer-inner container">
+    <div class="footer-content">
+      <p class="footer-note">
+        Every score on this page is accompanied by its source and methodology.
+        Where data is unavailable, estimates are clearly marked and the
+        reasoning documented. Corrections and contributions are welcome.
+      </p>
+      <p class="footer-meta">
+        Scores are computed from 19 orthogonal difficulty dimensions.
+        The composite ranking uses a weighted average; individual axis
+        weights are defined in code and open to scrutiny.
+      </p>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; {new Date().getFullYear()}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding-block: var(--space-16);
+    margin-top: var(--space-24);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: var(--content-max);
+  }
+
+  .footer-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-normal);
+  }
+
+  .footer-meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .footer-bottom {
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .footer-copyright {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+</style>

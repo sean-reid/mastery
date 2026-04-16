@@ -1,0 +1,138 @@
+{
+  "name": "Nyckelharpa",
+  "slug": "nyckelharpa",
+  "category": "instrument",
+  "description": "The nyckelharpa is a Swedish keyed fiddle dating to at least the 1350s, played by bowing four melody and drone strings while pressing 37 wooden keys whose tangents fret the strings from below, all while 12 sympathetic strings resonate untouched to produce the instrument's characteristic shimmering sustain. Redesigned into its modern chromatic form by Eric Sahlstrom in the mid-20th century, it was inscribed on UNESCO's Register of Good Safeguarding Practices in 2023; approximately 10,000 active players exist in Sweden, with a small but growing international community sustained by roughly 100 specialist makers worldwide.",
+  "thumbnail": {
+    "src": "/images/skills/nyckelharpa.webp",
+    "alt": "Front view of a nyckelharpa showing the three rows of wooden keys, bowing strings, and sympathetic string array",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "YBzz0T3MEPk",
+      "title": "The Cheapest Nyckelharpa... Sounds HOW? (Emelie Waldken)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Nyckelharpa - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nyckelharpa",
+      "type": "reference"
+    },
+    {
+      "title": "Nyckelharpa network - UNESCO Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/en/BSP/nyckelharpa-network-an-innovative-dissemination-of-a-music-and-instrument-building-tradition-with-roots-in-sweden-01976",
+      "type": "institutional"
+    },
+    {
+      "title": "What is a nyckelharpa? - The American Nyckelharpa Association",
+      "url": "https://www.nyckelharpa.org/about/what-is-a-nyckelharpa/",
+      "type": "community"
+    },
+    {
+      "title": "Nyckelharpa: History, Characteristics, and Sound - Handmade Sound",
+      "url": "https://www.handmadesound.com/en/nyckelharpa-history-characteristics-sound/",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "The key mechanism simplifies pitch accuracy compared to unfretted strings, but coordinating bowing technique with key pressing while managing the instrument's substantial weight (~1.5 kg held by a strap) takes months. Prior violin or fiddle experience significantly accelerates learning. Simple Swedish folk tunes are achievable within 3-6 months."
+    },
+    "time_to_expert": {
+      "value": 7,
+      "confidence": 0.6,
+      "notes": "Expert players like Olov Johansson (Vasen) and Eric Sahlstrom developed over years of immersion in Swedish folk tradition. The instrument rewards deep knowledge of polskas, waltzes, and regional Swedish tune traditions. Instrument-building knowledge is considered part of full expertise. 5-10 years for concert-level proficiency."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "Sound is produced immediately upon bowing with a key depressed. Sympathetic string resonance provides additional auditory feedback about tuning and key accuracy. Errors in key selection or bowing are instantly apparent."
+    },
+    "failure_cost": {
+      "value": 4,
+      "confidence": 0.65,
+      "notes": "Instruments are expensive ($2,000-8,000+ for a handmade chromatic nyckelharpa) and produced by only about 100 specialist makers worldwide, making replacement difficult. The complex mechanism of 37 keys, tangents, and 16 strings requires skilled maintenance. Breakage of the delicate key mechanism can be costly to repair."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Coordination of bowing (right hand) with key selection across three rows of 37 keys (left hand) while managing drone strings and being aware of sympathetic resonance effects. The three-row key layout requires spatial memory. Simpler than fretless bowed instruments for intonation but more mechanically complex."
+    },
+    "physical_demand": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "The instrument weighs roughly 1.5 kg and is supported by a neck/shoulder strap, creating sustained load on the left side. The left hand must press keys with sufficient force to fully seat tangents against the strings while maintaining speed for ornamentation. Bowing technique requires right-arm endurance."
+    },
+    "prerequisite_knowledge": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Basic music reading and understanding of keys/scales is helpful. Familiarity with Swedish folk music traditions (polskas, slangpolskas, waltzes) enriches the learning experience but is not strictly required. Bowing experience from violin or fiddle provides significant advantage."
+    },
+    "measurability": {
+      "value": 4,
+      "confidence": 0.6,
+      "notes": "No formal grading system or competitions dedicated to nyckelharpa. Skill is assessed informally within the folk music community, at gatherings like Bingsjostamman and through peer recognition. UNESCO inscription validates the tradition but does not measure individual skill."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Bowing technique and key-pressing coordination are moderately durable motor skills, similar to violin. The specific repertoire of Swedish folk tunes requires ongoing practice to maintain. Physical conditioning for instrument weight is perishable."
+    },
+    "precision_required": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "The key mechanism handles intonation precision, which is less demanding than fretless instruments. However, bowing must be precise to activate the correct strings (4 playing strings are close together), and key pressing must be firm enough for clean tangent contact. Ornamentation requires rapid, accurate key changes."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "The Swedish folk tradition provides a clear stylistic framework, and the community is relatively cohesive. However, individual style, ornamentation choices, and regional tune interpretations are subjectively evaluated. The boundary between competent and expert is informally defined."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "While online resources and the American Nyckelharpa Association provide learning materials, the instrument's unique key-and-bow coordination is difficult to learn without direct instruction. The Eric Sahlstrom Institute in Sweden offers courses, and the nyckelharpa network facilitates knowledge exchange, but instructors outside Scandinavia remain rare."
+    },
+    "environmental_variability": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "As a wooden bowed instrument with 16 strings, it is sensitive to humidity and temperature changes affecting tuning stability. The sympathetic strings amplify tuning sensitivity. Performance is typically indoors or at outdoor folk festivals in temperate conditions."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Simultaneous management of: right-hand bowing (pressure, speed, string selection), left-hand key pressing across three rows, drone string awareness, and the weight and balance of the instrument on the strap. Less concurrent demand than fretless bowed instruments but the mechanical key system adds a unique coordination layer."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "Initial progress to simple tunes is encouraging. Plateaus likely occur at: coordinating ornamental key patterns at speed, managing string crossings while pressing keys, and transitioning from technically correct playing to stylistically authentic Swedish folk performance."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Eric Sahlstrom's chromatic redesign in the mid-20th century was the last major evolution. The instrument and its folk repertoire are intentionally conserved as cultural heritage. Modest expansion into contemporary and cross-genre contexts (metal, classical) is occurring but does not change fundamental technique."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "The visual complexity of the instrument -- rows of wooden keys, multiple strings, bowing -- combined with the shimmering sympathetic resonance creates an immediately captivating sight and sound. The medieval aesthetic and the UNESCO recognition add cultural fascination."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "Performance quality is entirely skill-determined. The mechanical key system eliminates the intonation luck factor present in fretless instruments. No random elements in performance."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Swedish folk tradition includes both solo playing and ensemble formats (spelmanslag groups). Vasen, the most prominent nyckelharpa ensemble, is a trio. Community gatherings (stamman) involve group playing. The UNESCO-recognized network itself is a social structure supporting the instrument."
+    }
+  },
+  "methodology_notes": "Scores informed by the Wikipedia article on nyckelharpa, the UNESCO inscription documentation, the American Nyckelharpa Association's resources, and journalistic coverage. The ~10,000 active players in Sweden and the existence of formal institutions (Eric Sahlstrom Institute) provide more data than for the rarer instruments in this set. Training timelines estimated from documented careers of prominent players and the folk music community's apprenticeship patterns. The UNESCO 2023 inscription provides institutional validation of the tradition's structure and transmission methods."
+}

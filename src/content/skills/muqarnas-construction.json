@@ -1,0 +1,138 @@
+{
+  "name": "Muqarnas Construction",
+  "slug": "muqarnas-construction",
+  "category": "trade",
+  "description": "Muqarnas is the Islamic architectural technique of constructing three-dimensional honeycomb vaults from tiers of individually shaped niche elements in stone, brick, stucco, or wood. The Alhambra's Hall of the Two Sisters dome contains over 5,000 prismatic cells unfolding from a central star into sixteen miniature domes — yet only eight distinct fragment shapes, each repeated by the dome's octagonal symmetry, are required. A muqarnas vault translates a 2D tessellation drawing with concentric rings into a 3D structure where every element must interlock precisely with its neighbors across multiple tiers.",
+  "thumbnail": {
+    "src": "/images/skills/muqarnas-construction.webp",
+    "alt": "Looking upward into an ornate muqarnas honeycomb dome ceiling with geometric patterns",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "jNpKGU1gGSo",
+      "title": "The Genius of Islamic Geometric Design — TED-Ed"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Muqarnas - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Muqarnas",
+      "type": "reference"
+    },
+    {
+      "title": "The Muqarnas: A Key Component of Islamic Architecture",
+      "url": "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/muqarnas-key-component-islamic-architecture",
+      "type": "reference"
+    },
+    {
+      "title": "Muqarnas: Honeycomb architecture that touches the heavens — Middle East Eye",
+      "url": "https://www.middleeasteye.net/discover/muqarnas-middle-east-mosque-architecture-historical-buildings-honeycombs",
+      "type": "journalism"
+    },
+    {
+      "title": "Hall of the Two Sisters - AlhambraDeGranada.org",
+      "url": "https://www.alhambradegranada.org/en/info/nasridpalaces/hallofthetwosisters.asp",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "Carving or casting individual muqarnas elements from plaster molds within months. Understanding how those elements fit into a tier system and assembling a simple 3-tier composition takes 1-2 years."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.55,
+      "notes": "Designing and constructing a full muqarnas dome — translating a 2D tessellation plan into thousands of interlocking 3D elements across 10-20+ tiers — requires a decade or more of combined geometric study and hands-on construction. Very few living practitioners can execute this at the Alhambra level."
+    },
+    "feedback_delay": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Individual elements can be test-fitted, but the visual and structural coherence of the full composition only emerges as tiers accumulate. A geometric error in an early tier may not manifest visually until much later, when alignment drifts across upper tiers."
+    },
+    "failure_cost": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Materials (plaster, stucco, wood) are relatively inexpensive. But a misaligned tier in a large vault means dismantling and redoing weeks of work. Structural failures in stone muqarnas can be catastrophic and irreversible."
+    },
+    "cognitive_demand": {
+      "value": 10,
+      "confidence": 0.8,
+      "notes": "Requires simultaneous mastery of 2D Islamic geometric tessellation, 3D spatial reasoning, structural engineering, and the mathematical relationship between a flat plan drawing and a curved 3D vault. The Alhambra dome's 5,000 cells require tracking octagonal symmetry across sixteen miniature sub-domes."
+    },
+    "physical_demand": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Carving and assembling elements is moderately physical. Overhead installation of vault elements requires working on scaffolding in awkward positions. Less physically demanding than forging or glassblowing, but sustained precision handwork."
+    },
+    "prerequisite_knowledge": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Requires deep fluency in Islamic geometric pattern theory, tessellation mathematics, and architectural construction. Historical practitioners studied geometry formally. Modern practitioners need both mathematical and material-science foundations."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Geometric accuracy is objectively verifiable — elements either fit or they do not. But the aesthetic quality of a muqarnas composition — proportions, light play, visual rhythm — is culturally and architecturally subjective."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Geometric knowledge is intellectual and relatively durable. But the hands-on intuition for material behavior — how plaster sets, how wood warps, how stone fractures along grain — fades without regular practice."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "Each element must interlock with its neighbors in three dimensions across multiple tiers. Angular errors of even 1-2 degrees compound across a dome's hundreds of elements, creating visible misalignment or structural gaps."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.65,
+      "notes": "Traditional muqarnas follow well-defined geometric systems — the 2D plan dictates the 3D form. Regional styles (Iranian, Mamluk, Maghrebi) have distinct conventions. Ambiguity exists mainly in material choices and decorative surface treatment."
+    },
+    "instruction_dependency": {
+      "value": 9,
+      "confidence": 0.7,
+      "notes": "Historically transmitted through master-apprentice relationships within architectural guilds. The geometric principles are published in academic literature, but translating 2D theory into 3D construction is a tacit skill that requires hands-on mentorship. Almost no modern training programs exist."
+    },
+    "environmental_variability": {
+      "value": 4,
+      "confidence": 0.6,
+      "notes": "Workshop conditions are controlled. The primary variables are the architectural context — dome curvature, structural loads, existing geometry — which make every installation site-specific. Humidity affects plaster curing."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.65,
+      "notes": "During construction: geometric calculation, material shaping, structural assessment, and spatial orientation (working upside-down on scaffolding). The designer must also coordinate with broader architectural and structural teams."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.6,
+      "notes": "Initial progress in element-making is visible. Long plateaus when transitioning from flat panel assemblies to curved vault construction, and from reproducing known designs to creating original compositions."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Core geometric and construction principles unchanged since the 11th century. Modern additions: CNC-milled elements, 3D printing for prototyping, computational geometry tools for design. But traditional hand-craft methods persist."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "A completed muqarnas dome is one of the most visually spectacular architectural achievements — the Alhambra's Hall of Two Sisters is instantly awe-inspiring. The difference between crude and masterful work is evident to any viewer."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "Deterministic craft governed by geometry and material science. Material defects (plaster cracks, stone fractures) introduce minor variance, but outcomes are overwhelmingly a function of design accuracy and construction skill."
+    },
+    "social_coordination": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Large vaults require teams of craftspeople working under a master designer. Coordination between carvers, mold-makers, installers, and structural engineers is essential. The master must communicate a complex 3D vision to every team member."
+    }
+  },
+  "methodology_notes": "Scores draw on Wikipedia's muqarnas article, Encyclopedia.com's architectural analysis, Middle East Eye's photographic documentation, and the Alhambra patronato's technical descriptions of the Hall of Two Sisters. Confidence is lower across the board because muqarnas construction is an extremely rare living craft with almost no quantitative training data — most knowledge comes from architectural history and the few remaining master practitioners."
+}

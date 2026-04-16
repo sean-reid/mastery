@@ -1,0 +1,62 @@
+{
+  "name": "Vacuum Tube Amplifier Building",
+  "slug": "vacuum-tube-amplifier-building",
+  "category": "technology",
+  "description": "Building a vacuum tube (valve) amplifier from scratch involves designing and wiring circuits that carry lethal voltages — plate supplies of 300-500 V DC are standard, and even a briefly charged filter capacitor can deliver a fatal shock. The builder must select tubes (triodes, pentodes, or tetrodes such as EL34 or 6L6), design bias networks, wind or select output transformers whose primary and secondary impedances must be precisely matched, and tune the completed amplifier by ear for distortion, hum, and frequency response. The craft descends from a golden age of valve engineering that peaked in the 1950s-60s; today a global DIY community sustains the art, driven by the preference many audiophiles and guitarists have for the harmonic character of tube amplification.",
+  "thumbnail": {
+    "src": "/images/skills/vacuum-tube-amplifier-building.webp",
+    "alt": "Handbuilt vacuum tube amplifier chassis with glowing tubes, hand-wound output transformers, and point-to-point wiring",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "F6oaryFnIBk",
+      "title": "Building a Vacuum Tube Amplifier from Scratch — DIY Audio"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Valve amplifier - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Valve_amplifier",
+      "type": "reference"
+    },
+    {
+      "title": "Valve audio amplifier - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Valve_audio_amplifier",
+      "type": "reference"
+    },
+    {
+      "title": "DIY Vacuum Tube Amplifier Projects - diyAudioProjects.com",
+      "url": "https://diyaudioprojects.com/Tubes/tubes.htm",
+      "type": "community"
+    },
+    {
+      "title": "Valve Amplifier Design Considerations - Sound-au.com",
+      "url": "https://sound-au.com/valves/design2.html",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 5, "confidence": 0.7, "notes": "A builder with electronics background can assemble a kit amplifier in a weekend. Designing a working amplifier from first principles — selecting tubes, calculating bias, choosing transformer ratios — takes months of study and experimentation." },
+    "time_to_expert": { "value": 7, "confidence": 0.65, "notes": "Expertise includes hand-winding output transformers, designing power supplies with proper regulation, diagnosing oscillation and hum, and tuning by ear for optimal harmonic distortion. Most accomplished builders have 5-10 years of iterative design experience." },
+    "feedback_delay": { "value": 3, "confidence": 0.75, "notes": "Basic circuit function is testable immediately with a multimeter and oscilloscope. Subtle tonal qualities — the warmth, clarity, and harmonic character that distinguish great tube amplifiers — only become apparent after extended listening and A/B comparison." },
+    "failure_cost": { "value": 7, "confidence": 0.8, "notes": "Plate voltages of 300-500 V DC are potentially lethal. Even a charged filter capacitor can kill. Component damage from wiring errors can destroy expensive NOS (new old stock) tubes worth $50-200 each. Output transformer failure wastes days of winding." },
+    "cognitive_demand": { "value": 8, "confidence": 0.75, "notes": "Requires understanding of electron physics, load-line analysis, impedance matching, negative feedback theory, transformer design, and power supply filtering. Circuit debugging demands systematic reasoning about interacting nonlinear components." },
+    "physical_demand": { "value": 3, "confidence": 0.8, "notes": "Bench work: soldering, chassis metalwork, transformer winding. Requires steady hands for point-to-point wiring but minimal physical exertion. The primary physical risk is electrocution rather than fatigue." },
+    "prerequisite_knowledge": { "value": 7, "confidence": 0.8, "notes": "Requires solid grounding in electronics: Ohm's law, AC circuit theory, transformer operation, and tube characteristics. Must understand high-voltage safety protocols. Many builders have engineering backgrounds; self-taught builders invest heavily in study." },
+    "measurability": { "value": 7, "confidence": 0.8, "notes": "Total harmonic distortion, frequency response, output power, and noise floor are precisely measurable with test equipment. But the subjective 'tube sound' that motivates most builders resists purely objective evaluation." },
+    "perishability": { "value": 3, "confidence": 0.7, "notes": "Circuit design knowledge and electronics theory are highly durable. Soldering skill degrades slightly without practice. The conceptual understanding of tube operation is permanent once learned." },
+    "precision_required": { "value": 6, "confidence": 0.75, "notes": "Bias voltages must be set within millivolts. Output transformer winding ratios determine impedance matching. But component tolerances in tube circuits are relatively forgiving compared to solid-state designs — tubes are inherently more tolerant of variation." },
+    "ambiguity": { "value": 5, "confidence": 0.7, "notes": "Circuit topologies are well-documented and the physics is understood. But 'good sound' is subjective — the audiophile community endlessly debates single-ended vs. push-pull, negative feedback amounts, and output transformer designs." },
+    "instruction_dependency": { "value": 4, "confidence": 0.75, "notes": "Extensive documentation exists: RCA tube manuals, Radiotron Designer's Handbook, and active online forums (diyAudio). Self-teaching is viable for those with electronics backgrounds. Kit-based learning provides structured entry." },
+    "environmental_variability": { "value": 2, "confidence": 0.8, "notes": "Workshop-based electronics assembly. Temperature affects tube bias points slightly. Mains voltage variation can affect performance. But the build process itself is environment-independent." },
+    "concurrent_skills": { "value": 5, "confidence": 0.7, "notes": "Design phase: integrating electrical theory, thermal management, and chassis layout. Build phase: soldering while tracking schematic position and managing lead dress for low noise. Debugging: correlating measurements with circuit behavior." },
+    "plateau_density": { "value": 5, "confidence": 0.65, "notes": "First working amplifier is a major milestone. Plateaus emerge when attempting original designs rather than copying existing schematics, and when pursuing the diminishing returns of audiophile-grade optimization." },
+    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "Core tube technology peaked in the 1960s and is now static. Modern contributions: better capacitors, improved PCB layout techniques, and simulation software (SPICE). But the fundamental circuits — Williamson, Mullard 5-20 — are decades old." },
+    "observability": { "value": 6, "confidence": 0.7, "notes": "Build quality is visible: neat point-to-point wiring, clean chassis work, proper lead dress. Sonic differences between designs are audible to trained listeners. But distinguishing a competent build from an excellent one requires test equipment." },
+    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Circuit behavior is deterministic. Component defects and tube manufacturing variation introduce minor randomness. Overwhelmingly, amplifier quality reflects the builder's knowledge and care." },
+    "social_coordination": { "value": 2, "confidence": 0.8, "notes": "Solo hobby. Online communities (diyAudio, Head-Fi) provide knowledge sharing and peer review of designs. But the build itself is entirely individual work." }
+  },
+  "methodology_notes": "Scores draw on Wikipedia's valve amplifier articles, the diyAudio community forums, Sound-au.com design documentation, and published project reports from Hackaday and Instructables. The high failure cost reflects the genuine lethality of plate voltages (widely documented in safety literature). The cognitive demand score reflects the interdisciplinary knowledge required: electronics, acoustics, and materials science."
+}

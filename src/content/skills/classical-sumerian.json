@@ -1,0 +1,62 @@
+{
+  "name": "Classical Sumerian",
+  "slug": "classical-sumerian",
+  "category": "language",
+  "description": "The oldest attested written language, documented from roughly 3100 BCE on clay tablets in cuneiform script, Sumerian is a language isolate with no known relatives -- meaning learners cannot leverage cognates or grammatical parallels from any living or dead language, and must reconstruct pronunciation entirely from Akkadian transliterations made by scribes who themselves were non-native speakers.",
+  "thumbnail": {
+    "src": "/images/skills/classical-sumerian.webp",
+    "alt": "Ancient Sumerian cuneiform tablet with wedge-shaped impressions in clay",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "b5BHNqu54X8",
+      "title": "The Epic of Gilgamesh in Sumerian"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sumerian language - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sumerian_language",
+      "type": "reference"
+    },
+    {
+      "title": "Getting Started with Sumerian - Institute for the Study of the Ancient World, NYU",
+      "url": "https://isaw.nyu.edu/library/blog/getting-started-with-sumerian",
+      "type": "research"
+    },
+    {
+      "title": "Sumerian language - Cuneiform, Akkadian, Dialects - Britannica",
+      "url": "https://www.britannica.com/topic/Sumerian-language/Characteristics",
+      "type": "reference"
+    },
+    {
+      "title": "Learning Sumerian is Hard - Book and Sword",
+      "url": "https://www.bookandsword.com/2014/03/10/learning-sumerian-is-hard/",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 9, "confidence": 0.75, "notes": "Basic reading competence (parsing simple administrative tablets) requires mastering cuneiform sign values, Sumerian grammar, and the agglutinative morphological system. University programs typically dedicate 2-3 years of coursework before students can read simple texts independently. No spoken component exists." },
+    "time_to_expert": { "value": 10, "confidence": 0.8, "notes": "Specialist-level reading ability (literary texts, royal inscriptions, complex grammatical forms across historical periods) requires a decade or more of dedicated study. Fundamental questions about Sumerian grammar remain unresolved even among leading scholars. Full expertise is arguably unattainable since the language is incompletely understood." },
+    "feedback_delay": { "value": 7, "confidence": 0.7, "notes": "No native speakers exist to provide conversational feedback. Translation accuracy can only be checked against published scholarly editions, and many texts have disputed readings. A student may carry misunderstandings for years before encountering a text that reveals the error." },
+    "failure_cost": { "value": 1, "confidence": 0.95, "notes": "Mistranslation carries no physical risk. Errors in academic publications can damage scholarly reputation but the stakes are reputational, not material." },
+    "cognitive_demand": { "value": 9, "confidence": 0.85, "notes": "Cuneiform signs are polyvalent: each sign can function as a logogram, a syllabogram, or a determinative depending on context. Sumerian is agglutinative with an ergative-absolutive alignment that is unfamiliar to speakers of nominative-accusative languages. The writing system adds 600+ signs on top of the grammatical complexity." },
+    "physical_demand": { "value": 0, "confidence": 0.95, "notes": "Entirely a reading and intellectual exercise. No spoken performance is required. Some scholars practice cuneiform sign reproduction on clay, but this is optional." },
+    "prerequisite_knowledge": { "value": 7, "confidence": 0.8, "notes": "Effective study requires prior knowledge of Akkadian (the Semitic language through which Sumerian was transmitted), basic cuneiform reading skills, and familiarity with linguistic terminology (ergativity, agglutination, morphological analysis). Most students enter Sumerian study with at least one year of Akkadian." },
+    "measurability": { "value": 3, "confidence": 0.7, "notes": "No standardized proficiency exams exist. Assessment is informal, typically through university coursework and the ability to produce publishable translations. Even expert translations are debated, making objective measurement difficult." },
+    "perishability": { "value": 5, "confidence": 0.7, "notes": "Sign values and grammatical paradigms fade without regular reading practice, but the skill is purely literate -- there is no spoken fluency to lose. Regular engagement with texts maintains competence. The knowledge base is finite and can be refreshed from reference materials." },
+    "precision_required": { "value": 8, "confidence": 0.8, "notes": "Cuneiform sign identification requires distinguishing visually similar wedge patterns. A single sign misread as a different homophone or logogram can change the meaning of an entire passage. The ergative case system and verbal chain must be parsed precisely." },
+    "ambiguity": { "value": 8, "confidence": 0.8, "notes": "High inherent ambiguity: signs have multiple possible readings, grammar rules have exceptions and historical variation, and damaged tablets leave gaps. Scholarly consensus on many texts remains elusive. The absence of living informants means ambiguities cannot be resolved by asking a speaker." },
+    "instruction_dependency": { "value": 9, "confidence": 0.85, "notes": "Self-study is theoretically possible with resources like Hayes' grammar and the ETCSL corpus, but practically requires guidance from a specialist. University programs with Sumerologists are rare globally. The field's unresolved questions mean even textbooks contain acknowledged uncertainties." },
+    "environmental_variability": { "value": 6, "confidence": 0.7, "notes": "Sumerian spans 2,000+ years of textual history (Archaic through Neo-Sumerian), with significant grammatical and orthographic variation across periods and genres. Administrative, literary, and royal texts each use different conventions. What works for reading Ur III tablets may not transfer to Old Babylonian literary Sumerian." },
+    "concurrent_skills": { "value": 7, "confidence": 0.75, "notes": "Reading requires simultaneous management of cuneiform sign identification, morphological parsing (prefix chains and suffix chains on verbs), contextual disambiguation of polyvalent signs, and awareness of historical period and genre conventions." },
+    "plateau_density": { "value": 8, "confidence": 0.75, "notes": "Major plateaus at cuneiform sign memorization (~600 signs), initial grammar internalization (ergativity is deeply counterintuitive for English speakers), and the transition from parsed readings to fluent comprehension. Many students stall at the intermediate parsing stage." },
+    "domain_evolution": { "value": 1, "confidence": 0.9, "notes": "The textual corpus is fixed (no new native texts are being produced). New tablet discoveries and computational analysis tools occasionally refine understanding, but the language itself is static. Scholarly consensus evolves slowly over decades." },
+    "observability": { "value": 2, "confidence": 0.8, "notes": "Skill is invisible outside specialist contexts. A Sumerologist reading a tablet looks no different from anyone examining an artifact. Expertise is demonstrated only through published translations and academic discourse." },
+    "luck_variance": { "value": 1, "confidence": 0.9, "notes": "Acquisition is entirely effort-driven. Access to quality instruction (geographically limited to a few dozen university programs worldwide) introduces a structural barrier but not randomness." },
+    "social_coordination": { "value": 4, "confidence": 0.75, "notes": "Primarily solitary scholarly work. Collaboration with other specialists is valuable for disputed readings and peer review, but the core skill is individual text analysis. Conferences and correspondence networks support the small global community of Sumerologists." }
+  },
+  "methodology_notes": "Scores are based on linguistic descriptions from Britannica and Wikipedia, pedagogical commentary from NYU's ISAW and the Book and Sword blog, and the known structure of university Assyriology programs. Difficulty estimates reflect the unique challenge of a dead language isolate with no spoken form, polyvalent script, and unresolved grammatical questions. The scholarly community is small (estimated hundreds worldwide), limiting data on learning trajectories."
+}

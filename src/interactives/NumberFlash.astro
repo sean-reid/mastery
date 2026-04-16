@@ -1,0 +1,754 @@
+---
+---
+
+<div class="interactive-wrap" id="number-flash">
+  <div class="interactive-header">
+    <h4 class="interactive-title">Try it: Flash Anzan</h4>
+    <p class="interactive-subtitle">Numbers will flash on screen. Sum them in your head. Competition athletes do 15 numbers in 1.5 seconds.</p>
+  </div>
+
+  <div class="flash-area">
+    <!-- Level selector: segmented control -->
+    <div class="flash-levels" id="flash-levels" role="radiogroup" aria-label="Difficulty level">
+      <button class="flash-level active" data-count="3" data-speed="1000" role="radio" aria-checked="true">
+        <span class="level-name">Warm-up</span>
+        <span class="level-meta">3 numbers &middot; 1/sec</span>
+      </button>
+      <button class="flash-level" data-count="5" data-speed="600" role="radio" aria-checked="false">
+        <span class="level-name">Beginner</span>
+        <span class="level-meta">5 numbers &middot; 1.7/sec</span>
+      </button>
+      <button class="flash-level" data-count="8" data-speed="350" role="radio" aria-checked="false">
+        <span class="level-name">Intermediate</span>
+        <span class="level-meta">8 numbers &middot; 2.9/sec</span>
+      </button>
+      <button class="flash-level" data-count="12" data-speed="200" role="radio" aria-checked="false">
+        <span class="level-name">Advanced</span>
+        <span class="level-meta">12 numbers &middot; 5/sec</span>
+      </button>
+      <button class="flash-level flash-level--comp" data-count="15" data-speed="100" role="radio" aria-checked="false">
+        <span class="level-name">Competition</span>
+        <span class="level-meta">15 numbers &middot; 10/sec</span>
+      </button>
+    </div>
+
+    <!-- Speed preview -->
+    <div class="flash-speed" id="flash-speed">
+      <span class="speed-label">Tempo</span>
+      <span class="speed-track">
+        <span class="speed-dot" id="speed-dot"></span>
+      </span>
+      <span class="speed-value" id="speed-value">1 number per second</span>
+    </div>
+
+    <!-- Flash display -->
+    <div class="flash-display" id="flash-display">
+      <span class="flash-number" id="flash-number"></span>
+      <span class="flash-ready-text" id="flash-ready-text">Ready</span>
+    </div>
+
+    <!-- Start button -->
+    <button class="flash-start-btn" id="flash-start">Start</button>
+
+    <!-- Answer section: hidden until sequence ends -->
+    <div class="flash-answer" id="flash-answer" hidden>
+      <label class="flash-label" for="flash-input">What was the sum?</label>
+      <div class="flash-input-row">
+        <input
+          type="number"
+          class="flash-input"
+          id="flash-input"
+          inputmode="numeric"
+          autocomplete="off"
+          placeholder=""
+        />
+        <button class="flash-submit" id="flash-submit">Submit</button>
+      </div>
+    </div>
+
+    <!-- Result section -->
+    <div class="flash-result" id="flash-result" hidden>
+      <div class="result-icon" id="result-icon"></div>
+      <p class="result-heading" id="result-heading"></p>
+      <p class="result-detail" id="result-detail"></p>
+      <p class="result-context" id="result-context"></p>
+      <button class="flash-retry-btn" id="flash-retry">Try again</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ---- Base interactive styles (scoped) ---- */
+  .interactive-wrap {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin: var(--space-8) 0;
+  }
+
+  .interactive-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .interactive-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+
+  .interactive-subtitle {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  /* ---- Layout ---- */
+  .flash-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  /* ---- Level selector: segmented control ---- */
+  .flash-levels {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .flash-level {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: var(--space-3) var(--space-2);
+    border: none;
+    border-right: 1px solid var(--color-border);
+    background: var(--color-surface);
+    cursor: pointer;
+    transition: background var(--duration-fast) var(--ease-out),
+                color var(--duration-fast) var(--ease-out);
+    position: relative;
+  }
+
+  .flash-level:last-child {
+    border-right: none;
+  }
+
+  .flash-level::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: transparent;
+    transition: background var(--duration-fast) var(--ease-out);
+  }
+
+  /* Difficulty color gradient on bottom bar */
+  .flash-level:nth-child(1).active::after { background: var(--color-score-low); }
+  .flash-level:nth-child(2).active::after { background: #65a30d; }
+  .flash-level:nth-child(3).active::after { background: var(--color-score-mid); }
+  .flash-level:nth-child(4).active::after { background: #f97316; }
+  .flash-level:nth-child(5).active::after { background: var(--color-score-high); }
+
+  .flash-level:hover {
+    background: var(--color-surface-raised);
+  }
+
+  .flash-level.active {
+    background: var(--color-surface-raised);
+  }
+
+  .level-name {
+    font-family: var(--font-heading);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.2;
+  }
+
+  .flash-level.active .level-name {
+    color: var(--color-text);
+  }
+
+  .level-meta {
+    font-size: 0.625rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  /* Competition level: special treatment */
+  .flash-level--comp .level-name {
+    color: var(--color-score-high);
+  }
+
+  .flash-level--comp.active {
+    background: color-mix(in srgb, var(--color-score-high) 6%, var(--color-surface));
+  }
+
+  /* ---- Speed preview ---- */
+  .flash-speed {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .speed-label {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.625rem;
+  }
+
+  .speed-track {
+    position: relative;
+    width: 80px;
+    height: 4px;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: visible;
+  }
+
+  .speed-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent);
+    border-radius: var(--radius-full);
+    transform: translate(-50%, -50%);
+    transition: left var(--duration-normal) var(--ease-out);
+  }
+
+  .speed-dot.animating {
+    animation: speed-bounce 0.6s var(--ease-out) infinite;
+  }
+
+  @keyframes speed-bounce {
+    0%, 100% { left: 0%; }
+    50% { left: 100%; }
+  }
+
+  .speed-value {
+    font-variant-numeric: tabular-nums;
+    min-width: 130px;
+  }
+
+  /* ---- Flash display ---- */
+  .flash-display {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-surface-raised);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: background var(--duration-normal) var(--ease-out),
+                border-color var(--duration-normal) var(--ease-out);
+  }
+
+  .flash-display.active {
+    background: #1c1917;
+    border-color: #1c1917;
+  }
+
+  .flash-display.awaiting {
+    background: #1c1917;
+    border-color: #1c1917;
+  }
+
+  .flash-ready-text {
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .flash-display.active .flash-ready-text,
+  .flash-display.awaiting .flash-ready-text {
+    display: none;
+  }
+
+  .flash-number {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: #1c1917;
+    line-height: 1;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: none;
+  }
+
+  .flash-display.active .flash-number {
+    color: #ffffff;
+  }
+
+  .flash-display.awaiting .flash-number {
+    color: #ffffff;
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.3),
+                 0 0 80px rgba(255, 255, 255, 0.1);
+    animation: question-pulse 2s ease-in-out infinite;
+  }
+
+  .flash-number.flash-in {
+    animation: flash-pop 0.12s var(--ease-out) forwards;
+  }
+
+  @keyframes flash-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    40% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes question-pulse {
+    0%, 100% {
+      text-shadow: 0 0 40px rgba(255, 255, 255, 0.3),
+                   0 0 80px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      text-shadow: 0 0 60px rgba(255, 255, 255, 0.5),
+                   0 0 120px rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  /* ---- Start button ---- */
+  .flash-start-btn {
+    padding: var(--space-3) var(--space-8);
+    border-radius: var(--radius-full);
+    background: var(--color-accent);
+    color: white;
+    font-size: var(--text-base);
+    font-weight: 500;
+    font-family: var(--font-body);
+    border: none;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .flash-start-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  .flash-start-btn:active {
+    transform: translateY(0);
+  }
+
+  /* ---- Answer section ---- */
+  .flash-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    animation: fade-up 0.3s var(--ease-out);
+  }
+
+  .flash-answer[hidden] {
+    display: none;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .flash-label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+  }
+
+  .flash-input-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .flash-input {
+    width: 220px;
+    padding: var(--space-3) var(--space-4);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    text-align: center;
+    background: var(--color-surface);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color var(--duration-fast) var(--ease-out),
+                box-shadow var(--duration-fast) var(--ease-out);
+    -moz-appearance: textfield;
+  }
+
+  .flash-input::-webkit-outer-spin-button,
+  .flash-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .flash-input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 15%, transparent);
+  }
+
+  .flash-submit {
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-lg);
+    background: var(--color-accent);
+    color: white;
+    font-size: var(--text-base);
+    font-weight: 500;
+    font-family: var(--font-body);
+    border: none;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-out);
+    white-space: nowrap;
+  }
+
+  .flash-submit:hover {
+    background: var(--color-accent-hover);
+  }
+
+  /* ---- Result section ---- */
+  .flash-result {
+    text-align: center;
+    max-width: 400px;
+    animation: fade-up 0.3s var(--ease-out);
+  }
+
+  .result-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-3);
+    line-height: 1;
+  }
+
+  .result-heading {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    line-height: 1.3;
+  }
+
+  .result-heading.correct {
+    color: var(--color-score-low);
+  }
+
+  .result-heading.incorrect {
+    color: var(--color-score-high);
+  }
+
+  .result-detail {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2);
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .result-context {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-5);
+    line-height: 1.5;
+  }
+
+  .flash-retry-btn {
+    padding: var(--space-2) var(--space-6);
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    font-family: var(--font-body);
+    border: 1px solid var(--color-accent);
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .flash-retry-btn:hover {
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 600px) {
+    .interactive-wrap {
+      padding: var(--space-5);
+    }
+
+    .flash-levels {
+      flex-wrap: wrap;
+      border-radius: var(--radius-md);
+    }
+
+    .flash-level {
+      flex-basis: calc(33.333% - 1px);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-2);
+    }
+
+    .flash-level:nth-child(4),
+    .flash-level:nth-child(5) {
+      flex-basis: calc(50% - 1px);
+    }
+
+    .flash-level:nth-child(3) {
+      border-right: none;
+    }
+
+    .flash-level:nth-child(4),
+    .flash-level:nth-child(5) {
+      border-bottom: none;
+    }
+
+    .flash-level:nth-child(5) {
+      border-right: none;
+    }
+
+    .flash-display {
+      height: 180px;
+    }
+
+    .flash-number {
+      font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .flash-input-row {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .flash-input {
+      width: 100%;
+      max-width: 220px;
+    }
+  }
+</style>
+
+<script>
+  const displayEl = document.getElementById('flash-display') as HTMLElement;
+  const numberEl = document.getElementById('flash-number') as HTMLElement;
+  const readyText = document.getElementById('flash-ready-text') as HTMLElement;
+  const startBtn = document.getElementById('flash-start') as HTMLButtonElement;
+  const answerEl = document.getElementById('flash-answer') as HTMLElement;
+  const inputEl = document.getElementById('flash-input') as HTMLInputElement;
+  const submitBtn = document.getElementById('flash-submit') as HTMLButtonElement;
+  const resultEl = document.getElementById('flash-result') as HTMLElement;
+  const resultIcon = document.getElementById('result-icon') as HTMLElement;
+  const resultHeading = document.getElementById('result-heading') as HTMLElement;
+  const resultDetail = document.getElementById('result-detail') as HTMLElement;
+  const resultContext = document.getElementById('result-context') as HTMLElement;
+  const retryBtn = document.getElementById('flash-retry') as HTMLButtonElement;
+  const levelBtns = document.querySelectorAll<HTMLButtonElement>('.flash-level');
+  const speedDot = document.getElementById('speed-dot') as HTMLElement;
+  const speedValue = document.getElementById('speed-value') as HTMLElement;
+
+  let count = 3;
+  let speed = 1000;
+  let correctSum = 0;
+
+  function updateSpeedDisplay() {
+    const nps = (1000 / speed).toFixed(speed >= 500 ? 0 : 1);
+    speedValue.textContent = speed >= 1000
+      ? '1 number per second'
+      : `${nps} numbers per second`;
+
+    // Position dot: 0% at 1000ms, 100% at 100ms
+    const pct = Math.min(100, ((1000 - speed) / 900) * 100);
+    speedDot.style.left = `${pct}%`;
+  }
+
+  updateSpeedDisplay();
+
+  function resetToReady() {
+    answerEl.hidden = true;
+    resultEl.hidden = true;
+    displayEl.classList.remove('active', 'awaiting');
+    numberEl.textContent = '';
+    numberEl.style.opacity = '';
+    readyText.style.display = '';
+    startBtn.hidden = false;
+    inputEl.value = '';
+  }
+
+  levelBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      levelBtns.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-checked', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-checked', 'true');
+      count = parseInt(btn.dataset.count || '3', 10);
+      speed = parseInt(btn.dataset.speed || '1000', 10);
+      updateSpeedDisplay();
+      // Reset game state so user can start fresh at new level
+      resetToReady();
+    });
+  });
+
+  function generateNumbers(): number[] {
+    const nums: number[] = [];
+    for (let i = 0; i < count; i++) {
+      nums.push(Math.floor(Math.random() * 90) + 10);
+    }
+    return nums;
+  }
+
+  async function flash(numbers: number[]) {
+    startBtn.hidden = true;
+    answerEl.hidden = true;
+    resultEl.hidden = true;
+    readyText.style.display = 'none';
+
+    // Activate dark display
+    displayEl.classList.add('active');
+    displayEl.classList.remove('awaiting');
+
+    // Brief pause before sequence begins
+    await new Promise((r) => setTimeout(r, 600));
+
+    for (let i = 0; i < numbers.length; i++) {
+      const num = numbers[i];
+      // Show number with pop animation
+      numberEl.textContent = String(num);
+      numberEl.classList.remove('flash-in');
+      // Force reflow to restart animation
+      void numberEl.offsetWidth;
+      numberEl.classList.add('flash-in');
+
+      // Hold the number visible for most of the interval
+      const holdTime = Math.max(speed * 0.7, 50);
+      await new Promise((r) => setTimeout(r, holdTime));
+
+      // Brief dark gap between numbers
+      numberEl.classList.remove('flash-in');
+      numberEl.style.opacity = '0';
+      numberEl.textContent = '';
+
+      const gapTime = Math.max(speed * 0.3, 30);
+      await new Promise((r) => setTimeout(r, gapTime));
+
+      // Reset inline opacity for next iteration
+      numberEl.style.opacity = '';
+    }
+
+    // Sequence complete: show "?" with glow
+    numberEl.textContent = '?';
+    numberEl.classList.remove('flash-in');
+    displayEl.classList.remove('active');
+    displayEl.classList.add('awaiting');
+
+    // Show answer input
+    answerEl.hidden = false;
+    inputEl.value = '';
+    requestAnimationFrame(() => inputEl.focus());
+  }
+
+  startBtn.addEventListener('click', () => {
+    const numbers = generateNumbers();
+    correctSum = numbers.reduce((a, b) => a + b, 0);
+    flash(numbers);
+  });
+
+  function checkAnswer() {
+    const raw = inputEl.value.trim();
+    if (!raw) return;
+    const guess = parseInt(raw, 10);
+    if (isNaN(guess)) return;
+
+    answerEl.hidden = true;
+    displayEl.classList.remove('awaiting');
+    numberEl.textContent = '';
+    numberEl.style.opacity = '';
+
+    const isCorrect = guess === correctSum;
+    const diff = Math.abs(guess - correctSum);
+
+    if (isCorrect) {
+      resultIcon.textContent = '';
+      resultHeading.textContent = 'Correct';
+      resultHeading.className = 'result-heading correct';
+      resultDetail.textContent = `The sum was ${correctSum}. You got it exactly right.`;
+
+      if (count >= 12 && speed <= 200) {
+        resultContext.textContent = 'Impressive. That speed approaches competitive Flash Anzan territory.';
+      } else if (count >= 8) {
+        resultContext.textContent = 'Solid mental arithmetic. Try a faster level to push your limits.';
+      } else {
+        resultContext.textContent = 'Good start. Competition athletes track 15 numbers flashing in 1.5 seconds total.';
+      }
+    } else {
+      resultIcon.textContent = '';
+      resultHeading.textContent = `The sum was ${correctSum}`;
+      resultHeading.className = 'result-heading incorrect';
+      resultDetail.textContent = `You answered ${guess}. Off by ${diff}.`;
+
+      if (diff <= 5) {
+        resultContext.textContent = `Close. At competition level, athletes process 15 two-digit numbers in 1.5 seconds with perfect accuracy.`;
+      } else if (diff <= 20) {
+        resultContext.textContent = `Not far off. Elite Flash Anzan players train for years to sum 15 numbers flashed in 1.5 seconds.`;
+      } else {
+        resultContext.textContent = `The speed makes this deceptively hard. World-class competitors sum 15 numbers in 1.5 seconds without error.`;
+      }
+    }
+
+    resultEl.hidden = false;
+    startBtn.hidden = false;
+    readyText.style.display = '';
+  }
+
+  submitBtn.addEventListener('click', checkAnswer);
+
+  inputEl.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      checkAnswer();
+    }
+  });
+
+  retryBtn.addEventListener('click', () => {
+    resultEl.hidden = true;
+    displayEl.classList.remove('active', 'awaiting');
+    numberEl.textContent = '';
+    numberEl.style.opacity = '';
+    readyText.style.display = '';
+    startBtn.hidden = false;
+  });
+</script>

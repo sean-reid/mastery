@@ -1,0 +1,136 @@
+{
+  "name": "Kriegsspiel",
+  "slug": "kriegsspiel",
+  "category": "game",
+  "description": "A chess variant invented in 1899 where neither player can see the opponent's pieces and a referee announces only checks, captures, and illegal move attempts -- transforming chess into probabilistic inference under fog of war. Bologna research showed that even theoretically won endgames like KR vs. K become extraordinarily difficult when the winning side cannot locate the opposing King.",
+  "thumbnail": {
+    "src": "/images/skills/kriegsspiel.webp",
+    "alt": "Three chess boards arranged for a Kriegsspiel game with a referee screen between players",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "jKTAH6mP3ao",
+      "title": "Kriegspiel - Blind Chess Variant Explained and Played"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kriegspiel (chess)",
+      "url": "https://en.wikipedia.org/wiki/Kriegspiel_(chess)",
+      "type": "reference"
+    },
+    {
+      "title": "Computer Programming of Kriegspiel Endings: The Case of KR versus K",
+      "author": "Andrea Bolognesi, Paolo Ciancarini",
+      "url": "https://link.springer.com/chapter/10.1007/978-0-387-35706-5_21",
+      "type": "research"
+    },
+    {
+      "title": "A Director for Kriegspiel, a Variant of Chess",
+      "author": "Wetherell, Buckholtz, Booth",
+      "url": "https://academic.oup.com/comjnl/article/15/1/66/418440",
+      "year": 1972,
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Requires prior chess knowledge plus learning Kriegsspiel-specific rules (referee announcements, 'Any?' protocol). Developing basic inference skills about opponent piece locations takes months of practice."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.55,
+      "notes": "Extremely rare game with very few competitive players. Mastery requires strong chess fundamentals plus advanced Bayesian reasoning about hidden piece positions. No formal ranking or professional structure exists."
+    },
+    "feedback_delay": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Games end with a clear result (checkmate, stalemate, draw). Post-game review reveals the full position history, but during play the player operates under severe information deprivation with only referee clues."
+    },
+    "failure_cost": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "No stakes beyond the game itself. The community is tiny and recreational. No professional circuit or significant prize pools."
+    },
+    "cognitive_demand": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "Requires all of chess's cognitive demands plus maintaining a mental probability distribution of all possible opponent piece positions, updated with each referee announcement. Ciancarini's research formalized this as 'metaposition' computation."
+    },
+    "physical_demand": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "Seated activity identical to chess. Can be played entirely online."
+    },
+    "prerequisite_knowledge": {
+      "value": 6,
+      "confidence": 0.85,
+      "notes": "Strong chess knowledge is a prerequisite. Players must understand piece movement, tactics, and positional concepts before the incomplete-information layer adds meaningful challenge."
+    },
+    "measurability": {
+      "value": 2,
+      "confidence": 0.7,
+      "notes": "No standardized rating system. Played on the Internet Chess Club as 'Wild 16' with informal ratings. Player pool is too small for statistically meaningful rankings."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Underlying chess skills are relatively durable, but the Kriegsspiel-specific inference abilities -- tracking multiple possible game states simultaneously -- likely decay without practice."
+    },
+    "precision_required": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Tactical precision matters less than in chess because the position is uncertain. Strategic precision -- correctly narrowing down opponent possibilities from referee clues -- is critical."
+    },
+    "ambiguity": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "By design, the game state is ambiguous. Players must act on probabilistic estimates rather than certain knowledge. Multiple reasonable interpretations of the same referee clues often exist."
+    },
+    "instruction_dependency": {
+      "value": 3,
+      "confidence": 0.65,
+      "notes": "Very few instructional resources exist. The game is learned through chess foundation plus trial and error. Academic papers on Kriegsspiel strategy exist but are oriented toward AI rather than human pedagogy."
+    },
+    "environmental_variability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Same starting position as chess, but the information asymmetry means the experienced game state varies enormously. Referee announcements create a unique information trajectory each game."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Simultaneously managing chess strategy, probability tracking of hidden pieces, deduction from referee clues, memory of all past announcements, and attempted-move information extraction."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.5,
+      "notes": "Limited data due to tiny player pool. Improvement likely follows chess plateau patterns but with additional stalls as players develop probabilistic reasoning skills."
+    },
+    "domain_evolution": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "Rules unchanged since 1899. No significant metagame evolution. Academic AI research has not influenced human play. The player community is too small to generate strategic innovation."
+    },
+    "observability": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "Only the referee sees the full game. Each player sees only their own pieces. An observer would see two people staring at half-empty boards. The strategic depth is invisible even to chess experts."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "No random mechanics, but the information asymmetry introduces variance. A player's attempted moves may accidentally reveal or conceal information. Guessing correctly about hidden pieces involves a luck-like component."
+    },
+    "social_coordination": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Requires a referee (third person or computer), making it harder to organize than standard chess. The referee relationship adds a social element absent from chess."
+    }
+  },
+  "methodology_notes": "Scores informed by the Wikipedia article on Kriegspiel (chess), Ciancarini and Bolognesi's research on Kriegspiel endgame programming, and Wetherell et al.'s 1972 Computer Journal paper on Kriegspiel director implementation. Confidence is generally lower than for mainstream games due to the very small competitive community and absence of formal rating systems or training infrastructure. The cognitive_demand score reflects the documented computational complexity of maintaining 'metapositions' (sets of possible game states)."
+}

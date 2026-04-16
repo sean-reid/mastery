@@ -1,0 +1,63 @@
+{
+  "name": "Plains Indian Sign Language",
+  "slug": "plains-indian-sign-language",
+  "category": "language",
+  "description": "The only sign language known to have served as a continental lingua franca, Plains Indian Sign Language was used by an estimated 110,000 people across dozens of mutually unintelligible spoken languages by the 1880s -- a scope unmatched by any other sign system in history. It is unrelated to ASL and predates European contact by centuries, with documentation reaching back to Cabeza de Vaca's 1527 expedition.",
+  "thumbnail": {
+    "src": "/images/skills/plains-indian-sign-language.webp",
+    "alt": "Native American elder demonstrating Plains Indian Sign Language hand signs",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "s1-StAlw3aE",
+      "title": "The hidden history of Hand Talk | Vox"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Plains Indian Sign Language - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Plains_Indian_Sign_Language",
+      "type": "reference"
+    },
+    {
+      "title": "Plains Indian sign language (PISL) - Britannica",
+      "url": "https://www.britannica.com/topic/Plains-Indian-sign-language",
+      "type": "reference"
+    },
+    {
+      "title": "A Historical Linguistic Account of Sign Language among North American Indians",
+      "url": "https://ssl.gallaudet.edu/gupress/excerpts/MSL.pdf",
+      "type": "research"
+    },
+    {
+      "title": "The hidden history of Hand Talk - Vox",
+      "url": "https://www.vox.com/videos/23075393/hand-talk-pisl-missing-chapter-sign-language",
+      "year": 2022,
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 4, "confidence": 0.7, "notes": "PISL was historically designed for rapid cross-tribal communication. Basic trade vocabulary and common phrases could be learned in days to weeks. The iconic (visually motivated) nature of many signs aids initial acquisition. However, modern learners face scarcity of instructors and materials." },
+    "time_to_expert": { "value": 7, "confidence": 0.65, "notes": "Fluent storytelling, ceremonial use, and full grammatical command require years of immersion with elder speakers. Lanny Real Bird and Melanie McKay-Cody, leading modern experts, have studied for decades. The language's full expressive range -- diplomacy, spiritual narratives, complex argument -- takes years to master." },
+    "feedback_delay": { "value": 2, "confidence": 0.75, "notes": "Visual communication provides immediate feedback -- a confused expression or request for repetition is instant. Sign errors are visually apparent to fluent signers." },
+    "failure_cost": { "value": 1, "confidence": 0.9, "notes": "Mis-signing is harmless. Historically, miscommunication in trade or diplomacy could have consequences, but the language itself was specifically designed to bridge gaps and reduce conflict." },
+    "cognitive_demand": { "value": 5, "confidence": 0.7, "notes": "Many signs are iconic (visually resemble their meaning), reducing arbitrary memorization. Grammar differs from both spoken languages and ASL. Spatial reasoning and visual-gestural processing are primary cognitive demands." },
+    "physical_demand": { "value": 3, "confidence": 0.8, "notes": "Requires hand, arm, and facial dexterity. Less physically demanding than ASL (which uses more rapid fingerspelling). Signs tend to be larger and more deliberate, suited for outdoor visibility across distances." },
+    "prerequisite_knowledge": { "value": 2, "confidence": 0.75, "notes": "No linguistic prerequisites. Cultural knowledge of Plains Indian traditions enhances understanding of ceremonial and narrative signs. Familiarity with any sign language provides transferable spatial-grammar skills." },
+    "measurability": { "value": 2, "confidence": 0.6, "notes": "No standardized proficiency tests exist. Assessment relies entirely on judgment by fluent elders. The NEH-funded PISL Corpus Linguistics Project is creating documentation but not formal assessment tools." },
+    "perishability": { "value": 7, "confidence": 0.7, "notes": "Without regular practice, sign vocabulary and fluency degrade. The language itself is critically endangered -- perhaps fewer than 1,000 fluent signers remain, most elderly. Individual skill and the language as a whole are both at risk of permanent loss." },
+    "precision_required": { "value": 4, "confidence": 0.7, "notes": "Signs are relatively large-scale and forgiving compared to ASL fingerspelling. Iconic motivation means approximate signs are often comprehensible. However, ceremonial and narrative registers demand precise sign formation." },
+    "ambiguity": { "value": 5, "confidence": 0.7, "notes": "Context-dependent like all sign languages. Iconic signs can be transparent to outsiders but also polysemous. The trade-language function means ambiguity was historically managed through repetition and contextual framing." },
+    "instruction_dependency": { "value": 8, "confidence": 0.8, "notes": "Almost no self-study materials exist. A few vocabulary lists (Quizlet, handspeak.com) and the Vox documentary provide exposure, but learning requires direct contact with fluent signers. The Wyoming Humanities PISL program and Dr. McKay-Cody's University of Arizona work are among the only structured learning opportunities." },
+    "environmental_variability": { "value": 4, "confidence": 0.7, "notes": "Regional sign variants existed across tribal groups (Crow, Cheyenne, Arapaho, Kiowa). Core vocabulary was shared, but ceremonial and culture-specific signs varied. Modern revitalization tends toward standardization." },
+    "concurrent_skills": { "value": 4, "confidence": 0.7, "notes": "Simultaneous hand-shape, movement, spatial positioning, and facial expression. Less concurrent demand than spoken-language tasks because there is no auditory channel to manage. Storytelling mode adds performance and timing skills." },
+    "plateau_density": { "value": 5, "confidence": 0.65, "notes": "Initial vocabulary acquisition is rapid due to iconicity. Plateau emerges at grammatical complexity and narrative fluency. Deepest plateau is access-limited: reaching advanced levels requires sustained interaction with the handful of remaining fluent elders." },
+    "domain_evolution": { "value": 1, "confidence": 0.8, "notes": "PISL has been stable for centuries. As an endangered language, it is contracting rather than evolving. Revitalization efforts aim to preserve existing forms rather than generate new ones." },
+    "observability": { "value": 8, "confidence": 0.85, "notes": "Sign language is inherently visible. PISL's large, deliberate signs are especially visually striking. Historical accounts and films (including the 1930 Indian Sign Language Council footage) demonstrate its dramatic visual impact." },
+    "luck_variance": { "value": 2, "confidence": 0.75, "notes": "Acquisition is effort-driven, but access to fluent speakers is geographically and socially constrained. Being part of a Plains Indian community provides an enormous advantage." },
+    "social_coordination": { "value": 7, "confidence": 0.8, "notes": "PISL is fundamentally a social and inter-group communication tool. Learning requires signing partners. The language's entire purpose was facilitating coordination between linguistically diverse groups. Solo practice is limited to vocabulary drilling." }
+  },
+  "methodology_notes": "Scores based on Wikipedia and Britannica historical data, Gallaudet University Press research excerpts, Vox 2022 documentary featuring McKay-Cody and Real Bird, and NEH-funded corpus linguistics project documentation. Speaker estimates (~1,000 remaining, down from 110,000 in 1885) from Wikipedia citing historical sources. Confidence is generally lower due to the language's endangered status and limited modern pedagogical research."
+}

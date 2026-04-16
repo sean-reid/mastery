@@ -1,0 +1,65 @@
+{
+  "name": "Cardiac Surgery",
+  "slug": "cardiac-surgery",
+  "category": "trade",
+  "description": "A cardiothoracic surgeon in the United States completes 4 years of medical school, 5-7 years of general surgery residency, and 2-3 years of cardiothoracic fellowship — a minimum of 13 years post-college before independent practice. The STS National Database tracks nearly 10 million procedures across 4,300+ surgeons; operative mortality averages 2-3% for elective cases but climbs to 13-21% for reoperations. Globally, only ~16,000 cardiac surgeons serve a world population of 8 billion — 1.64 per million in wealthy nations, 0.04 per million in low-income countries.",
+  "thumbnail": {
+    "src": "/images/skills/cardiac-surgery.webp",
+    "alt": "Surgical team performing open-heart bypass surgery under operating room lights",
+    "attribution": "Photo by Unsplash"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "vMkGCKF9sO4",
+      "title": "Open Heart Surgery | Inside the OR — Northwestern Medicine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Global cardiac surgery: Access to cardiac surgical care around the world",
+      "author": "Zain Yusuf Khalpey et al.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31128897/",
+      "year": 2019,
+      "type": "research"
+    },
+    {
+      "title": "Association Between Cardiac Surgeons' Number of Years in Practice and Surgical Outcomes",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2772520",
+      "year": 2020,
+      "type": "research"
+    },
+    {
+      "title": "Cardiac surgery - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cardiac_surgery",
+      "type": "reference"
+    },
+    {
+      "title": "CT Surgery Training Pathways — Thoracic Surgery Directors Association",
+      "url": "https://tsda.org/the-tsda/ct-residency-programs/ct-surgery-training-pathways/",
+      "type": "institutional"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 8, "confidence": 0.95, "notes": "After 4 years of medical school and 5+ years of general surgery residency, a trainee can assist but not independently perform cardiac procedures. Basic competence to operate solo requires ~13 years post-college." },
+    "time_to_expert": { "value": 10, "confidence": 0.95, "notes": "True mastery — complex reoperations, aortic root replacements, pediatric congenital repairs — requires 15-20+ years of accumulated operative volume. JAMA data shows outcomes improve continuously with surgeon experience over decades." },
+    "feedback_delay": { "value": 5, "confidence": 0.8, "notes": "Intraoperative feedback is immediate (bleeding, hemodynamic changes). But long-term outcomes — graft patency, valve durability, survival — take months to years to manifest. STS database reporting lags by quarters." },
+    "failure_cost": { "value": 10, "confidence": 0.95, "notes": "A technical error during cardiac surgery can kill the patient on the table. Operative mortality is 2-3% even in elective cases. Errors are irreversible in real time. The highest-stakes craft in existence." },
+    "cognitive_demand": { "value": 10, "confidence": 0.9, "notes": "Requires simultaneous integration of anatomy, physiology, pharmacology, hemodynamics, and real-time problem-solving. Surgeons must adapt instantly to unexpected pathology, bleeding, or hemodynamic collapse while maintaining fine motor precision." },
+    "physical_demand": { "value": 7, "confidence": 0.85, "notes": "Operations last 3-8 hours standing in a fixed posture. Fine motor demands are extreme — suturing coronary arteries 1-2mm in diameter. Less brute strength than endurance and hand steadiness under sustained stress." },
+    "prerequisite_knowledge": { "value": 10, "confidence": 0.95, "notes": "Requires a complete undergraduate education, medical degree, and mastery of general surgical principles before cardiac training even begins. The longest prerequisite chain of any craft." },
+    "measurability": { "value": 8, "confidence": 0.85, "notes": "STS database provides risk-adjusted mortality and morbidity benchmarks. Surgeon-specific outcomes are publicly reported. One of the most quantitatively measured crafts, though case-mix adjustment is imperfect." },
+    "perishability": { "value": 6, "confidence": 0.75, "notes": "Surgical skill degrades with breaks from practice — studies show volume-outcome relationships. But foundational medical knowledge is durable. A surgeon returning from a year away would need supervised re-entry." },
+    "precision_required": { "value": 10, "confidence": 0.95, "notes": "Coronary anastomoses require suturing vessels 1-2mm in diameter with 7-0 or 8-0 suture. A single misplaced stitch can occlude a graft. Valve replacements demand sub-millimeter sizing accuracy." },
+    "ambiguity": { "value": 5, "confidence": 0.8, "notes": "Surgical technique has well-defined standards, but intraoperative decision-making — when to abort, which conduit to use, how to handle unexpected pathology — involves significant judgment under uncertainty." },
+    "instruction_dependency": { "value": 10, "confidence": 0.95, "notes": "Entirely apprenticeship-based. No surgeon has ever learned cardiac surgery from books alone. Training requires thousands of supervised cases with graduated autonomy. Self-teaching is impossible and illegal." },
+    "environmental_variability": { "value": 4, "confidence": 0.8, "notes": "Operating rooms are highly controlled environments. But patient anatomy varies enormously — calcified aortas, reoperation adhesions, congenital anomalies — making every case a novel challenge." },
+    "concurrent_skills": { "value": 9, "confidence": 0.85, "notes": "Simultaneously managing surgical technique, anesthesia communication, perfusion (bypass machine) coordination, hemodynamic monitoring, and team leadership. A breakdown in any channel can be fatal." },
+    "plateau_density": { "value": 7, "confidence": 0.75, "notes": "Major transitions: medical student to resident, resident to fellow, fellow to independent surgeon. Each plateau lasts years. The learning curve for new procedures (e.g., robotic, transcatheter) creates additional plateaus mid-career." },
+    "domain_evolution": { "value": 7, "confidence": 0.85, "notes": "Rapidly evolving: transcatheter valve replacement, robotic surgery, mechanical circulatory support, and minimally invasive approaches are transforming the field. Surgeons must continuously learn new technologies or become obsolete." },
+    "observability": { "value": 6, "confidence": 0.8, "notes": "Operative skill is visible to trained observers in the OR but invisible to patients and the public. Outcomes data is published, but the difference between a good and great surgeon is subtle to non-experts." },
+    "luck_variance": { "value": 3, "confidence": 0.8, "notes": "Patient biology introduces some variance — unexpected bleeding, friable tissue, undiagnosed pathology. But outcomes are overwhelmingly determined by surgeon skill and judgment, not chance." },
+    "social_coordination": { "value": 8, "confidence": 0.9, "notes": "Cardiac surgery is intensely team-dependent: surgeon, first assistant, scrub nurse, anesthesiologist, perfusionist, and circulating nurse must coordinate precisely. Communication failures are a leading cause of adverse events." }
+  },
+  "methodology_notes": "Scores draw on the STS National Database (10M+ procedures), JAMA Network Open volume-outcome studies, TSDA training pathway documentation, and PubMed global cardiac surgery access data. Cardiac surgery serves as the difficulty anchor for the trade category: time_to_expert=10 and failure_cost=10 reflect the longest training pipeline and highest stakes of any manual craft."
+}

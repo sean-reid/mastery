@@ -1,0 +1,133 @@
+{
+  "name": "Bo-taoshi",
+  "slug": "bo-taoshi",
+  "category": "sport",
+  "description": "A Japanese pole-toppling sport in which 150 players per side split into 75 attackers and 75 defenders, with the attacking team attempting to bring the opposing pole from vertical to below 30 degrees within two minutes. Played since 1954 at the National Defense Academy of Japan, it features specialized positions including the 'ninja' who perches atop the pole to counterbalance attackers, and the 'barrier' who form a human wall. Helmets are mandatory after escalating injuries in the 1970s and 80s; shoes are banned due to the prevalence of face-kicking.",
+  "thumbnail": {
+    "src": "/images/skills/bo-taoshi.webp",
+    "alt": "Massive scrum of cadets climbing and defending a pole during a Bo-taoshi match at Japan's National Defense Academy",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "kNaGS1jIoO0",
+      "title": "Bo-Taoshi: Japan's Insane 150 vs 150 Pole Toppling Sport"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bo-taoshi",
+      "url": "https://en.wikipedia.org/wiki/Bo-taoshi",
+      "type": "reference"
+    },
+    {
+      "title": "Bo-Taoshi is craziest sport you'll see today",
+      "url": "https://www.si.com/extra-mustard/2014/08/04/bo-taoshi-dangerous-japanese-pole-sport",
+      "type": "journalism"
+    },
+    {
+      "title": "Botaoshi: The Sport Where You Knock Down That Pole Or Die Trying",
+      "url": "https://www.tofugu.com/japan/botaoshi/",
+      "type": "community"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "New cadets at the National Defense Academy participate in their first match within weeks of enrollment. The rules are simple (topple the pole below 30 degrees), and the primary requirements are physical fitness and aggression. Basic positional understanding can be taught in a few training sessions."
+    },
+    "time_to_expert": {
+      "value": 5,
+      "confidence": 0.6,
+      "notes": "Mastery involves understanding formation tactics, excelling in a specialized position (ninja, barrier, scrum disabler, pole support), and coordinating within a 75-person unit. Upper-year cadets who have played multiple annual matches develop superior tactical awareness. However, the sport has a lower technical ceiling than most."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Each match lasts only two minutes with a binary outcome: the pole falls below 30 degrees or it does not. Success or failure is immediately visible to all 300 participants. The compressed timeframe provides instant tactical feedback."
+    },
+    "failure_cost": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Fractures, concussions, and sprains are common in a sport involving 150 barefoot people climbing, tackling, and kicking around a pole. Helmets were introduced after severe injuries in the 1970s-80s. The 'ninja' position atop the pole risks falls from height. Shoes are banned specifically because face-kicking is so prevalent."
+    },
+    "cognitive_demand": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Individual cognitive demand is moderate: each player fills a defined role within a larger formation. The complexity emerges at the team-coordination level rather than individual decision-making. Real-time adaptation to a 300-person chaotic field requires spatial awareness but not deep strategic thinking."
+    },
+    "physical_demand": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Extreme full-body exertion compressed into two minutes: sprinting, climbing over human bodies, wrestling, pulling, pushing, and absorbing impacts. Attackers must physically scale a wall of defenders. Defenders must hold formation against 75 charging opponents. The ninja must balance atop a swaying pole while fending off attackers."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Rules are minimal: topple the pole to 30 degrees. No specialized equipment knowledge or technical background required. General athletic fitness and willingness to engage in physical contact are the only prerequisites. The sport is taught within the military academy curriculum."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Win/loss is binary and unambiguous (pole angle measured against 30-degree threshold). Team performance is clearly measurable. Individual contribution is harder to isolate within a 75-person unit, though specialized positions like the ninja have more visible impact."
+    },
+    "perishability": {
+      "value": 4,
+      "confidence": 0.6,
+      "notes": "The fundamental skills (physical fitness, tackling, climbing) are general athletic abilities that transfer from other activities. Sport-specific tactical knowledge for positions like ninja or scrum disabler would decay without practice, but the annual play cycle at the NDA maintains skills."
+    },
+    "precision_required": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "A blunt-force sport with no fine motor skill requirements. Success is about overwhelming force, mass coordination, and physical endurance rather than precision. The 30-degree pole angle is a coarse target. Individual actions need only contribute to aggregate force vectors."
+    },
+    "ambiguity": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "The winning condition is clear and measurable (pole below 30 degrees). However, the chaotic nature of 300 simultaneous participants makes individual rule enforcement difficult. The NDA has established rules over decades, but in-match adjudication of fouls within a 150-person scrum is inherently imprecise."
+    },
+    "instruction_dependency": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Formal instruction within the NDA framework teaches positional roles, formation tactics, and safety protocols. The sport cannot be self-taught because it requires 150 teammates and an organized opponent. However, the individual physical skills are general and learnable independently."
+    },
+    "environmental_variability": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Played on a standardized outdoor field at the NDA. Weather (rain, wind) can affect footing and grip. The pole is a fixed standard. The primary variable is the opposing team's formation and tactics rather than environmental conditions."
+    },
+    "concurrent_skills": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Attackers must simultaneously sprint, navigate human obstacles, climb, fight off defenders, and coordinate with teammates. Defenders must hold physical formation, track multiple attackers, and communicate. The ninja must balance, fight, and counterweight simultaneously. Less individually complex than small-team sports but the scale adds coordination demand."
+    },
+    "plateau_density": {
+      "value": 3,
+      "confidence": 0.55,
+      "notes": "The relatively simple skill set and annual play cycle limit discrete plateau points. Improvement tracks primarily with physical conditioning and experience reading the chaotic field. There is less technical depth to stall on compared to precision sports."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.75,
+      "notes": "The core rules have been stable since the NDA codified them in the 1950s. Safety modifications (helmets, shoe bans) are the primary changes. No equipment innovations or major tactical revolutions. The sport is preserved as a military tradition rather than evolved as a competitive discipline."
+    },
+    "observability": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "150 people swarming a pole in a chaotic mass of climbing, tackling, and tumbling is one of the most visually striking spectacles in sport. The 2014 viral YouTube compilation exceeded 2.9 million views. Zero domain knowledge required to appreciate the spectacle. The scale alone is extraordinary."
+    },
+    "luck_variance": {
+      "value": 4,
+      "confidence": 0.65,
+      "notes": "The chaotic nature of 300 simultaneous participants introduces meaningful randomness. A key defender's slip or a lucky breakthrough by an attacker can determine the outcome of a two-minute match. However, superior coordination and fitness reliably favor the better-prepared team."
+    },
+    "social_coordination": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "75 players per side must coordinate as a unit in real time. The defensive formation requires synchronized effort from pole support, barrier, interference, and scrum disablers. The attacking team must coordinate waves of assault. This is among the highest social coordination demands in any sport, with more participants per side than almost any other organized competition."
+    }
+  },
+  "methodology_notes": "Scores informed by the Wikipedia article on bo-taoshi, Sports Illustrated's coverage, and Tofugu's detailed cultural explainer. The sport's unique scale (150 per side) drives the social coordination score to maximum. Physical demand reflects the extreme two-minute burst of full-body combat and climbing. Confidence is lower for several axes due to limited English-language academic research and the sport's niche status outside Japanese military academies."
+}

@@ -1,0 +1,133 @@
+{
+  "name": "Calcio Storico",
+  "slug": "calcio-storico",
+  "category": "sport",
+  "description": "A Renaissance-era Florentine sport in which two teams of 27 players compete on a sand-covered piazza for 50 minutes, scoring by throwing a ball into the opposing team's goal trough. Punching, choking, and tackling are integral tactics; only sucker punches and kicks to the head are banned. Players train for three months before the annual June tournament in Piazza Santa Croce, drawing from MMA, rugby, and boxing backgrounds to survive a contest that has produced eye gougings, severed ears, and occasional fatalities since its codification in 1580.",
+  "thumbnail": {
+    "src": "/images/skills/calcio-storico.webp",
+    "alt": "Two teams of players brawling on a sand-covered pitch during a Calcio Storico match in Florence",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "MKFdRefANHs",
+      "title": "Calcio Storico: The World's Most Brutal Sport - ESPN"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Calcio storico fiorentino",
+      "url": "https://en.wikipedia.org/wiki/Calcio_storico_fiorentino",
+      "type": "reference"
+    },
+    {
+      "title": "Italy's annual calcio storico tournament -- part football, part MMA -- is a brutal sight to behold",
+      "url": "https://www.espn.com/espn/story/_/id/19844178/part-football-part-mma-part-historical-recreation-italy-calcio-storico-brutal-sight-behold",
+      "type": "journalism"
+    },
+    {
+      "title": "In Florence the centuries-old tradition of calcio storico fights for survival",
+      "url": "https://www.nationalgeographic.com/culture/article/in-florence-italy-centuries-old-tradition-fights-for-survival",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Players train three times per week for three months before the annual tournament. Many recruits come from MMA, rugby, or boxing, so existing combat-sport competence transfers heavily. Pure novices with no fighting background would require longer."
+    },
+    "time_to_expert": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "Expert status means being a reliable calciante selected for your quartiere's team year after year. Veterans play for 5-10+ years. However, the skill ceiling is lower than sports with precise technical demands since raw physicality and aggression dominate."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Feedback is immediate and visceral: you score a caccia or you get punched in the face. The 50-minute match format and annual tournament provide rapid competitive feedback."
+    },
+    "failure_cost": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Injuries are severe and expected: broken bones, concussions, torn ligaments, gouged eyes, and bitten-off ears are documented. Historically fatal injuries have occurred. No substitutions are allowed for injured players. Players describe injuries as 'medals.'"
+    },
+    "cognitive_demand": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Requires situational awareness across a chaotic 54-player field, positional understanding of the four roles (goalkeeper, fullback, halfback, forward), and tactical decisions about when to fight versus advance the ball. Less cerebral than sports with complex rule systems."
+    },
+    "physical_demand": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Combines the endurance demands of 50 minutes of continuous play in sand with full-contact combat (punching, wrestling, tackling). Deep sand saps energy rapidly. Players must simultaneously be fighters and athletes. One of the most physically punishing sports in existence."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "No formal prerequisites, but backgrounds in MMA, boxing, rugby, or wrestling provide enormous advantage. Basic understanding of the four positional roles and scoring rules is minimal. The sport rewards raw physicality over technical knowledge."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Team wins and cacce scored are tracked. Individual contribution is harder to quantify in a 27-player melee. No formal ranking system exists beyond team selection by neighborhood captains."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Combat fitness and fighting instincts decay without training, but the annual three-month preparation cycle is designed to restore match readiness. Underlying fitness from combat sports backgrounds provides a durable base."
+    },
+    "precision_required": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "The goal trough spans the entire width of the field, making scoring relatively imprecise. Combat involves brawling rather than precise striking arts. The sand surface further reduces precision requirements. Success is more about power and endurance than finesse."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "The minimal ruleset creates ambiguity about what constitutes a foul versus legitimate play. The capocaccia (referee) makes subjective calls about illegal strikes. 'Almost no rules' means the boundaries of legal play are inherently unclear."
+    },
+    "instruction_dependency": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "No formal academies or coaching pipelines exist. Players learn through their neighborhood team's three-month pre-tournament training camp and from veteran calcianti. Fighting skills are typically imported from external martial arts training."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Always played in sand, always in Florence, always in June. The Piazza Santa Croce venue is consistent. Weather conditions (heat, rain affecting sand) introduce some variability. The sand depth and consistency can vary."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Simultaneously managing hand-to-hand combat, ball tracking across a 54-player field, positional awareness, team coordination, and sand-terrain navigation. The forwards must fight while also advancing the ball, requiring parallel combat and sport skills."
+    },
+    "plateau_density": {
+      "value": 4,
+      "confidence": 0.55,
+      "notes": "The low technical ceiling means fewer discrete skill plateaus compared to precision sports. Improvement is primarily about physical conditioning and combat experience, which progress more linearly. The annual competitive cycle limits rapid iteration."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Rules have been essentially stable since Giovanni de' Bardi codified them in 1580. Minor rule changes (banning kicks to the head, sucker punches) are the only modern modifications. The sport deliberately preserves its Renaissance character."
+    },
+    "observability": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Immediately comprehensible and spectacular: 54 people in Renaissance costumes brawling in sand while trying to score goals. No domain knowledge required to appreciate the spectacle. Netflix, ESPN, and National Geographic have all produced features on it."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Chaotic 54-player melees introduce some randomness in outcomes. A key player can be knocked out early by an unlucky hit. Ball bounces in sand are unpredictable. However, the stronger, better-conditioned team typically prevails over 50 minutes."
+    },
+    "social_coordination": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "27 players per team across four distinct roles must coordinate attacks and defensive formations. The corridori (forwards) engage in coordinated fighting to create openings. Teams represent historic Florentine neighborhoods, creating deep social bonds. No substitutions means the team must self-organize throughout the match."
+    }
+  },
+  "methodology_notes": "Scores informed by the Wikipedia article on calcio storico fiorentino, ESPN's in-depth feature on the 2017 tournament, and National Geographic's cultural reporting on the sport's survival. Physical demand and failure cost are among the highest of any sport due to the combination of full-contact combat, deep-sand terrain, and 50-minute duration with no substitutions. Confidence is moderate for several axes due to the absence of formal training literature and the sport's unique annual-only competitive cycle."
+}

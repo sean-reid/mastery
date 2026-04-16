@@ -1,0 +1,62 @@
+{
+  "name": "Competitive Stone Skipping",
+  "slug": "competitive-stone-skipping",
+  "category": "physical",
+  "description": "Competitive stone skipping elevates the childhood pastime into a discipline governed by physics: the ideal stone weighs 3-8 ounces, is 1/4 inch thick, and must be launched at roughly 25 mph with a spin rate of about 14 revolutions per second at a 20-degree attack angle. Kurt Steiner holds the Guinness World Record at 88 skips, set in 2013 at Red Bridge, Pennsylvania, after collecting over 10,000 candidate stones sorted by type.",
+  "thumbnail": {
+    "src": "/images/skills/competitive-stone-skipping.webp",
+    "alt": "Stone skipping across a calm river surface with multiple visible bounces",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "6GWL8Gt-BsQ",
+      "title": "Why It's Almost Impossible to Skip a Stone 89 Times - WIRED"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Stone skipping",
+      "url": "https://en.wikipedia.org/wiki/Stone_skipping",
+      "type": "reference"
+    },
+    {
+      "title": "Kurt Steiner (stone skipper)",
+      "url": "https://en.wikipedia.org/wiki/Kurt_Steiner_(stone_skipper)",
+      "type": "reference"
+    },
+    {
+      "title": "Most skips of a skimming stone - Guinness World Records",
+      "url": "https://www.guinnessworldrecords.com/world-records/most-skips-of-a-skimming-stone",
+      "type": "competition"
+    },
+    {
+      "title": "The physics of stone skipping",
+      "url": "https://www.researchgate.net/publication/2168050_The_physics_of_stone_skipping",
+      "type": "research"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 2, "confidence": 0.85, "notes": "Most people can learn to reliably skip a stone 5-10 times within a few hours of practice. The basic throwing motion is intuitive." },
+    "time_to_expert": { "value": 7, "confidence": 0.7, "notes": "Steiner spent over a decade refining his technique from 40 skips (2002) to 88 (2013). Competitive-level consistency requires years of stone selection and biomechanical refinement." },
+    "feedback_delay": { "value": 1, "confidence": 0.95, "notes": "You see and can count the result of every throw immediately. Each skip is individually visible and often audible." },
+    "failure_cost": { "value": 1, "confidence": 0.95, "notes": "A bad throw simply sinks. No physical risk, no equipment damage. Stones are free. The only cost is repetitive strain from thousands of throws." },
+    "cognitive_demand": { "value": 4, "confidence": 0.75, "notes": "Stone selection requires tactile assessment of weight, shape, and surface texture. Throw execution involves multiple simultaneous parameters: angle, speed, spin, and height." },
+    "physical_demand": { "value": 4, "confidence": 0.8, "notes": "Requires a fast sidearm throw with precise wrist snap. Not exhausting but demands shoulder mobility, rotational power, and fine motor control." },
+    "prerequisite_knowledge": { "value": 2, "confidence": 0.8, "notes": "Understanding hydrodynamics helps but is not required. Stone selection criteria can be learned empirically." },
+    "measurability": { "value": 10, "confidence": 0.95, "notes": "Skips can be counted precisely. The metric is unambiguous: how many times did the stone touch the water?" },
+    "perishability": { "value": 3, "confidence": 0.7, "notes": "The throwing motion is relatively simple and retained well. Stone selection intuition may fade but recovers quickly with practice." },
+    "precision_required": { "value": 8, "confidence": 0.8, "notes": "At world-record level, launch angle must be within a few degrees, spin rate within narrow tolerances, and the stone's orientation perfectly controlled." },
+    "ambiguity": { "value": 1, "confidence": 0.95, "notes": "Completely objective. The stone either skipped or it did not. Slow-motion video resolves any counting disputes." },
+    "instruction_dependency": { "value": 3, "confidence": 0.75, "notes": "The basic technique is self-teachable through trial and error. Advanced optimization benefits from physics knowledge but few formal coaches exist." },
+    "environmental_variability": { "value": 7, "confidence": 0.8, "notes": "Wind, water current, surface chop, and available stone quality vary dramatically by location. Steiner specifically chose Red Bridge for its calm water." },
+    "concurrent_skills": { "value": 3, "confidence": 0.75, "notes": "Stone assessment, body mechanics, and environmental reading happen simultaneously but the actual throw is a single coordinated action." },
+    "plateau_density": { "value": 7, "confidence": 0.7, "notes": "Progress from 20 to 40 skips is much harder than 5 to 20. Beyond 50 skips, each additional skip requires exponentially better technique and stone selection." },
+    "domain_evolution": { "value": 1, "confidence": 0.85, "notes": "The physics has not changed since Spallanzani's 18th-century explanation. NASSA was founded in 1989 but the competitive scene remains tiny." },
+    "observability": { "value": 8, "confidence": 0.85, "notes": "A 5-skip throw versus an 88-skip throw is visually stunning. The latter produces a long, audible ripple trail that is immediately impressive." },
+    "luck_variance": { "value": 4, "confidence": 0.75, "notes": "Stone quality varies even within a curated collection. Micro-currents and unseen debris can terminate a perfect throw. Weather is a factor." },
+    "social_coordination": { "value": 1, "confidence": 0.9, "notes": "Purely individual. Competitions are solo performance. No partner or team component." }
+  },
+  "methodology_notes": "World record data from Guinness World Records. Physics from Lyderic Bocquet's research on stone skipping hydrodynamics. Competition history from NASSA and stoneskipping.com."
+}

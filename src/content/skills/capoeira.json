@@ -1,0 +1,57 @@
+{
+  "name": "Capoeira",
+  "slug": "capoeira",
+  "category": "physical",
+  "description": "Capoeira is an Afro-Brazilian art form created by enslaved Africans in the 17th century that fuses martial arts, acrobatics, dance, music, and ritual into a single practice. Two players engage in a roda (circle) while others sing, clap, and play the berimbau, a single-string bow that dictates the game's rhythm and intensity. Recognized by UNESCO in 2014 as Intangible Cultural Heritage, its two main lineages -- Angola (slow, ground-level, strategic) and Regional (fast, acrobatic, codified by Mestre Bimba in the 1930s) -- represent fundamentally different philosophies of movement.",
+  "thumbnail": {
+    "src": "/images/skills/capoeira.webp",
+    "alt": "Two capoeiristas playing in a roda with musicians and berimbau in the background",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "CAcpAMnWEJE",
+      "title": "Capoeira: a brief introduction to the Afro-Brazilian martial art"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Capoeira",
+      "url": "https://en.wikipedia.org/wiki/Capoeira",
+      "type": "reference"
+    },
+    {
+      "title": "Capoeira circle - UNESCO Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/en/RL/capoeira-circle-00892",
+      "type": "institutional"
+    },
+    {
+      "title": "Capoeira Angola",
+      "url": "https://en.wikipedia.org/wiki/Capoeira_Angola",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": { "value": 5, "confidence": 0.8, "notes": "Basic ginga (foundational rocking step), a few kicks, and simple esquivas (dodges) can be learned in months. Entering a roda with basic competence takes 6-12 months." },
+    "time_to_expert": { "value": 9, "confidence": 0.8, "notes": "The title of Mestre (master) is conferred after 15-25 years of training and cultural immersion. Mastery requires not just physical skill but deep knowledge of music, history, Portuguese lyrics, and ritual." },
+    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "The roda provides immediate feedback through the other player's reactions. But understanding whether your game was 'good' in the cultural sense takes years of developing aesthetic judgment." },
+    "failure_cost": { "value": 4, "confidence": 0.75, "notes": "Injuries occur from kicks, sweeps, and acrobatic falls, but the game traditionally pulls strikes. Serious injuries are uncommon in well-run rodas." },
+    "cognitive_demand": { "value": 7, "confidence": 0.8, "notes": "Simultaneous movement improvisation, opponent reading, rhythmic synchronization with the berimbau, and cultural awareness of appropriate responses in the roda." },
+    "physical_demand": { "value": 8, "confidence": 0.85, "notes": "Requires acrobatic ability, flexibility for au (cartwheels) and queda de rins, explosive power for kicks, and endurance for extended rodas." },
+    "prerequisite_knowledge": { "value": 3, "confidence": 0.75, "notes": "No formal prerequisites, but cultural understanding deepens the practice. Learning Portuguese songs and understanding Afro-Brazilian history enriches the art form." },
+    "measurability": { "value": 3, "confidence": 0.7, "notes": "No standardized scoring. Belt/cord systems vary by school. The quality of one's game (jogo) is assessed subjectively by masters and peers." },
+    "perishability": { "value": 5, "confidence": 0.7, "notes": "Acrobatic ability and flexibility degrade with disuse. Musical skills and cultural knowledge persist. The ginga and basic movements are deeply ingrained." },
+    "precision_required": { "value": 6, "confidence": 0.75, "notes": "Kicks must be controlled to show capability without injuring the partner. Acrobatic movements require spatial precision. Musical timing must be exact." },
+    "ambiguity": { "value": 8, "confidence": 0.8, "notes": "What constitutes a 'good' game is deeply subjective and varies between Angola and Regional traditions. There is no single authority on correct capoeira." },
+    "instruction_dependency": { "value": 8, "confidence": 0.85, "notes": "Capoeira is traditionally learned only within a group under a mestre. The cultural, musical, and ritual dimensions cannot be self-taught from videos." },
+    "environmental_variability": { "value": 4, "confidence": 0.75, "notes": "Traditionally played outdoors on any surface. Modern academias provide controlled spaces. The roda adapts to available space." },
+    "concurrent_skills": { "value": 9, "confidence": 0.85, "notes": "Simultaneously managing movement, opponent reading, musical rhythm, singing, acrobatics, strategic deception (malicia), and cultural expression. Among the highest concurrent skill loads of any physical discipline." },
+    "plateau_density": { "value": 6, "confidence": 0.7, "notes": "Physical plateaus in acrobatic ability. Deeper plateaus in understanding malicia (cunning) and the cultural game. Progress becomes increasingly about wisdom rather than physicality." },
+    "domain_evolution": { "value": 4, "confidence": 0.75, "notes": "Evolved from slavery-era resistance into formalized styles in the 1930s. UNESCO recognition in 2014 added preservation focus. Contemporary capoeira continues to blend traditions." },
+    "observability": { "value": 8, "confidence": 0.85, "notes": "The roda is visually and aurally captivating. Acrobatic exchanges are immediately impressive. The musical and cultural layers become visible with knowledge." },
+    "luck_variance": { "value": 3, "confidence": 0.75, "notes": "Each game varies based on the partner's style and energy. The berimbau rhythm is chosen by the master, influencing the game's character unpredictably." },
+    "social_coordination": { "value": 9, "confidence": 0.9, "notes": "Inherently communal. The roda requires musicians, singers, and a community of players. Playing alone is meaningless. The mestre-student relationship is central." }
+  },
+  "methodology_notes": "UNESCO inscription documentation provides authoritative cultural context. Historical lineage from Wikipedia and academic sources on Mestre Bimba and Mestre Pastinha. Training timelines from ABADA and other major capoeira organizations."
+}

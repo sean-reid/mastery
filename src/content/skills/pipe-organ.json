@@ -1,0 +1,138 @@
+{
+  "name": "Pipe Organ",
+  "slug": "pipe-organ",
+  "category": "instrument",
+  "description": "The largest instruments ever built: the Wanamaker Organ in Philadelphia has 28,750 pipes across 466 ranks controlled from a six-manual console, while the Boardwalk Hall Organ in Atlantic City holds the Guinness record at over 33,000 pipes. Organists must coordinate hands across up to five manuals, feet on a 32-note pedalboard, and registration changes involving hundreds of stops, all without the ability to practice at home.",
+  "thumbnail": {
+    "src": "/images/skills/pipe-organ.webp",
+    "alt": "Pipe organ console showing multiple manuals, stop knobs, and pedal board in a cathedral",
+    "attribution": "Photo by Unsplash"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "FHNLdHe8uxY",
+      "title": "Xaver Varnus plays Bach's Toccata and Fugue in D minor on the Sauer Organ of the Berliner Dom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pipe organ - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pipe_organ",
+      "type": "reference"
+    },
+    {
+      "title": "Wanamaker Organ - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wanamaker_Organ",
+      "type": "reference"
+    },
+    {
+      "title": "About the Organ - Friends of Wanamaker Organ",
+      "url": "https://wanamakerorgan.com/about-the-organ/",
+      "type": "institutional"
+    },
+    {
+      "title": "Manual (music) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Manual_(music)",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Most organists begin as pianists, so keyboard skills transfer. But learning pedal technique, registration, and manual changes takes 1-3 years of dedicated study even for accomplished pianists."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Concert-level organ performance requires mastery of keyboard technique, pedal fluency, registration art, improvisation (especially in the French tradition), and adaptation to unfamiliar instruments. Full conservatory training spans 4-8 years on top of prior piano study."
+    },
+    "feedback_delay": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Sound is immediate but the player sits far from the pipes. In large churches, reverberation of 4-8 seconds means the organist hears a blurred composite of current and past notes. Registration choices are only evaluable from the congregation's perspective."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Practice mistakes cost nothing. Liturgical errors during services are embarrassing but not career-ending. The instrument itself is virtually indestructible by the player."
+    },
+    "cognitive_demand": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Simultaneously managing 3-4 manual keyboards, a 32-note pedalboard played with both feet, stop changes, swell pedal expression, and score reading. Bach's organ works require true four-limb independence. Registration planning adds a timbral dimension absent from other keyboard instruments."
+    },
+    "physical_demand": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Four-limb coordination with the feet executing independent bass lines on the pedalboard. Older tracker-action organs require significant key pressure. Bench posture without back support for hours. Physical demands are often underestimated."
+    },
+    "prerequisite_knowledge": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Advanced piano proficiency is essentially prerequisite. Music theory, figured bass, and knowledge of acoustic principles are expected. Liturgical organists need hymnody and service structure knowledge."
+    },
+    "measurability": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Organ competitions exist but are fewer than for piano or violin. No universal grading system equivalent to ABRSM piano exams in most countries. Quality assessment is heavily subjective due to registration and interpretation variables."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Pedal technique degrades faster than manual technique without regular practice. Registration intuition fades between instruments. Core keyboard musicianship transfers from piano practice."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Legato pedal technique requires toe-heel substitutions with millimeter precision. Manual registration changes must be timed exactly. In reverberant acoustics, rhythmic precision must compensate for delay."
+    },
+    "ambiguity": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Registration choices are deeply subjective: the same Bach fugue can be legitimately performed with radically different stop combinations. Historical performance practice debates add further ambiguity."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Self-teaching organ is nearly impossible due to instrument access constraints and the complexity of pedal technique. University or conservatory study is the standard path. Church apprenticeships provide the alternative."
+    },
+    "environmental_variability": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "No two pipe organs are alike. Each instrument has different manuals, stops, pedal configurations, key feel, and acoustic environment. Concert organists must adapt to a completely unfamiliar instrument at every venue, often with minimal rehearsal time."
+    },
+    "concurrent_skills": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Four independent limbs, registration management, swell pedal expression, score reading, transposition (for hymn accompaniment), and acoustic compensation. The highest concurrent-skill demand of any standard instrument."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Major plateaus at pedal independence, three-manual coordination, and the transition from competent church musician to concert artist. Access limitations slow progress."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Core repertoire spans 500 years (Sweelinck to Messiaen). Organ building traditions evolve slowly. Digital practice instruments are a modern convenience but controversial among purists."
+    },
+    "observability": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "The sonic impact of a large organ is awe-inspiring, but the organist is typically hidden in a loft. Foot technique is invisible to audiences. Video has improved observability."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "No randomness in the instrument itself, but the organist's luck of instrument assignment at competitions or churches significantly affects outcomes. A poorly maintained organ can undermine even expert playing."
+    },
+    "social_coordination": {
+      "value": 3,
+      "confidence": 0.85,
+      "notes": "Primarily a solo instrument. Accompaniment of choirs and congregations requires coordination, but the organist leads rather than follows. Organ duets and ensemble work exist but are marginal."
+    }
+  },
+  "methodology_notes": "Environmental_variability receives the maximum score (10) because the pipe organ is unique among instruments in that the player must adapt to an entirely different instrument at each venue. Concurrent_skills also scores 10 as the only standard instrument requiring true four-limb independence plus real-time registration management. Access constraints (no home practice on a real pipe organ) are a distinctive limiting factor not captured in the standard axes."
+}

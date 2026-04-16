@@ -1,0 +1,138 @@
+{
+  "name": "Artistic Gymnastics",
+  "slug": "artistic-gymnastics",
+  "category": "sport",
+  "description": "An Olympic discipline in which athletes perform short routines on apparatus -- vault, floor, beam, and bars for women; floor, pommel horse, rings, vault, parallel bars, and high bar for men -- scored by combining a difficulty value (D-score, uncapped) with an execution mark (E-score, out of 10). Elite female gymnasts typically peak at 16-19 and train 30-40 hours per week from childhood, while males peak around 23-24. Governed by the FIG since 1881, the sport's injury rate at the elite level reaches roughly 2.9 per 1000 exposure hours, with overuse injuries accounting for 60-70% of cases.",
+  "thumbnail": {
+    "src": "/images/skills/artistic-gymnastics.webp",
+    "alt": "Gymnast performing on the balance beam during an Olympic competition",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "P1GhOBnMn9c",
+      "title": "Artistic Gymnastics 101: Olympic Rules and Scoring Explained"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Artistic gymnastics",
+      "url": "https://en.wikipedia.org/wiki/Artistic_gymnastics",
+      "type": "reference"
+    },
+    {
+      "title": "Injury epidemiology and risk factors in competitive artistic gymnasts: a systematic review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30670379/",
+      "type": "research"
+    },
+    {
+      "title": "Artistic Gymnastics: Olympic history, rules, latest updates",
+      "url": "https://www.olympics.com/en/sports/artistic-gymnastics/",
+      "type": "institutional"
+    },
+    {
+      "title": "Age requirements in gymnastics",
+      "url": "https://en.wikipedia.org/wiki/Age_requirements_in_gymnastics",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.85,
+      "notes": "A beginner can learn basic rolls, cartwheels, and handstands within months, but performing a coherent routine on any apparatus with proper form takes 1-2 years of structured training. Children typically start at age 5-7."
+    },
+    "time_to_expert": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Elite gymnasts train 30-40 hours/week for 8-15 years from early childhood. Female Olympians peak at 16-19, males at 23-24. The sport has the youngest peak age of any Olympic discipline, meaning the entire window for mastery is compressed into adolescence."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Landing a skill provides immediate proprioceptive feedback -- you feel a fall or a stuck landing instantly. However, execution deductions from judges (bent knees, pointed toes) require video review or coaching to internalize."
+    },
+    "failure_cost": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Catastrophic injuries (spinal, ACL tears) are well-documented. Elite injury rate is ~2.9/1000 exposure hours. Falls from height on bars or beam carry paralysis risk. Overuse injuries (wrists, ankles, lower back) affect 60-70% of cases, often causing chronic damage in athletes still in their teens."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Spatial awareness during aerial rotations is extreme -- gymnasts must track orientation while rotating and twisting simultaneously. Routine composition requires strategic balancing of difficulty vs. execution risk. Fear management for high-risk skills is a major psychological demand."
+    },
+    "physical_demand": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "Among the most physically demanding sports. Requires elite-level strength-to-weight ratio, extraordinary flexibility, explosive power, and proprioception. Male ring routines demand static holds requiring strength few other athletes possess. Female beam work requires balance on a 10cm surface while tumbling."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "No academic prerequisites. Physical prerequisites are high (flexibility, strength, low body mass) but these are developed through training rather than brought to it. Dance and ballet training is beneficial for floor and beam."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "The FIG Code of Points provides detailed, codified scoring. D-scores are objective (skill values are defined). E-scores involve subjective deduction judgments but follow strict rubrics. Competition results and rankings are well-tracked internationally."
+    },
+    "perishability": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Skills decay rapidly. Aerial awareness, flexibility, and strength-to-weight ratio all degrade within weeks of inactivity. The sport is uniquely perishable because peak performance occurs during a narrow biological window -- once that window closes, the skills cannot be maintained at the same level regardless of training."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Landing position must be controlled to the centimeter on beam (10cm wide). Judges deduct for foot placement, leg separation, bent knees, and hand placement. A 5-degree deviation in takeoff angle on vault can mean the difference between a landed skill and a catastrophic fall."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "D-scores are relatively objective (skills are catalogued). E-scores involve subjective judging, and scoring controversies are not uncommon at major competitions. The 2004 Olympic bars controversy is a notable example. However, the Code of Points provides more structure than most judged sports."
+    },
+    "instruction_dependency": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Essentially impossible to learn beyond basics without a qualified coach and proper facility. Spotting is required for safety on most intermediate-to-advanced skills. Specialized equipment (uneven bars, pommel horse, vault table, spring floor) is mandatory and unavailable outside gyms."
+    },
+    "environmental_variability": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Competitions are indoors with standardized FIG-approved equipment. Spring floor stiffness and bar tension can vary slightly between venues, but conditions are highly controlled. No weather, wind, or terrain factors."
+    },
+    "concurrent_skills": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "A single tumbling pass integrates running speed, takeoff timing, aerial rotation tracking, twist initiation, landing preparation, and aesthetic presentation -- all in under 3 seconds. On beam, balance maintenance runs in parallel with every other motor task."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Major plateaus at each skill level boundary. The jump from Level 10 to elite is notoriously steep. Fear barriers on new aerial skills create psychological plateaus. Many gymnasts spend months or years attempting to upgrade difficulty scores by even 0.1-0.2 points."
+    },
+    "domain_evolution": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "The FIG Code of Points is revised every Olympic cycle, adding and reclassifying skills. Difficulty has escalated dramatically since the 1970s (the Comaneci era). The 2006 open-ended scoring system was a paradigm shift. New named elements are added regularly as athletes push boundaries."
+    },
+    "observability": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "One of the most immediately spectacular sports to watch. A double-twisting double backflip is awe-inspiring to any observer regardless of expertise. The gap between a beginner and an Olympian is viscerally obvious."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Minimal luck. Judging subjectivity introduces some variance, but performance is overwhelmingly skill-determined. No opponents to create randomness on apparatus (except in team standings). Equipment consistency is high."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Fundamentally an individual sport. Team scores are aggregated individual performances. No in-routine coordination with others. Coach-athlete relationship is critical for development but not a concurrent skill during performance."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia's articles on artistic gymnastics and age requirements, the Olympics.com official sport page, and a PubMed systematic review of injury epidemiology (PMID 30670379). Training hours and peak ages from FIG documentation and multiple gymnastics community sources. Injury rates drawn from multiple studies showing 1.8-2.9 injuries per 1000 exposure hours at elite level. Physical demand rated maximum due to the unique combination of strength, flexibility, power, and proprioception required. Perishability rated very high due to the narrow biological peak window unique to gymnastics."
+}

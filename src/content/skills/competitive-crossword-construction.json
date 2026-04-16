@@ -1,0 +1,138 @@
+{
+  "name": "Competitive Crossword Construction",
+  "slug": "competitive-crossword-construction",
+  "category": "game",
+  "description": "Building -- not solving -- crossword puzzles to publication standard, a craft known as cruciverbalism. The New York Times receives over 200 submissions per week yet publishes only seven, and its grid rules demand 180-degree rotational symmetry, full interlock with no unchecked squares, and a maximum of roughly 78 words in a 15x15 grid -- constraints so tight that a single weak fill entry can cascade into a full rebuild.",
+  "thumbnail": {
+    "src": "/images/skills/competitive-crossword-construction.webp",
+    "alt": "A partially filled crossword grid showing black and white squares in rotational symmetry",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "bXn1xJFpMOk",
+      "title": "How to Make a Crossword Puzzle - NYT"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Crossword",
+      "url": "https://en.wikipedia.org/wiki/Crossword",
+      "type": "reference"
+    },
+    {
+      "title": "The New York Times crossword puzzle",
+      "url": "https://en.wikipedia.org/wiki/The_New_York_Times_crossword",
+      "type": "reference"
+    },
+    {
+      "title": "Constructing Crosswords: Process",
+      "url": "https://communicrossings.com/constructing-crosswords-process",
+      "type": "institutional"
+    },
+    {
+      "title": "Wordplay (film)",
+      "url": "https://en.wikipedia.org/wiki/Wordplay_(film)",
+      "type": "reference"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Producing a valid grid with software help takes weeks of learning. Producing one that meets publication standards (clean fill, strong theme, good clues) typically takes months of iteration."
+    },
+    "time_to_expert": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Regular NYT-published constructors typically spent years honing their craft before first acceptance. One constructor reported nearly 10 years of weekend attempts before a publishable puzzle."
+    },
+    "feedback_delay": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Submission to the NYT takes weeks to months for a response. The NYT targets under 3 months. Self-assessment is possible but publication acceptance is the true signal."
+    },
+    "failure_cost": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "A rejected puzzle wastes time but nothing else. No financial or physical risk."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Simultaneously managing theme coherence, grid symmetry constraints, fill quality (avoiding obscure or duplicate entries), word-count limits, and clue creativity."
+    },
+    "physical_demand": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "Entirely desk-based work on paper or computer."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Requires extensive vocabulary, cultural literacy, knowledge of crossword conventions (abbreviations, fill standards), and familiarity with construction software like Crossword Compiler or CrossFire."
+    },
+    "measurability": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Publication count and venue prestige provide some measurement, but quality is heavily subjective. No Elo-like rating system exists for constructors."
+    },
+    "perishability": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Core construction skills are fairly durable. Cultural references in clues can become dated, but technique persists."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Every crossing must work. A single letter that does not satisfy both its across and down entry invalidates the grid. Theme entries must be exactly the right length."
+    },
+    "ambiguity": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "What constitutes a 'good' puzzle is highly subjective. Editors differ on acceptable fill, clue style, and theme cleverness. Solving community opinions vary widely."
+    },
+    "instruction_dependency": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Patrick Berry's 'Crossword Constructor's Handbook' and online communities provide structured learning. Self-teaching is common but mentorship from editors accelerates quality."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Publication standards differ by outlet (NYT vs. LAT vs. indie). Cultural relevance of entries shifts over time. But the core format is stable."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Theme ideation, grid architecture, fill optimization, and clue writing are distinct sub-skills that must all be strong. Additionally requires knowledge of what makes clues solvable vs. unfair."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Early improvement from software use is rapid. Reaching publication quality involves a long plateau. Where it used to take one constructor three months per puzzle, experience reduced this to eight hours."
+    },
+    "domain_evolution": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Fill standards evolve as words enter and leave common usage. Software tools improve. But the 15x15 symmetric grid and core rules have been stable for decades."
+    },
+    "observability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "A published puzzle in the NYT is visible and prestigious, but the construction process itself is invisible. Solvers rarely notice the constructor's name."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Editor taste, timing of submission relative to similar themes, and cultural moment all introduce some variance. But consistently strong constructors get published regularly."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Primarily solo work. Collaborative construction exists (about 15% of NYT puzzles) but is optional. The constructor-editor relationship matters but is not teamwork per se."
+    }
+  },
+  "methodology_notes": "Scores informed by Wikipedia's extensive crossword construction documentation, CommuniCrossings' detailed construction process guides, XWord Info statistics on NYT constructor demographics and publication volumes, the Wordplay documentary's portrayal of the construction community, and accounts from published constructors about their learning timelines and revision processes."
+}

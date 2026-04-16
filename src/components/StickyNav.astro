@@ -1,0 +1,246 @@
+---
+import { CATEGORY_LABELS, CATEGORY_COLORS } from '../types/skill';
+import type { Category } from '../types/skill';
+
+const categories = Object.entries(CATEGORY_LABELS) as [Category, string][];
+---
+
+<nav class="sticky-nav" id="sticky-nav">
+  <div class="sticky-nav-inner container">
+    <div class="nav-filters" role="tablist" aria-label="Filter by category">
+      <button
+        class="nav-pill active"
+        role="tab"
+        aria-selected="true"
+        data-category="all"
+      >
+        All
+      </button>
+      {categories.map(([key, label]) => (
+        <button
+          class="nav-pill"
+          role="tab"
+          aria-selected="false"
+          data-category={key}
+          style={`--pill-color: ${CATEGORY_COLORS[key]}`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+    <div class="nav-actions">
+      <button
+        class="nav-search-btn"
+        aria-label="Search skills"
+        id="search-trigger"
+      >
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M11.5 11.5L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="search-shortcut">
+          <kbd>/</kbd>
+        </span>
+      </button>
+      <button
+        class="nav-theme-btn"
+        aria-label="Toggle dark mode"
+        id="theme-toggle"
+      >
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M9 1v2m0 12v2m-8-8h2m12 0h2m-2.636-5.364l-1.414 1.414M5.05 12.95l-1.414 1.414m0-10.728l1.414 1.414m8.9 8.9l1.414 1.414" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M15.5 10.5a6.5 6.5 0 01-8-8 6.5 6.5 0 108 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: transparent;
+    transition: background-color var(--duration-normal) var(--ease-out),
+                border-color var(--duration-normal) var(--ease-out),
+                backdrop-filter var(--duration-normal) var(--ease-out);
+    border-bottom: 1px solid transparent;
+  }
+
+  .sticky-nav.scrolled {
+    background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: var(--color-border-subtle);
+  }
+
+  .sticky-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding-block: var(--space-3);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .sticky-nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-filters {
+    display: flex;
+    gap: var(--space-1);
+    flex-shrink: 0;
+  }
+
+  .nav-pill {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .nav-pill:hover {
+    color: var(--color-text);
+    background: var(--color-surface-raised);
+  }
+
+  .nav-pill.active {
+    color: var(--color-text);
+    background: var(--color-surface);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-pill[data-category]:not([data-category="all"]).active {
+    background: color-mix(in srgb, var(--pill-color) 15%, transparent);
+    color: var(--pill-color);
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-shrink: 0;
+  }
+
+  .nav-search-btn,
+  .nav-theme-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .nav-search-btn:hover,
+  .nav-theme-btn:hover {
+    color: var(--color-text);
+    background: var(--color-surface-raised);
+  }
+
+  .search-shortcut kbd {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    padding: 1px 5px;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+  }
+
+  .icon-moon { display: none; }
+
+  [data-theme="dark"] .icon-sun { display: none; }
+  [data-theme="dark"] .icon-moon { display: block; }
+</style>
+
+<script>
+  // Sticky nav scroll detection
+  const nav = document.getElementById('sticky-nav');
+  if (nav) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        nav.classList.toggle('scrolled', !entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: '-1px 0px 0px 0px' }
+    );
+    const hero = document.querySelector('.hero');
+    if (hero) observer.observe(hero);
+  }
+
+  // Category filtering
+  const pills = document.querySelectorAll<HTMLButtonElement>('.nav-pill');
+  const cards = document.querySelectorAll<HTMLElement>('.skill-card');
+  const subtitle = document.querySelector('.ranking-subtitle');
+  const totalCount = cards.length;
+
+  pills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      pills.forEach((p) => {
+        p.classList.remove('active');
+        p.setAttribute('aria-selected', 'false');
+      });
+      pill.classList.add('active');
+      pill.setAttribute('aria-selected', 'true');
+
+      const cat = pill.dataset.category;
+      const isAll = cat === 'all';
+      let visibleCount = 0;
+      let firstVisible: HTMLElement | null = null;
+
+      cards.forEach((card) => {
+        const match = isAll || card.dataset.category === cat;
+        card.style.display = match ? '' : 'none';
+        if (match) {
+          visibleCount++;
+          if (!firstVisible) firstVisible = card;
+          // Clear GSAP inline styles so filtered cards are immediately visible
+          card.style.opacity = '1';
+          card.style.transform = 'none';
+        }
+      });
+
+      // Update subtitle count
+      if (subtitle) {
+        if (isAll) {
+          subtitle.textContent = `${totalCount} skills, ascending by composite difficulty`;
+        } else {
+          const label = pill.textContent?.trim() || cat;
+          subtitle.textContent = `${visibleCount} skills in ${label}`;
+        }
+      }
+
+      // Tell ScrollTrigger to recalculate positions
+      window.dispatchEvent(new CustomEvent('mastery:filter'));
+
+      // Scroll to ranking section when filtering (not on "All")
+      if (!isAll && firstVisible) {
+        const ranking = document.querySelector('.ranking-header');
+        if (ranking) {
+          ranking.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  // Theme toggle
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('mastery-theme', next);
+    });
+  }
+</script>

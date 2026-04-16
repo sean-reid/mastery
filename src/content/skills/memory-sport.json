@@ -1,0 +1,140 @@
+{
+  "name": "Memory Sport (Speed Cards)",
+  "slug": "memory-sport",
+  "category": "game",
+  "description": "Competitive memorization using the method of loci, a 2,500-year-old technique in which information is encoded as vivid images placed along a mental route. The world record for memorizing a shuffled deck of 52 cards is 12.74 seconds, yet a 2017 Neuron study showed that just six weeks of mnemonic training reshapes resting-state brain connectivity to resemble that of elite memory athletes.",
+  "thumbnail": {
+    "src": "/images/skills/memory-sport.webp",
+    "alt": "Competitor at the World Memory Championships memorizing a shuffled deck of playing cards",
+    "attribution": "Photo by Wikimedia Commons"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "9ebJlcZMx3c",
+      "title": "How memory athletes memorize a deck of cards - Alex Mullen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Memory sport",
+      "url": "https://en.wikipedia.org/wiki/Memory_sport",
+      "type": "reference"
+    },
+    {
+      "title": "Mnemonic Training Reshapes Brain Networks to Support Superior Memory",
+      "author": "Martin Dresler, William R. Shirer, Boris N. Konrad et al.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28279356/",
+      "year": 2017,
+      "type": "research"
+    },
+    {
+      "title": "World Memory Championships",
+      "url": "https://en.wikipedia.org/wiki/World_Memory_Championships",
+      "type": "reference"
+    },
+    {
+      "title": "Fastest time to memorize and recall a deck of playing cards",
+      "url": "https://www.guinnessworldrecords.com/world-records/67743-fastest-time-to-memorize-and-recall-a-deck-of-playing-cards",
+      "type": "competition"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Basic method of loci can be learned in hours; memorizing a full deck reliably takes weeks of practice. One blogger documented reaching sub-2-minute times in a few weeks."
+    },
+    "time_to_expert": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "World-class speed (sub-20 seconds) requires years of daily deliberate practice refining PAO systems and memory palaces. Alex Mullen trained for roughly 4 years before his first world title."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Recall is tested immediately after memorization. You know within seconds whether you succeeded or failed."
+    },
+    "failure_cost": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "A failed recall attempt costs nothing. In competition, it means a zero score for that attempt but no material consequences."
+    },
+    "cognitive_demand": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Extreme working memory load: encoding 52 cards into ~17 PAO scenes along a mental route, then retrieving them in sequence, all under time pressure."
+    },
+    "physical_demand": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "Entirely sedentary. Competitors sit at a desk looking at cards."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Must learn a mnemonic encoding system (major system or PAO) and construct memory palaces, but no academic prerequisites."
+    },
+    "measurability": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "Measured in seconds and error count. Among the most precisely quantifiable cognitive skills. International rankings exist."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "The encoding system is durable once learned, but speed and fluency degrade noticeably within weeks without practice. Dresler et al. showed some retention at 4 months post-training."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "A single transposed card means a failed attempt. All 52 cards must be recalled in exact order."
+    },
+    "ambiguity": {
+      "value": 0,
+      "confidence": 0.95,
+      "notes": "Binary success or failure per card position. No subjective judgment whatsoever."
+    },
+    "instruction_dependency": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "The core techniques are well-documented in books and free online resources. Self-teaching is the norm; coaching helps refine speed but is not required."
+    },
+    "environmental_variability": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Standard deck of 52 cards every time. Competition conditions are controlled. Only the shuffle order varies."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Simultaneously encoding visual images, navigating a mental route, managing pace, and suppressing interference from previous attempts."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Initial progress is rapid (minutes to sub-2-minutes), but breaking through the sub-30-second barrier and beyond involves long plateaus requiring system refinement."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Core mnemonic techniques (method of loci) are ancient and stable. Competition formats have been consistent since 1991. Minor evolution in encoding systems."
+    },
+    "observability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "The act of memorizing is invisible, but the timed reveal and perfect recall are dramatic and immediately impressive to observers."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "No randomness in skill execution. Some card orderings may be slightly easier to encode, but this effect is negligible for trained athletes."
+    },
+    "social_coordination": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Purely individual discipline. Competition is head-to-head in scoring only; no interaction during performance."
+    }
+  },
+  "methodology_notes": "Scores informed by Dresler et al. (2017) neuroscience research on mnemonic training, World Memory Championships records and format documentation, Guinness World Records verification standards, and published accounts from competitive memory athletes including Alex Mullen and Nelson Dellis. The 12.74-second world record and PAO encoding system details come from Art of Memory community records."
+}

@@ -1,0 +1,140 @@
+{
+  "name": "Violin",
+  "slug": "violin",
+  "category": "instrument",
+  "description": "The fretless fingerboard demands that every pitch be manufactured from scratch by ear and muscle memory; shifting a finger 1 mm produces an audible intonation error. Ericsson's 1993 Berlin Academy study used violinists as its primary subjects, finding that the best students had accumulated 7,410 practice hours by age 18 versus 3,420 for future music teachers.",
+  "thumbnail": {
+    "src": "/images/skills/violin.webp",
+    "alt": "Close-up of a violinist's left hand on the fingerboard during a concert performance",
+    "attribution": "Photo by Unsplash"
+  },
+  "media": [
+    {
+      "type": "youtube",
+      "videoId": "QqA3qQMKueA",
+      "title": "Hilary Hahn performs Bach Chaconne from Partita No. 2 in D minor, BWV 1004"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The role of deliberate practice in the acquisition of expert performance",
+      "author": "K. Anders Ericsson, Ralf Th. Krampe, Clemens Tesch-Romer",
+      "url": "https://psycnet.apa.org/record/1993-40718-001",
+      "year": 1993,
+      "type": "research"
+    },
+    {
+      "title": "Violin - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Violin",
+      "type": "reference"
+    },
+    {
+      "title": "Complete Guide to Violin Intonation: All Your Questions Answered",
+      "url": "https://violinspiration.com/violin-intonation/",
+      "type": "community"
+    },
+    {
+      "title": "Is Playing Violin Easy? Understanding the Challenges",
+      "url": "https://theviolinchannel.com/is-playing-violin-easy-understanding-the-challenges/",
+      "type": "journalism"
+    }
+  ],
+  "scores": {
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.9,
+      "notes": "Producing a pleasant tone takes months. Reliable intonation in first position requires 1-2 years. Simple melodies with good tone and intonation typically take at least 1-2 years of consistent practice."
+    },
+    "time_to_expert": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "Ericsson's best violinists averaged 7,410 hours by age 18 and were not yet professional-caliber. Soloists like Hilary Hahn began at age 3-4 and trained intensively for 15+ years before major debuts."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Intonation errors are instantly audible. Bow pressure and contact point produce immediate tonal feedback. The ear trains in real time."
+    },
+    "failure_cost": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Practice mistakes cost nothing. Performance errors in auditions or competitions have career consequences. Overuse injuries (tendinitis, focal dystonia) threaten ~10-15% of professional string players."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Simultaneous pitch generation (no frets), bowing technique (speed, pressure, contact point, distribution), vibrato, shifting between positions, and musical interpretation. Orchestral playing adds score-reading and ensemble awareness."
+    },
+    "physical_demand": {
+      "value": 7,
+      "confidence": 0.9,
+      "notes": "Asymmetric posture with the instrument clamped under the chin. Left hand performs micro-precise finger placements while the right arm executes complex bowing motions. Sustained playing causes musculoskeletal strain; professional violinists report high rates of neck and shoulder problems."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "No prior musical knowledge needed to begin, though a developed ear accelerates intonation learning. Suzuki method starts children as young as age 3."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Graded exam systems (ABRSM, Suzuki levels) and competition rankings provide structure. Intonation can be measured objectively with tuners. But tone quality and musical expression are subjective."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Intonation accuracy and bow control degrade noticeably within days of missed practice. Left-hand muscle memory for positions is especially fragile. Core musicianship is more durable."
+    },
+    "precision_required": {
+      "value": 10,
+      "confidence": 0.95,
+      "notes": "No frets means every note's pitch must be placed within ~1 mm accuracy. Bow contact point, pressure, and speed must be controlled simultaneously. The violin is arguably the most precision-demanding mainstream instrument."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Correct intonation is objectively measurable. But expressive intonation (raised leading tones, lowered minor thirds) is a deliberate artistic choice. Interpretation of phrasing is subjective."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Self-teaching violin is nearly impossible at a high level. Without a teacher correcting posture, bow hold, and intonation habits from the start, students develop entrenched problems. Virtually all professional violinists had childhood instruction."
+    },
+    "environmental_variability": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Temperature and humidity affect tuning and string tension. Hall acoustics change how the player hears their own instrument. But the violin travels with the player, unlike organ or piano."
+    },
+    "concurrent_skills": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Left hand (pitch, vibrato, shifting, double stops) and right arm (bowing, dynamics, articulation) operate independently. Add sight-reading, listening to ensemble, and musical expression. Among the highest concurrent-skill demands of any instrument."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Major plateaus at shifting out of first position, vibrato development, spiccato bowing, and the transition from advanced student to professional. Each plateau can last months to years."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "The instrument is physically unchanged since Stradivari (1700s). Core repertoire spans 300 years. Modern string technology and shoulder rests are minor adaptations."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "The physical expressiveness of violin playing is highly visible. The difference between a beginner's scratchy tone and a professional's singing legato is unmistakable to any listener."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "No random elements in the instrument. String breakage during performance is rare. Career outcomes depend on audition panels and competition juries, but playing quality is deterministic."
+    },
+    "social_coordination": {
+      "value": 5,
+      "confidence": 0.85,
+      "notes": "Solo repertoire exists, but the violin is fundamentally an ensemble instrument. Orchestra, chamber music, and duo sonata playing require precise coordination with others. Section playing demands blending with 14+ other violinists."
+    }
+  },
+  "methodology_notes": "Scores are anchored to Ericsson's 1993 deliberate practice study, which used Berlin Academy violinists as its primary dataset. Precision_required is the highest in the instrument set (10) reflecting the fretless fingerboard's uniquely demanding intonation requirements. Physical_demand reflects well-documented occupational injury rates among professional string players."
+}
