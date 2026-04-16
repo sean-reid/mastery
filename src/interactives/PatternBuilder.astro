@@ -3,30 +3,45 @@
 
 <div class="interactive-wrap" id="pattern-builder">
   <div class="interactive-header">
-    <h4 class="interactive-title">Try it: Find the missing tile</h4>
-    <p class="interactive-subtitle">A zellige mosaic is missing one piece. Four options look similar. Only one fits.</p>
+    <h4 class="interactive-title">Try it: Cut the tile</h4>
+    <p class="interactive-subtitle">Trace the outline to cut a zellige tile that fits the gap. Precision is everything.</p>
   </div>
 
   <div id="zpat-game">
-    <div id="zpat-progress">
-      <span id="zpat-round">1 / 10</span>
-      <span id="zpat-score-display">0 correct</span>
+    <div id="zpat-info">
+      <span id="zpat-round">1 / 6</span>
+      <span id="zpat-best"></span>
     </div>
 
-    <canvas id="zpat-canvas" width="800" height="500"></canvas>
-
-    <div id="zpat-choices">
-      <canvas class="zpat-choice" id="zpat-c0" width="140" height="140"></canvas>
-      <canvas class="zpat-choice" id="zpat-c1" width="140" height="140"></canvas>
-      <canvas class="zpat-choice" id="zpat-c2" width="140" height="140"></canvas>
-      <canvas class="zpat-choice" id="zpat-c3" width="140" height="140"></canvas>
+    <div id="zpat-layout">
+      <!-- Left: the gap in the pattern -->
+      <div class="zpat-panel">
+        <span class="zpat-panel-label">The gap</span>
+        <canvas id="zpat-gap" width="300" height="300"></canvas>
+      </div>
+      <!-- Right: your cutting surface -->
+      <div class="zpat-panel">
+        <span class="zpat-panel-label">Your cut</span>
+        <canvas id="zpat-cut" width="300" height="300"></canvas>
+      </div>
     </div>
-    <p id="zpat-feedback"></p>
+
+    <p id="zpat-hint">Trace the dotted outline as precisely as you can.</p>
+
+    <div id="zpat-result-row" hidden>
+      <canvas id="zpat-overlay" width="300" height="300"></canvas>
+      <div id="zpat-score-col">
+        <span class="zpat-pct" id="zpat-pct">0%</span>
+        <span class="zpat-verdict" id="zpat-verdict"></span>
+      </div>
+    </div>
+
+    <button id="zpat-next" hidden>Next shape</button>
   </div>
 
-  <div id="zpat-result" hidden>
-    <div class="zpat-final-score" id="zpat-final-score"></div>
-    <p class="zpat-final-label">out of 10</p>
+  <div id="zpat-final" hidden>
+    <div class="zpat-final-score" id="zpat-final-avg"></div>
+    <p class="zpat-final-label">average precision</p>
     <p class="zpat-final-text" id="zpat-final-text"></p>
     <button class="zpat-retry" id="zpat-retry">Try again</button>
   </div>
@@ -35,352 +50,392 @@
 <style>
   #pattern-builder { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); margin: var(--space-8) 0; }
   #zpat-game { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
-  #zpat-progress { display: flex; justify-content: space-between; width: 100%; max-width: 560px; font-size: var(--text-sm); color: var(--color-text-muted); }
-  #zpat-score-display { font-weight: 600; color: var(--color-text-secondary); }
-  #zpat-canvas { display: block; width: 100%; max-width: 560px; height: auto; aspect-ratio: 8/5; border-radius: var(--radius-lg); }
-  #zpat-choices { display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; }
-  .zpat-choice { width: 88px; height: 88px; border-radius: var(--radius-lg); border: 2px solid var(--color-border); cursor: pointer; transition: all 0.15s var(--ease-out); }
-  .zpat-choice:hover { border-color: var(--color-text-muted); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-  .zpat-choice.correct { border-color: #2a7a6d; box-shadow: 0 0 0 3px rgba(42,122,109,0.25); }
-  .zpat-choice.wrong { border-color: #c85a3a; opacity: 0.5; }
-  .zpat-choice.disabled { pointer-events: none; }
-  #zpat-feedback { font-size: var(--text-sm); color: var(--color-text-muted); min-height: 1.5em; text-align: center; }
-  #zpat-result { text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); padding: var(--space-8) 0; animation: zpat-in 0.5s var(--ease-out); }
-  #zpat-result[hidden] { display: none; }
+  #zpat-info { display: flex; justify-content: space-between; width: 100%; max-width: 560px; font-size: var(--text-sm); color: var(--color-text-muted); }
+  #zpat-best { font-weight: 600; color: var(--color-text-secondary); }
+
+  #zpat-layout { display: flex; gap: var(--space-6); justify-content: center; flex-wrap: wrap; }
+  .zpat-panel { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+  .zpat-panel-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+
+  #zpat-gap, #zpat-cut, #zpat-overlay {
+    width: 240px; height: 240px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+  }
+  #zpat-cut { cursor: crosshair; touch-action: none; }
+  #zpat-cut.drawing { border-color: var(--color-accent); box-shadow: 0 0 0 2px rgba(59,130,246,0.15); }
+
+  #zpat-hint { font-size: var(--text-sm); color: var(--color-text-muted); text-align: center; min-height: 1.5em; }
+
+  #zpat-result-row { display: flex; align-items: center; gap: var(--space-6); animation: zpat-in 0.4s var(--ease-out); }
+  #zpat-result-row[hidden] { display: none; }
+  #zpat-score-col { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); }
+  .zpat-pct { font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 700; line-height: 1; }
+  .zpat-verdict { font-size: var(--text-sm); font-weight: 500; }
+
+  #zpat-next { padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-base); font-weight: 500; border: none; cursor: pointer; transition: all var(--duration-fast) var(--ease-out); }
+  #zpat-next:hover { opacity: 0.9; transform: translateY(-1px); }
+  #zpat-next[hidden] { display: none; }
+
+  #zpat-final { text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); padding: var(--space-8) 0; animation: zpat-in 0.5s var(--ease-out); }
+  #zpat-final[hidden] { display: none; }
   @keyframes zpat-in { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
   .zpat-final-score { font-family: var(--font-heading); font-size: 4rem; font-weight: 700; line-height: 1; color: var(--color-text); }
   .zpat-final-label { font-size: var(--text-sm); color: var(--color-text-muted); }
   .zpat-final-text { font-size: var(--text-sm); color: var(--color-text-secondary); max-width: 50ch; line-height: 1.7; }
   .zpat-retry { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-border); font-size: var(--text-sm); color: var(--color-text-secondary); cursor: pointer; background: transparent; transition: all var(--duration-fast) var(--ease-out); margin-top: var(--space-2); }
   .zpat-retry:hover { background: var(--color-surface-raised); }
-  @media (max-width:640px) { #pattern-builder { padding: var(--space-6); } .zpat-choice { width: 72px; height: 72px; } }
+
+  @media (max-width: 560px) {
+    #zpat-layout { flex-direction: column; align-items: center; }
+    #zpat-gap, #zpat-cut, #zpat-overlay { width: 200px; height: 200px; }
+  }
 </style>
 
 <script>
-  const mainCv = document.getElementById('zpat-canvas') as HTMLCanvasElement;
-  const mainCtx = mainCv.getContext('2d')!;
-  const choiceCvs = [0,1,2,3].map(i => document.getElementById(`zpat-c${i}`) as HTMLCanvasElement);
+  const gapCv = document.getElementById('zpat-gap') as HTMLCanvasElement;
+  const cutCv = document.getElementById('zpat-cut') as HTMLCanvasElement;
+  const overCv = document.getElementById('zpat-overlay') as HTMLCanvasElement;
+  const gapCtx = gapCv.getContext('2d')!;
+  const cutCtx = cutCv.getContext('2d')!;
+  const overCtx = overCv.getContext('2d')!;
   const roundEl = document.getElementById('zpat-round')!;
-  const scoreEl = document.getElementById('zpat-score-display')!;
-  const feedbackEl = document.getElementById('zpat-feedback')!;
+  const bestEl = document.getElementById('zpat-best')!;
+  const hintEl = document.getElementById('zpat-hint')!;
+  const resultRow = document.getElementById('zpat-result-row')!;
+  const pctEl = document.getElementById('zpat-pct')!;
+  const verdictEl = document.getElementById('zpat-verdict')!;
+  const nextBtn = document.getElementById('zpat-next')!;
   const gameEl = document.getElementById('zpat-game')!;
-  const resultEl = document.getElementById('zpat-result')!;
-  const finalScoreEl = document.getElementById('zpat-final-score')!;
+  const finalEl = document.getElementById('zpat-final')!;
+  const finalAvgEl = document.getElementById('zpat-final-avg')!;
   const finalTextEl = document.getElementById('zpat-final-text')!;
 
-  /* ── Traditional zellige glaze colors ── */
-  const PALETTE = [
-    '#1a4a8a', // cobalt blue
-    '#1a7a52', // emerald
-    '#f0e8d0', // bone white
-    '#cc9933', // honey amber
-    '#181818', // noir
-    '#b53030', // oxblood
-    '#2a8a8a', // turquoise
-  ];
+  const TILE_BG = '#e8dcc4';
   const GROUT = '#c8bea8';
-  const INSET = 1.5; // grout line half-width
+  const COLORS = ['#1a4a8a', '#1a7a52', '#2a8a8a', '#cc9933', '#b53030'];
 
-  const ROUNDS = 10;
-  let round = 0, score = 0, locked = false;
+  /* ── Zellige tile shapes: increasingly complex ── */
+  // Each shape is a closed polygon normalized to [0,1] range
+  const SHAPES: number[][][] = [
+    // 1. Simple diamond
+    [[0.5,0.08],[0.92,0.5],[0.5,0.92],[0.08,0.5]],
+    // 2. Kite
+    [[0.5,0.05],[0.85,0.4],[0.5,0.95],[0.15,0.4]],
+    // 3. Elongated hexagon (bowtie half)
+    [[0.25,0.1],[0.75,0.1],[0.9,0.5],[0.75,0.9],[0.25,0.9],[0.1,0.5]],
+    // 4. Star point (triangular wedge)
+    [[0.5,0.05],[0.78,0.35],[0.65,0.7],[0.35,0.7],[0.22,0.35]],
+    // 5. 8-pointed star
+    [[0.5,0.05],[0.62,0.3],[0.95,0.3],[0.72,0.5],[0.85,0.8],[0.5,0.65],[0.15,0.8],[0.28,0.5],[0.05,0.3],[0.38,0.3]],
+    // 6. Complex rosette piece
+    [[0.5,0.03],[0.68,0.18],[0.95,0.22],[0.8,0.42],[0.92,0.68],[0.7,0.7],[0.55,0.95],[0.4,0.72],[0.12,0.75],[0.22,0.48],[0.05,0.28],[0.32,0.2]],
+  ];
 
-  let seed = 1;
-  function srand(s: number) { seed = s; }
-  function rand() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
-  function randInt(n: number) { return Math.floor(rand() * n); }
-  function pick<T>(a: T[]): T { return a[randInt(a.length)]; }
-  function shuffle<T>(a: T[]) { for (let i = a.length - 1; i > 0; i--) { const j = randInt(i + 1); [a[i], a[j]] = [a[j], a[i]]; } }
+  let round = 0, scores: number[] = [], drawing = false, userPath: number[][] = [];
+  let currentShape: number[][] = [];
 
-  /* ══════════════════════════════════════════════════════════════
-     Zellige 8-pointed star tessellation geometry.
-
-     Unit cell is 1x1. Stars sit at integer coordinates.
-     Each cell contains portions of stars, bowties, and corner pieces
-     that tile seamlessly.
-
-     Key parameter: `a` = how far star points extend toward cell edge.
-     Classic proportion: a ≈ 0.28
-  ══════════════════════════════════════════════════════════════ */
-
-  const A = 0.28; // star extension ratio
-  const B = 0.5 - A; // inner offset
-
-  // Piece types within a unit cell (star center at 0.5, 0.5):
-  // 0 = 8-pointed star
-  // 1 = bowtie (4 per cell: top, right, bottom, left - shared with neighbors)
-  // 2 = corner square (4 per cell: TL, TR, BR, BL - shared with neighbors)
-
-  // 8-pointed star polygon vertices (clockwise from top)
-  function starPoly(cx: number, cy: number, s: number): number[][] {
-    const r = s * 0.5;
-    const pts: number[][] = [];
-    for (let i = 0; i < 8; i++) {
-      const angle = (Math.PI / 4) * i - Math.PI / 2;
-      const outerR = r * 0.92;
-      const innerR = r * 0.38;
-      // Outer point
-      pts.push([cx + outerR * Math.cos(angle), cy + outerR * Math.sin(angle)]);
-      // Inner point (between this and next outer)
-      const midAngle = angle + Math.PI / 8;
-      pts.push([cx + innerR * Math.cos(midAngle), cy + innerR * Math.sin(midAngle)]);
-    }
-    return pts;
-  }
-
-  // Bowtie polygon between two stars
-  function bowtiePoly(cx: number, cy: number, s: number, vertical: boolean): number[][] {
-    const h = s * 0.5;
-    const w1 = s * 0.22; // wide end
-    const w2 = s * 0.08; // narrow waist
-    if (vertical) {
-      return [
-        [cx - w1, cy - h * 0.46], [cx + w1, cy - h * 0.46],
-        [cx + w2, cy],
-        [cx + w1, cy + h * 0.46], [cx - w1, cy + h * 0.46],
-        [cx - w2, cy],
-      ];
-    }
-    return [
-      [cx - h * 0.46, cy - w1], [cx - h * 0.46, cy + w1],
-      [cx, cy + w2],
-      [cx + h * 0.46, cy + w1], [cx + h * 0.46, cy - w1],
-      [cx, cy - w2],
-    ];
-  }
-
-  // Small rotated square in the corners between stars
-  function cornerPoly(cx: number, cy: number, s: number): number[][] {
-    const d = s * 0.145;
-    return [
-      [cx, cy - d], [cx + d, cy], [cx, cy + d], [cx - d, cy],
-    ];
-  }
-
-  /* ── Drawing helpers ── */
-  function fillPoly(c: CanvasRenderingContext2D, pts: number[][], color: string, inset: number) {
-    if (pts.length < 3) return;
-    // Compute centroid for inset
-    let centX = 0, centY = 0;
-    for (const p of pts) { centX += p[0]; centY += p[1]; }
-    centX /= pts.length; centY /= pts.length;
-
-    c.beginPath();
-    for (let i = 0; i < pts.length; i++) {
-      const px = pts[i][0], py = pts[i][1];
-      // Inset toward centroid for grout lines
-      const dx = centX - px, dy = centY - py;
-      const len = Math.sqrt(dx * dx + dy * dy);
-      const ix = px + (dx / len) * inset;
-      const iy = py + (dy / len) * inset;
-      i === 0 ? c.moveTo(ix, iy) : c.lineTo(ix, iy);
-    }
-    c.closePath();
-
-    // Glazed ceramic effect: subtle gradient
-    c.fillStyle = color;
-    c.fill();
-
-    // Slight highlight on top-left edges
-    c.save();
-    c.globalCompositeOperation = 'source-atop';
-    const g = c.createLinearGradient(
-      pts[0][0], pts[0][1],
-      pts[Math.floor(pts.length / 2)][0], pts[Math.floor(pts.length / 2)][1]
-    );
-    g.addColorStop(0, 'rgba(255,255,255,0.12)');
-    g.addColorStop(0.5, 'rgba(255,255,255,0)');
-    g.addColorStop(1, 'rgba(0,0,0,0.06)');
-    c.fillStyle = g;
-    c.fill();
-    c.restore();
-  }
-
-  /* ── Assign colors to pieces ── */
-  interface PieceInfo { type: number; col: number; row: number; subIdx: number; }
-
-  function pieceColor(p: PieceInfo, rs: number): string {
-    srand(rs * 100 + p.col * 31 + p.row * 17 + p.subIdx * 7);
-    if (p.type === 0) return pick([PALETTE[0], PALETTE[1], PALETTE[6]]); // stars
-    if (p.type === 1) return pick([PALETTE[2], PALETTE[3]]); // bowties
-    return pick([PALETTE[4], PALETTE[5], PALETTE[3]]); // corners
-  }
-
-  /* ── Grid: 4 star columns x 3 star rows ── */
-  const SCOLS = 4, SROWS = 3;
-
-  function allPieces(): PieceInfo[] {
-    const pieces: PieceInfo[] = [];
-    for (let r = 0; r < SROWS; r++) {
-      for (let c = 0; c < SCOLS; c++) {
-        pieces.push({ type: 0, col: c, row: r, subIdx: 0 }); // star
-        // bowties between stars
-        if (c < SCOLS - 1) pieces.push({ type: 1, col: c, row: r, subIdx: 1 }); // horiz
-        if (r < SROWS - 1) pieces.push({ type: 1, col: c, row: r, subIdx: 2 }); // vert
-        // corner squares
-        if (c < SCOLS - 1 && r < SROWS - 1) pieces.push({ type: 2, col: c, row: r, subIdx: 3 });
-      }
-    }
-    return pieces;
-  }
-
-  function drawPieceAt(c: CanvasRenderingContext2D, p: PieceInfo, cellSize: number, ox: number, oy: number, color: string, inset: number) {
-    const cx = ox + (p.col + 0.5) * cellSize;
-    const cy = oy + (p.row + 0.5) * cellSize;
-
-    if (p.type === 0) {
-      fillPoly(c, starPoly(cx, cy, cellSize), color, inset);
-    } else if (p.type === 1) {
-      if (p.subIdx === 1) {
-        // Horizontal bowtie: between (col, row) and (col+1, row)
-        fillPoly(c, bowtiePoly(cx + cellSize * 0.5, cy, cellSize, false), color, inset);
-      } else {
-        // Vertical bowtie: between (col, row) and (col, row+1)
-        fillPoly(c, bowtiePoly(cx, cy + cellSize * 0.5, cellSize, true), color, inset);
-      }
-    } else {
-      // Corner square: between (col,row), (col+1,row), (col,row+1), (col+1,row+1)
-      fillPoly(c, cornerPoly(cx + cellSize * 0.5, cy + cellSize * 0.5, cellSize), color, inset);
-    }
-  }
-
-  /* ── Draw full mosaic ── */
-  function drawMosaic(c: CanvasRenderingContext2D, w: number, h: number, rs: number, gapPiece: PieceInfo | null) {
-    c.fillStyle = GROUT;
-    c.fillRect(0, 0, w, h);
-
-    const cellSize = Math.min(w / SCOLS, h / SROWS);
-    const ox = (w - cellSize * SCOLS) / 2;
-    const oy = (h - cellSize * SROWS) / 2;
-
-    const pieces = allPieces();
-    for (const p of pieces) {
-      if (gapPiece && p.type === gapPiece.type && p.col === gapPiece.col && p.row === gapPiece.row && p.subIdx === gapPiece.subIdx) {
-        // Draw gap indicator
-        const gcx = ox + (p.col + 0.5) * cellSize + (p.subIdx === 1 ? cellSize * 0.5 : 0);
-        const gcy = oy + (p.row + 0.5) * cellSize + (p.subIdx === 2 ? cellSize * 0.5 : 0);
-        if (p.type === 2) { // corner offset
-          const gcx2 = ox + (p.col + 1) * cellSize;
-          const gcy2 = oy + (p.row + 1) * cellSize;
-          c.fillStyle = 'rgba(200,90,58,0.15)';
-          c.beginPath(); c.arc(gcx2, gcy2, cellSize * 0.12, 0, Math.PI * 2); c.fill();
-        }
-        c.fillStyle = 'rgba(200,90,58,0.2)';
-        c.font = `600 ${cellSize * 0.18}px system-ui,sans-serif`;
-        c.textAlign = 'center'; c.textBaseline = 'middle';
-        const tx = p.subIdx === 1 ? gcx : p.subIdx === 3 ? ox + (p.col + 1) * cellSize : ox + (p.col + 0.5) * cellSize;
-        const ty = p.subIdx === 2 ? gcy : p.subIdx === 3 ? oy + (p.row + 1) * cellSize : oy + (p.row + 0.5) * cellSize;
-        c.fillText('?', tx, ty);
-        c.textAlign = 'left'; c.textBaseline = 'alphabetic';
-        continue;
-      }
-      drawPieceAt(c, p, cellSize, ox, oy, pieceColor(p, rs), INSET);
-    }
-  }
-
-  /* ── Draw a single piece in a choice canvas ── */
-  function drawChoicePiece(cv: HTMLCanvasElement, p: PieceInfo, color: string) {
+  function sz(cv: HTMLCanvasElement) {
     const dpr = Math.min(devicePixelRatio || 1, 2);
-    const s = cv.getBoundingClientRect().width;
-    cv.width = s * dpr; cv.height = s * dpr;
+    const w = cv.getBoundingClientRect().width;
+    cv.width = w * dpr; cv.height = w * dpr;
     const c = cv.getContext('2d')!;
     c.setTransform(dpr, 0, 0, dpr, 0, 0);
-    c.fillStyle = GROUT;
-    c.fillRect(0, 0, s, s);
-    // Draw the piece centered in the choice canvas
-    const fakeP = { ...p, col: 0, row: 0 };
-    const cellSize = s * 1.2; // slightly larger than canvas so the piece fills it
-    const ox = (s - cellSize) / 2;
-    const oy = (s - cellSize) / 2;
-    // Adjust offsets based on subIdx
-    let adjOx = ox, adjOy = oy;
-    if (p.subIdx === 1) adjOx -= cellSize * 0.5;
-    if (p.subIdx === 2) adjOy -= cellSize * 0.5;
-    if (p.subIdx === 3) { adjOx -= cellSize * 0.5; adjOy -= cellSize * 0.5; }
-    drawPieceAt(c, fakeP, cellSize, adjOx, adjOy, color, INSET);
+    return w;
   }
 
-  /* ── Distractor: same shape, different color ── */
-  function makeDistractor(correctColor: string, p: PieceInfo): string {
-    let pool: string[];
-    if (p.type === 0) pool = [PALETTE[0], PALETTE[1], PALETTE[6], PALETTE[5]];
-    else if (p.type === 1) pool = [PALETTE[2], PALETTE[3], PALETTE[6], PALETTE[0]];
-    else pool = [PALETTE[4], PALETTE[5], PALETTE[3], PALETTE[1]];
-    let c = correctColor;
-    let att = 0;
-    while (c === correctColor && att < 20) { c = pick(pool); att++; }
-    return c === correctColor ? pick(PALETTE) : c;
+  function toPixel(pt: number[], w: number, pad: number): [number, number] {
+    return [pad + pt[0] * (w - pad * 2), pad + pt[1] * (w - pad * 2)];
   }
 
-  /* ── Play a round ── */
-  function playRound() {
-    locked = false;
-    feedbackEl.textContent = '';
-    roundEl.textContent = `${round + 1} / ${ROUNDS}`;
-    scoreEl.textContent = `${score} correct`;
-    choiceCvs.forEach(c => c.className = 'zpat-choice');
+  /* ── Draw the gap: shows the target shape as a colored tile in a grout frame ── */
+  function drawGap() {
+    const w = sz(gapCv);
+    const pad = 20;
+    const color = COLORS[round % COLORS.length];
 
-    const rs = round * 137 + 42;
-    srand(rs + 999);
-    const pieces = allPieces();
-    const gapPiece = pieces[randInt(pieces.length)];
-    const correctColor = pieceColor(gapPiece, rs);
+    // Grout background
+    gapCtx.fillStyle = GROUT;
+    gapCtx.fillRect(0, 0, w, w);
 
-    // Draw main mosaic
-    const rect = mainCv.getBoundingClientRect();
-    const dpr = Math.min(devicePixelRatio || 1, 2);
-    mainCv.width = rect.width * dpr; mainCv.height = rect.height * dpr;
-    mainCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    drawMosaic(mainCtx, rect.width, rect.height, rs, gapPiece);
+    // Tile background (surrounding area)
+    gapCtx.fillStyle = TILE_BG;
+    gapCtx.fillRect(8, 8, w - 16, w - 16);
 
-    // Generate options
-    srand(rs + 7777);
-    const options: { color: string; correct: boolean }[] = [{ color: correctColor, correct: true }];
-    const used = new Set([correctColor]);
-    while (options.length < 4) {
-      const dc = makeDistractor(correctColor, gapPiece);
-      if (!used.has(dc)) { used.add(dc); options.push({ color: dc, correct: false }); }
-    }
-    shuffle(options);
-
-    choiceCvs.forEach((cv, i) => {
-      const fresh = cv.cloneNode(true) as HTMLCanvasElement;
-      cv.parentNode!.replaceChild(fresh, cv);
-      choiceCvs[i] = fresh;
-      drawChoicePiece(fresh, gapPiece, options[i].color);
-      fresh.addEventListener('click', () => {
-        if (locked) return;
-        locked = true;
-        if (options[i].correct) {
-          fresh.classList.add('correct');
-          score++;
-          feedbackEl.textContent = 'Correct';
-          feedbackEl.style.color = '#2a7a6d';
-        } else {
-          fresh.classList.add('wrong');
-          feedbackEl.textContent = 'Incorrect';
-          feedbackEl.style.color = '#c85a3a';
-          options.forEach((o, j) => { if (o.correct) choiceCvs[j].classList.add('correct'); });
-        }
-        choiceCvs.forEach(c => c.classList.add('disabled'));
-        scoreEl.textContent = `${score} correct`;
-        setTimeout(() => { round++; round >= ROUNDS ? showFinal() : playRound(); }, 1200);
-      });
+    // Cut-out shape (the gap) shown as darker grout
+    gapCtx.beginPath();
+    currentShape.forEach((pt, i) => {
+      const [x, y] = toPixel(pt, w, pad);
+      i === 0 ? gapCtx.moveTo(x, y) : gapCtx.lineTo(x, y);
     });
+    gapCtx.closePath();
+    gapCtx.fillStyle = color;
+    gapCtx.globalAlpha = 0.15;
+    gapCtx.fill();
+    gapCtx.globalAlpha = 1;
+
+    // Outline of the gap
+    gapCtx.strokeStyle = color;
+    gapCtx.lineWidth = 2;
+    gapCtx.setLineDash([6, 4]);
+    gapCtx.stroke();
+    gapCtx.setLineDash([]);
+
+    // Label
+    gapCtx.fillStyle = 'rgba(0,0,0,0.15)';
+    gapCtx.font = `600 ${w * 0.08}px system-ui, sans-serif`;
+    gapCtx.textAlign = 'center'; gapCtx.textBaseline = 'middle';
+    gapCtx.fillText('target shape', w / 2, w - 14);
+    gapCtx.textAlign = 'left'; gapCtx.textBaseline = 'alphabetic';
+  }
+
+  /* ── Draw the cutting surface: raw tile with guide outline ── */
+  function drawCutSurface() {
+    const w = sz(cutCv);
+    const pad = 20;
+
+    // Raw tile
+    cutCtx.fillStyle = TILE_BG;
+    cutCtx.fillRect(0, 0, w, w);
+
+    // Subtle clay texture
+    cutCtx.save();
+    cutCtx.globalAlpha = 0.03;
+    for (let i = 0; i < w; i += 3) {
+      cutCtx.fillStyle = Math.random() > 0.5 ? '#000' : '#fff';
+      cutCtx.fillRect(0, i, w, 1);
+    }
+    cutCtx.restore();
+
+    // Guide outline (dotted)
+    cutCtx.beginPath();
+    currentShape.forEach((pt, i) => {
+      const [x, y] = toPixel(pt, w, pad);
+      i === 0 ? cutCtx.moveTo(x, y) : cutCtx.lineTo(x, y);
+    });
+    cutCtx.closePath();
+    cutCtx.strokeStyle = 'rgba(0,0,0,0.18)';
+    cutCtx.lineWidth = 1.5;
+    cutCtx.setLineDash([4, 4]);
+    cutCtx.stroke();
+    cutCtx.setLineDash([]);
+
+    // Draw user's path so far
+    if (userPath.length > 1) {
+      cutCtx.beginPath();
+      cutCtx.moveTo(userPath[0][0], userPath[0][1]);
+      for (let i = 1; i < userPath.length; i++) {
+        cutCtx.lineTo(userPath[i][0], userPath[i][1]);
+      }
+      cutCtx.strokeStyle = '#1a4a8a';
+      cutCtx.lineWidth = 2.5;
+      cutCtx.lineJoin = 'round';
+      cutCtx.lineCap = 'round';
+      cutCtx.setLineDash([]);
+      cutCtx.stroke();
+    }
+
+    // Start dot
+    if (userPath.length === 0) {
+      const [sx, sy] = toPixel(currentShape[0], w, pad);
+      cutCtx.beginPath();
+      cutCtx.arc(sx, sy, 6, 0, Math.PI * 2);
+      cutCtx.fillStyle = '#1a4a8a';
+      cutCtx.globalAlpha = 0.4;
+      cutCtx.fill();
+      cutCtx.globalAlpha = 1;
+
+      cutCtx.fillStyle = 'rgba(0,0,0,0.25)';
+      cutCtx.font = `500 ${w * 0.05}px system-ui, sans-serif`;
+      cutCtx.textAlign = 'center'; cutCtx.textBaseline = 'middle';
+      cutCtx.fillText('start here', sx, sy + 16);
+      cutCtx.textAlign = 'left'; cutCtx.textBaseline = 'alphabetic';
+    }
+  }
+
+  /* ── Score the user's cut against the target ── */
+  function scoreCut(): number {
+    if (userPath.length < 5) return 0;
+    const w = cutCv.getBoundingClientRect().width;
+    const pad = 20;
+
+    // Sample target path at regular intervals
+    const targetPts: number[][] = [];
+    for (let i = 0; i < currentShape.length; i++) {
+      const a = currentShape[i], b = currentShape[(i + 1) % currentShape.length];
+      const [ax, ay] = toPixel(a, w, pad);
+      const [bx, by] = toPixel(b, w, pad);
+      const dist = Math.hypot(bx - ax, by - ay);
+      const steps = Math.max(2, Math.floor(dist / 4));
+      for (let s = 0; s < steps; s++) {
+        const t = s / steps;
+        targetPts.push([ax + (bx - ax) * t, ay + (by - ay) * t]);
+      }
+    }
+
+    // For each target point, find nearest user point
+    let totalDev = 0;
+    for (const tp of targetPts) {
+      let minD = Infinity;
+      for (const up of userPath) {
+        const d = Math.hypot(up[0] - tp[0], up[1] - tp[1]);
+        if (d < minD) minD = d;
+      }
+      totalDev += minD;
+    }
+
+    const avgDev = totalDev / targetPts.length;
+    const maxAcceptable = w * 0.15; // 15% of canvas = 0% score
+    const pct = Math.max(0, Math.min(100, Math.round((1 - avgDev / maxAcceptable) * 100)));
+    return pct;
+  }
+
+  /* ── Draw the overlay: target vs actual cut ── */
+  function drawOverlay(pct: number) {
+    const w = sz(overCv);
+    const pad = 20;
+    const color = COLORS[round % COLORS.length];
+
+    overCtx.fillStyle = GROUT;
+    overCtx.fillRect(0, 0, w, w);
+
+    // Target shape filled
+    overCtx.beginPath();
+    currentShape.forEach((pt, i) => {
+      const [x, y] = toPixel(pt, w, pad);
+      i === 0 ? overCtx.moveTo(x, y) : overCtx.lineTo(x, y);
+    });
+    overCtx.closePath();
+    overCtx.fillStyle = color;
+    overCtx.globalAlpha = 0.2;
+    overCtx.fill();
+    overCtx.globalAlpha = 1;
+    overCtx.strokeStyle = color;
+    overCtx.lineWidth = 1.5;
+    overCtx.stroke();
+
+    // User's cut path
+    if (userPath.length > 1) {
+      overCtx.beginPath();
+      overCtx.moveTo(userPath[0][0], userPath[0][1]);
+      for (let i = 1; i < userPath.length; i++) {
+        overCtx.lineTo(userPath[i][0], userPath[i][1]);
+      }
+      overCtx.closePath();
+      overCtx.fillStyle = color;
+      overCtx.globalAlpha = 0.6;
+      overCtx.fill();
+      overCtx.globalAlpha = 1;
+      overCtx.strokeStyle = pct >= 70 ? '#1a7a52' : pct >= 40 ? '#cc9933' : '#b53030';
+      overCtx.lineWidth = 2;
+      overCtx.stroke();
+    }
+
+    // Label
+    overCtx.fillStyle = 'rgba(0,0,0,0.2)';
+    overCtx.font = `500 ${w * 0.05}px system-ui, sans-serif`;
+    overCtx.textAlign = 'center';
+    overCtx.fillText('your cut vs target', w / 2, w - 10);
+    overCtx.textAlign = 'left';
+  }
+
+  /* ── Input handling ── */
+  function getPos(e: PointerEvent): [number, number] {
+    const r = cutCv.getBoundingClientRect();
+    return [e.clientX - r.left, e.clientY - r.top];
+  }
+
+  cutCv.addEventListener('pointerdown', (e) => {
+    if (resultRow.hidden === false) return;
+    drawing = true;
+    userPath = [getPos(e)];
+    cutCv.classList.add('drawing');
+    cutCv.setPointerCapture(e.pointerId);
+    drawCutSurface();
+  });
+
+  cutCv.addEventListener('pointermove', (e) => {
+    if (!drawing) return;
+    userPath.push(getPos(e));
+    drawCutSurface();
+  });
+
+  cutCv.addEventListener('pointerup', () => {
+    if (!drawing) return;
+    drawing = false;
+    cutCv.classList.remove('drawing');
+
+    if (userPath.length < 10) {
+      hintEl.textContent = 'Draw a longer line. Trace the full outline.';
+      userPath = [];
+      drawCutSurface();
+      return;
+    }
+
+    // Score it
+    const pct = scoreCut();
+    scores.push(pct);
+
+    pctEl.textContent = pct + '%';
+    if (pct >= 85) { verdictEl.textContent = 'Master cut'; verdictEl.style.color = '#1a7a52'; }
+    else if (pct >= 65) { verdictEl.textContent = 'Clean cut'; verdictEl.style.color = '#2a8a8a'; }
+    else if (pct >= 40) { verdictEl.textContent = 'Rough cut'; verdictEl.style.color = '#cc9933'; }
+    else { verdictEl.textContent = 'Miscut'; verdictEl.style.color = '#b53030'; }
+    pctEl.style.color = verdictEl.style.color;
+
+    drawOverlay(pct);
+    resultRow.hidden = false;
+    hintEl.textContent = '';
+
+    if (round < SHAPES.length - 1) {
+      nextBtn.hidden = false;
+      nextBtn.textContent = 'Next shape';
+    } else {
+      nextBtn.hidden = false;
+      nextBtn.textContent = 'See results';
+    }
+  });
+
+  /* ── Navigation ── */
+  nextBtn.addEventListener('click', () => {
+    round++;
+    if (round >= SHAPES.length) {
+      showFinal();
+      return;
+    }
+    startRound();
+  });
+
+  function startRound() {
+    currentShape = SHAPES[round];
+    userPath = [];
+    resultRow.hidden = true;
+    nextBtn.hidden = true;
+    hintEl.textContent = 'Trace the dotted outline as precisely as you can.';
+    roundEl.textContent = `${round + 1} / ${SHAPES.length}`;
+    bestEl.textContent = scores.length > 0 ? `avg ${Math.round(scores.reduce((a, b) => a + b) / scores.length)}%` : '';
+    drawGap();
+    drawCutSurface();
   }
 
   function showFinal() {
     gameEl.style.display = 'none';
-    finalScoreEl.textContent = String(score);
-    if (score >= 9) finalTextEl.textContent = 'Exceptional. A zellige maalem in Fez makes thousands of these color judgments per panel, cutting each tile freehand from glazed terracotta and fitting it by eye.';
-    else if (score >= 7) finalTextEl.textContent = 'Strong pattern recognition. Zellige artisans train for eight or more years before they are trusted with commissioned panels. The subtle color differences between correct and incorrect tiles are what separates masters from apprentices.';
-    else if (score >= 5) finalTextEl.textContent = 'The subtlety is real. Each piece must match its neighbors in color and finish. Maalems develop this awareness through years of daily repetition.';
-    else finalTextEl.textContent = 'These distinctions are genuinely hard. Zellige craftsmen assemble their patterns face-down, making color and placement decisions they cannot verify until the panel is flipped.';
-    resultEl.hidden = false;
+    const avg = Math.round(scores.reduce((a, b) => a + b) / scores.length);
+    finalAvgEl.textContent = avg + '%';
+
+    if (avg >= 85) finalTextEl.textContent = 'Remarkable precision. A zellige maalem in Fez cuts tiles freehand with a small hammer called a menqach, achieving sub-millimeter accuracy across thousands of pieces. Your hand is steady.';
+    else if (avg >= 65) finalTextEl.textContent = 'Solid craftsmanship. Traditional zellige artisans train for eight or more years to develop the motor control needed for consistent precision. Every cut that deviates propagates errors across the pattern.';
+    else if (avg >= 40) finalTextEl.textContent = 'The difficulty is real. Zellige requires cutting glazed terracotta into precise geometric shapes, working against the grain of the clay. Apprentices spend years on simple cuts before attempting complex star patterns.';
+    else finalTextEl.textContent = 'This is why zellige masters train for a decade. Each piece is cut by hand with a single tool, and errors of even one millimeter create visible gaps when thousands of pieces are assembled into a panel.';
+
+    finalEl.hidden = false;
   }
 
   document.getElementById('zpat-retry')!.addEventListener('click', () => {
-    round = 0; score = 0; gameEl.style.display = ''; resultEl.hidden = true; playRound();
+    round = 0; scores = [];
+    gameEl.style.display = ''; finalEl.hidden = true;
+    startRound();
   });
 
-  playRound();
+  startRound();
 </script>
