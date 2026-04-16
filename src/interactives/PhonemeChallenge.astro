@@ -142,7 +142,7 @@
   let cardClickIndices: number[] = []; // which click each card represents (shuffled)
 
   function ensureAudio() {
-    if (!audioCtx) audioCtx = new AudioContext();
+    if (!audioCtx) audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
     if (audioCtx.state === 'suspended') audioCtx.resume();
   }
 
@@ -161,7 +161,7 @@
     loaded = true;
   }
 
-  loadAudio();
+  // Don't preload on init - iOS requires AudioContext creation inside a user gesture
 
   function playClick(clickIdx: number): Promise<void> {
     return new Promise(resolve => {

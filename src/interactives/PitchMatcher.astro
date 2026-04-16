@@ -683,7 +683,7 @@
 
   function ensureAudio() {
     if (!audioCtx) {
-      audioCtx = new AudioContext();
+      audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
       analyserRef = audioCtx.createAnalyser();
       analyserRef.fftSize = 2048;
       analyserRef.smoothingTimeConstant = 0.85;
