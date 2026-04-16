@@ -87,15 +87,13 @@
 <script>
   let audioCtx: AudioContext | null = null;
   let currentRound = 0, score = 0, isPlaying = false;
-  const audioBuffers: (AudioBuffer | null)[] = [null, null, null, null, null, null];
+  const audioBuffers: (AudioBuffer | null)[] = [null, null, null, null];
 
   const AUDIO_FILES = [
     '/mastery/audio/foley/snow-footsteps.mp3',
     '/mastery/audio/foley/rain.mp3',
-    '/mastery/audio/foley/sword-draw.mp3',
     '/mastery/audio/foley/fire.mp3',
     '/mastery/audio/foley/thunder.mp3',
-    '/mastery/audio/foley/horse-gallop.mp3',
   ];
 
   const root = document.getElementById('foley-match')!;
@@ -158,18 +156,12 @@
     { correct: 'Frying bacon',
       options: ['Frying bacon', 'Rice falling on a tin sheet', 'TV static through a speaker', 'Running water over gravel'],
       explanation: 'The irregular sizzle of bacon in a pan is indistinguishable from rain hitting a window when recorded at the right distance.' },
-    { correct: 'Scraping a car antenna on sheet metal',
-      options: ['Scraping a car antenna on sheet metal', 'Dragging a knife across a whetstone', 'A metal ruler twanged on a desk', 'Bowing a steel string with rosin'],
-      explanation: 'Foley artists run a thin metal rod along another surface. No real sword sounds like a movie sword.' },
     { correct: 'Crumpling cellophane',
       options: ['Crumpling cellophane', 'Snapping dry twigs', 'Popping bubble wrap slowly', 'Crushing dried leaves'],
       explanation: 'Cellophane wrapper twisted slowly near a microphone creates a convincing fire crackle.' },
     { correct: 'Shaking a large sheet of thin metal',
       options: ['Shaking a large sheet of thin metal', 'Dropping bowling balls on a ramp', 'A bass drum with heavy reverb', 'Slamming a dumpster lid'],
       explanation: 'Thunder sheets have been used in theater for centuries. The flexing metal produces low-frequency rumbles with sharp attacks.' },
-    { correct: 'Coconut shell halves on gravel',
-      options: ['Coconut shell halves on gravel', 'Wooden blocks struck on a table', 'Plastic cups tapped on stone', 'Rubber mallets on a cutting board'],
-      explanation: 'The most famous foley trick in existence. Monty Python made it a joke, but foley artists still use it because nothing else works as well.' },
   ];
 
   function shuffle<T>(arr: T[]): T[] {
