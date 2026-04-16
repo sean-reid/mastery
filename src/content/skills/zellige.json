@@ -2,7 +2,7 @@
   "name": "Zellige",
   "slug": "zellige",
   "category": "trade",
-  "description": "Zellige (zellij) is Moroccan geometric mosaic tilework in which individual terracotta tiles are hand-chiseled with a menqach — a sharp axe-hammer — into precise polygonal shapes, then assembled face-down from memory into radiating star patterns that tessellate a surface with zero gaps and zero waste. Master artisans (maalemin) in Fez train from childhood, often within family workshops, and work from the Miocene grey clay unique to the region. A single large panel may contain thousands of individually shaped pieces, each cut to fit its neighbors without measuring tools.",
+  "description": "Zellige (zellij) is Moroccan geometric mosaic tilework in which individual terracotta tiles are hand-chiseled with a menqach, a sharp axe-hammer, into precise polygonal shapes, then assembled face-down from memory into radiating star patterns that tessellate a surface with zero gaps and zero waste. Master artisans (maalemin) in Fez train from childhood, often within family workshops, and work from the Miocene grey clay unique to the region. A single large panel may contain thousands of individually shaped pieces, each cut to fit its neighbors without measuring tools.",
   "thumbnail": {
     "src": "/images/skills/zellige.webp",
     "alt": "Close-up of intricate Moroccan zellige tilework showing geometric star pattern in blue and white",
@@ -28,7 +28,7 @@
       "type": "journalism"
     },
     {
-      "title": "Zellige — Encyclopedia MDPI",
+      "title": "Zellige, Encyclopedia MDPI",
       "url": "https://encyclopedia.pub/entry/28316",
       "type": "reference"
     }
@@ -47,7 +47,7 @@
     "feedback_delay": {
       "value": 4,
       "confidence": 0.7,
-      "notes": "Individual tile cuts are immediately testable against neighbors. But the full pattern is assembled face-down and only revealed when the panel is flipped — errors in the overall composition may not appear until the end."
+      "notes": "Individual tile cuts are immediately testable against neighbors. But the full pattern is assembled face-down and only revealed when the panel is flipped, so errors in the overall composition may not appear until the end."
     },
     "failure_cost": {
       "value": 3,
@@ -57,37 +57,37 @@
     "cognitive_demand": {
       "value": 8,
       "confidence": 0.75,
-      "notes": "The maalem must hold the entire geometric pattern in memory — no blueprints or measuring tools for traditional work. Understanding how dozens of distinct polygon shapes tessellate across a plane requires deep spatial-mathematical intuition."
+      "notes": "The maalem must hold the entire geometric pattern in memory, with no blueprints or measuring tools for traditional work. Understanding how dozens of distinct polygon shapes tessellate across a plane requires deep spatial-mathematical intuition."
     },
     "physical_demand": {
       "value": 6,
       "confidence": 0.75,
-      "notes": "Repetitive striking with the menqach for hours creates wrist and arm strain. Kneeling on the ground to assemble patterns. The chiseling motion requires consistent force calibration — too hard shatters the tile, too soft leaves rough edges."
+      "notes": "Repetitive striking with the menqach for hours creates wrist and arm strain. Kneeling on the ground to assemble patterns. The chiseling motion requires consistent force calibration: too hard shatters the tile, too soft leaves rough edges."
     },
     "prerequisite_knowledge": {
       "value": 4,
       "confidence": 0.7,
-      "notes": "No formal education required — traditionally learned within family workshops from childhood. But implicit knowledge of Islamic geometric principles, clay properties, and glaze chemistry accumulates over years."
+      "notes": "No formal education required, traditionally learned within family workshops from childhood. But implicit knowledge of Islamic geometric principles, clay properties, and glaze chemistry accumulates over years."
     },
     "measurability": {
       "value": 6,
       "confidence": 0.7,
-      "notes": "Fit accuracy is objectively testable: tiles either tessellate without gaps or they do not. Pattern correctness can be verified geometrically. But aesthetic qualities — color harmony, glaze consistency — are more subjective."
+      "notes": "Fit accuracy is objectively testable: tiles either tessellate without gaps or they do not. Pattern correctness can be verified geometrically. But aesthetic qualities (color harmony, glaze consistency) are more subjective."
     },
     "perishability": {
       "value": 4,
       "confidence": 0.65,
-      "notes": "Pattern memory is deeply embedded through years of repetition and decays slowly. The physical chiseling rhythm — calibrating force for each tile shape — would dull within weeks without practice."
+      "notes": "Pattern memory is deeply embedded through years of repetition and decays slowly. The physical chiseling rhythm, calibrating force for each tile shape, would dull within weeks without practice."
     },
     "precision_required": {
       "value": 9,
       "confidence": 0.8,
-      "notes": "Each tile must fit its neighbors with no gap and no overlap across an entire panel. The menqach must remove exactly the right amount of clay — deviations of even 1mm propagate across the pattern and create visible errors at scale."
+      "notes": "Each tile must fit its neighbors with no gap and no overlap across an entire panel. The menqach must remove exactly the right amount of clay, and deviations of even 1mm propagate across the pattern and create visible errors at scale."
     },
     "ambiguity": {
       "value": 3,
       "confidence": 0.75,
-      "notes": "Traditional patterns are mathematically defined — there is a correct tessellation. The maalem is executing a known geometric design. Ambiguity exists only in color selection and minor aesthetic choices."
+      "notes": "Traditional patterns are mathematically defined; there is a correct tessellation. The maalem is executing a known geometric design. Ambiguity exists only in color selection and minor aesthetic choices."
     },
     "instruction_dependency": {
       "value": 8,
@@ -97,7 +97,7 @@
     "environmental_variability": {
       "value": 3,
       "confidence": 0.7,
-      "notes": "Workshop conditions are simple. The main variable is clay quality — Fez's Miocene grey clay is preferred, and different batches behave differently during cutting and firing. Kiln temperature affects glaze outcomes."
+      "notes": "Workshop conditions are simple. The main variable is clay quality; Fez's Miocene grey clay is preferred, and different batches behave differently during cutting and firing. Kiln temperature affects glaze outcomes."
     },
     "concurrent_skills": {
       "value": 5,
@@ -117,7 +117,7 @@
     "observability": {
       "value": 7,
       "confidence": 0.75,
-      "notes": "The finished product is visually stunning — the difference between precise and sloppy tilework is immediately obvious. The cutting process itself is less dramatic but clearly demonstrates skill gradients to an observer."
+      "notes": "The finished product is visually stunning, and the difference between precise and sloppy tilework is immediately obvious. The cutting process itself is less dramatic but clearly demonstrates skill gradients to an observer."
     },
     "luck_variance": {
       "value": 2,
@@ -130,6 +130,6 @@
       "notes": "Tile cutting is individual. Assembly of large panels involves small teams of 2-4 working in coordination. The master directs placement while assistants supply pre-cut pieces. But the core skill is solo."
     }
   },
-  "methodology_notes": "Scores draw on Wikipedia's zellij article, AramcoWorld's 2024 photographic documentation of Fez workshops, Encyclopedia MDPI's technical overview, and published accounts of maalem training traditions. Confidence is moderate due to limited quantitative research on zellige artisan training — most knowledge is transmitted orally within Moroccan craft families.",
+  "methodology_notes": "Scores draw on Wikipedia's zellij article, AramcoWorld's 2024 photographic documentation of Fez workshops, Encyclopedia MDPI's technical overview, and published accounts of maalem training traditions. Confidence is moderate due to limited quantitative research on zellige artisan training; most knowledge is transmitted orally within Moroccan craft families.",
   "interactive": "pattern-builder"
 }

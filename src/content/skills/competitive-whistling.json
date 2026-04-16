@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "Fpi7ksasdNk",
-      "title": "Geert Chatrou — A whistleblower you haven't heard (TED Talk)"
+      "title": "Geert Chatrou: A whistleblower you haven't heard (TED Talk)"
     }
   ],
   "sources": [
@@ -27,12 +27,12 @@
       "type": "reference"
     },
     {
-      "title": "World Whistlers Convention — Official Site",
+      "title": "World Whistlers Convention, Official Site",
       "url": "https://whistling.jp/en/",
       "type": "competition"
     },
     {
-      "title": "International Whistlers Guild — Global Whistling Championship",
+      "title": "International Whistlers Guild: Global Whistling Championship",
       "url": "https://whistlersguild.org/",
       "type": "competition"
     }
@@ -116,7 +116,7 @@
     "domain_evolution": {
       "value": 3,
       "confidence": 0.7,
-      "notes": "The competitive circuit has grown since the 1980s with new organizations and online competitions. But the fundamental technique -- pucker or palatal whistling -- is unchanging."
+      "notes": "The competitive circuit has grown since the 1980s with new organizations and online competitions. But the fundamental technique (pucker or palatal whistling) is unchanging."
     },
     "observability": {
       "value": 7,

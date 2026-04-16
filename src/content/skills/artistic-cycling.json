@@ -76,7 +76,7 @@
     "perishability": {
       "value": 7,
       "confidence": 0.7,
-      "notes": "The highly specialized balance skills -- particularly handstands and figures on a moving bicycle -- likely decay quickly without regular practice. The motor-vestibular integration is extremely specific and not maintained by general fitness. Gymnastic flexibility and strength are more durable but insufficient alone."
+      "notes": "The highly specialized balance skills, particularly handstands and figures on a moving bicycle, likely decay quickly without regular practice. The motor-vestibular integration is extremely specific and not maintained by general fitness. Gymnastic flexibility and strength are more durable but insufficient alone."
     },
     "precision_required": {
       "value": 9,
@@ -129,5 +129,11 @@
       "notes": "Single events are purely individual. Pairs and Act-4 (four-rider) categories require synchronized choreography and close physical coordination. The weighted average across all categories places this at moderate social coordination. Pairs routines involve lifts and catches requiring deep trust."
     }
   },
-  "methodology_notes": "Scores informed by the Wikipedia article on artistic cycling, the UCI's official 'What is artistic cycling?' guide, and AcroSchool's detailed breakdown of the sport. Training timelines sourced from Viola Brand's reported seven-year handstand development and ~20 hours/week training schedule (Cycling Weekly interview). The figure catalogue of ~120 exercises and five-minute routine format provide clear scoring structure. Confidence is higher for physical demand and precision axes where the sport's requirements are self-evident from the figure descriptions."
+  "methodology_notes": "Scores informed by the Wikipedia article on artistic cycling, the UCI's official 'What is artistic cycling?' guide, and AcroSchool's detailed breakdown of the sport. Training timelines sourced from Viola Brand's reported seven-year handstand development and ~20 hours/week training schedule (Cycling Weekly interview). The figure catalogue of ~120 exercises and five-minute routine format provide clear scoring structure. Confidence is higher for physical demand and precision axes where the sport's requirements are self-evident from the figure descriptions.",
+  "clip": {
+    "src": "/videos/skills/artistic-cycling.mp4",
+    "poster": "/images/skills/artistic-cycling.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

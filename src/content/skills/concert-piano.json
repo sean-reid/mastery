@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "ShTNalggJKs",
-      "title": "Yunchan Lim performs Rachmaninoff Piano Concerto No. 3 — 2022 Cliburn Competition Final"
+      "title": "Yunchan Lim performs Rachmaninoff Piano Concerto No. 3, 2022 Cliburn Competition Final"
     }
   ],
   "sources": [
@@ -140,5 +140,11 @@
     }
   },
   "methodology_notes": "Scores draw on Ericsson's deliberate practice research (1993), Macnamara's meta-analysis (2014), Van Cliburn Competition statistics, and ABRSM/RCM grading frameworks. Concert piano is the anchor skill for the instrument category: time_to_expert=10 reflects that virtually no one reaches concert level in under 15 years of dedicated training.",
-  "interactive": "polyrhythm-tapper"
+  "interactive": "polyrhythm-tapper",
+  "clip": {
+    "src": "/videos/skills/concert-piano.mp4",
+    "poster": "/images/skills/concert-piano.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

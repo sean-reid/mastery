@@ -2,7 +2,7 @@
   "name": "Kintsugi",
   "slug": "kintsugi",
   "category": "trade",
-  "description": "Kintsugi ('golden joinery') repairs broken ceramics using urushi lacquer—refined sap from the Toxicodendron vernicifluum tree—as both adhesive and decorative medium. The process takes a minimum of three weeks per vessel: pieces are bonded with mugi-urushi (lacquer mixed with wheat flour), gaps filled with sabi-urushi (lacquer mixed with clay), then successive coats are applied, with each layer requiring days to cure in a controlled-humidity cabinet called a furo. The final coat is dusted with powdered gold while still tacky. Developed during the Muromachi period (1336-1573), the technique transforms damage into a visible history of the object.",
+  "description": "Kintsugi ('golden joinery') repairs broken ceramics using urushi lacquer, refined sap from the Toxicodendron vernicifluum tree, as both adhesive and decorative medium. The process takes a minimum of three weeks per vessel: pieces are bonded with mugi-urushi (lacquer mixed with wheat flour), gaps filled with sabi-urushi (lacquer mixed with clay), then successive coats are applied, with each layer requiring days to cure in a controlled-humidity cabinet called a furo. The final coat is dusted with powdered gold while still tacky. Developed during the Muromachi period (1336-1573), the technique transforms damage into a visible history of the object.",
   "thumbnail": {
     "src": "/images/skills/kintsugi.webp",
     "alt": "Japanese tea bowl repaired with gold-filled lacquer seams following the crack lines across a dark glaze",
@@ -41,7 +41,7 @@
     "time_to_competence": {
       "value": 5,
       "confidence": 0.7,
-      "notes": "A simple two-piece repair using a kit can be completed in a few weeks. Understanding urushi behavior—its cure requirements, allergy risks, and application nuances—takes months of guided practice. Workshop programs range from 1-day introductions to 150-hour Kyoto apprenticeships."
+      "notes": "A simple two-piece repair using a kit can be completed in a few weeks. Understanding urushi behavior (its cure requirements, allergy risks, and application nuances) takes months of guided practice. Workshop programs range from 1-day introductions to 150-hour Kyoto apprenticeships."
     },
     "time_to_expert": {
       "value": 8,
@@ -66,7 +66,7 @@
     "physical_demand": {
       "value": 3,
       "confidence": 0.75,
-      "notes": "Fine brush and palette knife work requiring steady hands but minimal physical exertion. The primary physical risk is urushi allergy—raw lacquer causes severe contact dermatitis in most people until tolerance develops."
+      "notes": "Fine brush and palette knife work requiring steady hands but minimal physical exertion. The primary physical risk is urushi allergy; raw lacquer causes severe contact dermatitis in most people until tolerance develops."
     },
     "prerequisite_knowledge": {
       "value": 5,
@@ -76,7 +76,7 @@
     "measurability": {
       "value": 4,
       "confidence": 0.65,
-      "notes": "Structural integrity of the repair is objectively testable (food-safe, waterproof, durable). Aesthetic quality—the beauty and balance of gold lines—is deeply subjective and tied to wabi-sabi philosophy. No formal grading systems exist."
+      "notes": "Structural integrity of the repair is objectively testable (food-safe, waterproof, durable). Aesthetic quality (the beauty and balance of gold lines) is deeply subjective and tied to wabi-sabi philosophy. No formal grading systems exist."
     },
     "perishability": {
       "value": 4,
@@ -86,12 +86,12 @@
     "precision_required": {
       "value": 7,
       "confidence": 0.7,
-      "notes": "Fragment alignment must be exact for structural integrity. Lacquer layer thickness affects both strength and aesthetics. Gold dusting requires precise timing—too early and the gold sinks, too late and it won't adhere. The final gold line width must be even."
+      "notes": "Fragment alignment must be exact for structural integrity. Lacquer layer thickness affects both strength and aesthetics. Gold dusting requires precise timing: too early and the gold sinks, too late and it won't adhere. The final gold line width must be even."
     },
     "ambiguity": {
       "value": 6,
       "confidence": 0.65,
-      "notes": "Fragment reassembly is objective, but the aesthetic philosophy of kintsugi—celebrating rather than hiding damage—introduces significant subjective judgment. How prominently to feature the gold, whether to add decorative fills, and line width choices are artistic decisions."
+      "notes": "Fragment reassembly is objective, but the aesthetic philosophy of kintsugi, celebrating rather than hiding damage, introduces significant subjective judgment. How prominently to feature the gold, whether to add decorative fills, and line width choices are artistic decisions."
     },
     "instruction_dependency": {
       "value": 7,
@@ -121,7 +121,7 @@
     "observability": {
       "value": 8,
       "confidence": 0.8,
-      "notes": "The gold-highlighted repair lines are the entire point of the craft—they are designed to be seen and admired. The quality difference between crude and refined repairs is immediately visible to any viewer."
+      "notes": "The gold-highlighted repair lines are the entire point of the craft; they are designed to be seen and admired. The quality difference between crude and refined repairs is immediately visible to any viewer."
     },
     "luck_variance": {
       "value": 3,

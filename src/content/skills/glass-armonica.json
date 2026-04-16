@@ -41,7 +41,7 @@
     "time_to_competence": {
       "value": 6,
       "confidence": 0.55,
-      "notes": "Basic tone production requires learning the precise finger moisture, pressure, and angle for each bowl. Unlike a keyboard, there is no mechanical action—sound depends entirely on the friction interface between wet skin and spinning glass. Months to produce reliable clean tones."
+      "notes": "Basic tone production requires learning the precise finger moisture, pressure, and angle for each bowl. Unlike a keyboard, there is no mechanical action, so sound depends entirely on the friction interface between wet skin and spinning glass. Months to produce reliable clean tones."
     },
     "time_to_expert": {
       "value": 8,
@@ -66,7 +66,7 @@
     "physical_demand": {
       "value": 5,
       "confidence": 0.6,
-      "notes": "Foot pedal maintains spindle rotation. Fingers must maintain precise moisture levels—too wet produces no sound, too dry produces squealing. Historical reports of numbness and nerve sensitivity in players' fingers were once attributed to lead glass (now debunked for modern instruments)."
+      "notes": "Foot pedal maintains spindle rotation. Fingers must maintain precise moisture levels: too wet produces no sound, too dry produces squealing. Historical reports of numbness and nerve sensitivity in players' fingers were once attributed to lead glass (now debunked for modern instruments)."
     },
     "prerequisite_knowledge": {
       "value": 3,

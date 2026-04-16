@@ -22,12 +22,12 @@
       "type": "reference"
     },
     {
-      "title": "Finch-singing contests recognised as cultural heritage — Flanders Today",
+      "title": "Finch-singing contests recognised as cultural heritage, Flanders Today",
       "url": "https://www.flanderstoday.eu/current-affairs/finch-singing-contests-recognised-cultural-heritage",
       "type": "journalism"
     },
     {
-      "title": "Belgium's quirky traditions: Singing contests for finches — Brussels Times",
+      "title": "Belgium's quirky traditions: Singing contests for finches, Brussels Times",
       "url": "https://www.brusselstimes.com/1002057/belgiums-quirky-traditions-singing-contests-for-finches",
       "type": "journalism"
     }
@@ -42,7 +42,7 @@
     "prerequisite_knowledge": { "value": 3, "confidence": 0.7, "notes": "Basic aviculture knowledge is helpful. Understanding chaffinch biology, song development, and the specific dialect variations of Flemish chaffinch calls enhances training effectiveness." },
     "measurability": { "value": 9, "confidence": 0.9, "notes": "Scoring is entirely objective: count the number of valid susk-e-wiet calls in one hour. The highest count wins. There is no subjective component to the judging." },
     "perishability": { "value": 5, "confidence": 0.65, "notes": "Husbandry knowledge is durable. But individual birds have finite competitive lifespans, and each new bird requires a fresh training investment. Breeding program momentum requires continuous effort." },
-    "precision_required": { "value": 5, "confidence": 0.7, "notes": "The trainer must fine-tune environmental conditions -- light, diet, social exposure, acoustic stimulation -- to optimize singing frequency. Judges must precisely discriminate valid from invalid call endings." },
+    "precision_required": { "value": 5, "confidence": 0.7, "notes": "The trainer must fine-tune environmental conditions (light, diet, social exposure, acoustic stimulation) to optimize singing frequency. Judges must precisely discriminate valid from invalid call endings." },
     "ambiguity": { "value": 3, "confidence": 0.7, "notes": "The judging criteria are well-defined: the susk-e-wiet ending is either present or absent. Some disputes arise over borderline calls, but the system is designed for clarity." },
     "instruction_dependency": { "value": 5, "confidence": 0.65, "notes": "Knowledge is traditionally passed within Flemish communities and families. The 13,000+ vinkeniers form a community of practice, but there are no formal schools or certification programs." },
     "environmental_variability": { "value": 5, "confidence": 0.7, "notes": "Weather, temperature, proximity to other birds, street noise, and time of day all affect bird singing behavior. Contests are held outdoors, introducing uncontrollable environmental factors." },
@@ -53,5 +53,11 @@
     "luck_variance": { "value": 6, "confidence": 0.7, "notes": "Individual bird mood, health on competition day, weather, and proximity effects introduce significant randomness. A champion bird may simply refuse to sing on a given day." },
     "social_coordination": { "value": 4, "confidence": 0.7, "notes": "The sport is embedded in Flemish social clubs and community gatherings. Competition organization requires coordination among vinkeniers. But training is an individual pursuit with one's own birds." }
   },
-  "methodology_notes": "Scores based on Wikipedia's comprehensive article on vinkensport, Flanders Today's reporting on cultural heritage designation (2017), and the estimated 13,000 vinkeniers as of 2007. The uniquely high measurability (9) reflects the purely objective counting-based scoring system. Low confidence on several axes reflects the limited English-language academic literature on this niche tradition."
+  "methodology_notes": "Scores based on Wikipedia's comprehensive article on vinkensport, Flanders Today's reporting on cultural heritage designation (2017), and the estimated 13,000 vinkeniers as of 2007. The uniquely high measurability (9) reflects the purely objective counting-based scoring system. Low confidence on several axes reflects the limited English-language academic literature on this niche tradition.",
+  "clip": {
+    "src": "/videos/skills/vinkensport.mp4",
+    "poster": "/images/skills/vinkensport.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

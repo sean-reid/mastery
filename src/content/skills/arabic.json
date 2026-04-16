@@ -2,7 +2,7 @@
   "name": "Arabic (Modern Standard)",
   "slug": "arabic",
   "category": "language",
-  "description": "Arabic's root-and-pattern morphology means most words derive from three-consonant roots (k-t-b yields 'book,' 'writer,' 'library,' 'correspondence') -- an elegant system that also means learners must internalize a second, spoken dialect for daily life, since no Arab community uses Modern Standard Arabic in ordinary conversation.",
+  "description": "Arabic's root-and-pattern morphology means most words derive from three-consonant roots (k-t-b yields 'book,' 'writer,' 'library,' 'correspondence'), an elegant system that also means learners must internalize a second, spoken dialect for daily life, since no Arab community uses Modern Standard Arabic in ordinary conversation.",
   "thumbnail": {
     "src": "/images/skills/arabic.webp",
     "alt": "Arabic calligraphy in Thuluth script on aged parchment",
@@ -46,7 +46,7 @@
     "cognitive_demand": { "value": 8, "confidence": 0.85, "notes": "Root-pattern morphology requires abstract pattern recognition. Pharyngeal and emphatic consonants are articulatorily novel for most learners. Short vowels often unwritten, requiring morphological inference while reading." },
     "physical_demand": { "value": 1, "confidence": 0.95, "notes": "Pharyngeal consonants require unfamiliar throat articulations but are not physically demanding. Right-to-left handwriting is a minor motor adjustment." },
     "prerequisite_knowledge": { "value": 1, "confidence": 0.9, "notes": "No formal prerequisites. Basic literacy in any language is sufficient starting point." },
-    "measurability": { "value": 7, "confidence": 0.8, "notes": "ACTFL and ILR proficiency scales apply. Various standardized tests exist (ALPT, DLPT). However, diglossia complicates assessment -- MSA proficiency does not predict colloquial fluency." },
+    "measurability": { "value": 7, "confidence": 0.8, "notes": "ACTFL and ILR proficiency scales apply. Various standardized tests exist (ALPT, DLPT). However, diglossia complicates assessment: MSA proficiency does not predict colloquial fluency." },
     "perishability": { "value": 6, "confidence": 0.8, "notes": "Arabic script reading speed degrades within weeks of disuse. Pharyngeal consonant production deteriorates without practice. Root-pattern intuition is more durable once internalized." },
     "precision_required": { "value": 7, "confidence": 0.8, "notes": "Short vowel patterns distinguish grammatical case and verb form. Emphatic vs. plain consonants change word meaning. Formal MSA demands precise case endings that even many native speakers struggle with." },
     "ambiguity": { "value": 5, "confidence": 0.75, "notes": "Unvoweled text is highly ambiguous and requires contextual disambiguation. Root system creates semantic transparency but also overloaded homographs. Poetry and Quranic Arabic are especially multi-layered." },

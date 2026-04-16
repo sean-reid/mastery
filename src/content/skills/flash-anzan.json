@@ -2,7 +2,7 @@
   "name": "Flash Anzan",
   "slug": "flash-anzan",
   "category": "academic",
-  "description": "Flash Anzan practitioners visualize a soroban (Japanese abacus) in their mind and manipulate its beads at speeds that defy conscious processing: the current Guinness World Record, set by Rikako Miyamoto in 2024, is the correct summation of 15 three-digit numbers flashed at intervals of roughly 0.1 seconds, completed in 1.61 seconds -- a feat requiring the practitioner to absorb, encode, and accumulate each number before the next one appears.",
+  "description": "Flash Anzan practitioners visualize a soroban (Japanese abacus) in their mind and manipulate its beads at speeds that defy conscious processing: the current Guinness World Record, set by Rikako Miyamoto in 2024, is the correct summation of 15 three-digit numbers flashed at intervals of roughly 0.1 seconds, completed in 1.61 seconds, a feat requiring the practitioner to absorb, encode, and accumulate each number before the next one appears.",
   "thumbnail": {
     "src": "/images/skills/flash-anzan.webp",
     "alt": "Child concentrating during a flash anzan competition with numbers displayed on a large screen",
@@ -62,7 +62,7 @@
     "cognitive_demand": {
       "value": 10,
       "confidence": 0.9,
-      "notes": "At world-record pace, the brain must absorb a three-digit number every ~0.1 seconds, convert it to bead positions on a mental soroban, and accumulate a running total -- a process that saturates visual processing, working memory, and motor imagery simultaneously."
+      "notes": "At world-record pace, the brain must absorb a three-digit number every ~0.1 seconds, convert it to bead positions on a mental soroban, and accumulate a running total, a process that saturates visual processing, working memory, and motor imagery simultaneously."
     },
     "physical_demand": {
       "value": 0,
@@ -107,7 +107,7 @@
     "concurrent_skills": {
       "value": 5,
       "confidence": 0.75,
-      "notes": "Simultaneously requires rapid visual number recognition, maintenance of a mental soroban image, execution of bead movements in mental imagery, running total accumulation, and speed management -- but all within a single narrow cognitive channel."
+      "notes": "Simultaneously requires rapid visual number recognition, maintenance of a mental soroban image, execution of bead movements in mental imagery, running total accumulation, and speed management, but all within a single narrow cognitive channel."
     },
     "plateau_density": {
       "value": 7,

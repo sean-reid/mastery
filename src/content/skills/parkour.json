@@ -22,7 +22,7 @@
       "type": "reference"
     },
     {
-      "title": "Parkour -- art of movement and its injury risk",
+      "title": "Parkour: art of movement and its injury risk",
       "url": "https://pubmed.ncbi.nlm.nih.gov/23860830/",
       "year": 2013,
       "type": "research"
@@ -135,5 +135,11 @@
       "notes": "Primarily individual. Jams and group training are social but performance is solo. Competition is individual."
     }
   },
-  "methodology_notes": "Injury data from PubMed epidemiological studies. Competition format from FIG Parkour World Championships. Training progression timelines from WFPF and coaching community consensus."
+  "methodology_notes": "Injury data from PubMed epidemiological studies. Competition format from FIG Parkour World Championships. Training progression timelines from WFPF and coaching community consensus.",
+  "clip": {
+    "src": "/videos/skills/parkour.mp4",
+    "poster": "/images/skills/parkour.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

@@ -2,7 +2,7 @@
   "name": "Sepak Takraw",
   "slug": "sepak-takraw",
   "category": "sport",
-  "description": "A Southeast Asian court sport played on a badminton-sized court (13.4 x 6.1m) where three-player teams volley a rattan ball over a 1.5m net using only feet, knees, chest, and head -- never hands. The signature move is the bicycle-kick spike, where the striker launches airborne, arches backward, and strikes the ball overhead at roughly 130 km/h. Governed by ISTAF since 1988 and dominated by Thailand and Malaysia, the sport demands gymnastic flexibility, martial-arts agility, and volleyball-level court sense simultaneously.",
+  "description": "A Southeast Asian court sport played on a badminton-sized court (13.4 x 6.1m) where three-player teams volley a rattan ball over a 1.5m net using only feet, knees, chest, and head, never hands. The signature move is the bicycle-kick spike, where the striker launches airborne, arches backward, and strikes the ball overhead at roughly 130 km/h. Governed by ISTAF since 1988 and dominated by Thailand and Malaysia, the sport demands gymnastic flexibility, martial-arts agility, and volleyball-level court sense simultaneously.",
   "thumbnail": {
     "src": "/images/skills/sepak-takraw.webp",
     "alt": "Sepak takraw player executing a mid-air bicycle kick spike over the net",
@@ -36,7 +36,7 @@
     "time_to_competence": {
       "value": 7,
       "confidence": 0.75,
-      "notes": "Basic ball control with feet takes weeks, but the sport's defining techniques -- the bicycle-kick spike, the header set, the inside-foot receive at height -- require months to years. Most players in Southeast Asia begin as children. A newcomer without football or martial arts background will struggle for months to rally consistently."
+      "notes": "Basic ball control with feet takes weeks, but the sport's defining techniques (the bicycle-kick spike, the header set, the inside-foot receive at height) require months to years. Most players in Southeast Asia begin as children. A newcomer without football or martial arts background will struggle for months to rally consistently."
     },
     "time_to_expert": {
       "value": 8,
@@ -86,12 +86,12 @@
     "ambiguity": {
       "value": 2,
       "confidence": 0.85,
-      "notes": "Points are binary -- the ball lands in or out, the net is touched or not. Rules are clear and codified by ISTAF. Referee decisions on faults (hand contact, net violations) are straightforward. No subjective scoring."
+      "notes": "Points are binary: the ball lands in or out, the net is touched or not. Rules are clear and codified by ISTAF. Referee decisions on faults (hand contact, net violations) are straightforward. No subjective scoring."
     },
     "instruction_dependency": {
       "value": 7,
       "confidence": 0.7,
-      "notes": "The bicycle-kick technique is essentially unteachable through self-study alone -- it requires coaching, spotting, and progressive drills. Outside Southeast Asia, finding qualified instruction is extremely difficult. Equipment is simple (a ball and a net) but coaching access is the limiting factor."
+      "notes": "The bicycle-kick technique is essentially unteachable through self-study alone; it requires coaching, spotting, and progressive drills. Outside Southeast Asia, finding qualified instruction is extremely difficult. Equipment is simple (a ball and a net) but coaching access is the limiting factor."
     },
     "environmental_variability": {
       "value": 3,
@@ -101,7 +101,7 @@
     "concurrent_skills": {
       "value": 8,
       "confidence": 0.8,
-      "notes": "A bicycle-kick spike simultaneously requires: jump timing, spatial orientation while inverted, ball tracking, precise foot-to-ball contact, spin control, target selection, and landing preparation -- all within approximately one second. Even receiving demands simultaneous balance, cushioning, and directional control."
+      "notes": "A bicycle-kick spike simultaneously requires: jump timing, spatial orientation while inverted, ball tracking, precise foot-to-ball contact, spin control, target selection, and landing preparation, all within approximately one second. Even receiving demands simultaneous balance, cushioning, and directional control."
     },
     "plateau_density": {
       "value": 7,

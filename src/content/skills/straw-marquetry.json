@@ -2,7 +2,7 @@
   "name": "Straw Marquetry",
   "slug": "straw-marquetry",
   "category": "trade",
-  "description": "Straw marquetry transforms rye or wheat straw into a lustrous veneer: each stem is split lengthwise with a knife, soaked, then ironed flat to reveal a natural silica coating that gives the material its distinctive sheen without any applied finish. The flattened strips—ranging from pale gold to deep brown depending on heat treatment—are cut with a scalpel and glued matte-side-down onto wood, metal, or glass substrates in geometric or figurative patterns. First documented in England in 1677, the craft nearly vanished in the 20th century before Lison de Caunes revived it from her grandfather's Parisian workshop.",
+  "description": "Straw marquetry transforms rye or wheat straw into a lustrous veneer: each stem is split lengthwise with a knife, soaked, then ironed flat to reveal a natural silica coating that gives the material its distinctive sheen without any applied finish. The flattened strips, ranging from pale gold to deep brown depending on heat treatment, are cut with a scalpel and glued matte-side-down onto wood, metal, or glass substrates in geometric or figurative patterns. First documented in England in 1677, the craft nearly vanished in the 20th century before Lison de Caunes revived it from her grandfather's Parisian workshop.",
   "thumbnail": {
     "src": "/images/skills/straw-marquetry.webp",
     "alt": "Detail of straw marquetry panel showing geometric sunburst pattern in gold and brown straw strips on a wooden surface",
@@ -61,7 +61,7 @@
     "cognitive_demand": {
       "value": 6,
       "confidence": 0.65,
-      "notes": "Planning complex geometric patterns requires spatial reasoning. Understanding how straw grain direction affects light reflection—the same strip appears different colors at different angles—demands careful orientation planning. Color grading through heat treatment adds material science knowledge."
+      "notes": "Planning complex geometric patterns requires spatial reasoning. Understanding how straw grain direction affects light reflection (the same strip appears different colors at different angles) demands careful orientation planning. Color grading through heat treatment adds material science knowledge."
     },
     "physical_demand": {
       "value": 3,
@@ -71,12 +71,12 @@
     "prerequisite_knowledge": {
       "value": 4,
       "confidence": 0.65,
-      "notes": "Basic understanding of adhesives and substrates helps. Familiarity with marquetry or inlay principles is beneficial but not required. The primary tool—a folding knife or scalpel—requires no special training beyond basic craft safety."
+      "notes": "Basic understanding of adhesives and substrates helps. Familiarity with marquetry or inlay principles is beneficial but not required. The primary tool, a folding knife or scalpel, requires no special training beyond basic craft safety."
     },
     "measurability": {
       "value": 5,
       "confidence": 0.6,
-      "notes": "Gap-free alignment of strips is objectively assessable. Pattern symmetry can be measured. But the optical effect of straw orientation—how light plays across grain directions—is a largely aesthetic judgment. No competitions or formal grading systems."
+      "notes": "Gap-free alignment of strips is objectively assessable. Pattern symmetry can be measured. But the optical effect of straw orientation (how light plays across grain directions) is a largely aesthetic judgment. No competitions or formal grading systems."
     },
     "perishability": {
       "value": 4,
@@ -91,7 +91,7 @@
     "ambiguity": {
       "value": 5,
       "confidence": 0.6,
-      "notes": "Geometric patterns have clear target specifications. Figurative and decorative designs involve significant aesthetic judgment—color selection, grain orientation for optical effects, composition. The interplay of light and straw angle is central to the art."
+      "notes": "Geometric patterns have clear target specifications. Figurative and decorative designs involve significant aesthetic judgment: color selection, grain orientation for optical effects, composition. The interplay of light and straw angle is central to the art."
     },
     "instruction_dependency": {
       "value": 7,
@@ -134,5 +134,5 @@
       "notes": "Solo craft. Large architectural commissions may involve a small atelier team, but the core design and execution skill is individual. The global community of practitioners is extremely small."
     }
   },
-  "methodology_notes": "Scores draw on the Wikipedia entry, Heritage Crafts' straw working documentation, Fondation Remy Cointreau's profile of the craft, and Fine Woodworking's instructional guide by Gerard Williams. The craft's extreme rarity—with Lison de Caunes as the dominant modern figure—means most scoring is extrapolated from her work and a handful of other practitioners. Confidence is moderate due to the very small population of serious practitioners."
+  "methodology_notes": "Scores draw on the Wikipedia entry, Heritage Crafts' straw working documentation, Fondation Remy Cointreau's profile of the craft, and Fine Woodworking's instructional guide by Gerard Williams. The craft's extreme rarity, with Lison de Caunes as the dominant modern figure, means most scoring is extrapolated from her work and a handful of other practitioners. Confidence is moderate due to the very small population of serious practitioners."
 }

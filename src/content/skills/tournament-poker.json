@@ -2,7 +2,7 @@
   "name": "Tournament Poker",
   "slug": "tournament-poker",
   "category": "game",
-  "description": "No-limit hold'em tournaments are the canonical incomplete-information game, where irrevocable all-in decisions are made on two private cards and probabilistic inference. A Levitt/Miles study found skilled players achieved +30% ROI at the WSOP vs. -15% for the field, yet skill explains only ~17% of hand-level variance -- a world champion can lose to an amateur on any given day.",
+  "description": "No-limit hold'em tournaments are the canonical incomplete-information game, where irrevocable all-in decisions are made on two private cards and probabilistic inference. A Levitt/Miles study found skilled players achieved +30% ROI at the WSOP vs. -15% for the field, yet skill explains only ~17% of hand-level variance, meaning a world champion can lose to an amateur on any given day.",
   "thumbnail": {
     "src": "/images/skills/tournament-poker.webp",
     "alt": "Poker chips and hole cards on a green felt tournament table",
@@ -54,7 +54,7 @@
     "feedback_delay": {
       "value": 5,
       "confidence": 0.75,
-      "notes": "Individual hand results are immediate but deeply misleading -- correct decisions lose money due to variance. Reliable assessment of skill requires 500+ hours of play to separate signal from noise."
+      "notes": "Individual hand results are immediate but deeply misleading; correct decisions lose money due to variance. Reliable assessment of skill requires 500+ hours of play to separate signal from noise."
     },
     "failure_cost": {
       "value": 4,
@@ -124,7 +124,7 @@
     "observability": {
       "value": 5,
       "confidence": 0.8,
-      "notes": "Televised poker with hole-card cameras makes skill visible. Live play is harder to assess -- a great fold looks the same as a bad one to spectators."
+      "notes": "Televised poker with hole-card cameras makes skill visible. Live play is harder to assess; a great fold looks the same as a bad one to spectators."
     },
     "luck_variance": {
       "value": 7,
@@ -137,5 +137,11 @@
       "notes": "Fundamentally an individual game played against other individuals. Table dynamics involve social reading and manipulation. Study groups and coaching stables exist but competition is solo."
     }
   },
-  "methodology_notes": "Scores informed by the Levitt/Miles 2014 WSOP study (Journal of Sports Economics), the 2012 PubMed quasi-experimental study on poker skill vs. chance, and the ScienceDirect study on skill dominance in online poker. Training timelines from established poker coaching resources (BlackRain79, Upswing Poker). The high luck_variance score reflects the well-documented tension between poker's long-term skill component and short-term randomness."
+  "methodology_notes": "Scores informed by the Levitt/Miles 2014 WSOP study (Journal of Sports Economics), the 2012 PubMed quasi-experimental study on poker skill vs. chance, and the ScienceDirect study on skill dominance in online poker. Training timelines from established poker coaching resources (BlackRain79, Upswing Poker). The high luck_variance score reflects the well-documented tension between poker's long-term skill component and short-term randomness.",
+  "clip": {
+    "src": "/videos/skills/tournament-poker.mp4",
+    "poster": "/images/skills/tournament-poker.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

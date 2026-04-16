@@ -2,7 +2,7 @@
   "name": "Hydraulophone",
   "slug": "hydraulophone",
   "category": "instrument",
-  "description": "A hydraulophone is a water organ invented by Steve Mann in 2005 in which pressurized water jets replace the keys of a traditional keyboard: the player produces sound by plugging, partially blocking, or shaping each jet with their fingers, directing water past internal reed or fipple mechanisms. Its unique capability is polyphonic embouchure -- independent timbral and dynamic control of each simultaneous note -- a property no conventional keyboard or wind instrument offers, enabling what Mann calls 'har-melody,' the simultaneous performance of harmony and melody with orchestral expressivity from a single player.",
+  "description": "A hydraulophone is a water organ invented by Steve Mann in 2005 in which pressurized water jets replace the keys of a traditional keyboard: the player produces sound by plugging, partially blocking, or shaping each jet with their fingers, directing water past internal reed or fipple mechanisms. Its unique capability is polyphonic embouchure (independent timbral and dynamic control of each simultaneous note), a property no conventional keyboard or wind instrument offers, enabling what Mann calls 'har-melody,' the simultaneous performance of harmony and melody with orchestral expressivity from a single player.",
   "thumbnail": {
     "src": "/images/skills/hydraulophone.webp",
     "alt": "Close-up of a hydraulophone showing water jets emerging from a curved metal surface with a player's fingers blocking several jets",
@@ -41,12 +41,12 @@
     "time_to_competence": {
       "value": 5,
       "confidence": 0.5,
-      "notes": "The piano-like keyboard layout (26 whole-tone jets in front row, sharps/flats in groups of 2-3 behind) is immediately familiar to keyboard players. However, the hydraulic bond technique -- learning to shape water jets with precise finger pressure -- has no analog in any other instrument and requires novel sensorimotor adaptation."
+      "notes": "The piano-like keyboard layout (26 whole-tone jets in front row, sharps/flats in groups of 2-3 behind) is immediately familiar to keyboard players. However, the hydraulic bond technique (learning to shape water jets with precise finger pressure) has no analog in any other instrument and requires novel sensorimotor adaptation."
     },
     "time_to_expert": {
       "value": 8,
       "confidence": 0.4,
-      "notes": "Polyphonic embouchure -- independent timbral control of each jet while playing multiple notes -- is a technique unique to the hydraulophone with essentially no pedagogical tradition. Ryan Janzen, described as an expert hydraulist, is one of very few advanced players. Almost no data exists on training timelines."
+      "notes": "Polyphonic embouchure, meaning independent timbral control of each jet while playing multiple notes, is a technique unique to the hydraulophone with essentially no pedagogical tradition. Ryan Janzen, described as an expert hydraulist, is one of very few advanced players. Almost no data exists on training timelines."
     },
     "feedback_delay": {
       "value": 1,
@@ -61,7 +61,7 @@
     "cognitive_demand": {
       "value": 7,
       "confidence": 0.55,
-      "notes": "Beyond standard keyboard cognition, the player must manage the hydraulic bond quality at each finger simultaneously -- a continuous, pressure-sensitive interaction unlike the binary key press of a piano. Polyphonic embouchure adds independent per-note timbral control, multiplying the cognitive channels."
+      "notes": "Beyond standard keyboard cognition, the player must manage the hydraulic bond quality at each finger simultaneously, a continuous, pressure-sensitive interaction unlike the binary key press of a piano. Polyphonic embouchure adds independent per-note timbral control, multiplying the cognitive channels."
     },
     "physical_demand": {
       "value": 4,
@@ -86,7 +86,7 @@
     "precision_required": {
       "value": 6,
       "confidence": 0.55,
-      "notes": "The degree of finger insertion and pressure on each water jet continuously modulates pitch, timbre, and volume. Unlike a piano where key depression is binary, every parameter is analog. However, the instrument is somewhat forgiving -- partial jet blockage still produces musical tones."
+      "notes": "The degree of finger insertion and pressure on each water jet continuously modulates pitch, timbre, and volume. Unlike a piano where key depression is binary, every parameter is analog. However, the instrument is somewhat forgiving, and partial jet blockage still produces musical tones."
     },
     "ambiguity": {
       "value": 8,

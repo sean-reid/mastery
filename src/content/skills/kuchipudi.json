@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "Kq1BQtOpdas",
-      "title": "Kuchipudi Tarangam — Dancer performs on brass plate with water pot"
+      "title": "Kuchipudi Tarangam: Dancer performs on brass plate with water pot"
     }
   ],
   "sources": [
@@ -22,7 +22,7 @@
       "type": "reference"
     },
     {
-      "title": "Kuchipudi — Encyclopaedia Britannica",
+      "title": "Kuchipudi (Encyclopaedia Britannica)",
       "url": "https://www.britannica.com/art/kuchipudi",
       "type": "reference"
     },
@@ -32,14 +32,14 @@
       "type": "reference"
     },
     {
-      "title": "Largest Tarangam dance — Guinness World Records",
+      "title": "Largest Tarangam dance (Guinness World Records)",
       "url": "https://www.guinnessworldrecords.com/world-records/108392-largest-tarangam-dance",
       "type": "competition"
     }
   ],
   "scores": {
     "time_to_competence": { "value": 5, "confidence": 0.8, "notes": "Basic adavus (fundamental steps) and simple compositions take 2-3 years of regular training. Performing a complete solo margam (recital program) typically requires 4-5 years." },
-    "time_to_expert": { "value": 9, "confidence": 0.8, "notes": "Mastering the complete repertoire -- including tarangam on brass plate, abhinaya (expressive storytelling), and the demanding Yakshagana dance-drama tradition -- requires 10-15+ years of intensive training under a guru." },
+    "time_to_expert": { "value": 9, "confidence": 0.8, "notes": "Mastering the complete repertoire, including tarangam on brass plate, abhinaya (expressive storytelling), and the demanding Yakshagana dance-drama tradition, requires 10-15+ years of intensive training under a guru." },
     "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "The guru provides immediate correction during practice. Audience response at performances is visible. Loss of balance on the brass plate provides instant physical feedback." },
     "failure_cost": { "value": 5, "confidence": 0.75, "notes": "Falling from a brass plate during tarangam before an audience is dramatic and humiliating. Joint injuries from intensive footwork are common. But most training failures are correctable." },
     "cognitive_demand": { "value": 8, "confidence": 0.85, "notes": "Simultaneously managing complex rhythmic patterns (tala), melodic structure (raga), narrative expression (abhinaya), Sanskrit and Telugu lyrics, hand gestures (mudras), eye movements, and balance. The dance-drama format requires acting while dancing." },

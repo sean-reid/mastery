@@ -2,7 +2,7 @@
   "name": "Foley Artistry",
   "slug": "foley-artistry",
   "category": "performance",
-  "description": "Named after Jack Foley, who pioneered synchronized sound-effect performance at Universal Studios in the late 1920s, foley artistry involves recreating everyday sounds -- footsteps, cloth rustling, door latches, bone crunches -- by performing physical actions in real time while watching film footage. The artist must match on-screen movement to split-second precision, choosing from hundreds of props (celery stalks for breaking bones, coconut shells for hooves, cornstarch-filled leather bags for snow) and modulating force, rhythm, and surface to convey emotional tone.",
+  "description": "Named after Jack Foley, who pioneered synchronized sound-effect performance at Universal Studios in the late 1920s, foley artistry involves recreating everyday sounds (footsteps, cloth rustling, door latches, bone crunches) by performing physical actions in real time while watching film footage. The artist must match on-screen movement to split-second precision, choosing from hundreds of props (celery stalks for breaking bones, coconut shells for hooves, cornstarch-filled leather bags for snow) and modulating force, rhythm, and surface to convey emotional tone.",
   "thumbnail": {
     "src": "/images/skills/foley-artistry.webp",
     "alt": "Foley artist performing sound effects on a studio stage surrounded by props",
@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "UO3N_PRIgX0",
-      "title": "How Foley Artists Create Sound Effects for Movies — Insider"
+      "title": "How Foley Artists Create Sound Effects for Movies, Insider"
     }
   ],
   "sources": [
@@ -32,7 +32,7 @@
       "type": "institutional"
     },
     {
-      "title": "Foley Artist — Berklee College of Music career guide",
+      "title": "Foley Artist, Berklee College of Music career guide",
       "url": "https://www.berklee.edu/careers/roles/foley-artist",
       "type": "institutional"
     }
@@ -41,11 +41,11 @@
     "time_to_competence": { "value": 3, "confidence": 0.75, "notes": "Basic foley techniques (footsteps, simple props) can be learned in weeks. Producing broadcast-quality work synchronized to picture takes 6-12 months of dedicated practice." },
     "time_to_expert": { "value": 7, "confidence": 0.7, "notes": "Mastering the full palette of sounds, developing an intuitive prop library, and achieving the split-second timing required for feature films typically takes 5-10 years. There is no formal certification path." },
     "feedback_delay": { "value": 1, "confidence": 0.85, "notes": "Sound is produced and heard instantly. Playback review against picture reveals sync errors immediately. The foley mixer provides real-time quality feedback during recording." },
-    "failure_cost": { "value": 2, "confidence": 0.8, "notes": "A bad take is simply re-recorded. Foley is non-destructive -- props can be re-tried endlessly. Career risk comes only from consistently poor work or inability to meet tight deadlines." },
+    "failure_cost": { "value": 2, "confidence": 0.8, "notes": "A bad take is simply re-recorded. Foley is non-destructive, and props can be re-tried endlessly. Career risk comes only from consistently poor work or inability to meet tight deadlines." },
     "cognitive_demand": { "value": 7, "confidence": 0.8, "notes": "Simultaneously watching screen action, timing physical movements, selecting and manipulating props, adjusting force and angle for emotional register, and coordinating with the foley mixer." },
     "physical_demand": { "value": 5, "confidence": 0.8, "notes": "Hours of standing, walking on various surfaces, and manipulating props. Some sounds require significant force. Sessions can run 8-12 hours. Repetitive strain is a concern." },
     "prerequisite_knowledge": { "value": 3, "confidence": 0.75, "notes": "Basic understanding of sound recording, film production workflow, and acoustics helps. No formal degree required, but audio engineering knowledge accelerates learning." },
-    "measurability": { "value": 6, "confidence": 0.8, "notes": "Sync accuracy is objectively measurable (frame-accurate or not). Sound quality can be evaluated against reference recordings. But creative choices -- which prop, which texture -- remain subjective." },
+    "measurability": { "value": 6, "confidence": 0.8, "notes": "Sync accuracy is objectively measurable (frame-accurate or not). Sound quality can be evaluated against reference recordings. But creative choices (which prop, which texture) remain subjective." },
     "perishability": { "value": 4, "confidence": 0.7, "notes": "Physical timing skills degrade without practice, but the core knowledge of which props produce which sounds is durable. Prop library knowledge accumulates and persists." },
     "precision_required": { "value": 8, "confidence": 0.85, "notes": "Synchronization must be accurate to within 1-2 film frames (roughly 40-80 milliseconds). Force modulation must match on-screen action intensity precisely." },
     "ambiguity": { "value": 5, "confidence": 0.75, "notes": "The target sound is usually clear (footsteps, door close), but which prop and technique best serves the scene's emotional needs involves artistic judgment." },
@@ -54,7 +54,7 @@
     "concurrent_skills": { "value": 7, "confidence": 0.8, "notes": "Visual tracking, physical performance, acoustic awareness, creative problem-solving, and collaboration with the mixer and sound designer must happen simultaneously." },
     "plateau_density": { "value": 5, "confidence": 0.7, "notes": "Plateaus at the transition from basic footsteps to nuanced character work, and from short-form work to feature-length films requiring thousands of individually crafted sounds." },
     "domain_evolution": { "value": 4, "confidence": 0.75, "notes": "Core techniques are unchanged since the 1930s. Digital recording and immersive audio formats (Dolby Atmos) have added spatial complexity, but the fundamental craft of performing sound remains the same." },
-    "observability": { "value": 6, "confidence": 0.8, "notes": "The performance itself is dramatic and fascinating to watch, but the final product is invisible by design -- successful foley is foley the audience never notices." },
+    "observability": { "value": 6, "confidence": 0.8, "notes": "The performance itself is dramatic and fascinating to watch, but the final product is invisible by design. Successful foley is foley the audience never notices." },
     "luck_variance": { "value": 3, "confidence": 0.75, "notes": "Career advancement depends on studio relationships and being available when projects arise. But quality of work is directly audible and reputation spreads reliably in the small foley community." },
     "social_coordination": { "value": 5, "confidence": 0.8, "notes": "Always works closely with a foley mixer and under direction from the supervising sound editor. Team coordination is essential during recording sessions." }
   },

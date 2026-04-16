@@ -2,7 +2,7 @@
   "name": "Scientific Glassblowing",
   "slug": "scientific-glassblowing",
   "category": "technology",
-  "description": "A scientific glassblower fabricates custom laboratory apparatus from borosilicate glass (melting point ~1,650 C), working on a glassblowing lathe with oxygen-fuel torches to join, bend, and seal tubing to tolerances of fractions of a millimeter — a cracked seal on a vacuum line can ruin months of physics research. After completing a two-year associate degree at Salem Community College (the only US program), graduates face a 7,000-8,000 hour apprenticeship to reach journeyman status. The American Scientific Glassblowers Society has roughly 650 members; the broader US practitioner population is estimated at around 2,000, supporting university labs, pharmaceutical firms, and particle accelerator facilities.",
+  "description": "A scientific glassblower fabricates custom laboratory apparatus from borosilicate glass (melting point ~1,650 C), working on a glassblowing lathe with oxygen-fuel torches to join, bend, and seal tubing to tolerances of fractions of a millimeter, and a cracked seal on a vacuum line can ruin months of physics research. After completing a two-year associate degree at Salem Community College (the only US program), graduates face a 7,000-8,000 hour apprenticeship to reach journeyman status. The American Scientific Glassblowers Society has roughly 650 members; the broader US practitioner population is estimated at around 2,000, supporting university labs, pharmaceutical firms, and particle accelerator facilities.",
   "thumbnail": {
     "src": "/images/skills/scientific-glassblowing.webp",
     "alt": "Scientific glassblower shaping borosilicate tubing on a lathe with an oxygen torch",
@@ -54,9 +54,15 @@
     "concurrent_skills": { "value": 6, "confidence": 0.7, "notes": "Simultaneously managing lathe speed, torch position, glass rotation, wall thickness by sight, and internal pressure while reading technical drawings. Less time-critical than furnace glassblowing but more technically layered." },
     "plateau_density": { "value": 6, "confidence": 0.65, "notes": "Rapid early gains in basic joining and bending. Significant plateaus when transitioning to quartz work, complex vacuum manifolds, and glass-to-metal seals. Production speed improvements slow dramatically after year five." },
     "domain_evolution": { "value": 3, "confidence": 0.7, "notes": "Core lampworking techniques are decades old. Modern additions include laser welding, CNC-assisted cutting, and computer-aided design. But hand skills on the lathe remain the foundation." },
-    "observability": { "value": 7, "confidence": 0.75, "notes": "The quality difference between novice and expert work is clearly visible — uneven walls, cloudy seals, asymmetric joints are obvious. Vacuum test results provide unambiguous numeric feedback." },
-    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Glass behavior is highly deterministic. Failures are almost always attributable to technique — wrong flame chemistry, incorrect annealing, poor rotation speed. Occasional glass defects from the manufacturer are the primary random factor." },
+    "observability": { "value": 7, "confidence": 0.75, "notes": "The quality difference between novice and expert work is clearly visible: uneven walls, cloudy seals, asymmetric joints are obvious. Vacuum test results provide unambiguous numeric feedback." },
+    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Glass behavior is highly deterministic. Failures are almost always attributable to technique: wrong flame chemistry, incorrect annealing, poor rotation speed. Occasional glass defects from the manufacturer are the primary random factor." },
     "social_coordination": { "value": 2, "confidence": 0.8, "notes": "Fundamentally solo bench work. The glassblower consults with researchers to understand requirements but executes alone. ASGS meetings provide community but not collaborative production." }
   },
-  "methodology_notes": "Scores draw on the ASGS membership data, Salem Community College curriculum documentation, Wikipedia's scientific glassblowing article, and published accounts from university glass shops at UC Berkeley, Purdue, and UMass. The 7,000-8,000 hour apprenticeship figure comes from ILPI's Scientific Glassblowing Learning Center. Practitioner estimates (~2,000 US) are from industry reporting."
+  "methodology_notes": "Scores draw on the ASGS membership data, Salem Community College curriculum documentation, Wikipedia's scientific glassblowing article, and published accounts from university glass shops at UC Berkeley, Purdue, and UMass. The 7,000-8,000 hour apprenticeship figure comes from ILPI's Scientific Glassblowing Learning Center. Practitioner estimates (~2,000 US) are from industry reporting.",
+  "clip": {
+    "src": "/videos/skills/scientific-glassblowing.mp4",
+    "poster": "/images/skills/scientific-glassblowing.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

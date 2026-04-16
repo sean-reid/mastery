@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "rNKoE2JsLhU",
-      "title": "Lofting the Lines — Rebuilding Tally Ho EP24 (Sampson Boat Co)"
+      "title": "Lofting the Lines: Rebuilding Tally Ho EP24 (Sampson Boat Co)"
     }
   ],
   "sources": [
@@ -51,7 +51,7 @@
     "feedback_delay": {
       "value": 5,
       "confidence": 0.7,
-      "notes": "Errors in the lofting are not apparent until the boat is being built — when molds do not align or planks refuse to lie fair. A subtle unfairness in a line that looks acceptable on the floor may produce an obvious bump in the finished hull."
+      "notes": "Errors in the lofting are not apparent until the boat is being built, when molds do not align or planks refuse to lie fair. A subtle unfairness in a line that looks acceptable on the floor may produce an obvious bump in the finished hull."
     },
     "failure_cost": {
       "value": 5,
@@ -76,7 +76,7 @@
     "measurability": {
       "value": 6,
       "confidence": 0.7,
-      "notes": "Offset accuracy is objectively measurable. Fairness of curves can be checked with straight edges and by eye. The ultimate test — whether the boat builds correctly from the lofting — is definitive but delayed."
+      "notes": "Offset accuracy is objectively measurable. Fairness of curves can be checked with straight edges and by eye. The ultimate test, whether the boat builds correctly from the lofting, is definitive but delayed."
     },
     "perishability": {
       "value": 5,
@@ -86,7 +86,7 @@
     "precision_required": {
       "value": 7,
       "confidence": 0.75,
-      "notes": "Offsets are measured to 1/8 inch (traditional) or millimeters. Lines must be faired to visual smoothness. Small errors compound across the hull — a 3mm deviation in a waterline may produce a visible unfairness in a 30-foot boat."
+      "notes": "Offsets are measured to 1/8 inch (traditional) or millimeters. Lines must be faired to visual smoothness. Small errors compound across the hull; a 3mm deviation in a waterline may produce a visible unfairness in a 30-foot boat."
     },
     "ambiguity": {
       "value": 5,
@@ -101,7 +101,7 @@
     "environmental_variability": {
       "value": 3,
       "confidence": 0.75,
-      "notes": "Requires a large, flat, clean floor — the 'loft.' Temperature and humidity affect paper and plywood dimensionally. Otherwise, the environment is controlled and stable."
+      "notes": "Requires a large, flat, clean floor (the 'loft'). Temperature and humidity affect paper and plywood dimensionally. Otherwise, the environment is controlled and stable."
     },
     "concurrent_skills": {
       "value": 5,
@@ -134,5 +134,11 @@
       "notes": "Fundamentally solo work on the loft floor. Coordination with the naval architect (interpreting the design) and boatbuilders (delivering templates) is necessary but intermittent."
     }
   },
-  "methodology_notes": "Scores draw on Wikipedia's lofting article, WoodenBoat School's published curriculum, Sandy Point Boat Works' documentation, and Douglas Brooks' lofting and lines-taking descriptions. The skill survives almost exclusively in the wooden boatbuilding community, making practitioner data sparse. The transition from hand lofting to CAD in the 1970s means that expert-level hand loftsmen are increasingly rare."
+  "methodology_notes": "Scores draw on Wikipedia's lofting article, WoodenBoat School's published curriculum, Sandy Point Boat Works' documentation, and Douglas Brooks' lofting and lines-taking descriptions. The skill survives almost exclusively in the wooden boatbuilding community, making practitioner data sparse. The transition from hand lofting to CAD in the 1970s means that expert-level hand loftsmen are increasingly rare.",
+  "clip": {
+    "src": "/videos/skills/traditional-boat-lofting.mp4",
+    "poster": "/images/skills/traditional-boat-lofting.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

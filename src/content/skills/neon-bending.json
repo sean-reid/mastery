@@ -46,7 +46,7 @@
     "time_to_expert": {
       "value": 8,
       "confidence": 0.65,
-      "notes": "Full proficiency—complex script fonts, double-back bends, splice welds, and consistent production speed—requires 5-10 years. Heritage Crafts notes the craft requires years of apprenticeship. Many veterans have 25+ years experience."
+      "notes": "Full proficiency (complex script fonts, double-back bends, splice welds, and consistent production speed) requires 5-10 years. Heritage Crafts notes the craft requires years of apprenticeship. Many veterans have 25+ years experience."
     },
     "feedback_delay": {
       "value": 2,
@@ -86,7 +86,7 @@
     "precision_required": {
       "value": 8,
       "confidence": 0.75,
-      "notes": "Each bend must match the pattern within millimeters. Tube diameter must remain consistent—a slight over-blow creates a bulge, under-blow causes collapse. Splice welds must be airtight for vacuum integrity."
+      "notes": "Each bend must match the pattern within millimeters. Tube diameter must remain consistent; a slight over-blow creates a bulge, under-blow causes collapse. Splice welds must be airtight for vacuum integrity."
     },
     "ambiguity": {
       "value": 3,
@@ -126,7 +126,7 @@
     "luck_variance": {
       "value": 2,
       "confidence": 0.75,
-      "notes": "Very little randomness. Failures are almost always attributable to technique errors—wrong temperature, bad timing, inconsistent air pressure. Occasional glass defects exist but are rare."
+      "notes": "Very little randomness. Failures are almost always attributable to technique errors: wrong temperature, bad timing, inconsistent air pressure. Occasional glass defects exist but are rare."
     },
     "social_coordination": {
       "value": 2,

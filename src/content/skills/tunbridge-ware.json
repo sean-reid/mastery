@@ -2,7 +2,7 @@
   "name": "Tunbridge Ware",
   "slug": "tunbridge-ware",
   "category": "trade",
-  "description": "Tunbridge ware is a micro-mosaic woodworking technique perfected in Kent, England, between 1830 and 1900: the maker assembles hundreds of thin rods of naturally colored woods—oak, holly, cherry, yew, sycamore—into a tight bundle whose cross-section forms a pictorial image, then slices the bundle with a fine saw to produce many identical veneer sheets. Each rod may be less than one millimeter square. The final firm, Boyce, Brown and Kemp, closed in 1927, and the technique is now practiced by only a handful of marquetarians worldwide.",
+  "description": "Tunbridge ware is a micro-mosaic woodworking technique perfected in Kent, England, between 1830 and 1900: the maker assembles hundreds of thin rods of naturally colored woods (oak, holly, cherry, yew, sycamore) into a tight bundle whose cross-section forms a pictorial image, then slices the bundle with a fine saw to produce many identical veneer sheets. Each rod may be less than one millimeter square. The final firm, Boyce, Brown and Kemp, closed in 1927, and the technique is now practiced by only a handful of marquetarians worldwide.",
   "thumbnail": {
     "src": "/images/skills/tunbridge-ware.webp",
     "alt": "Victorian Tunbridge ware box lid showing a tessellated mosaic of a castle scene formed from tiny colored wood pieces",
@@ -41,7 +41,7 @@
     "time_to_expert": {
       "value": 9,
       "confidence": 0.55,
-      "notes": "The finest Victorian examples—photographic-quality castle or floral scenes in sub-millimeter tesserae—represent a level of mastery that took the Burrows and Nye families decades of continuous practice. No modern practitioner has matched the best 19th-century work."
+      "notes": "The finest Victorian examples, featuring photographic-quality castle or floral scenes in sub-millimeter tesserae, represent a level of mastery that took the Burrows and Nye families decades of continuous practice. No modern practitioner has matched the best 19th-century work."
     },
     "feedback_delay": {
       "value": 6,
@@ -71,7 +71,7 @@
     "measurability": {
       "value": 5,
       "confidence": 0.6,
-      "notes": "Rod alignment precision can be measured. Image fidelity is somewhat objective but aesthetic quality—color harmony, compositional choice—is subjective. No competitions or grading systems exist."
+      "notes": "Rod alignment precision can be measured. Image fidelity is somewhat objective but aesthetic quality (color harmony, compositional choice) is subjective. No competitions or grading systems exist."
     },
     "perishability": {
       "value": 5,

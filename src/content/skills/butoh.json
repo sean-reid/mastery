@@ -2,7 +2,7 @@
   "name": "Butoh",
   "slug": "butoh",
   "category": "performance",
-  "description": "Butoh is a Japanese avant-garde dance form founded in 1959 by Tatsumi Hijikata and Kazuo Ohno as a visceral reaction against Western cultural influence and the trauma of the atomic bombings. Traditionally performed in white body paint (shironuri) with shaved heads, butoh is characterized by agonizingly slow, hyper-controlled movement, grotesque imagery, and the deliberate dissolution of the boundary between performer and audience. Hijikata rejected codification of his methods, instead training dancers through surreal image-prompts called butoh-fu (notational butoh) -- thousands of small choreographic units driven by language and imagery rather than counted steps.",
+  "description": "Butoh is a Japanese avant-garde dance form founded in 1959 by Tatsumi Hijikata and Kazuo Ohno as a visceral reaction against Western cultural influence and the trauma of the atomic bombings. Traditionally performed in white body paint (shironuri) with shaved heads, butoh is characterized by agonizingly slow, hyper-controlled movement, grotesque imagery, and the deliberate dissolution of the boundary between performer and audience. Hijikata rejected codification of his methods, instead training dancers through surreal image-prompts called butoh-fu (notational butoh): thousands of small choreographic units driven by language and imagery rather than counted steps.",
   "thumbnail": {
     "src": "/images/skills/butoh.webp",
     "alt": "Butoh dancer in white body paint performing an agonizingly slow movement on a dark stage",
@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "CEHFMz_EYXE",
-      "title": "Sankai Juku — UMUSUNA: Memories Before History (butoh performance excerpt)"
+      "title": "Sankai Juku: UMUSUNA, Memories Before History (butoh performance excerpt)"
     }
   ],
   "sources": [
@@ -27,19 +27,19 @@
       "type": "reference"
     },
     {
-      "title": "A History of Butoh Dance — Stanford Live",
+      "title": "A History of Butoh Dance (Stanford Live)",
       "url": "https://live.stanford.edu/blog/september-2023/history-butoh-dance",
       "type": "institutional"
     },
     {
-      "title": "Butoh Ecologies: Dance Practice as Training — Stanford Humanities Center",
+      "title": "Butoh Ecologies: Dance Practice as Training (Stanford Humanities Center)",
       "url": "https://shc.stanford.edu/arcade/interventions/butoh-ecologies-dance-practice-training-new-relationship-environment",
       "type": "research"
     }
   ],
   "scores": {
     "time_to_competence": { "value": 3, "confidence": 0.7, "notes": "Butoh workshops often produce performable work within weeks. The absence of codified technique means beginners can engage immediately with image-based movement. However, achieving genuine depth takes much longer." },
-    "time_to_expert": { "value": 7, "confidence": 0.65, "notes": "Mastery of butoh's internal states -- the ability to transform the body through sustained concentration and surrender to imagery -- requires years of practice. Leading practitioners like Sankai Juku's Amagatsu Ushio have devoted decades." },
+    "time_to_expert": { "value": 7, "confidence": 0.65, "notes": "Mastery of butoh's internal states (the ability to transform the body through sustained concentration and surrender to imagery) requires years of practice. Leading practitioners like Sankai Juku's Amagatsu Ushio have devoted decades." },
     "feedback_delay": { "value": 5, "confidence": 0.7, "notes": "Butoh prioritizes internal experience over external form. The performer cannot fully see their own body. Audience reactions may not indicate the quality of the internal process. Video review helps but cannot capture the felt dimension." },
     "failure_cost": { "value": 2, "confidence": 0.75, "notes": "The avant-garde context is forgiving of unconventional outcomes. There is no 'wrong' movement in the way there is in ballet. Physical injury from extreme positions is a modest risk." },
     "cognitive_demand": { "value": 7, "confidence": 0.7, "notes": "Maintaining extreme concentration during slow, sustained movement requires intense mental discipline. Processing butoh-fu image prompts while allowing the body to respond organically demands simultaneous analytical and intuitive engagement." },
@@ -47,7 +47,7 @@
     "prerequisite_knowledge": { "value": 3, "confidence": 0.7, "notes": "No formal dance training is required. Understanding of Japanese post-war cultural context enriches practice but is not essential. Hijikata explicitly welcomed untrained bodies." },
     "measurability": { "value": 2, "confidence": 0.75, "notes": "There are no competitions, rankings, exams, or standardized criteria. Quality is evaluated entirely through subjective audience and peer response. The art deliberately resists quantification." },
     "perishability": { "value": 5, "confidence": 0.65, "notes": "The physical control and concentration required for extreme slowness degrades without practice. But the imagery-based approach means conceptual understanding is durable even if execution fades." },
-    "precision_required": { "value": 6, "confidence": 0.7, "notes": "While there are no 'correct positions,' butoh demands extraordinary precision of speed control -- moving at the edge of perceptibility requires micro-muscular control rivaling any dance form." },
+    "precision_required": { "value": 6, "confidence": 0.7, "notes": "While there are no 'correct positions,' butoh demands extraordinary precision of speed control; moving at the edge of perceptibility requires micro-muscular control rivaling any dance form." },
     "ambiguity": { "value": 9, "confidence": 0.85, "notes": "Butoh is defined by ambiguity. Hijikata said he believed 'neither in a dance teaching method nor in controlling movement.' There is no consensus on what constitutes 'good' butoh. The form embraces the grotesque, taboo, and inexplicable." },
     "instruction_dependency": { "value": 4, "confidence": 0.7, "notes": "Some practitioners train extensively under masters (Ohno, Hijikata, their lineages). Others develop independently. The absence of codified technique means self-directed exploration is viable, though master-student transmission carries unique knowledge." },
     "environmental_variability": { "value": 6, "confidence": 0.7, "notes": "Performances occur in theaters, streets, forests, rooftops, and public spaces. The body-as-instrument approach means butoh adapts to any environment, but each space profoundly changes the performance." },
@@ -58,5 +58,11 @@
     "luck_variance": { "value": 2, "confidence": 0.7, "notes": "Without competitions or auditions, there is little role for luck in the traditional sense. Career visibility depends on curatorial decisions and festival programming." },
     "social_coordination": { "value": 3, "confidence": 0.75, "notes": "Many butoh works are solo. Ensemble pieces (like Sankai Juku's) require coordination, but the core practice is developed in solitary exploration." }
   },
-  "methodology_notes": "Scores based on Wikipedia's comprehensive article on butoh, Stanford's academic resources on butoh practice, and the documented approaches of Hijikata (butoh-fu system) and Ohno (improvisation-based). The high ambiguity score (9) reflects butoh's deliberate resistance to codification and standardization. Sankai Juku's five-decade career anchors the time_to_expert estimate."
+  "methodology_notes": "Scores based on Wikipedia's comprehensive article on butoh, Stanford's academic resources on butoh practice, and the documented approaches of Hijikata (butoh-fu system) and Ohno (improvisation-based). The high ambiguity score (9) reflects butoh's deliberate resistance to codification and standardization. Sankai Juku's five-decade career anchors the time_to_expert estimate.",
+  "clip": {
+    "src": "/videos/skills/butoh.mp4",
+    "poster": "/images/skills/butoh.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

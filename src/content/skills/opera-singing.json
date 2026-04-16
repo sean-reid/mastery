@@ -2,7 +2,7 @@
   "name": "Opera Singing",
   "slug": "opera-singing",
   "category": "performance",
-  "description": "Opera singers train for a decade or more to project their unamplified voices over a full orchestra and into houses seating up to 4,000, exploiting the 'singer's formant' -- a concentration of acoustic energy around 2,800-3,400 Hz that allows the human voice to cut through orchestral sound. The bel canto pedagogical tradition, codified by Manuel Garcia in the 1840s, emphasizes breath support, legato phrasing, and seamless register transitions (passaggio), skills that require years of daily vocalise to master safely.",
+  "description": "Opera singers train for a decade or more to project their unamplified voices over a full orchestra and into houses seating up to 4,000, exploiting the 'singer's formant,' a concentration of acoustic energy around 2,800-3,400 Hz that allows the human voice to cut through orchestral sound. The bel canto pedagogical tradition, codified by Manuel Garcia in the 1840s, emphasizes breath support, legato phrasing, and seamless register transitions (passaggio), skills that require years of daily vocalise to master safely.",
   "thumbnail": {
     "src": "/images/skills/opera-singing.webp",
     "alt": "Opera singer performing on stage in full costume at a grand opera house",
@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "rTFUM4Uh_6Y",
-      "title": "Luciano Pavarotti — Nessun Dorma (1980, with Zubin Mehta and the New York Philharmonic)"
+      "title": "Luciano Pavarotti: Nessun Dorma (1980, with Zubin Mehta and the New York Philharmonic)"
     }
   ],
   "sources": [
@@ -32,7 +32,7 @@
       "type": "community"
     },
     {
-      "title": "Voice & Opera — San Francisco Conservatory of Music",
+      "title": "Voice & Opera (San Francisco Conservatory of Music)",
       "url": "https://sfcm.edu/study/majors/voice",
       "type": "institutional"
     }

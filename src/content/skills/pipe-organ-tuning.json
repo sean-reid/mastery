@@ -2,7 +2,7 @@
   "name": "Pipe Organ Tuning",
   "slug": "pipe-organ-tuning",
   "category": "technology",
-  "description": "A pipe organ tuner adjusts every pipe in an instrument — large cathedral organs contain 5,000 to 10,000 or more pipes organized into ranks — so that they sound in tune with each other according to a chosen temperament, working pipe by pipe with a tuning knife to tap metal tuning slides up or down by fractions of a millimeter. The UK's Institute for Apprenticeships certifies a 36-month organ builder apprenticeship at Level 3, covering design, voicing, and tuning. Because organ pipe pitch varies with temperature (a 10 C rise raises pitch by ~1.8%), tuners must recalibrate seasonally, and a full tuning of a large instrument takes 10-12 hours of painstaking aural comparison.",
+  "description": "A pipe organ tuner adjusts every pipe in an instrument (large cathedral organs contain 5,000 to 10,000 or more pipes organized into ranks) so that they sound in tune with each other according to a chosen temperament, working pipe by pipe with a tuning knife to tap metal tuning slides up or down by fractions of a millimeter. The UK's Institute for Apprenticeships certifies a 36-month organ builder apprenticeship at Level 3, covering design, voicing, and tuning. Because organ pipe pitch varies with temperature (a 10 C rise raises pitch by ~1.8%), tuners must recalibrate seasonally, and a full tuning of a large instrument takes 10-12 hours of painstaking aural comparison.",
   "thumbnail": {
     "src": "/images/skills/pipe-organ-tuning.webp",
     "alt": "Organ tuner adjusting metal pipe tuning slides inside a large church pipe organ",
@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "M3XB6XwfMcg",
-      "title": "How Do You Tune a Pipe Organ? — Inside the Organ Loft"
+      "title": "How Do You Tune a Pipe Organ? Inside the Organ Loft"
     }
   ],
   "sources": [
@@ -41,23 +41,29 @@
     "time_to_competence": { "value": 6, "confidence": 0.75, "notes": "The UK organ builder apprenticeship is 36 months. After completion, a tuner can maintain familiar instruments. However, competent seasonal tuning of a large instrument still requires supervised experience beyond the apprenticeship." },
     "time_to_expert": { "value": 8, "confidence": 0.7, "notes": "Expert tuners who can voice and tune historic instruments in period temperaments, diagnose subtle tonal problems, and tune a 10,000-pipe instrument efficiently require 10-15 years of experience. Many top tuners have 25+ years in the field." },
     "feedback_delay": { "value": 2, "confidence": 0.85, "notes": "Each pipe's pitch is immediately audible. Beats between pipes are heard in real time. However, the full effect of a tuning pass is only apparent when the organist plays the complete instrument, and temperature changes can undo work within hours." },
-    "failure_cost": { "value": 4, "confidence": 0.7, "notes": "Mis-tuning is correctable — pipes are not permanently damaged by being tuned slightly sharp or flat. But excessive force with a tuning knife can dent or crack a pipe. Historic instruments are irreplaceable; damage during tuning is catastrophic." },
+    "failure_cost": { "value": 4, "confidence": 0.7, "notes": "Mis-tuning is correctable; pipes are not permanently damaged by being tuned slightly sharp or flat. But excessive force with a tuning knife can dent or crack a pipe. Historic instruments are irreplaceable; damage during tuning is catastrophic." },
     "cognitive_demand": { "value": 7, "confidence": 0.75, "notes": "Must internalize the mathematics of temperament, judge beat frequencies by ear, understand how temperature and humidity affect different pipe materials at different rates, and manage the interaction of thousands of pipes across ranks." },
-    "physical_demand": { "value": 5, "confidence": 0.75, "notes": "Working inside organ chambers requires climbing ladders, reaching into tight spaces, and standing for hours in cold or hot environments. The physical demands are moderate but sustained — a full tuning takes 10-12 hours." },
+    "physical_demand": { "value": 5, "confidence": 0.75, "notes": "Working inside organ chambers requires climbing ladders, reaching into tight spaces, and standing for hours in cold or hot environments. The physical demands are moderate but sustained; a full tuning takes 10-12 hours." },
     "prerequisite_knowledge": { "value": 5, "confidence": 0.75, "notes": "Musical training, particularly ear training and keyboard fluency, is essential. Understanding of acoustics, temperament systems, and organ construction is built during the apprenticeship. Physics and metallurgy help." },
-    "measurability": { "value": 7, "confidence": 0.8, "notes": "Pitch can be measured precisely with electronic tuning devices. Beat frequencies between intervals are objectively audible. However, the aesthetic quality of voicing — brightness, warmth, blend — remains a subjective judgment." },
+    "measurability": { "value": 7, "confidence": 0.8, "notes": "Pitch can be measured precisely with electronic tuning devices. Beat frequencies between intervals are objectively audible. However, the aesthetic quality of voicing (brightness, warmth, blend) remains a subjective judgment." },
     "perishability": { "value": 4, "confidence": 0.7, "notes": "Ear training degrades without regular practice. Familiarity with specific instruments fades. But the fundamental knowledge of temperament and tuning technique is conceptual and durable." },
     "precision_required": { "value": 8, "confidence": 0.8, "notes": "Pipes must be tuned to within 1-2 cents of target pitch. In unequal temperaments, specific intervals must beat at precise rates. A tuning slide movement of less than a millimeter changes pitch audibly." },
-    "ambiguity": { "value": 5, "confidence": 0.7, "notes": "Equal temperament is mathematically defined, but many historic organs use unequal temperaments where the 'correct' tuning is debated among scholars. Voicing decisions — how bright or warm a stop should sound — are inherently subjective." },
+    "ambiguity": { "value": 5, "confidence": 0.7, "notes": "Equal temperament is mathematically defined, but many historic organs use unequal temperaments where the 'correct' tuning is debated among scholars. Voicing decisions, such as how bright or warm a stop should sound, are inherently subjective." },
     "instruction_dependency": { "value": 7, "confidence": 0.75, "notes": "Apprenticeship under an experienced tuner is the standard path. Ear training for beat frequencies and the tactile skill of handling tuning tools near delicate pipes require in-person mentorship. The Institute of British Organ Building oversees formal training." },
-    "environmental_variability": { "value": 7, "confidence": 0.8, "notes": "Temperature is the primary variable — a 10 C change shifts pitch by ~1.8%, and metal and wooden pipes respond differently. Church heating systems, seasonal changes, and even congregation body heat affect tuning. Each venue is unique." },
+    "environmental_variability": { "value": 7, "confidence": 0.8, "notes": "Temperature is the primary variable: a 10 C change shifts pitch by ~1.8%, and metal and wooden pipes respond differently. Church heating systems, seasonal changes, and even congregation body heat affect tuning. Each venue is unique." },
     "concurrent_skills": { "value": 5, "confidence": 0.7, "notes": "Listening for beat frequencies while physically adjusting pipes, mentally tracking progress across ranks, and compensating for temperature drift. Less simultaneous than real-time performance crafts but requires sustained divided attention." },
     "plateau_density": { "value": 6, "confidence": 0.65, "notes": "Initial progress in tuning unisons and octaves is rapid. Plateaus emerge when learning to tune thirds and fifths in unequal temperaments, and again when developing the speed needed for professional maintenance schedules." },
-    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "Organ tuning technique has been essentially unchanged for centuries. Electronic tuning aids are available but many tuners still work primarily by ear. The fundamental tool — a tuning knife — is ancient." },
+    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "Organ tuning technique has been essentially unchanged for centuries. Electronic tuning aids are available but many tuners still work primarily by ear. The fundamental tool, the tuning knife, is ancient." },
     "observability": { "value": 6, "confidence": 0.7, "notes": "A well-tuned organ versus an out-of-tune one is obvious to any listener. But the subtleties distinguishing good from excellent tuning require a trained ear. The tuning process itself is invisible to audiences." },
     "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Tuning outcomes are deterministic. If the organ goes out of tune after a session, it is due to temperature changes, not chance. The tuner's skill directly determines the result." },
     "social_coordination": { "value": 3, "confidence": 0.75, "notes": "Primarily solo work inside the organ chamber, sometimes with an assistant operating the blower or playing notes. Communication with organists and clergy about scheduling and priorities adds a coordination layer." }
   },
   "methodology_notes": "Scores draw on Wikipedia's pipe organ tuning article, the UK Institute for Apprenticeships organ builder standard, Duke University Chapel's organ tuning FAQ, and published accounts from organ builders including Harrison & Harrison. The 36-month apprenticeship and temperature sensitivity figures come from official UK standards. The 10-12 hour tuning duration for large instruments is widely reported across multiple organ maintenance firms.",
-  "interactive": "beat-detector"
+  "interactive": "beat-detector",
+  "clip": {
+    "src": "/videos/skills/pipe-organ-tuning.mp4",
+    "poster": "/images/skills/pipe-organ-tuning.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

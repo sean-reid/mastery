@@ -43,7 +43,7 @@
     "time_to_competence": {
       "value": 4,
       "confidence": 0.85,
-      "notes": "Rules are minimal (can be learned in minutes), but playing a coherent game requires understanding of life/death, territory, and basic joseki -- typically weeks to months."
+      "notes": "Rules are minimal (can be learned in minutes), but playing a coherent game requires understanding of life/death, territory, and basic joseki, typically weeks to months."
     },
     "time_to_expert": {
       "value": 10,
@@ -58,7 +58,7 @@
     "failure_cost": {
       "value": 2,
       "confidence": 0.85,
-      "notes": "A lost game costs only rating points. However, failing professional examinations in Korea or Japan can end a career path entirely -- aspiring pros in Japan's insei system face age-based expulsion."
+      "notes": "A lost game costs only rating points. However, failing professional examinations in Korea or Japan can end a career path entirely. Aspiring pros in Japan's insei system face age-based expulsion."
     },
     "cognitive_demand": {
       "value": 10,

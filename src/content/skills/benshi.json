@@ -2,7 +2,7 @@
   "name": "Benshi",
   "slug": "benshi",
   "category": "performance",
-  "description": "Benshi (literally 'orator') are Japanese live narrators who accompany silent films, voicing every character, providing dramatic commentary, and interpreting the story for the audience -- all in real time beside the screen. At their peak in the 1920s, over 7,000 benshi performed across Japan; today, approximately 15 practitioners keep the tradition alive. Training follows the traditional master-student (shitei) system adapted from kabuki and bunraku; the most prominent modern benshi, Ichiro Kataoka, apprenticed under master Midori Sawato beginning in 2002 and has since narrated over 350 silent films internationally.",
+  "description": "Benshi (literally 'orator') are Japanese live narrators who accompany silent films, voicing every character, providing dramatic commentary, and interpreting the story for the audience, all in real time beside the screen. At their peak in the 1920s, over 7,000 benshi performed across Japan; today, approximately 15 practitioners keep the tradition alive. Training follows the traditional master-student (shitei) system adapted from kabuki and bunraku; the most prominent modern benshi, Ichiro Kataoka, apprenticed under master Midori Sawato beginning in 2002 and has since narrated over 350 silent films internationally.",
   "thumbnail": {
     "src": "/images/skills/benshi.webp",
     "alt": "Benshi narrator performing beside a silent film projection screen in traditional Japanese garb",
@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "jl5bMGClmxI",
-      "title": "The Art of the Benshi — Japan Society performance with Ichiro Kataoka"
+      "title": "The Art of the Benshi: Japan Society performance with Ichiro Kataoka"
     }
   ],
   "sources": [
@@ -22,17 +22,17 @@
       "type": "reference"
     },
     {
-      "title": "A Brief History of Benshi (Silent Film Narrators) — Japan Society",
+      "title": "A Brief History of Benshi (Silent Film Narrators), Japan Society",
       "url": "https://japansociety.org/news/a-brief-history-of-benshi-silent-film-narrators/",
       "type": "institutional"
     },
     {
-      "title": "Ichiro Kataoka: Benshi — Harvard Film Archive",
+      "title": "Ichiro Kataoka: Benshi (Harvard Film Archive)",
       "url": "https://harvardfilmarchive.org/programs/ichiro-kataoka-benshi",
       "type": "institutional"
     },
     {
-      "title": "Benshi Performers Pass Along a Way of Thinking — Hyperallergic",
+      "title": "Benshi Performers Pass Along a Way of Thinking (Hyperallergic)",
       "url": "https://hyperallergic.com/benshi-performers-pass-along-a-way-of-thinking/",
       "type": "journalism"
     }
@@ -40,7 +40,7 @@
   "scores": {
     "time_to_competence": { "value": 5, "confidence": 0.7, "notes": "Learning to narrate a single film competently requires mastering the script, character voices, and synchronization with screen action. The apprenticeship system demands years of study before independent performance." },
     "time_to_expert": { "value": 8, "confidence": 0.7, "notes": "Ichiro Kataoka began training in 2002 and spent years developing a repertoire of 350+ films. Mastering the wide range of vocal styles, improvisation, and deep knowledge of film history takes at least a decade." },
-    "feedback_delay": { "value": 2, "confidence": 0.75, "notes": "Audience reactions -- laughter, gasps, attentiveness -- are visible in real time. However, the rarity of benshi performance means opportunities for audience feedback are infrequent." },
+    "feedback_delay": { "value": 2, "confidence": 0.75, "notes": "Audience reactions (laughter, gasps, attentiveness) are visible in real time. However, the rarity of benshi performance means opportunities for audience feedback are infrequent." },
     "failure_cost": { "value": 3, "confidence": 0.7, "notes": "A poor narration at a screening is uncomfortable but recoverable. Given the extreme rarity of practitioners, audiences are generally appreciative. Loss of sync with the film is the primary visible failure mode." },
     "cognitive_demand": { "value": 9, "confidence": 0.85, "notes": "Simultaneously tracking film action, voicing multiple characters with distinct registers, providing narrative commentary, reading audience energy, and synchronizing with live musical accompaniment. Must maintain period-appropriate language and improvisational flexibility." },
     "physical_demand": { "value": 3, "confidence": 0.8, "notes": "Primarily vocal performance while standing beside the screen. Extended performances (feature-length films of 60-90+ minutes) demand significant vocal stamina." },
@@ -58,5 +58,11 @@
     "luck_variance": { "value": 2, "confidence": 0.7, "notes": "With only ~15 active practitioners worldwide, career advancement is not competitive in the traditional sense. Opportunities depend on cultural programming decisions and institutional partnerships." },
     "social_coordination": { "value": 4, "confidence": 0.75, "notes": "The benshi typically coordinates with a live musician or small ensemble. Modern touring performances involve collaboration with academic institutions and film archives. But the core narration is a solo performance." }
   },
-  "methodology_notes": "Scores informed by Wikipedia's documentation of the benshi tradition, Japan Society's historical account, Harvard Film Archive's programming with Ichiro Kataoka, and the estimated ~15 active practitioners worldwide. The extremely small practitioner population makes confidence levels lower than for more widely practiced skills."
+  "methodology_notes": "Scores informed by Wikipedia's documentation of the benshi tradition, Japan Society's historical account, Harvard Film Archive's programming with Ichiro Kataoka, and the estimated ~15 active practitioners worldwide. The extremely small practitioner population makes confidence levels lower than for more widely practiced skills.",
+  "clip": {
+    "src": "/videos/skills/benshi.mp4",
+    "poster": "/images/skills/benshi.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

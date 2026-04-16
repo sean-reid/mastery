@@ -2,7 +2,7 @@
   "name": "Coracle Building",
   "slug": "coracle-building",
   "category": "trade",
-  "description": "A coracle is a one-person bowl-shaped boat built upside-down by pushing a framework of split willow laths into the ground, weaving thinner willow rods around them for tension, then tying in a seat plank that locks the structure rigid. The frame is flipped and covered with a waterproof skin—traditionally horse or bullock hide, now usually tarred calico or canvas. Each Welsh river produced a distinctive coracle shape (Teifi, Tywi, Taf), with the weave pattern serving as a geographic fingerprint. The design is functionally unchanged for over 2,000 years, predating Roman contact with Britain.",
+  "description": "A coracle is a one-person bowl-shaped boat built upside-down by pushing a framework of split willow laths into the ground, weaving thinner willow rods around them for tension, then tying in a seat plank that locks the structure rigid. The frame is flipped and covered with a waterproof skin, traditionally horse or bullock hide, now usually tarred calico or canvas. Each Welsh river produced a distinctive coracle shape (Teifi, Tywi, Taf), with the weave pattern serving as a geographic fingerprint. The design is functionally unchanged for over 2,000 years, predating Roman contact with Britain.",
   "thumbnail": {
     "src": "/images/skills/coracle-building.webp",
     "alt": "Traditional Welsh coracle made of woven willow frame covered in tarred canvas, resting on a riverbank",
@@ -61,7 +61,7 @@
     "cognitive_demand": {
       "value": 4,
       "confidence": 0.7,
-      "notes": "Understanding the structural logic of the weave—how tension creates rigidity—and matching regional patterns requires spatial reasoning. Material selection (willow species, rod thickness, seasonal harvesting) adds knowledge. But the design is fundamentally simple and intuitive."
+      "notes": "Understanding the structural logic of the weave (how tension creates rigidity) and matching regional patterns requires spatial reasoning. Material selection (willow species, rod thickness, seasonal harvesting) adds knowledge. But the design is fundamentally simple and intuitive."
     },
     "physical_demand": {
       "value": 5,
@@ -86,7 +86,7 @@
     "precision_required": {
       "value": 4,
       "confidence": 0.7,
-      "notes": "Symmetry matters for paddling stability, and weave consistency affects structural integrity. But tolerances are generous compared to most woodworking—coracles are organic, hand-shaped objects with expected variation."
+      "notes": "Symmetry matters for paddling stability, and weave consistency affects structural integrity. But tolerances are generous compared to most woodworking; coracles are organic, hand-shaped objects with expected variation."
     },
     "ambiguity": {
       "value": 3,
@@ -101,7 +101,7 @@
     "environmental_variability": {
       "value": 5,
       "confidence": 0.7,
-      "notes": "Material availability varies by region and season—willow must be harvested when green and pliable. Different rivers demand different shapes for their current conditions. Weather affects outdoor construction and the drying of waterproofing materials."
+      "notes": "Material availability varies by region and season; willow must be harvested when green and pliable. Different rivers demand different shapes for their current conditions. Weather affects outdoor construction and the drying of waterproofing materials."
     },
     "concurrent_skills": {
       "value": 3,
@@ -134,5 +134,5 @@
       "notes": "Building is typically solo or in small workshop groups. Traditional coracle fishing on Welsh rivers was done in pairs. The Coracle Society provides a community of about 110 members, half actively practicing."
     }
   },
-  "methodology_notes": "Scores draw on Wikipedia's historical documentation, Heritage Crafts' detailed assessment of coracle making, the Coracle Society's membership data and build guides, and Nation.Cymru's reporting on the craft's endangered status. The relatively high confidence across scores reflects that coracle building is better documented than most endangered crafts, with active practitioners, a dedicated society, and published construction guides. The low difficulty scores reflect the craft's fundamental simplicity—it is a Stone Age technology designed to be buildable with minimal tools."
+  "methodology_notes": "Scores draw on Wikipedia's historical documentation, Heritage Crafts' detailed assessment of coracle making, the Coracle Society's membership data and build guides, and Nation.Cymru's reporting on the craft's endangered status. The relatively high confidence across scores reflects that coracle building is better documented than most endangered crafts, with active practitioners, a dedicated society, and published construction guides. The low difficulty scores reflect the craft's fundamental simplicity: it is a Stone Age technology designed to be buildable with minimal tools."
 }

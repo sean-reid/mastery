@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "3P1CnWI62Ik",
-      "title": "Pansori Epic Chant — UNESCO Intangible Cultural Heritage"
+      "title": "Pansori Epic Chant: UNESCO Intangible Cultural Heritage"
     }
   ],
   "sources": [
@@ -22,17 +22,17 @@
       "type": "reference"
     },
     {
-      "title": "Pansori epic chant — UNESCO Intangible Cultural Heritage",
+      "title": "Pansori epic chant, UNESCO Intangible Cultural Heritage",
       "url": "https://ich.unesco.org/en/RL/pansori-epic-chant-00070",
       "type": "institutional"
     },
     {
-      "title": "Pansori — Encyclopaedia Britannica",
+      "title": "Pansori, Encyclopaedia Britannica",
       "url": "https://www.britannica.com/art/pansori",
       "type": "reference"
     },
     {
-      "title": "Pansori epic chant — UNESCO Silk Roads Programme",
+      "title": "Pansori epic chant, UNESCO Silk Roads Programme",
       "url": "https://en.unesco.org/silkroad/silk-road-themes/intangible-cultural-heritage/pansori-epic-chant",
       "type": "institutional"
     }
@@ -40,7 +40,7 @@
   "scores": {
     "time_to_competence": { "value": 6, "confidence": 0.8, "notes": "Learning to sing even a short excerpt with proper vocal technique, timbral variety, and rhythmic complexity takes years. The demanding vocal production style (developing the husky 'cracked' voice) requires extended physical conditioning." },
     "time_to_expert": { "value": 10, "confidence": 0.85, "notes": "UNESCO documentation states singers undergo 15-30 years of rigorous training. Memorizing all five surviving madang (each lasting hours) and developing the full range of vocal timbres and improvisational skills required for master-level performance takes decades." },
-    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "The gosu (drummer) provides real-time rhythmic feedback and chuimsae (vocal encouragement). Audience reactions -- chuimsae shouts of 'eolssigu!' -- are immediate and integral to the performance tradition." },
+    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "The gosu (drummer) provides real-time rhythmic feedback and chuimsae (vocal encouragement). Audience reactions (chuimsae shouts of 'eolssigu!') are immediate and integral to the performance tradition." },
     "failure_cost": { "value": 6, "confidence": 0.75, "notes": "The deliberate vocal cord damage required for the prized husky timbre carries irreversible health consequences. Vocal hemorrhage or permanent hoarseness from incorrect training technique is a real risk." },
     "cognitive_demand": { "value": 9, "confidence": 0.9, "notes": "Memorizing 8-hour narratives with their complete musical, dramatic, and improvisational components. Simultaneously managing vocal technique across dozens of distinct timbres, rhythmic patterns (jangdan), dramatic gesture, and interaction with the drummer." },
     "physical_demand": { "value": 8, "confidence": 0.85, "notes": "Singing at full projection for up to 8 hours demands extraordinary vocal and respiratory stamina. The traditional training method of singing beneath waterfalls reflects the extreme physical conditioning required." },

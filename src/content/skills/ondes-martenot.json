@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "v0aflcF0-ys",
-      "title": "Thomas Bloch demonstrates the Ondes Martenot — technique and sound capabilities"
+      "title": "Thomas Bloch demonstrates the Ondes Martenot: technique and sound capabilities"
     }
   ],
   "sources": [
@@ -61,7 +61,7 @@
     "cognitive_demand": {
       "value": 8,
       "confidence": 0.7,
-      "notes": "Simultaneously controlling pitch via tiroir or keyboard, dynamics via the touche d'intensite (a pressure-sensitive button), timbre via diffuser selection, and vibrato via lateral keyboard movement. Everything—vibrato, attack, intensity—is manufactured by the player in real time with no automation."
+      "notes": "Simultaneously controlling pitch via tiroir or keyboard, dynamics via the touche d'intensite (a pressure-sensitive button), timbre via diffuser selection, and vibrato via lateral keyboard movement. Everything (vibrato, attack, intensity) is manufactured by the player in real time with no automation."
     },
     "physical_demand": {
       "value": 4,
@@ -86,7 +86,7 @@
     "precision_required": {
       "value": 9,
       "confidence": 0.75,
-      "notes": "The tiroir provides continuous pitch with no quantization—every frequency between notes is accessible, meaning the player must place pitch as precisely as a vocalist or unfretted string player. The touche d'intensite responds to finger pressure measured in grams."
+      "notes": "The tiroir provides continuous pitch with no quantization, so every frequency between notes is accessible, meaning the player must place pitch as precisely as a vocalist or unfretted string player. The touche d'intensite responds to finger pressure measured in grams."
     },
     "ambiguity": {
       "value": 5,
@@ -106,7 +106,7 @@
     "concurrent_skills": {
       "value": 7,
       "confidence": 0.7,
-      "notes": "Right hand controls pitch via tiroir or keyboard, left hand controls dynamics via touche d'intensite, timbre selection via drawer switches, and vibrato via lateral keyboard movement—all simultaneously."
+      "notes": "Right hand controls pitch via tiroir or keyboard, left hand controls dynamics via touche d'intensite, timbre selection via drawer switches, and vibrato via lateral keyboard movement, all simultaneously."
     },
     "plateau_density": {
       "value": 7,

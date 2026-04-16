@@ -2,7 +2,7 @@
   "name": "Kriegsspiel",
   "slug": "kriegsspiel",
   "category": "game",
-  "description": "A chess variant invented in 1899 where neither player can see the opponent's pieces and a referee announces only checks, captures, and illegal move attempts -- transforming chess into probabilistic inference under fog of war. Bologna research showed that even theoretically won endgames like KR vs. K become extraordinarily difficult when the winning side cannot locate the opposing King.",
+  "description": "A chess variant invented in 1899 where neither player can see the opponent's pieces and a referee announces only checks, captures, and illegal move attempts, transforming chess into probabilistic inference under fog of war. Bologna research showed that even theoretically won endgames like KR vs. K become extraordinarily difficult when the winning side cannot locate the opposing King.",
   "thumbnail": {
     "src": "/images/skills/kriegsspiel.webp",
     "alt": "Three chess boards arranged for a Kriegsspiel game with a referee screen between players",
@@ -79,12 +79,12 @@
     "perishability": {
       "value": 5,
       "confidence": 0.6,
-      "notes": "Underlying chess skills are relatively durable, but the Kriegsspiel-specific inference abilities -- tracking multiple possible game states simultaneously -- likely decay without practice."
+      "notes": "Underlying chess skills are relatively durable, but the Kriegsspiel-specific inference abilities (tracking multiple possible game states simultaneously) likely decay without practice."
     },
     "precision_required": {
       "value": 6,
       "confidence": 0.7,
-      "notes": "Tactical precision matters less than in chess because the position is uncertain. Strategic precision -- correctly narrowing down opponent possibilities from referee clues -- is critical."
+      "notes": "Tactical precision matters less than in chess because the position is uncertain. Strategic precision, correctly narrowing down opponent possibilities from referee clues, is critical."
     },
     "ambiguity": {
       "value": 8,

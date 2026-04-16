@@ -2,7 +2,7 @@
   "name": "Bellfounding",
   "slug": "bellfounding",
   "category": "trade",
-  "description": "Bellfounding is the casting and tuning of bronze church bells using the medieval swept-loam method: a strickle template is swept over layers of loam (sand, clay, horse dung, hair, straw) to form a mold around a brick core, into which molten bell bronze (roughly 80% copper, 20% tin) is poured at ~1,100 C. After cooling in the casting pit, each bell is mounted on a lathe and metal is shaved from the interior to bring five harmonic partials — hum, prime, tierce, quint, and nominal — into tune with tolerances under 1/100th of a semitone. Heritage Crafts lists bellfounding as endangered in the UK; John Taylor & Co. in Loughborough is Britain's last remaining bell foundry.",
+  "description": "Bellfounding is the casting and tuning of bronze church bells using the medieval swept-loam method: a strickle template is swept over layers of loam (sand, clay, horse dung, hair, straw) to form a mold around a brick core, into which molten bell bronze (roughly 80% copper, 20% tin) is poured at ~1,100 C. After cooling in the casting pit, each bell is mounted on a lathe and metal is shaved from the interior to bring five harmonic partials (hum, prime, tierce, quint, and nominal) into tune with tolerances under 1/100th of a semitone. Heritage Crafts lists bellfounding as endangered in the UK; John Taylor & Co. in Loughborough is Britain's last remaining bell foundry.",
   "thumbnail": {
     "src": "/images/skills/bellfounding.webp",
     "alt": "Molten bronze being poured into a bell mold in a traditional foundry casting pit",
@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "OBkYuapOcXQ",
-      "title": "How Bells Are Made at Taylor's Bell Foundry — The Kid Should See This"
+      "title": "How Bells Are Made at Taylor's Bell Foundry (The Kid Should See This)"
     }
   ],
   "sources": [
@@ -22,41 +22,41 @@
       "type": "reference"
     },
     {
-      "title": "Bell founding — Heritage Crafts Red List",
+      "title": "Bell founding, Heritage Crafts Red List",
       "url": "https://heritagecrafts.org.uk/craft/bell-founding/",
       "type": "institutional"
     },
     {
-      "title": "Bell Casting and Tuning — McShane Bell Company",
+      "title": "Bell Casting and Tuning (McShane Bell Company)",
       "url": "https://mcshanebell.com/history/bell-casting-and-tuning/",
       "type": "institutional"
     },
     {
-      "title": "How Bells Are Made — National Bell Festival",
+      "title": "How Bells Are Made (National Bell Festival)",
       "url": "https://www.bells.org/how-bells-are-made",
       "type": "community"
     }
   ],
   "scores": {
     "time_to_competence": { "value": 6, "confidence": 0.6, "notes": "Assisting in a bell casting and understanding the loam mold process within months. Independently managing a casting from mold construction through pour requires 2-3 years of foundry apprenticeship." },
-    "time_to_expert": { "value": 9, "confidence": 0.6, "notes": "Mastering the full cycle — mold design for a target note, casting, and tuning all five partials to concert pitch — takes a decade or more. Nigel Taylor served as Whitechapel's foreman for 40 years. The craft has so few practitioners that expertise is measured in lifetimes." },
-    "feedback_delay": { "value": 7, "confidence": 0.7, "notes": "The bell cannot be heard until it is cast, cooled, and broken from the mold — a process taking days. If the profile is wrong, the bell's partials will be out of tune and can only be corrected by lathe-trimming, not recasting. A fundamentally flawed casting is scrap." },
+    "time_to_expert": { "value": 9, "confidence": 0.6, "notes": "Mastering the full cycle (mold design for a target note, casting, and tuning all five partials to concert pitch) takes a decade or more. Nigel Taylor served as Whitechapel's foreman for 40 years. The craft has so few practitioners that expertise is measured in lifetimes." },
+    "feedback_delay": { "value": 7, "confidence": 0.7, "notes": "The bell cannot be heard until it is cast, cooled, and broken from the mold, a process taking days. If the profile is wrong, the bell's partials will be out of tune and can only be corrected by lathe-trimming, not recasting. A fundamentally flawed casting is scrap." },
     "failure_cost": { "value": 7, "confidence": 0.7, "notes": "Bell bronze is expensive (copper + tin). A large church bell can weigh several tons. A failed casting wastes hundreds to thousands of dollars in metal, days of mold-building labor, and fuel costs. The metal is recoverable but the time is not." },
     "cognitive_demand": { "value": 8, "confidence": 0.7, "notes": "The bellfounder must understand the mathematical relationship between bell profile geometry and acoustic partials. Designing a bell that will produce the correct hum, prime, tierce, quint, and nominal requires integrating metallurgy, acoustics, and centuries of empirical lore." },
     "physical_demand": { "value": 7, "confidence": 0.75, "notes": "Building loam molds is heavy manual labor. Pouring molten bronze at 1,100 C is dangerous and physically demanding. Lathe-tuning multi-ton bells requires strength and stamina. Foundry conditions are hot, dusty, and hazardous." },
     "prerequisite_knowledge": { "value": 6, "confidence": 0.65, "notes": "Requires foundational knowledge of metallurgy, acoustics, and mold-making. No formal educational prerequisite, but understanding harmonic series and bronze alloy behavior is essential before meaningful contribution." },
     "measurability": { "value": 8, "confidence": 0.8, "notes": "Bell tuning is one of the most precisely measurable crafts: each of five partials can be measured electronically to fractions of a cent. A bell is either in tune or it is not. This objectivity is rare among traditional crafts." },
     "perishability": { "value": 5, "confidence": 0.6, "notes": "Theoretical knowledge of bell acoustics is durable. But the physical intuition for loam consistency, pour temperature, and lathe technique would degrade within months without practice. The craft's rarity means lost knowledge may never be recovered." },
-    "precision_required": { "value": 9, "confidence": 0.8, "notes": "The swept-loam profile must be accurate to fractions of a millimeter — small deviations alter the partial frequencies. Tuning on the lathe removes metal irreversibly; overshooting by even a small amount can ruin a partial that was already correct." },
+    "precision_required": { "value": 9, "confidence": 0.8, "notes": "The swept-loam profile must be accurate to fractions of a millimeter; small deviations alter the partial frequencies. Tuning on the lathe removes metal irreversibly; overshooting by even a small amount can ruin a partial that was already correct." },
     "ambiguity": { "value": 3, "confidence": 0.75, "notes": "Bell quality is among the least ambiguous of any craft: the five partials are either in tune or they are not. Profile design follows well-documented mathematical relationships. There is some subjective preference for 'warmth' or 'brightness' of tone." },
     "instruction_dependency": { "value": 9, "confidence": 0.75, "notes": "The craft is almost entirely transmitted through foundry apprenticeship. With only a handful of active foundries worldwide, finding a teacher is itself a major barrier. Published literature on bell acoustics exists but cannot teach the hands-on foundry skills." },
-    "environmental_variability": { "value": 4, "confidence": 0.65, "notes": "Foundry conditions are controlled but not perfectly so — ambient temperature affects mold drying and metal cooling rates. Alloy composition varies between batches. The casting pit provides slow cooling for optimal crystalline structure." },
+    "environmental_variability": { "value": 4, "confidence": 0.65, "notes": "Foundry conditions are controlled but not perfectly so; ambient temperature affects mold drying and metal cooling rates. Alloy composition varies between batches. The casting pit provides slow cooling for optimal crystalline structure." },
     "concurrent_skills": { "value": 6, "confidence": 0.65, "notes": "During casting: managing mold integrity, pour rate, temperature monitoring, and safety. During tuning: lathe operation, acoustic measurement, and iterative material removal. The two phases are sequential, not simultaneous." },
     "plateau_density": { "value": 6, "confidence": 0.55, "notes": "Early progress in mold-making and foundry assistance is steady. Major plateaus at first independent casting, at tuning (a distinct and difficult skill), and at designing profiles for specific target notes." },
     "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "The swept-loam method has been used for centuries. Electronic tuning instruments are the major modern addition. Bronze alloy composition, mold materials, and the five-partial tuning framework are essentially medieval. CNC lathes have modernized tuning at some foundries." },
-    "observability": { "value": 8, "confidence": 0.8, "notes": "A bell pour is one of the most dramatic moments in any craft — molten bronze flowing into a mold. The finished bell's sound is immediately testable by anyone. The difference between a well-tuned and a poorly-tuned bell is audible to most listeners." },
+    "observability": { "value": 8, "confidence": 0.8, "notes": "A bell pour is one of the most dramatic moments in any craft: molten bronze flowing into a mold. The finished bell's sound is immediately testable by anyone. The difference between a well-tuned and a poorly-tuned bell is audible to most listeners." },
     "luck_variance": { "value": 4, "confidence": 0.7, "notes": "Casting defects (porosity, cracks, inclusions) introduce some unpredictability despite careful process control. A bell may emerge from the mold with an internal flaw invisible from outside. But most variance is controllable through skill and process discipline." },
     "social_coordination": { "value": 6, "confidence": 0.7, "notes": "Bell casting requires a team: mold builders, metal pourers, crane operators, and tuners. A pour is a coordinated event. But the master bellfounder's design and tuning work is largely individual intellectual labor." }
   },
-  "methodology_notes": "Scores draw on Wikipedia's bellfounding article, Heritage Crafts Red List classification, McShane Bell Company's technical documentation, and the National Bell Festival's process descriptions. Confidence is lower than average because bellfounding is critically scarce — fewer than a dozen foundries worldwide practice the traditional swept-loam method, and quantitative training data is virtually nonexistent."
+  "methodology_notes": "Scores draw on Wikipedia's bellfounding article, Heritage Crafts Red List classification, McShane Bell Company's technical documentation, and the National Bell Festival's process descriptions. Confidence is lower than average because bellfounding is critically scarce; fewer than a dozen foundries worldwide practice the traditional swept-loam method, and quantitative training data is virtually nonexistent."
 }

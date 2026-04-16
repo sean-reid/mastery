@@ -2,7 +2,7 @@
   "name": "Jai Alai / Pelota Vasca",
   "slug": "jai-alai",
   "category": "sport",
-  "description": "A Basque wall-court sport in which players hurl a goatskin-covered rubber ball (pelota) against a granite front wall using a curved wicker basket (cesta) strapped to one hand, catching and releasing in a single fluid motion. The pelota reaches speeds up to 302 km/h -- a Guinness-recognized record set by Jose Ramon Areitio in 1979 -- making it the fastest-moving ball in any sport. Played on a 54-meter fronton with three walls, the sport demands split-second reactions, extreme wrist and shoulder strength, and the ability to read carom angles off multiple surfaces.",
+  "description": "A Basque wall-court sport in which players hurl a goatskin-covered rubber ball (pelota) against a granite front wall using a curved wicker basket (cesta) strapped to one hand, catching and releasing in a single fluid motion. The pelota reaches speeds up to 302 km/h, a Guinness-recognized record set by Jose Ramon Areitio in 1979, making it the fastest-moving ball in any sport. Played on a 54-meter fronton with three walls, the sport demands split-second reactions, extreme wrist and shoulder strength, and the ability to read carom angles off multiple surfaces.",
   "thumbnail": {
     "src": "/images/skills/jai-alai.webp",
     "alt": "Jai alai player mid-throw with cesta on a fronton court",
@@ -41,7 +41,7 @@
     "time_to_competence": {
       "value": 7,
       "confidence": 0.7,
-      "notes": "The cesta is unlike any equipment in mainstream sport -- the curved basket extension of the arm requires completely novel throwing and catching mechanics. Simply learning to catch and release the pelota in one fluid motion takes months. Most pelotaris in the Basque Country begin training as children."
+      "notes": "The cesta is unlike any equipment in mainstream sport; the curved basket extension of the arm requires completely novel throwing and catching mechanics. Simply learning to catch and release the pelota in one fluid motion takes months. Most pelotaris in the Basque Country begin training as children."
     },
     "time_to_expert": {
       "value": 8,
@@ -86,12 +86,12 @@
     "precision_required": {
       "value": 8,
       "confidence": 0.8,
-      "notes": "Kill shots must be placed in precise court zones at extreme speed. The catch-and-throw must be executed in one fluid motion -- any hesitation is a fault. Reading and executing carom angles off multiple walls at 200+ km/h demands extraordinary spatial precision."
+      "notes": "Kill shots must be placed in precise court zones at extreme speed. The catch-and-throw must be executed in one fluid motion; any hesitation is a fault. Reading and executing carom angles off multiple walls at 200+ km/h demands extraordinary spatial precision."
     },
     "ambiguity": {
       "value": 2,
       "confidence": 0.85,
-      "notes": "Points are binary -- the ball is returned legally or it is not. Faults (holding the ball, out-of-bounds) are clear. Scoring systems vary by format (spectacular, round-robin) but are codified. No subjective judging."
+      "notes": "Points are binary: the ball is returned legally or it is not. Faults (holding the ball, out-of-bounds) are clear. Scoring systems vary by format (spectacular, round-robin) but are codified. No subjective judging."
     },
     "instruction_dependency": {
       "value": 8,
@@ -131,7 +131,7 @@
     "social_coordination": {
       "value": 4,
       "confidence": 0.75,
-      "notes": "Doubles (parejas) is a major format requiring partner coordination -- one player covers the front court, the other the back. Singles is also played. In doubles, understanding your partner's tendencies and covering gaps is essential. Team chemistry matters but pairs are smaller than most team sports."
+      "notes": "Doubles (parejas) is a major format requiring partner coordination: one player covers the front court, the other the back. Singles is also played. In doubles, understanding your partner's tendencies and covering gaps is essential. Team chemistry matters but pairs are smaller than most team sports."
     }
   },
   "methodology_notes": "Scores informed by Wikipedia articles on jai alai and Basque pelota, the Guinness World Record for fastest moving ball sport (302 km/h, Jose Ramon Areitio, 1979), and Britannica's entry on the sport. Failure cost rated 8 due to documented deaths and severe injuries from pelota strikes. Instruction dependency rated 8 because the custom cesta and fronton access are extremely limited outside the Basque Country. Domain evolution rated low because the sport has contracted globally since the 1980s with no significant rule or equipment changes. Confidence is moderate on several axes due to the sport's niche status and limited English-language training research."

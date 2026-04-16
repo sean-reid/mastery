@@ -12,7 +12,7 @@
     {
       "type": "youtube",
       "videoId": "R4SYIfhzMmU",
-      "title": "George Carlin — It's Bad for Ya (Full HBO Special, 2008)"
+      "title": "George Carlin: It's Bad for Ya (Full HBO Special, 2008)"
     }
   ],
   "sources": [
@@ -27,7 +27,7 @@
       "type": "reference"
     },
     {
-      "title": "Stand-up comedy — history, artists, and facts",
+      "title": "Stand-up comedy: history, artists, and facts",
       "url": "https://www.britannica.com/art/stand-up-comedy",
       "type": "reference"
     }
@@ -53,5 +53,11 @@
     "luck_variance": { "value": 5, "confidence": 0.75, "notes": "Viral moments, festival selections, late-night bookings, and being seen by the right booker involve significant luck. But consistent quality eventually surfaces in a meritocratic club circuit." },
     "social_coordination": { "value": 3, "confidence": 0.85, "notes": "Primarily a solo art. Networking with bookers and other comedians matters for career advancement, but the core skill is developed and performed alone on stage." }
   },
-  "methodology_notes": "Scores based on industry consensus that headline-level material requires 7-15 years of nightly performance, Britannica and Wikipedia historical documentation, and the widely cited benchmark of 4-6 laughs per minute for professional-grade stand-up."
+  "methodology_notes": "Scores based on industry consensus that headline-level material requires 7-15 years of nightly performance, Britannica and Wikipedia historical documentation, and the widely cited benchmark of 4-6 laughs per minute for professional-grade stand-up.",
+  "clip": {
+    "src": "/videos/skills/stand-up-comedy.mp4",
+    "poster": "/images/skills/stand-up-comedy.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

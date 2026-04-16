@@ -121,7 +121,7 @@
     "observability": {
       "value": 8,
       "confidence": 0.8,
-      "notes": "The visual complexity of the instrument -- rows of wooden keys, multiple strings, bowing -- combined with the shimmering sympathetic resonance creates an immediately captivating sight and sound. The medieval aesthetic and the UNESCO recognition add cultural fascination."
+      "notes": "The visual complexity of the instrument (rows of wooden keys, multiple strings, bowing) combined with the shimmering sympathetic resonance creates an immediately captivating sight and sound. The medieval aesthetic and the UNESCO recognition add cultural fascination."
     },
     "luck_variance": {
       "value": 1,

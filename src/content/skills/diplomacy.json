@@ -2,7 +2,7 @@
   "name": "Diplomacy",
   "slug": "diplomacy",
   "category": "game",
-  "description": "A seven-player board game of pure negotiation set in pre-WWI Europe with no dice, no cards, and no hidden information -- the only variable is each player's ability to persuade, deceive, and betray. Meta's CICERO AI achieved top-10% human performance only by combining a 2.7B-parameter language model with strategic planning, making it the first game where competitive AI required natural language deception.",
+  "description": "A seven-player board game of pure negotiation set in pre-WWI Europe with no dice, no cards, and no hidden information, where the only variable is each player's ability to persuade, deceive, and betray. Meta's CICERO AI achieved top-10% human performance only by combining a 2.7B-parameter language model with strategic planning, making it the first game where competitive AI required natural language deception.",
   "thumbnail": {
     "src": "/images/skills/diplomacy.webp",
     "alt": "Diplomacy board showing the map of Europe with army and fleet pieces",
@@ -54,12 +54,12 @@
     "feedback_delay": {
       "value": 4,
       "confidence": 0.7,
-      "notes": "Each game takes 4-8 hours face-to-face. A diplomatic strategy's quality may not be apparent until several turns later. Betrayal timing feedback is especially delayed -- you learn if you stabbed too early only when the game concludes."
+      "notes": "Each game takes 4-8 hours face-to-face. A diplomatic strategy's quality may not be apparent until several turns later. Betrayal timing feedback is especially delayed; you learn if you stabbed too early only when the game concludes."
     },
     "failure_cost": {
       "value": 2,
       "confidence": 0.85,
-      "notes": "No financial stakes in standard play. Social cost can be real -- broken alliances with regular opponents affect future games. The game famously strains friendships."
+      "notes": "No financial stakes in standard play. Social cost can be real, as broken alliances with regular opponents affect future games. The game famously strains friendships."
     },
     "cognitive_demand": {
       "value": 7,
@@ -94,12 +94,12 @@
     "ambiguity": {
       "value": 8,
       "confidence": 0.85,
-      "notes": "Outcomes depend heavily on other players' psychology. The 'correct' move is undefined -- it depends on what six other humans decide to do. Even winning strategies require opponents to cooperate with you."
+      "notes": "Outcomes depend heavily on other players' psychology. The 'correct' move is undefined; it depends on what six other humans decide to do. Even winning strategies require opponents to cooperate with you."
     },
     "instruction_dependency": {
       "value": 2,
       "confidence": 0.8,
-      "notes": "Largely self-taught through play. Written strategy guides exist but the core skill -- social manipulation -- is developed experientially rather than through formal instruction."
+      "notes": "Largely self-taught through play. Written strategy guides exist but the core skill, social manipulation, is developed experientially rather than through formal instruction."
     },
     "environmental_variability": {
       "value": 8,
@@ -124,7 +124,7 @@
     "observability": {
       "value": 6,
       "confidence": 0.75,
-      "notes": "Negotiation phases are visible and dramatic -- observers can watch alliances form and shatter. The tactical board state is clear. However, the most skilled play (deception, long-term manipulation) is invisible."
+      "notes": "Negotiation phases are visible and dramatic, and observers can watch alliances form and shatter. The tactical board state is clear. However, the most skilled play (deception, long-term manipulation) is invisible."
     },
     "luck_variance": {
       "value": 4,

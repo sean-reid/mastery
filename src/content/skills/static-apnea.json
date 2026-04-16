@@ -56,5 +56,11 @@
     "social_coordination": { "value": 2, "confidence": 0.85, "notes": "Individual discipline. Safety partners are essential but don't affect performance." }
   },
   "methodology_notes": "AIDA International provides extensive competition data and world records. Schagatay's physiological research on breath-hold diving is the primary academic source. Training timelines from competitive freediving communities and coaching programs.",
-  "interactive": "breath-hold"
+  "interactive": "breath-hold",
+  "clip": {
+    "src": "/videos/skills/static-apnea.mp4",
+    "poster": "/images/skills/static-apnea.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

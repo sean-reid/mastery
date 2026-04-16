@@ -41,7 +41,7 @@
     "time_to_competence": {
       "value": 5,
       "confidence": 0.8,
-      "notes": "AIDA 2 certification (12m depth) requires weeks of training. Reaching 20-30m takes several months for most beginners. The skills involved -- equalization, relaxation, breath-hold technique, and monofin use -- each require dedicated practice. Unlike static apnea, depth adds pressure management complexity."
+      "notes": "AIDA 2 certification (12m depth) requires weeks of training. Reaching 20-30m takes several months for most beginners. The skills involved (equalization, relaxation, breath-hold technique, and monofin use) each require dedicated practice. Unlike static apnea, depth adds pressure management complexity."
     },
     "time_to_expert": {
       "value": 9,
@@ -134,5 +134,11 @@
       "notes": "An individual discipline. Safety divers and coaches are essential support but do not affect the dive itself. Team events exist but individual depth performance dominates the competitive landscape. The diver is alone at maximum depth."
     }
   },
-  "methodology_notes": "Scores informed by AIDA International competition rules and certification standards, the Wikipedia articles on freediving and constant weight apnea, and PubMed research on hypoxic blackout risk factors (PMID 37300699) and freediving-induced pulmonary syndrome (PMID 39675735). The 3.43% incident rate across 38,789 competitive starts (2019-2023) provides empirical grounding for the failure cost score. Training timelines derived from AIDA certification progression (AIDA 2 at 12m through AIDA 4 at 32m+) and Molchanov's documented 21-year competitive career."
+  "methodology_notes": "Scores informed by AIDA International competition rules and certification standards, the Wikipedia articles on freediving and constant weight apnea, and PubMed research on hypoxic blackout risk factors (PMID 37300699) and freediving-induced pulmonary syndrome (PMID 39675735). The 3.43% incident rate across 38,789 competitive starts (2019-2023) provides empirical grounding for the failure cost score. Training timelines derived from AIDA certification progression (AIDA 2 at 12m through AIDA 4 at 32m+) and Molchanov's documented 21-year competitive career.",
+  "clip": {
+    "src": "/videos/skills/competitive-freediving.mp4",
+    "poster": "/images/skills/competitive-freediving.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

@@ -86,12 +86,12 @@
     "precision_required": {
       "value": 7,
       "confidence": 0.75,
-      "notes": "The Nouss sits on a small ramp and must be struck cleanly with the wooden block at the end of a 3-meter flexible whip. The timing window is narrow -- the whip's flexibility means the block arrives at slightly different positions depending on swing speed and arc. Fielders must place placards in the Nouss's flight path with meter-level accuracy."
+      "notes": "The Nouss sits on a small ramp and must be struck cleanly with the wooden block at the end of a 3-meter flexible whip. The timing window is narrow because the whip's flexibility means the block arrives at slightly different positions depending on swing speed and arc. Fielders must place placards in the Nouss's flight path with meter-level accuracy."
     },
     "ambiguity": {
       "value": 2,
       "confidence": 0.8,
-      "notes": "A Nouss is either intercepted or it lands -- binary and unambiguous. Hit distance is precisely measured. Foul hits (missing the ramp) are clear. The scoring system (fewest penalty points for unintercepted Nouss) is straightforward. No subjective judging."
+      "notes": "A Nouss is either intercepted or it lands, binary and unambiguous. Hit distance is precisely measured. Foul hits (missing the ramp) are clear. The scoring system (fewest penalty points for unintercepted Nouss) is straightforward. No subjective judging."
     },
     "instruction_dependency": {
       "value": 7,
@@ -106,7 +106,7 @@
     "concurrent_skills": {
       "value": 5,
       "confidence": 0.7,
-      "notes": "Batting integrates stance, hip rotation, whip timing, and launch-angle control in a single explosive motion. Fielding requires simultaneous puck tracking, sprint positioning, and timed placard throw. However, the sport is turn-based -- batting and fielding are separate phases, reducing moment-to-moment concurrent demands."
+      "notes": "Batting integrates stance, hip rotation, whip timing, and launch-angle control in a single explosive motion. Fielding requires simultaneous puck tracking, sprint positioning, and timed placard throw. However, the sport is turn-based, so batting and fielding are separate phases, reducing moment-to-moment concurrent demands."
     },
     "plateau_density": {
       "value": 6,

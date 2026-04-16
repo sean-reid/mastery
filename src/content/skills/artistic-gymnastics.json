@@ -2,7 +2,7 @@
   "name": "Artistic Gymnastics",
   "slug": "artistic-gymnastics",
   "category": "sport",
-  "description": "An Olympic discipline in which athletes perform short routines on apparatus -- vault, floor, beam, and bars for women; floor, pommel horse, rings, vault, parallel bars, and high bar for men -- scored by combining a difficulty value (D-score, uncapped) with an execution mark (E-score, out of 10). Elite female gymnasts typically peak at 16-19 and train 30-40 hours per week from childhood, while males peak around 23-24. Governed by the FIG since 1881, the sport's injury rate at the elite level reaches roughly 2.9 per 1000 exposure hours, with overuse injuries accounting for 60-70% of cases.",
+  "description": "An Olympic discipline in which athletes perform short routines on apparatus (vault, floor, beam, and bars for women; floor, pommel horse, rings, vault, parallel bars, and high bar for men) scored by combining a difficulty value (D-score, uncapped) with an execution mark (E-score, out of 10). Elite female gymnasts typically peak at 16-19 and train 30-40 hours per week from childhood, while males peak around 23-24. Governed by the FIG since 1881, the sport's injury rate at the elite level reaches roughly 2.9 per 1000 exposure hours, with overuse injuries accounting for 60-70% of cases.",
   "thumbnail": {
     "src": "/images/skills/artistic-gymnastics.webp",
     "alt": "Gymnast performing on the balance beam during an Olympic competition",
@@ -51,7 +51,7 @@
     "feedback_delay": {
       "value": 2,
       "confidence": 0.85,
-      "notes": "Landing a skill provides immediate proprioceptive feedback -- you feel a fall or a stuck landing instantly. However, execution deductions from judges (bent knees, pointed toes) require video review or coaching to internalize."
+      "notes": "Landing a skill provides immediate proprioceptive feedback: you feel a fall or a stuck landing instantly. However, execution deductions from judges (bent knees, pointed toes) require video review or coaching to internalize."
     },
     "failure_cost": {
       "value": 8,
@@ -61,7 +61,7 @@
     "cognitive_demand": {
       "value": 7,
       "confidence": 0.8,
-      "notes": "Spatial awareness during aerial rotations is extreme -- gymnasts must track orientation while rotating and twisting simultaneously. Routine composition requires strategic balancing of difficulty vs. execution risk. Fear management for high-risk skills is a major psychological demand."
+      "notes": "Spatial awareness during aerial rotations is extreme: gymnasts must track orientation while rotating and twisting simultaneously. Routine composition requires strategic balancing of difficulty vs. execution risk. Fear management for high-risk skills is a major psychological demand."
     },
     "physical_demand": {
       "value": 10,
@@ -81,7 +81,7 @@
     "perishability": {
       "value": 9,
       "confidence": 0.85,
-      "notes": "Skills decay rapidly. Aerial awareness, flexibility, and strength-to-weight ratio all degrade within weeks of inactivity. The sport is uniquely perishable because peak performance occurs during a narrow biological window -- once that window closes, the skills cannot be maintained at the same level regardless of training."
+      "notes": "Skills decay rapidly. Aerial awareness, flexibility, and strength-to-weight ratio all degrade within weeks of inactivity. The sport is uniquely perishable because peak performance occurs during a narrow biological window; once that window closes, the skills cannot be maintained at the same level regardless of training."
     },
     "precision_required": {
       "value": 9,
@@ -106,7 +106,7 @@
     "concurrent_skills": {
       "value": 9,
       "confidence": 0.9,
-      "notes": "A single tumbling pass integrates running speed, takeoff timing, aerial rotation tracking, twist initiation, landing preparation, and aesthetic presentation -- all in under 3 seconds. On beam, balance maintenance runs in parallel with every other motor task."
+      "notes": "A single tumbling pass integrates running speed, takeoff timing, aerial rotation tracking, twist initiation, landing preparation, and aesthetic presentation, all in under 3 seconds. On beam, balance maintenance runs in parallel with every other motor task."
     },
     "plateau_density": {
       "value": 8,
@@ -134,5 +134,11 @@
       "notes": "Fundamentally an individual sport. Team scores are aggregated individual performances. No in-routine coordination with others. Coach-athlete relationship is critical for development but not a concurrent skill during performance."
     }
   },
-  "methodology_notes": "Scores informed by Wikipedia's articles on artistic gymnastics and age requirements, the Olympics.com official sport page, and a PubMed systematic review of injury epidemiology (PMID 30670379). Training hours and peak ages from FIG documentation and multiple gymnastics community sources. Injury rates drawn from multiple studies showing 1.8-2.9 injuries per 1000 exposure hours at elite level. Physical demand rated maximum due to the unique combination of strength, flexibility, power, and proprioception required. Perishability rated very high due to the narrow biological peak window unique to gymnastics."
+  "methodology_notes": "Scores informed by Wikipedia's articles on artistic gymnastics and age requirements, the Olympics.com official sport page, and a PubMed systematic review of injury epidemiology (PMID 30670379). Training hours and peak ages from FIG documentation and multiple gymnastics community sources. Injury rates drawn from multiple studies showing 1.8-2.9 injuries per 1000 exposure hours at elite level. Physical demand rated maximum due to the unique combination of strength, flexibility, power, and proprioception required. Perishability rated very high due to the narrow biological peak window unique to gymnastics.",
+  "clip": {
+    "src": "/videos/skills/artistic-gymnastics.mp4",
+    "poster": "/images/skills/artistic-gymnastics.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

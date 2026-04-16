@@ -2,7 +2,7 @@
   "name": "Capoeira",
   "slug": "capoeira",
   "category": "physical",
-  "description": "Capoeira is an Afro-Brazilian art form created by enslaved Africans in the 17th century that fuses martial arts, acrobatics, dance, music, and ritual into a single practice. Two players engage in a roda (circle) while others sing, clap, and play the berimbau, a single-string bow that dictates the game's rhythm and intensity. Recognized by UNESCO in 2014 as Intangible Cultural Heritage, its two main lineages -- Angola (slow, ground-level, strategic) and Regional (fast, acrobatic, codified by Mestre Bimba in the 1930s) -- represent fundamentally different philosophies of movement.",
+  "description": "Capoeira is an Afro-Brazilian art form created by enslaved Africans in the 17th century that fuses martial arts, acrobatics, dance, music, and ritual into a single practice. Two players engage in a roda (circle) while others sing, clap, and play the berimbau, a single-string bow that dictates the game's rhythm and intensity. Recognized by UNESCO in 2014 as Intangible Cultural Heritage, its two main lineages, Angola (slow, ground-level, strategic) and Regional (fast, acrobatic, codified by Mestre Bimba in the 1930s), represent fundamentally different philosophies of movement.",
   "thumbnail": {
     "src": "/images/skills/capoeira.webp",
     "alt": "Two capoeiristas playing in a roda with musicians and berimbau in the background",
@@ -53,5 +53,11 @@
     "luck_variance": { "value": 3, "confidence": 0.75, "notes": "Each game varies based on the partner's style and energy. The berimbau rhythm is chosen by the master, influencing the game's character unpredictably." },
     "social_coordination": { "value": 9, "confidence": 0.9, "notes": "Inherently communal. The roda requires musicians, singers, and a community of players. Playing alone is meaningless. The mestre-student relationship is central." }
   },
-  "methodology_notes": "UNESCO inscription documentation provides authoritative cultural context. Historical lineage from Wikipedia and academic sources on Mestre Bimba and Mestre Pastinha. Training timelines from ABADA and other major capoeira organizations."
+  "methodology_notes": "UNESCO inscription documentation provides authoritative cultural context. Historical lineage from Wikipedia and academic sources on Mestre Bimba and Mestre Pastinha. Training timelines from ABADA and other major capoeira organizations.",
+  "clip": {
+    "src": "/videos/skills/capoeira.mp4",
+    "poster": "/images/skills/capoeira.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }
