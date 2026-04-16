@@ -3,19 +3,32 @@
 
 <div class="interactive-wrap" id="pattern-builder">
   <div class="interactive-header">
-    <h4 class="interactive-title">Try it: Align the zellige pattern</h4>
-    <p class="interactive-subtitle">Every tile is in place but rotated wrong. Click each tile to rotate it until the pattern aligns. Zellige masters do this by eye across thousands of pieces.</p>
+    <h4 class="interactive-title">Try it: Find the missing tile</h4>
+    <p class="interactive-subtitle">A zellige pattern is missing one piece. Four options look similar. Only one fits. Maalems make this judgment thousands of times per panel.</p>
   </div>
-  <div id="zpat-stage">
-    <canvas id="zpat-canvas" width="600" height="600"></canvas>
-    <div id="zpat-status">
-      <span id="zpat-remaining">36 tiles remaining</span>
-      <span id="zpat-timer">0:00</span>
+
+  <div id="zpat-game">
+    <div id="zpat-progress">
+      <span id="zpat-round">1 / 10</span>
+      <span id="zpat-score-display">0 correct</span>
     </div>
+
+    <canvas id="zpat-canvas" width="800" height="400"></canvas>
+
+    <div id="zpat-choices">
+      <canvas class="zpat-choice" id="zpat-c0" width="120" height="120"></canvas>
+      <canvas class="zpat-choice" id="zpat-c1" width="120" height="120"></canvas>
+      <canvas class="zpat-choice" id="zpat-c2" width="120" height="120"></canvas>
+      <canvas class="zpat-choice" id="zpat-c3" width="120" height="120"></canvas>
+    </div>
+
+    <p id="zpat-feedback"></p>
   </div>
+
   <div id="zpat-result" hidden>
-    <p class="zpat-result-time" id="zpat-result-time"></p>
-    <p class="zpat-result-text" id="zpat-result-text"></p>
+    <div class="zpat-final-score" id="zpat-final-score"></div>
+    <p class="zpat-final-label">out of 10</p>
+    <p class="zpat-final-text" id="zpat-final-text"></p>
     <button class="zpat-retry" id="zpat-retry">Try again</button>
   </div>
 </div>
@@ -29,37 +42,78 @@
     margin: var(--space-8) 0;
   }
 
-  #zpat-stage {
+  #zpat-game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-4);
+    gap: var(--space-5);
+  }
+
+  #zpat-progress {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 560px;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  #zpat-score-display {
+    font-weight: 600;
+    color: var(--color-text-secondary);
   }
 
   #zpat-canvas {
     display: block;
     width: 100%;
-    max-width: 480px;
+    max-width: 560px;
     height: auto;
-    aspect-ratio: 1;
-    cursor: pointer;
+    aspect-ratio: 2 / 1;
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
   }
 
-  #zpat-status {
+  #zpat-choices {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 480px;
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
+    gap: var(--space-3);
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  #zpat-timer {
-    font-family: var(--font-heading);
-    font-variant-numeric: tabular-nums;
-    font-weight: 600;
+  .zpat-choice {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-border);
+    cursor: pointer;
+    transition: all 0.15s var(--ease-out);
+  }
+
+  .zpat-choice:hover {
+    border-color: var(--color-text-muted);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .zpat-choice.correct {
+    border-color: #2a7a6d;
+    box-shadow: 0 0 0 3px rgba(42, 122, 109, 0.2);
+  }
+
+  .zpat-choice.wrong {
+    border-color: #c85a3a;
+    opacity: 0.5;
+  }
+
+  .zpat-choice.disabled {
+    pointer-events: none;
+  }
+
+  #zpat-feedback {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    min-height: 1.5em;
+    text-align: center;
   }
 
   #zpat-result {
@@ -67,8 +121,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-4);
-    padding: var(--space-6) 0;
+    gap: var(--space-3);
+    padding: var(--space-8) 0;
     animation: zpat-in 0.5s var(--ease-out);
   }
 
@@ -79,14 +133,20 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .zpat-result-time {
+  .zpat-final-score {
     font-family: var(--font-heading);
-    font-size: var(--text-2xl);
+    font-size: 4rem;
     font-weight: 700;
+    line-height: 1;
     color: var(--color-text);
   }
 
-  .zpat-result-text {
+  .zpat-final-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .zpat-final-text {
     font-size: var(--text-sm);
     color: var(--color-text-secondary);
     max-width: 50ch;
@@ -102,284 +162,330 @@
     cursor: pointer;
     background: transparent;
     transition: all var(--duration-fast) var(--ease-out);
+    margin-top: var(--space-2);
   }
 
   .zpat-retry:hover { background: var(--color-surface-raised); }
 
   @media (max-width: 640px) {
     #pattern-builder { padding: var(--space-6); }
+    .zpat-choice { width: 64px; height: 64px; }
+    .zpat-final-score { font-size: 3rem; }
   }
 </style>
 
 <script>
-  const cv = document.getElementById('zpat-canvas') as HTMLCanvasElement;
-  const ctx = cv.getContext('2d')!;
-  const remainEl = document.getElementById('zpat-remaining')!;
-  const timerEl = document.getElementById('zpat-timer')!;
-  const stageEl = document.getElementById('zpat-stage')!;
+  const mainCv = document.getElementById('zpat-canvas') as HTMLCanvasElement;
+  const mainCtx = mainCv.getContext('2d')!;
+  const choices = [0,1,2,3].map(i => document.getElementById(`zpat-c${i}`) as HTMLCanvasElement);
+  const roundEl = document.getElementById('zpat-round')!;
+  const scoreDisplayEl = document.getElementById('zpat-score-display')!;
+  const feedbackEl = document.getElementById('zpat-feedback')!;
+  const gameEl = document.getElementById('zpat-game')!;
   const resultEl = document.getElementById('zpat-result')!;
-  const resultTimeEl = document.getElementById('zpat-result-time')!;
-  const resultTextEl = document.getElementById('zpat-result-text')!;
+  const finalScoreEl = document.getElementById('zpat-final-score')!;
+  const finalTextEl = document.getElementById('zpat-final-text')!;
 
-  // Zellige color palette
-  const C = {
-    bg: '#f8f4ed',
-    blue: '#1e3a5f',
-    teal: '#2a7a6d',
-    terra: '#c85a3a',
-    cream: '#e8dcc8',
-    white: '#f5f0e1',
-    gold: '#c89b3c',
-    outline: '#8a7e6e',
-  };
+  // Colors
+  const PAL = ['#1e3a5f','#2a7a6d','#c85a3a','#c89b3c','#6b4c8a','#2e6b50'];
+  const BG = '#f8f4ed';
+  const LINE = '#8a7e6e';
 
-  // 6x6 grid of square tiles, each with a target rotation (0-3 = 0/90/180/270 deg)
-  // Pattern: 8-pointed star motif repeating across the grid
-  // Tile types: 0=star-center, 1=star-arm, 2=cross-fill, 3=border-piece
-  const COLS = 6, ROWS = 6, TOTAL = COLS * ROWS;
-  const PI2 = Math.PI / 2;
+  const ROUNDS = 10;
+  const GRID = 8; // 8x4 tile grid
+  const GROW = 4;
+  let round = 0, score = 0, locked = false;
 
-  interface Tile {
-    type: number;    // shape type
-    target: number;  // correct rotation (0-3)
-    current: number; // current rotation (0-3)
-    color: string;
-    solved: boolean;
+  // Seeded random for reproducible patterns
+  let seed = 1;
+  function srand(s: number) { seed = s; }
+  function rand() { seed = (seed * 16807 + 0) % 2147483647; return (seed - 1) / 2147483646; }
+  function randInt(n: number) { return Math.floor(rand() * n); }
+
+  // Generate a tile's visual signature: shape type + color + rotation
+  interface TileSig { shape: number; color: string; rot: number; }
+
+  function makeTile(): TileSig {
+    return { shape: randInt(5), color: PAL[randInt(PAL.length)], rot: randInt(4) };
   }
 
-  let tiles: Tile[] = [];
-  let tStart = 0, tRunning = false, tFrame = 0, done = false;
+  // Draw a tile into a context at (x,y) with size s
+  function drawTile(c: CanvasRenderingContext2D, x: number, y: number, s: number, t: TileSig) {
+    const h = s / 2;
+    c.save();
+    c.translate(x + h, y + h);
+    c.rotate(t.rot * Math.PI / 2);
 
-  // Generate the pattern grid
-  function generateTiles(): Tile[] {
-    const t: Tile[] = [];
-    const colors = [C.blue, C.teal, C.terra, C.gold, C.cream, C.white];
+    c.fillStyle = t.color;
+    c.strokeStyle = LINE;
+    c.lineWidth = 0.8;
+    c.lineJoin = 'round';
 
-    for (let r = 0; r < ROWS; r++) {
-      for (let c = 0; c < COLS; c++) {
-        // Create a repeating geometric motif
-        const isCenter = (r % 3 === 1 && c % 3 === 1);
-        const isArm = (r % 3 === 1 || c % 3 === 1) && !isCenter;
-        const type = isCenter ? 0 : isArm ? 1 : 2;
-        const target = ((r + c) * 7 + r * 3) % 4; // deterministic but varied
-        const colorIdx = (r * COLS + c + r * 2) % colors.length;
-
-        // Scramble: random rotation different from target
-        let current = target;
-        while (current === target) current = Math.floor(Math.random() * 4);
-
-        t.push({
-          type, target, current,
-          color: colors[colorIdx],
-          solved: false,
-        });
-      }
-    }
-    return t;
-  }
-
-  // Draw a single tile's geometric pattern
-  function drawTilePattern(x: number, y: number, size: number, tile: Tile) {
-    const s = size;
-    const half = s / 2;
-
-    ctx.save();
-    ctx.translate(x + half, y + half);
-    ctx.rotate(tile.current * PI2);
-
-    // Clip to tile boundary
-    ctx.beginPath();
-    ctx.rect(-half, -half, s, s);
-    ctx.clip();
-
-    // Background
-    ctx.fillStyle = tile.solved ? C.white : C.bg;
-    ctx.fillRect(-half, -half, s, s);
-
-    // Geometric pattern based on type
-    ctx.fillStyle = tile.color;
-    ctx.strokeStyle = C.outline;
-    ctx.lineWidth = 1;
-
-    if (tile.type === 0) {
-      // Star center: 8-pointed star
-      ctx.beginPath();
+    c.beginPath();
+    if (t.shape === 0) {
+      // 8-pointed star
       for (let i = 0; i < 8; i++) {
         const a = (Math.PI / 4) * i - Math.PI / 8;
-        const r1 = half * 0.85;
-        const r2 = half * 0.45;
-        const r = i % 2 === 0 ? r1 : r2;
-        i === 0 ? ctx.moveTo(r * Math.cos(a), r * Math.sin(a))
-                : ctx.lineTo(r * Math.cos(a), r * Math.sin(a));
+        const r = i % 2 === 0 ? h * 0.88 : h * 0.42;
+        i === 0 ? c.moveTo(r * Math.cos(a), r * Math.sin(a)) : c.lineTo(r * Math.cos(a), r * Math.sin(a));
       }
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
-    } else if (tile.type === 1) {
-      // Arm: directional arrow/chevron shape
-      ctx.beginPath();
-      ctx.moveTo(-half * 0.3, -half);
-      ctx.lineTo(half * 0.3, -half);
-      ctx.lineTo(half * 0.5, 0);
-      ctx.lineTo(half * 0.3, half);
-      ctx.lineTo(-half * 0.3, half);
-      ctx.lineTo(-half * 0.1, 0);
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
+    } else if (t.shape === 1) {
+      // Kite/arrow
+      c.moveTo(0, -h * 0.85);
+      c.lineTo(h * 0.5, -h * 0.1);
+      c.lineTo(h * 0.2, h * 0.85);
+      c.lineTo(-h * 0.2, h * 0.85);
+      c.lineTo(-h * 0.5, -h * 0.1);
+    } else if (t.shape === 2) {
+      // Diamond
+      c.moveTo(0, -h * 0.8);
+      c.lineTo(h * 0.55, 0);
+      c.lineTo(0, h * 0.8);
+      c.lineTo(-h * 0.55, 0);
+    } else if (t.shape === 3) {
+      // Pentagon
+      for (let i = 0; i < 5; i++) {
+        const a = (Math.PI * 2 / 5) * i - Math.PI / 2;
+        const r = h * 0.75;
+        i === 0 ? c.moveTo(r * Math.cos(a), r * Math.sin(a)) : c.lineTo(r * Math.cos(a), r * Math.sin(a));
+      }
     } else {
-      // Fill: diamond with internal cross
-      const d = half * 0.65;
-      ctx.beginPath();
-      ctx.moveTo(0, -d);
-      ctx.lineTo(d, 0);
-      ctx.lineTo(0, d);
-      ctx.lineTo(-d, 0);
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
-      // Inner cross
-      ctx.beginPath();
-      ctx.moveTo(0, -d * 0.4);
-      ctx.lineTo(0, d * 0.4);
-      ctx.moveTo(-d * 0.4, 0);
-      ctx.lineTo(d * 0.4, 0);
-      ctx.strokeStyle = 'rgba(255,255,255,0.4)';
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
+      // Cross / plus
+      const w = h * 0.3, l = h * 0.8;
+      c.moveTo(-w, -l); c.lineTo(w, -l); c.lineTo(w, -w); c.lineTo(l, -w);
+      c.lineTo(l, w); c.lineTo(w, w); c.lineTo(w, l); c.lineTo(-w, l);
+      c.lineTo(-w, w); c.lineTo(-l, w); c.lineTo(-l, -w); c.lineTo(-w, -w);
+    }
+    c.closePath();
+    c.fill();
+    c.stroke();
+
+    // Inner detail line
+    c.strokeStyle = 'rgba(255,255,255,0.25)';
+    c.lineWidth = 1;
+    if (t.shape === 0) {
+      c.beginPath(); c.arc(0, 0, h * 0.22, 0, Math.PI * 2); c.stroke();
+    } else if (t.shape === 2) {
+      c.beginPath(); c.moveTo(0, -h * 0.35); c.lineTo(0, h * 0.35); c.stroke();
     }
 
-    ctx.restore();
+    c.restore();
 
-    // Tile border
-    ctx.strokeStyle = tile.solved ? C.teal : C.outline;
-    ctx.lineWidth = tile.solved ? 1.5 : 0.5;
-    ctx.strokeRect(x + 0.5, y + 0.5, s - 1, s - 1);
+    // Cell border
+    c.strokeStyle = 'rgba(0,0,0,0.08)';
+    c.lineWidth = 0.5;
+    c.strokeRect(x, y, s, s);
   }
 
-  function draw() {
-    const w = cv.getBoundingClientRect().width;
+  // Generate a full grid of tiles for a round
+  function generateGrid(s: number): TileSig[] {
+    srand(s);
+    const g: TileSig[] = [];
+    for (let i = 0; i < GRID * GROW; i++) g.push(makeTile());
+    return g;
+  }
+
+  // Create a distractor: similar to target but different in a subtle way
+  function distractor(t: TileSig, difficulty: number): TileSig {
+    const d = { ...t };
+    const change = randInt(Math.max(1, 3 - Math.floor(difficulty / 4)));
+    if (change === 0) {
+      // Different rotation
+      d.rot = (d.rot + 1 + randInt(3)) % 4;
+    } else if (change === 1) {
+      // Different color, same shape and rotation
+      let nc = d.color;
+      while (nc === d.color) nc = PAL[randInt(PAL.length)];
+      d.color = nc;
+    } else {
+      // Different shape
+      d.shape = (d.shape + 1 + randInt(4)) % 5;
+    }
+    return d;
+  }
+
+  // Draw the main pattern with a gap
+  function drawMain(grid: TileSig[], gapIdx: number) {
+    const rect = mainCv.getBoundingClientRect();
     const dpr = Math.min(devicePixelRatio || 1, 2);
-    cv.width = w * dpr;
-    cv.height = w * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const w = rect.width, h = rect.height;
+    mainCv.width = w * dpr; mainCv.height = h * dpr;
+    mainCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const tileSize = w / COLS;
+    mainCtx.fillStyle = BG;
+    mainCtx.fillRect(0, 0, w, h);
 
-    // Background
-    ctx.fillStyle = C.bg;
-    ctx.fillRect(0, 0, w, w);
+    const ts = Math.min(w / GRID, h / GROW);
+    const ox = (w - ts * GRID) / 2;
+    const oy = (h - ts * GROW) / 2;
 
-    // Draw tiles
-    for (let r = 0; r < ROWS; r++) {
-      for (let c = 0; c < COLS; c++) {
-        const tile = tiles[r * COLS + c];
-        drawTilePattern(c * tileSize, r * tileSize, tileSize, tile);
+    for (let r = 0; r < GROW; r++) {
+      for (let c = 0; c < GRID; c++) {
+        const idx = r * GRID + c;
+        const x = ox + c * ts, y = oy + r * ts;
+        if (idx === gapIdx) {
+          // Draw gap: pulsing highlight
+          mainCtx.fillStyle = 'rgba(200, 90, 58, 0.08)';
+          mainCtx.fillRect(x, y, ts, ts);
+          mainCtx.strokeStyle = '#c85a3a';
+          mainCtx.lineWidth = 2;
+          mainCtx.setLineDash([4, 3]);
+          mainCtx.strokeRect(x + 1, y + 1, ts - 2, ts - 2);
+          mainCtx.setLineDash([]);
+          // Question mark
+          mainCtx.fillStyle = 'rgba(200, 90, 58, 0.3)';
+          mainCtx.font = `600 ${ts * 0.4}px system-ui, sans-serif`;
+          mainCtx.textAlign = 'center';
+          mainCtx.textBaseline = 'middle';
+          mainCtx.fillText('?', x + ts / 2, y + ts / 2);
+          mainCtx.textAlign = 'left';
+          mainCtx.textBaseline = 'alphabetic';
+        } else {
+          drawTile(mainCtx, x, y, ts, grid[idx]);
+        }
       }
     }
   }
 
-  function tileAt(clientX: number, clientY: number): number {
-    const rect = cv.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const y = clientY - rect.top;
-    const tileSize = rect.width / COLS;
-    const col = Math.floor(x / tileSize);
-    const row = Math.floor(y / tileSize);
-    if (col < 0 || col >= COLS || row < 0 || row >= ROWS) return -1;
-    return row * COLS + col;
+  // Draw a choice tile
+  function drawChoice(cv: HTMLCanvasElement, t: TileSig) {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    const s = cv.getBoundingClientRect().width;
+    cv.width = s * dpr; cv.height = s * dpr;
+    const c = cv.getContext('2d')!;
+    c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    c.fillStyle = BG;
+    c.fillRect(0, 0, s, s);
+    drawTile(c, s * 0.1, s * 0.1, s * 0.8, t);
   }
 
-  function checkSolved(tile: Tile): boolean {
-    return tile.current % 4 === tile.target % 4;
+  // Shuffle array in place
+  function shuffle<T>(a: T[]) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = randInt(i + 1);
+      [a[i], a[j]] = [a[j], a[i]];
+    }
   }
 
-  function countRemaining(): number {
-    return tiles.filter(t => !t.solved).length;
-  }
+  // Run a single round
+  function playRound() {
+    locked = false;
+    feedbackEl.textContent = '';
+    roundEl.textContent = `${round + 1} / ${ROUNDS}`;
+    scoreDisplayEl.textContent = `${score} correct`;
 
-  // Timer
-  function fmtTime(ms: number): string {
-    const s = Math.floor(ms / 1000);
-    return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
-  }
+    choices.forEach(c => {
+      c.className = 'zpat-choice';
+    });
 
-  function tickTimer() {
-    if (!tRunning) return;
-    timerEl.textContent = fmtTime(Date.now() - tStart);
-    tFrame = requestAnimationFrame(tickTimer);
-  }
+    const grid = generateGrid(round * 137 + 42);
+    const gapIdx = randInt(GRID * GROW);
+    const correct = grid[gapIdx];
 
-  // Click handler
-  cv.addEventListener('pointerdown', (e) => {
-    if (done) return;
-    const idx = tileAt(e.clientX, e.clientY);
-    if (idx < 0 || tiles[idx].solved) return;
+    drawMain(grid, gapIdx);
 
-    // Start timer on first click
-    if (!tRunning) {
-      tRunning = true;
-      tStart = Date.now();
-      tickTimer();
+    // Generate 3 distractors
+    srand(round * 97 + 7);
+    const options: { tile: TileSig; isCorrect: boolean }[] = [
+      { tile: correct, isCorrect: true },
+    ];
+    const usedSigs = new Set([`${correct.shape}-${correct.color}-${correct.rot}`]);
+    let attempts = 0;
+    while (options.length < 4 && attempts < 50) {
+      const d = distractor(correct, round);
+      const sig = `${d.shape}-${d.color}-${d.rot}`;
+      if (!usedSigs.has(sig)) {
+        usedSigs.add(sig);
+        options.push({ tile: d, isCorrect: false });
+      }
+      attempts++;
+    }
+    // Fill remaining if needed
+    while (options.length < 4) {
+      const d = { shape: randInt(5), color: PAL[randInt(PAL.length)], rot: randInt(4) };
+      options.push({ tile: d, isCorrect: false });
     }
 
-    // Rotate tile
-    tiles[idx].current = (tiles[idx].current + 1) % 4;
+    shuffle(options);
 
-    // Check if now correct
-    if (checkSolved(tiles[idx])) {
-      tiles[idx].solved = true;
-    }
+    // Draw choices and wire handlers
+    choices.forEach((cv, i) => {
+      drawChoice(cv, options[i].tile);
 
-    const remaining = countRemaining();
-    remainEl.textContent = remaining === 0
-      ? 'Pattern complete'
-      : `${remaining} tile${remaining === 1 ? '' : 's'} remaining`;
+      const handler = () => {
+        if (locked) return;
+        locked = true;
 
-    draw();
-
-    // Check win
-    if (remaining === 0) {
-      done = true;
-      tRunning = false;
-      cancelAnimationFrame(tFrame);
-      const elapsed = Date.now() - tStart;
-      timerEl.textContent = fmtTime(elapsed);
-
-      setTimeout(() => {
-        stageEl.style.display = 'none';
-        resultTimeEl.textContent = `Completed in ${fmtTime(elapsed)}`;
-
-        const secs = elapsed / 1000;
-        if (secs < 30) {
-          resultTextEl.textContent = 'Exceptional spatial reasoning. A zellige maalem (master) in Fez works at this speed across panels of ten thousand individually chiseled tiles, fitting each one by eye without guides or measurements.';
-        } else if (secs < 60) {
-          resultTextEl.textContent = 'Strong pattern recognition. Traditional zellige artisans train for eight or more years before they are trusted with commissioned work. The challenge is holding local tile alignment and global symmetry in mind simultaneously.';
-        } else if (secs < 120) {
-          resultTextEl.textContent = 'A solid attempt. The difficulty of zellige lies in the compound reasoning: each tile must fit its immediate neighbors while contributing to a pattern that only reveals itself at scale. Masters develop this dual awareness through years of repetition.';
+        if (options[i].isCorrect) {
+          cv.classList.add('correct');
+          score++;
+          feedbackEl.textContent = 'Correct';
+          feedbackEl.style.color = '#2a7a6d';
+          // Fill in the gap
+          const rect = mainCv.getBoundingClientRect();
+          const ts = Math.min(rect.width / GRID, rect.height / GROW);
+          const ox = (rect.width - ts * GRID) / 2;
+          const oy = (rect.height - ts * GROW) / 2;
+          const gr = Math.floor(gapIdx / GRID), gc = gapIdx % GRID;
+          drawTile(mainCtx, ox + gc * ts, oy + gr * ts, ts, correct);
         } else {
-          resultTextEl.textContent = 'Every tile matters. Zellige craftsmen assemble their patterns face-down, only flipping the panel to reveal the result at the end. The spatial reasoning required to work blind from the back side is what separates masters from apprentices.';
+          cv.classList.add('wrong');
+          feedbackEl.textContent = 'Incorrect';
+          feedbackEl.style.color = '#c85a3a';
+          // Highlight correct one
+          options.forEach((o, j) => {
+            if (o.isCorrect) choices[j].classList.add('correct');
+          });
         }
 
-        resultEl.hidden = false;
-      }, 600);
+        choices.forEach(c => c.classList.add('disabled'));
+        scoreDisplayEl.textContent = `${score} correct`;
+
+        setTimeout(() => {
+          round++;
+          if (round >= ROUNDS) {
+            showFinal();
+          } else {
+            playRound();
+          }
+        }, 1200);
+      };
+
+      // Remove old listeners by cloning
+      const fresh = cv.cloneNode(true) as HTMLCanvasElement;
+      cv.parentNode!.replaceChild(fresh, cv);
+      choices[i] = fresh;
+      drawChoice(fresh, options[i].tile);
+      fresh.addEventListener('click', handler);
+    });
+  }
+
+  function showFinal() {
+    gameEl.style.display = 'none';
+    finalScoreEl.textContent = String(score);
+
+    if (score >= 9) {
+      finalTextEl.textContent = 'Exceptional spatial reasoning. A zellige maalem in Fez makes thousands of these judgments per panel, cutting each tile freehand and fitting it by eye against its neighbors. You see the pattern the way they do.';
+    } else if (score >= 7) {
+      finalTextEl.textContent = 'Strong pattern recognition. Zellige artisans train for eight or more years before they are trusted with commissioned panels. The subtle differences between correct and incorrect placement are what separate masters from apprentices.';
+    } else if (score >= 5) {
+      finalTextEl.textContent = 'The difficulty is real. Each tile must match its neighbors in shape, color, and orientation simultaneously. Maalems develop this spatial awareness through years of repetition until correct placement becomes instinctive.';
+    } else {
+      finalTextEl.textContent = 'These distinctions are genuinely hard to see. Zellige craftsmen assemble patterns face-down, working from the back side, making placement decisions they cannot verify until the panel is flipped. The spatial reasoning required is extraordinary.';
     }
-  });
+
+    resultEl.hidden = false;
+  }
 
   // Retry
   document.getElementById('zpat-retry')!.addEventListener('click', () => {
-    tiles = generateTiles();
-    done = false;
-    tRunning = false;
-    cancelAnimationFrame(tFrame);
-    timerEl.textContent = '0:00';
-    remainEl.textContent = `${TOTAL} tiles remaining`;
-    stageEl.style.display = '';
+    round = 0;
+    score = 0;
+    gameEl.style.display = '';
     resultEl.hidden = true;
-    draw();
+    playRound();
   });
 
   // Init
-  tiles = generateTiles();
-  draw();
+  playRound();
 </script>
