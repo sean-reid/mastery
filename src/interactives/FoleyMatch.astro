@@ -37,7 +37,7 @@
   #foley-match .interactive-header { margin-bottom: var(--space-6); }
   #foley-match .interactive-title { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-2); }
   #foley-match .interactive-subtitle { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 56ch; }
-  .foley-body { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+  .foley-body { display: flex; flex-direction: column; align-items: center; gap: var(--space-8); padding: var(--space-4) 0; }
   .foley-round-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
   .foley-play-btn { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-base); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); animation: foley-pulse 2.5s ease-in-out infinite; cursor: pointer; border: none; }
   .foley-play-btn:hover { opacity: .92; transform: scale(1.03); }
@@ -54,9 +54,9 @@
   .foley-eq span:nth-child(3) { height: 8px; animation-delay: .3s; }
   @keyframes foley-eqa { 0% { transform: scaleY(.3); } 100% { transform: scaleY(1); } }
   .foley-prompt { font-family: var(--font-heading); font-size: var(--text-base); font-weight: 500; color: var(--color-text-secondary); text-align: center; }
-  .foley-options { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); width: 100%; max-width: 480px; }
-  .foley-opt-btn { padding: var(--space-3) var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--color-border); background: var(--color-surface-raised); color: var(--color-text); font-size: var(--text-sm); font-weight: 500; cursor: pointer; transition: all 200ms var(--ease-out); text-align: center; line-height: 1.4; }
-  .foley-opt-btn:hover { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 6%, transparent); transform: translateY(-1px); }
+  .foley-options { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); width: 100%; max-width: 520px; }
+  .foley-opt-btn { padding: var(--space-4) var(--space-5); border-radius: var(--radius-lg); border: 1.5px solid var(--color-border); background: var(--color-surface-raised); color: var(--color-text); font-size: var(--text-sm); font-weight: 500; cursor: pointer; transition: all 200ms var(--ease-out); text-align: center; line-height: 1.5; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .foley-opt-btn:hover { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 6%, transparent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .foley-opt-btn:disabled { cursor: default; transform: none; }
   .foley-opt-btn.foley-correct { border-color: var(--color-score-low, #22c55e); background: color-mix(in srgb, var(--color-score-low, #22c55e) 10%, transparent); color: var(--color-score-low, #22c55e); }
   .foley-opt-btn.foley-wrong { border-color: var(--color-score-high, #ef4444); background: color-mix(in srgb, var(--color-score-high, #ef4444) 10%, transparent); color: var(--color-score-high, #ef4444); }
@@ -171,7 +171,7 @@
   }
 
   function setupRound() {
-    roundLabel.textContent = `Round ${currentRound + 1} of 6`;
+    roundLabel.textContent = `Round ${currentRound + 1} of ${ROUNDS.length}`;
     promptEl.hidden = false; feedbackEl.hidden = true; finalEl.hidden = true;
     playBtn.disabled = false; playBtn.classList.remove('playing');
     playLabel.textContent = 'Play sound effect'; eqBars.hidden = true;
