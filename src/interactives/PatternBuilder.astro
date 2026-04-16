@@ -189,6 +189,20 @@
     gapCtx.textAlign = 'left'; gapCtx.textBaseline = 'alphabetic';
   }
 
+  // Pre-generate stable grain pattern (seeded, not random per frame)
+  let grainPattern: boolean[] = [];
+  function ensureGrain(h: number) {
+    const needed = Math.ceil(h / 3);
+    if (grainPattern.length >= needed) return;
+    // Seed once, stable across redraws
+    let s = 12345;
+    grainPattern = [];
+    for (let i = 0; i < needed; i++) {
+      s = (s * 16807) % 2147483647;
+      grainPattern.push(s % 2 === 0);
+    }
+  }
+
   /* ── Draw the cutting surface: raw tile with guide outline ── */
   function drawCutSurface() {
     const w = sz(cutCv);
@@ -198,11 +212,12 @@
     cutCtx.fillStyle = TILE_BG;
     cutCtx.fillRect(0, 0, w, w);
 
-    // Subtle clay texture
+    // Stable clay texture (no flicker)
+    ensureGrain(w);
     cutCtx.save();
     cutCtx.globalAlpha = 0.03;
     for (let i = 0; i < w; i += 3) {
-      cutCtx.fillStyle = Math.random() > 0.5 ? '#000' : '#fff';
+      cutCtx.fillStyle = grainPattern[Math.floor(i / 3)] ? '#000' : '#fff';
       cutCtx.fillRect(0, i, w, 1);
     }
     cutCtx.restore();
