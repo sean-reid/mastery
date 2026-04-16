@@ -37,17 +37,40 @@ if (cards.length > INITIAL_BATCH && skillList) {
   function revealBatch() {
     if (isFiltered || revealedCount >= cards.length) return;
     const end = Math.min(revealedCount + LOAD_MORE, cards.length);
-    for (let i = revealedCount; i < end; i++) {
-      const card = cards[i];
-      card.style.display = '';
-      card.style.opacity = '1';
-      card.style.transform = 'none';
-      delete card.dataset.deferred;
-    }
+    const toReveal = cards.slice(revealedCount, end);
     revealedCount = end;
 
-    // Refresh ScrollTrigger positions
-    window.dispatchEvent(new CustomEvent('mastery:filter'));
+    // Stagger reveals: 3 cards per frame to spread layout cost
+    let idx = 0;
+    function revealNext() {
+      const chunk = Math.min(3, toReveal.length - idx);
+      for (let j = 0; j < chunk; j++, idx++) {
+        const card = toReveal[idx];
+        card.style.display = '';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(12px)';
+        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        delete card.dataset.deferred;
+      }
+      // Trigger reflow then animate in
+      requestAnimationFrame(() => {
+        for (let j = idx - chunk; j < idx; j++) {
+          toReveal[j].style.opacity = '1';
+          toReveal[j].style.transform = 'none';
+        }
+        if (idx < toReveal.length) {
+          requestAnimationFrame(revealNext);
+        } else {
+          // Clean up transition property after animation completes
+          setTimeout(() => {
+            toReveal.forEach(c => c.style.transition = '');
+          }, 350);
+          window.dispatchEvent(new CustomEvent('mastery:filter'));
+        }
+      });
+    }
+
+    requestAnimationFrame(revealNext);
 
     if (revealedCount >= cards.length) {
       scrollObserver.unobserve(sentinel);
