@@ -34,7 +34,8 @@
       <p class="beat-ctx" id="beat-ctx"></p>
       <div class="beat-btns">
         <button class="beat-next-btn" id="beat-next" hidden>Next level</button>
-        <button class="beat-retry-btn" id="beat-retry">Try again</button>
+        <button class="beat-retry-btn" id="beat-retry">Retry level</button>
+        <button class="beat-retry-btn" id="beat-restart" hidden>Start over</button>
       </div>
     </div>
   </div>
@@ -347,14 +348,18 @@
     ctxEl.textContent = msgs[idx];
     nextBtn.hidden = round >= TOTAL_ROUNDS;
     nextBtn.textContent = `Next: ${round < TOTAL_ROUNDS ? ROUNDS[round].label.replace(/Level \d: /, '') : ''}`;
+    restartBtn.hidden = round <= 1;
 
     stopTones(); playBtn.classList.remove('playing'); playLabel.textContent = 'Play tones';
     eqBars.hidden = true; slider.disabled = true; (checkBtn as any).hidden = true;
     resultEl.hidden = false; drawIdle();
   });
 
+  const restartBtn = bq('#beat-restart') as HTMLButtonElement;
+
   nextBtn.addEventListener('click', () => { round++; setupRound(); });
   retryBtn.addEventListener('click', () => setupRound());
+  restartBtn.addEventListener('click', () => { round = 1; setupRound(); });
 
   drawIdle();
   setupRound();
