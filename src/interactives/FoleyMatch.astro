@@ -113,13 +113,13 @@
   const scoreCtx = fq('#foley-score-ctx');
   const restartBtn = fq('#foley-restart');
 
-  function ensureAudio() {
+  async function ensureAudio() {
     if (!audioCtx) audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
-    if (audioCtx.state === 'suspended') audioCtx.resume();
+    if (audioCtx.state === 'suspended') await audioCtx.resume();
   }
 
   async function preloadAudio() {
-    ensureAudio();
+    await ensureAudio();
     const ctx = audioCtx!;
     await Promise.all(AUDIO_FILES.map(async (url, i) => {
       try {
@@ -216,7 +216,7 @@
 
   playBtn.addEventListener('click', async () => {
     if (isPlaying) return;
-    ensureAudio();
+    await ensureAudio();
     isPlaying = true; playBtn.classList.add('playing');
     playLabel.textContent = 'Loading...'; playBtn.disabled = true;
     await preloadAudio();

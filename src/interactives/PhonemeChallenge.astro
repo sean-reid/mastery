@@ -141,14 +141,14 @@
   let userOrder: number[] = []; // card indices the user has selected
   let cardClickIndices: number[] = []; // which click each card represents (shuffled)
 
-  function ensureAudio() {
+  async function ensureAudio() {
     if (!audioCtx) audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
-    if (audioCtx.state === 'suspended') audioCtx.resume();
+    if (audioCtx.state === 'suspended') await audioCtx.resume();
   }
 
   async function loadAudio() {
     if (loaded) return;
-    ensureAudio();
+    await ensureAudio();
     const ctx = audioCtx!;
     const base = import.meta.env.BASE_URL || '/mastery/';
     await Promise.all(CLICKS.map(async (c, i) => {
@@ -177,7 +177,7 @@
   }
 
   async function playSequence() {
-    ensureAudio();
+    await ensureAudio();
     await loadAudio();
     playBtn.classList.add('playing');
     playLabel.textContent = 'Playing...';
@@ -256,7 +256,7 @@
       listenBtn.addEventListener('click', async (e) => {
         e.stopPropagation();
         if (card.classList.contains('used') || card.classList.contains('revealed')) return;
-        ensureAudio();
+        await ensureAudio();
         await loadAudio();
         playClick(clickIdx);
       });

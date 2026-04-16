@@ -623,12 +623,12 @@
   /* ── Audio engine ── */
   let audioCtx: AudioContext | null = null;
 
-  function initAudio() {
+  async function initAudio() {
     if (!audioCtx) {
       audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
     }
     if (audioCtx.state === 'suspended') {
-      audioCtx.resume();
+      await audioCtx.resume();
     }
   }
 
@@ -822,8 +822,8 @@
   /* ── Main round ── */
   const ROUND_MS = 10000; // 10 seconds of tapping
 
-  function runRound() {
-    initAudio();
+  async function runRound() {
+    await initAudio();
     running = true;
     startBtn.hidden = true;
     resEl.hidden = true;

@@ -681,7 +681,7 @@
   let refAnimId = 0;
   let guessAnimId = 0;
 
-  function ensureAudio() {
+  async function ensureAudio() {
     if (!audioCtx) {
       audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
       analyserRef = audioCtx.createAnalyser();
@@ -691,11 +691,11 @@
       analyserGuess.fftSize = 2048;
       analyserGuess.smoothingTimeConstant = 0.85;
     }
-    if (audioCtx.state === 'suspended') audioCtx.resume();
+    if (audioCtx.state === 'suspended') await audioCtx.resume();
   }
 
   function playTone(freq: number, duration: number, analyser: AnalyserNode): OscillatorNode {
-    ensureAudio();
+    await ensureAudio();
     const ctx = audioCtx!;
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
@@ -817,7 +817,7 @@
   let guessGain: GainNode | null = null;
 
   function startGuessTone() {
-    ensureAudio();
+    await ensureAudio();
     if (guessOsc) return;
     const ctx = audioCtx!;
     guessOsc = ctx.createOscillator();
@@ -872,7 +872,7 @@
   playBtn.addEventListener('click', () => {
     if (!targetFreq) targetFreq = getRandomFreq();
 
-    ensureAudio();
+    await ensureAudio();
     playBtn.classList.add('playing');
     playLabel.textContent = 'Playing...';
     eqBars.hidden = false;
@@ -954,7 +954,7 @@
 
   // ---- Listen to both ----
   listenBtn.addEventListener('click', () => {
-    ensureAudio();
+    await ensureAudio();
     const guess = +slider.value;
 
     // Play reference
