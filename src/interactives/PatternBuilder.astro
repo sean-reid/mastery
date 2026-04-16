@@ -87,8 +87,9 @@
   .zpat-retry:hover { background: var(--color-surface-raised); }
 
   @media (max-width: 560px) {
-    #zpat-layout { flex-direction: column; align-items: center; }
-    #zpat-gap, #zpat-cut, #zpat-overlay { width: 200px; height: 200px; }
+    #zpat-layout { flex-direction: column; align-items: center; gap: var(--space-4); }
+    #zpat-gap, #zpat-cut, #zpat-overlay { width: min(280px, 80vw); height: min(280px, 80vw); }
+    #zpat-result-row { flex-direction: column; }
   }
 </style>
 
