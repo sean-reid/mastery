@@ -6,7 +6,7 @@
     <p class="interactive-subtitle">Hear a movie sound effect. Identify which everyday object actually produces that sound in film production.</p>
   </div>
   <div class="foley-body" id="foley-body">
-    <div class="foley-round-label" id="foley-round-label">Round 1 of 6</div>
+    <div class="foley-round-label" id="foley-round-label">Round 1 of 4</div>
     <button class="foley-play-btn" id="foley-play">
       <span class="foley-play-icon">
         <svg class="foley-svg-play" id="foley-svg-play" width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M7 4.5l11 6.5-11 6.5V4.5z" fill="currentColor"/></svg>
@@ -24,7 +24,7 @@
     <div class="foley-final" id="foley-final" hidden>
       <div class="foley-score-wrap">
         <span class="foley-score-num" id="foley-score-num"></span>
-        <span class="foley-score-of">of 6 correct</span>
+        <span class="foley-score-of" id="foley-score-of">of 4 correct</span>
       </div>
       <p class="foley-score-ctx" id="foley-score-ctx"></p>
       <button class="foley-restart-btn" id="foley-restart">Try again</button>
@@ -70,10 +70,10 @@
   .foley-next-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-sm); font-weight: 500; transition: all var(--duration-fast) var(--ease-out); cursor: pointer; border: none; }
   .foley-next-btn:hover { opacity: .92; transform: scale(1.02); }
   @keyframes foley-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-  .foley-final { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); animation: foley-in .5s var(--ease-out); width: 100%; max-width: 480px; }
+  .foley-final { display: flex; flex-direction: column; align-items: center; gap: var(--space-6); padding: var(--space-8) 0; animation: foley-in .5s var(--ease-out); width: 100%; max-width: 480px; }
   .foley-final[hidden] { display: none; }
   .foley-score-wrap { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); }
-  .foley-score-num { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; color: var(--color-accent); }
+  .foley-score-num { font-family: var(--font-heading); font-size: 4rem; font-weight: 700; color: var(--color-text); line-height: 1; }
   .foley-score-of { font-size: var(--text-sm); color: var(--color-text-muted); }
   .foley-score-ctx { font-size: var(--text-sm); color: var(--color-text-secondary); text-align: center; line-height: 1.7; max-width: 52ch; }
   .foley-restart-btn { padding: var(--space-2) var(--space-6); border-radius: var(--radius-full); border: 1px solid var(--color-accent); background: transparent; color: var(--color-accent); font-size: var(--text-sm); font-weight: 500; cursor: pointer; transition: all var(--duration-fast) var(--ease-out); }
@@ -203,6 +203,7 @@
     optionsEl.style.display = 'none'; promptEl.hidden = true;
     feedbackEl.hidden = true; playBtn.style.display = 'none'; roundLabel.style.display = 'none';
     scoreNum.textContent = String(score);
+    fq('#foley-score-of').textContent = `of ${ROUNDS.length} correct`;
     const msgs = [
       'Foley artistry thrives on misdirection. The sounds that feel most natural on screen are nearly always produced by objects bearing no resemblance to the thing depicted.',
       'A respectable showing. Most people find foley answers counterintuitive because the discipline exploits the gap between what sounds right and what actually produces the sound.',
