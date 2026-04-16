@@ -4,7 +4,7 @@
   "category": "academic",
   "description": "Air traffic controllers maintain a continuously updating three-dimensional mental model, called 'the picture,' of dozens of aircraft moving at different speeds, altitudes, and headings, issuing separation instructions with zero tolerance for error; the FAA Academy's historical washout rate of roughly 50% before trainees even reach a facility reflects the cognitive demands of a profession where a single missed conflict can endanger hundreds of lives.",
   "thumbnail": {
-    "src": "/images/skills/air-traffic-control.webp",
+    "src": "/mastery/images/skills/air-traffic-control.webp",
     "alt": "Air traffic controller monitoring multiple radar screens in a darkened control room",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -62,8 +62,8 @@
   },
   "methodology_notes": "Scores are informed by the National Academies' 'Flight to the Future' report on cognitive demands, FAA qualification requirements and Academy attrition data (~50% washout rate), Wright State University's research on ATCS training attrition, and Washington Post reporting on the ongoing controller shortage. The failure_cost score of 10 reflects the Tenerife and Ueberlingen disasters and the FAA's zero-tolerance safety framework.",
   "clip": {
-    "src": "/videos/skills/air-traffic-control.mp4",
-    "poster": "/images/skills/air-traffic-control.webp",
+    "src": "/mastery/videos/skills/air-traffic-control.mp4",
+    "poster": "/mastery/images/skills/air-traffic-control.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

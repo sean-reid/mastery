@@ -4,7 +4,7 @@
   "category": "academic",
   "description": "Research-level pure mathematics demands constructing original proofs about abstract structures (groups, manifolds, number fields) where a single theorem may require synthesizing techniques from disparate subfields and can take years to complete, as illustrated by Andrew Wiles's seven-year solitary effort to prove Fermat's Last Theorem by establishing a modularity result for semistable elliptic curves.",
   "thumbnail": {
-    "src": "/images/skills/pure-mathematics.webp",
+    "src": "/mastery/images/skills/pure-mathematics.webp",
     "alt": "Blackboard covered with advanced mathematical notation and proof sketches",
     "attribution": "Photo by Unsplash"
   },
@@ -64,8 +64,8 @@
   },
   "methodology_notes": "Scores are anchored by the Fields Medal age distribution (median ~34 at award), AMS data on ~1,200 US math PhDs per year with an estimated 10,000-20,000 active research mathematicians worldwide, and Macnamara et al.'s meta-analysis showing deliberate practice explains less variance in academic domains than in games or music. The cognitive demand score of 10 serves as the anchor for the entire Mastery project.",
   "clip": {
-    "src": "/videos/skills/pure-mathematics.mp4",
-    "poster": "/images/skills/pure-mathematics.webp",
+    "src": "/mastery/videos/skills/pure-mathematics.mp4",
+    "poster": "/mastery/images/skills/pure-mathematics.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

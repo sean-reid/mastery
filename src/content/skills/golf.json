@@ -4,7 +4,7 @@
   "category": "sport",
   "description": "A precision club-and-ball sport played over 18 holes on courses measuring 5,000-7,400 yards, where players attempt to sink a 42.7mm ball into a 108mm cup in as few strokes as possible. Originating in 15th-century Scotland, the game's deceptive depth is reflected in its statistics: fewer than 2% of golfers ever reach scratch (handicap 0), the average male handicap is roughly 14, and PGA Tour professionals, who play at an estimated +5.4 handicap, separate from scratch players by just 3 strokes per round across 30+ distinct shot types.",
   "thumbnail": {
-    "src": "/images/skills/golf.webp",
+    "src": "/mastery/images/skills/golf.webp",
     "alt": "Golfer mid-swing on a fairway with a long iron",
     "attribution": "Photo by Wikimedia Commons"
   },

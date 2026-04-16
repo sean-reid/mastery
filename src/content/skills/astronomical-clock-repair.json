@@ -4,7 +4,7 @@
   "category": "academic",
   "description": "Astronomical clock repair requires servicing mechanisms containing hundreds of gears that track not only civil time but also sidereal time, lunar phases (driven by specialized 57-tooth gears advancing two teeth per day), solar declination, planetary positions, and eclipse cycles, exemplified by the Prague Orloj (1410), whose 2018 restoration replaced a 1948 electric mechanism with the original 1860s clockwork, and by Giovanni de Dondi's 14th-century astrarium with 107 moving parts, demanding the horologist to master gear-train mathematics, metallurgical analysis of period alloys, and astronomical computation simultaneously.",
   "thumbnail": {
-    "src": "/images/skills/astronomical-clock-repair.webp",
+    "src": "/mastery/images/skills/astronomical-clock-repair.webp",
     "alt": "Intricate gear mechanism of an astronomical clock with moon phase display",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores are based on Wikipedia's articles on astronomical clocks and the Prague astronomical clock, the MDPI Applied Sciences paper on astronomical clock design and simulation, AWCI and BHI educational resources for horology training, and accounts of the 2018 Prague Orloj restoration. The time_to_expert score of 10 reflects the near-impossibility of rapid skill acquisition in a field where the objects of study are unique cultural heritage artifacts numbering in the dozens worldwide. Failure_cost is scored at 9 because irreversible damage to a 600-year-old mechanism represents a permanent loss to human cultural heritage.",
   "clip": {
-    "src": "/videos/skills/astronomical-clock-repair.mp4",
-    "poster": "/images/skills/astronomical-clock-repair.webp",
+    "src": "/mastery/videos/skills/astronomical-clock-repair.mp4",
+    "poster": "/mastery/images/skills/astronomical-clock-repair.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

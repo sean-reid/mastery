@@ -4,7 +4,7 @@
   "category": "trade",
   "description": "Bellfounding is the casting and tuning of bronze church bells using the medieval swept-loam method: a strickle template is swept over layers of loam (sand, clay, horse dung, hair, straw) to form a mold around a brick core, into which molten bell bronze (roughly 80% copper, 20% tin) is poured at ~1,100 C. After cooling in the casting pit, each bell is mounted on a lathe and metal is shaved from the interior to bring five harmonic partials (hum, prime, tierce, quint, and nominal) into tune with tolerances under 1/100th of a semitone. Heritage Crafts lists bellfounding as endangered in the UK; John Taylor & Co. in Loughborough is Britain's last remaining bell foundry.",
   "thumbnail": {
-    "src": "/images/skills/bellfounding.webp",
+    "src": "/mastery/images/skills/bellfounding.webp",
     "alt": "Molten bronze being poured into a bell mold in a traditional foundry casting pit",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores draw on Wikipedia's bellfounding article, Heritage Crafts Red List classification, McShane Bell Company's technical documentation, and the National Bell Festival's process descriptions. Confidence is lower than average because bellfounding is critically scarce; fewer than a dozen foundries worldwide practice the traditional swept-loam method, and quantitative training data is virtually nonexistent.",
   "clip": {
-    "src": "/videos/skills/bellfounding.mp4",
-    "poster": "/images/skills/bellfounding.webp",
+    "src": "/mastery/videos/skills/bellfounding.mp4",
+    "poster": "/mastery/images/skills/bellfounding.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

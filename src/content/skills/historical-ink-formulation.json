@@ -4,7 +4,7 @@
   "category": "academic",
   "description": "Historical ink formulation involves reproducing iron-gall inks by extracting gallotannic acid from specific oak galls (such as Aleppo galls containing up to 65% tannic acid), combining it with iron(II) sulfate and gum arabic, then studying how the resulting ferrous tannate complex oxidizes to insoluble ferric tannate on contact with air, and how, over 500+ years, the same Fenton-reaction chemistry that made these inks permanent also destroys the paper through acid-catalyzed hydrolysis and iron-catalyzed oxidative scission of cellulose.",
   "thumbnail": {
-    "src": "/images/skills/historical-ink-formulation.webp",
+    "src": "/mastery/images/skills/historical-ink-formulation.webp",
     "alt": "Oak galls and iron sulfate crystals beside a vial of dark iron-gall ink",
     "attribution": "Photo by Wikimedia Commons"
   },

@@ -4,7 +4,7 @@
   "category": "physical",
   "description": "Competitive breath-holding, face-down in a pool. The world record is over 24 minutes. The average untrained person taps out at 30-60 seconds. The gap is not lung capacity but learned suppression of the urge to breathe through CO2 tolerance training, diaphragm relaxation, and deep mental control.",
   "thumbnail": {
-    "src": "/images/skills/static-apnea.webp",
+    "src": "/mastery/images/skills/static-apnea.webp",
     "alt": "Freediver floating face-down in still water during a static apnea competition",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -58,8 +58,8 @@
   "methodology_notes": "AIDA International provides extensive competition data and world records. Schagatay's physiological research on breath-hold diving is the primary academic source. Training timelines from competitive freediving communities and coaching programs.",
   "interactive": "breath-hold",
   "clip": {
-    "src": "/videos/skills/static-apnea.mp4",
-    "poster": "/images/skills/static-apnea.webp",
+    "src": "/mastery/videos/skills/static-apnea.mp4",
+    "poster": "/mastery/images/skills/static-apnea.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

@@ -4,7 +4,7 @@
   "category": "instrument",
   "description": "The tabla is a pair of Indian hand drums (the higher-pitched dayan and bass bayan) whose 20+ named stroke types (bols) form a spoken rhythmic language: each syllable like Na, Dhin, Dha, or Ge maps to a specific finger-and-palm technique, and players must recite compositions vocally before performing them. Mastery is traditionally transmitted through the guru-shishya parampara, with students training under a single master for 10-20 years to internalize the repertoire of kaydas, gats, tukras, and chakradars that constitute the Hindustani rhythmic tradition.",
   "thumbnail": {
-    "src": "/images/skills/tabla.webp",
+    "src": "/mastery/images/skills/tabla.webp",
     "alt": "Pair of tabla drums showing the dayan with black syahi center patch and the larger copper bayan",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -131,8 +131,8 @@
   },
   "methodology_notes": "Scores informed by Wikipedia and Britannica articles on tabla, Darbar's 'Twelve Days of Tabla' primer, and Chandrakantha.com's comprehensive bol reference. Training timelines derived from documented guru-shishya tradition durations and biographical data of notable players including Zakir Hussain (training from age 3, professional debut at 12, 50+ year career). Cognitive demand and precision scores reflect the unique challenge of the bol system's mapping between spoken syllables and physical strokes. Confidence is generally higher than for rarer instruments due to the tabla's relatively well-documented pedagogical tradition.",
   "clip": {
-    "src": "/videos/skills/tabla.mp4",
-    "poster": "/images/skills/tabla.webp",
+    "src": "/mastery/videos/skills/tabla.mp4",
+    "poster": "/mastery/images/skills/tabla.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

@@ -4,7 +4,7 @@
   "category": "technology",
   "description": "A scientific glassblower fabricates custom laboratory apparatus from borosilicate glass (melting point ~1,650 C), working on a glassblowing lathe with oxygen-fuel torches to join, bend, and seal tubing to tolerances of fractions of a millimeter, and a cracked seal on a vacuum line can ruin months of physics research. After completing a two-year associate degree at Salem Community College (the only US program), graduates face a 7,000-8,000 hour apprenticeship to reach journeyman status. The American Scientific Glassblowers Society has roughly 650 members; the broader US practitioner population is estimated at around 2,000, supporting university labs, pharmaceutical firms, and particle accelerator facilities.",
   "thumbnail": {
-    "src": "/images/skills/scientific-glassblowing.webp",
+    "src": "/mastery/images/skills/scientific-glassblowing.webp",
     "alt": "Scientific glassblower shaping borosilicate tubing on a lathe with an oxygen torch",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores draw on the ASGS membership data, Salem Community College curriculum documentation, Wikipedia's scientific glassblowing article, and published accounts from university glass shops at UC Berkeley, Purdue, and UMass. The 7,000-8,000 hour apprenticeship figure comes from ILPI's Scientific Glassblowing Learning Center. Practitioner estimates (~2,000 US) are from industry reporting.",
   "clip": {
-    "src": "/videos/skills/scientific-glassblowing.mp4",
-    "poster": "/images/skills/scientific-glassblowing.webp",
+    "src": "/mastery/videos/skills/scientific-glassblowing.mp4",
+    "poster": "/mastery/images/skills/scientific-glassblowing.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

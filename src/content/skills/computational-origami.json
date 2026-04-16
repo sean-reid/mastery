@@ -4,7 +4,7 @@
   "category": "academic",
   "description": "Computational origami uses the Huzita-Hatori axioms (seven operations defining all possible single-fold alignments of points and lines on paper) to solve geometric problems provably impossible with compass and straightedge alone, including angle trisection and doubling the cube, because paper folding computes the real roots of cubic equations rather than just quadratics, a capability first exploited by Margherita Beloch in 1936 and formalized computationally through Robert Lang's TreeMaker algorithm beginning in 1993.",
   "thumbnail": {
-    "src": "/images/skills/computational-origami.webp",
+    "src": "/mastery/images/skills/computational-origami.webp",
     "alt": "Complex crease pattern diagram overlaid on folded paper model",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores are based on Wikipedia's articles on mathematics of paper folding and Huzita-Hatori axioms, the Alperin-Lang paper on multi-fold origami axioms published through Robert Lang's research site, and Lang's TED talk describing the computational design process. The cognitive_demand score reflects the NP-completeness proof by Bern and Hayes (1996). The low failure_cost and luck_variance reflect the field's mathematical nature, where outcomes are deterministic and errors are costless to correct.",
   "clip": {
-    "src": "/videos/skills/computational-origami.mp4",
-    "poster": "/images/skills/computational-origami.webp",
+    "src": "/mastery/videos/skills/computational-origami.mp4",
+    "poster": "/mastery/images/skills/computational-origami.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

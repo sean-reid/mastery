@@ -4,7 +4,7 @@
   "category": "instrument",
   "description": "The fretless fingerboard demands that every pitch be manufactured from scratch by ear and muscle memory; shifting a finger 1 mm produces an audible intonation error. Ericsson's 1993 Berlin Academy study used violinists as its primary subjects, finding that the best students had accumulated 7,410 practice hours by age 18 versus 3,420 for future music teachers.",
   "thumbnail": {
-    "src": "/images/skills/violin.webp",
+    "src": "/mastery/images/skills/violin.webp",
     "alt": "Close-up of a violinist's left hand on the fingerboard during a concert performance",
     "attribution": "Photo by Unsplash"
   },
@@ -138,8 +138,8 @@
   },
   "methodology_notes": "Scores are anchored to Ericsson's 1993 deliberate practice study, which used Berlin Academy violinists as its primary dataset. Precision_required is the highest in the instrument set (10) reflecting the fretless fingerboard's uniquely demanding intonation requirements. Physical_demand reflects well-documented occupational injury rates among professional string players.",
   "clip": {
-    "src": "/videos/skills/violin.mp4",
-    "poster": "/images/skills/violin.webp",
+    "src": "/mastery/videos/skills/violin.mp4",
+    "poster": "/mastery/images/skills/violin.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

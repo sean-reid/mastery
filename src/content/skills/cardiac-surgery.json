@@ -4,7 +4,7 @@
   "category": "trade",
   "description": "A cardiothoracic surgeon in the United States completes 4 years of medical school, 5-7 years of general surgery residency, and 2-3 years of cardiothoracic fellowship, a minimum of 13 years post-college before independent practice. The STS National Database tracks nearly 10 million procedures across 4,300+ surgeons; operative mortality averages 2-3% for elective cases but climbs to 13-21% for reoperations. Globally, only ~16,000 cardiac surgeons serve a world population of 8 billion: 1.64 per million in wealthy nations, 0.04 per million in low-income countries.",
   "thumbnail": {
-    "src": "/images/skills/cardiac-surgery.webp",
+    "src": "/mastery/images/skills/cardiac-surgery.webp",
     "alt": "Surgical team performing open-heart bypass surgery under operating room lights",
     "attribution": "Photo by Unsplash"
   },
@@ -63,8 +63,8 @@
   },
   "methodology_notes": "Scores draw on the STS National Database (10M+ procedures), JAMA Network Open volume-outcome studies, TSDA training pathway documentation, and PubMed global cardiac surgery access data. Cardiac surgery serves as the difficulty anchor for the trade category: time_to_expert=10 and failure_cost=10 reflect the longest training pipeline and highest stakes of any manual craft.",
   "clip": {
-    "src": "/videos/skills/cardiac-surgery.mp4",
-    "poster": "/images/skills/cardiac-surgery.webp",
+    "src": "/mastery/videos/skills/cardiac-surgery.mp4",
+    "poster": "/mastery/images/skills/cardiac-surgery.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

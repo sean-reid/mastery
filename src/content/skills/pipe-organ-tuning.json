@@ -4,7 +4,7 @@
   "category": "technology",
   "description": "A pipe organ tuner adjusts every pipe in an instrument (large cathedral organs contain 5,000 to 10,000 or more pipes organized into ranks) so that they sound in tune with each other according to a chosen temperament, working pipe by pipe with a tuning knife to tap metal tuning slides up or down by fractions of a millimeter. The UK's Institute for Apprenticeships certifies a 36-month organ builder apprenticeship at Level 3, covering design, voicing, and tuning. Because organ pipe pitch varies with temperature (a 10 C rise raises pitch by ~1.8%), tuners must recalibrate seasonally, and a full tuning of a large instrument takes 10-12 hours of painstaking aural comparison.",
   "thumbnail": {
-    "src": "/images/skills/pipe-organ-tuning.webp",
+    "src": "/mastery/images/skills/pipe-organ-tuning.webp",
     "alt": "Organ tuner adjusting metal pipe tuning slides inside a large church pipe organ",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -61,8 +61,8 @@
   "methodology_notes": "Scores draw on Wikipedia's pipe organ tuning article, the UK Institute for Apprenticeships organ builder standard, Duke University Chapel's organ tuning FAQ, and published accounts from organ builders including Harrison & Harrison. The 36-month apprenticeship and temperature sensitivity figures come from official UK standards. The 10-12 hour tuning duration for large instruments is widely reported across multiple organ maintenance firms.",
   "interactive": "beat-detector",
   "clip": {
-    "src": "/videos/skills/pipe-organ-tuning.mp4",
-    "poster": "/images/skills/pipe-organ-tuning.webp",
+    "src": "/mastery/videos/skills/pipe-organ-tuning.mp4",
+    "poster": "/mastery/images/skills/pipe-organ-tuning.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

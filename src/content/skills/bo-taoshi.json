@@ -4,7 +4,7 @@
   "category": "sport",
   "description": "A Japanese pole-toppling sport in which 150 players per side split into 75 attackers and 75 defenders, with the attacking team attempting to bring the opposing pole from vertical to below 30 degrees within two minutes. Played since 1954 at the National Defense Academy of Japan, it features specialized positions including the 'ninja' who perches atop the pole to counterbalance attackers, and the 'barrier' who form a human wall. Helmets are mandatory after escalating injuries in the 1970s and 80s; shoes are banned due to the prevalence of face-kicking.",
   "thumbnail": {
-    "src": "/images/skills/bo-taoshi.webp",
+    "src": "/mastery/images/skills/bo-taoshi.webp",
     "alt": "Massive scrum of cadets climbing and defending a pole during a Bo-taoshi match at Japan's National Defense Academy",
     "attribution": "Photo by Wikimedia Commons"
   },

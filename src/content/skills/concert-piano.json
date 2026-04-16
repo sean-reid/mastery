@@ -4,7 +4,7 @@
   "category": "instrument",
   "description": "Professional concert pianists typically begin training by age 5-7 and accumulate 15,000-25,000 hours of deliberate practice over 15-20 years before debuting. The 2025 Van Cliburn Competition accepted only 30 of 340 applicants (8.8%), each of whom had already trained for over a decade. Ericsson's landmark 1993 study at the Berlin Academy found elite violinists and pianists averaged 7,410 practice hours by age 18.",
   "thumbnail": {
-    "src": "/images/skills/concert-piano.webp",
+    "src": "/mastery/images/skills/concert-piano.webp",
     "alt": "Concert grand piano on stage under spotlight at a recital hall",
     "attribution": "Photo by Unsplash"
   },
@@ -142,8 +142,8 @@
   "methodology_notes": "Scores draw on Ericsson's deliberate practice research (1993), Macnamara's meta-analysis (2014), Van Cliburn Competition statistics, and ABRSM/RCM grading frameworks. Concert piano is the anchor skill for the instrument category: time_to_expert=10 reflects that virtually no one reaches concert level in under 15 years of dedicated training.",
   "interactive": "polyrhythm-tapper",
   "clip": {
-    "src": "/videos/skills/concert-piano.mp4",
-    "poster": "/images/skills/concert-piano.webp",
+    "src": "/mastery/videos/skills/concert-piano.mp4",
+    "poster": "/mastery/images/skills/concert-piano.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

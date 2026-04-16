@@ -4,7 +4,7 @@
   "category": "performance",
   "description": "Benshi (literally 'orator') are Japanese live narrators who accompany silent films, voicing every character, providing dramatic commentary, and interpreting the story for the audience, all in real time beside the screen. At their peak in the 1920s, over 7,000 benshi performed across Japan; today, approximately 15 practitioners keep the tradition alive. Training follows the traditional master-student (shitei) system adapted from kabuki and bunraku; the most prominent modern benshi, Ichiro Kataoka, apprenticed under master Midori Sawato beginning in 2002 and has since narrated over 350 silent films internationally.",
   "thumbnail": {
-    "src": "/images/skills/benshi.webp",
+    "src": "/mastery/images/skills/benshi.webp",
     "alt": "Benshi narrator performing beside a silent film projection screen in traditional Japanese garb",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores informed by Wikipedia's documentation of the benshi tradition, Japan Society's historical account, Harvard Film Archive's programming with Ichiro Kataoka, and the estimated ~15 active practitioners worldwide. The extremely small practitioner population makes confidence levels lower than for more widely practiced skills.",
   "clip": {
-    "src": "/videos/skills/benshi.mp4",
-    "poster": "/images/skills/benshi.webp",
+    "src": "/mastery/videos/skills/benshi.mp4",
+    "poster": "/mastery/images/skills/benshi.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

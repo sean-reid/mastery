@@ -4,7 +4,7 @@
   "category": "survival",
   "description": "Inuit ice reading (siku knowledge) assesses sea ice safety by interpreting visual, auditory, and tactile cues: color gradients indicating thickness, the sound a harpoon makes when struck against the surface, snowdrift orientation revealing wind direction, and the behavior of cracks and pressure ridges. Inuktitut contains over 100 terms for ice conditions, each encoding specific safety information that hunters use to make life-or-death travel decisions in an environment where the Arctic now warms nearly four times faster than the global average.",
   "thumbnail": {
-    "src": "/images/skills/inuit-ice-reading.webp",
+    "src": "/mastery/images/skills/inuit-ice-reading.webp",
     "alt": "Inuit hunter testing sea ice with a harpoon while reading the frozen Arctic landscape",
     "attribution": "Photo by Wikimedia Commons"
   },

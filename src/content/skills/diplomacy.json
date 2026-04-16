@@ -4,7 +4,7 @@
   "category": "game",
   "description": "A seven-player board game of pure negotiation set in pre-WWI Europe with no dice, no cards, and no hidden information, where the only variable is each player's ability to persuade, deceive, and betray. Meta's CICERO AI achieved top-10% human performance only by combining a 2.7B-parameter language model with strategic planning, making it the first game where competitive AI required natural language deception.",
   "thumbnail": {
-    "src": "/images/skills/diplomacy.webp",
+    "src": "/mastery/images/skills/diplomacy.webp",
     "alt": "Diplomacy board showing the map of Europe with army and fleet pieces",
     "attribution": "Photo by Wikimedia Commons"
   },

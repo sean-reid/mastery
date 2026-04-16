@@ -4,7 +4,7 @@
   "category": "survival",
   "description": "Mushroom foraging identifies wild fungi for safe consumption using a multi-sensory protocol: cap shape, gill attachment (free, adnate, decurrent), spore print color (obtained by placing the cap gill-down on paper overnight), stipe features (presence of a ring, volva, or bulbous base), odor, and habitat associations with specific tree species. The genus Amanita, identifiable by its characteristic white gills, white spore print, and sac-like volva at the stipe base, causes 95% of mushroom fatalities worldwide, with the death cap (A. phalloides) alone responsible for 90% of lethal poisonings, its amatoxins destroying liver cells at a lethal dose of just 0.1 mg/kg body weight, an amount present in a single mushroom.",
   "thumbnail": {
-    "src": "/images/skills/mushroom-foraging.webp",
+    "src": "/mastery/images/skills/mushroom-foraging.webp",
     "alt": "Basket of wild-foraged mushrooms including chanterelles and boletes on a forest floor",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores are based on Wikipedia's articles on mushroom poisoning and Amanita phalloides, PubMed's epidemiological study of U.S. mushroom poisoning (documenting 52 deaths and 704 major harm cases over an 18-year period), and NAMA's toxicology resources. The failure_cost score of 10 reflects the lethal potential of Amanita misidentification, where three mushrooms can constitute a fatal dose. The high feedback_delay (7) reflects the distinctive 6-24 hour asymptomatic window for amatoxin poisoning, during which liver damage is already occurring. The high ambiguity (8) reflects the extreme morphological variability of wild fungi and the narrow margins between edible species and lethal look-alikes.",
   "clip": {
-    "src": "/videos/skills/mushroom-foraging.mp4",
-    "poster": "/images/skills/mushroom-foraging.webp",
+    "src": "/mastery/videos/skills/mushroom-foraging.mp4",
+    "poster": "/mastery/images/skills/mushroom-foraging.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

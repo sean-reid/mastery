@@ -4,7 +4,7 @@
   "category": "technology",
   "description": "Making a complete mechanical watch from scratch (movement, case, dial, and hands) requires mastery of the thirty-two individual disciplines George Daniels identified in his 1981 book 'Watchmaking,' from wheel cutting and pinion making to escapement construction and spring tempering. Daniels, who hand-built 27 watches during his career, was the first modern horologist to master nearly all of these skills. His sole apprentice, Roger W. Smith OBE, spent five years perfecting a single pocket watch before earning Daniels' approval, and today produces just fifteen to twenty watches per year from his Isle of Man workshop, each taking over two years from sketch to wrist. Fewer than a handful of people worldwide can build a complete watch by the Daniels Method.",
   "thumbnail": {
-    "src": "/images/skills/watchmaking-from-scratch.webp",
+    "src": "/mastery/images/skills/watchmaking-from-scratch.webp",
     "alt": "Watchmaker hand-finishing a movement component under magnification at a traditional bench",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores draw on Wikipedia articles for George Daniels and Roger W. Smith, A Collected Man's published profile of Smith, and The Watch Collectors' Club documentation. The thirty-two disciplines figure comes from Daniels' own categorization. The extreme rarity of practitioners (Smith is described as the only person currently working in the complete Daniels Method) drives the highest scores for instruction dependency and time to expert.",
   "clip": {
-    "src": "/videos/skills/watchmaking-from-scratch.mp4",
-    "poster": "/images/skills/watchmaking-from-scratch.webp",
+    "src": "/mastery/videos/skills/watchmaking-from-scratch.mp4",
+    "poster": "/mastery/images/skills/watchmaking-from-scratch.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

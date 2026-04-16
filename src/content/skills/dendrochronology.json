@@ -4,7 +4,7 @@
   "category": "academic",
   "description": "Dendrochronology builds continuous tree-ring chronologies by cross-dating (matching the unique pattern of wide and narrow growth rings between overlapping wood samples) to assign each ring its exact calendar year, a technique that has produced unbroken records stretching back over 13,000 years using subfossil oaks and bristlecone pines, and which now serves as the independent calibration standard for radiocarbon dating itself.",
   "thumbnail": {
-    "src": "/images/skills/dendrochronology.webp",
+    "src": "/mastery/images/skills/dendrochronology.webp",
     "alt": "Cross-section of ancient tree trunk showing detailed growth rings",
     "attribution": "Photo by Wikimedia Commons"
   },

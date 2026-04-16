@@ -4,7 +4,7 @@
   "category": "game",
   "description": "Chinese chess, the most-played board game on Earth with an estimated several hundred million active players, deploys a unique topology: a central river that enhances soldiers and blocks elephants, a 3x3 palace that confines each general and its two advisors, and a cannon that must jump over an intervening piece to capture. The 'flying general' rule, forbidding the two generals from facing each other on an open file, creates an invisible line of force with no parallel in any other chess variant.",
   "thumbnail": {
-    "src": "/images/skills/xiangqi.webp",
+    "src": "/mastery/images/skills/xiangqi.webp",
     "alt": "A xiangqi board with traditional Chinese character pieces arranged on intersections",
     "attribution": "Photo by Wikimedia Commons"
   },

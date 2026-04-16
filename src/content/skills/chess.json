@@ -4,7 +4,7 @@
   "category": "game",
   "description": "The canonical strategy game. 1,500 years of accumulated theory, a rating system that quantifies skill with surgical precision, and a gap between amateur and grandmaster so vast that a top player can win blindfolded against a strong club player.",
   "thumbnail": {
-    "src": "/images/skills/chess.webp",
+    "src": "/mastery/images/skills/chess.webp",
     "alt": "Chess pieces on a wooden board during a tournament game",
     "attribution": "Photo by Unsplash"
   },
@@ -136,8 +136,8 @@
   "methodology_notes": "Chess scores are among the most data-rich in the set. Elo distributions from FIDE provide precise percentile data. Ericsson's deliberate practice research used chess as a primary domain. Training timelines are well-documented across thousands of titled players.",
   "interactive": "pattern-memory",
   "clip": {
-    "src": "/videos/skills/chess.mp4",
-    "poster": "/images/skills/chess.webp",
+    "src": "/mastery/videos/skills/chess.mp4",
+    "poster": "/mastery/images/skills/chess.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

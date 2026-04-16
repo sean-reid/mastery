@@ -4,7 +4,7 @@
   "category": "trade",
   "description": "Kintsugi ('golden joinery') repairs broken ceramics using urushi lacquer, refined sap from the Toxicodendron vernicifluum tree, as both adhesive and decorative medium. The process takes a minimum of three weeks per vessel: pieces are bonded with mugi-urushi (lacquer mixed with wheat flour), gaps filled with sabi-urushi (lacquer mixed with clay), then successive coats are applied, with each layer requiring days to cure in a controlled-humidity cabinet called a furo. The final coat is dusted with powdered gold while still tacky. Developed during the Muromachi period (1336-1573), the technique transforms damage into a visible history of the object.",
   "thumbnail": {
-    "src": "/images/skills/kintsugi.webp",
+    "src": "/mastery/images/skills/kintsugi.webp",
     "alt": "Japanese tea bowl repaired with gold-filled lacquer seams following the crack lines across a dark glaze",
     "attribution": "Photo by Wikimedia Commons"
   },

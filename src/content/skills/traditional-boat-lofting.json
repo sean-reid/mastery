@@ -4,7 +4,7 @@
   "category": "technology",
   "description": "A loftsman translates a naval architect's small-scale drawing into a full-size plan on a loft floor, plotting hundreds of offset measurements and connecting them with long flexible splines to produce three orthogonal views that together define the hull's three-dimensional shape. Each curve must be 'faired' so it flows smoothly without bumps or flat spots, a judgment relying on the loftsman's trained eye rather than formulae. CAD replaced lofting in commercial shipbuilding from the 1970s, but hand lofting survives in wooden boatbuilding schools like the WoodenBoat School in Maine.",
   "thumbnail": {
-    "src": "/images/skills/traditional-boat-lofting.webp",
+    "src": "/mastery/images/skills/traditional-boat-lofting.webp",
     "alt": "Boatbuilder drawing full-size hull lines on a loft floor using long flexible splines and battens",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -136,8 +136,8 @@
   },
   "methodology_notes": "Scores draw on Wikipedia's lofting article, WoodenBoat School's published curriculum, Sandy Point Boat Works' documentation, and Douglas Brooks' lofting and lines-taking descriptions. The skill survives almost exclusively in the wooden boatbuilding community, making practitioner data sparse. The transition from hand lofting to CAD in the 1970s means that expert-level hand loftsmen are increasingly rare.",
   "clip": {
-    "src": "/videos/skills/traditional-boat-lofting.mp4",
-    "poster": "/images/skills/traditional-boat-lofting.webp",
+    "src": "/mastery/videos/skills/traditional-boat-lofting.mp4",
+    "poster": "/mastery/images/skills/traditional-boat-lofting.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

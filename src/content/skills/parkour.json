@@ -4,7 +4,7 @@
   "category": "physical",
   "description": "Parkour is the discipline of moving through any environment using only the body's abilities, treating urban architecture as a continuous obstacle course. The injury rate of 1.7 per 1000 training hours is lower than soccer or basketball, but the consequences of failure at height are severe and irreversible. Mastery requires reading terrain instantly and chaining vaults, precisions, and wall runs into fluid sequences.",
   "thumbnail": {
-    "src": "/images/skills/parkour.webp",
+    "src": "/mastery/images/skills/parkour.webp",
     "alt": "Traceur mid-vault over a concrete wall in an urban environment",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -137,8 +137,8 @@
   },
   "methodology_notes": "Injury data from PubMed epidemiological studies. Competition format from FIG Parkour World Championships. Training progression timelines from WFPF and coaching community consensus.",
   "clip": {
-    "src": "/videos/skills/parkour.mp4",
-    "poster": "/images/skills/parkour.webp",
+    "src": "/mastery/videos/skills/parkour.mp4",
+    "poster": "/mastery/images/skills/parkour.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

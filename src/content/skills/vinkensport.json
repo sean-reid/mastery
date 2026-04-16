@@ -4,7 +4,7 @@
   "category": "performance",
   "description": "Vinkensport ('finch sport') is a Flemish competitive tradition dating to 1596 in which trained male chaffinches compete for the highest number of correct song calls in one hour. Each bird is placed in a small wooden box along a street, and a judge tallies every song ending in the proper 'susk-e-wiet' flourish with a chalk mark on a long stick. Vinkeniers (finch trainers) develop their birds over months using selective breeding, high-protein diets, and controlled light exposure; champion finches regularly produce hundreds of calls per hour, with the disputed all-time record standing at 1,278.",
   "thumbnail": {
-    "src": "/images/skills/vinkensport.webp",
+    "src": "/mastery/images/skills/vinkensport.webp",
     "alt": "Row of small wooden finch boxes along a Belgian street during a vinkensport competition",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -55,8 +55,8 @@
   },
   "methodology_notes": "Scores based on Wikipedia's comprehensive article on vinkensport, Flanders Today's reporting on cultural heritage designation (2017), and the estimated 13,000 vinkeniers as of 2007. The uniquely high measurability (9) reflects the purely objective counting-based scoring system. Low confidence on several axes reflects the limited English-language academic literature on this niche tradition.",
   "clip": {
-    "src": "/videos/skills/vinkensport.mp4",
-    "poster": "/images/skills/vinkensport.webp",
+    "src": "/mastery/videos/skills/vinkensport.mp4",
+    "poster": "/mastery/images/skills/vinkensport.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

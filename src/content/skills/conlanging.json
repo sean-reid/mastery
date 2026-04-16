@@ -4,7 +4,7 @@
   "category": "academic",
   "description": "Conlanging (constructing a complete artificial language from scratch) requires designing a self-consistent phonological inventory with combinatorial constraints (phonotactics), building a morphological system that marks grammatical distinctions through affixes or internal changes, defining syntactic rules for word order and clause embedding, and populating a lexicon large enough for productive use, a process exemplified by Tolkien's decades-long development of Quenya with its Finnish-inspired vowel harmony and Latin-inflected case system, and more recently by David Peterson's creation of Dothraki and High Valyrian for HBO.",
   "thumbnail": {
-    "src": "/images/skills/conlanging.webp",
+    "src": "/mastery/images/skills/conlanging.webp",
     "alt": "Notebook page showing constructed language grammar rules and script samples",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores are based on Wikipedia's articles on constructed language and David J. Peterson, MIT OpenCourseWare's course 24.917 (ConLangs: How to Construct a Language), the Language Creation Society's public resources, and research on the conlanging community and professional practice. The low failure_cost and environmental_variability scores reflect conlanging's nature as an abstract intellectual pursuit with no material requirements. Cognitive_demand is high due to the requirement of maintaining system-wide consistency across all linguistic levels.",
   "clip": {
-    "src": "/videos/skills/conlanging.mp4",
-    "poster": "/images/skills/conlanging.webp",
+    "src": "/mastery/videos/skills/conlanging.mp4",
+    "poster": "/mastery/images/skills/conlanging.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

@@ -4,7 +4,7 @@
   "category": "sport",
   "description": "A Swiss national team sport, first recorded in 1625, in which a batter launches a 78-gram puck (Nouss) from an inclined ramp using a 3-meter carbon-fiber whip (Stecken), sending it up to 330 meters at speeds reaching 306 km/h as measured by ETH Zurich. The opposing team of 16-20 players attempts to intercept the buzzing puck mid-flight by hurling large rectangular placards (Schindel) skyward in its path. Governed by the Eidgenossischer Hornusserverband since 1902, the sport is concentrated in the canton of Bern with roughly 270 clubs and 8,300 members.",
   "thumbnail": {
-    "src": "/images/skills/hornussen.webp",
+    "src": "/mastery/images/skills/hornussen.webp",
     "alt": "Hornussen player swinging the Stecken whip to launch the Nouss from a ramp",
     "attribution": "Photo by Wikimedia Commons"
   },

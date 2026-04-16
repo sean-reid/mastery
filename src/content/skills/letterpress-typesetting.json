@@ -4,7 +4,7 @@
   "category": "technology",
   "description": "A hand compositor selects individual metal type sorts from a divided type case and places them upside-down and backwards into a composing stick held in the non-dominant hand, building lines of text letter by letter while inserting lead spacing material between words and lines. The compositor must read the reversed type fluently, since a misplaced letter is only discovered after inking and pulling a proof. Heritage Crafts lists letterpress as endangered on its Red List, noting that few foundries still cast new metal type and that the heavy equipment, slow production speed, and large workspace requirements make the craft commercially uncompetitive against digital printing.",
   "thumbnail": {
-    "src": "/images/skills/letterpress-typesetting.webp",
+    "src": "/mastery/images/skills/letterpress-typesetting.webp",
     "alt": "Compositor placing metal type sorts into a composing stick from a divided type case",
     "attribution": "Photo by Wikimedia Commons"
   },

@@ -4,7 +4,7 @@
   "category": "performance",
   "description": "Butoh is a Japanese avant-garde dance form founded in 1959 by Tatsumi Hijikata and Kazuo Ohno as a visceral reaction against Western cultural influence and the trauma of the atomic bombings. Traditionally performed in white body paint (shironuri) with shaved heads, butoh is characterized by agonizingly slow, hyper-controlled movement, grotesque imagery, and the deliberate dissolution of the boundary between performer and audience. Hijikata rejected codification of his methods, instead training dancers through surreal image-prompts called butoh-fu (notational butoh): thousands of small choreographic units driven by language and imagery rather than counted steps.",
   "thumbnail": {
-    "src": "/images/skills/butoh.webp",
+    "src": "/mastery/images/skills/butoh.webp",
     "alt": "Butoh dancer in white body paint performing an agonizingly slow movement on a dark stage",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores based on Wikipedia's comprehensive article on butoh, Stanford's academic resources on butoh practice, and the documented approaches of Hijikata (butoh-fu system) and Ohno (improvisation-based). The high ambiguity score (9) reflects butoh's deliberate resistance to codification and standardization. Sankai Juku's five-decade career anchors the time_to_expert estimate.",
   "clip": {
-    "src": "/videos/skills/butoh.mp4",
-    "poster": "/images/skills/butoh.webp",
+    "src": "/mastery/videos/skills/butoh.mp4",
+    "poster": "/mastery/images/skills/butoh.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

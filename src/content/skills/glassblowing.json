@@ -4,7 +4,7 @@
   "category": "trade",
   "description": "The glassblower gathers molten glass at ~1,100 C on the end of a hollow iron pipe and must shape it using breath, gravity, centrifugal force, and hand tools before it cools below workable temperature, a window of roughly 30-90 seconds per heat. Invented by Syrian craftsmen in the 1st century BC, the technique spread through the Roman Empire and remains fundamentally unchanged. Professional apprenticeships last 3-7 years; Lino Tagliapietra, widely regarded as the greatest living glassblower, began his apprenticeship on Murano at age 11 and trained for over a decade before working independently.",
   "thumbnail": {
-    "src": "/images/skills/glassblowing.webp",
+    "src": "/mastery/images/skills/glassblowing.webp",
     "alt": "Glassblower shaping a glowing orange gather of molten glass on a blowpipe",
     "attribution": "Photo by Unsplash"
   },

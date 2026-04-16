@@ -4,7 +4,7 @@
   "category": "game",
   "description": "A chess variant invented in 1899 where neither player can see the opponent's pieces and a referee announces only checks, captures, and illegal move attempts, transforming chess into probabilistic inference under fog of war. Bologna research showed that even theoretically won endgames like KR vs. K become extraordinarily difficult when the winning side cannot locate the opposing King.",
   "thumbnail": {
-    "src": "/images/skills/kriegsspiel.webp",
+    "src": "/mastery/images/skills/kriegsspiel.webp",
     "alt": "Three chess boards arranged for a Kriegsspiel game with a referee screen between players",
     "attribution": "Photo by Wikimedia Commons"
   },

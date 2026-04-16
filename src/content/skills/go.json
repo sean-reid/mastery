@@ -4,7 +4,7 @@
   "category": "game",
   "description": "The oldest continuously played board game, originating in China over 2,500 years ago, with a game-tree complexity of 10^360 that dwarfs chess's 10^123 by more than the number of atoms in the observable universe. South Korea admits only four new professionals per year from a pool of 80 candidates, most of whom began full-time training before age 12.",
   "thumbnail": {
-    "src": "/images/skills/go.webp",
+    "src": "/mastery/images/skills/go.webp",
     "alt": "Black and white stones on a wooden Go board during a professional match",
     "attribution": "Photo by Wikimedia Commons"
   },

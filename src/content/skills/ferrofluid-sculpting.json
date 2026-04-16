@@ -4,7 +4,7 @@
   "category": "technology",
   "description": "Ferrofluid sculpting uses precisely controlled electromagnetic fields to shape a suspension of magnetic nanoparticles into dynamic three-dimensional forms that shift in real time. Invented by NASA engineer Steve Papell in 1963 for drawing rocket fuel in zero gravity, ferrofluid became an art medium through Sachiko Kodama, whose 2000 installation 'Protrude, Flow' demonstrated that electromagnet arrays could produce what she called 'liquid sculpture.' The medium demands interdisciplinary knowledge spanning magnetic field design, fluid dynamics, electronics, and containment chemistry.",
   "thumbnail": {
-    "src": "/images/skills/ferrofluid-sculpting.webp",
+    "src": "/mastery/images/skills/ferrofluid-sculpting.webp",
     "alt": "Black ferrofluid forming sharp spikes and organic shapes on a magnetized surface",
     "attribution": "Photo by Wikimedia Commons"
   },

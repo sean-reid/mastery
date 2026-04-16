@@ -4,7 +4,7 @@
   "category": "sport",
   "description": "Descending to extreme ocean depths on a single breath, then returning to the surface alive. In Constant Weight (CWT), the marquee discipline, divers use a monofin to reach 100+ meters where pressure crushes the lungs to a fraction of their volume, demanding flawless equalization and absolute physiological control. Alexey Molchanov holds the CWT record at 136 meters. PubMed data shows a 3.4% incident rate across 38,789 competitive starts, with hypoxic blackout and pulmonary barotrauma (lung squeeze) as primary risks.",
   "thumbnail": {
-    "src": "/images/skills/competitive-freediving.webp",
+    "src": "/mastery/images/skills/competitive-freediving.webp",
     "alt": "A freediver descending along a line into deep blue water wearing a monofin",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -136,8 +136,8 @@
   },
   "methodology_notes": "Scores informed by AIDA International competition rules and certification standards, the Wikipedia articles on freediving and constant weight apnea, and PubMed research on hypoxic blackout risk factors (PMID 37300699) and freediving-induced pulmonary syndrome (PMID 39675735). The 3.43% incident rate across 38,789 competitive starts (2019-2023) provides empirical grounding for the failure cost score. Training timelines derived from AIDA certification progression (AIDA 2 at 12m through AIDA 4 at 32m+) and Molchanov's documented 21-year competitive career.",
   "clip": {
-    "src": "/videos/skills/competitive-freediving.mp4",
-    "poster": "/images/skills/competitive-freediving.webp",
+    "src": "/mastery/videos/skills/competitive-freediving.mp4",
+    "poster": "/mastery/images/skills/competitive-freediving.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

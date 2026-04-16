@@ -4,7 +4,7 @@
   "category": "trade",
   "description": "A coracle is a one-person bowl-shaped boat built upside-down by pushing a framework of split willow laths into the ground, weaving thinner willow rods around them for tension, then tying in a seat plank that locks the structure rigid. The frame is flipped and covered with a waterproof skin, traditionally horse or bullock hide, now usually tarred calico or canvas. Each Welsh river produced a distinctive coracle shape (Teifi, Tywi, Taf), with the weave pattern serving as a geographic fingerprint. The design is functionally unchanged for over 2,000 years, predating Roman contact with Britain.",
   "thumbnail": {
-    "src": "/images/skills/coracle-building.webp",
+    "src": "/mastery/images/skills/coracle-building.webp",
     "alt": "Traditional Welsh coracle made of woven willow frame covered in tarred canvas, resting on a riverbank",
     "attribution": "Photo by Wikimedia Commons"
   },

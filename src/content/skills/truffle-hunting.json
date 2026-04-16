@@ -4,7 +4,7 @@
   "category": "survival",
   "description": "Truffle hunting trains a dog (traditionally the Lagotto Romagnolo, the only breed recognized by the FCI as a specialized truffle-search dog) to detect the volatile organic compounds emitted by mature truffles growing 5-30 cm underground near the roots of symbiotic host trees (oak, hazel, linden), using a progressive scent-imprinting protocol that begins with PVC tubes containing truffle-oil-soaked cotton from puppyhood (as early as 3 months) and advances to buried targets, while the human handler must learn the mycorrhizal ecology of Tuber species, seasonal fruiting patterns, soil and tree indicators, and regional regulations governing harvest rights.",
   "thumbnail": {
-    "src": "/images/skills/truffle-hunting.webp",
+    "src": "/mastery/images/skills/truffle-hunting.webp",
     "alt": "Lagotto Romagnolo dog digging at the base of an oak tree during a truffle hunt in Italian woodland",
     "attribution": "Photo by Wikimedia Commons"
   },

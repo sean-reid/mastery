@@ -4,7 +4,7 @@
   "category": "trade",
   "description": "Muqarnas is the Islamic architectural technique of constructing three-dimensional honeycomb vaults from tiers of individually shaped niche elements in stone, brick, stucco, or wood. The Alhambra's Hall of the Two Sisters dome contains over 5,000 prismatic cells unfolding from a central star into sixteen miniature domes, yet only eight distinct fragment shapes, each repeated by the dome's octagonal symmetry, are required. A muqarnas vault translates a 2D tessellation drawing with concentric rings into a 3D structure where every element must interlock precisely with its neighbors across multiple tiers.",
   "thumbnail": {
-    "src": "/images/skills/muqarnas-construction.webp",
+    "src": "/mastery/images/skills/muqarnas-construction.webp",
     "alt": "Looking upward into an ornate muqarnas honeycomb dome ceiling with geometric patterns",
     "attribution": "Photo by Wikimedia Commons"
   },

@@ -4,7 +4,7 @@
   "category": "technology",
   "description": "A bobbin lace maker works at a stuffed pillow, manipulating dozens to hundreds of weighted bobbins, each wound with thread and often fitted with bead spangles for tension and stability, following a pricking pattern of pinholes that defines the lace design. The two fundamental operations are 'cross' and 'twist,' combined in sequences to produce ground meshes, tallies, and decorative motifs. Originating in 16th-century Italy, the craft spread across Europe, with regional traditions in Bruges, Honiton, Chantilly, and the English East Midlands each developing distinctive styles. Heritage Crafts moved bobbin lacemaking from 'viable' to 'endangered' on its Red List in 2025, noting a 30% decline in skilled practitioners and an ageing population of makers.",
   "thumbnail": {
-    "src": "/images/skills/bobbin-lace.webp",
+    "src": "/mastery/images/skills/bobbin-lace.webp",
     "alt": "Bobbin lace pillow with dozens of weighted wooden bobbins and a pinned pricking pattern showing lace in progress",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores draw on Wikipedia's bobbin lace article, Heritage Crafts' Red List assessment (2025 reclassification to endangered), Britannica's reference article, and The Lace Guild's documentation. The 30% practitioner decline figure and ageing population data come from Heritage Crafts' published assessment. The City & Guilds qualification in lace making, now discontinued, previously provided a formal competency benchmark.",
   "clip": {
-    "src": "/videos/skills/bobbin-lace.mp4",
-    "poster": "/images/skills/bobbin-lace.webp",
+    "src": "/mastery/videos/skills/bobbin-lace.mp4",
+    "poster": "/mastery/images/skills/bobbin-lace.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

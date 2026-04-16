@@ -4,7 +4,7 @@
   "category": "survival",
   "description": "Flint knapping shapes cryptocrystalline stone (flint, chert, obsidian) into tools through controlled fracture, progressing from hard-hammer percussion (striking a core with a hammerstone to detach large flakes) to soft-hammer percussion (using an antler billet for thinner, more controlled removals) to pressure flaking (pushing an antler tine or copper point against the edge to pop off tiny, precise flakes that create the final cutting edge and diagnostic notches). The pressure flaker must build force slowly, then shift angle at the exact moment of fracture initiation, a biomechanical subtlety that explains why Homo sapiens spent roughly 100,000 years refining the technique from crude Acheulean handaxes to the exquisitely thin Solutrean laurel-leaf points.",
   "thumbnail": {
-    "src": "/images/skills/flint-knapping.webp",
+    "src": "/mastery/images/skills/flint-knapping.webp",
     "alt": "Hands using an antler pressure flaker to shape a flint biface into an arrowhead",
     "attribution": "Photo by Wikimedia Commons"
   },

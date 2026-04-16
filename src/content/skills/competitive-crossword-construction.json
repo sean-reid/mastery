@@ -4,7 +4,7 @@
   "category": "game",
   "description": "Building (not solving) crossword puzzles to publication standard, a craft known as cruciverbalism. The New York Times receives over 200 submissions per week yet publishes only seven, and its grid rules demand 180-degree rotational symmetry, full interlock with no unchecked squares, and a maximum of roughly 78 words in a 15x15 grid, constraints so tight that a single weak fill entry can cascade into a full rebuild.",
   "thumbnail": {
-    "src": "/images/skills/competitive-crossword-construction.webp",
+    "src": "/mastery/images/skills/competitive-crossword-construction.webp",
     "alt": "A partially filled crossword grid showing black and white squares in rotational symmetry",
     "attribution": "Photo by Wikimedia Commons"
   },

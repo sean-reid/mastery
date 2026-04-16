@@ -4,7 +4,7 @@
   "category": "trade",
   "description": "Zellige (zellij) is Moroccan geometric mosaic tilework in which individual terracotta tiles are hand-chiseled with a menqach, a sharp axe-hammer, into precise polygonal shapes, then assembled face-down from memory into radiating star patterns that tessellate a surface with zero gaps and zero waste. Master artisans (maalemin) in Fez train from childhood, often within family workshops, and work from the Miocene grey clay unique to the region. A single large panel may contain thousands of individually shaped pieces, each cut to fit its neighbors without measuring tools.",
   "thumbnail": {
-    "src": "/images/skills/zellige.webp",
+    "src": "/mastery/images/skills/zellige.webp",
     "alt": "Close-up of intricate Moroccan zellige tilework showing geometric star pattern in blue and white",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -133,8 +133,8 @@
   "methodology_notes": "Scores draw on Wikipedia's zellij article, AramcoWorld's 2024 photographic documentation of Fez workshops, Encyclopedia MDPI's technical overview, and published accounts of maalem training traditions. Confidence is moderate due to limited quantitative research on zellige artisan training; most knowledge is transmitted orally within Moroccan craft families.",
   "interactive": "pattern-builder",
   "clip": {
-    "src": "/videos/skills/zellige.mp4",
-    "poster": "/images/skills/zellige.webp",
+    "src": "/mastery/videos/skills/zellige.mp4",
+    "poster": "/mastery/images/skills/zellige.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

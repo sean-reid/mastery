@@ -4,7 +4,7 @@
   "category": "sport",
   "description": "An Olympic discipline in which athletes perform short routines on apparatus (vault, floor, beam, and bars for women; floor, pommel horse, rings, vault, parallel bars, and high bar for men) scored by combining a difficulty value (D-score, uncapped) with an execution mark (E-score, out of 10). Elite female gymnasts typically peak at 16-19 and train 30-40 hours per week from childhood, while males peak around 23-24. Governed by the FIG since 1881, the sport's injury rate at the elite level reaches roughly 2.9 per 1000 exposure hours, with overuse injuries accounting for 60-70% of cases.",
   "thumbnail": {
-    "src": "/images/skills/artistic-gymnastics.webp",
+    "src": "/mastery/images/skills/artistic-gymnastics.webp",
     "alt": "Gymnast performing on the balance beam during an Olympic competition",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -136,8 +136,8 @@
   },
   "methodology_notes": "Scores informed by Wikipedia's articles on artistic gymnastics and age requirements, the Olympics.com official sport page, and a PubMed systematic review of injury epidemiology (PMID 30670379). Training hours and peak ages from FIG documentation and multiple gymnastics community sources. Injury rates drawn from multiple studies showing 1.8-2.9 injuries per 1000 exposure hours at elite level. Physical demand rated maximum due to the unique combination of strength, flexibility, power, and proprioception required. Perishability rated very high due to the narrow biological peak window unique to gymnastics.",
   "clip": {
-    "src": "/videos/skills/artistic-gymnastics.mp4",
-    "poster": "/images/skills/artistic-gymnastics.webp",
+    "src": "/mastery/videos/skills/artistic-gymnastics.mp4",
+    "poster": "/mastery/images/skills/artistic-gymnastics.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

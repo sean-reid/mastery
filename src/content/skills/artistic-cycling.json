@@ -4,7 +4,7 @@
   "category": "sport",
   "description": "Gymnastics performed on a brakeless fixed-gear bicycle within a 14x11-meter gymnasium floor, scored by judges who evaluate up to 30 figures drawn from a catalogue of approximately 120 possible exercises. Competitors execute handstands on handlebars, saddle-to-handlebar leaps, and spinning figures on a moving bicycle during five-minute routines. Learning a handstand on the bike alone takes an estimated seven years of practice. Germany dominates with 160+ UCI World Championship titles since 1956.",
   "thumbnail": {
-    "src": "/images/skills/artistic-cycling.webp",
+    "src": "/mastery/images/skills/artistic-cycling.webp",
     "alt": "An artistic cyclist performing a handstand on the handlebars of a specialized fixed-gear bicycle",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -131,8 +131,8 @@
   },
   "methodology_notes": "Scores informed by the Wikipedia article on artistic cycling, the UCI's official 'What is artistic cycling?' guide, and AcroSchool's detailed breakdown of the sport. Training timelines sourced from Viola Brand's reported seven-year handstand development and ~20 hours/week training schedule (Cycling Weekly interview). The figure catalogue of ~120 exercises and five-minute routine format provide clear scoring structure. Confidence is higher for physical demand and precision axes where the sport's requirements are self-evident from the figure descriptions.",
   "clip": {
-    "src": "/videos/skills/artistic-cycling.mp4",
-    "poster": "/images/skills/artistic-cycling.webp",
+    "src": "/mastery/videos/skills/artistic-cycling.mp4",
+    "poster": "/mastery/images/skills/artistic-cycling.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

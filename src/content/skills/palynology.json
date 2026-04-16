@@ -4,7 +4,7 @@
   "category": "academic",
   "description": "Forensic palynology identifies plant taxa from pollen grains as small as 7 micrometers by analyzing their unique wall sculptures, pore arrangements, and furrow patterns under light and scanning electron microscopy, exploiting the fact that sporopollenin, the polymer composing pollen walls, is among the most chemically resistant organic molecules known and preserves for hundreds of millions of years, enabling analysts to link suspects to crime scenes through geographic pollen signatures or to date archaeological strata by reconstructing extinct plant communities.",
   "thumbnail": {
-    "src": "/images/skills/palynology.webp",
+    "src": "/mastery/images/skills/palynology.webp",
     "alt": "Colorized scanning electron microscope image of diverse pollen grains",
     "attribution": "Photo by Wikimedia Commons"
   },

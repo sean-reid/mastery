@@ -4,7 +4,7 @@
   "category": "language",
   "description": "Forensic linguistics applies quantitative stylometric analysis (measuring word-length distributions, function-word frequencies, punctuation patterns, and syntactic preferences) to determine authorship, detect deception, and resolve legal disputes from text alone, a discipline whose most famous success was identifying the Unabomber through his idiosyncratic use of the phrase 'eat your cake and have it too' and consistent double-spacing after periods.",
   "thumbnail": {
-    "src": "/images/skills/forensic-linguistics.webp",
+    "src": "/mastery/images/skills/forensic-linguistics.webp",
     "alt": "Magnifying glass over typed document with highlighted text patterns",
     "attribution": "Photo by Wikimedia Commons"
   },

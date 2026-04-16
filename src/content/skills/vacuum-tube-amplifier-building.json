@@ -4,7 +4,7 @@
   "category": "technology",
   "description": "Building a vacuum tube (valve) amplifier from scratch involves designing and wiring circuits that carry lethal voltages: plate supplies of 300-500 V DC are standard, and even a briefly charged filter capacitor can deliver a fatal shock. The builder must select tubes (triodes, pentodes, or tetrodes such as EL34 or 6L6), design bias networks, wind or select output transformers whose primary and secondary impedances must be precisely matched, and tune the completed amplifier by ear for distortion, hum, and frequency response. The craft descends from a golden age of valve engineering that peaked in the 1950s-60s; today a global DIY community sustains the art, driven by the preference many audiophiles and guitarists have for the harmonic character of tube amplification.",
   "thumbnail": {
-    "src": "/images/skills/vacuum-tube-amplifier-building.webp",
+    "src": "/mastery/images/skills/vacuum-tube-amplifier-building.webp",
     "alt": "Handbuilt vacuum tube amplifier chassis with glowing tubes, hand-wound output transformers, and point-to-point wiring",
     "attribution": "Photo by Wikimedia Commons"
   },
@@ -60,8 +60,8 @@
   },
   "methodology_notes": "Scores draw on Wikipedia's valve amplifier articles, the diyAudio community forums, Sound-au.com design documentation, and published project reports from Hackaday and Instructables. The high failure cost reflects the genuine lethality of plate voltages (widely documented in safety literature). The cognitive demand score reflects the interdisciplinary knowledge required: electronics, acoustics, and materials science.",
   "clip": {
-    "src": "/videos/skills/vacuum-tube-amplifier-building.mp4",
-    "poster": "/images/skills/vacuum-tube-amplifier-building.webp",
+    "src": "/mastery/videos/skills/vacuum-tube-amplifier-building.mp4",
+    "poster": "/mastery/images/skills/vacuum-tube-amplifier-building.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }

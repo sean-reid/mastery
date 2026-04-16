@@ -4,7 +4,7 @@
   "category": "instrument",
   "description": "Invented by Maurice Martenot in 1928, this electronic instrument is played via a sliding ring on a wire (tiroir) for continuous pitch, a laterally shifting keyboard for vibrato, and a velvet-covered button (touche d'intensite) controlling volume through finger pressure alone. Fewer than an estimated 100 active ondistes exist worldwide; the Paris Conservatoire has offered formal instruction since 1947, making it one of only two degree programs globally.",
   "thumbnail": {
-    "src": "/images/skills/ondes-martenot.webp",
+    "src": "/mastery/images/skills/ondes-martenot.webp",
     "alt": "Ondes Martenot instrument showing keyboard, tiroir ribbon, and diffuseur speaker",
     "attribution": "Photo by Wikimedia Commons"
   },

@@ -4,7 +4,7 @@
   "category": "game",
   "description": "Japanese chess played on a 9x9 board where captured pieces switch allegiance and re-enter play as 'drops,' a mechanic inspired by the mercenary samurai tradition that eliminates material attrition and produces a game-tree complexity of 10^226, roughly a googol times greater than Western chess. Only four apprentices per year survive the Japan Shogi Association's Shoreikai system to earn professional 4-dan status, from a pool of approximately 200 trainees who must qualify before age 26 or be permanently expelled.",
   "thumbnail": {
-    "src": "/images/skills/shogi.webp",
+    "src": "/mastery/images/skills/shogi.webp",
     "alt": "A shogi board with traditional wooden pieces arranged in starting position",
     "attribution": "Photo by Wikimedia Commons"
   },

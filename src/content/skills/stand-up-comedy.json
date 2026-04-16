@@ -4,7 +4,7 @@
   "category": "performance",
   "description": "Developing a tight hour of headline-level stand-up comedy material typically requires 5-10 years of nightly open-mic sets, with professional benchmarks demanding an average of 4-6 audience laughs per minute (roughly 18+ seconds of laughter per performing minute). The comedian must write, memorize, and perform original material while reading and adjusting to each unique crowd in real time, making every show simultaneously a rehearsal and a live performance.",
   "thumbnail": {
-    "src": "/images/skills/stand-up-comedy.webp",
+    "src": "/mastery/images/skills/stand-up-comedy.webp",
     "alt": "Comedian performing stand-up on stage under a spotlight with microphone in hand",
     "attribution": "Photo by Unsplash"
   },
@@ -55,8 +55,8 @@
   },
   "methodology_notes": "Scores based on industry consensus that headline-level material requires 7-15 years of nightly performance, Britannica and Wikipedia historical documentation, and the widely cited benchmark of 4-6 laughs per minute for professional-grade stand-up.",
   "clip": {
-    "src": "/videos/skills/stand-up-comedy.mp4",
-    "poster": "/images/skills/stand-up-comedy.webp",
+    "src": "/mastery/videos/skills/stand-up-comedy.mp4",
+    "poster": "/mastery/images/skills/stand-up-comedy.webp",
     "duration": 8,
     "attribution": "Video from Wikimedia Commons (CC)"
   }
