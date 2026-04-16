@@ -38,31 +38,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 6, "confidence": 0.7, "notes": "Understanding the Huzita-Hatori axioms and basic flat-foldability theorems (Kawasaki's theorem, Maekawa's theorem) requires several months of study in discrete and computational geometry. MIT's course 24.917 covers conlang construction, but no standard undergraduate curriculum exists specifically for computational origami; one must piece together knowledge from abstract algebra, combinatorics, and origami-specific literature." },
-    "time_to_expert": { "value": 8, "confidence": 0.7, "notes": "Producing original research (designing new algorithms, proving theorems about fold complexity, or creating novel engineering applications) requires PhD-level mathematical training. Robert Lang transitioned from a career in physics and optoelectronics. The field has perhaps a few dozen active researchers worldwide who publish regularly. Mastering both the pure mathematics and the algorithmic implementation (TreeMaker, Origamizer) takes many years." },
-    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "Paper folding provides immediate physical feedback: a design either folds flat or it doesn't, a crease pattern either produces the intended form or fails visibly. Computational models can be verified by actually folding paper. Mathematical proofs can be checked logically. This near-instant feedback loop is one of the field's attractive qualities." },
-    "failure_cost": { "value": 2, "confidence": 0.85, "notes": "Failed attempts cost only paper and time. Incorrect mathematical proofs can be corrected without consequence beyond the researcher's time investment. In engineering applications (deployable solar panels, medical stents), design failures discovered at the computational stage are inexpensive; failures in manufactured prototypes are costlier but still recoverable." },
-    "cognitive_demand": { "value": 9, "confidence": 0.85, "notes": "Requires simultaneous reasoning about abstract algebra, computational geometry, combinatorial optimization, and spatial visualization. Bern and Hayes (1996) proved that flat-fold assignment is NP-complete. Practitioners must bridge continuous mathematics (geometric constructions) with discrete mathematics (crease pattern combinatorics) and translate between 2D crease patterns and 3D folded forms." },
-    "physical_demand": { "value": 1, "confidence": 0.95, "notes": "Primarily intellectual work with pen, paper, and computer. Physical folding of paper models requires manual dexterity but not strength or endurance. Complex models may require hours of precise folding, but this is fine motor skill rather than physical exertion." },
-    "prerequisite_knowledge": { "value": 8, "confidence": 0.8, "notes": "Requires strong foundations in linear algebra, abstract algebra (group theory for symmetry), computational geometry, algorithm design, and ideally topology. Understanding the Huzita-Hatori axioms requires familiarity with geometric constructions at least at the level of Galois theory to appreciate why origami solves cubics that compass-and-straightedge cannot." },
-    "measurability": { "value": 8, "confidence": 0.8, "notes": "Mathematical proofs are either correct or not. Algorithms have measurable computational complexity. Physical models either achieve the intended fold or fail. The NP-completeness of flat-fold assignment provides a rigorous complexity-theoretic framework. Engineering applications can be evaluated quantitatively (deployment ratios, structural efficiency)." },
-    "perishability": { "value": 3, "confidence": 0.75, "notes": "Mathematical knowledge is highly durable; theorems don't expire. Familiarity with specific software tools may fade, but the underlying geometric and algebraic concepts persist. The small size of the active research community means that foundational results remain relevant for decades." },
-    "precision_required": { "value": 8, "confidence": 0.8, "notes": "Mathematical proofs demand absolute precision. Algorithmic implementations must produce exactly valid crease patterns; a single incorrect fold assignment can make a pattern unfoldable. Physical realization of complex designs requires precise angle measurements and clean fold execution. The Huzita-Hatori axioms themselves define precise geometric operations." },
-    "ambiguity": { "value": 4, "confidence": 0.7, "notes": "Pure mathematical questions have definite answers. However, design problems (finding an optimal crease pattern for a given 3D form) may have multiple valid solutions or none, and the choice between solutions involves aesthetic and practical judgment. The interface between mathematical theory and physical paper behavior (thickness, elasticity) introduces some interpretive ambiguity." },
-    "instruction_dependency": { "value": 5, "confidence": 0.7, "notes": "The field is well-documented through Lang's books (Origami Design Secrets, Twists Tessellations and Textiles), Demaine and O'Rourke's textbook (Geometric Folding Algorithms), and numerous papers. A motivated mathematician can self-study effectively. However, developing intuition for good crease pattern design benefits from mentorship, and the community of practitioners is small enough that personal connections matter." },
-    "environmental_variability": { "value": 3, "confidence": 0.75, "notes": "Mathematical problems are abstract and environment-independent. Physical folding varies somewhat with paper type and humidity, but these are minor factors. The main variability comes from the wide range of application domains (pure mathematics, art, engineering, education) each requiring different emphases within the same foundational knowledge." },
-    "concurrent_skills": { "value": 7, "confidence": 0.75, "notes": "Practitioners simultaneously apply geometric reasoning, algebraic computation, algorithmic thinking, spatial visualization, and often programming skills. Those working on engineering applications add materials science and structural mechanics. The artistic dimension requires aesthetic judgment alongside mathematical rigor. Teaching the subject demands clear communication of abstract concepts." },
-    "plateau_density": { "value": 6, "confidence": 0.65, "notes": "Initial learning of flat-foldability rules proceeds smoothly. A significant plateau occurs at the transition from understanding existing theorems to generating original proofs. Another plateau appears when moving from 2D mathematical analysis to 3D design optimization. The connection between abstract mathematics and physical realization presents persistent challenges." },
-    "domain_evolution": { "value": 5, "confidence": 0.7, "notes": "The field has expanded significantly since the 1990s but from a very small base. Recent developments include multi-fold axioms (Alperin and Lang), computational tools for thick-material origami, and growing engineering applications (deployable space structures, medical devices). The pace of evolution is moderate: new results appear regularly but the foundational framework is stable." },
-    "observability": { "value": 5, "confidence": 0.75, "notes": "More visible than many academic fields due to the inherent visual appeal of origami. Robert Lang's TED talks have millions of views. Complex folded models are striking and shareable. However, the mathematical content (proofs, algorithms) is invisible to non-specialists. Engineering applications in space technology occasionally attract media attention." },
-    "luck_variance": { "value": 1, "confidence": 0.85, "notes": "Mathematical results are entirely determined by skill and effort, not luck. Physical folding outcomes are reproducible. The only stochastic element is the serendipity of discovering elegant solutions to open problems, which is common to all mathematical research but not properly 'luck' in the sense of uncontrollable external factors." },
-    "social_coordination": { "value": 3, "confidence": 0.75, "notes": "Core mathematical work is individual. The research community is small (conferences like the International Meeting on Origami Science, Mathematics, and Education draw perhaps 100-200 attendees) but collaborative. Some engineering applications involve interdisciplinary teams. The broader origami community provides testing and feedback but most computational origami research is done solo or in pairs." }
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Understanding the Huzita-Hatori axioms and basic flat-foldability theorems (Kawasaki's theorem, Maekawa's theorem) requires several months of study in discrete and computational geometry. MIT's course 24.917 covers conlang construction, but no standard undergraduate curriculum exists specifically for computational origami; one must piece together knowledge from abstract algebra, combinatorics, and origami-specific literature."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Producing original research (designing new algorithms, proving theorems about fold complexity, or creating novel engineering applications) requires PhD-level mathematical training. Robert Lang transitioned from a career in physics and optoelectronics. The field has perhaps a few dozen active researchers worldwide who publish regularly. Mastering both the pure mathematics and the algorithmic implementation (TreeMaker, Origamizer) takes many years."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Paper folding provides immediate physical feedback: a design either folds flat or it doesn't, a crease pattern either produces the intended form or fails visibly. Computational models can be verified by actually folding paper. Mathematical proofs can be checked logically. This near-instant feedback loop is one of the field's attractive qualities."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Failed attempts cost only paper and time. Incorrect mathematical proofs can be corrected without consequence beyond the researcher's time investment. In engineering applications (deployable solar panels, medical stents), design failures discovered at the computational stage are inexpensive; failures in manufactured prototypes are costlier but still recoverable."
+    },
+    "cognitive_demand": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Requires simultaneous reasoning about abstract algebra, computational geometry, combinatorial optimization, and spatial visualization. Bern and Hayes (1996) proved that flat-fold assignment is NP-complete. Practitioners must bridge continuous mathematics (geometric constructions) with discrete mathematics (crease pattern combinatorics) and translate between 2D crease patterns and 3D folded forms."
+    },
+    "physical_demand": {
+      "value": 1,
+      "confidence": 0.95,
+      "notes": "Primarily intellectual work with pen, paper, and computer. Physical folding of paper models requires manual dexterity but not strength or endurance. Complex models may require hours of precise folding, but this is fine motor skill rather than physical exertion."
+    },
+    "prerequisite_knowledge": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Requires strong foundations in linear algebra, abstract algebra (group theory for symmetry), computational geometry, algorithm design, and ideally topology. Understanding the Huzita-Hatori axioms requires familiarity with geometric constructions at least at the level of Galois theory to appreciate why origami solves cubics that compass-and-straightedge cannot."
+    },
+    "measurability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Mathematical proofs are either correct or not. Algorithms have measurable computational complexity. Physical models either achieve the intended fold or fail. The NP-completeness of flat-fold assignment provides a rigorous complexity-theoretic framework. Engineering applications can be evaluated quantitatively (deployment ratios, structural efficiency)."
+    },
+    "perishability": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Mathematical knowledge is highly durable; theorems don't expire. Familiarity with specific software tools may fade, but the underlying geometric and algebraic concepts persist. The small size of the active research community means that foundational results remain relevant for decades."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Mathematical proofs demand absolute precision. Algorithmic implementations must produce exactly valid crease patterns; a single incorrect fold assignment can make a pattern unfoldable. Physical realization of complex designs requires precise angle measurements and clean fold execution. The Huzita-Hatori axioms themselves define precise geometric operations."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Pure mathematical questions have definite answers. However, design problems (finding an optimal crease pattern for a given 3D form) may have multiple valid solutions or none, and the choice between solutions involves aesthetic and practical judgment. The interface between mathematical theory and physical paper behavior (thickness, elasticity) introduces some interpretive ambiguity."
+    },
+    "instruction_dependency": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "The field is well-documented through Lang's books (Origami Design Secrets, Twists Tessellations and Textiles), Demaine and O'Rourke's textbook (Geometric Folding Algorithms), and numerous papers. A motivated mathematician can self-study effectively. However, developing intuition for good crease pattern design benefits from mentorship, and the community of practitioners is small enough that personal connections matter."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Mathematical problems are abstract and environment-independent. Physical folding varies somewhat with paper type and humidity, but these are minor factors. The main variability comes from the wide range of application domains (pure mathematics, art, engineering, education) each requiring different emphases within the same foundational knowledge."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Practitioners simultaneously apply geometric reasoning, algebraic computation, algorithmic thinking, spatial visualization, and often programming skills. Those working on engineering applications add materials science and structural mechanics. The artistic dimension requires aesthetic judgment alongside mathematical rigor. Teaching the subject demands clear communication of abstract concepts."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Initial learning of flat-foldability rules proceeds smoothly. A significant plateau occurs at the transition from understanding existing theorems to generating original proofs. Another plateau appears when moving from 2D mathematical analysis to 3D design optimization. The connection between abstract mathematics and physical realization presents persistent challenges."
+    },
+    "domain_evolution": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "The field has expanded significantly since the 1990s but from a very small base. Recent developments include multi-fold axioms (Alperin and Lang), computational tools for thick-material origami, and growing engineering applications (deployable space structures, medical devices). The pace of evolution is moderate: new results appear regularly but the foundational framework is stable."
+    },
+    "observability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "More visible than many academic fields due to the inherent visual appeal of origami. Robert Lang's TED talks have millions of views. Complex folded models are striking and shareable. However, the mathematical content (proofs, algorithms) is invisible to non-specialists. Engineering applications in space technology occasionally attract media attention."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "Mathematical results are entirely determined by skill and effort, not luck. Physical folding outcomes are reproducible. The only stochastic element is the serendipity of discovering elegant solutions to open problems, which is common to all mathematical research but not properly 'luck' in the sense of uncontrollable external factors."
+    },
+    "social_coordination": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Core mathematical work is individual. The research community is small (conferences like the International Meeting on Origami Science, Mathematics, and Education draw perhaps 100-200 attendees) but collaborative. Some engineering applications involve interdisciplinary teams. The broader origami community provides testing and feedback but most computational origami research is done solo or in pairs."
+    }
   },
-  "methodology_notes": "Scores are based on Wikipedia's articles on mathematics of paper folding and Huzita-Hatori axioms, the Alperin-Lang paper on multi-fold origami axioms published through Robert Lang's research site, and Lang's TED talk describing the computational design process. The cognitive_demand score reflects the NP-completeness proof by Bern and Hayes (1996). The low failure_cost and luck_variance reflect the field's mathematical nature, where outcomes are deterministic and errors are costless to correct.",
-  "clip": {
-    "src": "/mastery/videos/skills/computational-origami.mp4",
-    "poster": "/mastery/images/skills/computational-origami.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "methodology_notes": "Scores are based on Wikipedia's articles on mathematics of paper folding and Huzita-Hatori axioms, the Alperin-Lang paper on multi-fold origami axioms published through Robert Lang's research site, and Lang's TED talk describing the computational design process. The cognitive_demand score reflects the NP-completeness proof by Bern and Hayes (1996). The low failure_cost and luck_variance reflect the field's mathematical nature, where outcomes are deterministic and errors are costless to correct."
 }

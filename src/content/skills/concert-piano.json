@@ -140,11 +140,5 @@
     }
   },
   "methodology_notes": "Scores draw on Ericsson's deliberate practice research (1993), Macnamara's meta-analysis (2014), Van Cliburn Competition statistics, and ABRSM/RCM grading frameworks. Concert piano is the anchor skill for the instrument category: time_to_expert=10 reflects that virtually no one reaches concert level in under 15 years of dedicated training.",
-  "interactive": "polyrhythm-tapper",
-  "clip": {
-    "src": "/mastery/videos/skills/concert-piano.mp4",
-    "poster": "/mastery/images/skills/concert-piano.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "interactive": "polyrhythm-tapper"
 }

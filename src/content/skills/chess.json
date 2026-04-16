@@ -134,11 +134,5 @@
     }
   },
   "methodology_notes": "Chess scores are among the most data-rich in the set. Elo distributions from FIDE provide precise percentile data. Ericsson's deliberate practice research used chess as a primary domain. Training timelines are well-documented across thousands of titled players.",
-  "interactive": "pattern-memory",
-  "clip": {
-    "src": "/mastery/videos/skills/chess.mp4",
-    "poster": "/mastery/images/skills/chess.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "interactive": "pattern-memory"
 }

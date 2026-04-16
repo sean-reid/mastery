@@ -134,11 +134,5 @@
       "notes": "Fundamentally an individual sport. Team scores are aggregated individual performances. No in-routine coordination with others. Coach-athlete relationship is critical for development but not a concurrent skill during performance."
     }
   },
-  "methodology_notes": "Scores informed by Wikipedia's articles on artistic gymnastics and age requirements, the Olympics.com official sport page, and a PubMed systematic review of injury epidemiology (PMID 30670379). Training hours and peak ages from FIG documentation and multiple gymnastics community sources. Injury rates drawn from multiple studies showing 1.8-2.9 injuries per 1000 exposure hours at elite level. Physical demand rated maximum due to the unique combination of strength, flexibility, power, and proprioception required. Perishability rated very high due to the narrow biological peak window unique to gymnastics.",
-  "clip": {
-    "src": "/mastery/videos/skills/artistic-gymnastics.mp4",
-    "poster": "/mastery/images/skills/artistic-gymnastics.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "methodology_notes": "Scores informed by Wikipedia's articles on artistic gymnastics and age requirements, the Olympics.com official sport page, and a PubMed systematic review of injury epidemiology (PMID 30670379). Training hours and peak ages from FIG documentation and multiple gymnastics community sources. Injury rates drawn from multiple studies showing 1.8-2.9 injuries per 1000 exposure hours at elite level. Physical demand rated maximum due to the unique combination of strength, flexibility, power, and proprioception required. Perishability rated very high due to the narrow biological peak window unique to gymnastics."
 }

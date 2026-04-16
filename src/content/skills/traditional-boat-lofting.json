@@ -134,11 +134,5 @@
       "notes": "Fundamentally solo work on the loft floor. Coordination with the naval architect (interpreting the design) and boatbuilders (delivering templates) is necessary but intermittent."
     }
   },
-  "methodology_notes": "Scores draw on Wikipedia's lofting article, WoodenBoat School's published curriculum, Sandy Point Boat Works' documentation, and Douglas Brooks' lofting and lines-taking descriptions. The skill survives almost exclusively in the wooden boatbuilding community, making practitioner data sparse. The transition from hand lofting to CAD in the 1970s means that expert-level hand loftsmen are increasingly rare.",
-  "clip": {
-    "src": "/mastery/videos/skills/traditional-boat-lofting.mp4",
-    "poster": "/mastery/images/skills/traditional-boat-lofting.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "methodology_notes": "Scores draw on Wikipedia's lofting article, WoodenBoat School's published curriculum, Sandy Point Boat Works' documentation, and Douglas Brooks' lofting and lines-taking descriptions. The skill survives almost exclusively in the wooden boatbuilding community, making practitioner data sparse. The transition from hand lofting to CAD in the 1970s means that expert-level hand loftsmen are increasingly rare."
 }

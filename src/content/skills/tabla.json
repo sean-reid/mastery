@@ -129,11 +129,5 @@
       "notes": "Most traditional performance is as an accompanist to a vocalist or melodic instrumentalist, requiring real-time responsiveness to the soloist's improvisation. Tabla solo (ekla) is a distinct format. Jugalbandi (duet) performances require deep musical communication between players."
     }
   },
-  "methodology_notes": "Scores informed by Wikipedia and Britannica articles on tabla, Darbar's 'Twelve Days of Tabla' primer, and Chandrakantha.com's comprehensive bol reference. Training timelines derived from documented guru-shishya tradition durations and biographical data of notable players including Zakir Hussain (training from age 3, professional debut at 12, 50+ year career). Cognitive demand and precision scores reflect the unique challenge of the bol system's mapping between spoken syllables and physical strokes. Confidence is generally higher than for rarer instruments due to the tabla's relatively well-documented pedagogical tradition.",
-  "clip": {
-    "src": "/mastery/videos/skills/tabla.mp4",
-    "poster": "/mastery/images/skills/tabla.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "methodology_notes": "Scores informed by Wikipedia and Britannica articles on tabla, Darbar's 'Twelve Days of Tabla' primer, and Chandrakantha.com's comprehensive bol reference. Training timelines derived from documented guru-shishya tradition durations and biographical data of notable players including Zakir Hussain (training from age 3, professional debut at 12, 50+ year career). Cognitive demand and precision scores reflect the unique challenge of the bol system's mapping between spoken syllables and physical strokes. Confidence is generally higher than for rarer instruments due to the tabla's relatively well-documented pedagogical tradition."
 }

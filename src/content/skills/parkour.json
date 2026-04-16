@@ -135,11 +135,5 @@
       "notes": "Primarily individual. Jams and group training are social but performance is solo. Competition is individual."
     }
   },
-  "methodology_notes": "Injury data from PubMed epidemiological studies. Competition format from FIG Parkour World Championships. Training progression timelines from WFPF and coaching community consensus.",
-  "clip": {
-    "src": "/mastery/videos/skills/parkour.mp4",
-    "poster": "/mastery/images/skills/parkour.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "methodology_notes": "Injury data from PubMed epidemiological studies. Competition format from FIG Parkour World Championships. Training progression timelines from WFPF and coaching community consensus."
 }

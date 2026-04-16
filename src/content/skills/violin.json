@@ -136,11 +136,5 @@
       "notes": "Solo repertoire exists, but the violin is fundamentally an ensemble instrument. Orchestra, chamber music, and duo sonata playing require precise coordination with others. Section playing demands blending with 14+ other violinists."
     }
   },
-  "methodology_notes": "Scores are anchored to Ericsson's 1993 deliberate practice study, which used Berlin Academy violinists as its primary dataset. Precision_required is the highest in the instrument set (10) reflecting the fretless fingerboard's uniquely demanding intonation requirements. Physical_demand reflects well-documented occupational injury rates among professional string players.",
-  "clip": {
-    "src": "/mastery/videos/skills/violin.mp4",
-    "poster": "/mastery/images/skills/violin.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "methodology_notes": "Scores are anchored to Ericsson's 1993 deliberate practice study, which used Berlin Academy violinists as its primary dataset. Precision_required is the highest in the instrument set (10) reflecting the fretless fingerboard's uniquely demanding intonation requirements. Physical_demand reflects well-documented occupational injury rates among professional string players."
 }

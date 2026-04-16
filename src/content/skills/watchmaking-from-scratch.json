@@ -38,31 +38,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 8, "confidence": 0.75, "notes": "Horology school (3-4 years at institutions like WOSTEP or the Manchester School of Horology) teaches repair and restoration. Making a complete watch from raw materials is a separate, far more demanding endeavor. Roger Smith spent five years on his second pocket watch alone." },
-    "time_to_expert": { "value": 10, "confidence": 0.8, "notes": "George Daniels spent decades refining his method. Roger Smith perfected the thirty-two required disciplines over more than a decade before producing independently. The skill ceiling is effectively unlimited; Daniels improved throughout a 40-year career." },
-    "feedback_delay": { "value": 8, "confidence": 0.75, "notes": "A complete watch takes over two years to build. Errors in wheel cutting or escapement geometry may not manifest until final assembly and testing. The ultimate quality metric, long-term timekeeping accuracy and reliability, takes years to assess." },
-    "failure_cost": { "value": 7, "confidence": 0.7, "notes": "Months of work on a single component can be ruined by a slip of the hand. Materials (precious metals, specialized steel) are expensive. But the overwhelming cost is time. Roger Smith's watches sell for over $200,000, reflecting the labor investment." },
-    "cognitive_demand": { "value": 9, "confidence": 0.8, "notes": "Must integrate thirty-two distinct disciplines: metallurgy, gear theory, escapement mechanics, spring dynamics, decorative finishing, case making, and dial production. Each watch is a complete mechanical system designed and fabricated by one person." },
-    "physical_demand": { "value": 5, "confidence": 0.75, "notes": "Extraordinary fine motor control under magnification. Components are measured in fractions of a millimeter. But the work is seated bench work requiring precision rather than strength. Eye strain and hand fatigue are the primary physical challenges." },
-    "prerequisite_knowledge": { "value": 7, "confidence": 0.75, "notes": "Formal horology training is the minimum starting point. Beyond that: metallurgy for tempering springs and hardening pivots, geometry for gear tooth profiles, and decorative arts for finishing. Daniels' book assumes extensive prior knowledge." },
-    "measurability": { "value": 7, "confidence": 0.75, "notes": "Timekeeping accuracy is precisely measurable on a timing machine (seconds per day across positions). Gear mesh, pivot friction, and amplitude are quantifiable. Aesthetic finishing quality has clearer standards than in most crafts (Geneva Seal criteria)." },
-    "perishability": { "value": 5, "confidence": 0.65, "notes": "The fine motor control required for turning pivots and cutting wheels degrades without regular practice. Conceptual knowledge of horology is extremely durable; Daniels' book remains the definitive reference decades after publication." },
-    "precision_required": { "value": 10, "confidence": 0.85, "notes": "Pivot diameters of 0.1mm must be turned to micron-level accuracy. Escapement geometry tolerances are measured in hundredths of a millimeter. A watch movement contains over 100 components, each demanding extreme precision, all interacting mechanically." },
-    "ambiguity": { "value": 5, "confidence": 0.7, "notes": "The mechanical principles are well-understood, and Daniels' book is explicit, but the path from drawings to a functioning timepiece involves countless judgment calls about material selection, finishing techniques, and adjustment that no text can fully specify." },
-    "instruction_dependency": { "value": 9, "confidence": 0.8, "notes": "Roger Smith sought out Daniels personally and worked with him for years. The Daniels Method is transmitted almost entirely through master-apprentice relationship. Daniels' book is comprehensive but self-study without mentorship has produced almost no complete watchmakers." },
-    "environmental_variability": { "value": 2, "confidence": 0.8, "notes": "Workshop conditions are tightly controlled. Temperature and humidity affect materials minimally at the bench. The craft is entirely indoor, controlled-environment work." },
-    "concurrent_skills": { "value": 7, "confidence": 0.7, "notes": "The thirty-two disciplines span metalworking, optics, mechanics, chemistry (for treatments and finishes), and aesthetic design. While largely sequential, the watchmaker must hold the complete system in mind throughout, as each component affects all others." },
-    "plateau_density": { "value": 8, "confidence": 0.7, "notes": "Each of the thirty-two disciplines presents its own learning curve. Mastering wheel cutting does not help with escapement making. The transition from competent repair technician to complete watchmaker is itself a massive plateau spanning years." },
-    "domain_evolution": { "value": 1, "confidence": 0.85, "notes": "The Daniels Method deliberately preserves 18th-century hand techniques. The coaxial escapement (Daniels' invention) is the only major innovation in two centuries. Tools, materials, and methods are intentionally traditional." },
-    "observability": { "value": 7, "confidence": 0.75, "notes": "Finishing quality (the anglage, perlage, and Cotes de Geneve) is visible under magnification and immediately distinguishes amateur from master work. Timekeeping performance is objectively measurable on a timing machine." },
-    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Material defects occasionally cause failures, but the craft is overwhelmingly deterministic. The quality of a finished watch directly reflects the maker's skill and care across thousands of hours of work." },
-    "social_coordination": { "value": 1, "confidence": 0.85, "notes": "The most solitary craft imaginable. Daniels worked alone for decades. Smith works alone in his workshop. The entire point of the Daniels Method is that one person creates the complete watch." }
+    "time_to_competence": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Horology school (3-4 years at institutions like WOSTEP or the Manchester School of Horology) teaches repair and restoration. Making a complete watch from raw materials is a separate, far more demanding endeavor. Roger Smith spent five years on his second pocket watch alone."
+    },
+    "time_to_expert": {
+      "value": 10,
+      "confidence": 0.8,
+      "notes": "George Daniels spent decades refining his method. Roger Smith perfected the thirty-two required disciplines over more than a decade before producing independently. The skill ceiling is effectively unlimited; Daniels improved throughout a 40-year career."
+    },
+    "feedback_delay": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "A complete watch takes over two years to build. Errors in wheel cutting or escapement geometry may not manifest until final assembly and testing. The ultimate quality metric, long-term timekeeping accuracy and reliability, takes years to assess."
+    },
+    "failure_cost": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Months of work on a single component can be ruined by a slip of the hand. Materials (precious metals, specialized steel) are expensive. But the overwhelming cost is time. Roger Smith's watches sell for over $200,000, reflecting the labor investment."
+    },
+    "cognitive_demand": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "Must integrate thirty-two distinct disciplines: metallurgy, gear theory, escapement mechanics, spring dynamics, decorative finishing, case making, and dial production. Each watch is a complete mechanical system designed and fabricated by one person."
+    },
+    "physical_demand": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Extraordinary fine motor control under magnification. Components are measured in fractions of a millimeter. But the work is seated bench work requiring precision rather than strength. Eye strain and hand fatigue are the primary physical challenges."
+    },
+    "prerequisite_knowledge": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Formal horology training is the minimum starting point. Beyond that: metallurgy for tempering springs and hardening pivots, geometry for gear tooth profiles, and decorative arts for finishing. Daniels' book assumes extensive prior knowledge."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Timekeeping accuracy is precisely measurable on a timing machine (seconds per day across positions). Gear mesh, pivot friction, and amplitude are quantifiable. Aesthetic finishing quality has clearer standards than in most crafts (Geneva Seal criteria)."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "The fine motor control required for turning pivots and cutting wheels degrades without regular practice. Conceptual knowledge of horology is extremely durable; Daniels' book remains the definitive reference decades after publication."
+    },
+    "precision_required": {
+      "value": 10,
+      "confidence": 0.85,
+      "notes": "Pivot diameters of 0.1mm must be turned to micron-level accuracy. Escapement geometry tolerances are measured in hundredths of a millimeter. A watch movement contains over 100 components, each demanding extreme precision, all interacting mechanically."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "The mechanical principles are well-understood, and Daniels' book is explicit, but the path from drawings to a functioning timepiece involves countless judgment calls about material selection, finishing techniques, and adjustment that no text can fully specify."
+    },
+    "instruction_dependency": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "Roger Smith sought out Daniels personally and worked with him for years. The Daniels Method is transmitted almost entirely through master-apprentice relationship. Daniels' book is comprehensive but self-study without mentorship has produced almost no complete watchmakers."
+    },
+    "environmental_variability": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Workshop conditions are tightly controlled. Temperature and humidity affect materials minimally at the bench. The craft is entirely indoor, controlled-environment work."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "The thirty-two disciplines span metalworking, optics, mechanics, chemistry (for treatments and finishes), and aesthetic design. While largely sequential, the watchmaker must hold the complete system in mind throughout, as each component affects all others."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Each of the thirty-two disciplines presents its own learning curve. Mastering wheel cutting does not help with escapement making. The transition from competent repair technician to complete watchmaker is itself a massive plateau spanning years."
+    },
+    "domain_evolution": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "The Daniels Method deliberately preserves 18th-century hand techniques. The coaxial escapement (Daniels' invention) is the only major innovation in two centuries. Tools, materials, and methods are intentionally traditional."
+    },
+    "observability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Finishing quality (the anglage, perlage, and Cotes de Geneve) is visible under magnification and immediately distinguishes amateur from master work. Timekeeping performance is objectively measurable on a timing machine."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Material defects occasionally cause failures, but the craft is overwhelmingly deterministic. The quality of a finished watch directly reflects the maker's skill and care across thousands of hours of work."
+    },
+    "social_coordination": {
+      "value": 1,
+      "confidence": 0.85,
+      "notes": "The most solitary craft imaginable. Daniels worked alone for decades. Smith works alone in his workshop. The entire point of the Daniels Method is that one person creates the complete watch."
+    }
   },
-  "methodology_notes": "Scores draw on Wikipedia articles for George Daniels and Roger W. Smith, A Collected Man's published profile of Smith, and The Watch Collectors' Club documentation. The thirty-two disciplines figure comes from Daniels' own categorization. The extreme rarity of practitioners (Smith is described as the only person currently working in the complete Daniels Method) drives the highest scores for instruction dependency and time to expert.",
-  "clip": {
-    "src": "/mastery/videos/skills/watchmaking-from-scratch.mp4",
-    "poster": "/mastery/images/skills/watchmaking-from-scratch.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "methodology_notes": "Scores draw on Wikipedia articles for George Daniels and Roger W. Smith, A Collected Man's published profile of Smith, and The Watch Collectors' Club documentation. The thirty-two disciplines figure comes from Daniels' own categorization. The extreme rarity of practitioners (Smith is described as the only person currently working in the complete Daniels Method) drives the highest scores for instruction dependency and time to expert."
 }

@@ -137,11 +137,5 @@
       "notes": "Fundamentally an individual game played against other individuals. Table dynamics involve social reading and manipulation. Study groups and coaching stables exist but competition is solo."
     }
   },
-  "methodology_notes": "Scores informed by the Levitt/Miles 2014 WSOP study (Journal of Sports Economics), the 2012 PubMed quasi-experimental study on poker skill vs. chance, and the ScienceDirect study on skill dominance in online poker. Training timelines from established poker coaching resources (BlackRain79, Upswing Poker). The high luck_variance score reflects the well-documented tension between poker's long-term skill component and short-term randomness.",
-  "clip": {
-    "src": "/mastery/videos/skills/tournament-poker.mp4",
-    "poster": "/mastery/images/skills/tournament-poker.webp",
-    "duration": 8,
-    "attribution": "Video from Wikimedia Commons (CC)"
-  }
+  "methodology_notes": "Scores informed by the Levitt/Miles 2014 WSOP study (Journal of Sports Economics), the 2012 PubMed quasi-experimental study on poker skill vs. chance, and the ScienceDirect study on skill dominance in online poker. Training timelines from established poker coaching resources (BlackRain79, Upswing Poker). The high luck_variance score reflects the well-documented tension between poker's long-term skill component and short-term randomness."
 }
