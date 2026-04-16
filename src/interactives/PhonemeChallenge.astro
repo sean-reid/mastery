@@ -66,7 +66,17 @@
   .phon-card:active { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .phon-card-letter { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; color: var(--color-text); line-height: 1; }
   .phon-card-name { font-size: var(--text-sm); color: var(--color-text-secondary); font-weight: 500; }
-  .phon-card-play { font-size: 0.65rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.7; }
+  .phon-card-actions { display: flex; gap: var(--space-2); }
+  .phon-card-listen, .phon-card-place {
+    padding: var(--space-1) var(--space-3); border-radius: var(--radius-full);
+    font-size: var(--text-xs); font-weight: 500; cursor: pointer;
+    transition: all 0.15s var(--ease-out); border: none;
+  }
+  .phon-card-listen { background: var(--color-surface); color: var(--color-text-muted); border: 1px solid var(--color-border); }
+  .phon-card-listen:hover { color: var(--color-text); background: var(--color-surface-raised); }
+  .phon-card-place { background: var(--color-accent); color: white; }
+  .phon-card-place:hover { opacity: 0.9; }
+  .phon-card.used .phon-card-actions { visibility: hidden; }
   .phon-card.used { opacity: 0.25; pointer-events: none; border-style: dashed; transform: scale(0.95); box-shadow: none; }
   .phon-card.correct { border-color: #1a7a52; background: rgba(26,122,82,0.08); }
   .phon-card.wrong { border-color: #b53030; background: rgba(181,48,48,0.08); }
@@ -178,7 +188,7 @@
     }
     playBtn.classList.remove('playing');
     playLabel.textContent = 'Replay';
-    hintEl.textContent = 'Tap each card to hear it. Click them in the order you heard.';
+    hintEl.textContent = 'Use "Listen" to preview each sound. Use "Place" to commit your order.';
   }
 
   function delay(ms: number) { return new Promise(r => setTimeout(r, ms)); }
@@ -228,7 +238,7 @@
     feedbackEl.hidden = true;
     undoBtn.hidden = true;
 
-    // Build cards
+    // Build cards: play button previews, "Place" button commits
     cardsEl.innerHTML = '';
     cardClickIndices.forEach((clickIdx, cardIdx) => {
       const card = document.createElement('div');
@@ -236,15 +246,25 @@
       card.innerHTML = `
         <span class="phon-card-letter">${CLICKS[clickIdx].letter}</span>
         <span class="phon-card-name">${CLICKS[clickIdx].label}</span>
-        <span class="phon-card-play">tap to hear</span>
+        <div class="phon-card-actions">
+          <button class="phon-card-listen">Listen</button>
+          <button class="phon-card-place">Place</button>
+        </div>
       `;
-      card.addEventListener('click', async () => {
+      const listenBtn = card.querySelector('.phon-card-listen')!;
+      const placeBtn = card.querySelector('.phon-card-place')!;
+
+      listenBtn.addEventListener('click', async (e) => {
+        e.stopPropagation();
         if (card.classList.contains('used') || card.classList.contains('revealed')) return;
-        // Play this click
         ensureAudio();
         await loadAudio();
         playClick(clickIdx);
-        // Add to user order
+      });
+
+      placeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (card.classList.contains('used') || card.classList.contains('revealed')) return;
         userOrder.push(cardIdx);
         card.classList.add('used');
         updateSlots();
@@ -254,6 +274,7 @@
           undoBtn.hidden = true;
         }
       });
+
       cardsEl.appendChild(card);
     });
 
