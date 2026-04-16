@@ -8,13 +8,7 @@
     "alt": "Scholar examining ancient Greek inscription carved into marble with measuring tools",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "dLEhMNMbcFs",
-      "title": "The Decipherment of Linear B - How an Architect Cracked an Ancient Script"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Epigraphy - Wikipedia",
@@ -39,25 +33,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 7, "confidence": 0.75, "notes": "Reading inscriptions in a single well-documented script (e.g., Latin epigraphy) requires 2-3 years of graduate study including mastery of the ancient language. The British School at Athens epigraphy course provides intensive summer training but assumes prior graduate-level classics education." },
-    "time_to_expert": { "value": 9, "confidence": 0.8, "notes": "Producing authoritative editions of inscriptions (editio princeps) or contributing to decipherment of unknown scripts requires a PhD plus years of fieldwork and publication. Michael Ventris worked on Linear B for over a decade before his 1952 breakthrough. Careers in epigraphy are measured in decades." },
-    "feedback_delay": { "value": 8, "confidence": 0.75, "notes": "A proposed reading of an inscription may take years to be confirmed or refuted through peer review, new finds, or parallel discoveries. For undeciphered scripts, feedback may never come. The Indus Valley script has resisted decipherment for over a century. A 2025 prize of $1 million was offered for its decipherment." },
-    "failure_cost": { "value": 2, "confidence": 0.8, "notes": "A mistaken reading costs academic credibility but has no physical or financial consequences. Published errors are corrected through scholarly discourse. The main cost is wasted years on an incorrect decipherment hypothesis." },
-    "cognitive_demand": { "value": 8, "confidence": 0.8, "notes": "Requires simultaneously integrating paleographic analysis (letter-form dating), linguistic competence in ancient languages, historical context, archaeological stratigraphy, and comparative analysis across related scripts. For undeciphered scripts, add cryptographic and statistical reasoning." },
-    "physical_demand": { "value": 2, "confidence": 0.8, "notes": "Fieldwork involves travel to archaeological sites, sometimes in difficult conditions, to photograph, squeeze (make paper impressions of), and record inscriptions in situ. Laboratory work is sedentary. Eyestrain from reading weathered stone is a genuine occupational hazard." },
-    "prerequisite_knowledge": { "value": 9, "confidence": 0.85, "notes": "Requires advanced competence in at least one ancient language (Greek, Latin, Akkadian, Egyptian, etc.), knowledge of historical periods and archaeological methods, understanding of writing system typology, and often reading knowledge of several modern scholarly languages (German, French, Italian)." },
-    "measurability": { "value": 3, "confidence": 0.7, "notes": "No standardized tests or ratings. Quality is judged by peer review of published editions and interpretations. A correct decipherment is definitively verifiable (Ventris's Linear B reading could be tested against new tablet finds), but most epigraphic work involves interpretation on a spectrum of certainty." },
-    "perishability": { "value": 3, "confidence": 0.7, "notes": "Once learned, script reading skills and language competence are durable. New inscriptions are continuously discovered, adding to the corpus, but foundational skills degrade slowly. A classicist who learned Latin epigraphy decades ago retains most of the ability." },
-    "precision_required": { "value": 8, "confidence": 0.8, "notes": "A single misread letter can change the meaning of an inscription or its date by centuries. Distinguishing between similar letter forms (e.g., sigma and epsilon in worn Greek inscriptions) requires precise paleographic judgment. Restoration of damaged portions (indicated by square brackets in editions) demands rigorous methodology." },
-    "ambiguity": { "value": 8, "confidence": 0.85, "notes": "Inscriptions are frequently fragmentary, weathered, or damaged. Multiple readings of the same damaged text are often possible. For undeciphered scripts, ambiguity is total. Even for well-known scripts, abbreviations, dialectal variation, and formulaic language create interpretive challenges." },
-    "instruction_dependency": { "value": 8, "confidence": 0.8, "notes": "Effectively requires mentorship from established epigraphers and access to squeeze collections, inscription databases (e.g., Packard Humanities Institute), and fieldwork opportunities. Self-teaching from textbooks alone is insufficient, because reading real stones differs enormously from reading printed transcriptions." },
-    "environmental_variability": { "value": 7, "confidence": 0.75, "notes": "Every inscription is unique: different material (marble, bronze, clay, basalt), different state of preservation, different script variant, different historical period, different archaeological context. A Greek epigrapher and a cuneiformist face entirely different challenges despite sharing a discipline." },
-    "concurrent_skills": { "value": 8, "confidence": 0.8, "notes": "Simultaneously requires linguistic analysis, paleographic dating, historical contextualization, archaeological interpretation, photographic documentation skills, and (increasingly) digital corpus management. For decipherment work, add statistical analysis and computational methods." },
-    "plateau_density": { "value": 6, "confidence": 0.65, "notes": "Significant plateaus at the transition from reading textbook examples to real weathered inscriptions, from working within one script tradition to comparative epigraphy, and from reading known texts to producing original editions or contributing to decipherment." },
-    "domain_evolution": { "value": 3, "confidence": 0.75, "notes": "New inscriptions are regularly discovered through excavation, expanding the corpus. Digital imaging (RTI, photogrammetry) and computational tools are modernizing documentation. But the core skill of reading ancient scripts using trained human judgment has changed little in methodology since the 19th century." },
-    "observability": { "value": 2, "confidence": 0.8, "notes": "Essentially invisible to non-specialists. A scholar examining a stone in a museum looks identical to a tourist. The intellectual achievement of reading a damaged inscription or proposing a decipherment is visible only through published scholarship." },
-    "luck_variance": { "value": 5, "confidence": 0.7, "notes": "Discovery of a bilingual text (like the Rosetta Stone or the Behistun inscription) can transform an entire field overnight. New archaeological finds can confirm or demolish years of scholarly work. The material that survives is a matter of chance." },
-    "social_coordination": { "value": 4, "confidence": 0.75, "notes": "Core analytical work is individual, but publication involves extensive peer interaction. Corpus projects (e.g., Corpus Inscriptionum Latinarum) are major collaborative endeavors spanning generations. Archaeological excavation providing new material is inherently team-based." }
+    "time_to_competence": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Reading inscriptions in a single well-documented script (e.g., Latin epigraphy) requires 2-3 years of graduate study including mastery of the ancient language. The British School at Athens epigraphy course provides intensive summer training but assumes prior graduate-level classics education."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "Producing authoritative editions of inscriptions (editio princeps) or contributing to decipherment of unknown scripts requires a PhD plus years of fieldwork and publication. Michael Ventris worked on Linear B for over a decade before his 1952 breakthrough. Careers in epigraphy are measured in decades."
+    },
+    "feedback_delay": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "A proposed reading of an inscription may take years to be confirmed or refuted through peer review, new finds, or parallel discoveries. For undeciphered scripts, feedback may never come. The Indus Valley script has resisted decipherment for over a century. A 2025 prize of $1 million was offered for its decipherment."
+    },
+    "failure_cost": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "A mistaken reading costs academic credibility but has no physical or financial consequences. Published errors are corrected through scholarly discourse. The main cost is wasted years on an incorrect decipherment hypothesis."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Requires simultaneously integrating paleographic analysis (letter-form dating), linguistic competence in ancient languages, historical context, archaeological stratigraphy, and comparative analysis across related scripts. For undeciphered scripts, add cryptographic and statistical reasoning."
+    },
+    "physical_demand": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Fieldwork involves travel to archaeological sites, sometimes in difficult conditions, to photograph, squeeze (make paper impressions of), and record inscriptions in situ. Laboratory work is sedentary. Eyestrain from reading weathered stone is a genuine occupational hazard."
+    },
+    "prerequisite_knowledge": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Requires advanced competence in at least one ancient language (Greek, Latin, Akkadian, Egyptian, etc.), knowledge of historical periods and archaeological methods, understanding of writing system typology, and often reading knowledge of several modern scholarly languages (German, French, Italian)."
+    },
+    "measurability": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "No standardized tests or ratings. Quality is judged by peer review of published editions and interpretations. A correct decipherment is definitively verifiable (Ventris's Linear B reading could be tested against new tablet finds), but most epigraphic work involves interpretation on a spectrum of certainty."
+    },
+    "perishability": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Once learned, script reading skills and language competence are durable. New inscriptions are continuously discovered, adding to the corpus, but foundational skills degrade slowly. A classicist who learned Latin epigraphy decades ago retains most of the ability."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "A single misread letter can change the meaning of an inscription or its date by centuries. Distinguishing between similar letter forms (e.g., sigma and epsilon in worn Greek inscriptions) requires precise paleographic judgment. Restoration of damaged portions (indicated by square brackets in editions) demands rigorous methodology."
+    },
+    "ambiguity": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Inscriptions are frequently fragmentary, weathered, or damaged. Multiple readings of the same damaged text are often possible. For undeciphered scripts, ambiguity is total. Even for well-known scripts, abbreviations, dialectal variation, and formulaic language create interpretive challenges."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Effectively requires mentorship from established epigraphers and access to squeeze collections, inscription databases (e.g., Packard Humanities Institute), and fieldwork opportunities. Self-teaching from textbooks alone is insufficient, because reading real stones differs enormously from reading printed transcriptions."
+    },
+    "environmental_variability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Every inscription is unique: different material (marble, bronze, clay, basalt), different state of preservation, different script variant, different historical period, different archaeological context. A Greek epigrapher and a cuneiformist face entirely different challenges despite sharing a discipline."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Simultaneously requires linguistic analysis, paleographic dating, historical contextualization, archaeological interpretation, photographic documentation skills, and (increasingly) digital corpus management. For decipherment work, add statistical analysis and computational methods."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Significant plateaus at the transition from reading textbook examples to real weathered inscriptions, from working within one script tradition to comparative epigraphy, and from reading known texts to producing original editions or contributing to decipherment."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "New inscriptions are regularly discovered through excavation, expanding the corpus. Digital imaging (RTI, photogrammetry) and computational tools are modernizing documentation. But the core skill of reading ancient scripts using trained human judgment has changed little in methodology since the 19th century."
+    },
+    "observability": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Essentially invisible to non-specialists. A scholar examining a stone in a museum looks identical to a tourist. The intellectual achievement of reading a damaged inscription or proposing a decipherment is visible only through published scholarship."
+    },
+    "luck_variance": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Discovery of a bilingual text (like the Rosetta Stone or the Behistun inscription) can transform an entire field overnight. New archaeological finds can confirm or demolish years of scholarly work. The material that survives is a matter of chance."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Core analytical work is individual, but publication involves extensive peer interaction. Corpus projects (e.g., Corpus Inscriptionum Latinarum) are major collaborative endeavors spanning generations. Archaeological excavation providing new material is inherently team-based."
+    }
   },
   "methodology_notes": "Scores are informed by the Wikipedia articles on epigraphy and Linear A, the British School at Athens epigraphy course requirements, the 2024 arXiv survey of computational epigraphy methods, and the history of script decipherment (Champollion, Ventris, ongoing Indus Valley efforts including the 2025 $1M prize). The field's tiny practitioner base and extreme specialization make empirical data scarce; confidence ratings reflect this uncertainty."
 }

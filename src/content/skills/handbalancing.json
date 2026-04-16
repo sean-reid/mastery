@@ -8,13 +8,7 @@
     "alt": "Performer holding a one-arm handstand on canes against a dark background",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "kYkUE9Mfvzk",
-      "title": "Andrii Bondarenko - handbalancing act from Cirque du Soleil KURIOS"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Handstand Factory - About",
@@ -33,25 +27,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 6, "confidence": 0.8, "notes": "A freestanding two-arm handstand held for 10+ seconds takes most adults 6-12 months of consistent practice. Wrist conditioning alone requires weeks." },
-    "time_to_expert": { "value": 10, "confidence": 0.85, "notes": "A controlled one-arm handstand on canes takes 5-10 years. Cirque du Soleil handbalancers like Andrii Bondarenko have 20+ years of training. Many dedicated practitioners never achieve a stable one-arm hold." },
-    "feedback_delay": { "value": 1, "confidence": 0.9, "notes": "You know immediately if you are balanced or not. Overbalancing or underbalancing is felt in the fingertips and wrists in real time." },
-    "failure_cost": { "value": 3, "confidence": 0.8, "notes": "Falls from handstands are rarely dangerous on flat ground. The real cost is chronic wrist injuries and tendonitis from overtraining." },
-    "cognitive_demand": { "value": 5, "confidence": 0.75, "notes": "Requires intense proprioceptive awareness and the ability to make micro-corrections through finger pressure. Not intellectually complex but demands deep body awareness." },
-    "physical_demand": { "value": 9, "confidence": 0.85, "notes": "Extreme demands on wrist, shoulder, and core strength. One-arm holds require supporting full body weight through a single wrist joint while maintaining alignment." },
-    "prerequisite_knowledge": { "value": 2, "confidence": 0.8, "notes": "Gymnastics or circus background accelerates progress. No academic prerequisites but understanding shoulder mechanics prevents injury." },
-    "measurability": { "value": 7, "confidence": 0.8, "notes": "Hold time is precisely measurable. Shape quality and line are somewhat subjective but widely agreed upon in the community." },
-    "perishability": { "value": 7, "confidence": 0.8, "notes": "Balance deteriorates within days of missed practice. Wrist conditioning and shoulder endurance degrade within weeks. The nervous system adaptations are highly perishable." },
-    "precision_required": { "value": 10, "confidence": 0.9, "notes": "Maintaining balance on one hand requires continuous corrections measured in grams of finger pressure. On canes, the balance point is a few millimeters wide." },
-    "ambiguity": { "value": 3, "confidence": 0.75, "notes": "A hold is either stable or not. Performance quality involves aesthetic judgment but the core skill is unambiguous." },
-    "instruction_dependency": { "value": 6, "confidence": 0.75, "notes": "Efficient progression requires coaching to avoid years of wasted effort. Self-teaching is possible but the one-arm handstand has many technical traps that coaches help avoid." },
-    "environmental_variability": { "value": 2, "confidence": 0.85, "notes": "Performed on flat surfaces. Surface texture matters (wood vs rubber vs concrete). Temperature affects wrist mobility. Conditions are largely controlled." },
-    "concurrent_skills": { "value": 5, "confidence": 0.75, "notes": "Simultaneous management of finger pressure, shoulder alignment, hip position, and breathing. Advanced acts add shape changes and transitions." },
-    "plateau_density": { "value": 9, "confidence": 0.85, "notes": "Notorious for extended plateaus. The two-arm to one-arm transition can take years. Many practitioners train for a decade and still measure progress in seconds of hold time." },
-    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "Hand balancing has been performed in circuses for over a century. Training methodology has improved with online coaching but the fundamental skill has not changed." },
-    "observability": { "value": 8, "confidence": 0.85, "notes": "A one-arm handstand on canes is immediately impressive. The stillness and control are visually dramatic, especially in performance contexts." },
-    "luck_variance": { "value": 1, "confidence": 0.9, "notes": "Almost zero randomness. Balance is entirely skill-dependent. Daily variation in energy and focus causes minor fluctuation but no external luck factors." },
-    "social_coordination": { "value": 2, "confidence": 0.85, "notes": "Primarily solo. Partner handbalancing exists as a separate discipline. Training benefits from coaching but practice is individual." }
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "A freestanding two-arm handstand held for 10+ seconds takes most adults 6-12 months of consistent practice. Wrist conditioning alone requires weeks."
+    },
+    "time_to_expert": {
+      "value": 10,
+      "confidence": 0.85,
+      "notes": "A controlled one-arm handstand on canes takes 5-10 years. Cirque du Soleil handbalancers like Andrii Bondarenko have 20+ years of training. Many dedicated practitioners never achieve a stable one-arm hold."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "You know immediately if you are balanced or not. Overbalancing or underbalancing is felt in the fingertips and wrists in real time."
+    },
+    "failure_cost": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Falls from handstands are rarely dangerous on flat ground. The real cost is chronic wrist injuries and tendonitis from overtraining."
+    },
+    "cognitive_demand": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Requires intense proprioceptive awareness and the ability to make micro-corrections through finger pressure. Not intellectually complex but demands deep body awareness."
+    },
+    "physical_demand": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Extreme demands on wrist, shoulder, and core strength. One-arm holds require supporting full body weight through a single wrist joint while maintaining alignment."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Gymnastics or circus background accelerates progress. No academic prerequisites but understanding shoulder mechanics prevents injury."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Hold time is precisely measurable. Shape quality and line are somewhat subjective but widely agreed upon in the community."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Balance deteriorates within days of missed practice. Wrist conditioning and shoulder endurance degrade within weeks. The nervous system adaptations are highly perishable."
+    },
+    "precision_required": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Maintaining balance on one hand requires continuous corrections measured in grams of finger pressure. On canes, the balance point is a few millimeters wide."
+    },
+    "ambiguity": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "A hold is either stable or not. Performance quality involves aesthetic judgment but the core skill is unambiguous."
+    },
+    "instruction_dependency": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Efficient progression requires coaching to avoid years of wasted effort. Self-teaching is possible but the one-arm handstand has many technical traps that coaches help avoid."
+    },
+    "environmental_variability": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Performed on flat surfaces. Surface texture matters (wood vs rubber vs concrete). Temperature affects wrist mobility. Conditions are largely controlled."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Simultaneous management of finger pressure, shoulder alignment, hip position, and breathing. Advanced acts add shape changes and transitions."
+    },
+    "plateau_density": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Notorious for extended plateaus. The two-arm to one-arm transition can take years. Many practitioners train for a decade and still measure progress in seconds of hold time."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Hand balancing has been performed in circuses for over a century. Training methodology has improved with online coaching but the fundamental skill has not changed."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "A one-arm handstand on canes is immediately impressive. The stillness and control are visually dramatic, especially in performance contexts."
+    },
+    "luck_variance": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Almost zero randomness. Balance is entirely skill-dependent. Daily variation in energy and focus causes minor fluctuation but no external luck factors."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Primarily solo. Partner handbalancing exists as a separate discipline. Training benefits from coaching but practice is individual."
+    }
   },
   "methodology_notes": "Training timelines from Handstand Factory, GMB Fitness, and professional circus artist interviews. Injury patterns from Yuri Marmerstein's documentation of wrist injuries in handbalancing. Performance standards from Cirque du Soleil and professional circus contexts."
 }

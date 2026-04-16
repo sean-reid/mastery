@@ -8,13 +8,7 @@
     "alt": "Falconer with leather glove holding a perched Harris's hawk against an open field",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "HXx1P3MkVPQ",
-      "title": "The Art of Falconry - Training a Bird of Prey"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Falconry - Wikipedia",
@@ -38,25 +32,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 6, "confidence": 0.8, "notes": "The mandatory two-year apprenticeship under a General or Master falconer represents the minimum path to independent practice in the United States. During this period, the apprentice must successfully trap, man, train, and hunt with a red-tailed hawk or American kestrel. Many spend 6-12 months studying before even obtaining their first bird, and several thousand hours of documented mentoring are expected." },
-    "time_to_expert": { "value": 8, "confidence": 0.75, "notes": "Master falconer status requires a minimum of 7 years of licensed practice (2 apprentice + 5 general). True expertise (flying multiple species, hunting diverse quarry, managing breeding projects, and training difficult longwings like peregrines at game) takes 10-15 years or more. The International Association for Falconry notes the practice is transmitted through mentoring, learning within families, and formal training spanning generations." },
-    "feedback_delay": { "value": 3, "confidence": 0.8, "notes": "Feedback is relatively immediate: the bird either responds to the glove, flies to the lure, or does not. During hunting, success or failure is apparent within seconds. Weight management provides daily measurable feedback through the bird's response to food motivation. A bird that is too heavy will not hunt; too light risks health. This daily calibration loop is one of falconry's defining features." },
-    "failure_cost": { "value": 7, "confidence": 0.8, "notes": "A training error can result in the permanent loss of the bird. If a raptor is flown too early without proper conditioning, it will simply fly away and never return. This represents months of work and, for rare species, significant financial investment. More critically, improper handling can injure or kill the bird. Legal consequences for regulatory violations (taking protected species, exceeding bag limits) are severe." },
-    "cognitive_demand": { "value": 7, "confidence": 0.75, "notes": "Falconers must understand raptor behavior, physiology, weight management, prey ecology, weather effects on flight, training psychology, veterinary first aid, and legal regulations. Reading a bird's body language to judge its hunting motivation requires years of pattern recognition. Flying a peregrine at game demands rapid tactical decisions about wind, quarry position, and terrain." },
-    "physical_demand": { "value": 5, "confidence": 0.75, "notes": "Daily bird care, construction and maintenance of housing (mews), and field hunting require moderate physical fitness. Hunting with a Harris's hawk through thick brush is physically demanding. However, many forms of falconry (flying longwings from a vehicle in open country) are less strenuous. The primary demand is consistency of daily care rather than peak physical performance." },
-    "prerequisite_knowledge": { "value": 5, "confidence": 0.75, "notes": "The written exam covers raptor biology, disease, regulations, and husbandry. Prospective apprentices must understand basic ornithology, raptor identification, and local wildlife law before beginning. However, most prerequisite knowledge is acquired during the apprenticeship itself, and many begin with no prior raptor experience." },
-    "measurability": { "value": 7, "confidence": 0.75, "notes": "Performance is objectively measurable: the bird either catches quarry or does not; it returns to the glove or does not; it maintains health or does not. The licensing system provides formal progression benchmarks. Field meet competitions allow direct comparison between falconers. Weight management records provide quantitative data on bird conditioning." },
-    "perishability": { "value": 5, "confidence": 0.7, "notes": "Raptor handling skills and bird-reading ability deteriorate without regular practice, but core knowledge is durable. A falconer who takes a few years off can return to the sport, though rebuilding the relationship with a new bird takes months. The specific bond with an individual bird is highly perishable, and interruption can permanently damage the training." },
-    "precision_required": { "value": 6, "confidence": 0.75, "notes": "Weight management requires precision to within a few grams for small species like kestrels, as the difference between a motivated hunter and a bird that refuses to return can be as little as 10-15 grams. Equipment (jesses, bewits, swivels) must be fitted precisely to avoid injury. However, the biological variability of working with a living predator means precision has natural limits." },
-    "ambiguity": { "value": 5, "confidence": 0.7, "notes": "Raptor behavior is often ambiguous; a bird that refuses to fly may be overweight, unwell, stressed, or simply not motivated by the available quarry. Weather conditions make hunting success unpredictable. However, experienced falconers develop reliable interpretive frameworks, and the structured licensing system provides clear milestones for progression." },
-    "instruction_dependency": { "value": 8, "confidence": 0.85, "notes": "The mandatory apprenticeship system exists precisely because falconry cannot be safely learned from books alone. The North American Falconers Association emphasizes that hands-on mentorship is essential. Reading a bird's subtle behavioral cues, properly fitting equipment, and managing the critical first free flights all require in-person guidance from an experienced practitioner." },
-    "environmental_variability": { "value": 6, "confidence": 0.75, "notes": "Falconry must adapt to seasons, weather, terrain, available quarry species, and local regulations that vary by state and country. Flying a peregrine at ducks in open marshland is fundamentally different from flying a goshawk at rabbits in woodland. Each bird species and quarry combination requires different skills, equipment, and strategies." },
-    "concurrent_skills": { "value": 6, "confidence": 0.75, "notes": "In the field, the falconer simultaneously manages the bird, reads quarry behavior, navigates terrain, coordinates with dogs (if used), monitors weather, and makes rapid tactical decisions about when to release the bird. Bird care requires concurrent veterinary, nutritional, and behavioral management skills year-round." },
-    "plateau_density": { "value": 5, "confidence": 0.65, "notes": "The initial learning curve during apprenticeship is steep but guided. A significant plateau occurs when transitioning from cooperative species like Harris's hawks to more challenging longwings. Another plateau emerges when attempting to fly passage (wild-caught) birds versus imprints. Mastering each new species effectively resets the learning curve." },
-    "domain_evolution": { "value": 3, "confidence": 0.8, "notes": "Core falconry techniques have been stable for centuries. Modern additions include telemetry (GPS tracking), captive breeding programs, and veterinary advances, but the fundamental training process (manning, creance work, free flight, entering to quarry) is essentially unchanged from medieval practice. UNESCO inscribed falconry specifically as a 'living human heritage' practiced across 80+ countries." },
-    "observability": { "value": 7, "confidence": 0.8, "notes": "Falconry is highly visual and dramatic: the stoop of a peregrine, the pursuit of quarry, and the return to the glove are all directly observable. Field meets provide public demonstration of skill. However, the subtler aspects (weight management, manning sessions, equipment preparation) are less visible. The bond between falconer and bird is evident but difficult to quantify." },
-    "luck_variance": { "value": 5, "confidence": 0.7, "notes": "Weather significantly affects hunting success: wind direction, temperature, and precipitation alter both raptor and quarry behavior. Game availability is inherently variable. A perfectly trained bird may have an unsuccessful day due to quarry scarcity. However, over a season, skill clearly separates productive falconers from unsuccessful ones, and the training process itself has low luck variance." },
-    "social_coordination": { "value": 4, "confidence": 0.75, "notes": "Falconry is primarily a solitary pursuit between one person and one bird. The apprenticeship requires a mentor-student relationship. Some forms (hawking parties, hunting with dogs) involve small groups. The broader community of falconry clubs and the NAFA provide social infrastructure, but the core practice is individual." }
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "The mandatory two-year apprenticeship under a General or Master falconer represents the minimum path to independent practice in the United States. During this period, the apprentice must successfully trap, man, train, and hunt with a red-tailed hawk or American kestrel. Many spend 6-12 months studying before even obtaining their first bird, and several thousand hours of documented mentoring are expected."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Master falconer status requires a minimum of 7 years of licensed practice (2 apprentice + 5 general). True expertise (flying multiple species, hunting diverse quarry, managing breeding projects, and training difficult longwings like peregrines at game) takes 10-15 years or more. The International Association for Falconry notes the practice is transmitted through mentoring, learning within families, and formal training spanning generations."
+    },
+    "feedback_delay": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Feedback is relatively immediate: the bird either responds to the glove, flies to the lure, or does not. During hunting, success or failure is apparent within seconds. Weight management provides daily measurable feedback through the bird's response to food motivation. A bird that is too heavy will not hunt; too light risks health. This daily calibration loop is one of falconry's defining features."
+    },
+    "failure_cost": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "A training error can result in the permanent loss of the bird. If a raptor is flown too early without proper conditioning, it will simply fly away and never return. This represents months of work and, for rare species, significant financial investment. More critically, improper handling can injure or kill the bird. Legal consequences for regulatory violations (taking protected species, exceeding bag limits) are severe."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Falconers must understand raptor behavior, physiology, weight management, prey ecology, weather effects on flight, training psychology, veterinary first aid, and legal regulations. Reading a bird's body language to judge its hunting motivation requires years of pattern recognition. Flying a peregrine at game demands rapid tactical decisions about wind, quarry position, and terrain."
+    },
+    "physical_demand": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Daily bird care, construction and maintenance of housing (mews), and field hunting require moderate physical fitness. Hunting with a Harris's hawk through thick brush is physically demanding. However, many forms of falconry (flying longwings from a vehicle in open country) are less strenuous. The primary demand is consistency of daily care rather than peak physical performance."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "The written exam covers raptor biology, disease, regulations, and husbandry. Prospective apprentices must understand basic ornithology, raptor identification, and local wildlife law before beginning. However, most prerequisite knowledge is acquired during the apprenticeship itself, and many begin with no prior raptor experience."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Performance is objectively measurable: the bird either catches quarry or does not; it returns to the glove or does not; it maintains health or does not. The licensing system provides formal progression benchmarks. Field meet competitions allow direct comparison between falconers. Weight management records provide quantitative data on bird conditioning."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Raptor handling skills and bird-reading ability deteriorate without regular practice, but core knowledge is durable. A falconer who takes a few years off can return to the sport, though rebuilding the relationship with a new bird takes months. The specific bond with an individual bird is highly perishable, and interruption can permanently damage the training."
+    },
+    "precision_required": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Weight management requires precision to within a few grams for small species like kestrels, as the difference between a motivated hunter and a bird that refuses to return can be as little as 10-15 grams. Equipment (jesses, bewits, swivels) must be fitted precisely to avoid injury. However, the biological variability of working with a living predator means precision has natural limits."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Raptor behavior is often ambiguous; a bird that refuses to fly may be overweight, unwell, stressed, or simply not motivated by the available quarry. Weather conditions make hunting success unpredictable. However, experienced falconers develop reliable interpretive frameworks, and the structured licensing system provides clear milestones for progression."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "The mandatory apprenticeship system exists precisely because falconry cannot be safely learned from books alone. The North American Falconers Association emphasizes that hands-on mentorship is essential. Reading a bird's subtle behavioral cues, properly fitting equipment, and managing the critical first free flights all require in-person guidance from an experienced practitioner."
+    },
+    "environmental_variability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Falconry must adapt to seasons, weather, terrain, available quarry species, and local regulations that vary by state and country. Flying a peregrine at ducks in open marshland is fundamentally different from flying a goshawk at rabbits in woodland. Each bird species and quarry combination requires different skills, equipment, and strategies."
+    },
+    "concurrent_skills": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "In the field, the falconer simultaneously manages the bird, reads quarry behavior, navigates terrain, coordinates with dogs (if used), monitors weather, and makes rapid tactical decisions about when to release the bird. Bird care requires concurrent veterinary, nutritional, and behavioral management skills year-round."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "The initial learning curve during apprenticeship is steep but guided. A significant plateau occurs when transitioning from cooperative species like Harris's hawks to more challenging longwings. Another plateau emerges when attempting to fly passage (wild-caught) birds versus imprints. Mastering each new species effectively resets the learning curve."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Core falconry techniques have been stable for centuries. Modern additions include telemetry (GPS tracking), captive breeding programs, and veterinary advances, but the fundamental training process (manning, creance work, free flight, entering to quarry) is essentially unchanged from medieval practice. UNESCO inscribed falconry specifically as a 'living human heritage' practiced across 80+ countries."
+    },
+    "observability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Falconry is highly visual and dramatic: the stoop of a peregrine, the pursuit of quarry, and the return to the glove are all directly observable. Field meets provide public demonstration of skill. However, the subtler aspects (weight management, manning sessions, equipment preparation) are less visible. The bond between falconer and bird is evident but difficult to quantify."
+    },
+    "luck_variance": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Weather significantly affects hunting success: wind direction, temperature, and precipitation alter both raptor and quarry behavior. Game availability is inherently variable. A perfectly trained bird may have an unsuccessful day due to quarry scarcity. However, over a season, skill clearly separates productive falconers from unsuccessful ones, and the training process itself has low luck variance."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Falconry is primarily a solitary pursuit between one person and one bird. The apprenticeship requires a mentor-student relationship. Some forms (hawking parties, hunting with dogs) involve small groups. The broader community of falconry clubs and the NAFA provide social infrastructure, but the core practice is individual."
+    }
   },
   "methodology_notes": "Scores draw on Wikipedia's comprehensive falconry article, UNESCO's Representative List inscription documentation covering 24 nominating countries, the North American Falconers Association's apprenticeship guidelines, and the California Hawking Club's detailed licensing requirements. The U.S. Fish and Wildlife Service's three-tier licensing system (Apprentice/General/Master) provides unusually well-defined progression benchmarks for scoring time_to_competence and time_to_expert. Practitioner estimates of approximately 4,000 licensed U.S. falconers are from Penn State Altoona and Ohio School of Falconry sources."
 }

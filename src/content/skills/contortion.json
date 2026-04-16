@@ -8,13 +8,7 @@
     "alt": "Contortionist performing an extreme backbend chest stand on stage",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "kEJoGCJTzSs",
-      "title": "Sofie Dossi performs contortion and hand balancing on AGT"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Contortion",
@@ -33,25 +27,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 5, "confidence": 0.7, "notes": "Basic backbends and splits take months of daily stretching for adults. Children with natural hypermobility progress faster." },
-    "time_to_expert": { "value": 9, "confidence": 0.8, "notes": "Professional Cirque du Soleil-level contortion requires 8-15 years, typically starting in childhood. Mongolian and Chinese circus schools train from age 4-6." },
-    "feedback_delay": { "value": 2, "confidence": 0.8, "notes": "You can see and feel your range of motion immediately. Progress is visible in photos and measurable in degrees." },
-    "failure_cost": { "value": 6, "confidence": 0.75, "notes": "Overstretching causes ligament tears, nerve damage, and joint hypermobility syndrome. Chronic pain and early arthritis are occupational hazards." },
-    "cognitive_demand": { "value": 4, "confidence": 0.75, "notes": "Not intellectually complex but requires deep proprioceptive awareness, breath control, and the ability to relax into extreme discomfort." },
-    "physical_demand": { "value": 9, "confidence": 0.85, "notes": "Demands extreme flexibility combined with significant strength for controlled holds. Chest stands require full-body engagement despite appearing passive." },
-    "prerequisite_knowledge": { "value": 2, "confidence": 0.8, "notes": "No academic prerequisites. Natural hypermobility is a biological advantage but not required. Understanding of anatomy helps prevent injury." },
-    "measurability": { "value": 7, "confidence": 0.75, "notes": "Joint angles can be measured precisely. Performance quality is judged subjectively in circus contexts but flexibility itself is quantifiable." },
-    "perishability": { "value": 8, "confidence": 0.8, "notes": "Flexibility degrades rapidly with disuse. Ligaments harden after adolescence and again with age. Maintaining extreme range requires daily work." },
-    "precision_required": { "value": 7, "confidence": 0.75, "notes": "Performance contortion demands exact body positioning, symmetry, and controlled transitions. Millimeters matter in balancing poses." },
-    "ambiguity": { "value": 3, "confidence": 0.75, "notes": "Target positions are well-defined in the tradition. Whether you can achieve a chest stand or marinelli bend is relatively binary." },
-    "instruction_dependency": { "value": 7, "confidence": 0.8, "notes": "Self-teaching risks serious injury. Traditional schools provide essential hands-on correction. Improper stretching technique causes lasting damage." },
-    "environmental_variability": { "value": 2, "confidence": 0.85, "notes": "Performed in controlled environments. Temperature affects muscle pliability but conditions are largely standardized." },
-    "concurrent_skills": { "value": 5, "confidence": 0.7, "notes": "Combines flexibility with strength, balance, breath control, and performance artistry. Advanced acts integrate hand balancing." },
-    "plateau_density": { "value": 8, "confidence": 0.75, "notes": "Extreme ranges are gated by connective tissue adaptation, which takes months per degree of improvement. Progress becomes imperceptible at advanced levels." },
-    "domain_evolution": { "value": 2, "confidence": 0.8, "notes": "Human anatomy has not changed. Training methods evolve slowly. The art form has existed for centuries across Mongolian, Chinese, and Western circus traditions." },
-    "observability": { "value": 9, "confidence": 0.9, "notes": "Extreme flexibility is immediately visible and often produces visceral audience reactions. The difference between competent and elite is visually dramatic." },
-    "luck_variance": { "value": 3, "confidence": 0.75, "notes": "Genetic connective tissue properties create a lottery at birth. Day-to-day performance varies with temperature, hydration, and warm-up quality." },
-    "social_coordination": { "value": 2, "confidence": 0.8, "notes": "Primarily solo. Partner contortion exists but is less common. Training may involve a coach applying pressure but performance is individual." }
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Basic backbends and splits take months of daily stretching for adults. Children with natural hypermobility progress faster."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "Professional Cirque du Soleil-level contortion requires 8-15 years, typically starting in childhood. Mongolian and Chinese circus schools train from age 4-6."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "You can see and feel your range of motion immediately. Progress is visible in photos and measurable in degrees."
+    },
+    "failure_cost": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Overstretching causes ligament tears, nerve damage, and joint hypermobility syndrome. Chronic pain and early arthritis are occupational hazards."
+    },
+    "cognitive_demand": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Not intellectually complex but requires deep proprioceptive awareness, breath control, and the ability to relax into extreme discomfort."
+    },
+    "physical_demand": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Demands extreme flexibility combined with significant strength for controlled holds. Chest stands require full-body engagement despite appearing passive."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "No academic prerequisites. Natural hypermobility is a biological advantage but not required. Understanding of anatomy helps prevent injury."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Joint angles can be measured precisely. Performance quality is judged subjectively in circus contexts but flexibility itself is quantifiable."
+    },
+    "perishability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Flexibility degrades rapidly with disuse. Ligaments harden after adolescence and again with age. Maintaining extreme range requires daily work."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Performance contortion demands exact body positioning, symmetry, and controlled transitions. Millimeters matter in balancing poses."
+    },
+    "ambiguity": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Target positions are well-defined in the tradition. Whether you can achieve a chest stand or marinelli bend is relatively binary."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Self-teaching risks serious injury. Traditional schools provide essential hands-on correction. Improper stretching technique causes lasting damage."
+    },
+    "environmental_variability": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Performed in controlled environments. Temperature affects muscle pliability but conditions are largely standardized."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Combines flexibility with strength, balance, breath control, and performance artistry. Advanced acts integrate hand balancing."
+    },
+    "plateau_density": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Extreme ranges are gated by connective tissue adaptation, which takes months per degree of improvement. Progress becomes imperceptible at advanced levels."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Human anatomy has not changed. Training methods evolve slowly. The art form has existed for centuries across Mongolian, Chinese, and Western circus traditions."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Extreme flexibility is immediately visible and often produces visceral audience reactions. The difference between competent and elite is visually dramatic."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Genetic connective tissue properties create a lottery at birth. Day-to-day performance varies with temperature, hydration, and warm-up quality."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Primarily solo. Partner contortion exists but is less common. Training may involve a coach applying pressure but performance is individual."
+    }
   },
   "methodology_notes": "Training timelines from Mongolian and Chinese circus school traditions and Cirque du Soleil performer backgrounds. Flexibility science from sports medicine literature. Injury profiles from contortion community documentation."
 }

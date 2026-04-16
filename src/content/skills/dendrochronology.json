@@ -8,13 +8,7 @@
     "alt": "Cross-section of ancient tree trunk showing detailed growth rings",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "JiWsE_xSjKk",
-      "title": "Dendrochronology: How Tree Rings Tell Time"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Dendrochronology - Wikipedia",
@@ -38,25 +32,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 6, "confidence": 0.8, "notes": "The University of Arizona LTRR offers a graduate certificate requiring seven credit hours of core instruction. Basic cross-dating principles can be learned in a semester, but reliable sample preparation, measurement under microscope, and statistical verification (skeleton plots, COFECHA software) require at least 1-2 years of hands-on practice with real cores." },
-    "time_to_expert": { "value": 9, "confidence": 0.75, "notes": "Building master chronologies that extend regional records requires a PhD plus years of fieldwork collecting cores across elevational gradients and species. Experts like A.E. Douglass and his successors spent decades calibrating Southwestern chronologies. Extending records into the deep past using subfossil wood demands knowledge spanning botany, geology, climatology, and archaeology." },
-    "feedback_delay": { "value": 5, "confidence": 0.7, "notes": "Cross-dating provides relatively direct feedback: a sample either matches the master chronology statistically or it does not. COFECHA software gives immediate correlation statistics. However, building new regional chronologies or identifying missing rings can take months to years of additional sampling before errors become apparent." },
-    "failure_cost": { "value": 6, "confidence": 0.7, "notes": "Misdated samples can cascade errors through archaeological chronologies and radiocarbon calibration curves. A single misidentified absent or false ring can shift dates by a year, which in tightly dated contexts (Viking Age, Pueblo archaeology) may invalidate site interpretations. However, peer review and replication with multiple cores provide safety nets." },
-    "cognitive_demand": { "value": 7, "confidence": 0.8, "notes": "Requires simultaneous attention to pattern recognition across hundreds of rings, statistical analysis, understanding of wood anatomy (earlywood vs. latewood, false rings, missing rings), and ecological knowledge of species-specific growth responses to climate. Cross-dating multiple overlapping series demands sustained concentration and spatial reasoning." },
-    "physical_demand": { "value": 3, "confidence": 0.85, "notes": "Fieldwork involves hiking to remote stands with an increment borer (a hand-powered coring tool requiring significant upper-body effort to drive into dense heartwood). Laboratory work is sedentary but requires fine motor control for sanding, measuring, and microscope work. Extended field campaigns in mountainous terrain can be physically demanding." },
-    "prerequisite_knowledge": { "value": 7, "confidence": 0.8, "notes": "Effective practice requires knowledge of wood anatomy, plant ecology, statistics (time-series analysis, correlation methods), and domain-specific knowledge depending on application (archaeology, climatology, or forestry). The LTRR certificate assumes graduate-level standing. Understanding radiocarbon dating principles is essential for chronology building." },
-    "measurability": { "value": 7, "confidence": 0.8, "notes": "Cross-dating quality is objectively measurable through inter-series correlation coefficients, t-values, and COFECHA diagnostics. A correctly dated sample produces statistically significant matches against established master chronologies. Ring-width measurements are reproducible between laboratories. This is one of the more quantifiable skills in the humanities-adjacent sciences." },
-    "perishability": { "value": 3, "confidence": 0.75, "notes": "Core pattern-recognition skills and cross-dating ability are durable once acquired, and experienced dendrochronologists maintain their abilities across career breaks. Software tools evolve but fundamental principles have been stable since Douglass's era. Species-specific knowledge of ring anomalies may fade without regular practice." },
-    "precision_required": { "value": 9, "confidence": 0.85, "notes": "The entire discipline rests on assigning every ring to its exact calendar year, and no approximation is acceptable. Ring widths are measured to 0.001mm precision. Missing rings must be identified, false rings excluded, and every sample in a chronology must cross-date correctly. A single ring error propagates through the entire chronology." },
-    "ambiguity": { "value": 5, "confidence": 0.75, "notes": "Well-established chronologies in regions like the American Southwest or Central Europe leave little ambiguity. However, tropical species with indistinct rings, complacent trees in stable climates, and species with frequent missing or false rings introduce significant interpretive challenges. Building new regional chronologies from scratch involves substantial ambiguity." },
-    "instruction_dependency": { "value": 7, "confidence": 0.8, "notes": "The LTRR and similar programs provide essential hands-on training that is difficult to replicate through self-study. Cross-dating is a tacit skill, and recognizing ring patterns, handling an increment borer, and preparing samples require apprenticeship-style learning. Published guides exist but practical competence demands supervised practice with experienced dendrochronologists." },
-    "environmental_variability": { "value": 7, "confidence": 0.75, "notes": "Techniques vary dramatically by region, species, and application. Arid-site chronologies (moisture-limited growth) differ fundamentally from high-latitude chronologies (temperature-limited growth). Tropical dendrochronology faces entirely different challenges from temperate work. Each new region or species may require developing new reference chronologies from scratch." },
-    "concurrent_skills": { "value": 6, "confidence": 0.75, "notes": "Practitioners integrate wood anatomy identification, statistical analysis, microscopy, field sampling technique, and domain knowledge (archaeology, climatology, or ecology) depending on application. Writing results for interdisciplinary audiences requires translating between technical dendrochronological methods and the conventions of the receiving discipline." },
-    "plateau_density": { "value": 5, "confidence": 0.65, "notes": "Initial progress in learning cross-dating can be rapid with good instruction. A plateau typically occurs when moving from well-behaved species in established chronologies to difficult species or new regions. Another plateau emerges when transitioning from using existing chronologies to building new ones, which requires a qualitative leap in skill and judgment." },
-    "domain_evolution": { "value": 4, "confidence": 0.75, "notes": "Core methods have been remarkably stable since the mid-20th century. Advances include blue-intensity measurements (alternative to maximum latewood density), isotope dendroclimatology, and improved statistical methods, but the fundamental cross-dating technique remains unchanged. New applications (dendroarchaeology in previously unstudied regions, tropical dendrochronology) expand the field gradually." },
-    "observability": { "value": 3, "confidence": 0.8, "notes": "Most work happens invisibly under microscopes and in statistical software. Fieldwork (coring trees with a borer) is the most visible component but represents a small fraction of total effort. Results appear in academic publications and archaeological site reports, rarely reaching public attention except in high-profile dating controversies." },
-    "luck_variance": { "value": 3, "confidence": 0.7, "notes": "Success depends primarily on skill and sample quality, but some luck is involved in finding well-preserved wood with clear rings, locating trees at sensitive sites that record climate signals clearly, and discovering overlapping samples that bridge gaps in chronologies. The statistical rigor of cross-dating minimizes the role of chance in the actual dating process." },
-    "social_coordination": { "value": 4, "confidence": 0.75, "notes": "Core analytical work is solitary (microscope, computer). However, building regional chronologies often requires collaboration between multiple laboratories and access to sample collections built over decades. Fieldwork may involve small teams. The International Tree-Ring Data Bank (ITRDB) represents a major collaborative infrastructure that individual researchers contribute to and draw from." }
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "The University of Arizona LTRR offers a graduate certificate requiring seven credit hours of core instruction. Basic cross-dating principles can be learned in a semester, but reliable sample preparation, measurement under microscope, and statistical verification (skeleton plots, COFECHA software) require at least 1-2 years of hands-on practice with real cores."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.75,
+      "notes": "Building master chronologies that extend regional records requires a PhD plus years of fieldwork collecting cores across elevational gradients and species. Experts like A.E. Douglass and his successors spent decades calibrating Southwestern chronologies. Extending records into the deep past using subfossil wood demands knowledge spanning botany, geology, climatology, and archaeology."
+    },
+    "feedback_delay": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Cross-dating provides relatively direct feedback: a sample either matches the master chronology statistically or it does not. COFECHA software gives immediate correlation statistics. However, building new regional chronologies or identifying missing rings can take months to years of additional sampling before errors become apparent."
+    },
+    "failure_cost": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Misdated samples can cascade errors through archaeological chronologies and radiocarbon calibration curves. A single misidentified absent or false ring can shift dates by a year, which in tightly dated contexts (Viking Age, Pueblo archaeology) may invalidate site interpretations. However, peer review and replication with multiple cores provide safety nets."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Requires simultaneous attention to pattern recognition across hundreds of rings, statistical analysis, understanding of wood anatomy (earlywood vs. latewood, false rings, missing rings), and ecological knowledge of species-specific growth responses to climate. Cross-dating multiple overlapping series demands sustained concentration and spatial reasoning."
+    },
+    "physical_demand": {
+      "value": 3,
+      "confidence": 0.85,
+      "notes": "Fieldwork involves hiking to remote stands with an increment borer (a hand-powered coring tool requiring significant upper-body effort to drive into dense heartwood). Laboratory work is sedentary but requires fine motor control for sanding, measuring, and microscope work. Extended field campaigns in mountainous terrain can be physically demanding."
+    },
+    "prerequisite_knowledge": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Effective practice requires knowledge of wood anatomy, plant ecology, statistics (time-series analysis, correlation methods), and domain-specific knowledge depending on application (archaeology, climatology, or forestry). The LTRR certificate assumes graduate-level standing. Understanding radiocarbon dating principles is essential for chronology building."
+    },
+    "measurability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Cross-dating quality is objectively measurable through inter-series correlation coefficients, t-values, and COFECHA diagnostics. A correctly dated sample produces statistically significant matches against established master chronologies. Ring-width measurements are reproducible between laboratories. This is one of the more quantifiable skills in the humanities-adjacent sciences."
+    },
+    "perishability": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Core pattern-recognition skills and cross-dating ability are durable once acquired, and experienced dendrochronologists maintain their abilities across career breaks. Software tools evolve but fundamental principles have been stable since Douglass's era. Species-specific knowledge of ring anomalies may fade without regular practice."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "The entire discipline rests on assigning every ring to its exact calendar year, and no approximation is acceptable. Ring widths are measured to 0.001mm precision. Missing rings must be identified, false rings excluded, and every sample in a chronology must cross-date correctly. A single ring error propagates through the entire chronology."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Well-established chronologies in regions like the American Southwest or Central Europe leave little ambiguity. However, tropical species with indistinct rings, complacent trees in stable climates, and species with frequent missing or false rings introduce significant interpretive challenges. Building new regional chronologies from scratch involves substantial ambiguity."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "The LTRR and similar programs provide essential hands-on training that is difficult to replicate through self-study. Cross-dating is a tacit skill, and recognizing ring patterns, handling an increment borer, and preparing samples require apprenticeship-style learning. Published guides exist but practical competence demands supervised practice with experienced dendrochronologists."
+    },
+    "environmental_variability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Techniques vary dramatically by region, species, and application. Arid-site chronologies (moisture-limited growth) differ fundamentally from high-latitude chronologies (temperature-limited growth). Tropical dendrochronology faces entirely different challenges from temperate work. Each new region or species may require developing new reference chronologies from scratch."
+    },
+    "concurrent_skills": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Practitioners integrate wood anatomy identification, statistical analysis, microscopy, field sampling technique, and domain knowledge (archaeology, climatology, or ecology) depending on application. Writing results for interdisciplinary audiences requires translating between technical dendrochronological methods and the conventions of the receiving discipline."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Initial progress in learning cross-dating can be rapid with good instruction. A plateau typically occurs when moving from well-behaved species in established chronologies to difficult species or new regions. Another plateau emerges when transitioning from using existing chronologies to building new ones, which requires a qualitative leap in skill and judgment."
+    },
+    "domain_evolution": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Core methods have been remarkably stable since the mid-20th century. Advances include blue-intensity measurements (alternative to maximum latewood density), isotope dendroclimatology, and improved statistical methods, but the fundamental cross-dating technique remains unchanged. New applications (dendroarchaeology in previously unstudied regions, tropical dendrochronology) expand the field gradually."
+    },
+    "observability": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Most work happens invisibly under microscopes and in statistical software. Fieldwork (coring trees with a borer) is the most visible component but represents a small fraction of total effort. Results appear in academic publications and archaeological site reports, rarely reaching public attention except in high-profile dating controversies."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Success depends primarily on skill and sample quality, but some luck is involved in finding well-preserved wood with clear rings, locating trees at sensitive sites that record climate signals clearly, and discovering overlapping samples that bridge gaps in chronologies. The statistical rigor of cross-dating minimizes the role of chance in the actual dating process."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Core analytical work is solitary (microscope, computer). However, building regional chronologies often requires collaboration between multiple laboratories and access to sample collections built over decades. Fieldwork may involve small teams. The International Tree-Ring Data Bank (ITRDB) represents a major collaborative infrastructure that individual researchers contribute to and draw from."
+    }
   },
   "methodology_notes": "Scores are based on the University of Arizona LTRR's graduate certificate requirements, Wikipedia's comprehensive articles on dendrochronology and the Laboratory of Tree-Ring Research, the U.S. National Park Service's description of archaeological dendrochronology, and the DendroHub global laboratory directory. The precision_required score reflects the discipline's fundamental demand for exact annual dating. Environmental_variability reflects the significant differences between arid-site, high-latitude, and tropical dendrochronology."
 }

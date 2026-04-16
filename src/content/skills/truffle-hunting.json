@@ -8,13 +8,7 @@
     "alt": "Lagotto Romagnolo dog digging at the base of an oak tree during a truffle hunt in Italian woodland",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "hHMGqJNsyD8",
-      "title": "Truffle Hunting in Italy: How Dogs Find Underground Gold"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Lagotto Romagnolo - Wikipedia",
@@ -38,25 +32,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 5, "confidence": 0.75, "notes": "A Lagotto Romagnolo puppy can begin productive truffle finding within 6-12 months if scent training starts at 3 months and proceeds consistently. The human handler's competence in reading terrain and identifying productive truffle habitat takes 1-2 years of guided experience. However, basic truffle scent training of a motivated dog can show results in weeks. Italy-based training programs produce functional teams within one season." },
-    "time_to_expert": { "value": 7, "confidence": 0.7, "notes": "Expert-level truffle hunting requires deep knowledge of Tuber species ecology (T. magnatum, T. melanosporum, T. aestivum), their specific host tree associations, soil chemistry, seasonal timing, and microclimate indicators. In Italy's competitive truffle regions (Alba, Piedmont, Umbria), families have hunted for generations, and the best hunters guard territorial knowledge accumulated over decades. Training multiple dogs across different terrains and truffle species adds years to mastery." },
-    "feedback_delay": { "value": 2, "confidence": 0.85, "notes": "Feedback is nearly immediate: the dog either indicates a truffle location or does not, and digging confirms the find within minutes. During training, clicker/treat reinforcement provides instant feedback to the dog. The handler learns quickly whether a chosen habitat is productive or not. Seasonal feedback on overall harvest is available within a single truffle season (October-January for white truffles)." },
-    "failure_cost": { "value": 3, "confidence": 0.75, "notes": "Failed hunts waste time but incur no serious consequences. Dog training errors are correctable. The main financial risk is the opportunity cost of unproductive time in forests, since white Alba truffles can sell for thousands of euros per kilogram. A poorly trained dog that digs up immature truffles or damages the mycelium network can reduce future harvests at a site, but this is a gradual rather than catastrophic cost." },
-    "cognitive_demand": { "value": 5, "confidence": 0.75, "notes": "The handler must understand truffle mycorrhizal ecology, identify host tree species, read soil conditions and drainage patterns, interpret the dog's body language (alerting vs. false positives), and navigate to productive microhabitats. During the hunt, the handler coordinates the dog's search pattern while observing environmental indicators. The knowledge base is specialized but not as computationally demanding as some technical skills." },
-    "physical_demand": { "value": 4, "confidence": 0.8, "notes": "Truffle hunting involves hours of walking through woodland, often on uneven terrain, with frequent bending to dig at indicated sites. Italian tradition allows night hunting (especially in Piedmont for white truffles), adding fatigue. However, the pace is moderate, and the dog does the primary detection work. Physical demands are comparable to recreational hiking with added digging." },
-    "prerequisite_knowledge": { "value": 5, "confidence": 0.7, "notes": "Effective truffle hunting requires knowledge of local tree species, basic mycology of ectomycorrhizal relationships, seasonal fruiting patterns of target Tuber species, and dog training fundamentals. In traditional Italian practice, this knowledge is transmitted within families and local communities. A complete outsider would need foundational botany and mycology before beginning productive hunting." },
-    "measurability": { "value": 8, "confidence": 0.8, "notes": "Success is directly measurable by quantity and quality of truffles harvested per outing or season, and by the market value realized. Dog training progress is measurable through success rate on buried training targets. The Lagotto Romagnolo Club of America runs truffle hunting tests with scored performance categories. Market prices provide unambiguous quality feedback." },
-    "perishability": { "value": 4, "confidence": 0.7, "notes": "Handler knowledge of terrain and ecology is durable. Dog training is more perishable; a dog not worked regularly loses sharpness. If a trained truffle dog dies, training a replacement takes 6-12 months. Terrain knowledge specific to particular forests and truffle grounds is highly durable but location-dependent. UNESCO's 2021 inscription indicates the tradition remains actively practiced across Italy." },
-    "precision_required": { "value": 5, "confidence": 0.75, "notes": "The dog must detect truffle scent through soil and indicate the precise digging location to minimize mycorrhizal damage. The handler must excavate carefully to remove the truffle intact without damaging the productive soil network. However, the dog's olfactory system provides precision that far exceeds human capability, and the handler's role is primarily supportive rather than requiring fine motor precision." },
-    "ambiguity": { "value": 5, "confidence": 0.7, "notes": "False positives from the dog (alerting on non-truffle fungi or remnant scent from previous harvests) create ambiguity. Assessing truffle maturity underground is uncertain until extraction. Determining whether a habitat is productive requires experience with ambiguous environmental indicators. However, the binary find/no-find outcome reduces ambiguity compared to many interpretive skills." },
-    "instruction_dependency": { "value": 6, "confidence": 0.7, "notes": "UNESCO's inscription emphasizes oral transmission within families and communities. Dog training benefits enormously from working alongside experienced handlers and dogs, as young dogs learn from older, trained dogs in the field. However, modern resources (AKC guides, training programs, scent kits) make self-directed learning more feasible than for many traditional skills. The dog training component can be learned from structured programs." },
-    "environmental_variability": { "value": 6, "confidence": 0.75, "notes": "Truffle fruiting depends on species-specific combinations of soil type, host tree species, rainfall, temperature, and seasonal timing. What works in Piedmont's calcareous soils does not apply in Oregon's volcanic soils. Different truffle species (white vs. black, summer vs. winter) require different ecological knowledge. Climate change is affecting fruiting patterns and geographic ranges." },
-    "concurrent_skills": { "value": 5, "confidence": 0.7, "notes": "During a hunt, the handler simultaneously manages the dog's search pattern, reads terrain and vegetation, monitors the dog's body language for alerts, navigates through woodland, and excavates finds carefully. The broader practice integrates dog training, mycological knowledge, and market awareness. However, the dog handles the primary detection task, reducing the handler's concurrent cognitive load." },
-    "plateau_density": { "value": 4, "confidence": 0.65, "notes": "Initial progress in dog training is often rapid, with puppies showing productive finds within months. A plateau occurs when transitioning from training targets to wild truffles in varied terrain. Further plateaus emerge when attempting to work new truffle species or unfamiliar geographic regions. The relatively short seasonal window means annual experience accumulates slowly." },
-    "domain_evolution": { "value": 3, "confidence": 0.75, "notes": "Core techniques have been stable for centuries. Italy banned truffle pigs in 1985, accelerating the shift to dogs, but dog-based hunting is itself ancient. Modern additions include GPS-collar tracking of dogs, truffle oil scent training kits, and scientific understanding of truffle volatile chemistry. Truffle cultivation (trufficulture) is expanding but has not replaced wild hunting for premium species." },
-    "observability": { "value": 7, "confidence": 0.8, "notes": "The human-dog partnership during a hunt is highly visible and engaging. The dog's alert behavior, the dig, and the reveal of a truffle are dramatic moments. Truffle tourism in Italy and France capitalizes on this observability. However, the handler's terrain-reading and ecological decision-making are largely invisible to observers." },
-    "luck_variance": { "value": 5, "confidence": 0.7, "notes": "Truffle fruiting is inherently variable: rainfall, temperature, and soil conditions in a given year strongly affect harvest. Even experienced hunters can have unproductive seasons due to weather. However, skilled hunters with good terrain knowledge consistently outperform novices, and the dog's detection ability reduces randomness in finding truffles that are present." },
-    "social_coordination": { "value": 3, "confidence": 0.75, "notes": "Truffle hunting is fundamentally a solo activity: one handler, one dog. Secrecy about productive hunting grounds is a defining feature of the culture, with Italian hunters famously guarding their locations. The only essential social relationship is between handler and dog. Community coordination occurs through mycological societies and regulated harvest systems, but the hunt itself is solitary." }
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "A Lagotto Romagnolo puppy can begin productive truffle finding within 6-12 months if scent training starts at 3 months and proceeds consistently. The human handler's competence in reading terrain and identifying productive truffle habitat takes 1-2 years of guided experience. However, basic truffle scent training of a motivated dog can show results in weeks. Italy-based training programs produce functional teams within one season."
+    },
+    "time_to_expert": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Expert-level truffle hunting requires deep knowledge of Tuber species ecology (T. magnatum, T. melanosporum, T. aestivum), their specific host tree associations, soil chemistry, seasonal timing, and microclimate indicators. In Italy's competitive truffle regions (Alba, Piedmont, Umbria), families have hunted for generations, and the best hunters guard territorial knowledge accumulated over decades. Training multiple dogs across different terrains and truffle species adds years to mastery."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Feedback is nearly immediate: the dog either indicates a truffle location or does not, and digging confirms the find within minutes. During training, clicker/treat reinforcement provides instant feedback to the dog. The handler learns quickly whether a chosen habitat is productive or not. Seasonal feedback on overall harvest is available within a single truffle season (October-January for white truffles)."
+    },
+    "failure_cost": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Failed hunts waste time but incur no serious consequences. Dog training errors are correctable. The main financial risk is the opportunity cost of unproductive time in forests, since white Alba truffles can sell for thousands of euros per kilogram. A poorly trained dog that digs up immature truffles or damages the mycelium network can reduce future harvests at a site, but this is a gradual rather than catastrophic cost."
+    },
+    "cognitive_demand": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "The handler must understand truffle mycorrhizal ecology, identify host tree species, read soil conditions and drainage patterns, interpret the dog's body language (alerting vs. false positives), and navigate to productive microhabitats. During the hunt, the handler coordinates the dog's search pattern while observing environmental indicators. The knowledge base is specialized but not as computationally demanding as some technical skills."
+    },
+    "physical_demand": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Truffle hunting involves hours of walking through woodland, often on uneven terrain, with frequent bending to dig at indicated sites. Italian tradition allows night hunting (especially in Piedmont for white truffles), adding fatigue. However, the pace is moderate, and the dog does the primary detection work. Physical demands are comparable to recreational hiking with added digging."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Effective truffle hunting requires knowledge of local tree species, basic mycology of ectomycorrhizal relationships, seasonal fruiting patterns of target Tuber species, and dog training fundamentals. In traditional Italian practice, this knowledge is transmitted within families and local communities. A complete outsider would need foundational botany and mycology before beginning productive hunting."
+    },
+    "measurability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Success is directly measurable by quantity and quality of truffles harvested per outing or season, and by the market value realized. Dog training progress is measurable through success rate on buried training targets. The Lagotto Romagnolo Club of America runs truffle hunting tests with scored performance categories. Market prices provide unambiguous quality feedback."
+    },
+    "perishability": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Handler knowledge of terrain and ecology is durable. Dog training is more perishable; a dog not worked regularly loses sharpness. If a trained truffle dog dies, training a replacement takes 6-12 months. Terrain knowledge specific to particular forests and truffle grounds is highly durable but location-dependent. UNESCO's 2021 inscription indicates the tradition remains actively practiced across Italy."
+    },
+    "precision_required": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "The dog must detect truffle scent through soil and indicate the precise digging location to minimize mycorrhizal damage. The handler must excavate carefully to remove the truffle intact without damaging the productive soil network. However, the dog's olfactory system provides precision that far exceeds human capability, and the handler's role is primarily supportive rather than requiring fine motor precision."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "False positives from the dog (alerting on non-truffle fungi or remnant scent from previous harvests) create ambiguity. Assessing truffle maturity underground is uncertain until extraction. Determining whether a habitat is productive requires experience with ambiguous environmental indicators. However, the binary find/no-find outcome reduces ambiguity compared to many interpretive skills."
+    },
+    "instruction_dependency": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "UNESCO's inscription emphasizes oral transmission within families and communities. Dog training benefits enormously from working alongside experienced handlers and dogs, as young dogs learn from older, trained dogs in the field. However, modern resources (AKC guides, training programs, scent kits) make self-directed learning more feasible than for many traditional skills. The dog training component can be learned from structured programs."
+    },
+    "environmental_variability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Truffle fruiting depends on species-specific combinations of soil type, host tree species, rainfall, temperature, and seasonal timing. What works in Piedmont's calcareous soils does not apply in Oregon's volcanic soils. Different truffle species (white vs. black, summer vs. winter) require different ecological knowledge. Climate change is affecting fruiting patterns and geographic ranges."
+    },
+    "concurrent_skills": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "During a hunt, the handler simultaneously manages the dog's search pattern, reads terrain and vegetation, monitors the dog's body language for alerts, navigates through woodland, and excavates finds carefully. The broader practice integrates dog training, mycological knowledge, and market awareness. However, the dog handles the primary detection task, reducing the handler's concurrent cognitive load."
+    },
+    "plateau_density": {
+      "value": 4,
+      "confidence": 0.65,
+      "notes": "Initial progress in dog training is often rapid, with puppies showing productive finds within months. A plateau occurs when transitioning from training targets to wild truffles in varied terrain. Further plateaus emerge when attempting to work new truffle species or unfamiliar geographic regions. The relatively short seasonal window means annual experience accumulates slowly."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Core techniques have been stable for centuries. Italy banned truffle pigs in 1985, accelerating the shift to dogs, but dog-based hunting is itself ancient. Modern additions include GPS-collar tracking of dogs, truffle oil scent training kits, and scientific understanding of truffle volatile chemistry. Truffle cultivation (trufficulture) is expanding but has not replaced wild hunting for premium species."
+    },
+    "observability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "The human-dog partnership during a hunt is highly visible and engaging. The dog's alert behavior, the dig, and the reveal of a truffle are dramatic moments. Truffle tourism in Italy and France capitalizes on this observability. However, the handler's terrain-reading and ecological decision-making are largely invisible to observers."
+    },
+    "luck_variance": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Truffle fruiting is inherently variable: rainfall, temperature, and soil conditions in a given year strongly affect harvest. Even experienced hunters can have unproductive seasons due to weather. However, skilled hunters with good terrain knowledge consistently outperform novices, and the dog's detection ability reduces randomness in finding truffles that are present."
+    },
+    "social_coordination": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Truffle hunting is fundamentally a solo activity: one handler, one dog. Secrecy about productive hunting grounds is a defining feature of the culture, with Italian hunters famously guarding their locations. The only essential social relationship is between handler and dog. Community coordination occurs through mycological societies and regulated harvest systems, but the hunt itself is solitary."
+    }
   },
   "methodology_notes": "Scores are based on Wikipedia's Lagotto Romagnolo article, UNESCO's 2021 inscription of truffle hunting and extraction in Italy, the American Kennel Club's guide to truffle hunting dog training, and Robb Report's field reporting on Lagotto Romagnolo training methods. The relatively moderate difficulty scores reflect the fact that the dog performs the primary detection task, making the skill more accessible than purely human-dependent survival skills. The high measurability score reflects the direct economic feedback provided by truffle market prices."
 }

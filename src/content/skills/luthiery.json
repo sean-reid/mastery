@@ -8,13 +8,7 @@
     "alt": "Luthier hand-carving a violin top plate with a small gouge in a Cremona workshop",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "sxhgOCRnZJI",
-      "title": "The Art of Violin Making in Cremona, Italy"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Traditional violin craftsmanship in Cremona - Wikipedia",
@@ -38,25 +32,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 6, "confidence": 0.8, "notes": "Cremona's Scuola Internazionale di Liuteria is a 4-5 year upper secondary program. Graduates can produce a functional violin, but it will lack the tonal refinement of an experienced maker's work." },
-    "time_to_expert": { "value": 9, "confidence": 0.8, "notes": "After school, luthiers apprentice in a workshop for additional years. Product quality is inseparable from the maker's accumulated experience: failures, experiments, and confrontations with other luthiers over a decade or more. A master's instruments improve throughout a career spanning 30-50 years." },
-    "feedback_delay": { "value": 7, "confidence": 0.75, "notes": "A violin takes 300+ hours to build. Tonal quality cannot be assessed until the instrument is strung and played, weeks or months after key decisions about plate thickness were made. The ultimate test, how the instrument ages over decades, is the longest feedback loop of any craft." },
-    "failure_cost": { "value": 5, "confidence": 0.75, "notes": "Tonewoods (European spruce and maple) are expensive but not ruinous. The real cost is time: 300+ hours of labor per instrument. A cracked plate or poorly graduated top means starting over. Tools are reusable." },
-    "cognitive_demand": { "value": 8, "confidence": 0.8, "notes": "Integrating acoustics, wood science, geometry, and aesthetic judgment. The luthier must mentally model how plate thickness variations will affect the instrument's vibrational modes, a problem that resists full analytical solution even with modern physics." },
-    "physical_demand": { "value": 5, "confidence": 0.8, "notes": "Fine hand-tool work: carving, planing, and scraping. Requires exceptional hand steadiness and tactile sensitivity but not significant strength. Long hours in a seated posture. Less physically demanding than forging or glassblowing." },
-    "prerequisite_knowledge": { "value": 5, "confidence": 0.75, "notes": "Cremona's school teaches physics, chemistry, drawing, and wood science alongside workshop practice. No formal prerequisites to begin, but students must develop working knowledge of acoustics and material properties." },
-    "measurability": { "value": 5, "confidence": 0.75, "notes": "Plate thickness and arching height are objectively measurable. Frequency response can be analyzed with Chladni patterns and tap tones. But the ultimate measure ('does this instrument have a great voice?') is subjective and contested among players, dealers, and acousticians." },
-    "perishability": { "value": 4, "confidence": 0.7, "notes": "Tool technique and wood-reading ability are durable. The tactile sensitivity for plate thickness graduation, detecting 0.1mm differences by flex, would dull over months without practice, but recovers relatively quickly." },
-    "precision_required": { "value": 9, "confidence": 0.85, "notes": "Plate graduation to sub-millimeter accuracy: variations of 0.1-0.2mm change the instrument's tonal character. The f-holes must be placed within 1mm of the optimal position. Neck angle, bridge placement, and soundpost fit all demand extreme precision." },
-    "ambiguity": { "value": 7, "confidence": 0.8, "notes": "The central question, what makes a great-sounding violin, has no definitive answer despite centuries of study. Stradivari's methods are still debated. Two luthiers following identical measurements produce different-sounding instruments. The craft lives in this irreducible ambiguity." },
-    "instruction_dependency": { "value": 8, "confidence": 0.8, "notes": "UNESCO's inscription specifically notes that knowledge is transmitted through a close teacher-pupil relationship, followed by workshop apprenticeship. The Cremona tradition emphasizes imitation and repetition over verbal instruction. Self-taught luthiers exist but rarely reach the highest levels." },
-    "environmental_variability": { "value": 5, "confidence": 0.75, "notes": "Humidity and temperature critically affect wood behavior; a plate carved in winter may move in summer. Each piece of wood has unique grain, density, and stiffness. The luthier must adapt technique to the specific material, not follow a fixed recipe." },
-    "concurrent_skills": { "value": 6, "confidence": 0.75, "notes": "During carving: tool control, thickness monitoring, grain reading, and acoustic modeling. Varnishing requires chemistry and brush technique. Setup (soundpost, bridge) requires acoustic diagnosis. But these phases are largely sequential." },
-    "plateau_density": { "value": 7, "confidence": 0.7, "notes": "School produces competent builders. The transition from competent to tonally distinguished is a long plateau lasting years. Further plateaus emerge when experimenting with personal models versus copying classical forms." },
-    "domain_evolution": { "value": 2, "confidence": 0.85, "notes": "The Cremonese method is essentially 16th-18th century technology. Stradivari's templates are still used. Modern additions: thickness gauges, humidity-controlled workshops, Chladni pattern analysis. But hand tools, natural varnish, and empirical plate tuning remain the standard." },
-    "observability": { "value": 6, "confidence": 0.75, "notes": "The construction process is visible but slow, not dramatic to casual observers. The finished instrument's quality is best assessed by skilled players, not visual inspection. A beautiful violin may sound mediocre; an unremarkable-looking one may sing." },
-    "luck_variance": { "value": 4, "confidence": 0.75, "notes": "Wood variability introduces genuine unpredictability; even carefully selected tonewoods surprise. Some instruments 'find their voice' only after years of playing. But the best luthiers consistently produce excellent instruments, indicating skill dominates over chance." },
-    "social_coordination": { "value": 2, "confidence": 0.85, "notes": "Quintessentially solo. The luthier works alone in a small workshop, following the instrument from raw wood to finished product. Collaboration with players for feedback is valuable but intermittent." }
+    "time_to_competence": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Cremona's Scuola Internazionale di Liuteria is a 4-5 year upper secondary program. Graduates can produce a functional violin, but it will lack the tonal refinement of an experienced maker's work."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.8,
+      "notes": "After school, luthiers apprentice in a workshop for additional years. Product quality is inseparable from the maker's accumulated experience: failures, experiments, and confrontations with other luthiers over a decade or more. A master's instruments improve throughout a career spanning 30-50 years."
+    },
+    "feedback_delay": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "A violin takes 300+ hours to build. Tonal quality cannot be assessed until the instrument is strung and played, weeks or months after key decisions about plate thickness were made. The ultimate test, how the instrument ages over decades, is the longest feedback loop of any craft."
+    },
+    "failure_cost": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Tonewoods (European spruce and maple) are expensive but not ruinous. The real cost is time: 300+ hours of labor per instrument. A cracked plate or poorly graduated top means starting over. Tools are reusable."
+    },
+    "cognitive_demand": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Integrating acoustics, wood science, geometry, and aesthetic judgment. The luthier must mentally model how plate thickness variations will affect the instrument's vibrational modes, a problem that resists full analytical solution even with modern physics."
+    },
+    "physical_demand": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Fine hand-tool work: carving, planing, and scraping. Requires exceptional hand steadiness and tactile sensitivity but not significant strength. Long hours in a seated posture. Less physically demanding than forging or glassblowing."
+    },
+    "prerequisite_knowledge": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Cremona's school teaches physics, chemistry, drawing, and wood science alongside workshop practice. No formal prerequisites to begin, but students must develop working knowledge of acoustics and material properties."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Plate thickness and arching height are objectively measurable. Frequency response can be analyzed with Chladni patterns and tap tones. But the ultimate measure ('does this instrument have a great voice?') is subjective and contested among players, dealers, and acousticians."
+    },
+    "perishability": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Tool technique and wood-reading ability are durable. The tactile sensitivity for plate thickness graduation, detecting 0.1mm differences by flex, would dull over months without practice, but recovers relatively quickly."
+    },
+    "precision_required": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Plate graduation to sub-millimeter accuracy: variations of 0.1-0.2mm change the instrument's tonal character. The f-holes must be placed within 1mm of the optimal position. Neck angle, bridge placement, and soundpost fit all demand extreme precision."
+    },
+    "ambiguity": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "The central question, what makes a great-sounding violin, has no definitive answer despite centuries of study. Stradivari's methods are still debated. Two luthiers following identical measurements produce different-sounding instruments. The craft lives in this irreducible ambiguity."
+    },
+    "instruction_dependency": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "UNESCO's inscription specifically notes that knowledge is transmitted through a close teacher-pupil relationship, followed by workshop apprenticeship. The Cremona tradition emphasizes imitation and repetition over verbal instruction. Self-taught luthiers exist but rarely reach the highest levels."
+    },
+    "environmental_variability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Humidity and temperature critically affect wood behavior; a plate carved in winter may move in summer. Each piece of wood has unique grain, density, and stiffness. The luthier must adapt technique to the specific material, not follow a fixed recipe."
+    },
+    "concurrent_skills": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "During carving: tool control, thickness monitoring, grain reading, and acoustic modeling. Varnishing requires chemistry and brush technique. Setup (soundpost, bridge) requires acoustic diagnosis. But these phases are largely sequential."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "School produces competent builders. The transition from competent to tonally distinguished is a long plateau lasting years. Further plateaus emerge when experimenting with personal models versus copying classical forms."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "The Cremonese method is essentially 16th-18th century technology. Stradivari's templates are still used. Modern additions: thickness gauges, humidity-controlled workshops, Chladni pattern analysis. But hand tools, natural varnish, and empirical plate tuning remain the standard."
+    },
+    "observability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "The construction process is visible but slow, not dramatic to casual observers. The finished instrument's quality is best assessed by skilled players, not visual inspection. A beautiful violin may sound mediocre; an unremarkable-looking one may sing."
+    },
+    "luck_variance": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Wood variability introduces genuine unpredictability; even carefully selected tonewoods surprise. Some instruments 'find their voice' only after years of playing. But the best luthiers consistently produce excellent instruments, indicating skill dominates over chance."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Quintessentially solo. The luthier works alone in a small workshop, following the instrument from raw wood to finished product. Collaboration with players for feedback is valuable but intermittent."
+    }
   },
   "methodology_notes": "Scores draw on UNESCO's 2012 inscription documentation, Wikipedia's article on Cremonese violin craftsmanship, the EU Intangible Search database, and published accounts from active Cremona workshops. The ~150 active luthiers in Cremona and the Scuola Internazionale's curriculum provide unusually good training data for a traditional craft. The central challenge of luthiery, predicting acoustic outcomes from physical construction choices, remains unsolved even by modern physics, which is reflected in the high ambiguity score."
 }

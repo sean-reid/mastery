@@ -8,13 +8,7 @@
     "alt": "Pole sport athlete performing an inverted aerial hold on a competition pole",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "FExKwv0j3fU",
-      "title": "Dimitry Politov wins World Pole Dance Championship"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Pole sports",
@@ -38,25 +32,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 5, "confidence": 0.8, "notes": "Basic climbs, spins, and sits take 3-6 months of regular classes. Building the grip strength to hold body weight is the first major barrier." },
-    "time_to_expert": { "value": 8, "confidence": 0.8, "notes": "World championship-level routines require 5-8 years of intensive training. Dimitry Politov started pole in 2012 and won his first world title in 2015, but had prior breakdancing and parkour backgrounds." },
-    "feedback_delay": { "value": 1, "confidence": 0.9, "notes": "You know immediately if you can hold a position or execute a spin. Grip failure is instantaneous feedback." },
-    "failure_cost": { "value": 6, "confidence": 0.8, "notes": "Falls from 4 meters onto hard floors cause fractures and concussions. Skin tears and friction burns are routine. Shoulder dislocations occur from high-difficulty moves." },
-    "cognitive_demand": { "value": 6, "confidence": 0.75, "notes": "Choreography, musicality, spatial awareness during inversion, and sequencing of complex combinations. Performing upside down while spinning requires strong spatial processing." },
-    "physical_demand": { "value": 10, "confidence": 0.9, "notes": "Among the most physically demanding artistic disciplines. Requires gymnast-level upper body strength, contortionist-level flexibility, and dancer-level endurance, simultaneously." },
-    "prerequisite_knowledge": { "value": 2, "confidence": 0.8, "notes": "No formal prerequisites. Backgrounds in dance, gymnastics, or circus arts provide advantages but many elite athletes started with no prior training." },
-    "measurability": { "value": 6, "confidence": 0.75, "notes": "Competition scoring combines technical difficulty values (codified) with execution and artistic impression (subjective). The POSA Code of Points provides structure." },
-    "perishability": { "value": 7, "confidence": 0.8, "notes": "Grip strength and skin conditioning degrade within weeks. Flexibility and aerial body awareness require constant maintenance." },
-    "precision_required": { "value": 8, "confidence": 0.8, "notes": "Hand and body placement on the pole must be exact for each trick. Grip position determines whether a hold is secure or a fall occurs." },
-    "ambiguity": { "value": 4, "confidence": 0.7, "notes": "Technical elements have defined difficulty values. Artistic scoring introduces subjectivity. Multiple competing federations (IPSF, POSA, IPC) have different standards." },
-    "instruction_dependency": { "value": 7, "confidence": 0.8, "notes": "Self-teaching is risky due to fall potential and technique-dependent grip safety. Studios and coaches are essential for safe progression." },
-    "environmental_variability": { "value": 3, "confidence": 0.8, "notes": "Pole diameter, material (brass vs chrome vs stainless), and room temperature/humidity affect grip. Competition conditions are standardized." },
-    "concurrent_skills": { "value": 8, "confidence": 0.85, "notes": "Simultaneously managing strength holds, flexibility, rhythmic movement, spatial orientation while inverted, grip transitions, and artistic expression." },
-    "plateau_density": { "value": 7, "confidence": 0.75, "notes": "Strength plateaus gate trick progression. The transition from intermediate to advanced (inverted holds, iron X) can take years. Flexibility plateaus compound the difficulty." },
-    "domain_evolution": { "value": 7, "confidence": 0.8, "notes": "Rapidly evolving. Competition formats standardizing since 2009. Trick difficulty has increased dramatically each decade. Olympic recognition is being pursued." },
-    "observability": { "value": 9, "confidence": 0.9, "notes": "Spectacular aerial holds and dynamic spins are immediately impressive. The strength required is visible in the musculature of elite athletes." },
-    "luck_variance": { "value": 2, "confidence": 0.85, "notes": "Minimal external randomness. Grip conditions are the main variable. Competition order and judging panels introduce slight variance." },
-    "social_coordination": { "value": 2, "confidence": 0.85, "notes": "Solo performance. Doubles pole exists but is less common. Studio training is social but competition is individual." }
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Basic climbs, spins, and sits take 3-6 months of regular classes. Building the grip strength to hold body weight is the first major barrier."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "World championship-level routines require 5-8 years of intensive training. Dimitry Politov started pole in 2012 and won his first world title in 2015, but had prior breakdancing and parkour backgrounds."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "You know immediately if you can hold a position or execute a spin. Grip failure is instantaneous feedback."
+    },
+    "failure_cost": {
+      "value": 6,
+      "confidence": 0.8,
+      "notes": "Falls from 4 meters onto hard floors cause fractures and concussions. Skin tears and friction burns are routine. Shoulder dislocations occur from high-difficulty moves."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Choreography, musicality, spatial awareness during inversion, and sequencing of complex combinations. Performing upside down while spinning requires strong spatial processing."
+    },
+    "physical_demand": {
+      "value": 10,
+      "confidence": 0.9,
+      "notes": "Among the most physically demanding artistic disciplines. Requires gymnast-level upper body strength, contortionist-level flexibility, and dancer-level endurance, simultaneously."
+    },
+    "prerequisite_knowledge": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "No formal prerequisites. Backgrounds in dance, gymnastics, or circus arts provide advantages but many elite athletes started with no prior training."
+    },
+    "measurability": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Competition scoring combines technical difficulty values (codified) with execution and artistic impression (subjective). The POSA Code of Points provides structure."
+    },
+    "perishability": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Grip strength and skin conditioning degrade within weeks. Flexibility and aerial body awareness require constant maintenance."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Hand and body placement on the pole must be exact for each trick. Grip position determines whether a hold is secure or a fall occurs."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Technical elements have defined difficulty values. Artistic scoring introduces subjectivity. Multiple competing federations (IPSF, POSA, IPC) have different standards."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Self-teaching is risky due to fall potential and technique-dependent grip safety. Studios and coaches are essential for safe progression."
+    },
+    "environmental_variability": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Pole diameter, material (brass vs chrome vs stainless), and room temperature/humidity affect grip. Competition conditions are standardized."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "Simultaneously managing strength holds, flexibility, rhythmic movement, spatial orientation while inverted, grip transitions, and artistic expression."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Strength plateaus gate trick progression. The transition from intermediate to advanced (inverted holds, iron X) can take years. Flexibility plateaus compound the difficulty."
+    },
+    "domain_evolution": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Rapidly evolving. Competition formats standardizing since 2009. Trick difficulty has increased dramatically each decade. Olympic recognition is being pursued."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "Spectacular aerial holds and dynamic spins are immediately impressive. The strength required is visible in the musculature of elite athletes."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Minimal external randomness. Grip conditions are the main variable. Competition order and judging panels introduce slight variance."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Solo performance. Doubles pole exists but is less common. Studio training is social but competition is individual."
+    }
   },
   "methodology_notes": "Competition standards from IPSF and POSA Code of Points. Training timelines from competitive athlete interviews and studio progression curricula. Equipment specifications from IPSF competition rules."
 }

@@ -8,13 +8,7 @@
     "alt": "Kazakh berkutchi on horseback with a golden eagle perched on his arm against snowy mountain backdrop",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "Vfi5JS0ZRxU",
-      "title": "The Eagle Huntress - Official Trailer"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Hunting with eagles - Wikipedia",
@@ -38,25 +32,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 8, "confidence": 0.8, "notes": "Training a golden eagle from capture to first successful hunt takes 3-4 years of constant daily interaction, and the berkutchi must simultaneously master horsemanship on rough terrain and reading prey behavior across open steppe. The initial capture of the eagle, either from a nest or by trapping a young bird, is itself a dangerous skill requiring experience. Most berkutchi begin training as children alongside their fathers." },
-    "time_to_expert": { "value": 9, "confidence": 0.75, "notes": "A skilled berkutchi-eagle pair can catch 50-60 foxes, a dozen badgers, several lynx, and 4-5 wolves in a four-month season, but achieving this level of partnership takes a decade or more of experience across multiple eagles. True mastery encompasses eagle capture and selection, training, veterinary care, hunting tactics across varied terrain, and the cultural knowledge encoded in the tradition. Only about 50-70 active practitioners remain in Kazakhstan and Kyrgyzstan." },
-    "feedback_delay": { "value": 4, "confidence": 0.7, "notes": "During the initial bonding phase, feedback is gradual; the eagle slowly becomes accustomed to the handler over weeks and months. Once training progresses to hunting, feedback becomes immediate: the eagle either pursues quarry or does not, returns or does not. The multi-year bonding process, however, means that early training decisions only reveal their consequences years later when hunting begins." },
-    "failure_cost": { "value": 8, "confidence": 0.8, "notes": "Losing a golden eagle represents 3-4 years of daily work. Eagles are dangerous (a golden eagle's talons can exert over 400 PSI of grip strength) and handling errors can cause serious injury to the berkutchi. Eagles are also endangered in Kazakhstan, and taking them from the wild is legally restricted, making replacement difficult. The eagle itself can be injured or killed during hunts with wolves or other dangerous quarry." },
-    "cognitive_demand": { "value": 7, "confidence": 0.75, "notes": "The berkutchi must read the eagle's behavioral state (hunger, aggression, fear, willingness to hunt), interpret prey behavior at distance, manage the horse simultaneously, and make split-second decisions about when to release the eagle during a hunt. Understanding eagle psychology well enough to maintain a 20-year working relationship requires deep ecological and behavioral knowledge passed down through generations." },
-    "physical_demand": { "value": 8, "confidence": 0.85, "notes": "A trained golden eagle weighs 5-7 kg and must be carried on an outstretched arm while riding horseback across rough mountain terrain in winter conditions reaching -30C. Hunts can last hours. The berkutchi must control a horse with one hand while managing the eagle with the other. Climbing to eagle nests for capture is extremely dangerous. The physical demands are among the highest in falconry traditions worldwide." },
-    "prerequisite_knowledge": { "value": 7, "confidence": 0.75, "notes": "Prerequisites include expert horsemanship, knowledge of golden eagle behavior and physiology, understanding of prey species (fox, hare, wolf) ecology and terrain, veterinary skills for eagle care, and the cultural knowledge of the berkutchi tradition. Most practitioners are born into families where this knowledge is transmitted from childhood. Outsiders would need years of foundational learning before even beginning eagle training." },
-    "measurability": { "value": 6, "confidence": 0.7, "notes": "The annual Golden Eagle Festival at Olgii, Mongolia provides competitive scoring of hunting ability, including speed tests and quarry pursuit. Season harvest counts (foxes, badgers, etc.) provide quantitative measures. However, the quality of the human-eagle bond, which berkutchi consider the essence of the practice, is subjective and culturally defined." },
-    "perishability": { "value": 8, "confidence": 0.8, "notes": "With only an estimated 50-70 professional berkutchi remaining in Kazakhstan and perhaps 250-300 in Mongolia's Bayan-Olgii province, the tradition is actively dying as younger generations migrate to cities. Each eagle represents a unique partnership that cannot be transferred. When a master berkutchi dies, his specific knowledge of eagle training techniques, terrain, and prey behavior is often lost." },
-    "precision_required": { "value": 6, "confidence": 0.7, "notes": "Releasing the eagle at the right moment during a hunt, considering wind, distance, prey speed, and terrain, requires precise timing. The eagle's training weight must be carefully managed to maintain hunting motivation without compromising health. However, golden eagles are powerful enough that imprecise releases can still result in successful hunts, and the bird's natural instincts compensate for some handler imprecision." },
-    "ambiguity": { "value": 6, "confidence": 0.65, "notes": "Reading an eagle's behavioral state involves ambiguity: distinguishing between an eagle that is unmotivated, unwell, or simply not seeing quarry requires experience. Weather and terrain create unpredictable hunting conditions. The long bonding period involves considerable uncertainty about whether a particular eagle will develop into a reliable hunter." },
-    "instruction_dependency": { "value": 9, "confidence": 0.85, "notes": "Knowledge is transmitted exclusively within berkutchi families through years of father-to-son apprenticeship. The cultural, ecological, and practical knowledge required cannot be learned from written sources. With only dozens of active practitioners remaining, the pool of potential instructors is critically small. UNESCO's falconry inscription specifically notes the importance of intergenerational transmission." },
-    "environmental_variability": { "value": 7, "confidence": 0.75, "notes": "Hunting conditions vary dramatically with season, terrain, weather, and prey availability across the Central Asian steppe and mountain environments. Winter hunting in extreme cold requires different strategies than autumn hunts. Each hunting territory has unique characteristics that the berkutchi must learn through years of experience." },
-    "concurrent_skills": { "value": 8, "confidence": 0.8, "notes": "During a hunt, the berkutchi simultaneously manages expert horsemanship on difficult terrain, eagle handling and release timing, prey tracking and pursuit tactics, and coordination with other hunters if present. The daily care routine requires concurrent veterinary, nutritional, and behavioral management of both the eagle and the horse." },
-    "plateau_density": { "value": 6, "confidence": 0.6, "notes": "The 3-4 year initial bonding period represents an extended plateau where progress is slow and uncertain. A second plateau occurs when transitioning from training exercises to live quarry. Each new eagle requires partially resetting the learning curve, though the berkutchi's general skills carry over. The tradition's millennia-long stability suggests well-understood but lengthy progression paths." },
-    "domain_evolution": { "value": 2, "confidence": 0.85, "notes": "The tradition has been practiced essentially unchanged for over a thousand years. Genghis Khan is believed to have hunted with eagles using similar techniques. The only modern changes are the introduction of the Golden Eagle Festival as a competitive event and occasional use of modern veterinary medicine. The fundamental training and hunting methods remain ancient." },
-    "observability": { "value": 8, "confidence": 0.8, "notes": "The dramatic spectacle of an eagle stooping on quarry from a galloping horseman is one of the most visually striking hunting traditions in the world. The Eagle Huntress documentary (2016) brought global visibility to the practice. The Golden Eagle Festival provides a public showcase. The partnership between berkutchi and eagle is visually evident even in daily handling." },
-    "luck_variance": { "value": 5, "confidence": 0.7, "notes": "Quarry availability and weather conditions introduce significant hunt-to-hunt variability. Whether a captured eaglet develops into a strong hunter involves some luck in the bird's individual temperament and health. However, experienced berkutchi are consistently more productive than novices across seasons, indicating skill dominates over luck in the long run." },
-    "social_coordination": { "value": 4, "confidence": 0.7, "notes": "The core practice is deeply individual; only one person may handle a given eagle. However, hunts sometimes involve multiple berkutchi working together to drive prey. The Golden Eagle Festival is a social event. The broader cultural context of nomadic community life and the father-son transmission chain are essential social structures supporting the practice." }
+    "time_to_competence": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Training a golden eagle from capture to first successful hunt takes 3-4 years of constant daily interaction, and the berkutchi must simultaneously master horsemanship on rough terrain and reading prey behavior across open steppe. The initial capture of the eagle, either from a nest or by trapping a young bird, is itself a dangerous skill requiring experience. Most berkutchi begin training as children alongside their fathers."
+    },
+    "time_to_expert": {
+      "value": 9,
+      "confidence": 0.75,
+      "notes": "A skilled berkutchi-eagle pair can catch 50-60 foxes, a dozen badgers, several lynx, and 4-5 wolves in a four-month season, but achieving this level of partnership takes a decade or more of experience across multiple eagles. True mastery encompasses eagle capture and selection, training, veterinary care, hunting tactics across varied terrain, and the cultural knowledge encoded in the tradition. Only about 50-70 active practitioners remain in Kazakhstan and Kyrgyzstan."
+    },
+    "feedback_delay": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "During the initial bonding phase, feedback is gradual; the eagle slowly becomes accustomed to the handler over weeks and months. Once training progresses to hunting, feedback becomes immediate: the eagle either pursues quarry or does not, returns or does not. The multi-year bonding process, however, means that early training decisions only reveal their consequences years later when hunting begins."
+    },
+    "failure_cost": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Losing a golden eagle represents 3-4 years of daily work. Eagles are dangerous (a golden eagle's talons can exert over 400 PSI of grip strength) and handling errors can cause serious injury to the berkutchi. Eagles are also endangered in Kazakhstan, and taking them from the wild is legally restricted, making replacement difficult. The eagle itself can be injured or killed during hunts with wolves or other dangerous quarry."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "The berkutchi must read the eagle's behavioral state (hunger, aggression, fear, willingness to hunt), interpret prey behavior at distance, manage the horse simultaneously, and make split-second decisions about when to release the eagle during a hunt. Understanding eagle psychology well enough to maintain a 20-year working relationship requires deep ecological and behavioral knowledge passed down through generations."
+    },
+    "physical_demand": {
+      "value": 8,
+      "confidence": 0.85,
+      "notes": "A trained golden eagle weighs 5-7 kg and must be carried on an outstretched arm while riding horseback across rough mountain terrain in winter conditions reaching -30C. Hunts can last hours. The berkutchi must control a horse with one hand while managing the eagle with the other. Climbing to eagle nests for capture is extremely dangerous. The physical demands are among the highest in falconry traditions worldwide."
+    },
+    "prerequisite_knowledge": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Prerequisites include expert horsemanship, knowledge of golden eagle behavior and physiology, understanding of prey species (fox, hare, wolf) ecology and terrain, veterinary skills for eagle care, and the cultural knowledge of the berkutchi tradition. Most practitioners are born into families where this knowledge is transmitted from childhood. Outsiders would need years of foundational learning before even beginning eagle training."
+    },
+    "measurability": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "The annual Golden Eagle Festival at Olgii, Mongolia provides competitive scoring of hunting ability, including speed tests and quarry pursuit. Season harvest counts (foxes, badgers, etc.) provide quantitative measures. However, the quality of the human-eagle bond, which berkutchi consider the essence of the practice, is subjective and culturally defined."
+    },
+    "perishability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "With only an estimated 50-70 professional berkutchi remaining in Kazakhstan and perhaps 250-300 in Mongolia's Bayan-Olgii province, the tradition is actively dying as younger generations migrate to cities. Each eagle represents a unique partnership that cannot be transferred. When a master berkutchi dies, his specific knowledge of eagle training techniques, terrain, and prey behavior is often lost."
+    },
+    "precision_required": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Releasing the eagle at the right moment during a hunt, considering wind, distance, prey speed, and terrain, requires precise timing. The eagle's training weight must be carefully managed to maintain hunting motivation without compromising health. However, golden eagles are powerful enough that imprecise releases can still result in successful hunts, and the bird's natural instincts compensate for some handler imprecision."
+    },
+    "ambiguity": {
+      "value": 6,
+      "confidence": 0.65,
+      "notes": "Reading an eagle's behavioral state involves ambiguity: distinguishing between an eagle that is unmotivated, unwell, or simply not seeing quarry requires experience. Weather and terrain create unpredictable hunting conditions. The long bonding period involves considerable uncertainty about whether a particular eagle will develop into a reliable hunter."
+    },
+    "instruction_dependency": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Knowledge is transmitted exclusively within berkutchi families through years of father-to-son apprenticeship. The cultural, ecological, and practical knowledge required cannot be learned from written sources. With only dozens of active practitioners remaining, the pool of potential instructors is critically small. UNESCO's falconry inscription specifically notes the importance of intergenerational transmission."
+    },
+    "environmental_variability": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "Hunting conditions vary dramatically with season, terrain, weather, and prey availability across the Central Asian steppe and mountain environments. Winter hunting in extreme cold requires different strategies than autumn hunts. Each hunting territory has unique characteristics that the berkutchi must learn through years of experience."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "During a hunt, the berkutchi simultaneously manages expert horsemanship on difficult terrain, eagle handling and release timing, prey tracking and pursuit tactics, and coordination with other hunters if present. The daily care routine requires concurrent veterinary, nutritional, and behavioral management of both the eagle and the horse."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.6,
+      "notes": "The 3-4 year initial bonding period represents an extended plateau where progress is slow and uncertain. A second plateau occurs when transitioning from training exercises to live quarry. Each new eagle requires partially resetting the learning curve, though the berkutchi's general skills carry over. The tradition's millennia-long stability suggests well-understood but lengthy progression paths."
+    },
+    "domain_evolution": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "The tradition has been practiced essentially unchanged for over a thousand years. Genghis Khan is believed to have hunted with eagles using similar techniques. The only modern changes are the introduction of the Golden Eagle Festival as a competitive event and occasional use of modern veterinary medicine. The fundamental training and hunting methods remain ancient."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "The dramatic spectacle of an eagle stooping on quarry from a galloping horseman is one of the most visually striking hunting traditions in the world. The Eagle Huntress documentary (2016) brought global visibility to the practice. The Golden Eagle Festival provides a public showcase. The partnership between berkutchi and eagle is visually evident even in daily handling."
+    },
+    "luck_variance": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Quarry availability and weather conditions introduce significant hunt-to-hunt variability. Whether a captured eaglet develops into a strong hunter involves some luck in the bird's individual temperament and health. However, experienced berkutchi are consistently more productive than novices across seasons, indicating skill dominates over luck in the long run."
+    },
+    "social_coordination": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "The core practice is deeply individual; only one person may handle a given eagle. However, hunts sometimes involve multiple berkutchi working together to drive prey. The Golden Eagle Festival is a social event. The broader cultural context of nomadic community life and the father-son transmission chain are essential social structures supporting the practice."
+    }
   },
   "methodology_notes": "Scores are based on Wikipedia's article on hunting with eagles, UNESCO's falconry inscription documentation, Facts and Details' comprehensive Kazakh eagle hunting resource, and Journal of Nomads' field reporting from Kyrgyzstan's Issyk-Kul region. Practitioner estimates (50-70 in Kazakhstan, 250-300 in Mongolia's Bayan-Olgii) come from multiple travel journalism and cultural preservation sources. The physical_demand score reflects the unique combination of eagle handling (5-7 kg on an outstretched arm), expert horsemanship, and extreme winter conditions that distinguish this from other falconry traditions."
 }

@@ -8,13 +8,7 @@
     "alt": "Hands using an antler pressure flaker to shape a flint biface into an arrowhead",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "EGOoFnRKBco",
-      "title": "Flint Knapping: From Raw Stone to Finished Arrowhead"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Knapping - Wikipedia",
@@ -38,25 +32,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 4, "confidence": 0.75, "notes": "A beginner can produce functional flakes and crude scrapers within hours, and basic arrowhead-shaped bifaces within weeks of guided practice. Workshops and YouTube tutorials have made initial learning accessible. Practicing on bottle glass (recommended for beginners due to its consistent fracture properties) accelerates early skill acquisition. However, consistently producing symmetrical, thin bifaces without breakage takes months of regular practice." },
-    "time_to_expert": { "value": 8, "confidence": 0.7, "notes": "Producing museum-quality replicas of demanding historical types (Clovis points with successful fluting, Solutrean laurel-leaf points, or finely serrated Folsom points) requires years of dedicated practice. Research on Acheulean handaxe production shows experienced knappers are significantly faster and more efficient than novices across multiple measurable dimensions. The fluting step for Clovis points is so risky that it can shatter a nearly finished piece, and consistent success takes many years to achieve." },
-    "feedback_delay": { "value": 1, "confidence": 0.9, "notes": "Feedback is essentially instantaneous: each flake removal either produces the intended result or does not, and the outcome is visible and audible (the characteristic 'pop' of a successful flake) within a fraction of a second. Failed removals (step fractures, hinge fractures, overshots) are immediately apparent. This extremely short feedback loop is a defining characteristic that makes flint knapping unusually learnable through practice." },
-    "failure_cost": { "value": 3, "confidence": 0.8, "notes": "Material costs are minimal: flint, chert, and obsidian are inexpensive and widely available from lapidary suppliers. A failed piece is simply discarded and a new blank prepared. The primary cost of failure is time invested in a partially completed piece. However, the fluting step for Clovis points, where a nearly finished artifact can shatter, represents a higher time-cost failure. Safety is a concern: flying stone chips and razor-sharp flakes can cut skin and eyes without protective equipment." },
-    "cognitive_demand": { "value": 7, "confidence": 0.75, "notes": "The knapper must maintain a three-dimensional mental model of the stone's internal structure, predicting how fracture planes will propagate through the material based on subtle variations in texture, color, and inclusions. Each strike or pressure application requires calculating angle, force, and platform preparation. Understanding conchoidal fracture mechanics, platform geometry, and force vectors involves significant spatial reasoning. Advanced techniques like fluting require planning multiple removal sequences in advance." },
-    "physical_demand": { "value": 4, "confidence": 0.8, "notes": "Percussion knapping requires moderate upper-body strength and coordination. Pressure flaking demands fine motor control and sustained hand/wrist pressure. Extended sessions cause hand fatigue and soreness. However, the physical demands are primarily fine-motor rather than athletic. The main physical risks are cuts from sharp flakes (silicosis from inhaling fine stone dust is a concern for heavy practitioners) and repetitive strain." },
-    "prerequisite_knowledge": { "value": 3, "confidence": 0.8, "notes": "Basic knapping can begin with minimal prior knowledge; understanding that certain stones fracture conchoidally and that force angle determines flake shape is sufficient to start. More advanced work benefits from knowledge of lithic geology (identifying suitable stone types), archaeology (understanding historical tool types), and fracture mechanics. No formal academic prerequisites exist, and most modern knappers are self-taught hobbyists." },
-    "measurability": { "value": 8, "confidence": 0.8, "notes": "Quality is directly measurable: symmetry, thinness, edge straightness, flake scar regularity, and functional sharpness are all objectively assessable. Archaeological research measures knapping skill through flake scar count, biface width-to-thickness ratio, and manufacturing time. Knapping competitions use standardized judging criteria. The Lithic Technology journal publishes quantitative studies comparing novice and expert production." },
-    "perishability": { "value": 3, "confidence": 0.7, "notes": "Core motor skills and material intuition are well-retained once developed. Experienced knappers returning after long breaks report that basic abilities recover quickly, though peak precision requires reestablishment of calluses and muscle memory. The knowledge base is simple enough to be retained indefinitely. The modern community of hobbyist knappers is large and active, ensuring technique preservation." },
-    "precision_required": { "value": 8, "confidence": 0.8, "notes": "Pressure flaking requires control of force magnitude, direction, and application point to within millimeters. The angle of the pressure tool relative to the stone edge must be precise to avoid step fractures or overshooting. Clovis fluting demands removing a flake that runs exactly along the center axis of the point, and deviation by a few millimeters can shatter the piece. Platform preparation (grinding a small flat spot for the flaker to grip) requires sub-millimeter accuracy." },
-    "ambiguity": { "value": 4, "confidence": 0.75, "notes": "The physics of conchoidal fracture are well understood, and experienced knappers can predict flake outcomes with reasonable confidence. Material quality introduces some ambiguity, as hidden inclusions, frost cracks, and bedding planes can cause unexpected fractures. However, compared to skills involving biological systems or human judgment, knapping is relatively deterministic. The target outcome (a specific tool type) is unambiguous." },
-    "instruction_dependency": { "value": 4, "confidence": 0.7, "notes": "Flint knapping is unusually amenable to self-teaching through YouTube videos, books, and trial-and-error practice, thanks to its immediate feedback loop and widely available materials. Many accomplished modern knappers are self-taught. However, in-person instruction significantly accelerates learning, particularly for advanced techniques. The community of knappers at gatherings like Flint Ridge and online forums provides accessible informal instruction." },
-    "environmental_variability": { "value": 4, "confidence": 0.75, "notes": "Different stone types (obsidian vs. flint vs. chert vs. novaculite) have distinct fracture properties requiring adapted technique. Temperature affects stone brittleness. Humidity can influence material behavior. However, the fundamental principles of conchoidal fracture are universal across materials, and adaptation between stone types is straightforward for experienced knappers." },
-    "concurrent_skills": { "value": 4, "confidence": 0.7, "notes": "During active knapping, the practitioner simultaneously manages force application, angle control, material assessment, and flake sequence planning. However, these are tightly integrated aspects of a single motor-cognitive task rather than truly independent concurrent skills. The broader context of archaeological replication adds knowledge of historical tool types and hafting, but these are sequential rather than concurrent." },
-    "plateau_density": { "value": 5, "confidence": 0.65, "notes": "Progress from crude flakes to basic bifaces is rapid. A significant plateau occurs when attempting to produce thin, symmetrical points, and many knappers struggle for months with consistent thinning. Another plateau emerges with advanced techniques like fluting, where success rates may remain low for years. The transition from working glass to working natural stone presents an early plateau for beginners." },
-    "domain_evolution": { "value": 1, "confidence": 0.9, "notes": "The fundamental techniques have been unchanged for tens of thousands of years. Pressure flaking dates to at least 75,000 years ago. Modern knappers use the same materials (flint, antler, copper) and methods as prehistoric practitioners. The only modern addition is the use of copper-tipped pressure tools, which improve convenience but do not represent a fundamental technique change. This is the most ancient continuously practiced manufacturing skill in human history." },
-    "observability": { "value": 8, "confidence": 0.8, "notes": "Flint knapping is highly visual: each flake removal produces a visible, audible result. The progression from raw stone to finished tool is dramatic and engaging. Demonstration knapping is a staple of archaeological outreach. The finished artifacts are aesthetically compelling. YouTube knapping channels have large followings precisely because the skill is so watchable." },
-    "luck_variance": { "value": 3, "confidence": 0.75, "notes": "Material quality introduces some randomness, and hidden flaws can ruin a piece regardless of skill. However, experienced knappers read material quality before committing significant effort, and the immediate feedback loop allows rapid course correction. Over a session of multiple pieces, skill clearly dominates. The main luck element is in material sourcing (finding high-quality raw stone in the field)." },
-    "social_coordination": { "value": 2, "confidence": 0.8, "notes": "Flint knapping is fundamentally a solo activity. One person, one stone, one set of tools. The community provides learning resources and social enjoyment at gatherings and knap-ins, but the practice itself requires no coordination. Historically, knapping was likely performed individually even in group camp settings." }
+    "time_to_competence": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "A beginner can produce functional flakes and crude scrapers within hours, and basic arrowhead-shaped bifaces within weeks of guided practice. Workshops and YouTube tutorials have made initial learning accessible. Practicing on bottle glass (recommended for beginners due to its consistent fracture properties) accelerates early skill acquisition. However, consistently producing symmetrical, thin bifaces without breakage takes months of regular practice."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Producing museum-quality replicas of demanding historical types (Clovis points with successful fluting, Solutrean laurel-leaf points, or finely serrated Folsom points) requires years of dedicated practice. Research on Acheulean handaxe production shows experienced knappers are significantly faster and more efficient than novices across multiple measurable dimensions. The fluting step for Clovis points is so risky that it can shatter a nearly finished piece, and consistent success takes many years to achieve."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Feedback is essentially instantaneous: each flake removal either produces the intended result or does not, and the outcome is visible and audible (the characteristic 'pop' of a successful flake) within a fraction of a second. Failed removals (step fractures, hinge fractures, overshots) are immediately apparent. This extremely short feedback loop is a defining characteristic that makes flint knapping unusually learnable through practice."
+    },
+    "failure_cost": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Material costs are minimal: flint, chert, and obsidian are inexpensive and widely available from lapidary suppliers. A failed piece is simply discarded and a new blank prepared. The primary cost of failure is time invested in a partially completed piece. However, the fluting step for Clovis points, where a nearly finished artifact can shatter, represents a higher time-cost failure. Safety is a concern: flying stone chips and razor-sharp flakes can cut skin and eyes without protective equipment."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.75,
+      "notes": "The knapper must maintain a three-dimensional mental model of the stone's internal structure, predicting how fracture planes will propagate through the material based on subtle variations in texture, color, and inclusions. Each strike or pressure application requires calculating angle, force, and platform preparation. Understanding conchoidal fracture mechanics, platform geometry, and force vectors involves significant spatial reasoning. Advanced techniques like fluting require planning multiple removal sequences in advance."
+    },
+    "physical_demand": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Percussion knapping requires moderate upper-body strength and coordination. Pressure flaking demands fine motor control and sustained hand/wrist pressure. Extended sessions cause hand fatigue and soreness. However, the physical demands are primarily fine-motor rather than athletic. The main physical risks are cuts from sharp flakes (silicosis from inhaling fine stone dust is a concern for heavy practitioners) and repetitive strain."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Basic knapping can begin with minimal prior knowledge; understanding that certain stones fracture conchoidally and that force angle determines flake shape is sufficient to start. More advanced work benefits from knowledge of lithic geology (identifying suitable stone types), archaeology (understanding historical tool types), and fracture mechanics. No formal academic prerequisites exist, and most modern knappers are self-taught hobbyists."
+    },
+    "measurability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Quality is directly measurable: symmetry, thinness, edge straightness, flake scar regularity, and functional sharpness are all objectively assessable. Archaeological research measures knapping skill through flake scar count, biface width-to-thickness ratio, and manufacturing time. Knapping competitions use standardized judging criteria. The Lithic Technology journal publishes quantitative studies comparing novice and expert production."
+    },
+    "perishability": {
+      "value": 3,
+      "confidence": 0.7,
+      "notes": "Core motor skills and material intuition are well-retained once developed. Experienced knappers returning after long breaks report that basic abilities recover quickly, though peak precision requires reestablishment of calluses and muscle memory. The knowledge base is simple enough to be retained indefinitely. The modern community of hobbyist knappers is large and active, ensuring technique preservation."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Pressure flaking requires control of force magnitude, direction, and application point to within millimeters. The angle of the pressure tool relative to the stone edge must be precise to avoid step fractures or overshooting. Clovis fluting demands removing a flake that runs exactly along the center axis of the point, and deviation by a few millimeters can shatter the piece. Platform preparation (grinding a small flat spot for the flaker to grip) requires sub-millimeter accuracy."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "The physics of conchoidal fracture are well understood, and experienced knappers can predict flake outcomes with reasonable confidence. Material quality introduces some ambiguity, as hidden inclusions, frost cracks, and bedding planes can cause unexpected fractures. However, compared to skills involving biological systems or human judgment, knapping is relatively deterministic. The target outcome (a specific tool type) is unambiguous."
+    },
+    "instruction_dependency": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Flint knapping is unusually amenable to self-teaching through YouTube videos, books, and trial-and-error practice, thanks to its immediate feedback loop and widely available materials. Many accomplished modern knappers are self-taught. However, in-person instruction significantly accelerates learning, particularly for advanced techniques. The community of knappers at gatherings like Flint Ridge and online forums provides accessible informal instruction."
+    },
+    "environmental_variability": {
+      "value": 4,
+      "confidence": 0.75,
+      "notes": "Different stone types (obsidian vs. flint vs. chert vs. novaculite) have distinct fracture properties requiring adapted technique. Temperature affects stone brittleness. Humidity can influence material behavior. However, the fundamental principles of conchoidal fracture are universal across materials, and adaptation between stone types is straightforward for experienced knappers."
+    },
+    "concurrent_skills": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "During active knapping, the practitioner simultaneously manages force application, angle control, material assessment, and flake sequence planning. However, these are tightly integrated aspects of a single motor-cognitive task rather than truly independent concurrent skills. The broader context of archaeological replication adds knowledge of historical tool types and hafting, but these are sequential rather than concurrent."
+    },
+    "plateau_density": {
+      "value": 5,
+      "confidence": 0.65,
+      "notes": "Progress from crude flakes to basic bifaces is rapid. A significant plateau occurs when attempting to produce thin, symmetrical points, and many knappers struggle for months with consistent thinning. Another plateau emerges with advanced techniques like fluting, where success rates may remain low for years. The transition from working glass to working natural stone presents an early plateau for beginners."
+    },
+    "domain_evolution": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "The fundamental techniques have been unchanged for tens of thousands of years. Pressure flaking dates to at least 75,000 years ago. Modern knappers use the same materials (flint, antler, copper) and methods as prehistoric practitioners. The only modern addition is the use of copper-tipped pressure tools, which improve convenience but do not represent a fundamental technique change. This is the most ancient continuously practiced manufacturing skill in human history."
+    },
+    "observability": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Flint knapping is highly visual: each flake removal produces a visible, audible result. The progression from raw stone to finished tool is dramatic and engaging. Demonstration knapping is a staple of archaeological outreach. The finished artifacts are aesthetically compelling. YouTube knapping channels have large followings precisely because the skill is so watchable."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Material quality introduces some randomness, and hidden flaws can ruin a piece regardless of skill. However, experienced knappers read material quality before committing significant effort, and the immediate feedback loop allows rapid course correction. Over a session of multiple pieces, skill clearly dominates. The main luck element is in material sourcing (finding high-quality raw stone in the field)."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Flint knapping is fundamentally a solo activity. One person, one stone, one set of tools. The community provides learning resources and social enjoyment at gatherings and knap-ins, but the practice itself requires no coordination. Historically, knapping was likely performed individually even in group camp settings."
+    }
   },
   "methodology_notes": "Scores are based on Wikipedia's articles on knapping and stone tools, Lithic Technology's research on Acheulean handaxe manufacturing time and skill covariates, and community resources documenting modern knapping techniques. The extremely low domain_evolution score (1) reflects the fact that this is a 100,000+ year-old technique that remains fundamentally unchanged. The high measurability and observability scores reflect the physical, visible nature of the skill and the quantitative research published in archaeological journals. The low feedback_delay (1) is one of the most distinctive features of this skill compared to others in the project."
 }

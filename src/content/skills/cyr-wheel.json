@@ -8,13 +8,7 @@
     "alt": "Performer spinning inside a large metal Cyr wheel on a stage",
     "attribution": "Photo by Wikimedia Commons"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "FFxBh-GFxEA",
-      "title": "Isaac Hou - incredible Cyr wheel street performance in Taiwan"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Cyr wheel",
@@ -33,25 +27,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 5, "confidence": 0.75, "notes": "Basic waltz (three-beat rotation) and coin spin take weeks of practice. Staying inside the wheel without falling out is the first challenge." },
-    "time_to_expert": { "value": 8, "confidence": 0.7, "notes": "Performance-quality acts with aerial moves, spirals, and seamless transitions require 5-10 years. Cirque du Soleil acts represent peak mastery." },
-    "feedback_delay": { "value": 1, "confidence": 0.9, "notes": "Loss of control is immediately apparent through wobble, deceleration, or falling out of the wheel." },
-    "failure_cost": { "value": 5, "confidence": 0.75, "notes": "Falls from a spinning wheel cause bruises, friction burns, and joint impacts. Serious injuries are uncommon with proper progression and mats." },
-    "cognitive_demand": { "value": 6, "confidence": 0.75, "notes": "Requires understanding of angular momentum, weight shift timing, and spatial awareness while disoriented by rotation." },
-    "physical_demand": { "value": 8, "confidence": 0.8, "notes": "Full-body engagement: grip strength, core rotation, shoulder stability, and leg power. The 15kg wheel demands constant force to maintain movement." },
-    "prerequisite_knowledge": { "value": 3, "confidence": 0.75, "notes": "Prior experience in dance, gymnastics, or circus arts accelerates learning. No formal academic prerequisites." },
-    "measurability": { "value": 5, "confidence": 0.7, "notes": "Competition scores combine execution, difficulty, and artistry. Technical elements are codified but artistic impression remains subjective." },
-    "perishability": { "value": 6, "confidence": 0.7, "notes": "The vestibular adaptation to constant spinning degrades with disuse. Grip strength and movement patterns fade without regular practice." },
-    "precision_required": { "value": 8, "confidence": 0.8, "notes": "Hand and foot placement on the rim must be exact. Weight shifts of centimeters determine whether a spiral continues or collapses." },
-    "ambiguity": { "value": 4, "confidence": 0.7, "notes": "Competition has codified difficulty values for elements, but artistic expression introduces subjectivity." },
-    "instruction_dependency": { "value": 7, "confidence": 0.8, "notes": "Self-teaching is dangerous and inefficient. Circus schools provide essential spotting, progression methodology, and technique correction." },
-    "environmental_variability": { "value": 5, "confidence": 0.75, "notes": "Floor surface dramatically affects grip and rolling behavior. Outdoor performance adds wind and uneven terrain. Temperature affects metal grip." },
-    "concurrent_skills": { "value": 7, "confidence": 0.8, "notes": "Simultaneously managing rotation speed, spatial orientation, grip transitions, body positioning, and artistic expression while disoriented." },
-    "plateau_density": { "value": 7, "confidence": 0.7, "notes": "Significant plateaus at each new rotation type. Transitioning from waltz to coin, from coin to spiral, each requires fundamental relearning." },
-    "domain_evolution": { "value": 5, "confidence": 0.7, "notes": "Rapidly evolving since Daniel Cyr's 1997 introduction. Competition rules formalized in 2013. New elements are still being invented." },
-    "observability": { "value": 9, "confidence": 0.9, "notes": "A performer spinning gracefully inside a giant ring is visually arresting. The apparatus itself commands attention before any movement begins." },
-    "luck_variance": { "value": 2, "confidence": 0.8, "notes": "Controlled environment with predictable physics. Floor surface is the main variable. Equipment is consistent." },
-    "social_coordination": { "value": 2, "confidence": 0.85, "notes": "Almost exclusively solo. Duo Cyr wheel acts exist but are rare. Training may involve spotters." }
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Basic waltz (three-beat rotation) and coin spin take weeks of practice. Staying inside the wheel without falling out is the first challenge."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.7,
+      "notes": "Performance-quality acts with aerial moves, spirals, and seamless transitions require 5-10 years. Cirque du Soleil acts represent peak mastery."
+    },
+    "feedback_delay": {
+      "value": 1,
+      "confidence": 0.9,
+      "notes": "Loss of control is immediately apparent through wobble, deceleration, or falling out of the wheel."
+    },
+    "failure_cost": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Falls from a spinning wheel cause bruises, friction burns, and joint impacts. Serious injuries are uncommon with proper progression and mats."
+    },
+    "cognitive_demand": {
+      "value": 6,
+      "confidence": 0.75,
+      "notes": "Requires understanding of angular momentum, weight shift timing, and spatial awareness while disoriented by rotation."
+    },
+    "physical_demand": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Full-body engagement: grip strength, core rotation, shoulder stability, and leg power. The 15kg wheel demands constant force to maintain movement."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.75,
+      "notes": "Prior experience in dance, gymnastics, or circus arts accelerates learning. No formal academic prerequisites."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Competition scores combine execution, difficulty, and artistry. Technical elements are codified but artistic impression remains subjective."
+    },
+    "perishability": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "The vestibular adaptation to constant spinning degrades with disuse. Grip strength and movement patterns fade without regular practice."
+    },
+    "precision_required": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Hand and foot placement on the rim must be exact. Weight shifts of centimeters determine whether a spiral continues or collapses."
+    },
+    "ambiguity": {
+      "value": 4,
+      "confidence": 0.7,
+      "notes": "Competition has codified difficulty values for elements, but artistic expression introduces subjectivity."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Self-teaching is dangerous and inefficient. Circus schools provide essential spotting, progression methodology, and technique correction."
+    },
+    "environmental_variability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Floor surface dramatically affects grip and rolling behavior. Outdoor performance adds wind and uneven terrain. Temperature affects metal grip."
+    },
+    "concurrent_skills": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Simultaneously managing rotation speed, spatial orientation, grip transitions, body positioning, and artistic expression while disoriented."
+    },
+    "plateau_density": {
+      "value": 7,
+      "confidence": 0.7,
+      "notes": "Significant plateaus at each new rotation type. Transitioning from waltz to coin, from coin to spiral, each requires fundamental relearning."
+    },
+    "domain_evolution": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "Rapidly evolving since Daniel Cyr's 1997 introduction. Competition rules formalized in 2013. New elements are still being invented."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.9,
+      "notes": "A performer spinning gracefully inside a giant ring is visually arresting. The apparatus itself commands attention before any movement begins."
+    },
+    "luck_variance": {
+      "value": 2,
+      "confidence": 0.8,
+      "notes": "Controlled environment with predictable physics. Floor surface is the main variable. Equipment is consistent."
+    },
+    "social_coordination": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Almost exclusively solo. Duo Cyr wheel acts exist but are rare. Training may involve spotters."
+    }
   },
   "methodology_notes": "Competition history from International Wheel Gymnastics federation records. Training progression from major circus schools (ENC Montreal, ESAC Belgium). Apparatus specifications from Wikipedia and circus equipment manufacturers."
 }

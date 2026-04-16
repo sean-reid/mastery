@@ -8,13 +8,7 @@
     "alt": "Glassblower shaping a glowing orange gather of molten glass on a blowpipe",
     "attribution": "Photo by Unsplash"
   },
-  "media": [
-    {
-      "type": "youtube",
-      "videoId": "eDS4SnCmJMg",
-      "title": "Studio Demonstration: Lino Tagliapietra, Corning Museum of Glass"
-    }
-  ],
+  "media": [],
   "sources": [
     {
       "title": "Glassblowing - Wikipedia",
@@ -33,25 +27,101 @@
     }
   ],
   "scores": {
-    "time_to_competence": { "value": 5, "confidence": 0.8, "notes": "Making a simple blown vessel (cup, paperweight) within weeks of guided instruction. Producing consistent, saleable work takes 1-2 years of daily practice." },
-    "time_to_expert": { "value": 8, "confidence": 0.75, "notes": "Mastery of complex techniques (cane work, incalmo, goblet stems, murrine) requires 7-15 years. Tagliapietra trained for a decade before independence. Murano tradition demands multi-year apprenticeships." },
-    "feedback_delay": { "value": 2, "confidence": 0.85, "notes": "Feedback is nearly instantaneous: the glass responds visibly to every action within seconds. Thermal stress cracks may appear during annealing hours later, but most errors are immediately apparent." },
-    "failure_cost": { "value": 4, "confidence": 0.8, "notes": "Failed pieces are recyclable (cullet goes back in the furnace). But furnace operation costs $50-200/day in fuel, and complex multi-hour pieces represent significant lost time. Burns are a constant occupational hazard." },
-    "cognitive_demand": { "value": 7, "confidence": 0.8, "notes": "Mental modeling of 3D form from a rotating, gravity-affected, time-decaying material. Simultaneous tracking of temperature gradients, wall thickness, symmetry, and timing across multiple reheats." },
-    "physical_demand": { "value": 7, "confidence": 0.85, "notes": "Working in extreme radiant heat (face temperatures can exceed 50 C near the glory hole). Constant rotation of heavy pipes, lungs providing controlled pressure, standing for hours. Burns, heat exhaustion, and repetitive strain are common." },
-    "prerequisite_knowledge": { "value": 3, "confidence": 0.8, "notes": "No formal prerequisites. Understanding of thermal properties, color chemistry, and glass compatibility develops during training. Physical coordination and heat tolerance are innate requirements." },
-    "measurability": { "value": 5, "confidence": 0.75, "notes": "Symmetry, wall thickness uniformity, and surface quality are objectively assessable. But artistic merit (color composition, form, originality) is subjective. No standardized grading system exists." },
-    "perishability": { "value": 5, "confidence": 0.7, "notes": "The timing intuition, knowing exactly when glass is too hot or too cold, fades within weeks without practice. Core motor patterns and heat reading ability are more durable." },
-    "precision_required": { "value": 7, "confidence": 0.8, "notes": "Goblet stems, pulled handles, and thin-walled vessels demand millimeter-level control of a material that deforms under gravity. Incalmo (joining two blown bubbles) requires matched diameters to sub-millimeter tolerance." },
-    "ambiguity": { "value": 5, "confidence": 0.75, "notes": "Technical execution has clear standards (even walls, symmetry, no bubbles). But 'good' glass art is aesthetically subjective. The line between a defect and a feature is often a matter of artistic intent." },
-    "instruction_dependency": { "value": 7, "confidence": 0.8, "notes": "Traditionally master-apprentice. The Murano guild system was famously secretive. Modern workshops and YouTube have increased accessibility, but advanced techniques still require in-person mentorship, because you cannot feel heat through a screen." },
-    "environmental_variability": { "value": 5, "confidence": 0.75, "notes": "Ambient temperature, humidity, and draft conditions affect cooling rates. Different furnaces, glass formulations, and tool sets require adaptation. A glassblower must recalibrate when changing studios." },
-    "concurrent_skills": { "value": 8, "confidence": 0.8, "notes": "Simultaneously rotating the pipe (constant wrist motion), controlling breath pressure, reading glass color/viscosity, positioning tools, managing gravity, and coordinating with an assistant, all while racing a thermal clock." },
-    "plateau_density": { "value": 6, "confidence": 0.7, "notes": "Early progress is rapid and visible. Plateaus emerge at the transition from simple vessels to complex forms, and again when attempting advanced Venetian techniques (filigrana, reticello)." },
-    "domain_evolution": { "value": 3, "confidence": 0.8, "notes": "Core technique is essentially unchanged since the Roman era. Modern additions: electric furnaces, borosilicate glass, studio glass movement aesthetics. The fundamental physics of gathering and blowing are timeless." },
-    "observability": { "value": 9, "confidence": 0.85, "notes": "Glassblowing is one of the most visually dramatic crafts, with glowing orange material transformed into transparent form in real time. The difference between beginner and master is obvious to any spectator." },
-    "luck_variance": { "value": 3, "confidence": 0.8, "notes": "Glass is a deterministic material that responds predictably to heat and force. Occasional bubble inclusions or thermal shock are partly random, but overwhelmingly, outcomes reflect skill." },
-    "social_coordination": { "value": 5, "confidence": 0.8, "notes": "Simple pieces are solo. Complex pieces require a gaffer-assistant team of 2-4 people working in tight coordination. Venetian-style production shops depend on ensemble teamwork." }
+    "time_to_competence": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Making a simple blown vessel (cup, paperweight) within weeks of guided instruction. Producing consistent, saleable work takes 1-2 years of daily practice."
+    },
+    "time_to_expert": {
+      "value": 8,
+      "confidence": 0.75,
+      "notes": "Mastery of complex techniques (cane work, incalmo, goblet stems, murrine) requires 7-15 years. Tagliapietra trained for a decade before independence. Murano tradition demands multi-year apprenticeships."
+    },
+    "feedback_delay": {
+      "value": 2,
+      "confidence": 0.85,
+      "notes": "Feedback is nearly instantaneous: the glass responds visibly to every action within seconds. Thermal stress cracks may appear during annealing hours later, but most errors are immediately apparent."
+    },
+    "failure_cost": {
+      "value": 4,
+      "confidence": 0.8,
+      "notes": "Failed pieces are recyclable (cullet goes back in the furnace). But furnace operation costs $50-200/day in fuel, and complex multi-hour pieces represent significant lost time. Burns are a constant occupational hazard."
+    },
+    "cognitive_demand": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Mental modeling of 3D form from a rotating, gravity-affected, time-decaying material. Simultaneous tracking of temperature gradients, wall thickness, symmetry, and timing across multiple reheats."
+    },
+    "physical_demand": {
+      "value": 7,
+      "confidence": 0.85,
+      "notes": "Working in extreme radiant heat (face temperatures can exceed 50 C near the glory hole). Constant rotation of heavy pipes, lungs providing controlled pressure, standing for hours. Burns, heat exhaustion, and repetitive strain are common."
+    },
+    "prerequisite_knowledge": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "No formal prerequisites. Understanding of thermal properties, color chemistry, and glass compatibility develops during training. Physical coordination and heat tolerance are innate requirements."
+    },
+    "measurability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Symmetry, wall thickness uniformity, and surface quality are objectively assessable. But artistic merit (color composition, form, originality) is subjective. No standardized grading system exists."
+    },
+    "perishability": {
+      "value": 5,
+      "confidence": 0.7,
+      "notes": "The timing intuition, knowing exactly when glass is too hot or too cold, fades within weeks without practice. Core motor patterns and heat reading ability are more durable."
+    },
+    "precision_required": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Goblet stems, pulled handles, and thin-walled vessels demand millimeter-level control of a material that deforms under gravity. Incalmo (joining two blown bubbles) requires matched diameters to sub-millimeter tolerance."
+    },
+    "ambiguity": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Technical execution has clear standards (even walls, symmetry, no bubbles). But 'good' glass art is aesthetically subjective. The line between a defect and a feature is often a matter of artistic intent."
+    },
+    "instruction_dependency": {
+      "value": 7,
+      "confidence": 0.8,
+      "notes": "Traditionally master-apprentice. The Murano guild system was famously secretive. Modern workshops and YouTube have increased accessibility, but advanced techniques still require in-person mentorship, because you cannot feel heat through a screen."
+    },
+    "environmental_variability": {
+      "value": 5,
+      "confidence": 0.75,
+      "notes": "Ambient temperature, humidity, and draft conditions affect cooling rates. Different furnaces, glass formulations, and tool sets require adaptation. A glassblower must recalibrate when changing studios."
+    },
+    "concurrent_skills": {
+      "value": 8,
+      "confidence": 0.8,
+      "notes": "Simultaneously rotating the pipe (constant wrist motion), controlling breath pressure, reading glass color/viscosity, positioning tools, managing gravity, and coordinating with an assistant, all while racing a thermal clock."
+    },
+    "plateau_density": {
+      "value": 6,
+      "confidence": 0.7,
+      "notes": "Early progress is rapid and visible. Plateaus emerge at the transition from simple vessels to complex forms, and again when attempting advanced Venetian techniques (filigrana, reticello)."
+    },
+    "domain_evolution": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Core technique is essentially unchanged since the Roman era. Modern additions: electric furnaces, borosilicate glass, studio glass movement aesthetics. The fundamental physics of gathering and blowing are timeless."
+    },
+    "observability": {
+      "value": 9,
+      "confidence": 0.85,
+      "notes": "Glassblowing is one of the most visually dramatic crafts, with glowing orange material transformed into transparent form in real time. The difference between beginner and master is obvious to any spectator."
+    },
+    "luck_variance": {
+      "value": 3,
+      "confidence": 0.8,
+      "notes": "Glass is a deterministic material that responds predictably to heat and force. Occasional bubble inclusions or thermal shock are partly random, but overwhelmingly, outcomes reflect skill."
+    },
+    "social_coordination": {
+      "value": 5,
+      "confidence": 0.8,
+      "notes": "Simple pieces are solo. Complex pieces require a gaffer-assistant team of 2-4 people working in tight coordination. Venetian-style production shops depend on ensemble teamwork."
+    }
   },
   "methodology_notes": "Scores draw on Corning Museum of Glass documentation, Wikipedia's comprehensive glassblowing history, Murano apprenticeship traditions, and published interviews with master glassblowers including Lino Tagliapietra. Glassblowing anchors the trade category as a craft where time pressure, heat, and gravity create an unforgiving real-time constraint."
 }
