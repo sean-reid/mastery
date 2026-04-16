@@ -213,13 +213,14 @@
     finalEl.hidden = false;
   }
 
-  playBtn.addEventListener('click', () => {
+  playBtn.addEventListener('click', async () => {
     if (isPlaying) return;
     ensureAudio();
-    ensurePreloaded();
-    const duration = playRoundAudio(currentRound);
     isPlaying = true; playBtn.classList.add('playing');
-    playLabel.textContent = 'Playing...'; eqBars.hidden = false; playBtn.disabled = true;
+    playLabel.textContent = 'Loading...'; playBtn.disabled = true;
+    await preloadAudio();
+    playLabel.textContent = 'Playing...'; eqBars.hidden = false;
+    const duration = playRoundAudio(currentRound);
     setTimeout(() => {
       isPlaying = false; playBtn.classList.remove('playing');
       playLabel.textContent = 'Replay sound'; eqBars.hidden = true; playBtn.disabled = false;

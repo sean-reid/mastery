@@ -45,7 +45,7 @@
 
 <style is:global>
   #phoneme-challenge { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-8); margin: var(--space-8) 0; }
-  #phon-game { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+  #phon-game { display: flex; flex-direction: column; align-items: center; gap: var(--space-6); padding: var(--space-4) 0; }
   #phon-info { display: flex; justify-content: space-between; width: 100%; max-width: 480px; font-size: var(--text-sm); color: var(--color-text-muted); }
   #phon-score-display { font-weight: 600; color: var(--color-text-secondary); }
   .phon-play-btn { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-8); border-radius: var(--radius-full); background: var(--color-accent); color: white; font-size: var(--text-base); font-weight: 500; border: none; cursor: pointer; transition: all var(--duration-fast) var(--ease-out); }
@@ -53,36 +53,37 @@
   .phon-play-btn.playing { pointer-events: none; opacity: 0.7; }
   #phon-hint { font-size: var(--text-sm); color: var(--color-text-muted); text-align: center; min-height: 1.4em; }
 
-  #phon-cards { display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center; }
+  #phon-cards { display: flex; gap: var(--space-4); flex-wrap: wrap; justify-content: center; padding: var(--space-4) 0; }
   .phon-card {
-    display: flex; flex-direction: column; align-items: center; gap: var(--space-2);
-    padding: var(--space-4) var(--space-5); border-radius: var(--radius-lg);
-    border: 2px solid var(--color-border); background: var(--color-surface);
-    cursor: pointer; transition: all 0.15s var(--ease-out); min-width: 80px;
+    display: flex; flex-direction: column; align-items: center; gap: var(--space-3);
+    padding: var(--space-5) var(--space-6); border-radius: var(--radius-xl);
+    border: 2px solid var(--color-border); background: var(--color-surface-raised);
+    cursor: pointer; transition: all 0.2s var(--ease-out); min-width: 100px;
     user-select: none; -webkit-user-select: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
-  .phon-card:hover { border-color: var(--color-accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-  .phon-card:active { transform: translateY(0); }
-  .phon-card-letter { font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 700; color: var(--color-text); }
-  .phon-card-name { font-size: var(--text-xs); color: var(--color-text-muted); }
-  .phon-card-play { font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; }
-  .phon-card.used { opacity: 0.35; pointer-events: none; border-style: dashed; }
-  .phon-card.correct { border-color: #1a7a52; background: rgba(26,122,82,0.06); }
-  .phon-card.wrong { border-color: #b53030; background: rgba(181,48,48,0.06); }
+  .phon-card:hover { border-color: var(--color-accent); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+  .phon-card:active { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .phon-card-letter { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 700; color: var(--color-text); line-height: 1; }
+  .phon-card-name { font-size: var(--text-sm); color: var(--color-text-secondary); font-weight: 500; }
+  .phon-card-play { font-size: 0.65rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.7; }
+  .phon-card.used { opacity: 0.25; pointer-events: none; border-style: dashed; transform: scale(0.95); box-shadow: none; }
+  .phon-card.correct { border-color: #1a7a52; background: rgba(26,122,82,0.08); }
+  .phon-card.wrong { border-color: #b53030; background: rgba(181,48,48,0.08); }
   .phon-card.revealed { pointer-events: none; }
 
-  #phon-order { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; justify-content: center; }
-  .phon-order-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
-  #phon-order-slots { display: flex; gap: var(--space-2); }
+  #phon-order { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; justify-content: center; padding: var(--space-3) 0; }
+  .phon-order-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+  #phon-order-slots { display: flex; gap: var(--space-3); }
   .phon-slot {
-    width: 36px; height: 36px; border-radius: var(--radius-md);
+    width: 44px; height: 44px; border-radius: var(--radius-lg);
     border: 2px dashed var(--color-border); display: flex; align-items: center;
-    justify-content: center; font-family: var(--font-heading); font-size: var(--text-sm);
-    font-weight: 600; color: var(--color-text-muted); transition: all 0.15s var(--ease-out);
+    justify-content: center; font-family: var(--font-heading); font-size: var(--text-base);
+    font-weight: 700; color: var(--color-text-muted); transition: all 0.2s var(--ease-out);
   }
-  .phon-slot.filled { border-style: solid; border-color: var(--color-accent); color: var(--color-accent); background: rgba(59,130,246,0.06); }
-  .phon-slot.correct { border-color: #1a7a52; color: #1a7a52; background: rgba(26,122,82,0.08); }
-  .phon-slot.wrong { border-color: #b53030; color: #b53030; background: rgba(181,48,48,0.08); }
+  .phon-slot.filled { border-style: solid; border-color: var(--color-accent); color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 8%, transparent); }
+  .phon-slot.correct { border-color: #1a7a52; color: #1a7a52; background: rgba(26,122,82,0.1); }
+  .phon-slot.wrong { border-color: #b53030; color: #b53030; background: rgba(181,48,48,0.1); }
   .phon-small-btn { padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); border: 1px solid var(--color-border); font-size: var(--text-xs); color: var(--color-text-muted); cursor: pointer; background: transparent; }
   .phon-small-btn:hover { background: var(--color-surface-raised); }
   .phon-small-btn[hidden] { display: none; }
