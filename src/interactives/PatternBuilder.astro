@@ -259,33 +259,44 @@
     const w = cutCv.getBoundingClientRect().width;
     const pad = 20;
 
-    // Sample target path at regular intervals
+    // Sample target path densely
     const targetPts: number[][] = [];
     for (let i = 0; i < currentShape.length; i++) {
       const a = currentShape[i], b = currentShape[(i + 1) % currentShape.length];
       const [ax, ay] = toPixel(a, w, pad);
       const [bx, by] = toPixel(b, w, pad);
       const dist = Math.hypot(bx - ax, by - ay);
-      const steps = Math.max(2, Math.floor(dist / 4));
+      const steps = Math.max(3, Math.floor(dist / 3));
       for (let s = 0; s < steps; s++) {
         const t = s / steps;
         targetPts.push([ax + (bx - ax) * t, ay + (by - ay) * t]);
       }
     }
 
-    // For each target point, find nearest user point
-    let totalDev = 0;
-    for (const tp of targetPts) {
-      let minD = Infinity;
-      for (const up of userPath) {
-        const d = Math.hypot(up[0] - tp[0], up[1] - tp[1]);
-        if (d < minD) minD = d;
+    // Bidirectional Hausdorff-style scoring:
+    // 1. For each target point, distance to nearest user point (coverage)
+    // 2. For each user point, distance to nearest target point (accuracy)
+    // Both must be low for a good score.
+
+    function avgNearest(from: number[][], to: number[][]): number {
+      let total = 0;
+      for (const p of from) {
+        let minD = Infinity;
+        for (const q of to) {
+          const d = Math.hypot(p[0] - q[0], p[1] - q[1]);
+          if (d < minD) minD = d;
+        }
+        total += minD;
       }
-      totalDev += minD;
+      return total / from.length;
     }
 
-    const avgDev = totalDev / targetPts.length;
-    const maxAcceptable = w * 0.15; // 15% of canvas = 0% score
+    const coverage = avgNearest(targetPts, userPath); // did you trace the whole shape?
+    const accuracy = avgNearest(userPath, targetPts); // did you stay on the line?
+    const avgDev = (coverage + accuracy) / 2;
+
+    // Strict threshold: 5% of canvas width = 0% score
+    const maxAcceptable = w * 0.05;
     const pct = Math.max(0, Math.min(100, Math.round((1 - avgDev / maxAcceptable) * 100)));
     return pct;
   }
