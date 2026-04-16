@@ -61,5 +61,11 @@
     "luck_variance": { "value": 3, "confidence": 0.8, "notes": "Patient biology introduces some variance: unexpected bleeding, friable tissue, undiagnosed pathology. But outcomes are overwhelmingly determined by surgeon skill and judgment, not chance." },
     "social_coordination": { "value": 8, "confidence": 0.9, "notes": "Cardiac surgery is intensely team-dependent: surgeon, first assistant, scrub nurse, anesthesiologist, perfusionist, and circulating nurse must coordinate precisely. Communication failures are a leading cause of adverse events." }
   },
-  "methodology_notes": "Scores draw on the STS National Database (10M+ procedures), JAMA Network Open volume-outcome studies, TSDA training pathway documentation, and PubMed global cardiac surgery access data. Cardiac surgery serves as the difficulty anchor for the trade category: time_to_expert=10 and failure_cost=10 reflect the longest training pipeline and highest stakes of any manual craft."
+  "methodology_notes": "Scores draw on the STS National Database (10M+ procedures), JAMA Network Open volume-outcome studies, TSDA training pathway documentation, and PubMed global cardiac surgery access data. Cardiac surgery serves as the difficulty anchor for the trade category: time_to_expert=10 and failure_cost=10 reflect the longest training pipeline and highest stakes of any manual craft.",
+  "clip": {
+    "src": "/videos/skills/cardiac-surgery.mp4",
+    "poster": "/images/skills/cardiac-surgery.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

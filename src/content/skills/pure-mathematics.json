@@ -2,7 +2,7 @@
   "name": "Pure Mathematics",
   "slug": "pure-mathematics",
   "category": "academic",
-  "description": "Research-level pure mathematics demands constructing original proofs about abstract structures -- groups, manifolds, number fields -- where a single theorem may require synthesizing techniques from disparate subfields and can take years to complete, as illustrated by Andrew Wiles's seven-year solitary effort to prove Fermat's Last Theorem by establishing a modularity result for semistable elliptic curves.",
+  "description": "Research-level pure mathematics demands constructing original proofs about abstract structures (groups, manifolds, number fields) where a single theorem may require synthesizing techniques from disparate subfields and can take years to complete, as illustrated by Andrew Wiles's seven-year solitary effort to prove Fermat's Last Theorem by establishing a modularity result for semistable elliptic curves.",
   "thumbnail": {
     "src": "/images/skills/pure-mathematics.webp",
     "alt": "Blackboard covered with advanced mathematical notation and proof sketches",
@@ -57,7 +57,7 @@
     "environmental_variability": { "value": 2, "confidence": 0.8, "notes": "Mathematics is independent of physical environment. The same problems and proofs hold everywhere. However, institutional access to collaborators, seminars, and preprints significantly affects productivity." },
     "concurrent_skills": { "value": 7, "confidence": 0.75, "notes": "Simultaneously requires logical reasoning, spatial/geometric intuition, pattern recognition, mathematical writing, literature synthesis, and sometimes programming. Communicating results demands teaching and expository skill." },
     "plateau_density": { "value": 8, "confidence": 0.8, "notes": "Notorious plateaus at the transition from computation to proof-writing, from coursework to research, and from solving known problems to generating original results. Many PhD students spend years stuck before a breakthrough." },
-    "domain_evolution": { "value": 3, "confidence": 0.8, "notes": "Core mathematics is remarkably stable -- Euclid's proofs remain valid after 2,300 years. New subfields emerge, but fundamental techniques persist. ArXiv publishes ~2,000 math papers per month, but the foundational canon changes slowly." },
+    "domain_evolution": { "value": 3, "confidence": 0.8, "notes": "Core mathematics is remarkably stable; Euclid's proofs remain valid after 2,300 years. New subfields emerge, but fundamental techniques persist. ArXiv publishes ~2,000 math papers per month, but the foundational canon changes slowly." },
     "observability": { "value": 1, "confidence": 0.9, "notes": "Mathematical work is almost entirely invisible to non-practitioners. Even a brilliant proof looks like incomprehensible notation to outsiders. Public understanding of what research mathematicians do is minimal." },
     "luck_variance": { "value": 3, "confidence": 0.7, "notes": "Serendipitous connections between fields can accelerate breakthroughs, and problem selection involves some luck. But sustained output over a career is driven overwhelmingly by skill and dedication." },
     "social_coordination": { "value": 3, "confidence": 0.75, "notes": "Traditionally a solitary pursuit, though collaborative mathematics is increasingly common. The Polymath project demonstrated large-scale collaboration, but most papers have 1-3 authors. Solo work remains viable and celebrated." }

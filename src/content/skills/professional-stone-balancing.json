@@ -36,7 +36,7 @@
     "time_to_competence": { "value": 3, "confidence": 0.75, "notes": "Simple two-stone balances can be achieved in hours. The basic tactile sensitivity develops within a few sessions of focused practice." },
     "time_to_expert": { "value": 7, "confidence": 0.7, "notes": "Grab has over 15 years of daily practice. Balancing large, irregularly shaped boulders on seemingly impossible contact points takes years of sensitivity development." },
     "feedback_delay": { "value": 1, "confidence": 0.95, "notes": "The stone either stays balanced or it falls. Feedback is instantaneous and binary." },
-    "failure_cost": { "value": 2, "confidence": 0.85, "notes": "A collapse means starting over. Large stones can cause hand or foot injuries. Primarily the cost is lost time -- hours of work can collapse in a second." },
+    "failure_cost": { "value": 2, "confidence": 0.85, "notes": "A collapse means starting over. Large stones can cause hand or foot injuries. Primarily the cost is lost time; hours of work can collapse in a second." },
     "cognitive_demand": { "value": 5, "confidence": 0.7, "notes": "Requires sustained meditative focus, spatial reasoning about center of gravity, and tactile sensitivity to micro-vibrations. More contemplative than analytical." },
     "physical_demand": { "value": 4, "confidence": 0.75, "notes": "Handling heavy stones requires strength, but the core skill is steady hands and stillness. Extended kneeling and crouching causes joint strain." },
     "prerequisite_knowledge": { "value": 1, "confidence": 0.85, "notes": "No formal knowledge required. Basic intuition about gravity and balance is innate. Understanding of center of mass helps but is learned through practice." },

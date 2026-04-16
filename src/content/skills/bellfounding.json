@@ -58,5 +58,11 @@
     "luck_variance": { "value": 4, "confidence": 0.7, "notes": "Casting defects (porosity, cracks, inclusions) introduce some unpredictability despite careful process control. A bell may emerge from the mold with an internal flaw invisible from outside. But most variance is controllable through skill and process discipline." },
     "social_coordination": { "value": 6, "confidence": 0.7, "notes": "Bell casting requires a team: mold builders, metal pourers, crane operators, and tuners. A pour is a coordinated event. But the master bellfounder's design and tuning work is largely individual intellectual labor." }
   },
-  "methodology_notes": "Scores draw on Wikipedia's bellfounding article, Heritage Crafts Red List classification, McShane Bell Company's technical documentation, and the National Bell Festival's process descriptions. Confidence is lower than average because bellfounding is critically scarce; fewer than a dozen foundries worldwide practice the traditional swept-loam method, and quantitative training data is virtually nonexistent."
+  "methodology_notes": "Scores draw on Wikipedia's bellfounding article, Heritage Crafts Red List classification, McShane Bell Company's technical documentation, and the National Bell Festival's process descriptions. Confidence is lower than average because bellfounding is critically scarce; fewer than a dozen foundries worldwide practice the traditional swept-loam method, and quantitative training data is virtually nonexistent.",
+  "clip": {
+    "src": "/videos/skills/bellfounding.mp4",
+    "poster": "/images/skills/bellfounding.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }

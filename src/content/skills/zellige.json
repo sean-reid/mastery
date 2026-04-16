@@ -131,5 +131,11 @@
     }
   },
   "methodology_notes": "Scores draw on Wikipedia's zellij article, AramcoWorld's 2024 photographic documentation of Fez workshops, Encyclopedia MDPI's technical overview, and published accounts of maalem training traditions. Confidence is moderate due to limited quantitative research on zellige artisan training; most knowledge is transmitted orally within Moroccan craft families.",
-  "interactive": "pattern-builder"
+  "interactive": "pattern-builder",
+  "clip": {
+    "src": "/videos/skills/zellige.mp4",
+    "poster": "/images/skills/zellige.webp",
+    "duration": 8,
+    "attribution": "Video from Wikimedia Commons (CC)"
+  }
 }
