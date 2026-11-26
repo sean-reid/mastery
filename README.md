@@ -2,7 +2,7 @@
 
 An interactive ranking of 100 human skills by difficulty to master, with cited sources and playable challenges.
 
-**[View the site](https://sean-reid.github.io/mastery/)**
+**[View the site](https://seanre.id/mastery/)**
 
 ## What it is
 
